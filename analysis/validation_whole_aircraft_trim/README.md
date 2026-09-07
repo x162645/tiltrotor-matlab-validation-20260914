@@ -11,7 +11,8 @@ The block is intentional. `analysis/stage2_aircraft/stage2_matched_rotor_paramet
 ## Files
 
 - `source_manifest.csv` — machine-readable external-source/admissibility ledger.
-- `check_validation_gate.m` — MATLAB R2021a-compatible audit helper. It validates the manifest schema and reports whether external scoring is currently admissible.
+- `homology_contract.csv` — machine-readable model/case homology gates that must all be closed before scoring.
+- `check_validation_gate.m` — MATLAB R2021a-compatible audit helper. It validates both ledgers and reports whether external scoring is currently admissible.
 - `../../docs/WHOLE_AIRCRAFT_TRIM_VALIDATION_GATE_20260907.md` — scientific decision record and unlock sequence.
 
 ## Rules
