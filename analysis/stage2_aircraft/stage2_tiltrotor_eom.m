@@ -14,6 +14,11 @@ T321=[1,sin(phi)*tt,cos(phi)*tt;0,cos(phi),-sin(phi);0,sin(phi)/ct,cos(phi)/ct];
 eulerDot=T321*omega; xdot=[Vdot;omegaDot;eulerDot];
 out.FaeroProp=Fap; out.Fgravity=Fg; out.Ftotal=Ftotal; out.Mtotal=Mtotal;
 out.massProperties=mp; out.components=componentInfo;
+% Analysis-output compatibility aliases only.  These expose the already
+% computed rotor records at the top level for validation/reporting code;
+% no force, moment, state, control, parameter, or solver equation changes.
+out.rotorLeft=componentInfo.rotorLeft;
+out.rotorRight=componentInfo.rotorRight;
 out.physicalConverged=componentInfo.physicalConverged;
 out.physicalBranchSupported=componentInfo.physicalBranchSupported;
 out.physicalStatus=componentInfo.physicalStatus; out.xdot=xdot;
