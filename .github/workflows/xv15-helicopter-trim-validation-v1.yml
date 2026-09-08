@@ -1,0 +1,45 @@
+name: XV-15 helicopter trim validation V1
+
+on:
+  push:
+    branches:
+      - diagnostic/whole-aircraft-trim-validation-20260907
+    paths:
+      - '.github/workflows/xv15-helicopter-trim-validation-v1.yml'
+      - 'analysis/validation_whole_aircraft_trim/**'
+      - 'analysis/stage2_aircraft/**'
+      - 'model/**'
+      - 'params_nominal.m'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  xv15-helicopter-trim-v1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up MATLAB R2021a
+        uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2021a
+
+      - name: Run source-mapped XV-15 helicopter trim validation
+        uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            startup;
+            addpath(fullfile(pwd,'analysis','stage2_aircraft'));
+            addpath(fullfile(pwd,'analysis','validation_whole_aircraft_trim'));
+            outdir=fullfile(pwd,'ci_artifacts','xv15_helicopter_trim_v1');
+            run_xv15_helicopter_trim_validation_v1(outdir);
+
+      - name: Upload validation evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: xv15-helicopter-trim-validation-v1
+          path: ci_artifacts/xv15_helicopter_trim_v1
+          if-no-files-found: error
