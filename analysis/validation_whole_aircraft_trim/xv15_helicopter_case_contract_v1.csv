@@ -1,0 +1,19 @@
+field,value,unit,source_locator,disposition,notes
+weight,13000,lb,Kleinhesselink 2007 Appendix C Table C-1,DIRECT_CASE_INPUT,Exact helicopter trim comparison case
+longitudinal_cg,25.10,ft fuselage station,Kleinhesselink 2007 Appendix C Table C-1,DIRECT_CASE_INPUT,Converted to body-x-forward coordinate by sign reversal
+vertical_cg,6.80,ft waterline,Kleinhesselink 2007 Appendix C Table C-1,DIRECT_CASE_INPUT,Converted to body-z-down coordinate by sign reversal
+nacelle_angle_betaM,0,deg,Kleinhesselink 2007 Appendix C Table C-1,DIRECT_CASE_INPUT,Repository betaM=0 is helicopter mode
+flight_path_angle,0,deg,Kleinhesselink 2007 Appendix C Table C-1,DIRECT_CASE_INPUT,Level flight
+turn_rate,0,deg/s,Kleinhesselink 2007 Appendix C Table C-1,DIRECT_CASE_INPUT,Straight symmetric trim
+rotor_speed,589,rpm,Kleinhesselink 2007 Appendix C Table C-1,DIRECT_CASE_INPUT,61.68 rad/s
+flap,40,deg,Kleinhesselink 2007 Appendix C Table C-1,DIRECT_CASE_INPUT,Folded into source wing CL0/CD0 mapping
+Ixx,52800,slug ft^2,Kleinhesselink 2007 Appendix C Table C-1,DIRECT_CASE_INPUT,Helicopter configuration
+Iyy,21360,slug ft^2,Kleinhesselink 2007 Appendix C Table C-1,DIRECT_CASE_INPUT,Helicopter configuration
+Izz,66340,slug ft^2,Kleinhesselink 2007 Appendix C Table C-1,DIRECT_CASE_INPUT,Helicopter configuration
+Ixz,1234,slug ft^2,Kleinhesselink 2007 Appendix C Table C-1,DIRECT_CASE_INPUT,Stored with repository inertia-matrix sign convention
+longitudinal_stick_neutral,4.8,in,Kleinhesselink 2007 control-system section,DIRECT_CONTROL_INPUT,Center of 9.6-in travel
+helicopter_cyclic_gearing,2.1409,deg/in,Kleinhesselink 2007 control-system table,DIRECT_CONTROL_INPUT,Equivalent polynomial value at betaM=0 is 0.0374 rad/in
+elevator_gearing,4.17,deg/in,Kleinhesselink 2007 Appendix A/control-system section,DIRECT_CONTROL_INPUT,Longitudinal stick drives elevator simultaneously
+wing_slipstream_interaction,existing low-order model,model form,repository wing_model.m,FROZEN_MODEL_FORM_NOT_FITTED,External trim residual is allowed to expose this approximation
+GTRS_reference,Appendix C Table C-1,table,Kleinhesselink 2007,REFERENCE_SIMULATION_CORRELATION,Not raw flight-test truth
+flight_test_reference,Figure 14,figure,Kleinhesselink 2007,QUALITATIVE_EXTERNAL_CHECK_ONLY,No numeric score until visual digitization provenance is closed
