@@ -1,8 +1,12 @@
-function result=run_line_b_tail_trim_case(speedKt,outputRoot)
+function result=run_line_b_tail_trim_case(speedKt,outputRoot,useArchivedInitials)
 % One prescribed case with source-based tail coupling; same V1 solver settings.
-% Model V2 changes ONLY the optional tail local-relative-velocity route.
-% Initial guesses are rounded PREVIOUS MODEL results, NOT GTRS target trim.
-% Numerical acceptance does not mean external accuracy acceptance.
+% V2 changes ONLY the optional tail local-relative-velocity route.
+% Optional archival initialization uses previous MODEL results, NOT GTRS targets.
+% Source: original run34175347392 artifact10037420339, MAT SHA256
+% 7169f2d470de72674af683c4c83e82f1fc516a456129efe1bff80257d4c3312f.
+% Per-side flap guesses use the already-existing stage2Numerics interface.
+% Tolerances, iteration limits, residual equations and physical parameters are unchanged.
+if nargin<3,useArchivedInitials=false;end
 if ~exist(outputRoot,'dir'),mkdir(outputRoot);end
 speed=[40 60 80 100];theta=[.99845 -.65282 -2.7162 -4.6968];
 collective=[34.776 33.864 33.776 34.655];stick=[5.6133 6.0749 6.3549 6.4279];
@@ -12,7 +16,17 @@ P.interference.rotorToTailModel='FERGUSON_1988_TABLE_2IA_STEADY_HELI';
 contract.identity='XV15_SOURCE_MAPPED_STEADY_HELI_TAIL_COUPLING_V2';
 contract.interactionSource='NASA_CR166536_B22_B25_A39_A40';
 contract.targetFitting=false;contract.productionPhysicsModified=true;
+contract.claimBoundary='SOURCE_CONSTRAINED_STEADY_HELI_EXTENSION_GTRS_CORRELATION_NOT_FLIGHT_VALIDATION';
 seed=[theta(k)*d2r;collective(k)*d2r;stick(k)];scale=[2*d2r;10*d2r;1];
+seedSource='Run34175347392_model_results_rounded_not_GTRS';
+if useArchivedInitials
+    S=readtable(fullfile(fileparts(mfilename('fullpath')),'original_baseline_trim_seeds.csv'));
+    S=S(S.speed_kt==speedKt,:);assert(height(S)==1);
+    seed=[S.theta_rad;S.collective_rad;S.stick_in];
+    P.stage2Numerics.flapInitialLeft=[S.flapL0;S.flapL1c;S.flapL1s];
+    P.stage2Numerics.flapInitialRight=[S.flapR0;S.flapR1c;S.flapR1s];
+    seedSource='Run34175347392_exact_outer_state_and_per_side_flap_initial_guesses';
+end
 bounds=[-35*d2r,35*d2r;P.control.collectiveLim(:).';0,9.6];
 options=optimset('Display','off','MaxIter',P.trim.maxIterations, ...
     'MaxFunEvals',12*P.trim.maxIterations,'TolX',1e-8,'TolFun',1e-10);
@@ -23,7 +37,7 @@ result=struct('identity',contract.identity,'speed_kt',speedKt,'cost',cost, ...
     'exitflag',exitflag,'optimizer',optimout,'invalidCount',invalidCount, ...
     'invalidIdentifiers',{unique(invalidIds)},'seed',seed,'z',z,'contract',contract, ...
     'elapsed_s',elapsed,'version',version,'release',version('-release'), ...
-    'sourceSeed','Run34175347392_model_results_rounded_not_GTRS', ...
+    'sourceSeed',seedSource,'archivalInitialization',useArchivedInitials, ...
     'externalAccuracyPassed',false,'referenceRole','GTRS_REFERENCE_SIMULATION_NOT_FLIGHT');
 try
     point=evaluate(z); result.point=point;
@@ -33,7 +47,8 @@ try
         point.allocation.withinLimits && all(margin>1e-7) && ...
         point.eomOut.physicalConverged && point.eomOut.physicalBranchSupported && ...
         isreal(point.xdot)&&all(isfinite(point.xdot));
-    cold=evaluate(z); result.coldReplayDifference=norm(cold.xdot-point.xdot);
+    repeated=evaluate(z); result.repeatEvaluationDifference=norm(repeated.xdot-point.xdot);
+    result.replayMeaning='Same converged outer state, reset deterministic inner guesses; not independent trim search.';
     ref=readtable(fullfile(fileparts(mfilename('fullpath')), ...
         'reference_gtrs_helicopter_trim_kleinhesselink2007.csv'));ref=ref(ref.speed_kts==speedKt,:);
     T=.5*(point.eomOut.rotorLeft.thrust+point.eomOut.rotorRight.thrust)/4.4482216152605;
