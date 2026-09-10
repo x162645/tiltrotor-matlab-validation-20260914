@@ -1,0 +1,45 @@
+name: Line B polar boundary diagnosis
+on:
+  push:
+    branches: [implementation/line-b-external-validation-20260910]
+    paths: ['.github/workflows/line-b-polar-boundary-diagnostic.yml','analysis/validation_whole_aircraft_trim/run_line_b_polar_boundary_diagnostic.m']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  diagnostic:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - name: Archive primary correction source
+        run: |
+          mkdir -p ci_artifacts/polar_boundary
+          python - <<'PY'
+          import urllib.request,pathlib,hashlib,json
+          root=pathlib.Path('ci_artifacts/polar_boundary')
+          url='https://rotorcraft.arc.nasa.gov/Publications/files/Koning%20CR-2016-219086_FINAL.pdf'
+          meta={'url':url,'success':False}
+          try:
+              data=urllib.request.urlopen(url,timeout=90).read()
+              if not data.startswith(b'%PDF'):raise ValueError('Not PDF')
+              (root/'Koning_CR2016_219086.pdf').write_bytes(data)
+              meta.update(success=True,sha256=hashlib.sha256(data).hexdigest())
+          except Exception as exc:meta['error']=repr(exc)
+          (root/'SOURCE_MANIFEST.json').write_text(json.dumps(meta,indent=2))
+          print(json.dumps(meta))
+          PY
+      - uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2021a
+      - uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            startup;addpath(fullfile(pwd,'analysis','stage2_aircraft'));
+            addpath(fullfile(pwd,'analysis','validation_whole_aircraft_trim'));
+            run_line_b_polar_boundary_diagnostic(fullfile(pwd,'ci_artifacts','polar_boundary'));
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: polar-boundary-${{ github.sha }}
+          path: ci_artifacts/polar_boundary
