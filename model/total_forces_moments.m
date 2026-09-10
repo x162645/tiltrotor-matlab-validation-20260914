@@ -1,9 +1,18 @@
-function [Ftotal, Mtotal, info] = total_forces_moments(x, uCtrl, betaM, P)
+function [Ftotal, Mtotal, info] = total_forces_moments(x, uCtrl, betaM, P, dynamicInflow)
 %TOTAL_FORCES_MOMENTS 汇总全部气动力、推进力和相应力矩。
 % 重力不在本函数加入，由 tiltrotor_eom.m 单独处理。
 
 x = x(:);
 uCtrl = uCtrl(:);
+if nargin < 5 || isempty(dynamicInflow)
+    dynamicInflow = [];
+end
+if ~isempty(dynamicInflow) && ...
+        ~(isnumeric(dynamicInflow) && isreal(dynamicInflow) && numel(dynamicInflow) == 2 && ...
+          all(isfinite(dynamicInflow(:))) && all(dynamicInflow(:) >= 0))
+    error('total_forces_moments:InvalidDynamicInflow', ...
+        'dynamicInflow must be empty or a finite nonnegative two-element vector.');
+end
 validate_inputs(x, uCtrl, betaM, P);
 
 mp = mass_properties(betaM, P);
@@ -36,10 +45,10 @@ uApplied(6) = clamp(uApplied(6), P.control.elevatorLim);
 uApplied(7) = clamp(uApplied(7), P.control.rudderLim);
 
 [FrotL, MrotL, rotL] = rotor_model_bemt( ...
-    x, ctrlLeft, betaM, -1, mp.cgShift, P);
+    x, ctrlLeft, betaM, -1, mp.cgShift, P, selectInflow(1));
 
 [FrotR, MrotR, rotR] = rotor_model_bemt( ...
-    x, ctrlRight, betaM, +1, mp.cgShift, P);
+    x, ctrlRight, betaM, +1, mp.cgShift, P, selectInflow(2));
 
 [Fwing, Mwing, wing] = wing_model( ...
     x, uApplied, betaM, mp.cgShift, rotL, rotR, P);
@@ -85,6 +94,14 @@ info.horizontalTail = htail;
 info.verticalTail = vtail;
 info.F = Ftotal;
 info.M = Mtotal;
+
+    function vi = selectInflow(index)
+        if isempty(dynamicInflow)
+            vi = [];
+        else
+            vi = dynamicInflow(index);
+        end
+    end
 
     function y = clamp(value, limits)
         y = min(max(value, limits(1)), limits(2));

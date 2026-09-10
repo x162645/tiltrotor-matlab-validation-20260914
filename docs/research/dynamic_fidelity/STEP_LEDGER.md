@@ -65,3 +65,9 @@ run_dynamic_reference_tests(fullfile(pwd,'results','dynamic_reference_reproducti
 显式动态部件接口与首个可计算纵向—升沉原型；先稳态极限、局部线性/非线性一致性，再决定有资格的外部通道。继承旧动态同工况限制，不把D01来源响应直接复制成新的飞机模型。不声称国内领先；公平基线与独立数据仍需后续建立。
 
 D02应首先确定一个有明确输入含义、可重复计算的工作点及控制接口，再选择最小必要的动态气动状态。不得把任意一阶滤波器套在静态载荷外就称为有依据的动态模型；不得直接把巡航参照用于现有40–100kt直升机算例。若新增参数需要辨识，单列校准数据和保留检验，不能覆盖原无目标拟合基线。模型改动完成后必须执行对应数值一致性与必要回归，而非再次普查所有历史来源。
+
+## D02 implemented
+
+The opt-in service `services/run_d02_longitudinal_heave.m` now provides a fixed-nacelle longitudinal/heave prototype. The production nine-state nonlinear EOM is reused; induced velocity is promoted to one state per rotor, actuator commands are explicit collective/cyclic/elevator states, and `hUp` is inertial altitude positive upward. Current inflow is passed into the rotor blade/flap/load calculation, while each rotor momentum relation supplies the target for the inflow derivative.
+
+Verification gates executed in MATLAB: production trim residual closes (rigid-body 9.193e-05, inflow 3.794e-03); local Jacobian is finite with dimensions 15x15 and 15x3; nonlinear 0.2-degree elevator perturbation remains finite; every sample exposes Fx/Fz/My, rotor thrust/inflow, and rotor/wing/fuselage/tail snapshots. These are implementation and consistency checks, not flight-test validation. The new time constants are assumed research parameters and remain subject to qualified external comparison.

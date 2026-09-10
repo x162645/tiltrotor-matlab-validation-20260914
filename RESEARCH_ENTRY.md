@@ -34,3 +34,9 @@
 用户授权自主选择技术和代码路线，不代表自动获得新试验设备、付费资源或无人值守能力。本分支允许有限编码/执行/资料获取；不删除历史、不强推、不改仓库权限、不自动合并/发布、不增加未经约定的付费资源。真实试验需要现实团队和数据。新结果按D编号附来源/方法/运行/限制，继续复用旧S台账，不派回首次60kt或完整旋翼历史审计。
 
 测试入口：`tests/dynamic_fidelity/run_dynamic_reference_tests.m`，不启动旋翼或全机配平。实际结果和版本以 `docs/research/dynamic_fidelity/STEP_LEDGER.md` 及原始manifest为准。新文件优先入口是本文件；旧WORK_HANDOFF保持为原阶段来源，不据旧任务范围误删已授权动态研发。
+
+## D02 delivered: longitudinal-heave dynamic prototype
+
+`services/run_d02_longitudinal_heave.m` adds an opt-in 15-state/3-input prototype while preserving the production nine-state chain. The added states are left/right induced velocity, collective/cyclic/elevator actuator states, and inertial altitude `hUp` (positive upward). Rotor loads are recomputed at the current inflow state and the rotor momentum target drives the inflow ODE; this is not a post-hoc load filter.
+
+The service supports trim-limit inspection, local numerical linearization, and nonlinear ODE45 simulation with `Fx`, `Fz`, `My`, thrust/inflow, and component load histories. `params_nominal.m` marks the D02 time constants as assumed research parameters. MATLAB verification is in `tests/check_d02_longitudinal_heave.m`; it does not claim flight-test validation or XV-15 reproduction.

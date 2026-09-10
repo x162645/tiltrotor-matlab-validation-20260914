@@ -1,4 +1,4 @@
-function [Fbody, Mbody, out] = rotor_model_bemt(x, rotorCtrl, betaM, side, cgShift, P)
+function [Fbody, Mbody, out] = rotor_model_bemt(x, rotorCtrl, betaM, side, cgShift, P, viOverride)
 %ROTOR_MODEL_BEMT Tiltrotor blade-element/momentum rotor model.
 %
 % side = -1: left rotor; side = +1: right rotor.
@@ -12,6 +12,16 @@ function [Fbody, Mbody, out] = rotor_model_bemt(x, rotorCtrl, betaM, side, cgShi
 % Aerodynamic flap moment uses r*dT as a small-flapping-angle normal-force
 % approximation. rootCut is only the aerodynamic integration start; it is
 % not a flapping-hinge offset.
+
+if nargin < 7
+    viOverride = [];
+end
+useDynamicInflow = ~isempty(viOverride);
+if useDynamicInflow && ~(isscalar(viOverride) && isreal(viOverride) && ...
+        isfinite(viOverride) && viOverride >= 0)
+    error('rotor_model_bemt:InvalidDynamicInflow', ...
+        'viOverride must be a finite nonnegative real scalar.');
+end
 
 x = x(:);
 Vbody = x(1:3);
@@ -63,6 +73,35 @@ eq13 = struct('CT',NaN,'mu',mu,'lambda0',NaN,'lambda1',NaN, ...
     'target',NaN,'old',NaN,'new',NaN,'positiveThrustGuardActive',false, ...
     'denominatorFloorActive',false);
 
+if useDynamicInflow
+    % Dynamic mode advances induced velocity outside this function. Keep the
+    % same blade/flap/load path and expose the algebraic target for dvi/dt.
+    vi = viOverride;
+    [zFlap, flapInfo] = solve_flap(vi, zFlap);
+    if ~flapInfo.converged
+        error('rotor_model_bemt:FlapNotConverged', ...
+            'Flapping solve did not converge for side %+d.', side);
+    end
+    loads = blade_loads(vi, zFlap);
+    lambda0 = -Vaxial / max(tipSpeed, eps);
+    lambda1 = lambda0 - vi / max(tipSpeed, eps);
+    CT = max(loads.T, 0)/(0.5*P.env.rho*A*tipSpeed^2);
+    denomEq13 = sqrt(lambda1^2 + mu^2);
+    denomEq13Used = max(denomEq13, 1.0e-12);
+    viTarget = tipSpeed*CT/(4*denomEq13Used);
+    viError = abs(viTarget-vi)/max(1,abs(vi));
+    eq13.CT = CT;
+    eq13.lambda0 = lambda0;
+    eq13.lambda1 = lambda1;
+    eq13.target = viTarget;
+    eq13.old = vi;
+    eq13.new = viTarget;
+    eq13.positiveThrustGuardActive = loads.T < 0;
+    eq13.denominatorFloorActive = denomEq13 < denomEq13Used;
+    positiveThrustGuardEverActive = eq13.positiveThrustGuardActive;
+    coupledConverged = true;
+    iter = 1;
+else
 for iter = 1:P.rotor.inducedMaxIter
     [zFlap, flapInfo] = solve_flap(vi, zFlap);
     if ~flapInfo.converged
@@ -114,6 +153,7 @@ if ~coupledConverged
         ['Coupled induced-velocity/flapping solve did not converge ' ...
          'for side %+d. viError=%.3e, flapResidual=%.3e.'], ...
         side, viError, flapInfo.residualNorm);
+end
 end
 
 loads = blade_loads(vi, zFlap);
@@ -201,6 +241,8 @@ out.minUT = loads.minUT;
 out.maxUT = loads.maxUT;
 out.maxAbsAlphaBlade = loads.maxAbsAlphaBlade;
 out.inducedVelocity = vi;
+out.inducedVelocityTarget = eq13.target;
+out.dynamicInflowUsed = useDynamicInflow;
 out.inducedVelocityError = viError;
 out.inducedVelocityTargetEq13 = eq13.target;
 out.inducedVelocityUpdateOld = eq13.old;

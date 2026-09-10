@@ -54,6 +54,8 @@ run_test('rotor grid convergence', @test_grid_convergence);
 run_test('linearization finite values', @test_linearization);
 run_test('control-stability generated evidence', ...
     @test_control_stability_assessment);
+run_test('D02 longitudinal-heave dynamic prototype', ...
+    @test_d02_longitudinal_heave);
 
 summary.names = tests;
 summary.passed = passed;
@@ -315,6 +317,12 @@ fprintf('All passed: %d\n',summary.allPassed);
         controlStabilityReport = check_control_stability_assessment();
         assert(controlStabilityReport.allPassed, ...
             'Control-stability assessment checks have failed items.');
+    end
+
+    function test_d02_longitudinal_heave()
+        d02Report = check_d02_longitudinal_heave();
+        assert(d02Report.passed, ...
+            'D02 longitudinal-heave dynamic prototype checks failed.');
     end
 
     function value = ternary(condition,a,b)

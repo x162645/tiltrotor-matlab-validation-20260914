@@ -95,6 +95,13 @@ P.rotor.wakeFactor     = 1.60;
 % 可选旋翼陀螺项。缺乏可信转动惯量时默认关闭。
 P.rotor.Jpolar         = 0.0;
 
+%% D02 opt-in dynamic prototype settings
+% These are dynamic model assumptions, not XV-15 identification data.  They
+% are kept outside the production trim/linearization path until independently
+% compared with a qualified dynamic reference.
+P.d02.inflowTimeConstant = 0.15;
+P.d02.actuatorTimeConstant = [0.08; 0.08; 0.08];
+
 %% 机翼
 P.wing.S               = 18.0;
 P.wing.b               = 10.0;

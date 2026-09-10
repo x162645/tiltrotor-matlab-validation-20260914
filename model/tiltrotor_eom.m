@@ -1,14 +1,17 @@
-function [xdot, out] = tiltrotor_eom(x, uCtrl, betaM, P)
+function [xdot, out] = tiltrotor_eom(x, uCtrl, betaM, P, dynamicInflow)
 %TILTROTOR_EOM 九状态六自由度非线性运动方程。
 %
 % x = [u v w p q r phi theta psi]'.
 % 机体系：x前、y右、z下。
 % 对应论文式(31)~(36)。
 
+if nargin < 5
+    dynamicInflow = [];
+end
 x = x(:);
 uCtrl = uCtrl(:);
 
-[Fap, Map, componentInfo] = total_forces_moments(x, uCtrl, betaM, P);
+[Fap, Map, componentInfo] = total_forces_moments(x, uCtrl, betaM, P, dynamicInflow);
 mp = componentInfo.massProperties;
 mass = mp.mass;
 
