@@ -1,0 +1,38 @@
+name: Line B original source and unit-area load audit
+on:
+  push:
+    branches: [implementation/line-b-external-validation-20260910]
+    paths: ['.github/workflows/line-b-original-unit-load-audit.yml','analysis/validation_whole_aircraft_trim/run_line_b_original_unit_load_audit.m','analysis/validation_whole_aircraft_trim/data/CR166537*']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2021a
+      - name: Original aggregate closure and twelve fixed-input wing evaluations
+        uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            startup;addpath(fullfile(pwd,'analysis','stage2_aircraft'));
+            addpath(fullfile(pwd,'analysis','validation_whole_aircraft_trim'));
+            run_line_b_original_unit_load_audit(fullfile(pwd,'ci_artifacts','original_unit_load'));
+      - name: Preserve code, new original carriers and old unmodified reference
+        if: always()
+        run: |
+          mkdir -p ci_artifacts/original_unit_load/code_snapshot
+          cp -R model analysis/stage2_aircraft analysis/validation_whole_aircraft_trim ci_artifacts/original_unit_load/code_snapshot/
+          cp params_nominal.m ci_artifacts/original_unit_load/code_snapshot/
+          git rev-parse HEAD > ci_artifacts/original_unit_load/COMMIT.txt
+          git diff --exit-code
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: original-unit-load-${{ github.sha }}
+          path: ci_artifacts/original_unit_load
+          if-no-files-found: error

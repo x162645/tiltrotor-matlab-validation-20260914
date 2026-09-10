@@ -1,0 +1,17 @@
+{
+ "identity":"CR166537_ORIGINAL_GTRS_OUTPUT_TRANSCRIPTION_V1",
+ "source_url":"https://rotorcraft.arc.nasa.gov/Publications/files/CR-166537_883.pdf",
+ "source_sha256":"9a0888d19929747d079e79582c5172f5ea0ac526e14de87a0547b5ee2ae6340a",
+ "source_archive_run":34495822648,
+ "source_archive_artifact":10159731580,
+ "original_output_state_pages_1based":[100,103,106,109],
+ "original_output_load_pages_1based":[101,104,107,110],
+ "source_role":"REFERENCE_SIMULATION_NOT_FLIGHT_DATA",
+ "transcription":"VISUAL_ORIGINAL_PAGE_CHECK_NO_OCR",
+ "source_link_from_thesis":"Kleinhesselink2007 section3.1 printed70/PDF86 says output from reference6; bibliography printed235/PDF251 identifies CR166537.",
+ "aggregate_scope":"Airframe includes engine pylons and jet thrust; rotor total includes hub spinner. Thesis explicitly warns selected components do not sum to displayed totals.",
+ "geometry_exception":"rotor_radius_ft=12.5 and wing_area_ft2=181 are accompanying CR166536 geometry B20/B31, not numbers printed on each state page; same values already used by current model.",
+ "rounding":"Halfwidths reflect displayed numerical precision, not experiment uncertainties. Iyy printed0.2136E+05; loads rounded to0.001lbf/ft-lbf.",
+ "not_inputs":"Equivalent lift/drag coefficients reconstructed later are diagnostic outputs only, never parameters or fitted targets.",
+ "remaining_limits":["Original values are rounded and residual accelerations not identically zero.","Zero logged immersed forces do not by themselves identify zero physical covered area.","Original source output version and CR166536 RevA coefficient revision are not proven identical.","Current low-order body geometry remains unchanged in the analysis; force comparison is primary, no exact moment-position identity is asserted.","Small lateral values rounded to zero in symmetric replay; original rotor lateral forces are retained.","Old thesis carrier and prior results are preserved, not overwritten."]
+}
