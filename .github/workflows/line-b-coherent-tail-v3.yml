@@ -1,13 +1,7 @@
 name: Line B coherent steady tail V3
+# Historical diagnostic remains reproducible; shared functions no longer
+# automatically trigger the obsolete four-point V3 trim search.
 on:
-  push:
-    branches: [implementation/line-b-external-validation-20260910]
-    paths:
-      - '.github/workflows/line-b-coherent-tail-v3.yml'
-      - 'model/gtrs_heli_tail_tables.m'
-      - 'model/gtrs_horizontal_tail_steady.m'
-      - 'analysis/validation_whole_aircraft_trim/line_b_coherent_tail_parameters.m'
-      - 'analysis/validation_whole_aircraft_trim/run_line_b_coherent_tail_tests.m'
   workflow_dispatch:
 permissions:
   contents: read
@@ -65,4 +59,3 @@ jobs:
         with:
           name: coherent-tail-${{ matrix.speed }}kt-${{ github.sha }}
           path: ci_artifacts/coherent_trim
-          if-no-files-found: error

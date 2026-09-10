@@ -1,0 +1,17 @@
+{
+ "date":"2026-09-10",
+ "last_physics_commit":"38f6ab2bcb42140577c013025cf797ff248df867",
+ "status":"REGRESSIONS_EXECUTED_V6_SOURCE_CONSISTENCY_CLOSED_NO_WHOLE_AIRCRAFT_EXTERNAL_PASS",
+ "artifacts":[
+  {"label":"hover_regression","run_id":34486858275,"artifact_id":10156041296,"source_commit":"3545e4398e8aefc45ef13858fb8b900d7587e04f","filename":"line_b_V4_27point_hover_regression_3545e43.zip","sha256":"f8c22bebb1179183a05de11fde3ff75e43006cab086209fbc39360119687de63"},
+  {"label":"forward_regression","run_id":34487222806,"artifact_id":10156214055,"source_commit":"f24ffbe55e2c87b7c54177c1c60b1367b1ff0a8e","filename":"line_b_V4_Betzina24_regression_f24ffbe.zip","sha256":"f183fe2da3b6eb1472875f9be3e786c3183c1ecbac576b0c4d115d574dfa6459"},
+  {"label":"v6_tests","run_id":34489130270,"artifact_id":10156987174,"source_commit":"38f6ab2bcb42140577c013025cf797ff248df867","filename":"line_b_V6_tests_38f6ab2.zip","sha256":"4dc2f3d7cfe22421bfc5630894b0f08f4d9d448afaf137cb99b66ba71503ee02"},
+  {"label":"v6_40","run_id":34489130270,"artifact_id":10157088910,"source_commit":"38f6ab2bcb42140577c013025cf797ff248df867","filename":"line_b_V6_40kt_38f6ab2.zip","sha256":"14952f6440a133bd0975a01673a642b6c6096eca477ba732b16d6dbcf272db0b"},
+  {"label":"v6_60","run_id":34489130270,"artifact_id":10157088558,"source_commit":"38f6ab2bcb42140577c013025cf797ff248df867","filename":"line_b_V6_60kt_38f6ab2.zip","sha256":"cdebc539f288d3df5e979ee2b4ebb8557691159d72bbbde6d4681e8b2e25cc5b"},
+  {"label":"v6_80","run_id":34489130270,"artifact_id":10157140790,"source_commit":"38f6ab2bcb42140577c013025cf797ff248df867","filename":"line_b_V6_80kt_38f6ab2.zip","sha256":"d1a8a2a440bcf4820e6fc792dcd1609c8ef6781b956d6b17b78f6f4a40ebc73f"},
+  {"label":"v6_100","run_id":34489130270,"artifact_id":10157135862,"source_commit":"38f6ab2bcb42140577c013025cf797ff248df867","filename":"line_b_V6_100kt_38f6ab2.zip","sha256":"2e388f063cbd3bcd39d019d06c649057528b91b09928efc7b8e4da04469092ea"}
+ ],
+ "source_reference":{"name":"Ferguson CR166536 September1988 RevA","sha256":"a2013a314af5beb0c5e9bc5bbeb26f99be9a8aa63f2ebe07deaaf11d0d44d67d","visually_reviewed_pdf_pages_1based":[137,138,139,142,249,383,438]},
+ "extra_legacy_workflow":{"run_id":34489130247,"reason":"Auto-triggered by shared-tail file change; not new independent evidence. Old workflow now manual only."},
+ "notes":["27 hover +12 primary forward figure +12 secondary replot are different evidence grades, not51 independent raw observations.","V6 reuses exact V4 rotor, reference correlation is not independent flight validation.","No solver/tolerance changes, no automatic default promotion or merge.","All listed main runs completed."]
+}
