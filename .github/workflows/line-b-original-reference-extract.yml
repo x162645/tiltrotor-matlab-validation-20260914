@@ -1,0 +1,48 @@
+name: Line B original GTRS reference extraction
+on:
+  push:
+    branches: [implementation/line-b-external-validation-20260910]
+    paths: ['.github/workflows/line-b-original-reference-extract.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v6
+      - name: Download exact original reference; no model or trim execution
+        shell: bash
+        run: |
+          mkdir -p ci_artifacts/original_reference/pages
+          python -m pip install --quiet pymupdf pillow
+          python - <<'PY'
+          import urllib.request,pathlib,json,hashlib,subprocess,fitz
+          from PIL import Image,ImageDraw
+          root=pathlib.Path('ci_artifacts/original_reference')
+          url='https://rotorcraft.arc.nasa.gov/Publications/files/CR-166537_883.pdf'
+          raw=urllib.request.urlopen(url,timeout=120).read()
+          assert raw.startswith(b'%PDF')
+          path=root/'NASA_CR_166537.pdf';path.write_bytes(raw);doc=fitz.open(path)
+          meta={'url':url,'head':subprocess.check_output(['git','rev-parse','HEAD']).decode().strip(),'sha256':hashlib.sha256(raw).hexdigest(),'pdf_pages':len(doc),'matlabExecuted':False,'noModelChange':True,'purpose':'Original source cited as Ref6 in Kleinhesselink2007 section3.1; resolve output definitions before changing physics'}
+          (root/'SOURCE_MANIFEST.json').write_text(json.dumps(meta,indent=2))
+          texts=[]
+          for i,page in enumerate(doc):
+              texts.append('PDF_PAGE_'+str(i+1)+'\n'+page.get_text())
+              if i<14:page.get_pixmap(matrix=fitz.Matrix(1.3,1.3)).save(root/'pages'/f'pdf{i+1:03d}.png')
+          (root/'SOURCE_TEXT.txt').write_text('\n\n'.join(texts),encoding='utf-8')
+          # Low-resolution page navigation, not OCR and not numerical reading.
+          for start in range(0,len(doc),48):
+              sheet=Image.new('RGB',(6*220,8*300),'white');draw=ImageDraw.Draw(sheet)
+              for k,i in enumerate(range(start,min(start+48,len(doc)))):
+                  pix=doc[i].get_pixmap(matrix=fitz.Matrix(.31,.31));im=Image.frombytes('RGB',[pix.width,pix.height],pix.samples).convert('RGB');im.thumbnail((215,277));x=(k%6)*220;y=(k//6)*300;sheet.paste(im,(x,y+20));draw.text((x+3,y+2),'PDF '+str(i+1),fill='black')
+              sheet.save(root/'pages'/f'index_{start+1:03d}.jpg',quality=88)
+          print(json.dumps(meta))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: original-gtrs-source-${{ github.sha }}
+          path: ci_artifacts/original_reference
+          if-no-files-found: error
