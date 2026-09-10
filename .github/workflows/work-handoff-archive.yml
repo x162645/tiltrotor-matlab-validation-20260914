@@ -1,0 +1,38 @@
+name: Preserve completed work evidence for handoff
+on:
+  push:
+    branches: [implementation/line-b-external-validation-20260910]
+    paths: ['.github/workflows/work-handoff-archive.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+jobs:
+  archive:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+      - name: Download and verify pinned completed artifacts only
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python tools/archive_work_handoff.py
+      - name: Verify archived files without running MATLAB
+        run: python tools/archive_work_handoff.py --verify-only
+      - name: Commit evidence to the task branch without replacing concurrent work
+        env:
+          TASK_BRANCH: implementation/line-b-external-validation-20260910
+        shell: bash
+        run: |
+          remote_head=$(git ls-remote origin "refs/heads/$TASK_BRANCH" | cut -f1)
+          test "$remote_head" = "$GITHUB_SHA" || { echo 'Branch advanced; no automatic overwrite.'; exit 1; }
+          git diff --exit-code -- model analysis params_nominal.m
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/validation/line_b_implementation_20260910/handoff_evidence
+          if git diff --cached --quiet; then echo 'Identical archive already preserved'; exit 0; fi
+          git commit -m 'evidence: persist completed raw results and primary sources for Work handoff [skip ci]'
+          git push origin "HEAD:refs/heads/$TASK_BRANCH"
+          git rev-parse HEAD
