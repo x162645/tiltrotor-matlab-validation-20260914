@@ -35,7 +35,8 @@ jobs:
           rawhash='4f3cc72898600c6f87caa8cd8f30254111e26343837b5a10ceb4ba75ba0ddd07'
           assert hashlib.sha256(raw).hexdigest()==rawhash, 'Original CSV mismatch'
           rows=list(csv.DictReader(io.StringIO(raw.decode('utf-8-sig'))))
-          assert len(rows)==73 and len(rows[0])==23
+          # File-search rendering adds an index column; it is not in raw CSV.
+          assert len(rows)==73 and len(rows[0])==22
           assert {r['audit_commit'] for r in rows}=={'9d0c2abce6a3367ec8c46ca7aeb534b45b8ed728'}
           cols=['field_id','component','code_field','current_value','code_unit','printed_page','pdf_page_1based','identity_class','transform_or_assignment','limit_or_issue','source_evidence','implementation_status']
           text=io.StringIO(newline='');writer=csv.DictWriter(text,fieldnames=cols,lineterminator='\n');writer.writeheader()
@@ -46,10 +47,10 @@ jobs:
           root=pathlib.Path('docs/validation/line_b_implementation_20260910');dest=root/'handoff';dest.mkdir(exist_ok=True)
           (dest/'PARAMETER_IDENTITY_FIELDS_AUDITED.csv').write_bytes(raw)
           (dest/'HISTORICAL_PARAMETER_AUDIT_EXTRACT.csv').write_bytes(extracted)
-          meta={'source_name':'PARAMETER_IDENTITY_FIELDS_AUDITED.csv','source_role':'USER_SAVED_STATIC_AUDIT_NOT_NEW_VALIDATION','audit_commit':'9d0c2abce6a3367ec8c46ca7aeb534b45b8ed728','original_bytes':len(raw),'original_rows':73,'original_columns':23,'sha256':rawhash,'extract_sha256':exhash,'import_only':True,'new_model_runs':0}
+          meta={'source_name':'PARAMETER_IDENTITY_FIELDS_AUDITED.csv','source_role':'USER_SAVED_STATIC_AUDIT_NOT_NEW_VALIDATION','audit_commit':'9d0c2abce6a3367ec8c46ca7aeb534b45b8ed728','original_bytes':len(raw),'original_rows':73,'original_columns':22,'sha256':rawhash,'extract_sha256':exhash,'import_only':True,'new_model_runs':0}
           (dest/'PARAMETER_IMPORT_MANIFEST.json').write_text(json.dumps(meta,indent=2)+'\n')
-          readme=dest/'README.md';t=readme.read_text().replace('原完整CSV保留在本次交接下载包。','完整原CSV同时永久存入本目录PARAMETER_IDENTITY_FIELDS_AUDITED.csv，字节哈希已经核验；交接下载包也保留副本。');readme.write_text(t)
-          registry=root/'HANDOFF_SOURCE_REGISTRY.md';t=registry.read_text().replace('原完整CSV随交接下载包保留。','原完整CSV同时永久存于handoff/PARAMETER_IDENTITY_FIELDS_AUDITED.csv，随交接下载包保留。');registry.write_text(t)
+          readme=dest/'README.md';t=readme.read_text().replace('23列','22列').replace('原完整CSV保留在本次交接下载包。','完整原CSV同时永久存入本目录PARAMETER_IDENTITY_FIELDS_AUDITED.csv，字节哈希已经核验；交接下载包也保留副本。');readme.write_text(t)
+          registry=root/'HANDOFF_SOURCE_REGISTRY.md';t=registry.read_text().replace('23列','22列').replace('原完整CSV随交接下载包保留。','原完整CSV同时永久存于handoff/PARAMETER_IDENTITY_FIELDS_AUDITED.csv，随交接下载包保留。');registry.write_text(t)
           print('EXACT_PARAMETER_AUDIT_PRESERVED',len(raw),len(rows),'rows; exact extract regenerated')
           PY
       - name: Commit source import only; refuse concurrent branch overwrite
