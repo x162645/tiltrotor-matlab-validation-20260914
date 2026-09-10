@@ -34,7 +34,12 @@ if any(strcmpi(char(modelIdentity),{'M1_EVIDENCE_V1_PROPAGATION','M1_CONTINUOUS_
 end
 [FrotL,MrotL,rotL]=stage2_rotor_backend(modelIdentity,x,ctrlLeft,betaM,-1,mp.cgShift,PL);
 [FrotR,MrotR,rotR]=stage2_rotor_backend(modelIdentity,x,ctrlRight,betaM,+1,mp.cgShift,PR);
-[Fwing,Mwing,wing]=wing_model(x,uApplied,betaM,mp.cgShift,rotL,rotR,P);
+if isfield(P.wing,'coefficientModel')
+ if ~strcmp(P.wing.coefficientModel,'GTRS_HELI_FLAP40_25_V5'),error('stage2_total_forces_moments:UnknownWingModel','Unknown wing coefficient model.');end
+ [Fwing,Mwing,wing]=wing_model_source_family(x,uApplied,betaM,mp.cgShift,rotL,rotR,P);
+else
+ [Fwing,Mwing,wing]=wing_model(x,uApplied,betaM,mp.cgShift,rotL,rotR,P);
+end
 [Ffus,Mfus,fus]=fuselage_model(x,mp.cgShift,P);
 if isfield(P,'interference')&&isfield(P.interference,'rotorToTailModel')
  if ~strcmp(P.interference.rotorToTailModel,'FERGUSON_1988_TABLE_2IA_STEADY_HELI')

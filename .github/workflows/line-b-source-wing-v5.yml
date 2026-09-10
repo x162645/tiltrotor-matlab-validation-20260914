@@ -1,0 +1,66 @@
+name: Line B source wing family V5
+on:
+  push:
+    branches: [implementation/line-b-external-validation-20260910]
+    paths: ['.github/workflows/line-b-source-wing-v5.yml','model/gtrs_wing_heli_coefficients.m','model/wing_model_source_family.m','analysis/validation_whole_aircraft_trim/run_line_b_v5_tests.m','analysis/validation_whole_aircraft_trim/run_line_b_v5_trim_case.m']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - name: Preserve complete PR patch
+        run: |
+          mkdir -p ci_artifacts/v5_tests
+          git fetch --depth=1 origin 9d0c2abce6a3367ec8c46ca7aeb534b45b8ed728
+          git diff --binary 9d0c2abce6a3367ec8c46ca7aeb534b45b8ed728 HEAD > ci_artifacts/v5_tests/PR77.patch
+          git rev-parse HEAD > ci_artifacts/v5_tests/COMMIT.txt
+      - uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2021a
+      - uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            startup;addpath(fullfile(pwd,'analysis','stage2_aircraft'));
+            addpath(fullfile(pwd,'analysis','validation_whole_aircraft_trim'));
+            run_line_b_v5_tests(fullfile(pwd,'ci_artifacts','v5_tests'));
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v5-tests-${{ github.sha }}
+          path: ci_artifacts/v5_tests
+  trim:
+    needs: tests
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        speed: [40,60,80,100]
+    steps:
+      - uses: actions/checkout@v6
+      - uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2021a
+      - uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            startup;addpath(fullfile(pwd,'analysis','stage2_aircraft'));
+            addpath(fullfile(pwd,'analysis','validation_whole_aircraft_trim'));
+            run_line_b_v5_trim_case(${{ matrix.speed }},fullfile(pwd,'ci_artifacts','v5_trim'));
+      - name: Preserve code and sources
+        if: always()
+        run: |
+          mkdir -p ci_artifacts/v5_trim/code_snapshot
+          cp -R model analysis/stage2_aircraft analysis/validation_whole_aircraft_trim ci_artifacts/v5_trim/code_snapshot/
+          cp params_nominal.m analysis/xv15_c81*.m ci_artifacts/v5_trim/code_snapshot/
+          git rev-parse HEAD > ci_artifacts/v5_trim/COMMIT.txt
+          git diff --exit-code
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v5-trim-${{ matrix.speed }}kt-${{ github.sha }}
+          path: ci_artifacts/v5_trim
