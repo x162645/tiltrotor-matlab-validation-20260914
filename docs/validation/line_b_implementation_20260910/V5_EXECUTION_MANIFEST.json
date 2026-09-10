@@ -1,0 +1,20 @@
+{
+ "status":"NUMERICAL_FOUR_POINT_CLOSURE_WITH_PARTIAL_REFERENCE_CORRELATION_NOT_PROMOTED",
+ "run_id":34481915025,
+ "source_commit":"3dc462d270161c58e5919ff13a684c16a729a053",
+ "matlab_version":"9.10.0.2198249 (R2021a) Update 8",
+ "tests":{"artifact_id":10153997555,"checksPassed":54,"sha256":"2b3f6c8623719de635fdec2bd862f5dd75cbc144a1db3c1ef922e26fdd1d08af"},
+ "cases":[
+  {"speed_kt":40,"artifact_id":10154103757,"sha256":"20b08a0ce9701759a7799760be95785e9dd537fb3b7a6cb4a29fb92abc6ecdda","numericallyAccepted":true,"invalidCount":0,"functionEvaluations":388,"residualNorm":1.50735231561613e-10,"repeatEvaluationDifference":0,"alphaClampCount":2},
+  {"speed_kt":60,"artifact_id":10154130825,"sha256":"3b409c4528295ca4511f1b85e6a11eabbb8b90df1019d9fa9c04509dd04e97be","numericallyAccepted":true,"invalidCount":0,"functionEvaluations":423,"residualNorm":2.74313935912403e-10,"repeatEvaluationDifference":0,"alphaClampCount":10},
+  {"speed_kt":80,"artifact_id":10154220678,"sha256":"4e5b3753537068b5b2227c334847168eee5e46c5153be90dd7b59513cdb8522d","numericallyAccepted":true,"invalidCount":0,"functionEvaluations":391,"residualNorm":3.25635630247309e-10,"repeatEvaluationDifference":0,"alphaClampCount":8},
+  {"speed_kt":100,"artifact_id":10154204527,"sha256":"74f91c5b638e413ce720d7646db294a1be5fd6236538f364235ca4aa912a6b50","numericallyAccepted":true,"invalidCount":0,"functionEvaluations":370,"residualNorm":3.29959147471682e-10,"repeatEvaluationDifference":0,"alphaClampCount":16}
+ ],
+ "all_runs_completed":true,
+ "solver_or_tolerance_changed":false,
+ "target_fitting":false,
+ "independent_flight_validation_completed":false,
+ "whole_aircraft_external_pass_assigned":false,
+ "default_promoted":false,
+ "note":"Repeated evaluation is not independent outer-seed validation. Reference TableC1 contains documented internal conflicts."
+}
