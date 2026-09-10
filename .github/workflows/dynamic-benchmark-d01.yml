@@ -1,0 +1,70 @@
+name: D01 executable dynamic references
+on:
+  push:
+    branches: [research/dynamic-fidelity-benchmark-20260910]
+    paths: ['analysis/dynamic_fidelity/**','tests/dynamic_fidelity/**','.github/workflows/dynamic-benchmark-d01.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+jobs:
+  reference-tests:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 34534917058
+          name: dynamic-sources-8f6fa8576cb3e416335ad19670a3360e40581f83
+          path: ci_artifacts/dynamic_reference/sources
+      - name: Validate exact PDF source bytes
+        run: |
+          python - <<'PY'
+          import pathlib,hashlib,json
+          root=pathlib.Path('ci_artifacts/dynamic_reference/sources')
+          wanted={'NASA_TM_89428.pdf':'252f7df0c0e05bd8dece0a923d337df2231c0148f897f0376f930f6102b90ba2','NASA_TM_86009.pdf':'726ea5e84b21f00e0609ce6ca3c13fd40e28615699a7c9b9bf327af76d16dc42'}
+          for name,h in wanted.items():
+              raw=(root/name).read_bytes();assert raw.startswith(b'%PDF') and hashlib.sha256(raw).hexdigest()==h
+          print('TWO_PINNED_SOURCE_PDFS_BYTE_VERIFIED')
+          PY
+      - uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2021a
+      - name: Reconstruct references and test comparator, no aircraft evaluation
+        uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            addpath(fullfile(pwd,'tests','dynamic_fidelity'));
+            run_dynamic_reference_tests(fullfile(pwd,'ci_artifacts','dynamic_reference'));
+      - name: Preserve source and execution evidence in this new branch
+        env:
+          TASK_BRANCH: research/dynamic-fidelity-benchmark-20260910
+        run: |
+          python - <<'PY'
+          import pathlib,shutil,json,hashlib,os
+          src=pathlib.Path('ci_artifacts/dynamic_reference');dest=pathlib.Path('docs/research/dynamic_fidelity/evidence');dest.mkdir(parents=True,exist_ok=True)
+          for p in src.rglob('*'):
+              if p.is_file() and p.suffix.lower() in {'.json','.csv','.mat','.pdf'}:
+                  target=dest/p.relative_to(src);target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(p,target)
+          shutil.copyfile('analysis/dynamic_fidelity/data/tm89428_reference_cases.json',dest/'INPUT_CASES_SNAPSHOT.json')
+          entries={str(p.relative_to(dest)):hashlib.sha256(p.read_bytes()).hexdigest() for p in dest.rglob('*') if p.is_file() and p.name!='EXECUTION_INDEX.json'}
+          index={'run_id':os.environ['GITHUB_RUN_ID'],'source_commit':os.environ['GITHUB_SHA'],'source_run':34534917058,'source_artifact':10175006778,'new_aircraft_evaluations':0,'files_sha256':entries}
+          (dest/'EXECUTION_INDEX.json').write_text(json.dumps(index,indent=2)+'\n')
+          PY
+          git diff --exit-code -- model analysis/stage2_aircraft analysis/validation_whole_aircraft_trim params_nominal.m
+          remote_head=$(git ls-remote origin "refs/heads/$TASK_BRANCH" | cut -f1)
+          test "$remote_head" = "$GITHUB_SHA" || { echo 'Branch advanced; preserving artifact but refusing overwrite'; exit 1; }
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/research/dynamic_fidelity/evidence
+          git diff --cached --quiet && exit 0
+          git commit -m 'evidence: persist D01 reference reconstruction and synthetic checks, not aircraft validation [skip ci]'
+          git push origin "HEAD:refs/heads/$TASK_BRANCH"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: dynamic-reference-tests-${{ github.sha }}
+          path: ci_artifacts/dynamic_reference
+          if-no-files-found: error
