@@ -1,0 +1,48 @@
+name: Line B existing Betzina regression
+on:
+  push:
+    branches: [implementation/line-b-external-validation-20260910]
+    paths: ['.github/workflows/line-b-betzina-regression.yml','analysis/validation_whole_aircraft_trim/run_line_b_betzina_regression.m']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  regression:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+      - name: Pin existing external adapter and data without merging branches
+        shell: bash
+        run: |
+          mkdir -p ci_artifacts/betzina_regression/source
+          git fetch --depth=1 origin 1c4ebc307717bbd74ad22da66ed8dfbdc3001395
+          git archive 1c4ebc307717bbd74ad22da66ed8dfbdc3001395 analysis/validation_betzina2002 docs/BETZINA2002_FORWARD_VALIDATION_CONCLUSION_20260907.md | tar -x -C ci_artifacts/betzina_regression/source
+          python - <<'PY'
+          import pathlib,hashlib,json,subprocess
+          out=pathlib.Path('ci_artifacts/betzina_regression');src=out/'source'
+          meta={'sourceCommit':'1c4ebc307717bbd74ad22da66ed8dfbdc3001395','head':subprocess.check_output(['git','rev-parse','HEAD']).decode().strip(),'sha256':{str(p.relative_to(src)):hashlib.sha256(p.read_bytes()).hexdigest() for p in src.rglob('*') if p.is_file()}}
+          (out/'SOURCE_MANIFEST.json').write_text(json.dumps(meta,indent=2))
+          PY
+      - uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2021a
+      - uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            startup;addpath(fullfile(pwd,'analysis','stage2_aircraft'));
+            addpath(fullfile(pwd,'analysis','validation_whole_aircraft_trim'));
+            outdir=fullfile(pwd,'ci_artifacts','betzina_regression');
+            run_line_b_betzina_regression(outdir,fullfile(outdir,'source'));
+      - name: Preserve current backend and confirm no unintended changes
+        if: always()
+        run: |
+          mkdir -p ci_artifacts/betzina_regression/current_code
+          cp analysis/stage2_aircraft/m1_evidence_v1_forward_rotor.m analysis/stage2_aircraft/stage2_matched_rotor_parameters.m analysis/xv15_c81*.m analysis/validation_whole_aircraft_trim/run_line_b_betzina_regression.m params_nominal.m ci_artifacts/betzina_regression/current_code/
+          git diff --exit-code
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: betzina-v4-regression-${{ github.sha }}
+          path: ci_artifacts/betzina_regression
+          if-no-files-found: error
