@@ -1,0 +1,9 @@
+{
+  "url": "https://rotorcraft.arc.nasa.gov/Publications/files/CR-166537_883.pdf",
+  "head": "0ced53c5ce19662d9a06a0d94b335fa600ee09d3",
+  "sha256": "9a0888d19929747d079e79582c5172f5ea0ac526e14de87a0547b5ee2ae6340a",
+  "pdf_pages": 278,
+  "matlabExecuted": false,
+  "noModelChange": true,
+  "purpose": "Original source cited as Ref6 in Kleinhesselink2007 section3.1; resolve output definitions before changing physics"
+}

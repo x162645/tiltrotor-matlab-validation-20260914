@@ -1,0 +1,2 @@
+speed_kt,numericallyAccepted,residualNorm,theta_deg,stick_in,elevator_deg,thrustPerRotor_lbf,thetaDifference_deg,stickDifference_in,elevatorDifference_deg,thrustDifference_pct,tailWakeRatio
+60,0,0.334525200388945,-0.641361764805478,6.07124899195651,5.30110829645866,6354.35478669571,5.04863823519452,0.781248991956514,2.96110829645866,7.0497395789968,-0.536514312577163

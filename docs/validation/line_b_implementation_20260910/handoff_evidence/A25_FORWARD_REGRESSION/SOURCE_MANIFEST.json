@@ -1,0 +1,29 @@
+{
+  "sourceCommit": "1c4ebc307717bbd74ad22da66ed8dfbdc3001395",
+  "head": "f24ffbe55e2c87b7c54177c1c60b1367b1ff0a8e",
+  "sha256": {
+    "analysis/validation_betzina2002/run_betzina2002_forward_rotor_diagnostic.m": "06a0a6ef874f6a0c9800b75217a743a9207f58d7d133c5b11c6198d897e50aa0",
+    "analysis/validation_betzina2002/run_betzina2002_mu017_representative_load_sweep.m": "f14f62840a8d5b9602c844afbe7ce182a8a9b4d290c9e82f34ad27d423c53c8a",
+    "analysis/validation_betzina2002/run_betzina2002_two_cyclic_forward_validation.m": "85c7140999cb2a5544a85c2d5af5557a8dd387f12c7567a996062c4595b61c38",
+    "analysis/validation_betzina2002/run_betzina2002_two_cyclic_identity_gate.m": "e313cfc886ca1ad3aa40bd5aa151cc6139c029b345e63c635ab247478df9335b",
+    "analysis/validation_betzina2002/solve_betzina2002_operating_state.m": "523eaed9069d2ba4dcf2e67e0f500b91591b4cee5cd5f946648fd328e2939184",
+    "analysis/validation_betzina2002/run_betzina2002_fig16_comparison.m": "da21f47d8354274c71d48a9d9fad9f1e21c5c216ee4a5d09e61156c94adaec61",
+    "analysis/validation_betzina2002/run_betzina2002_fast_lm_validation.m": "b03d9f6aea9d27c64414ea714918e2f61c812fef9f45884d4677906cbc09a8e3",
+    "analysis/validation_betzina2002/betzina2002_two_cyclic_rotor.m": "18c62aebaa5076988cc4e5e0f5e0d51afc50b4c51114113683885dddc4766949",
+    "analysis/validation_betzina2002/run_betzina2002_alpha0_quickcheck.m": "05cac6d17c2762138d22c20151468bf6b7b8b49cdf7091b80c218fa34528d549",
+    "analysis/validation_betzina2002/run_betzina2002_failure_fingerprint.m": "0aa78783991ad7f59f23631041f43209b369f5348d1989cf1019ef483b62ace3",
+    "analysis/validation_betzina2002/data/BETZINA2002_FIG16_CURRENT_TEST_DIGITIZATION.csv": "77509172cd3ecb46f9b420fce9939cdd64d047849483197155dd103f8370345c",
+    "analysis/validation_betzina2002/data/BETZINA2002_MU017_REPRESENTATIVE_FIG18_SECONDARY_DIGITIZATION.csv": "0d5679427988e49d2ae265f1ae7efdf06f091336699599b3025a92512614d816",
+    "analysis/validation_betzina2002/evidence/BETZINA2002_FIG16_POINT_COMPARISON.csv": "e9f1e886f6537d16fd35083eceecb27bfcc1f0a537a61c093563e5327bf44c4e",
+    "analysis/validation_betzina2002/evidence/BETZINA2002_MU017_REPRESENTATIVE_LOAD_SWEEP_SUMMARY.csv": "dbff2fdc991ee446b7fa095056e9e78f2801b89f3a5e1b6b2b57fcc60fd73bbc",
+    "analysis/validation_betzina2002/evidence/BETZINA2002_MU017_REPRESENTATIVE_LOAD_SWEEP_POINTS.csv": "2726afa604f513e3783a9082df3f7f017b34bb62b9c2bf0248e7536b4ed25f84",
+    "analysis/validation_betzina2002/evidence/BETZINA2002_TWO_CYCLIC_IDENTITY_GATE_SUMMARY.csv": "b402844585519721d115413b34d753b692803a2560e6f40eb3db303a185b49a2",
+    "analysis/validation_betzina2002/evidence/README.md": "0da3f6aeaef54950661ac6d73f758545c830bebfb3da985e0520565a3bae4303",
+    "analysis/validation_betzina2002/evidence/BETZINA2002_FIG16_ALPHA_SUMMARY.csv": "bb2b153e840d14702202a624f0583639e83149bf5db10db1a7da25c7bc702cff",
+    "analysis/validation_betzina2002/evidence/BETZINA2002_FIG16_OVERALL_SUMMARY.csv": "d18e60099f4f05a743a7bcbb752223c20d061d41e039cf2f8cf5c9e55d81289e",
+    "analysis/validation_betzina2002/evidence/BETZINA2002_FAILURE_FINGERPRINT_ALPHA_TREND.csv": "adc65d7a83c3f7800c48e159ec472e8f4dc3c185b6dfe020aebcf0a194031ac5",
+    "analysis/validation_betzina2002/evidence/BETZINA2002_FAST_LM_PREDICTIONS.csv": "8515babe6da703849921ff108f7f9e9a651ff1af032f7c43602b384aefb81267",
+    "analysis/validation_betzina2002/evidence/BETZINA2002_TWO_CYCLIC_IDENTITY_GATE.csv": "83076eb92c04ad200f34afd47b1a147f629c5629115ed70669f21657ac7a5dd3",
+    "docs/BETZINA2002_FORWARD_VALIDATION_CONCLUSION_20260907.md": "15b23f8d7832f3c268cc7d52e6079055ae5136e142bd6a43dbf6c89850a2c2b4"
+  }
+}

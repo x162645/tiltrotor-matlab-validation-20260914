@@ -1,0 +1,2 @@
+MAE_CQ_over_sigma,RMSE_CQ_over_sigma,signedBias_CQ_over_sigma,maxAbsResidual,pointsWithinDigitizationBand,meanAbsResidual_over_repeatability
+0.000310614976726347,0.000385888267826681,0.000269698131353352,0.000627856729542898,4,5.17691627877246
