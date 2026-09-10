@@ -29,8 +29,7 @@ vel=x(1:3)+flow.additionalRelativeVelocityBody_mps(:);
 if vel(1)<=0,error('gtrs_horizontal_tail_steady:ReverseLocalFlow','Reverse local flow is not implemented.');end
 % A38: C_RF=norm(rotor force)/(rho*pi*Omega^2*R^4), NOT the repository CT
 % using 0.5*rho*A*(Omega*R)^2. A70 and B33 supply the next relation.
-aWing=aF-T.KXRW*T.XRW0*flow.rotorForceCoefficientSum/ ...
-    max(.15,flow.rotorMuMean)^2*57.3;
+aWing=gtrs_wing_freefield_angle(aF,flow.rotorForceCoefficientSum,flow.rotorMuMean);
 epsilon=interp1(T.wingAlpha_deg,T.wingDownwash_deg,aWing,'linear')/sqrt(1-Mach^2);
 alphaFlow=atan2(vel(3),vel(1))*180/pi;
 alphaLift=alphaFlow-epsilon+T.geometricIncidence_deg;

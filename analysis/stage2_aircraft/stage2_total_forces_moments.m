@@ -35,8 +35,11 @@ end
 [FrotL,MrotL,rotL]=stage2_rotor_backend(modelIdentity,x,ctrlLeft,betaM,-1,mp.cgShift,PL);
 [FrotR,MrotR,rotR]=stage2_rotor_backend(modelIdentity,x,ctrlRight,betaM,+1,mp.cgShift,PR);
 if isfield(P.wing,'coefficientModel')
- if ~strcmp(P.wing.coefficientModel,'GTRS_HELI_FLAP40_25_V5'),error('stage2_total_forces_moments:UnknownWingModel','Unknown wing coefficient model.');end
- [Fwing,Mwing,wing]=wing_model_source_family(x,uApplied,betaM,mp.cgShift,rotL,rotR,P);
+ if strcmp(P.wing.coefficientModel,'GTRS_HELI_FLAP40_25_V5')
+  [Fwing,Mwing,wing]=wing_model_source_family(x,uApplied,betaM,mp.cgShift,rotL,rotR,P);
+ elseif strcmp(P.wing.coefficientModel,'GTRS_FREEFIELD_HELI_V6')
+  [Fwing,Mwing,wing]=wing_model_freefield_consistent(x,uApplied,betaM,mp.cgShift,rotL,rotR,P);
+ else,error('stage2_total_forces_moments:UnknownWingModel','Unknown wing coefficient model.');end
 else
  [Fwing,Mwing,wing]=wing_model(x,uApplied,betaM,mp.cgShift,rotL,rotR,P);
 end

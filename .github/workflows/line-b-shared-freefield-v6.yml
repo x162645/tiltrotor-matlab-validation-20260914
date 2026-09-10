@@ -1,0 +1,72 @@
+name: Line B shared wing-tail free-field V6
+on:
+  push:
+    branches: [implementation/line-b-external-validation-20260910]
+    paths: ['.github/workflows/line-b-shared-freefield-v6.yml','model/gtrs_wing_freefield_angle.m','model/wing_model_freefield_consistent.m','analysis/validation_whole_aircraft_trim/run_line_b_v6_tests.m','analysis/validation_whole_aircraft_trim/run_line_b_v6_trim_case.m']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - name: Preserve old tail for exact arithmetic regression
+        run: |
+          mkdir -p ci_artifacts/v6_tests/baseline_tail
+          git fetch --depth=1 origin f24ffbe55e2c87b7c54177c1c60b1367b1ff0a8e
+          git show f24ffbe55e2c87b7c54177c1c60b1367b1ff0a8e:model/gtrs_horizontal_tail_steady.m > ci_artifacts/v6_tests/baseline_tail/ORIGINAL.txt
+          python - <<'PY'
+          import pathlib
+          p=pathlib.Path('ci_artifacts/v6_tests/baseline_tail')
+          (p/'baseline_gtrs_horizontal_tail_steady.m').write_text((p/'ORIGINAL.txt').read_text().replace('gtrs_horizontal_tail_steady','baseline_gtrs_horizontal_tail_steady'))
+          PY
+          git diff f24ffbe55e2c87b7c54177c1c60b1367b1ff0a8e HEAD > ci_artifacts/v6_tests/V6_ONLY.patch
+      - uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2021a
+      - uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            startup;addpath(fullfile(pwd,'analysis','stage2_aircraft'));
+            addpath(fullfile(pwd,'analysis','validation_whole_aircraft_trim'));
+            run_line_b_v6_tests(fullfile(pwd,'ci_artifacts','v6_tests'));
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v6-tests-${{ github.sha }}
+          path: ci_artifacts/v6_tests
+  trim:
+    needs: tests
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        speed: [40,60,80,100]
+    steps:
+      - uses: actions/checkout@v6
+      - uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2021a
+      - uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            startup;addpath(fullfile(pwd,'analysis','stage2_aircraft'));
+            addpath(fullfile(pwd,'analysis','validation_whole_aircraft_trim'));
+            run_line_b_v6_trim_case(${{ matrix.speed }},fullfile(pwd,'ci_artifacts','v6_trim'));
+      - name: Preserve code and immutable identity
+        if: always()
+        run: |
+          mkdir -p ci_artifacts/v6_trim/code_snapshot
+          cp -R model analysis/stage2_aircraft analysis/validation_whole_aircraft_trim ci_artifacts/v6_trim/code_snapshot/
+          cp params_nominal.m analysis/xv15_c81*.m ci_artifacts/v6_trim/code_snapshot/
+          git rev-parse HEAD > ci_artifacts/v6_trim/COMMIT.txt
+          git diff --exit-code
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v6-trim-${{ matrix.speed }}kt-${{ github.sha }}
+          path: ci_artifacts/v6_trim
+          if-no-files-found: error
