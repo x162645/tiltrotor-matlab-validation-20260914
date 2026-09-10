@@ -1,0 +1,49 @@
+name: Dynamic benchmark source acquisition
+on:
+  push:
+    branches: [research/dynamic-fidelity-benchmark-20260910]
+    paths: ['.github/workflows/dynamic-benchmark-source.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v6
+      - name: Retrieve exact public NASA dynamic sources, no model runs
+        shell: bash
+        run: |
+          python -m pip install --quiet pymupdf
+          mkdir -p ci_artifacts/dynamic_source
+          python - <<'PY'
+          import urllib.request,pathlib,hashlib,json,fitz,re
+          root=pathlib.Path('ci_artifacts/dynamic_source');meta=[]
+          for ident,name in [('19870013257','NASA_TM_89428'),('19840026374','NASA_TM_86009')]:
+              url=f'https://ntrs.nasa.gov/api/citations/{ident}/downloads/{ident}.pdf'
+              rec={'id':ident,'url':url,'role':'FLIGHT_IDENTIFIED_RESPONSE_SOURCE_NOT_RAW_MATCHED_FLIGHT_RECORD','success':False}
+              try:
+                  req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'})
+                  raw=urllib.request.urlopen(req,timeout=90).read()
+                  if not raw.startswith(b'%PDF'):raise ValueError('Not a PDF')
+                  (root/(name+'.pdf')).write_bytes(raw);doc=fitz.open(stream=raw,filetype='pdf')
+                  text=[];hits=[]
+                  for i,p in enumerate(doc):
+                      t=p.get_text();text.append(f'\n\nPDF_PAGE_{i+1}\n'+t)
+                      if re.search(r'transfer.{0,12}function|longitudinal|pitch.{0,12}response|table\s+[IVX0-9]',t,re.I):hits.append(i+1)
+                  (root/(name+'_TEXT.txt')).write_text(''.join(text),encoding='utf-8')
+                  rec.update(success=True,sha256=hashlib.sha256(raw).hexdigest(),bytes=len(raw),pages=len(doc),candidate_pages_1based=hits)
+              except Exception as e:
+                  rec['error']=repr(e)
+              meta.append(rec)
+          (root/'SOURCE_MANIFEST.json').write_text(json.dumps(meta,indent=2),encoding='utf-8')
+          print(json.dumps(meta,indent=2))
+          if not any(r['success'] for r in meta):raise RuntimeError('No verified source bytes retrieved')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: dynamic-sources-${{ github.sha }}
+          path: ci_artifacts/dynamic_source
+          if-no-files-found: error
