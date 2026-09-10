@@ -19,7 +19,7 @@ jobs:
         shell: bash
         run: |
           mkdir -p ci_artifacts/line_b_fixed_input/source_snapshot ci_artifacts/line_b_fixed_input/source_pages
-          cp -R model analysis/validation_whole_aircraft_trim ci_artifacts/line_b_fixed_input/source_snapshot/
+          cp -R model analysis/validation_whole_aircraft_trim analysis/stage2_aircraft ci_artifacts/line_b_fixed_input/source_snapshot/
           cp params_nominal.m AGENTS.md CODEX_TASK.md ci_artifacts/line_b_fixed_input/source_snapshot/
           git rev-parse HEAD > ci_artifacts/line_b_fixed_input/COMMIT.txt
           python -m pip install --quiet pymupdf
@@ -45,6 +45,20 @@ jobs:
               print('SOURCE_DOWNLOAD_FAILED:',repr(exc))
           (root/'SOURCE_MANIFEST.json').write_text(json.dumps(meta,indent=2),encoding='utf-8')
           print(json.dumps(meta))
+          url='https://rotorcraft.arc.nasa.gov/Publications/files/CR-166536_882.pdf'
+          meta={'url':url,'success':False,'role':'Thesis reference 7: model equations, not a new validation target'}
+          try:
+              raw=urllib.request.urlopen(url,timeout=120).read()
+              if not raw.startswith(b'%PDF'): raise ValueError('Not PDF')
+              pdf=root/'NASA_CR_166536.pdf'; pdf.write_bytes(raw); doc=fitz.open(pdf)
+              texts=[p.get_text() for p in doc]
+              (root/'NASA_CR_166536_TEXT.txt').write_text('\n'.join(f'\nPDF_PAGE_{i+1}\n'+t for i,t in enumerate(texts)),encoding='utf-8')
+              hits=[i+1 for i,t in enumerate(texts) if 'horizontal tail' in ' '.join(t.lower().split()) or 'downwash' in t.lower() or 'gearing' in t.lower()]
+              meta.update(success=True,sha256=hashlib.sha256(raw).hexdigest(),pdf_pages=len(doc),candidate_pages_1based=hits)
+          except Exception as exc:
+              meta['error']=repr(exc); print('GTRS_SOURCE_DOWNLOAD_FAILED:',repr(exc))
+          (root/'GTRS_SOURCE_MANIFEST.json').write_text(json.dumps(meta,indent=2),encoding='utf-8')
+          print(json.dumps(meta))
           PY
       - uses: matlab-actions/setup-matlab@v3
         with:
@@ -57,6 +71,7 @@ jobs:
             addpath(fullfile(pwd,'analysis','stage2_aircraft'));
             addpath(fullfile(pwd,'analysis','validation_whole_aircraft_trim'));
             run_line_b_fixed_input_audit(fullfile(pwd,'ci_artifacts','line_b_fixed_input'));
+            if exist('run_line_b_tail_replay','file'), run_line_b_tail_replay(fullfile(pwd,'ci_artifacts','line_b_fixed_input')); end;
       - name: Check production files unchanged
         if: always()
         run: git diff --exit-code -- model params_nominal.m
