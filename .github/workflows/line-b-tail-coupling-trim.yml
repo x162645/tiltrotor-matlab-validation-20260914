@@ -1,21 +1,16 @@
-name: Line B source-constrained tail coupling trim
+name: Line B legacy velocity-only V2 reproduction
 on:
-  push:
-    branches: [implementation/line-b-external-validation-20260910]
-    paths:
-      - '.github/workflows/line-b-tail-coupling-trim.yml'
-      - 'model/rotor_tail_interference_heli.m'
-      - 'model/horizontal_tail_model.m'
-      - 'analysis/stage2_aircraft/stage2_total_forces_moments.m'
-      - 'analysis/validation_whole_aircraft_trim/run_line_b_tail_trim_case.m'
-      - 'analysis/validation_whole_aircraft_trim/run_line_b_tail_replay.m'
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
-  interface-tests:
+  reproduce:
     runs-on: ubuntu-22.04
-    timeout-minutes: 10
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        speed: [40,60,80,100]
     steps:
       - uses: actions/checkout@v6
       - uses: matlab-actions/setup-matlab@v3
@@ -24,47 +19,11 @@ jobs:
       - uses: matlab-actions/run-command@v3
         with:
           command: >-
-            startup; addpath(fullfile(pwd,'analysis','stage2_aircraft'));
+            startup;addpath(fullfile(pwd,'analysis','stage2_aircraft'));
             addpath(fullfile(pwd,'analysis','validation_whole_aircraft_trim'));
-            outdir=fullfile(pwd,'ci_artifacts','tail_interface'); mkdir(outdir);
-            run_line_b_tail_replay(outdir);
+            run_line_b_tail_trim_case(${{ matrix.speed }},fullfile(pwd,'ci_artifacts','legacy_v2'),true,'VELOCITY_ONLY_V2');
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: tail-interface-${{ github.sha }}
-          path: ci_artifacts/tail_interface
-  trim:
-    needs: interface-tests
-    runs-on: ubuntu-22.04
-    timeout-minutes: 20
-    strategy:
-      fail-fast: false
-      matrix:
-        speed: [60, 100]
-    steps:
-      - uses: actions/checkout@v6
-      - uses: matlab-actions/setup-matlab@v3
-        with:
-          release: R2021a
-      - name: Archival initialization retry; fixed physics and solver settings
-        uses: matlab-actions/run-command@v3
-        with:
-          command: >-
-            startup; addpath(fullfile(pwd,'analysis','stage2_aircraft'));
-            addpath(fullfile(pwd,'analysis','validation_whole_aircraft_trim'));
-            run_line_b_tail_trim_case(${{ matrix.speed }},fullfile(pwd,'ci_artifacts','tail_trim'),true);
-      - name: Record source code for reproducibility
-        if: always()
-        shell: bash
-        run: |
-          mkdir -p ci_artifacts/tail_trim/code_snapshot
-          cp -R model analysis/stage2_aircraft analysis/validation_whole_aircraft_trim ci_artifacts/tail_trim/code_snapshot/
-          cp params_nominal.m ci_artifacts/tail_trim/code_snapshot/
-          git rev-parse HEAD > ci_artifacts/tail_trim/COMMIT.txt
-          git diff --exit-code
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: tail-trim-${{ matrix.speed }}kt-${{ github.sha }}
-          path: ci_artifacts/tail_trim
-          if-no-files-found: error
+          name: legacy-v2-${{ matrix.speed }}kt-${{ github.sha }}
+          path: ci_artifacts/legacy_v2
