@@ -1,0 +1,11 @@
+# 历史参数身份审计：只按适用版本复用
+
+来源：用户保存的 PARAMETER_IDENTITY_FIELDS_AUDITED.csv，2026-09-10从Library实际取回。原始文件47,838字节、73行数据、23列，SHA256为`4f3cc72898600c6f87caa8cd8f30254111e26343837b5a10ceb4ba75ba0ddd07`，全部audit_commit=9d0c2abce6a3367ec8c46ca7aeb534b45b8ed728。
+
+HISTORICAL_PARAMETER_AUDIT_EXTRACT.csv保留全部73项的12个核心列：field_id/component/code_field/current_value/code_unit/printed_page/pdf_page_1based/identity_class/transform_or_assignment/limit_or_issue/source_evidence/implementation_status。它是可读摘录，不是原始23列字节副本；重复URL、索引及部分定位列省略。原完整CSV保留在本次交接下载包。文献页对应Kleinhesselink2007及原表中明示的代码/未溯源来源；详见上级HANDOFF_SOURCE_REGISTRY.md的SRC01/SRC07。
+
+该表记录的是54条STATIC_CODE_VERIFIED_NO_MATLAB_RUN和19条STATIC_CODE_READ_NO_MATLAB_RUN，既不是全部来源闭合，也不是当前V7已经得到73项外部验证。ID019/055–066等UNRESOLVED不能被字段已填掩盖。
+
+后续覆盖关系：ID071仅描述V1没有旋翼到平尾接口，S04/S05已经实现；ID073页图待核状态由后续原页回放/S15覆盖。V5/V6源翼模式和V3源尾模式不再读取部分旧CLalpha/CLmax/tanh参数，不要依据旧字段备注修改新模式。垂尾接口/横侧向及动态部分仍有未验证事项，不因平尾修订自动通过。
+
+防重复：按步骤S02和具体field_id调用原记录；只有代码、输入或来源定义发生相关变化时复核该字段。不要重新填写一张空白参数表，也不要把历史静态核查升级为新版本精度证明。
