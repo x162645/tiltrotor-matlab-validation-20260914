@@ -51,7 +51,15 @@ end
 [FrotR,MrotR,rotR]=stage2_rotor_backend(modelIdentity,x,ctrlRight,betaM,+1,mp.cgShift,PR);
 [Fwing,Mwing,wing]=wing_model(x,uApplied,betaM,mp.cgShift,rotL,rotR,P);
 [Ffus,Mfus,fus]=fuselage_model(x,mp.cgShift,P);
-[Fht,Mht,htail]=horizontal_tail_model(x,uApplied(6),mp.cgShift,P);
+if isfield(P,'interference') && isfield(P.interference,'rotorToTailModel')
+    if ~strcmp(P.interference.rotorToTailModel,'FERGUSON_1988_TABLE_2IA_STEADY_HELI')
+        error('stage2_total_forces_moments:UnknownTailInteraction','Unknown interaction model.');
+    end
+    tailFlow=rotor_tail_interference_heli(x,betaM,rotL,rotR,P);
+    [Fht,Mht,htail]=horizontal_tail_model(x,uApplied(6),mp.cgShift,P,tailFlow);
+else
+    [Fht,Mht,htail]=horizontal_tail_model(x,uApplied(6),mp.cgShift,P);
+end
 [Fvt,Mvt,vtail]=vertical_tail_model(x,uApplied(7),mp.cgShift,P);
 Ftotal=FrotL+FrotR+Fwing+Ffus+Fht+Fvt;
 Mtotal=MrotL+MrotR+Mwing+Mfus+Mht+Mvt;

@@ -1,4 +1,4 @@
-function [Fbody, Mbody, out] = horizontal_tail_model(x, elevator, cgShift, P)
+function [Fbody, Mbody, out] = horizontal_tail_model(x, elevator, cgShift, P, flow)
 %HORIZONTAL_TAIL_MODEL 平尾与升降舵模型。
 % 对应论文式(25)~(26)。
 
@@ -7,6 +7,18 @@ omega = x(4:6);
 
 rAC = P.htail.rAC - cgShift;
 Vlocal = Vbody + cross(omega, rAC);
+% Optional explicit relative-air-velocity input. The legacy four-argument
+% path is unchanged; wing downwash and effective incidence remain separate.
+if nargin >= 5 && ~isempty(flow)
+    if ~isstruct(flow) || ~isfield(flow,'additionalRelativeVelocityBody_mps')
+        error('horizontal_tail_model:InvalidLocalFlow','Explicit local-flow vector required.');
+    end
+    dv=flow.additionalRelativeVelocityBody_mps(:);
+    if numel(dv)~=3 || ~isreal(dv) || any(~isfinite(dv))
+        error('horizontal_tail_model:InvalidLocalFlow','Expected finite real 3-vector.');
+    end
+    Vlocal=Vlocal+dv;
+end
 V = norm(Vlocal);
 
 if V < 1e-8
@@ -42,6 +54,7 @@ Maero = [0; qbar*P.htail.S*P.htail.c*Cm; 0];
 Marm = cross(rAC, Fbody);
 Mbody = Marm + Maero;
 
+if nargin >= 5 && ~isempty(flow), out.explicitLocalFlow=flow; end
 out.rAC = rAC;
 out.Vlocal = Vlocal;
 out.V = V;
