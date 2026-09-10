@@ -16,7 +16,7 @@
 实现：df_reference、df_eval_tf、df_state_space_response、df_compare_frf；数据tm89428_reference_cases.json；测试run_dynamic_reference_tests。
 参数角色：全部为来源识别响应描述，不是当前飞机输入参数。没有将参数辨识结果写入旋翼或机体以追结果。
 证据级别：参照重建与合成单元测试，不是原始时历，不是新飞机动态外部验证。旧同工况缺口保留。每条频响网格129点只是数值离散，不是129个独立试验。
-运行状态：以同目录evidence/RUN_MANIFEST.json和MAT为准；无产物时只能称IMPLEMENTED_NOT_EXECUTED。
+运行状态：EXECUTED_AND_READ_BACK；实际运行与边界见下节。不能把检查通过写成飞机验证通过。
 重开条件：相关系数/输入/观测点/频段/实现变化或字节哈希异常。单位/符号合成测试必须随比较器变化回归；不因此重跑旋翼。
 
 ### D01 参照逐条定位
@@ -32,6 +32,36 @@
 
 PDF124/147及因式脚注PDF93和Eq4.8/PDF110已查看渲染原页；其余元数据同时核对解析原文。Web端PDF403、截图不可用；原PDF由真实Actions下载后本地渲染，未做OCR。所有原PDF保留，不用网页失败制造已经看过的假记录。
 
+### D01 实际执行与读回（已完成）
+
+执行run34535689673，计算提交962dee6cd288aed7024b9c6499734808e18ef741；真实MATLAB 9.10.0.2198249(R2021a)Update8，GLNXA64。
+91项断言通过，4条参照各129个计算频点；不调用旋翼/飞机模型，不进行新配平。91是实现测试数量，516是参照离散点数量，都不是新增外部试验数量。
+
+测试包含原始因式对多项式重建、同一传递函数的独立状态空间求值、合成2倍增益/反号/延迟响应，以及错误单位、工况、观测位置、超频段、重复频点、NaN和零响应的拒绝。
+
+|通道|因式/多项式最大复数差|状态空间/多项式最大复数差|
+|---|---:|---:|
+|HOVER_Q_ELEVATOR|1.2561e-15|1.4895e-15|
+|HOVER_AZ_POWER|3.4699e-18|1.9395e-18|
+|CRUISE_Q_ELEVATOR|9.1551e-16|1.3369e-15|
+|CRUISE_AZCG_ELEVATOR|1.6883e-16|1.6711e-16|
+
+这些是同一已给定数学表达式的实现一致性，不是模型对飞行测量的误差；各通道单位不同，不能合成一个飞机精度指标。测试脚本记录0.433651s只是本次小规模软件测试时间，不代表后续整机实时性能。
+
+结果artifact10175337764，原ZIP SHA256 c862c17d348abb6bec4da0992e062102914a01563ccac088dae4e24493c55cca。下载ZIP后已核对哈希并读取RUN_MANIFEST.json、REFERENCE_RECONSTRUCTION_SUMMARY.csv和DYNAMIC_REFERENCE_TEST_RESULTS.mat，三者状态一致；不是仅看workflow绿色。
+原始MAT/CSV/JSON、输入载体快照和两份来源PDF已由提交7788c2e000168b9d64eb0fe3291e4bc2fc8a8273永久入Git，位于本目录evidence/。EXECUTION_INDEX.json给出原run/提交和各文件哈希。不必依赖临时下载地址或重跑已有模型。
+
+离线复现程序（不需要Control System Toolbox）：
+
+```matlab
+addpath(fullfile(pwd,'tests','dynamic_fidelity'));
+run_dynamic_reference_tests(fullfile(pwd,'results','dynamic_reference_reproduction'));
+```
+
+这会执行参照与比较器的软件测试，不是飞机动态验证。当前四条参照first_principles_comparison_ready均为false，原试验质量/CG/惯量、环境/RPM及输入链缺口没有消失。不得复制这些已识别传递函数作为新的部件模型，再与自身比较宣布通过。
+
 ## 下一步D02（未实施）
 
 显式动态部件接口与首个可计算纵向—升沉原型；先稳态极限、局部线性/非线性一致性，再决定有资格的外部通道。继承旧动态同工况限制，不把D01来源响应直接复制成新的飞机模型。不声称国内领先；公平基线与独立数据仍需后续建立。
+
+D02应首先确定一个有明确输入含义、可重复计算的工作点及控制接口，再选择最小必要的动态气动状态。不得把任意一阶滤波器套在静态载荷外就称为有依据的动态模型；不得直接把巡航参照用于现有40–100kt直升机算例。若新增参数需要辨识，单列校准数据和保留检验，不能覆盖原无目标拟合基线。模型改动完成后必须执行对应数值一致性与必要回归，而非再次普查所有历史来源。
