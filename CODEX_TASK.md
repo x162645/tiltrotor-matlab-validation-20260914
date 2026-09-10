@@ -1,226 +1,40 @@
-# CODEX_TASK.md
+# 当前任务状态：部件级倾转旋翼模型的外部验证
 
-STATUS: VALIDATION MAINLINE SYNTHESIZED / M1 HOLDOUT FROZEN / STAGE 6 DYNAMIC GATE BLOCKED / 2026-08-28
+更新：2026-09-10。本分支用本文件替代过期的2026-08-28任务说明；历史版本保留在Git。
 
-## 版本契约
+## 用户授权与目标
 
-- 仓库：`x162645/tiltrotor-matlab`。
-- M0 冻结分支：`frozen/m0-xv15-hover-v1-20260828`。
-- M0 冻结提交：`27f40883633ca14acc0e928649b62d7abb855491`。
-- M1 研究分支：`research/m1-xv15-physics-enhanced-20260828`。
-- M1 Draft PR：#71。
-- 未经用户明确授权不得合并 PR #71。
+用户已明确授权实施：建立可用于操稳研究、具有可追溯外部支持的部件级低阶模型。泛型建模架构与XV-15相关具体验证算例可以并存。不要求完整数字孪生，也不能把目标降为“只要能运行”。允许有证据的最小模型修正和真实MATLAB复评；不得目标拟合、隐藏失败或自动合并PR。
 
-## 本项目主线
+## 工作基线
 
-研究对象是**通用低阶倾转旋翼飞行动力学模型**。XV-15 用于提供外部证据，不用于把通用模型反调成数字孪生。
+当前分支：implementation/line-b-external-validation-20260910。
+原基线：9d0c2abce6a3367ec8c46ca7aeb534b45b8ed728。
+物理候选：e76ed614f83eeea842caca4a109034997dbd510f。
+最后计算：811765fe07b495e8cec111c1a37ce8c49f520ac0。
+Draft PR77，base为diagnostic/whole-aircraft-trim-validation-20260907，不是main；未合并。
 
-固定方法学顺序：
+开始前读AGENTS.md、本文件和docs/validation/line_b_implementation_20260910/IMPLEMENTATION_REPORT.md；检查真实HEAD和工作区，保护未提交更改，不覆盖用户本地工作。
 
-`冻结模型身份 -> 外部验模 -> 保留失败 -> 机理诊断 -> 新模型身份 -> 再冻结 -> 跨数据集/跨设施外部检验 -> 可信适用域 -> 下一证据层级`
+## 已做，不要重做成另一份任务
 
-禁止把“验证误差大”自动转化为“继续调到通过”。
+1. 固定参考状态部件对照真实MATLAB已运行。24主要记录+24基准平移复算，97断言。GTRS部件表图像已核，原CSV确实存在，不再说没有参考载体。
+2. 机身M接近但X不接近；平尾在相同参考状态下仍明显不符。不能称机身全部正确或尾部差异必由旋翼下洗造成。
+3. 原GTRS source为NASA CR166536 1988RevA；原表signed rotor-to-tail steady coupling已实现为opt-in。默认四参数平尾路径回归CSV逐字节一致；17接口/原表/域检查通过。
+4. 新耦合40/80kt闭合，姿态改善但控制更差。60/100kt第一次失败；恢复历史MAT完整外层/两侧挥舞初值后仍失败。六次尝试都保留。不得选择成功两点声称四点或连续区间验证。
+5. 候选不晋升；默认模型不替换。没有动态、转换模式或飞行精度验证完成的结论。
 
-## M0：冻结通用低阶基线
+## 当前真正的开放前沿
 
-冻结提交：`27f40883633ca14acc0e928649b62d7abb855491`。
+不是再做60kt首次检查，也不是无限重跑20kt或升级旋翼求解器。
+先按已定位原文闭合尾部整套局部来流、动压损失、非均匀流与翼下洗定义，核对它与当前有效安装角/饱和的组合。页码：CR166536 A85-A88、B49、B56-B58；不要逐个调增益追TableC1结果。
+机身阻力表A44/B26-B28已定位，版本和起落架增量未闭合；不能从误差拟合新阻力。
+60/100kt内部挥舞失败是保留的数值可计算性限制，不是已证明不存在物理解。未关闭前不能认领相应局部动力学。
+复用并链接已有旋翼可执行身份检验；不得重新展开OARF/WADC/Betzina历史诊断，也不能只读过期注释就宣布旋翼身份已经闭合。
 
-OARF original-metal-blade 6-11 deg：
+## 证据与执行纪律
 
-- Run 15：CT MAPE 56.4224%，CP 62.6130%，FM 23.0180%；
-- Run 14：CT MAPE 56.1864%，CP 64.0809%，FM 19.1169%。
-
-结论：
-
-- 定性载荷趋势可辨识；
-- CT/CP 绝对值存在约 50%-65% 系统性低估；
-- 低 collective 存在分支/求解限制；
-- M0 不是 XV-15 定量悬停性能模型。
-
-这一失败被保留，不修改 production M0。
-
-## M1 来源受约束物理阶梯
-
-正式 MATLAB R2021a 证据：
-
-- C81 section bridge：42.8716 / 51.1184 / 12.2221%；
-- M1-A actual radial geometry + scalar C81：33.9549 / 45.2392 / 4.4100%；
-- M1-B actual geometry + full radial/Mach C81：37.8538 / 50.5150 / 7.5480%；
-- M1-C M1-B + annular momentum：35.7519 / 47.9006 / 5.9849%；
-- M1-D source-constrained loaded torsion：方向减小有效桨距，不能支持未知正总距偏置作为主要解释；
-- M1-E-1 generic Corrigan n=1：32.7287 / 45.8916 / 7.5923%；
-- M1-E-2 Koning XV-15/OARF-correlated n=1.8：28.3075 / 41.7337 / 8.0567%，但属于非独立相关性复现，不可晋升为 holdout 主模型；
-- M1-F Landgrebe/Biot-Savart：7-11 deg 有稳定非局部尾迹分支并改善 CT/CP 数个百分点；6 deg 病态/非物理解，因此仅为 `MODEL_FORM_DIAGNOSTIC`。
-
-不得依据 Run 15 MAPE 排名选择“最好看”的物理模型。
-
-## M1 holdout 冻结
-
-首次冻结记录提交：
-
-`d313296a35319dc8a5e6c398adbed0d54e0f8ede`
-
-发生在 WADC Table A-3 数值读取之前。
-
-冻结模型：
-
-`M1_HOLDOUT_V1 = M1_E1_GENERIC_CORRIGAN_N1`
-
-固定内容：
-
-1. XV-15 original-metal-blade 实际径向弦长；
-2. 非线性扭转及 0.75R collective 映射；
-3. 四径向区域完整 C81 + local Mach/alpha；
-4. generic Corrigan-Schillings `n=1`；
-5. 冻结 M1-E-1 的全盘标量动量闭合及既有一阶方位入流形状；
-6. 当前低阶一阶谐波挥舞；
-7. 无 CT/CP/FM gain；
-8. 无固定 collective offset；
-9. 无 OARF/WADC target fitting。
-
-Stage-5 identity gate 对冻结 Stage-3 六个 OARF 点逐点复算，CT/CP/FM 最大绝对差为 `0`。
-
-## Stage 5：WADC post-freeze 跨设施外部验证已完成
-
-数据：NASA/CR-2017-219486 Appendix A Table A-3 formal WADC Runs 1-3。
-
-角色：
-
-`POST_FREEZE_CROSS_FACILITY_EXTERNAL_VALIDATION`
-
-不是 blind validation；分析者执行时可见数据，但模型、参数和窗口已在数据读取前冻结。
-
-固定窗口继承 6-11 deg；WADC 每 Run 使用源表实际存在的 `6,8,9,10,11 deg`，不插值 7 deg，共 15 点。
-
-最新正式 MATLAB R2021a：
-
-- run：`33163232175`；
-- head：`1b3ddee13972e20a404ad15572bc1794fbd2e60a`；
-- artifact：`9682515346`；
-- artifact SHA-256：`df5251cfd8d1b6e559be1125d7620e06d4009d3a0a188089c06cebdc96debbfa`；
-- status：SUCCESS。
-
-WADC pooled：
-
-### M0
-- CT 59.1465%；
-- CP 66.0974%；
-- FM 23.0497%。
-
-### frozen M1_HOLDOUT_V1
-- CT 37.8956%；
-- CP 51.1078%；
-- FM 9.2559%。
-
-### M1 relative improvement
-- CT：21.2509 pp；
-- CP：14.9896 pp；
-- FM：13.7938 pp。
-
-三个 WADC Run（Mtip 约 0.53、0.62、0.66）CT 改善均约 21.2 pp，CP 均约 15.0 pp，说明来源受约束的 M1 改善跨设施/跨转速保持。
-
-但 CT/CP 绝对误差仍大，因此不得声称 M1 已经成为 XV-15 高精度性能模型。
-
-## 当前悬停可信适用域
-
-在 original-metal-blade hover、collective 约 6-11 deg、Mtip 约 0.53-0.69 的现有证据范围：
-
-### 可以声明
-- CT/CP 随 collective 变化的基本趋势；
-- M1 相对 M0 的改善方向具有跨设施支持；
-- source-constrained geometry/aero/rotational-augmentation 组合具有可泛化价值；
-- FM 可作中等可信度诊断，但必须报告逐点误差避免抵消误导。
-
-### 不可以声明
-- XV-15 数字孪生；
-- 高精度绝对 CT；
-- 高精度绝对 CP；
-- collective < 6 deg 已验证；
-- >11 deg 因 WADC 有数据就自动扩域；
-- Mtip <0.53 或 >0.69 已验证；
-- 悬停组件验模自动等于整机前飞动态验模。
-
-## Stage 6：动态证据同源性复核已完成
-
-新增复核来源包括：
-
-- NASA TM-86009 / 同源 1984 ERF paper；
-- NASA TM-89428；
-- XV-15 hover frequency-domain identification publication；
-- NASA CR-177406 Vol. III existence / archive target。
-
-更新结果：
-
-- cruise q/elevator：MEDIUM / BLOCKED；
-- cruise az/elevator：LOW / BLOCKED；
-- cruise p/aileron：MEDIUM / BLOCKED；
-- cruise beta/rudder：MEDIUM / BLOCKED；
-- hover frequency/step-response evidence：从 PENDING 提升为 MEDIUM-source，但 model homology 仍 MEDIUM / BLOCKED；
-- TM-89428 multi-condition set：MEDIUM / BLOCKED；
-- CR-177406 Vol. III：MEDIUM source potential，case records 未闭合，LOW until retrieved / BLOCKED。
-
-总门槛：
-
-`BLOCKED_NO_HIGH_HOMOLOGY_CASE`
-
-阻塞项是同一试验记录的：
-
-- weight；
-- CG；
-- inertia tensor；
-- rotor RPM / governor；
-- exact atmosphere；
-- complete control-chain mapping；
-- matched machine-readable input/output records。
-
-仓库已有 trim、linearization、modal、time-response 能力，但软件能力不能代替试验同源性。
-
-因此**没有运行伪 XV-15 动态验模**。
-
-## Stage 7：主线综合已完成
-
-机器可读总矩阵：
-
-`results/VALIDATION_CREDIBLE_DOMAIN_MATRIX.csv`
-
-完整研究主线综述：
-
-`docs/VALIDATION_MAINLINE_SYNTHESIS.md`
-
-Stage 5 结果：
-
-`docs/M1_STAGE5_WADC_RESULTS.md`
-
-Stage 6 动态证据复核：
-
-`docs/M1_STAGE6_DYNAMIC_EVIDENCE_REAUDIT.md`
-
-这四个文件共同定义当前项目的正式验证结论、证据角色、允许声明、禁止声明和可信域。
-
-## 当前研究停止点
-
-现有 M1 悬停主线已经达到合理停止点。
-
-**禁止**继续使用 OARF Run14/15 或 WADC 调整 `M1_HOLDOUT_V1`。
-
-下一步只有两条方法学上合法的研究分叉：
-
-### A. 动态 HIGH-homology 证据闭合
-
-若取得 CR-177406 或其他原始试飞卷册，必须先建立同一 flight/run 的 weight/CG/inertia/RPM/atmosphere/control-chain/raw-response 合同；只有达到 HIGH 后才允许冻结动态 case 并执行定量外部验模。
-
-### B. 新的 M2 物理模型
-
-若未来研究更可靠的 tiltrotor free-wake / lifting-line / aeroelastic coupling，必须建立新的 M2 model identity 和新的 development/validation split。不得用 WADC 调好后继续称为当前 M1 holdout。
-
-在上述条件未满足前，当前最合理工作是论文/报告整理、结果可视化和方法学表达，而不是继续调模型。
-
-## 永久停止规则
-
-- 不修改 frozen M0；
-- 不用 OARF/WADC 反调 frozen M1；
-- 不用 generic XV-15 weight/CG/inertia/RPM 填补动态试飞缺口后称为验证；
-- 不删除失败点或大误差点；
-- 不将 reused/correlated source 改称 blind；
-- 不用更小 MAPE 代替证据独立性与模型身份规则；
-- 未经用户明确授权不得合并 PR #71。
+计算：真实MATLAB R2021a Update8。run34467434707、34468711757、34468711818、34469617587已结束，产物号见报告和CSV。工作流green只表示执行成功；numericallyAccepted+residualNorm才表示该点数值状态；GTRS误差另判，不能等于flight validation。
+冻结原结果，所有修改新版本；不能删除失败点或用新容差追通过。常规报告追加不重触发大扫描。
+当前新增源表接口只支持稳态对称betaM=0，非零角速度/侧滑/转换会显式报错；禁止直接用于动态线性化并称已验证。
+后续交付以代码、真实执行证据和用途判定为准，不再以新的路线说明代替实现。

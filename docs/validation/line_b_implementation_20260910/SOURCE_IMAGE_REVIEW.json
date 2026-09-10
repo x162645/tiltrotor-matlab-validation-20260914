@@ -1,0 +1,24 @@
+{
+  "status": "VISUAL_REVIEW_COMPLETED_FOR_USED_ENTRIES",
+  "date": "2026-09-10",
+  "thesis": {
+    "url": "https://drum.lib.umd.edu/bitstreams/6dcf466c-961a-4384-aae7-287ab7e7fd7d/download",
+    "sha256": "9f3c1cddf517b6bffca24e9afeae324383678d94338716d0ffa7742075db0bc4",
+    "pdf_pages_1based": [191,192,195,196,197,198],
+    "printed_pages": [175,176,179,180,181,182],
+    "scope": "GTRS reference states and fuselage/horizontal-tail entries; not Math Model column",
+    "aggregate_discrepancies": "RETAINED_NOT_REPAIRED"
+  },
+  "gtrs": {
+    "url": "https://rotorcraft.arc.nasa.gov/Publications/files/CR-166536_882.pdf",
+    "sha256": "a2013a314af5beb0c5e9bc5bbeb26f99be9a8aa63f2ebe07deaaf11d0d44d67d",
+    "version": "September 1988 Rev A",
+    "implemented_pdf_pages_1based": [107,108,372,375],
+    "implemented_printed_pages": ["A-39","A-40","B-22","B-25"],
+    "role": "SOURCE_TABLE_AND_MODEL_FORM_NOT_INDEPENDENT_VALIDATION_TARGET",
+    "further_located_not_implemented": ["A-44","B-26","B-27","B-28","A-85","A-86","A-87","A-88","B-49","B-56","B-57","B-58"]
+  },
+  "source_archive": {"run":34467736613,"artifact":10148265212,"zip_sha256":"610f9fb3c5b4ecae0fb7239569bca81593a3e336e086ed01f5bd373e951bb291"},
+  "historical_mat": {"run":34175347392,"artifact":10037420339,"actual_source_commit":"1d99311d33753c0006ac08fb3e374b99123c48dc","mat_sha256":"7169f2d470de72674af683c4c83e82f1fc516a456129efe1bff80257d4c3312f"},
+  "note": "This review supplements but does not rewrite the earlier execution manifests with IMAGE_PENDING status."
+}
