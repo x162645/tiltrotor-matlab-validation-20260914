@@ -69,8 +69,8 @@ SHA256：`225e8ba7ff647dfd396a6287e592f9b4b44f94ad05199c9e937ff1b4ca857adf`。
 ## SRC-07：继承主线与静态参数身份表
 
 既有主线：`docs/VALIDATION_MAINLINE_SYNTHESIS.md`、`docs/PARAMETER_GAP_REGISTER.md`、`results/m1_stage5_wadc_holdout/`。M0冻结27f4088；M1_HOLDOUT冻结d313296a。只作为继承项目资产定位，不在交接中重新认证全部历史。
-另从用户已保存文件恢复`PARAMETER_IDENTITY_FIELDS_AUDITED.csv`，原73行/23列，审计提交9d0c2ab，SHA256=`4f3cc72898600c6f87caa8cd8f30254111e26343837b5a10ceb4ba75ba0ddd07`。
-仓库可读摘录见`handoff/HISTORICAL_PARAMETER_AUDIT_EXTRACT.csv`与配套说明：保留全部73个字段的值、单位、来源页、转换、分类和限制，删去重复URL列以降低接手阅读量。原完整CSV随交接下载包保留。它是历史静态审计，54条STATIC_CODE_VERIFIED、19条STATIC_CODE_READ，全部NO_MATLAB_RUN；不得作为V7全参数已验证的证明。
+另从用户已保存文件恢复`PARAMETER_IDENTITY_FIELDS_AUDITED.csv`，原73行/22列，审计提交9d0c2ab，SHA256=`4f3cc72898600c6f87caa8cd8f30254111e26343837b5a10ceb4ba75ba0ddd07`。
+仓库可读摘录见`handoff/HISTORICAL_PARAMETER_AUDIT_EXTRACT.csv`与配套说明：保留全部73个字段的值、单位、来源页、转换、分类和限制，删去重复URL列以降低接手阅读量。原完整CSV同时永久存于handoff/PARAMETER_IDENTITY_FIELDS_AUDITED.csv，随交接下载包保留。它是历史静态审计，54条STATIC_CODE_VERIFIED、19条STATIC_CODE_READ，全部NO_MATLAB_RUN；不得作为V7全参数已验证的证明。
 
 ## 通用单位与来源使用规则
 

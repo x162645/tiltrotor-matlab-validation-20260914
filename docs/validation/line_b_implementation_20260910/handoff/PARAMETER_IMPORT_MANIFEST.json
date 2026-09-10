@@ -1,0 +1,12 @@
+{
+  "source_name": "PARAMETER_IDENTITY_FIELDS_AUDITED.csv",
+  "source_role": "USER_SAVED_STATIC_AUDIT_NOT_NEW_VALIDATION",
+  "audit_commit": "9d0c2abce6a3367ec8c46ca7aeb534b45b8ed728",
+  "original_bytes": 47838,
+  "original_rows": 73,
+  "original_columns": 22,
+  "sha256": "4f3cc72898600c6f87caa8cd8f30254111e26343837b5a10ceb4ba75ba0ddd07",
+  "extract_sha256": "0ddd5f7785fa205c4f781e410c0be48135dbafdb515f0887ebd5d88327ab085c",
+  "import_only": true,
+  "new_model_runs": 0
+}
