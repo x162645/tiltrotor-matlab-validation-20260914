@@ -1,26 +1,10 @@
 function [Fbody,Mbody,out] = m1_evidence_v1_forward_rotor( ...
         x,rotorCtrl,betaM,side,cgShift,P)
 %M1_EVIDENCE_V1_FORWARD_ROTOR Analysis-only forward-flight propagation.
-%
-% This is NOT a newly validated forward-flight rotor.  It extends the frozen
-% M1_EVIDENCE_V1 rotor ingredients through the already-reviewed production
-% forward-flight kinematics / Eq.(12)-Eq.(13) low-order structure so that the
-% effect of the frozen hover evidence package can be propagated into the
-% generic whole-aircraft model.
-%
-% Frozen M1 ingredients retained:
-%   - source-informed radial chord distribution;
-%   - nonlinear metal-blade twist, anchored by physical theta75;
-%   - NASA-TP four-region C81/local-Mach lookup;
-%   - Corrigan n=1 predeclared in-range rotational augmentation;
-%   - global momentum induced-velocity closure (not annular M1-C).
-%
-% Important: an exact zero-speed/zero-cyclic helicopter-hover call is routed
-% through an exact copy of the frozen Stage-3 hover equations.  This is an
-% identity anchor, not evidence that the forward extension is independently
-% validated or mathematically smooth at V=0.  Strict-hover beta1 is not used
-% as a physical lateral-load observable; the anchor returns axial thrust and
-% reaction torque only, consistent with the completed Eq.(12) limit audit.
+% Default retains frozen M1 geometry/C81/Corrigan-n1 and original numerics.
+% Explicit P.rotor.correctionIdentity selects the new V4 continuous
+% positive-lift correction. V4 has a distinct identity and does not inherit
+% the original model's external validation claims. No solver changes.
 
 x = x(:);
 cgShift = cgShift(:);
@@ -37,7 +21,15 @@ end
 if ~isfield(P.env,'aSound') || ~(isfinite(P.env.aSound) && P.env.aSound>0)
     error('m1_evidence_v1_forward_rotor:InvalidSoundSpeed','P.env.aSound required.');
 end
-
+sectionLookup=@xv15_c81_corrigan_stall_delay;
+continuousCorrection=false;
+if isfield(P.rotor,'correctionIdentity')
+    if ~strcmp(P.rotor.correctionIdentity,'CORRIGAN_POSITIVE_LIFT_WASHOUT_V4')
+        error('m1_evidence_v1_forward_rotor:UnknownCorrection','Unknown explicit section correction.');
+    end
+    sectionLookup=@xv15_c81_corrigan_continuous_v4;
+    continuousCorrection=true;
+end
 Vbody = x(1:3);
 omegaBody = x(4:6);
 phiBody = x(7);
@@ -48,7 +40,6 @@ Omega = P.rotor.Omega;
 tipSpeed = Omega*R;
 rho = P.env.rho;
 A = pi*R^2;
-
 eT = [sin(betaM);0;-cos(betaM)];
 eD = [cos(betaM);0; sin(betaM)];
 eY = [0;1;0];
@@ -63,12 +54,8 @@ Vlat = dot(Vhub,eY);
 muLong = Vlong/max(tipSpeed,eps);
 muLat = Vlat/max(tipSpeed,eps);
 mu = hypot(Vlong,Vlat)/max(tipSpeed,eps);
-
-% Common aircraft control coordinate -> physical pitch at 0.75R under the
-% matched M0 linear-twist parameterization.
 x75Linear = (0.75-P.rotor.rootCut)/max(1-P.rotor.rootCut,eps);
 theta75 = rotorCtrl.collective + P.rotor.twistTip*x75Linear;
-
 exactHoverAnchor = norm(Vbody) <= 1e-13 && norm(omegaBody) <= 1e-13 && ...
     abs(betaM) <= 1e-13 && abs(rotorCtrl.cyclicLong) <= 1e-13;
 if exactHoverAnchor
@@ -80,6 +67,7 @@ if exactHoverAnchor
     Mbody = Marm+Mreaction;
     out = base_output();
     out.propagationBranch = 'EXACT_FROZEN_HOVER_IDENTITY_ANCHOR';
+    if continuousCorrection,out.propagationBranch='V4_HOVER_EVALUATION_NOT_FROZEN_IDENTITY';end
     out.hoverAnchorUsed = true;
     out.theta75 = theta75;
     out.theta75Deg = theta75*180/pi;
@@ -118,6 +106,7 @@ if exactHoverAnchor
     out.KLMaxApplied = anchor.KLMaxApplied;
     out.stallDelayApplyCount = anchor.stallDelayApplyCount;
     out.inflowModel = 'FROZEN_STAGE3_NUAA_EQ12_FIRST_HARMONIC';
+    if continuousCorrection,out.inflowModel='SAME_HOVER_EQUATIONS_WITH_V4_SECTION_CORRECTION';end
     out.Marm = Marm;
     out.Mreaction = Mreaction;
     out.Mgyro = zeros(3,1);
@@ -126,7 +115,6 @@ if exactHoverAnchor
     out.M = Mbody;
     return;
 end
-
 vi = sqrt(max(P.mass.m*P.env.g/2,1)/(2*rho*A));
 zFlap = P.rotor.flapInitial(:);
 if numel(zFlap) ~= 3
@@ -182,7 +170,6 @@ elseif closureRelative>closureTolerance
 else
     physicalStatus = 'PHYSICAL_CONVERGED';
 end
-
 beta0=zFlap(1); beta1c=zFlap(2); beta1s=zFlap(3);
 nDiskRaw = eT-beta1c*eD-beta1s*eY;
 nDisk = nDiskRaw/max(norm(nDiskRaw),eps);
@@ -192,9 +179,9 @@ Hrot = rotDir*P.rotor.Jpolar*Omega*eT;
 Mgyro = -cross(omegaBody,Hrot);
 Marm = cross(rHub,Fbody);
 Mbody = Marm+Mreaction+Mgyro;
-
 out = base_output();
 out.propagationBranch = 'FORWARD_EXTENSION_UNVALIDATED_PROPAGATION_ONLY';
+if continuousCorrection,out.propagationBranch='V4_CONTINUOUS_CORRECTION_FORWARD_CANDIDATE';end
 out.hoverAnchorUsed = false;
 out.theta75 = theta75;
 out.theta75Deg = theta75*180/pi;
@@ -223,26 +210,29 @@ out.positiveThrustGuardActive=loads.T<0;
 out.positiveThrustGuardEverActive=positiveThrustGuardEverActive;
 out.Marm=Marm; out.Mreaction=Mreaction; out.Mgyro=Mgyro; out.Hrot=Hrot;
 out.F=Fbody; out.M=Mbody;
-
     function b = base_output()
         b = struct();
         b.modelId='M1_EVIDENCE_V1_FORWARD_PROPAGATION';
         b.claimBoundary=[ ...
             'ANALYSIS_ONLY_FORWARD_PROPAGATION_NOT_FORWARD_FLIGHT_VALIDATION_' ...
             'EXACT_HOVER_ANCHOR_RETAINS_FROZEN_M1_IDENTITY'];
+        b.correctionIdentity='FROZEN_CORRIGAN_GENERIC_N1';
+        if continuousCorrection
+            b.modelId='M1_CONTINUOUS_CORRIGAN_V4';
+            b.correctionIdentity=P.rotor.correctionIdentity;
+            b.claimBoundary='NEW_SOURCE_MOTIVATED_CANDIDATE_REQUIRES_EXTERNAL_REVALIDATION';
+        end
         b.side=side; b.rotDir=rotDir; b.rHub=rHub; b.Vhub=Vhub;
         b.Vaxial=Vaxial; b.Vlong=Vlong; b.Vlat=Vlat;
         b.muLong=muLong; b.muLat=muLat; b.eT=eT; b.eD=eD; b.eY=eY;
         b.theta1c=0; b.theta1s=-rotDir*rotorCtrl.cyclicLong;
         b.basisOrthogonalityError=max(max(abs([eT,eD,eY].'*[eT,eD,eY]-eye(3))));
     end
-
     function [z,info]=solve_flap(viNow,z0)
         z=z0(:);
         info=struct('converged',false,'iterations',0,'residualNorm',Inf);
         for kk=1:P.rotor.flapMaxIter
-            [res,scale]=flap_residual(z,viNow);
-            rn=res/scale;
+            [res,scale]=flap_residual(z,viNow); rn=res/scale;
             if norm(rn)<=P.rotor.flapResidualTol
                 info.converged=true; info.iterations=kk; info.residualNorm=norm(rn); return;
             end
@@ -270,7 +260,6 @@ out.F=Fbody; out.M=Mbody;
         [res,scale]=flap_residual(z,viNow);
         info.iterations=P.rotor.flapMaxIter; info.residualNorm=norm(res/scale);
     end
-
     function [res,scale]=flap_residual(z,viNow)
         ll=blade_loads(viNow,z);
         gBody=P.env.g*[-sin(thetaBody); ...
@@ -284,7 +273,6 @@ out.F=Fbody; out.M=Mbody;
         scale=max([max(abs(ll.flapMomentByAzimuth)),max(abs(gravityMoment)), ...
             P.rotor.Ib*Omega^2*0.05,1]);
     end
-
     function ll=blade_loads(viNow,z)
         r0=P.rotor.rootCut*R;
         edges=linspace(r0,R,P.rotor.nRadial+1);
@@ -312,7 +300,7 @@ out.F=Fbody; out.M=Mbody;
         alpha=thetaBlade-phi; Mach=W/P.env.aSound;
         chordField=ones(size(alpha)).*chord;
         rField=ones(size(alpha)).*xSpan;
-        [CL,CD,meta]=xv15_c81_corrigan_stall_delay( ...
+        [CL,CD,meta]=sectionLookup( ...
             alpha,Mach,rField,chordField,R,'CORRIGAN_GENERIC_N1');
         q=0.5*rho*W.^2;
         dL=q.*chord.*CL.*dr; dD=q.*chord.*CD.*dr;
@@ -330,13 +318,11 @@ out.F=Fbody; out.M=Mbody;
         ll.minUT=min(UT(:)); ll.maxUT=max(UT(:));
         ll.maxAbsAlphaBlade=max(abs(alpha(:)));
     end
-
     function psi=azimuth_grid()
         psi=(0:P.rotor.nAzimuth-1)*(2*pi/P.rotor.nAzimuth);
     end
-
     function anchor=frozen_hover_anchor(theta75Rad)
-        % Exact frozen Stage-3 Corrigan-n=1 hover numerical equations.
+        % Same hover equations; original correction unless explicitly selecting V4.
         r0=P.rotor.rootCut*R;
         rEdges=linspace(r0,R,P.rotor.nRadial+1);
         rMid=0.5*(rEdges(1:end-1)+rEdges(2:end)); dr=diff(rEdges);
@@ -383,7 +369,6 @@ out.F=Fbody; out.M=Mbody;
             'iterations',ii,'alphaClampCount',hLoads.alphaClampCount, ...
             'machClampCount',hLoads.machClampCount,'KLMinApplied',hLoads.KLMinApplied, ...
             'KLMaxApplied',hLoads.KLMaxApplied,'stallDelayApplyCount',hLoads.applyCount);
-
         function [zz,info]=anchor_flap(viNow,z0)
             zz=z0(:); info=struct('converged',false,'iterations',0,'residualNorm',Inf);
             for kk=1:P.rotor.flapMaxIter
@@ -433,7 +418,7 @@ out.F=Fbody; out.M=Mbody;
             w=hypot(UT,up); ph=atan2(up,max(abs(UT),1e-8));
             al=thetaBlade-ph; ma=w/P.env.aSound;
             cf=ones(size(al)).*chord; rf=ones(size(al)).*xSpan;
-            [cl,cd,meta]=xv15_c81_corrigan_stall_delay( ...
+            [cl,cd,meta]=sectionLookup( ...
                 al,ma,rf,cf,R,'CORRIGAN_GENERIC_N1');
             qq=0.5*rho*w.^2;
             dl=qq.*chord.*cl.*dr; dd=qq.*chord.*cd.*dr;
