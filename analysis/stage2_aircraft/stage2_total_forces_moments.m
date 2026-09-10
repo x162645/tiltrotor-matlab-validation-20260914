@@ -61,6 +61,16 @@ info.components={struct('name','rotorLeft','F',FrotL,'M',MrotL,'data',rotL); ...
  struct('name','fuselage','F',Ffus,'M',Mfus,'data',fus); ...
  struct('name','horizontalTail','F',Fht,'M',Mht,'data',htail); ...
  struct('name','verticalTail','F',Fvt,'M',Mvt,'data',vtail)};
+% Optional distinct hub-spinner load. Rotor blade T/Q/H are unchanged.
+if isfield(P,'aeroExtras')&&isfield(P.aeroExtras,'spinnerModel')
+ if ~strcmp(P.aeroExtras.spinnerModel,'GTRS_TWO_SPINNERS_STEADY_HELI_V7')
+  error('stage2_total_forces_moments:UnknownSpinnerModel','Unknown spinner model.');
+ end
+ [Fsp,Msp,spinner]=gtrs_spinner_steady(x,betaM,mp.cgShift,rotL,rotR,P);
+ Ftotal=Ftotal+Fsp;Mtotal=Mtotal+Msp;
+ info.components{end+1,1}=struct('name','hubSpinner','F',Fsp,'M',Msp,'data',spinner);
+ info.hubSpinner=spinner;
+end
 info.massProperties=mp;info.commandedControls=uCtrl;info.appliedControls=uApplied;
 info.appliedRotorControls.left=ctrlLeft;info.appliedRotorControls.right=ctrlRight;
 info.rotorLeft=rotL;info.rotorRight=rotR;info.wing=wing;info.fuselage=fus;
