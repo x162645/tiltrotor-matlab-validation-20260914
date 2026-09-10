@@ -1,0 +1,68 @@
+name: Line B fixed input external comparison
+on:
+  push:
+    branches: [implementation/line-b-external-validation-20260910]
+    paths:
+      - '.github/workflows/line-b-fixed-input-validation.yml'
+      - 'analysis/validation_whole_aircraft_trim/**'
+      - 'model/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  fixed-input:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - name: Record primary-source pages and exact source snapshot
+        shell: bash
+        run: |
+          mkdir -p ci_artifacts/line_b_fixed_input/source_snapshot ci_artifacts/line_b_fixed_input/source_pages
+          cp -R model analysis/validation_whole_aircraft_trim ci_artifacts/line_b_fixed_input/source_snapshot/
+          cp params_nominal.m AGENTS.md CODEX_TASK.md ci_artifacts/line_b_fixed_input/source_snapshot/
+          git rev-parse HEAD > ci_artifacts/line_b_fixed_input/COMMIT.txt
+          python -m pip install --quiet pymupdf
+          python - <<'PY'
+          import urllib.request, pathlib, hashlib, json, fitz
+          root=pathlib.Path('ci_artifacts/line_b_fixed_input')
+          url='https://drum.lib.umd.edu/bitstreams/6dcf466c-961a-4384-aae7-287ab7e7fd7d/download'
+          meta={'url':url,'success':False}
+          try:
+              req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'})
+              raw=urllib.request.urlopen(req,timeout=90).read()
+              if not raw.startswith(b'%PDF'): raise ValueError('Downloaded bytes are not a PDF')
+              pdf=root/'Kleinhesselink_2007.pdf'; pdf.write_bytes(raw)
+              doc=fitz.open(pdf)
+              pages=[36,37,42,43,44,45,46,47,164,165,166,167,179,180,186,190,191,194,195,196,197]
+              for p in pages:
+                  page=doc[p]
+                  page.get_pixmap(matrix=fitz.Matrix(1.5,1.5)).save(root/'source_pages'/f'pdf_{p+1:03d}.png')
+                  (root/'source_pages'/f'pdf_{p+1:03d}.txt').write_text(page.get_text(),encoding='utf-8')
+              meta.update(success=True,sha256=hashlib.sha256(raw).hexdigest(),pdf_pages=len(doc),rendered_pages_1based=[p+1 for p in pages])
+          except Exception as exc:
+              meta['error']=repr(exc)
+              print('SOURCE_DOWNLOAD_FAILED:',repr(exc))
+          (root/'SOURCE_MANIFEST.json').write_text(json.dumps(meta,indent=2),encoding='utf-8')
+          print(json.dumps(meta))
+          PY
+      - uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2021a
+      - name: Execute current production component functions
+        uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            startup;
+            addpath(fullfile(pwd,'analysis','stage2_aircraft'));
+            addpath(fullfile(pwd,'analysis','validation_whole_aircraft_trim'));
+            run_line_b_fixed_input_audit(fullfile(pwd,'ci_artifacts','line_b_fixed_input'));
+      - name: Check production files unchanged
+        if: always()
+        run: git diff --exit-code -- model params_nominal.m
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: line-b-fixed-input-${{ github.sha }}
+          path: ci_artifacts/line_b_fixed_input
+          if-no-files-found: error
