@@ -1,0 +1,69 @@
+name: Line B independent rotor regression
+on:
+  push:
+    branches: [implementation/line-b-external-validation-20260910]
+    paths:
+      - '.github/workflows/line-b-independent-rotor-regression.yml'
+      - 'analysis/validation_whole_aircraft_trim/run_line_b_independent_rotor_regression.m'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  regression:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+      - name: Snapshot existing code, input data and source records
+        id: snapshot
+        shell: bash
+        run: |
+          mkdir -p ci_artifacts/rotor_regression
+          python - <<'PY'
+          import subprocess,pathlib,zipfile,json,hashlib
+          out=pathlib.Path('ci_artifacts/rotor_regression')
+          tracked=subprocess.check_output(['git','ls-files','-z']).decode().split('\0')
+          keep=[]
+          for s in tracked:
+              p=pathlib.Path(s)
+              if not p.is_file(): continue
+              if p.suffix.lower() in {'.m','.md','.csv','.json','.txt','.yml','.yaml','.dat','.c81','.mat'}:
+                  keep.append(s)
+          with zipfile.ZipFile(out/'TRACKED_INPUT_CODE_SNAPSHOT.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for s in keep: z.write(s,s)
+          meta={'head':subprocess.check_output(['git','rev-parse','HEAD']).decode().strip(),
+                'snapshot_files':len(keep),'all_tracked_files':tracked,
+                'regression_entry_exists':pathlib.Path('analysis/validation_whole_aircraft_trim/run_line_b_independent_rotor_regression.m').exists(),
+                'purpose':'Reuse existing external datasets, no retuning, no new trim search'}
+          (out/'SNAPSHOT_MANIFEST.json').write_text(json.dumps(meta,indent=2))
+          for s in tracked:
+              if any(k in s.lower() for k in ['wadc','oarf','betzina','stage5','holdout']):print(s)
+          PY
+          if test -f analysis/validation_whole_aircraft_trim/run_line_b_independent_rotor_regression.m; then
+            echo 'ready=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'ready=false' >> "$GITHUB_OUTPUT"
+            echo 'ASSET_SNAPSHOT_ONLY_NO_REGRESSION_EXECUTED' > ci_artifacts/rotor_regression/EXECUTION_STATUS.txt
+          fi
+      - uses: matlab-actions/setup-matlab@v3
+        if: steps.snapshot.outputs.ready == 'true'
+        with:
+          release: R2021a
+      - name: Run existing external cases on explicit old and V4 rotor identities
+        if: steps.snapshot.outputs.ready == 'true'
+        uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            startup;
+            addpath(fullfile(pwd,'analysis','stage2_aircraft'));
+            addpath(fullfile(pwd,'analysis','validation_whole_aircraft_trim'));
+            run_line_b_independent_rotor_regression(fullfile(pwd,'ci_artifacts','rotor_regression'));
+      - name: Verify no unintended repository writes
+        if: always()
+        run: git diff --exit-code
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: independent-rotor-regression-${{ github.sha }}
+          path: ci_artifacts/rotor_regression
+          if-no-files-found: error
