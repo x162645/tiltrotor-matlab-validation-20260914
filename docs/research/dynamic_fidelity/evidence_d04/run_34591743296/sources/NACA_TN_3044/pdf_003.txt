@@ -1,0 +1,42 @@
+2 
+NACA TN 3044 
+jump take-off. 
+A method is proposed for predicting the general motion 
+of a helicopter following a rapid collective-pitch increase such as may 
+be encountered in a jump take-off for given rates of blade-pitch change 
+and for given rotor-angular-velocity time histories. The equations 
+yield time histories of thrust, induced velocity, helicopter velocity, 
+and helicopter displacement. 
+A comparison of the results of this method with the experimental 
+results obtained for a rotor mounted on the Langley helicopter test 
+tower is presented. 
+SYMBOLS 
+R 
+blade radius, ft 
+b 
+number of blades 
+c 
+blade section chord, ft 
+r 
+radial distance to blade element, ft 
+c e 
+cl 
+c2 
+a 
+= 
+equivalent blade chord, t 
+---------, ft 
+t 
+t 
+cr dr 
+, ft 
+{ r dr 
+t 
+cr3dr 
+' ft 
+[ r 3dr 
+slope of curve of section lift coefficient against section angle 
+of attack (radian measure), assumed to be 5.73 
+2 
+blade moment of inertia about flapping hinge, slug-ft 
+• 

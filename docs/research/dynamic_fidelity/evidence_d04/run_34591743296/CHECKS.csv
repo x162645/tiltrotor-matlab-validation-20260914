@@ -1,0 +1,133 @@
+name,passed,value
+source A pc1 pp_mean fixed,1,3.21183703987657e-12
+source B pc1 pp_mean fixed,1,4.17336379713307e-12
+analytical steady workpoint,1,3.17120691610353e-14
+source A pc1 pp_mean free,1,7.52180347832381e-12
+source B pc1 pp_mean free,1,4.33601762206536e-12
+analytical steady workpoint,1,3.17120691610353e-14
+source A pc1 cf_mean fixed,1,2.68662524676317e-12
+source B pc1 cf_mean fixed,1,5.7316672870949e-12
+analytical steady workpoint,1,2.02915733967587e-14
+source A pc1 cf_mean free,1,5.25888923627416e-12
+source B pc1 cf_mean free,1,5.95144709019049e-12
+analytical steady workpoint,1,2.02915733967587e-14
+source A pc2 pp_mean fixed,1,1.415982130816e-11
+source B pc2 pp_mean fixed,1,8.86385440652028e-12
+analytical steady workpoint,1,9.10388386566627e-15
+source A pc2 pp_mean free,1,2.675838588617e-11
+source B pc2 pp_mean free,1,9.16860993922624e-12
+analytical steady workpoint,1,9.10388386566627e-15
+source A pc2 cf_mean fixed,1,1.00687731738826e-11
+source B pc2 cf_mean fixed,1,6.83875812335272e-12
+analytical steady workpoint,1,5.8252940455464e-15
+source A pc2 cf_mean free,1,1.91741988833767e-11
+source B pc2 cf_mean free,1,7.4128194305885e-12
+analytical steady workpoint,1,5.8252940455464e-15
+radial thrust integral,1,1.23691279441118e-10
+radial moment integral,1,9.78361640591174e-08
+positive coning rate gives aerodynamic damping,1,-4283.26047372873
+free mechanical blade residual,1,1.02318153949454e-12
+free total transmitted force balance,1,0
+aero versus transmitted force explicit,1,2650.6571105865
+source pumping term identity,1,3.01980662698043e-14
+pumping ablation changes no instantaneous mechanical acceleration,1,0
+reject axial:InvalidMechanicalMass,1,1
+reject axial:OutsideNormalFlow,1,1
+reject axial:InvalidModel,1,1
+reject axial:InvalidState,1,1
+fixed hub response has no free heave,1,0
+common physical trim input,1,0
+common aero steady state,1,0
+common coning steady state,1,0
+linear nonlinear k1 amp0.003491,1,0.00130549189794717
+derivative step k1 amp0.003491,1,8.74316186082446e-11
+effective common collective input,1,0.179172428991269
+left right common symmetry,1,0
+body balance on whole trajectory,1,7.27595761418343e-12
+linear nonlinear k1 amp0.001745,1,0.000654772925161456
+derivative step k1 amp0.001745,1,8.74428651641318e-11
+effective common collective input,1,0.0895746922706231
+left right common symmetry,1,0
+body balance on whole trajectory,1,7.27595761418343e-12
+linear nonlinear k1 amp-0.003491,1,0.00132188723522273
+derivative step k1 amp-0.003491,1,8.74774417587982e-11
+effective common collective input,1,0.179078573420922
+left right common symmetry,1,0
+body balance on whole trajectory,1,1.45519152283669e-11
+amplitude refinement k1,1,0.250744072745253
+common physical trim input,1,0
+common aero steady state,1,0
+common coning steady state,1,0
+linear nonlinear k2 amp0.003491,1,0.00126815632435943
+derivative step k2 amp0.003491,1,8.78342898438361e-11
+effective common collective input,1,0.178954959627278
+left right common symmetry,1,0
+body balance on whole trajectory,1,1.45519152283669e-11
+linear nonlinear k2 amp0.001745,1,0.000636020511472581
+derivative step k2 amp0.001745,1,8.78458636016867e-11
+effective common collective input,1,0.0894656910891394
+left right common symmetry,1,0
+body balance on whole trajectory,1,7.27595761418343e-12
+linear nonlinear k2 amp-0.003491,1,0.00128386420131352
+derivative step k2 amp-0.003491,1,8.78814345302852e-11
+effective common collective input,1,0.1788589578323
+left right common symmetry,1,0
+body balance on whole trajectory,1,1.45519152283669e-11
+amplitude refinement k2,1,0.250732777608659
+common physical trim input,1,0
+common aero steady state,1,0
+common coning steady state,1,0
+linear nonlinear k3 amp0.003491,1,0.00131551969837766
+derivative step k3 amp0.003491,1,8.76704869269336e-11
+effective common collective input,1,0.175284550496747
+left right common symmetry,1,0
+body balance on whole trajectory,1,7.27595761418343e-12
+linear nonlinear k3 amp0.001745,1,0.000659789876080862
+derivative step k3 amp0.001745,1,8.76812865687755e-11
+effective common collective input,1,0.0876314804115282
+left right common symmetry,1,0
+body balance on whole trajectory,1,7.27595761418343e-12
+linear nonlinear k3 amp-0.003491,1,0.0013319327848698
+derivative step k3 amp-0.003491,1,8.77145359586355e-11
+effective common collective input,1,0.17519652501001
+left right common symmetry,1,0
+body balance on whole trajectory,1,7.27595761418343e-12
+amplitude refinement k3,1,0.250740681056935
+common physical trim input,1,0
+common aero steady state,1,0
+common coning steady state,1,0
+linear nonlinear k4 amp0.003491,1,0.00128705943136755
+derivative step k4 amp0.003491,1,8.84404931541345e-11
+effective common collective input,1,0.17516800326818
+left right common symmetry,1,0
+body balance on whole trajectory,1,7.27595761418343e-12
+linear nonlinear k4 amp0.001745,1,0.000645501309878464
+derivative step k4 amp0.001745,1,8.84520218918457e-11
+effective common collective input,1,0.0875725860331696
+left right common symmetry,1,0
+body balance on whole trajectory,1,7.27595761418343e-12
+linear nonlinear k4 amp-0.003491,1,0.00130300150420308
+derivative step k4 amp-0.003491,1,8.84874965290142e-11
+effective common collective input,1,0.175074956367234
+left right common symmetry,1,0
+body balance on whole trajectory,1,7.27595761418343e-12
+amplitude refinement k4,1,0.250733245190213
+common physical trim input,1,0
+common aero steady state,1,0
+common coning steady state,1,0
+linear nonlinear k5 amp0.003491,1,0.0013698322016127
+derivative step k5 amp0.003491,1,1.70256987720554e-10
+effective common collective input,1,0.175332559547802
+left right common symmetry,1,0
+body balance on whole trajectory,1,7.27595761418343e-12
+linear nonlinear k5 amp0.001745,1,0.000687058016193319
+derivative step k5 amp0.001745,1,1.70275867317956e-10
+effective common collective input,1,0.0876565596409546
+left right common symmetry,1,0
+body balance on whole trajectory,1,7.27595761418343e-12
+linear nonlinear k5 amp-0.003491,1,0.00138714954267882
+derivative step k5 amp-0.003491,1,1.70334051046562e-10
+effective common collective input,1,0.175253234773259
+left right common symmetry,1,0
+body balance on whole trajectory,1,7.27595761418343e-12
+amplitude refinement k5,1,0.250754010883751

@@ -1,0 +1,3 @@
+law,fullStates,reducedStates,maxRelativeFRFdifference,maxScaledOutputDifference,maxScaledStateDifference,fullRhsCalls,reducedRhsCalls,fullODEseconds,reducedODEseconds
+pp_mean,7,4,5.78457856136396e-11,1.67366120962242e-14,2.55486820935347e-15,5462,5462,0.416063,0.31328
+cf_mean,7,4,5.76536121720436e-11,1.32116539930394e-14,1.93942084614207e-15,5270,5270,0.382078,0.313603

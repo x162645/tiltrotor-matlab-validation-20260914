@@ -1,0 +1,20 @@
+        law        fullStates    reducedStates    maxRelativeFRFdifference    maxScaledOutputDifference    maxScaledStateDifference    fullRhsCalls    reducedRhsCalls    fullODEseconds    reducedODEseconds
+    ___________    __________    _____________    ________________________    _________________________    ________________________    ____________    _______________    ______________    _________________
+
+    {'pp_mean'}        7               4                 5.7846e-11                  1.6737e-14                   2.5549e-15               5462             5462             0.41606             0.31328     
+    {'cf_mean'}        7               4                 5.7654e-11                  1.3212e-14                   1.9394e-15               5270             5270             0.38208              0.3136     
+
+                    identity: 'D04_EXACT_SYMMETRIC_STATE_REDUCTION'
+                      commit: '4b21de8c0b50938629329cf4cb4fa38846d79df5'
+                     version: '9.10.0.2198249 (R2021a) Update 8'
+                     release: '2021a'
+                      checks: 46
+             allChecksPassed: 1
+          newNonlinearTrials: 4
+         experimentalSamples: 0
+    physicalParametersFitted: 0
+    externalValidationPassed: 0
+            novelMethodClaim: 0
+      allInputReductionClaim: 0
+                   elapsed_s: 2.6223
+

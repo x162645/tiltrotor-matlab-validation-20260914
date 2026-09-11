@@ -1,0 +1,67 @@
+10 
+NACA TN 3044 
+Upon integrating, 
+v being kept uniform over the rotor disk, there 
+results the total moment, now considered as an instantaneous value, 
+where 
+f 
+cr3dr 
+c2 == lR r3dr 
+0 
+(n) 
+( 12) 
+For steady-state conditions, the thrust moment calculated by using equa-
+tion (12) (where 
+v is uniform over the rotor disk) is different from 
+the moment calculated by using vr
+• This difference is eliminated by 
+s 
+introducing a constant factor 
+T into equation (12) at equilibrium as 
+follows: 
+Mrs 
+1 
+= -8 
+( 13) 
+In order to obtain 
+T let MTs 
+equal the value found by integrating 
+~r from equations (6) and (7) and let the value of va be considered 
+as the value obtained from equation (9a). 
+The value of 
+T 
+can be immedi-
+ately ob.tained from equation (13). 
+The instantaneous thrust moment can 
+be written as 
+i 
+_? 
+4 ~C2 
+4 
+v 
+4 Vv 
+C2~) 
+Mr = -
+pSrac R -
+e - -
+T -
+-
+-
+-
+-
+-
+-
+8 
+e 
+ce 
+3 
+nR 
+3 nR 
+ce n 
+( 14) 
+Moments due to inertia forces and weight. - The moments due to iner-
+tia forces are the familiar centrifugal force moments 
+(Iln213) 
+and one 
+• 
+• 

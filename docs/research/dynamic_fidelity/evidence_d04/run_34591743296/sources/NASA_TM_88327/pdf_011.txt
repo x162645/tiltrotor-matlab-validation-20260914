@@ -1,0 +1,130 @@
+smaller apparent additional
+air
+massby about 64%than does the Carpenter-
+Fridovich
+model.
+Becauseof the smaller value of
+ma
+associated with the
+Pitt-Peters
+model, the time constant of the inflow modeis also smaller as
+will
+be discussed in more detail
+later.
+3.
+EQUATIONS
+OFMOTIONIN HOVER
+The small-disturbance
+equations of motion are obtained by combining the
+Pitt-Peters
+dynamic inflow
+equation described in the preceding section
+with
+the flapping
+equation [14,15],
+and the vertical
+motion of the helicopter.
+The
+results
+are shown in Table I for
+an articulated
+rotor
+with no hinge offset
+or
+pitch-flap
+coupling.
+The fuselage drag and the effects
+of rotor
+downwashon
+the fuselage are neglected.
+In these equations,
+the value of the constant
+Co
+is I for
+the Pitt-Peters
+dynamic inflow
+model, and is 0.639 for
+the
+Carpenter-Fridovich
+model.
+It
+can readily
+be verified,
+in fact,
+that
+the set
+of equations in Table I is identical
+to that of the linearized
+version of the
+set of nonlinear
+equations developed in Ref. [13],
+if
+the rotor
+RPMis assumed
+to remain constant.
+To provide somebackground for
+the results
+to be discussed in the subse-
+quent sections,
+it
+is important at this
+point
+to examine two special
+cases:
+(I)
+the quasi-static
+equation,
+and (2) hover equations with no aircraft
+motions.
+3.1
+Quasi-StaticEquation
+The
+classical
+quasi-static
+equation
+for
+the
+uncoupled
+vertical
+motion
+of
+the
+helicopter
+can
+now
+be
+reduced
+from
+the
+general
+equations
+in
+Table
+I by
+assuming
+that
+the
+inflow
+and
+the
+flapping
+reach
+their
+steady
+state
+instanta-
+neously
+upon
+an
+input
+in
+collective
+pitch.
+Setting
+the
+time
+rate
+of
+change
+in
+8

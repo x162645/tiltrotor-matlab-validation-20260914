@@ -1,0 +1,44 @@
+. 
+' 
+NACA TN 3044 
+and 
+The thrust felt at the rotor hub is given by a modified form of equa-
+tion (17) as 
+13 
+(20) 
+. 
+The value is found by inserting values of v, 
+~,and 
+~ obtained by 
+a simultaneous solution of equations (18) and (19). 
+In order to be consistent with other helicopter analyses all inte-
+grations for thrust purposes are performed to only 97 percent of the geomet-
+rical radius to allow for tip losses • 
+The system of equations for the specific cases presented in this 
+report were solved by the Bell Telephone'Laboratories x-66744 relay 
+computer at the Langley Laboratory. 
+The time interval used for the 
+numerical solution must be small enough to insure that a further reduc-
+tion will not appreciably affect the results. For the slowest rate of 
+blade-pitch increase presented (fig~ 3(d)), it was found that a reduction 
+in time interval from 0.1 second to 0.05 second produced marked changes 
+in the curves of 
+~ and 
+~ against time but produced only negligible 
+changes in the curves of 
+~, Vv ' and CT against time. It can be 
+inferred from this behavior that for the slow rate of blade-pitch 
+-
+increase 
+~ and 
+~ exert little influence on the values of 
+~, Vv' 
+and CT. 
+The time intervals used in the curves presented are as follows: 
+figure 3(a), 6t = 0.025 second; figure 3(b), 6t = 0.020 second; fig-
+ure 3(c), 6t = 0.020 second; figure 3(d), 6t = 0.050 second. 
+From the 
+preceding remarks it can be seen that the time intervals used for fig-
+ures 3(b), 3(c), and 3(d) were unnecessarily small to yield reasonably 
+accurate values of Vv ' 
+~,and CT. 

@@ -1,0 +1,57 @@
+14 
+NACA TN 3044 
+RESULTS AND DISCUSSION 
+A comparison of the time histories of the calculated and experi-
+mental rotor response to pitch increases from 00 to 120 is shown in fig-
+ure 3 for four rates of increase from 60 to 2000 per second. 
+The curves 
+in figure 3(a) indicate that the overshoot of the experimental rotor 
+thrust coefficient for the rapid blade-pitch increase may be nearly twice 
+the normal thrust coefficient. 
+The magnitu(ie and overshoot of thrust 
+coefficient is slightly less. than those calculated. 
+The larger predicted 
+value is probably due to the assumption that the rotor blades had infinite 
+bending stiffness; this assumption results in larger inertia forces than 
+for a practical blade. 
+Comparison of the experimental and calculated 
+flapping-angle displacem~nt indicates good agreement. 
+The experimental 
+blade-pitch changes exceeded, for a short duration, the 120 blade-pitch 
+change on which the calculated values are based; however, other records 
+~f 2000 to 4000 per second rapid biade-pitch changeswitho~t pitch over-
+shoot indicated the same overshoot of the thrust coefficient. Rates of 
+blade-pitch change as high as 4060 per second were obtained that had 
+. almost the identical thrust-coefficient' variation with time as the some-
+what slower rates of 1800 to 2000 per second. 
+It can be seen from these results that the thrust-coefficient over-
+shoot is of very short dUTation. 
+The thrust-coefficient overshoot 
+decreases about 80 percent in one rotor revolution. 
+The time for the 
+induced velocity to reach its full value is also very small and, for 
+this rotor, less than 1 second for the very rapid rates of pitch increase. 
+Figures 3(b), 3(c), and 3(d) show comparisons of calculated and 
+experimental time histories for slower rates of blade-pitch increase 
+of 480 to 60 per second. 
+A comparison of the calculated and experimental 
+curves shows good agreement for both flapping-angle displacements and 
+thrust coefficients. 
+In general, the curves indicate that the time lag 
+between full pitch and full induced velocity is less than 1 second. For 
+a pitch rate of 480 per second (fig. 3(b)), which is thought to be the 
+maximum rate at which a pilot can move the controls (based on unpublished 
+CAA and NACA tests), the time lag between full pitch and full induced 
+velocity is approximately 0.7 second, whereas at still a slower rate of 
+20 0 per second (fig. 3(c)), the time lag is about 0.4 second. 
+For the 
+most rapid rate of blade-pitch increase (fig. 3(a»), the blade inertia 
+accounts for about 38 percent of the total maximum thrust and decreases 
+to about 2 percent of the total maximum thrust for the slowest rate of 
+blade-pitch increase (fig. 3(d»). 
+The predicted thrust-coefficient overshoot for the slower rates of 
+blade-pitch increase (60 to 480 per second) is generally about 10 per-
+cent higher than the experimental values. This overestimate is probably 
+due tc the simplifying assumptions ueed in the calculations; however, the 
+method is sufficiently accurate for this study and, at the same time, 
+greatly reduces the labor of calculations. 

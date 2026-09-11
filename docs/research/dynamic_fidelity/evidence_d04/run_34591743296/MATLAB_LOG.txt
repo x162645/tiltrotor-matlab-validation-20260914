@@ -1,0 +1,55 @@
+    caseIndex            mode                law        states    amplitude_deg    signalRMS    linearAbsoluteError    linearRelativeError    stepRelativeChange    peakUpAcceleration    peakAbsoluteAcceleration    rhsCalls    elapsed_s
+    _________    ____________________    ___________    ______    _____________    _________    ___________________    ___________________    __________________    __________________    ________________________    ________    _________
+
+        1        {'coupled'         }    {'pp_mean'}      7            0.2          0.17917         0.00023391              0.0013055             8.7432e-11              0.46946                 0.46946               5462       0.45442 
+        1        {'coupled'         }    {'pp_mean'}      7            0.1         0.089575         5.8651e-05             0.00065477             8.7443e-11              0.23469                 0.23469               5072       0.57043 
+        1        {'coupled'         }    {'pp_mean'}      7           -0.2          0.17908         0.00023672              0.0013219             8.7477e-11             0.043689                 0.46916               5456       0.49786 
+        2        {'coupled'         }    {'cf_mean'}      7            0.2          0.17895         0.00022694              0.0012682             8.7834e-11              0.48604                 0.48604               5270       0.37834 
+        2        {'coupled'         }    {'cf_mean'}      7            0.1         0.089466         5.6902e-05             0.00063602             8.7846e-11                0.243                   0.243               4922       0.34865 
+        2        {'coupled'         }    {'cf_mean'}      7           -0.2          0.17886         0.00022963              0.0012839             8.7881e-11             0.043689                 0.48589               5258       0.37529 
+        3        {'algebraic_coning'}    {'pp_mean'}      3            0.2          0.17528         0.00023059              0.0013155              8.767e-11               0.3237                  0.3237               3656       0.43908 
+        3        {'algebraic_coning'}    {'pp_mean'}      3            0.1         0.087631         5.7818e-05             0.00065979             8.7681e-11              0.16185                 0.16185               3644       0.23454 
+        3        {'algebraic_coning'}    {'pp_mean'}      3           -0.2           0.1752         0.00023335              0.0013319             8.7715e-11             -0.13434                  0.3237               3656       0.23432 
+        4        {'algebraic_coning'}    {'cf_mean'}      3            0.2          0.17517         0.00022545              0.0012871              8.844e-11               0.3237                  0.3237               3626       0.28198 
+        4        {'algebraic_coning'}    {'cf_mean'}      3            0.1         0.087573         5.6528e-05              0.0006455             8.8452e-11              0.16185                 0.16185               3614       0.23634 
+        4        {'algebraic_coning'}    {'cf_mean'}      3           -0.2          0.17507         0.00022812               0.001303             8.8487e-11             -0.13386                  0.3237               3626       0.23643 
+        5        {'quasisteady'     }    {'pp_mean'}      1            0.2          0.17533         0.00024018              0.0013698             1.7026e-10               0.2196                  0.2196               3608       0.12111 
+        5        {'quasisteady'     }    {'pp_mean'}      1            0.1         0.087657         6.0225e-05             0.00068706             1.7028e-10               0.1097                  0.1097               3602      0.079702 
+        5        {'quasisteady'     }    {'pp_mean'}      1           -0.2          0.17525          0.0002431              0.0013871             1.7033e-10             -0.13519                 0.21881               3608       0.07071 
+
+        law        linearPeakUp_ft_s2    peakTime_s    initialOppositePeak_ft_s2    resonance_rad_s    publishedCalculatedPeak_approx_ft_s2    publishedMeasuredPeak_approx_ft_s2    publishedMeasuredResonance_approx_rad_s                                       role                                   
+    ___________    __________________    __________    _________________________    _______________    ____________________________________    __________________________________    _______________________________________    __________________________________________________________________________
+
+    {'pp_mean'}          9.7749            0.132                1.8982                  17.783                         9.9                                     11                                      17                       {'SOURCE_THEORY_RECONSTRUCTION_AND_APPROX_FLIGHT_FEATURES_NOT_VALIDATION'}
+    {'cf_mean'}          9.8405            0.132                1.8982                  17.478                         9.9                                     11                                      17                       {'SOURCE_THEORY_RECONSTRUCTION_AND_APPROX_FLIGHT_FEATURES_NOT_VALIDATION'}
+
+        law             reduction          states    bandLow_rad_s    bandHigh_rad_s    maxGainDifference_dB    maxPhaseDifference_deg    unweightedComplexRelativeRMS
+    ___________    ____________________    ______    _____________    ______________    ____________________    ______________________    ____________________________
+
+    {'pp_mean'}    {'algebraic_coning'}      2            0.3                3                0.33515                   2.6312                      0.024012          
+    {'pp_mean'}    {'algebraic_coning'}      2              3               10                  2.849                   18.688                       0.20109          
+    {'pp_mean'}    {'algebraic_coning'}      2             10               30                 5.1738                   125.15                        1.0402          
+    {'pp_mean'}    {'quasisteady'     }      1            0.3                3                0.28918                     3.69                      0.039777          
+    {'pp_mean'}    {'quasisteady'     }      1              3               10                 4.2288                   6.0528                       0.20946          
+    {'pp_mean'}    {'quasisteady'     }      1             10               30                 7.5908                   116.95                       0.90415          
+    {'cf_mean'}    {'algebraic_coning'}      2            0.3                3                0.40347                     2.86                      0.026208          
+    {'cf_mean'}    {'algebraic_coning'}      2              3               10                 2.7006                   22.538                       0.22546          
+    {'cf_mean'}    {'algebraic_coning'}      2             10               30                 4.0903                    120.8                        1.0461          
+    {'cf_mean'}    {'quasisteady'     }      1            0.3                3                0.45561                   6.4981                      0.069589          
+    {'cf_mean'}    {'quasisteady'     }      1              3               10                 4.8089                   9.9189                        0.2641          
+    {'cf_mean'}    {'quasisteady'     }      1             10               30                 6.9805                   114.77                       0.90983          
+
+                             identity: 'D04_AXIAL_CONING_INFLOW_BODY_CLASSICAL_BENCHMARK'
+                               commit: '08a69fa8f58a07f6b15d9fde572e4e0be48a1007'
+                              version: '9.10.0.2198249 (R2021a) Update 8'
+                              release: '2021a'
+                               checks: 132
+                      allChecksPassed: 1
+                   newNonlinearTrials: 16
+         experimentalSamplesUsedInFit: 0
+    independentFlightValidationPassed: 0
+              productionModelModified: 0
+                            elapsed_s: 6.9200
+                     sameAsV7Dynamics: 0
+      newMethodLeadingAdvantageProven: 0
+

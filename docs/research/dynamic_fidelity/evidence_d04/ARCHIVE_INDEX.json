@@ -1,0 +1,661 @@
+{
+  "schema_version": 1,
+  "request": {
+    "schema_version": 1,
+    "artifacts": [
+      {
+        "run_id": 34591743296,
+        "artifact_id": 10195939132,
+        "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007",
+        "zip_sha256": "36fd31be5b65d015f876b5c9c1bf6a4de1ca97352ddb3cd496823cf166d697f5",
+        "folder": "coupling",
+        "manifest": "RUN_MANIFEST.json",
+        "checks_csv": "CHECKS.csv",
+        "expected_checks": 132,
+        "expected_all_passed": true,
+        "member_index_sha256": "b38aaea215fe0ac57b8995872a699f069362db925d91256a4ef19dae3ea92303",
+        "file_count": 68,
+        "byte_count": 11159791
+      },
+      {
+        "run_id": 34592335399,
+        "artifact_id": 10196153995,
+        "source_commit": "4b21de8c0b50938629329cf4cb4fa38846d79df5",
+        "zip_sha256": "75f64706b72f8622cd28a2e3caef84abc6b1acb8513932801a43d6c568af5b68",
+        "folder": "symmetry",
+        "manifest": "SYMMETRY_MANIFEST.json",
+        "checks_csv": "SYMMETRY_CHECKS.csv",
+        "expected_checks": 46,
+        "expected_all_passed": true,
+        "member_index_sha256": "5720d00ec3bb6a3d9135e85d940cddbeb22ce6ac38fb07ba0966decc8064f07c",
+        "file_count": 20,
+        "byte_count": 368305
+      }
+    ],
+    "source_acquisition": {
+      "run_id": 34590185156,
+      "artifact_id": 10195289892,
+      "zip_sha256": "26f43140e50b65f8c30f5fa8eca216e8119e08c722339b2ee043ea1aa2647356"
+    },
+    "note": "All original ZIP hashes and contained MAT/CSV/JSON read back locally before archival; no rerunning models."
+  },
+  "files": {
+    "run_34591743296/CHECKS.csv": {
+      "sha256": "3dccb00de1d7d37ba7722846fe0d986cb9862a9b24568fb441c09df14a2884a8",
+      "bytes": 6242,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/CODE_SNAPSHOT.zip": {
+      "sha256": "1bc11522ff0f85fcefedee30057f0ce4ea74988aea54688d69d9f0b318526a6d",
+      "bytes": 22842,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/D04_RESULTS.mat": {
+      "sha256": "5bf479c9c6bd01046831c0b0364eee1629d35e2df00c1d6c795944d896cdc95c",
+      "bytes": 1758458,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/FREQUENCY_RESPONSES.csv": {
+      "sha256": "15f9cc1471f307150d0726ee2c2eb67d1f7d685cd3d785b2b7845b32a7d63ffc",
+      "bytes": 177788,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/INPUT_SOURCE_MANIFEST.json": {
+      "sha256": "bb476abe6b4544086ea0021aea5b26151127f833e812e7cff726c16288c4cc30",
+      "bytes": 886,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/MATLAB_LOG.txt": {
+      "sha256": "8a6e0f149fd692cc5888e35325d961216638ee5ccbb5e601f89908607d1ca5b2",
+      "bytes": 8223,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/MODEL1_POS02.csv": {
+      "sha256": "901e04daa8364480ce473497768d0c42f26bebf4e84ba2f4f820459ecd5f71c5",
+      "bytes": 132908,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/MODEL2_POS02.csv": {
+      "sha256": "4b48d74a62c8f8a9cb8d18a7c6213e6e6fc2862a9c76abac6ea89e385fbb11a9",
+      "bytes": 132990,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/MODEL3_POS02.csv": {
+      "sha256": "36d9856a3f6de0b158026536a356564e965f73820d7db8d22ceb8447b3080a02",
+      "bytes": 109437,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/MODEL4_POS02.csv": {
+      "sha256": "e95cc1221f32c4ba714218045442b32a1d4a16765346a70b5f4e83580d28736d",
+      "bytes": 109274,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/MODEL5_POS02.csv": {
+      "sha256": "f8927b27ef66fd3a8e23fd395b0c046de798be634e7500fad6cfa654b561455c",
+      "bytes": 109437,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/NONLINEAR_LINEAR_METRICS.csv": {
+      "sha256": "53facb281aae0dd61ce20e9269ea603fa828984f9d427bb2c6ca9dcf39d11a99",
+      "bytes": 2556,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/PAIRED_REDUCTIONS.csv": {
+      "sha256": "b4bb6bf069853dafcdc99aa6187861348e9038c0427493416ec0b08b0bef61b2",
+      "bytes": 1489,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/RUN_MANIFEST.json": {
+      "sha256": "ed7ea56cd922b4c3168306241d421d004b79180ac6d4f2ace1eaea846e4d0c16",
+      "bytes": 430,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/SOURCE_FEATURES.csv": {
+      "sha256": "13d1c8f3356be96be848e4dcedd00a20e327c78f49783f903d9c66960a9a3391",
+      "bytes": 484,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/STATE_REMOVAL_FREQUENCY_METRICS.csv": {
+      "sha256": "9d82607abc0abcaecf20ad14d34c16001571dec353b66e0048c6da719fb1c304",
+      "bytes": 1114,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_003.png": {
+      "sha256": "c99d2009d8a105de61b46aa11120cc44cdb6824537f108e6fa3131807630c00a",
+      "bytes": 117869,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_003.txt": {
+      "sha256": "e8537741ede17b5e977eb250a29f84bfe1a7d69bc86043e1b9eaa20b0262416d",
+      "bytes": 971,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_005.png": {
+      "sha256": "f6b87ed8afdb74e6de9724174c03606214c9dbcadecbac6bbf1fcf18883108d4",
+      "bytes": 259558,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_005.txt": {
+      "sha256": "f7a84d1eaabfa17c2dc6d41d9ae441a75f43c7c50e2822aca717c21c101bfe9a",
+      "bytes": 2477,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_007.png": {
+      "sha256": "ef0c103c979864a1d140da6067a1ea772baf73379941d8addfb1c2bf4d2f35f0",
+      "bytes": 208694,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_007.txt": {
+      "sha256": "7b56099b67aec9ed44daf77d2b391148578e6fe6be8e56067e81e306240aaa4c",
+      "bytes": 1983,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_011.png": {
+      "sha256": "ff46908e8e6cb27dd67f1c2b5740550b7f870e64e85495297fcf7466ab2e6b82",
+      "bytes": 143437,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_011.txt": {
+      "sha256": "908ffb3254619093520744be6491211e0241fc70b8c736f58597bc7f4dbe3acb",
+      "bytes": 1085,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_012.png": {
+      "sha256": "d2f8f46bc344fac114cca8adb50d219dc761ce7a768410feccb1f61227ec7fa9",
+      "bytes": 145658,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_012.txt": {
+      "sha256": "c281d8c62f8a5e268797e7db396e8c9a8a3ffcadc81c455a3eb27640592be645",
+      "bytes": 1151,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_013.png": {
+      "sha256": "022c0bb378f4a9f3e8db208319a0e51e4717cdc50d2241b89162dcddeb308999",
+      "bytes": 184825,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_013.txt": {
+      "sha256": "463ba475e124b97473d75e5974a45d795abbb9f9941e42f951a7ffb0ad2817bf",
+      "bytes": 1532,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_014.png": {
+      "sha256": "94be5bf89e2cb60a3909cde204f78be64f7e7f5049dd995512a5bf0c4b80a131",
+      "bytes": 184520,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_014.txt": {
+      "sha256": "c98f1b683d752dc936fd6ed9679ae0bd245f8b435f2e33d4ae8b956b11331c3f",
+      "bytes": 1591,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_015.png": {
+      "sha256": "b1c6ee5279f4a585dad46bc4743b5d93c040972e9ae09f67ef149df5aeb9d33e",
+      "bytes": 322501,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_015.txt": {
+      "sha256": "2f1c4ce0c5f72fa970a33895e87aeaea5f9be29f7abcddd45fb5a9ca32ce6da8",
+      "bytes": 3124,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_016.png": {
+      "sha256": "54a78655abc8ab3a4c58f8d9e22805bd9cb1ac39e81b88203c95493f77aec6f6",
+      "bytes": 263859,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_016.txt": {
+      "sha256": "33d0b5e1fb48e8462ab0f3ff41ee9746196d9ffc729363bf8c8f769229f419b2",
+      "bytes": 2543,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_018.png": {
+      "sha256": "f5addef11e2bdba2397e3b30125c7ba977dde2bcf33424a73636f0f1b4c9b4bb",
+      "bytes": 548321,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_018.txt": {
+      "sha256": "8b305dd59e3cc56a6385649a4079b0b540a3a13575c3d605aaff3ba11c890eea",
+      "bytes": 189,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_020.png": {
+      "sha256": "2edbdb683d24c80aea3fdfce8294a1c7c51cd809144ff730719eb3bc1de2143b",
+      "bytes": 124757,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_020.txt": {
+      "sha256": "e3a370e8e589d0adc1dc25111b2d16dfea73a39b387fb9a48df310e04c9eb22e",
+      "bytes": 559,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_021.png": {
+      "sha256": "827fcc96c75c171f9ce194d4fe1be6f9f71f39924124fedf3b25cd8452d8c1e4",
+      "bytes": 114113,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_021.txt": {
+      "sha256": "33a89be29429949a9449f48b5c0fb90516863d161df730d87fb824cccf82232d",
+      "bytes": 769,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_026.png": {
+      "sha256": "559f2ba2d9e121c1bc5ba8a5692f714a5f31b7a7c0e01b71a013bcfc4ada24f9",
+      "bytes": 806193,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_026.txt": {
+      "sha256": "bfaea7fae80fae05769d7480adf82517c1c5723bb11ba2595bb29339cf9eb4c7",
+      "bytes": 218,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_027.png": {
+      "sha256": "a4b19f5a8c5452ae1ea78ebcb7789ab67707886299f4c03ded459fbae3aef073",
+      "bytes": 110211,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044/pdf_027.txt": {
+      "sha256": "734de401833e156f19bccd4e8ff20260f655ab78e10babbadb927e0a2c9cc1f9",
+      "bytes": 534,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NACA_TN_3044.pdf": {
+      "sha256": "2ed621dab8547cfee618f6bdd79612a0d52d512f40d66e753a5f25647d71cc6a",
+      "bytes": 2132857,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NASA_TM_88327/pdf_011.png": {
+      "sha256": "a5c1a2e7ce1624436b55a9bfb9fd7644bd39cc7158e6322d49777e1052bc6ab0",
+      "bytes": 194143,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NASA_TM_88327/pdf_011.txt": {
+      "sha256": "56c6db06ef281c81855a9825ed36fbf3feec6342bb374d2334bf3bf1be850ae8",
+      "bytes": 1624,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NASA_TM_88327/pdf_012.png": {
+      "sha256": "632ffd29bb9794917d704edf5c325021a8b80a065017d732f6feb2cbdf5b4114",
+      "bytes": 137410,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NASA_TM_88327/pdf_012.txt": {
+      "sha256": "f01350a7b1a02e9fcc26f6fb1b6b911c4fae02346144a9de759569be5bb01c70",
+      "bytes": 1107,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NASA_TM_88327/pdf_013.png": {
+      "sha256": "afc926e8f3142c8ba422048a38affeb1ab6b12178dbfcaaae028aa81f07b7d12",
+      "bytes": 129614,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NASA_TM_88327/pdf_013.txt": {
+      "sha256": "590be8d3b79275167e0e055568f0b7df5dbed124025dcb3a14f5c3f9729cd233",
+      "bytes": 880,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NASA_TM_88327/pdf_018.png": {
+      "sha256": "eb3113ff4a2d17eb367ca48508197726bc503774c69e95bba2c84517ac77cbe9",
+      "bytes": 213023,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NASA_TM_88327/pdf_018.txt": {
+      "sha256": "ea26a78675d2300b80797fe78975ab09ea991faf78aa00b2af2a6789d9699145",
+      "bytes": 1829,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NASA_TM_88327/pdf_019.png": {
+      "sha256": "163f947020640394fe3a880af46d3626fa0f91f51604cc4511fbf7834fdc86bf",
+      "bytes": 197135,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NASA_TM_88327/pdf_019.txt": {
+      "sha256": "52f430418664adb5969029852c344b4294de9bb68a8dabc5ea8e20cfaa3ef7e9",
+      "bytes": 1661,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NASA_TM_88327/pdf_020.png": {
+      "sha256": "606a489ca76c52951631e7f6eb692587813bb9864f892e356c516660a55e7c93",
+      "bytes": 211701,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NASA_TM_88327/pdf_020.txt": {
+      "sha256": "c7c5b7935dfc35b67ea29c971be034d28e1cea7c78361bbd44e3fa1c15ec96b1",
+      "bytes": 1811,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NASA_TM_88327/pdf_021.png": {
+      "sha256": "4846c563dda383bfaf627f732a9dc8a94f17d5e6b56d72a04e667c48d893fb69",
+      "bytes": 210301,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NASA_TM_88327/pdf_021.txt": {
+      "sha256": "15dbdbc7dddbab5369a48abc03463349d8f6b368ee0a9ec73fea13c6278bb884",
+      "bytes": 1790,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NASA_TM_88327/pdf_028.png": {
+      "sha256": "a1fa8078cb85d95daac7386f41080d88e750675d9f7d7461e039420d7eab3105",
+      "bytes": 95642,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NASA_TM_88327/pdf_028.txt": {
+      "sha256": "c80f9d708b012700cd99627650f927f1482d5b946cbb8c1bdc80c8750608d519",
+      "bytes": 206,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NASA_TM_88327/pdf_042.png": {
+      "sha256": "62dec28b48a0447eb495932b605dc03ad2d3986811c3a15068c1d9182bcceea6",
+      "bytes": 53333,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NASA_TM_88327/pdf_042.txt": {
+      "sha256": "d72da7bbfe25f64919636a3bcb6eaa92c37b2ee0436e3fbb3d6dd2e87057131b",
+      "bytes": 170,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NASA_TM_88327/pdf_045.png": {
+      "sha256": "9a0b7b5a280c73986b8c816adcdc43d825d539eec4de4931fa0b3088cd03e41a",
+      "bytes": 41575,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NASA_TM_88327/pdf_045.txt": {
+      "sha256": "9daab3a2c0d9f6de05e1ec5be2fa36aec64aa7c6a25dbbeb19fc0dcb4cbc8bdd",
+      "bytes": 217,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NASA_TM_88327/pdf_046.png": {
+      "sha256": "4c45db96197214332d7197b49cd3bbc2113e0800c38caf42f98b4350f6d4649d",
+      "bytes": 64038,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NASA_TM_88327/pdf_046.txt": {
+      "sha256": "1102cba3baeefe969287aff359646835c97a58af0f19bfbb4e158a592b37dff3",
+      "bytes": 181,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34591743296/sources/NASA_TM_88327.pdf": {
+      "sha256": "d649bf28ea66ccdfbcd5d24c8cf37fbf5b5f0d4a5e0f0ed187f37734800cb6c2",
+      "bytes": 1339743,
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007"
+    },
+    "run_34592335399/COMMIT.txt": {
+      "sha256": "7f770892e38f93b15d348b68dadbcbac59412c38fa7ca65490bbcf2a7b765aa5",
+      "bytes": 41,
+      "run_id": 34592335399,
+      "artifact_id": 10196153995,
+      "source_commit": "4b21de8c0b50938629329cf4cb4fa38846d79df5"
+    },
+    "run_34592335399/D04_SYMMETRY_RESULTS.mat": {
+      "sha256": "9b63cdb1979abad6051fdb0a2ecc3f2fb57a18031bdc4e6f4b587a71a3844ff3",
+      "bytes": 242796,
+      "run_id": 34592335399,
+      "artifact_id": 10196153995,
+      "source_commit": "4b21de8c0b50938629329cf4cb4fa38846d79df5"
+    },
+    "run_34592335399/MATLAB_LOG.txt": {
+      "sha256": "179e6eca874d8b31603b1d7f5c15c6ce7686b389866e539f7bf9a67c351bbb3e",
+      "bytes": 1365,
+      "run_id": 34592335399,
+      "artifact_id": 10196153995,
+      "source_commit": "4b21de8c0b50938629329cf4cb4fa38846d79df5"
+    },
+    "run_34592335399/SYMMETRIC_cf_mean.csv": {
+      "sha256": "32e8345bb2288cb211b428ddee29f18bd25b816310f59d1b40d06027443914c4",
+      "bytes": 45397,
+      "run_id": 34592335399,
+      "artifact_id": 10196153995,
+      "source_commit": "4b21de8c0b50938629329cf4cb4fa38846d79df5"
+    },
+    "run_34592335399/SYMMETRIC_pp_mean.csv": {
+      "sha256": "e1e7fd36a19db3f14aa81eb3466b5ac4d6a35fb2c14474b0c06d7f871b96d6a1",
+      "bytes": 45410,
+      "run_id": 34592335399,
+      "artifact_id": 10196153995,
+      "source_commit": "4b21de8c0b50938629329cf4cb4fa38846d79df5"
+    },
+    "run_34592335399/SYMMETRY_CHECKS.csv": {
+      "sha256": "5d3d59c5ac898174f4c9022828591187cbb65a009b18d735c442af611a1b70b3",
+      "bytes": 2464,
+      "run_id": 34592335399,
+      "artifact_id": 10196153995,
+      "source_commit": "4b21de8c0b50938629329cf4cb4fa38846d79df5"
+    },
+    "run_34592335399/SYMMETRY_MANIFEST.json": {
+      "sha256": "3b6583260a2d6b425f9224c125f423280ce956deed98b389a51645db74e07c92",
+      "bytes": 389,
+      "run_id": 34592335399,
+      "artifact_id": 10196153995,
+      "source_commit": "4b21de8c0b50938629329cf4cb4fa38846d79df5"
+    },
+    "run_34592335399/SYMMETRY_METRICS.csv": {
+      "sha256": "72a93bc6e4e6a298015de36c9be31e55e50c199cc0625f11da857d697d96e137",
+      "bytes": 372,
+      "run_id": 34592335399,
+      "artifact_id": 10196153995,
+      "source_commit": "4b21de8c0b50938629329cf4cb4fa38846d79df5"
+    },
+    "run_34592335399/code_snapshot/axial/axial_coupled_rhs.m": {
+      "sha256": "44dc9ea71a72332d363d243ad507b0ed04030994be860313705da7bece83d3e8",
+      "bytes": 3260,
+      "run_id": 34592335399,
+      "artifact_id": 10196153995,
+      "source_commit": "4b21de8c0b50938629329cf4cb4fa38846d79df5"
+    },
+    "run_34592335399/code_snapshot/axial/axial_symmetric_rhs.m": {
+      "sha256": "7092f5b930e1ad07da2c9727eb09b812712ebe9417fd465002c3a67d118de522",
+      "bytes": 949,
+      "run_id": 34592335399,
+      "artifact_id": 10196153995,
+      "source_commit": "4b21de8c0b50938629329cf4cb4fa38846d79df5"
+    },
+    "run_34592335399/code_snapshot/axial/axial_workpoint.m": {
+      "sha256": "7730f15ed9314b7c7db9e71060369c3d1cf25edcc76076f8e3b81b97452a181d",
+      "bytes": 814,
+      "run_id": 34592335399,
+      "artifact_id": 10196153995,
+      "source_commit": "4b21de8c0b50938629329cf4cb4fa38846d79df5"
+    },
+    "run_34592335399/code_snapshot/axial/build_axial_coupled.m": {
+      "sha256": "f8c77b58f8ba117a6d385d2bd84776d093255368ae745f1dc4e8f86f61d8be93",
+      "bytes": 4176,
+      "run_id": 34592335399,
+      "artifact_id": 10196153995,
+      "source_commit": "4b21de8c0b50938629329cf4cb4fa38846d79df5"
+    },
+    "run_34592335399/code_snapshot/axial/build_axial_symmetric.m": {
+      "sha256": "1c47a2987e8c6167b82f64e43f45a247903543c661dfc746e6d8a6fefaded318",
+      "bytes": 1381,
+      "run_id": 34592335399,
+      "artifact_id": 10196153995,
+      "source_commit": "4b21de8c0b50938629329cf4cb4fa38846d79df5"
+    },
+    "run_34592335399/code_snapshot/d04_linearize.m": {
+      "sha256": "9277d2ab11fd2e4a06376061bcfbdc2f482a0e63664c8b3f0be004d46e845362",
+      "bytes": 699,
+      "run_id": 34592335399,
+      "artifact_id": 10196153995,
+      "source_commit": "4b21de8c0b50938629329cf4cb4fa38846d79df5"
+    },
+    "run_34592335399/code_snapshot/d04_nominal_case.m": {
+      "sha256": "4c8d9491d71b7de2e6c3a44ccd2161adc1245493fd4ba7f06f9664a9fbf13733",
+      "bytes": 698,
+      "run_id": 34592335399,
+      "artifact_id": 10196153995,
+      "source_commit": "4b21de8c0b50938629329cf4cb4fa38846d79df5"
+    },
+    "run_34592335399/code_snapshot/d04_paper_case.m": {
+      "sha256": "f4a49fba7467e2de0863bfc81cf51fee7af8fb0202e44f19b9fc9c857f733c7b",
+      "bytes": 1065,
+      "run_id": 34592335399,
+      "artifact_id": 10196153995,
+      "source_commit": "4b21de8c0b50938629329cf4cb4fa38846d79df5"
+    },
+    "run_34592335399/code_snapshot/d04_table1_reference.m": {
+      "sha256": "9dc595e347361ac4b17ad51a2b8175cc6c5b5ec6d17154ddc867740677c09fa5",
+      "bytes": 1290,
+      "run_id": 34592335399,
+      "artifact_id": 10196153995,
+      "source_commit": "4b21de8c0b50938629329cf4cb4fa38846d79df5"
+    },
+    "run_34592335399/code_snapshot/mean_inflow_88327.m": {
+      "sha256": "e2bd4d0be32fb8ff85bb2515d1e40649a56cb61490656a264a1822ddddd5843f",
+      "bytes": 2309,
+      "run_id": 34592335399,
+      "artifact_id": 10196153995,
+      "source_commit": "4b21de8c0b50938629329cf4cb4fa38846d79df5"
+    },
+    "run_34592335399/code_snapshot/params_nominal.m": {
+      "sha256": "433ee3a3a25556bb67b90049de5be0252b8670500c22c890793cbf4ee4a3cdbb",
+      "bytes": 8190,
+      "run_id": 34592335399,
+      "artifact_id": 10196153995,
+      "source_commit": "4b21de8c0b50938629329cf4cb4fa38846d79df5"
+    },
+    "run_34592335399/code_snapshot/run_d04_symmetry.m": {
+      "sha256": "f22ab26b61b8ee2454833db6e41f814d87cb7e85bf6e3178f44b6604e4225f04",
+      "bytes": 5240,
+      "run_id": 34592335399,
+      "artifact_id": 10196153995,
+      "source_commit": "4b21de8c0b50938629329cf4cb4fa38846d79df5"
+    }
+  },
+  "note": "Member seal fixed from independently downloaded original ZIPs; no model recomputation or result alteration."
+}

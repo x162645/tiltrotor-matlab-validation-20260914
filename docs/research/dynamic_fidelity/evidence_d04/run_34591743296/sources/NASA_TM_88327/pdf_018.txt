@@ -1,0 +1,244 @@
+5.
+VERTICALRESPONSE
+OFTHEHELICOPTER
+IN HOVER
+The coupled inflow-flapping-vertical
+motion of the helicopter
+is now
+examined using the equations of motion listed
+in Table I.
+The rotational
+speed of the rotor
+is assumedto be constant.
+Before proceeding with
+the
+determination
+of the influence
+of operating
+conditions
+and the blade inertia
+characteristics
+as was done in the preceding section,
+the calculated
+vertical
+acceleration
+response from the Table I model will
+be comparedwith
+that
+mea-
+sured from flight
+using a CH-47 research aircraft
+[18].
+Comparison will
+be
+madefor both the step response and the frequency response characteristics
+to
+Collective
+pitch
+excitation.
+5.1
+Comparisonof Transient
+Response
+with
+the CH-47
+Test
+Data
+The
+normal
+acceleration
+response
+to
+a
+sequence
+of
+15
+sec
+pulse
+inputs
+in
+collective
+was
+measured
+on
+the
+CH-47
+as
+shown
+in
+Fig.
+8.
+The
+amplitude
+of
+the
+collective
+pulse
+is
+approximately
+0.62
+in.
+(0.0201
+rad).
+The
+data
+were
+taken
+initially
+with
+a
+sampling
+frequency
+of
+107.75
+Hz.
+They
+were
+then
+passed
+through
+a
+filter
+with
+a
+response
+flat
+up
+to
+5
+Hz
+and
+cutting
+off
+by
+more
+than
+44
+dB
+above
+6.5
+Hz
+[19]
+to
+remove
+the
+3/rev
+and
+higher
+harmonic
+vibratory
+noise.
+Finally,
+the
+filtered
+data
+were
+decimated
+by
+a
+factor
+of
+5
+to
+yield
+21.55
+Hz
+data,
+as
+plotted
+in
+Fig.
+9.
+As
+can
+be
+seen,
+the
+transient
+is
+charac-
+terized
+by
+an
+overshoot
+in
+a z
+which
+immediately
+follows
+an
+abrupt
+change
+in
+collective
+pitch.
+The
+response
+of
+the
+rotor
+RPM
+was
+not
+recorded,
+but
+some
+small
+variations
+in
+rotor
+RPM,
+on
+the
+order
+of
+3%,
+were
+observed
+from
+a
+video
+recording
+of
+the
+cockpit
+instrumentation
+during
+the
+flight.
+The
+response
+of
+the
+RPM
+is
+slower
+than
+that
+of
+az,
+typically
+drooping
+down
+to
+its
+minimum
+at
+about
+I sec
+after
+an
+up
+collective,
+and
+the
+transient
+lasts
+for
+about
+3
+sec
+before
+reaching
+steady
+state.
+15

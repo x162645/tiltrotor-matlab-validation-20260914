@@ -1,0 +1,47 @@
+name,passed,value
+left inverse of symmetric lift,1,0
+steady state is same physical state,1,0
+nonlinear invariant manifold,1,2.70618865966153e-18
+all declared physical outputs identical,1,1.04083408558608e-17
+reduced full-mass transmitted force closure,1,7.27595761418343e-12
+nonlinear invariant manifold,1,1.72236677804069e-17
+all declared physical outputs identical,1,5.55111512312578e-17
+reduced full-mass transmitted force closure,1,0
+nonlinear invariant manifold,1,1.06511010502169e-17
+all declared physical outputs identical,1,2.22044604925031e-16
+reduced full-mass transmitted force closure,1,7.27595761418343e-12
+nonlinear invariant manifold,1,1.06507758303781e-17
+all declared physical outputs identical,1,2.22044604925031e-16
+reduced full-mass transmitted force closure,1,7.27595761418343e-12
+projected Jacobian,1,1.03824471712256e-14
+projected input Jacobian,1,1.30631968124217e-18
+A invariant subspace,1,0
+common input invariant subspace,1,0
+common heave full-band FRF identity,1,5.78457856136396e-11
+differential rotor output cannot be claimed by common model,1,172.389395513161
+reject axialSymmetric:NoncommonInput,1,1
+paired nonlinear time histories,1,1.67366120962242e-14
+paired nonlinear lifted states,1,2.55486820935347e-15
+left inverse of symmetric lift,1,0
+steady state is same physical state,1,0
+nonlinear invariant manifold,1,3.71572202008155e-18
+all declared physical outputs identical,1,1.04083408558608e-17
+reduced full-mass transmitted force closure,1,7.27595761418343e-12
+nonlinear invariant manifold,1,1.72237663460495e-17
+all declared physical outputs identical,1,5.55111512312578e-17
+reduced full-mass transmitted force closure,1,0
+nonlinear invariant manifold,1,1.37227190048805e-17
+all declared physical outputs identical,1,2.22044604925031e-16
+reduced full-mass transmitted force closure,1,7.27595761418343e-12
+nonlinear invariant manifold,1,1.16177623969785e-17
+all declared physical outputs identical,1,2.22044604925031e-16
+reduced full-mass transmitted force closure,1,7.27595761418343e-12
+projected Jacobian,1,1.03842471351417e-14
+projected input Jacobian,1,1.79362885003964e-18
+A invariant subspace,1,0
+common input invariant subspace,1,0
+common heave full-band FRF identity,1,5.76536121720436e-11
+differential rotor output cannot be claimed by common model,1,172.389395513161
+reject axialSymmetric:NoncommonInput,1,1
+paired nonlinear time histories,1,1.32116539930394e-14
+paired nonlinear lifted states,1,1.93942084614207e-15

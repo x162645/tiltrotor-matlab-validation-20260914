@@ -1,0 +1,22 @@
+{
+  "commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007",
+  "paths": [
+    "analysis/dynamic_fidelity/d04_linearize.m",
+    "analysis/dynamic_fidelity/d04_nominal_case.m",
+    "analysis/dynamic_fidelity/d04_paper_case.m",
+    "analysis/dynamic_fidelity/d04_table1_reference.m",
+    "docs/research/dynamic_fidelity/D04_CONTRACT.md",
+    "docs/research/dynamic_fidelity/D04_EXTERNAL_DATA_QUALIFICATION.md",
+    "model/axial/axial_coupled_rhs.m",
+    "model/axial/axial_workpoint.m",
+    "model/axial/build_axial_coupled.m",
+    "model/mean_inflow_88327.m",
+    "params_nominal.m",
+    "tests/dynamic_fidelity/run_d04_coupling.m"
+  ],
+  "source_hashes": {
+    "NACA_TN_3044.pdf": "2ed621dab8547cfee618f6bdd79612a0d52d512f40d66e753a5f25647d71cc6a",
+    "NASA_TM_88327.pdf": "d649bf28ea66ccdfbcd5d24c8cf37fbf5b5f0d4a5e0f0ed187f37734800cb6c2"
+  },
+  "production_changed_by_this_work": false
+}

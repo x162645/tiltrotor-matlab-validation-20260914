@@ -1,0 +1,140 @@
+V
+d__
+-
+3---/- +
+Co
+0
+25_R
+*
+Co
+4-
+0
+0
+I
+__2
+-6R
+-8
+i
+V
+"25_2R
+aa
+8
+0
+(9)
+0
+From
+this
+set
+of
+equations,
+several
+versions
+of
+reduced
+forms
+are
+given
+in
+Table
+2,
+including
+the
+"quasi-steady
+inflow"
+approximation
+[16], which,
+in
+effect,
+assumes
+that
+the
+apparent
+additional
+mass
+is zero.
+It
+is clear
+from
+this
+table,
+that
+for
+the
+quasi-steady
+inflow
+approximation
+there
+exists
+no
+equivalent
+Lock
+number
+that
+accounts
+for
+the
+vertical
+inflow
+effect
+in
+the
+flapping
+equation.
+This
+result
+is
+in contrast
+to
+the
+work
+of
+Curtiss
+and
+Shupe
+[16],
+in which
+they
+discovered
+that
+there
+is an
+equivalent
+Lock
+number
+associated
+with
+the pitch-and-roll
+motion
+of
+the helicopter
+when
+the quasi-
+steady
+inflow
+approximation
+is used
+in the
+first
+harmonic
+inflow
+variation.
+The
+steady-state
+responses
+of
+the
+inflow
+and
+flapping
+to a step
+input
+in
+collective
+pitch
+can
+be
+obtained
+from
+Eq.
+(9) as:
+10

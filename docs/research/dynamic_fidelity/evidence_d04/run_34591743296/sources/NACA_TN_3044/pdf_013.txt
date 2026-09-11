@@ -1,0 +1,36 @@
+12 
+NACA TN 3044 
+where T is the thrust given by either side of equation (10), and mR 
+is the mass of the helicopter without the ~lades. A schematic diagram 
+of the forces acting on the helicopter is shown in figure 2. 
+For a maneuver such as a jump take-off, equation (16) applies only 
+when the helicopter is airborne. 
+Before this time) the ground will exert 
+. 
+forces so that Vv 
+cannot be negative. 
+It should be pointed out that, although the equations are general, 
+the employment of the momentum theory restricts the range to where this 
+theory is applicable. 
+The assumption of infinite blade-bending stiffness 
+is a severe simplification and results in overly large inertia forces. 
+It will be noted that many of the equations contain implicitly the 
+assumption of an untwisted blade. This restriction can be eliminated 
+with small error by taking e for a twisted blade at the 1R point. 
+4 
+Solution of Equations 
+The system of differential equations (10), (15), and (17) can be 
+solved simultaneously by numerical methods, if values of e and n 
+against time are given. 
+Time histories of the variables v, 
+~, Vv' 
+and their derivatives result, from which the thrust at any instant can 
+be computed. 
+For the experiments performed on the Langley helicopter tower, the 
+physical arrangements permit a simplification of the equations. 
+The 
+rotor hub is stationary so that equation (17) is eliminated from the 
+system of equations and the others are suitably modified. 
+The equations 
+to be solved simultaneously are. 
+~) 

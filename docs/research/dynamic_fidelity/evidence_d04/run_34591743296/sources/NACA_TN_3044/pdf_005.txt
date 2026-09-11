@@ -1,0 +1,52 @@
+4 
+a 
+NACA TN 3044 
+adjusted value to correlate simple blade-element-mamentum theory 
+to strip analysis 
+Dots over a symbol indicate derivatives with respect to time. 
+APPARATUS AND TESTS 
+The helicopter rotor used was a conventional three-blade rotor with 
+flapping hinges located at the center of rotation and drag hinges offset 
+about 9 inches from the center of rotation. 
+The blade radius was 19 feet. 
+The blades were plywood covered and untwisted and had NACA 23015 airfoil 
+sections and the rotor solidity was 0.042. 
+A plan-form view of one of 
+the test rotor blades is shown in figure 1. 
+Experimental data recorded for these tests were rotor angular 
+velocity, rotor thrust, blade pitch angle, blade flapping angle, and the 
+induced velocities in the wake beneath the rotor. 
+A description of the 
+test methods, except for the technique used in measuring the induced 
+velocities, is given in reference 1. The induced velocities were meas-
+ured with small calibrated windmill anemometers for the steady-state con-
+ditions. For transient conditions, the wake velocities were obtained by 
+measuring the drag of balsa-wood paddles (approximately 4 inches square) 
+mounted on a horizontal bar about 2 feet below the rotor blades. 
+The 
+paddles were mounted on strain-gage beams and their response to a change 
+in induced velocity was recorded by an oscillograph. 
+The balsa-wood 
+paddles gave almost instantaneous indications of flow changes, whereas 
+the windmill anemometers had considerable lag in measuring transient air 
+velocities. 
+As an aid in visualizing the flow changes and in order to supplement 
+the force and blade-motion data recorded by the oscillograph, smoke 
+grenades were placed at 4-foot intervals on a boom about 4 feet above the 
+rotor. All the release pins on the smoke grenades could be pulled simul-
+taneously at the start of a test run. 
+A high-speed 16-millimeter motion-
+picture camera was used to photograph the smoke streamers during both 
+steady-state and transient wake conditions. 
+The slower rates of blade-pitch increase were accomplished by using 
+electric-motor-driven actuators, whereas the very rapid rates were accom-
+plished by using a spring and trigger mechanism on the pitch control. 
+The 
+rates of pitch increase that were obtained varied from 60 to 200 0 per 
+second. 
+The data presented are for the representative cases of blade-pitch 
+change of 00 to 120 , except for a few tests in which the blade-pitch 
+\ 
+\ 
+• 
+• 

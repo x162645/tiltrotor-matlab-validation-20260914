@@ -1,0 +1,39 @@
+-.' 
+NACA TN 3044 
+11 
+other caused by the vertical acceleration of the helicopter. 
+The magni-
+tude of this moment can be readily found. 
+Each blade-mass element 
+dm 
+is acted on by an inertia f?rce directed oppositely to the helicopter 
+acceleration and equal to Vv dm 
+where 
+Vv 
+is the vertical acceleration 
+of the helicopter. 
+(See fig. 2.) 
+The moment can therefore be written 
+as 
+~vvt. The weight moment ~ needs no comment. 
+Flapping-motion equation. - The flapping-motion equation of the 
+blades is 
+(15) 
+The equation describing the motion of the helicopter itself is now 
+developed. 
+Helicopter-Motion Equation 
+The appearance of lift on the blades results in their immediate 
+angular acceleration 
+~'about the flapping hinge. If 
+~ is assumed 
+small, this motion produces an acceleration of the rotor center of mass, 
+.. 
+relative to the hub, of magnitude 
+2~ in the direction of the rotor 
+axis, where 
+2 is the distance of the blade center of mass from the 
+flapping hinge. At the same time, the helicopter itself has an acceler-
+ation Vv• 
+The equation of motion can be written as 
+(16) 
+which upon rearrangement of the terms gives 

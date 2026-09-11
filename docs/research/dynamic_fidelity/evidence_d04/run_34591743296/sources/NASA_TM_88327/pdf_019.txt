@@ -1,0 +1,104 @@
+The calculated
+perturbation
+of the vertical
+acceleration
+response to a
+0.62 in.
+step input
+in collective
+pitch
+is shown in Fig.
+10 with both dynamic
+inflow models.
+The first
+peak of the calculated
+az
+response is about
+9.9 ft/sec 2 which is somewhatsmaller than the measuredvalue of about
+11 ft/sec 2, and the calculated
+value at
+t = 5 sec
+is somewhatlarger
+than
+that measured. The second peak of the calculated
+response, because of the
+constant RPMassumption used in the math model, tends to be sharper than the
+measured, especially
+with
+Pitt's
+inflow model.
+As in the case with no air-
+craft
+motion, Pitt's
+dynamic inflow model tends to produce more oscillatory
+response in
+az
+than does the Carpenter model.
+An inspection
+of the
+az
+response shown in Fig.
+10 reveals that
+there is
+a small initial
+undershoot of about 1.9 ft/sec 2.
+This is due to the assump-
+tion
+that
+the rotor
+blade is rigid
+(infinite
+blade-bending stiffness),
+which
+results
+in overly
+large inertia
+forces,
+as previously
+observed by Carpenter
+[13].
+This effect
+may be incorporated
+into
+the equations of motion in Table I
+by selecting
+the reduced massmoment MB
+so that
+the initial
+undershoot will
+be zero.
+If
+MB
+is chosen to be
+4I 8
+MB: _
+(12)
+then, the forcing
+function
+in the acceleration
+equation becomeszero,
+result-
+ing in a no-undershoot response as shownin Fig.
+11.
+(It
+is interesting
+to
+note that
+the above expression for
+MB amounts to a reduction
+of approxi-
+mately 11%from the value corresponding to a rectangular
+blade with a uniform
+massdistribution,
+i.e.,
+Ms = 318/2R.)
+Also shown in the figure
+is the
+calculated
+az
+response with
+no dynamic inflow
+(constant
+inflow).
+The strong
+16

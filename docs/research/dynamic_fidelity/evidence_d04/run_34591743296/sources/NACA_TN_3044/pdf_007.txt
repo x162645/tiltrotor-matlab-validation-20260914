@@ -1,0 +1,67 @@
+6 
+NACA TN 3044 
+where 
+v 
+is the instantaneous induced velocity. 
+The equation is as yet incomplete, and further modifications are 
+made in the course of the analysis. This same procedure, that of 
+revising familiar equations, is used throughout the analysis. 
+( 1) 
+An additional term is added to equation (1) to allow for blade 
+flapping. 
+In equation (1), 
+Vv is the vertical velocity of the rotor 
+hub, which for a rotor whose blades are not flapping is the same as the 
+velocity of the rotor disk. 
+For a rotor with flapping blades, however, 
+this is not the case. 
+The velocity of the rotor disk relative to free 
+air can be expressed as the velocity of the hub plus the velocity of 
+the rotor disk relative to the hub. 
+The latter terms can be found by 
+considering annular elements of the rotor disk, each moving with a 
+different velocity 
+~r where 
+~ is the angular velocity of the flapping 
+blades. 
+An integration over the rotor disk divided by the rotor-disk 
+area yields the average velocity of the rotor disk relative to the 
+2 . 
+hub, 3 ~R. The complete expression for the instantaneous thrust is 
+finally 
+T 
+mv + 21rR2pv (v + Vv + ~ ~R) 
+(2) 
+This equation, although admittedly not exact during the whole of the 
+induced-velocity buildup because the flow fields of the impervious disk 
+and helicopter rotor are not strictly analagous, does, however, fit the 
+end points, that is, at the moment an induced velocity appears, and at 
+the final steady state. 
+The rotor thrust is a dependent variable (depending on 
+v, 
+~, 
+and Vv)' which can be eliminated by equating the thrust expressions as 
+given by momentum and blade-element theories. 
+The expression for the 
+instantaneous thrust as given by a modified blade-element theory is 
+developed next. 
+Blade-element theory. - The differential rotor thrust can be written 
+in terms of local velocities and angles of attack as 
+1 
+2 2 
+~ 
+vr 
+Vv 
+~~ 
+CIT = -
+bpn r ac e - -
+- -
+- - dr 
+2 
+nr 
+nr 
+n 
+(3 ) 
+~. 
+'. 
+• 

@@ -1,0 +1,67 @@
+26 
+NACA TN 3044 
+Pitch change increase 
+o OOto 12° 
+o OOto 9° 
+<> OOto 6° 
+, 
+A OOto 3° 
+2.2 
+Calculated curve 
+'\ 
+\ 
+r-I 
+r\ 
+as 
+~ 
+-rl 
+4-i 
+E-t 
+1.8 
+0 
+"'" 
+P-~ 
+r-
+G 
+(~ 
+,....--
+r:'1 
+/ 
+...... 
+0 
+/ 
+1":\ 
+4~ 
+K 
+as 
+E 
+8 
+1.4 
+(.) 
+/ 
+-
+~ 
+~ 
+1.0 ~ 
+\ ~ 
+- - \ 
+-
+I 
+I 
+~ 
+1 
+I 
+-
+-I 
+o 
+50 
+100 
+150 
+200 
+Rate of collective pitch increase I deg/sec 
+Figure 5.- Comparison of experimental and calculated ratios of C 
+ICT 
+Tma.x/ 
+final 
+for various rates of collective pitch increase. 
+NACA-Langley - 11-30-53 - 1000 

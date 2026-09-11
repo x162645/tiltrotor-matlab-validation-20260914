@@ -1,0 +1,21 @@
+4L 
+NACA TN 3044 
+Approximate 
+Blade 
+Location 
+t • 0.74 sec 
+6 ' , 
+Approximate 
+Blade 
+Location 
+t = 1.09 sec 
+25 
+22' R 
+22' R 
+t 
+Location 
+t • 0.91 sec 
+Location 
+t = 1.28 sec 
+L-Bl190 
+Figure 4.- Concluded. 

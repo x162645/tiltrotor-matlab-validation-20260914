@@ -1,0 +1,259 @@
+influence
+of
+the
+dynamic
+inflow
+on
+the overshoot
+in
+the vertical
+acceleration
+response
+is
+clearly
+exhibited
+in
+the
+figure.
+5.2
+Compari3on
+of Frequency
+Response
+A varying
+frequency
+input
+in collective
+pitch
+was
+employed
+to measure
+the
+frequency
+response
+of
+az
+to collective
+of
+the CH-47B
+research
+aircraft.
+Figure
+12 shows
+a sample
+of
+typical
+frequency
+sweeps,
+with
+frequency
+varying
+from
+about
+0.05
+Hz
+to about
+2 Hz.
+Using
+the Fourier
+analysis
+programs
+developed
+in Ref.
+[20],
+the
+frequency
+response
+of
+az/6 c
+was
+determined
+as
+shown
+in Fig.
+13.
+From
+the amplitude
+plot,
+it
+is
+seen
+that
+there
+is
+a reso-
+nance
+peak
+at
+the
+frequency
+of
+about
+17 rad/sec.
+It
+is also
+interesting
+to
+note
+from
+the
+phase
+plot,
+that
+a substantial
+lead
+is
+present
+in
+the
+range
+of
+frequencies
+below
+6.5
+rad/sec.
+Because
+of
+lack
+of
+low-frequency
+power
+in the
+frequency
+sweeps
+(see
+Fig.
+11),
+the
+identified
+frequency-response
+plots
+become
+less
+reliable
+in
+the
+range
+of
+frequencies
+below
+0.3
+rad/sec.
+The
+calculated
+frequency
+response
+of
+the
+az/_ c
+transfer
+function
+using
+the math
+model
+listed
+in Table
+I is shown
+in Fig.
+14, with
+the
+flight
+data,
+for
+both
+Carpenter's
+and
+Pitt's
+dynamic
+inflow
+models.
+The
+calculations
+cover
+the
+frequency
+range
+of
+0.1
+to
+100 rad/sec.
+The
+resonance
+peak
+at
+the
+fre-
+quency
+of
+about
+17 rad/sec
+is evident,
+with
+Pitt's
+model
+producing
+a slightly
+higher
+peak
+than
+Carpenter's
+because
+of
+the more
+destabilized
+flapping
+mode.
+(A more
+detailed
+discussion
+will
+be
+given
+later.)
+The
+low-frequency
+phase
+lead
+observed
+in
+the
+flight-measured
+phase
+plot
+is also
+seen
+in the
+calculated
+phase
+plots
+for
+both
+inflow
+models.
+This
+phase
+lead
+is a result
+of
+the non-
+minimum
+phase
+behavior
+of
+the
+az/_ c
+transfer
+function
+and
+a free
+s
+present
+in the numerator.
+Overall,
+the
+frequency
+responses
+calculated
+with
+the
+two
+17
