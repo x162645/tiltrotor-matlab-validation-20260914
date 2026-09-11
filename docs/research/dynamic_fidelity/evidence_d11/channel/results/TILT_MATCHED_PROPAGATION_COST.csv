@@ -1,0 +1,6 @@
+method,samples,state_count,repeats,seconds_median,seconds_min,seconds_max,microseconds_per_sample_median,method_cost_definition
+FULL_PP_NOMINAL_2,8001,2,5,0.04480147699996451,0.04377823000004355,0.05275649899999735,5.599484689409387,same Python exact-FOH state advance/output; includes expm setup; not hard real-time nor MATLAB speed
+PHYSICAL_QS_1,8001,1,5,0.04292628000007426,0.04164802500008591,0.0435828339998352,5.365114360714193,same Python exact-FOH state advance/output; includes expm setup; not hard real-time nor MATLAB speed
+BT_RAW_1,8001,1,5,0.044266187999937756,0.042961212999898635,0.048726538999972036,5.5325819272513135,same Python exact-FOH state advance/output; includes expm setup; not hard real-time nor MATLAB speed
+BSPA_RAW_1,8001,1,5,0.04342242100005933,0.0427524760000324,0.04438196399996741,5.427124234478106,same Python exact-FOH state advance/output; includes expm setup; not hard real-time nor MATLAB speed
+BT_V_KINEMATIC_1,8001,1,5,0.04267292700001235,0.04244623399995362,0.04507577300000776,5.333449193852312,same Python exact-FOH state advance/output; includes expm setup; not hard real-time nor MATLAB speed
