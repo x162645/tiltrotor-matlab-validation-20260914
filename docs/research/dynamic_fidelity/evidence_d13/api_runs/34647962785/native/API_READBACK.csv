@@ -1,0 +1,3 @@
+method,original_trace_rows,velocity_diff,acceleration_diff,force_diff_N,field_diff_CT,invalid_inputs_rejected
+CLASSICAL_LUT_COARSE,1602,0,3.50830475781549e-14,2.40106601268053e-10,6.50521303491303e-18,3
+CLASSICAL_LUT_FINE,1602,0,3.55548923636206e-14,2.47382558882236e-10,6.50521303491303e-18,3

@@ -1,0 +1,6 @@
+             method             original_trace_rows    velocity_diff    acceleration_diff    force_diff_N    field_diff_CT    invalid_inputs_rejected
+    ________________________    ___________________    _____________    _________________    ____________    _____________    _______________________
+
+    {'CLASSICAL_LUT_COARSE'}           1602                  0             3.5083e-14         2.4011e-10      6.5052e-18                 3           
+    {'CLASSICAL_LUT_FINE'  }           1602                  0             3.5555e-14         2.4738e-10      6.5052e-18                 3           
+
