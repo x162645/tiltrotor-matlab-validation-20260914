@@ -1,0 +1,26 @@
+{
+  "head": "309d01dfebc928911328e2f28d95fe76c150e5cf",
+  "base": "e7525a5a6f524b5a8932c91815633caebfaca770",
+  "files": {
+    "analysis/dynamic_fidelity/d04_linearize.m": "9277d2ab11fd2e4a06376061bcfbdc2f482a0e63664c8b3f0be004d46e845362",
+    "analysis/dynamic_fidelity/d04_nominal_case.m": "4c8d9491d71b7de2e6c3a44ccd2161adc1245493fd4ba7f06f9664a9fbf13733",
+    "analysis/dynamic_fidelity/d04_paper_case.m": "f4a49fba7467e2de0863bfc81cf51fee7af8fb0202e44f19b9fc9c857f733c7b",
+    "analysis/dynamic_fidelity/d04_table1_reference.m": "9dc595e347361ac4b17ad51a2b8175cc6c5b5ec6d17154ddc867740677c09fa5",
+    "analysis/dynamic_fidelity/d05_error_enclosure.m": "ad03269769ed716421bf8439fef21cace7c7109835b5d8539e36479d3a59afd2",
+    "analysis/dynamic_fidelity/d05_linear_model.m": "0fe0bdbafc266f8f485a4b5848932fda1133c3320dbb6c5c426978770f37f26e",
+    "analysis/dynamic_fidelity/d05_qualify_band.m": "2668886558f680a3980fac5d0914c7a2e80e678041a57fb9a8ef170ceebb99b8",
+    "docs/research/dynamic_fidelity/D05_METHOD.md": "e6b8fc10edbb1d47861ac52eb805e950655408af775fcee0de0b06ad9d577bff",
+    "model/axial/axial_coupled_rhs.m": "44dc9ea71a72332d363d243ad507b0ed04030994be860313705da7bece83d3e8",
+    "model/axial/axial_nearsymmetric_rhs.m": "8931f5b7fc2de82cd350f8f381d73445a432642c4ef2891447b6e84a7dba0a0b",
+    "model/axial/axial_residualized_rhs.m": "edcf46cf02feada0c91d14ec0504038e278b3a3309344c45873258b92744eb58",
+    "model/axial/axial_symmetric_rhs.m": "7092f5b930e1ad07da2c9727eb09b812712ebe9417fd465002c3a67d118de522",
+    "model/axial/axial_workpoint.m": "7730f15ed9314b7c7db9e71060369c3d1cf25edcc76076f8e3b81b97452a181d",
+    "model/axial/build_axial_coupled.m": "f8c77b58f8ba117a6d385d2bd84776d093255368ae745f1dc4e8f86f61d8be93",
+    "model/axial/build_axial_nearsymmetric.m": "32635c15118bcf96c66dafec0c271e422bf3b4714e7701f8f361a7a53d58ca90",
+    "model/axial/build_axial_symmetric.m": "1c47a2987e8c6167b82f64e43f45a247903543c661dfc746e6d8a6fefaded318",
+    "model/mean_inflow_88327.m": "e2bd4d0be32fb8ff85bb2515d1e40649a56cb61490656a264a1822ddddd5843f",
+    "params_nominal.m": "433ee3a3a25556bb67b90049de5be0252b8670500c22c890793cbf4ee4a3cdbb",
+    "tests/dynamic_fidelity/run_d05_state_selection.m": "6cc76e10807cafcb9e5d9fd1bda267d04de1d0d9695d0576559f37f99787ebef"
+  },
+  "new_experimental_samples": 0
+}

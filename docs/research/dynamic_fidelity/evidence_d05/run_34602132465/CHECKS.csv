@@ -1,0 +1,441 @@
+name,passed,value
+reduced gain lower bound agrees with independent samples,1,-0.307379899082443
+relative error below interval enclosure,1,8.29206413244063e-16
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,8.29206413244063e-16
+reduced gain lower bound agrees with independent samples,1,-2.70366978063372e-16
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.335793133154016
+relative error below interval enclosure,1,8.75383443521029e-16
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,8.75383443521029e-16
+reduced gain lower bound agrees with independent samples,1,-3.86996121322868e-17
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.204819205613627
+relative error below interval enclosure,1,8.51974274601235e-16
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,8.51974274601235e-16
+reduced gain lower bound agrees with independent samples,1,-1.40682540776634e-17
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.27943627189313
+relative error below interval enclosure,1,9.11321552291531e-16
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,9.1212705456847e-16
+reduced gain lower bound agrees with independent samples,1,-2.48459308093379e-16
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0254500800611347
+reduced gain lower bound agrees with independent samples,1,-0.305266484685469
+relative error below interval enclosure,1,9.57775294270774e-16
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,9.62335176921417e-16
+reduced gain lower bound agrees with independent samples,1,0
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.18619927783057
+relative error below interval enclosure,1,8.05743585863235e-16
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,8.20300376241415e-16
+reduced gain lower bound agrees with independent samples,1,-1.30768056891252e-17
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,1.25182014748393e-17
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,0
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0254500800611349
+reduced gain lower bound agrees with independent samples,1,4.23206867929993e-18
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,0
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,4.61754243396683e-18
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,0
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.307347571242794
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,4.50099354312207e-06
+reduced gain lower bound agrees with independent samples,1,-0.000453679586325171
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0250629703935719
+reduced gain lower bound agrees with independent samples,1,-0.325390551715757
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,1.51597554848617e-05
+reduced gain lower bound agrees with independent samples,1,-4.37913280343045e-06
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.204783023623061
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,4.82649441459608e-05
+reduced gain lower bound agrees with independent samples,1,-0.00191803560369334
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.279798700275349
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,3.83887438710388e-05
+reduced gain lower bound agrees with independent samples,1,-0.00340592701723597
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0254038483271954
+reduced gain lower bound agrees with independent samples,1,-0.296224418223018
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.000125953362337453
+reduced gain lower bound agrees with independent samples,1,-6.59405847077934e-05
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.186427129787197
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.000348627997611384
+reduced gain lower bound agrees with independent samples,1,-0.00174115437845008
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.000187329943108592
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0249872347281888
+reduced gain lower bound agrees with independent samples,1,-0.000548750126247942
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0254477500714355
+reduced gain lower bound agrees with independent samples,1,-9.33317975537978e-05
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-2.0350057440854e-06
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.00286866719012067
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-2.68516669346691e-05
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.260129829600788
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.000112993471465191
+reduced gain lower bound agrees with independent samples,1,-0.0022611877329579
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0250105648598789
+reduced gain lower bound agrees with independent samples,1,-0.265534304192768
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.000380482311139912
+reduced gain lower bound agrees with independent samples,1,-9.01869884977999e-05
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.203915614114738
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.00120945589006816
+reduced gain lower bound agrees with independent samples,1,-0.00954995463946536
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.233003696419088
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.000280731812457377
+reduced gain lower bound agrees with independent samples,1,-0.00579064884385631
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0252419039820543
+reduced gain lower bound agrees with independent samples,1,-0.219861660815065
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.000928607509154238
+reduced gain lower bound agrees with independent samples,1,-8.25646129530898e-05
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.186679782844726
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0026912145422558
+reduced gain lower bound agrees with independent samples,1,-0.00872654024608932
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.000936357869726686
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0249319575511227
+reduced gain lower bound agrees with independent samples,1,-0.00585404147998641
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.025391771206395
+reduced gain lower bound agrees with independent samples,1,-5.85952692698085e-05
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.000214776660110882
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.014323802021157
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.000670405443745196
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.155663732278995
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.000457913478073137
+reduced gain lower bound agrees with independent samples,1,-0.0044773514243992
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0248460691899768
+reduced gain lower bound agrees with independent samples,1,-0.143768675434134
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.00154077601408134
+reduced gain lower bound agrees with independent samples,1,-0.000187533583422982
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.0931007494590038
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.00487348201488186
+reduced gain lower bound agrees with independent samples,1,-0.0188495586209245
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.139991947855743
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.000787098627070256
+reduced gain lower bound agrees with independent samples,1,-0.0082925772243238
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0250061540886018
+reduced gain lower bound agrees with independent samples,1,-0.131298597595569
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.00261519649957874
+reduced gain lower bound agrees with independent samples,1,-0.000345474964642164
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.0858363396842128
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.00775484250445846
+reduced gain lower bound agrees with independent samples,1,-0.017357052266178
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.00187088644913988
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0247585326512389
+reduced gain lower bound agrees with independent samples,1,-0.0108636700375449
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0252161027277068
+reduced gain lower bound agrees with independent samples,1,-0.000234178546182062
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.000426834175017156
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.028525728693174
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.00267056016613179
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.307337264895169
+relative error below interval enclosure,1,8.02819670208937e-16
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,8.02819670208937e-16
+reduced gain lower bound agrees with independent samples,1,-2.3908996332755e-16
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.333230739362349
+relative error below interval enclosure,1,8.89322903440425e-16
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,8.89322903440425e-16
+reduced gain lower bound agrees with independent samples,1,-3.41723796207022e-17
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.202690334211202
+relative error below interval enclosure,1,1.00849848883259e-15
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,1.00849848883259e-15
+reduced gain lower bound agrees with independent samples,1,8.24444341378902e-17
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.279397513541063
+relative error below interval enclosure,1,8.35959958064391e-16
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,8.37161075592945e-16
+reduced gain lower bound agrees with independent samples,1,-2.61536113782504e-17
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0424191927874655
+reduced gain lower bound agrees with independent samples,1,-0.302937035783953
+relative error below interval enclosure,1,8.75232821499877e-16
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,8.7962961996422e-16
+reduced gain lower bound agrees with independent samples,1,0
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.184263940192002
+relative error below interval enclosure,1,1.10217215385916e-15
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,1.11007002162893e-15
+reduced gain lower bound agrees with independent samples,1,9.15376398238766e-17
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,7.24761325439479e-17
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,0
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0424191927874655
+reduced gain lower bound agrees with independent samples,1,9.30310752028776e-18
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,0
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,9.48257621813562e-18
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,0
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.300276937938025
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,7.61818000635774e-06
+reduced gain lower bound agrees with independent samples,1,-0.000104840565997111
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0420069755318332
+reduced gain lower bound agrees with independent samples,1,-0.333187083628832
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,2.58602109631215e-05
+reduced gain lower bound agrees with independent samples,1,-1.30483826003509e-05
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.202650324586063
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,7.66040757888078e-05
+reduced gain lower bound agrees with independent samples,1,-0.00189591844236481
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.273363702008712
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,6.46764380711737e-05
+reduced gain lower bound agrees with independent samples,1,-0.000383044362934962
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0423689920099404
+reduced gain lower bound agrees with independent samples,1,-0.303324188717572
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.00020804804919397
+reduced gain lower bound agrees with independent samples,1,-2.37762120878293e-05
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.184487245910771
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.000510724311524843
+reduced gain lower bound agrees with independent samples,1,-0.00171841915218501
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-1.9095877325208e-05
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-4.88775704935507e-05
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0424153156424085
+reduced gain lower bound agrees with independent samples,1,-0.00858389719890012
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-1.47323869298357e-06
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.0028566829762011
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-2.66384559632971e-05
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.204125990093285
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.000191241106018468
+reduced gain lower bound agrees with independent samples,1,-0.000261140610588028
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0419175612480545
+reduced gain lower bound agrees with independent samples,1,-0.219524731665011
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.00064886067546945
+reduced gain lower bound agrees with independent samples,1,-3.25209864014778e-05
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.201691550595575
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0019177089982044
+reduced gain lower bound agrees with independent samples,1,-0.00943916727596425
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.186880271904231
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.000473523513418445
+reduced gain lower bound agrees with independent samples,1,-0.000957908868722403
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0421636097089752
+reduced gain lower bound agrees with independent samples,1,-0.184217931470315
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.00154843609460348
+reduced gain lower bound agrees with independent samples,1,-5.95414974480741e-05
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.176557862787324
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.00405558137700645
+reduced gain lower bound agrees with independent samples,1,-0.00861751368358499
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-9.54544094083566e-05
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.000600598284721553
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0423221690836232
+reduced gain lower bound agrees with independent samples,1,-0.0429034375142992
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-1.8389985509377e-05
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.0142562453604077
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.000665018809609578
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.105693363530414
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.000774932901284017
+reduced gain lower bound agrees with independent samples,1,-0.000517168620068464
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0416369714335262
+reduced gain lower bound agrees with independent samples,1,-0.102835239855113
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0026252320997758
+reduced gain lower bound agrees with independent samples,1,-3.27405458201841e-05
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.0925440027478059
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.00770355590147667
+reduced gain lower bound agrees with independent samples,1,-0.0186269439943443
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.0959942197495681
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.00132868072960902
+reduced gain lower bound agrees with independent samples,1,-0.000954258704911123
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0418073913033535
+reduced gain lower bound agrees with independent samples,1,-0.0855421400973667
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.00438471955553452
+reduced gain lower bound agrees with independent samples,1,-3.01885371215234e-05
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.0768084507660467
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0118397104700349
+reduced gain lower bound agrees with independent samples,1,-0.017142792540115
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.000190752178616515
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.00118966477201856
+relative error below interval enclosure,1,0
+relative pass cannot hide low-gain response,1,151
+qualified band respects relative budget,1,0.0420299053784811
+reduced gain lower bound agrees with independent samples,1,-0.0857064033658517
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.000154475645392763
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.0283432396237938
+relative error below interval enclosure,1,0
+reduced gain lower bound agrees with independent samples,1,-0.0026483342034661
+relative error below interval enclosure,1,0
+relative criterion makes different decisions,1,47
+weak heave channel not mislabelled as five percent relative,1,0.181103261604849
+zero linear channel not relatively certified,1,6
+reject d05:InvalidRelativeBudget,1,0
+reject d05:InvalidRelativeBudget,1,0
+reject d05:InvalidRelativeBudget,1,0

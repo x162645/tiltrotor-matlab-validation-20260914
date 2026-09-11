@@ -1,0 +1,372 @@
+{
+  "schema_version": 1,
+  "request": {
+    "schema_version": 1,
+    "date": "2026-09-11",
+    "base_commit": "e7525a5a6f524b5a8932c91815633caebfaca770",
+    "artifacts": [
+      {
+        "folder": "main",
+        "run_id": 34601330893,
+        "artifact_id": 10264532634,
+        "source_commit": "309d01dfebc928911328e2f28d95fe76c150e5cf",
+        "zip_sha256": "17725b63b9a8cf60dfeaa2ced681a7582b0c311fa32a994ff6b5e1dde2b1a8b7",
+        "expected_checks": 388,
+        "expected_all_checks_passed": true,
+        "files": {
+          "ASYMMETRY_ORDER.csv": {
+            "sha256": "be0a519528f164121989a0d5a0db7ff46a961e8c07d65082f5ef2e7367f4ecb8",
+            "bytes": 267
+          },
+          "BAND_SELECTION.csv": {
+            "sha256": "b94012011da6ce7c95277e6ad4b3db81425718dcc05518a22efc0f1a947da6ba",
+            "bytes": 17248
+          },
+          "CHECKS.csv": {
+            "sha256": "5c6a1934a4d890c48c99c524bb75e0327f242f7a745ac6c579615f852f8a2648",
+            "bytes": 23324
+          },
+          "CODE_SNAPSHOT.zip": {
+            "sha256": "967e9c646ac93c753cf6463eb76449499bd37aec5e8d27c499bde3691947a81b",
+            "bytes": 30341
+          },
+          "D05_RESULTS.mat": {
+            "sha256": "99e78ab92dab057309a7ccda892133ded3d4859d32e50186858f7c328e9930f1",
+            "bytes": 1870231
+          },
+          "INPUT_MANIFEST.json": {
+            "sha256": "d3e16f38e4cfc2faa81a2850ea151cf8742f18a983495f2a730974cd49347582",
+            "bytes": 2320
+          },
+          "MATLAB_LOG.txt": {
+            "sha256": "7a1bb2b07bcb778eca8c7a53023bb47716e096941606d156372ca1605e58d7a9",
+            "bytes": 48384
+          },
+          "NONLINEAR_CHECKS.csv": {
+            "sha256": "9df1596eee17277ce4fb5e9d2977bbd3cdf1eb5187e45c0e18bb5bbd8240d9a7",
+            "bytes": 3215
+          },
+          "PAIRED_NONLINEAR.csv": {
+            "sha256": "cc66bf996a4d0462b355a8e8be24ee21b02b052dd4d3ccf54c005f0afae14585",
+            "bytes": 939
+          },
+          "RUN_MANIFEST.json": {
+            "sha256": "d3f135305e2bed72e07407d1a3abe5c5184e386d0dc939b28359f6930790fa99",
+            "bytes": 771
+          },
+          "SCENARIO_1_MODE_1.csv": {
+            "sha256": "476a1929ca4d12df1c03562ec545e1d3352b086ea628ad76e53980c067087caa",
+            "bytes": 61260
+          },
+          "SCENARIO_1_MODE_2.csv": {
+            "sha256": "7bf6ca1300bc748c4220bac50c0f445c19a21b17d2b8fa7d4244d672d1047a1e",
+            "bytes": 61280
+          },
+          "SCENARIO_2_MODE_1.csv": {
+            "sha256": "f117cfbd32d29b2593447385b832dd2efdd00934ee2737d70a538306c9c58a7a",
+            "bytes": 59888
+          },
+          "SCENARIO_2_MODE_2.csv": {
+            "sha256": "3f790e4d1443f6ddabc2f4dbc237ac378e46be51f9067e4c72e26624c0d4f89e",
+            "bytes": 60086
+          },
+          "SCENARIO_3_MODE_1.csv": {
+            "sha256": "937dd13fce94216521c817c3c048df92e2f5523fa9e5068281e8c573a7458bbc",
+            "bytes": 59734
+          },
+          "SCENARIO_3_MODE_2.csv": {
+            "sha256": "21202a5845f473e0cedb5059e78d5dc04f494c531e9695555747db5c83a701bd",
+            "bytes": 58433
+          },
+          "SCENARIO_4_MODE_1.csv": {
+            "sha256": "c8dbcb4e4519e991217b10965973e46c87a370a1f39addd59cddb5489d759cdc",
+            "bytes": 60864
+          },
+          "SCENARIO_4_MODE_2.csv": {
+            "sha256": "655d4a47f7bc634a27282a6ffa50f1dee2341c8d7f3b0ecd465284c527de2bc3",
+            "bytes": 59651
+          }
+        }
+      },
+      {
+        "folder": "relative",
+        "run_id": 34602132465,
+        "artifact_id": 10264659060,
+        "source_commit": "245e9571ad557f7baf9f87b256d3ca5e14a4a90e",
+        "zip_sha256": "9ee2f8bce4b69e48a1dab8e832a918d1b546c5d1d350d66129a3d8880159f4a5",
+        "expected_checks": 440,
+        "expected_all_checks_passed": true,
+        "files": {
+          "ABSOLUTE_AND_RELATIVE_QUALIFICATION.csv": {
+            "sha256": "5ea232760ee7a227fbe9a083444aaa1ee4e03b3a8d8cb67b3ca41ad150954c20",
+            "bytes": 16171
+          },
+          "CHECKS.csv": {
+            "sha256": "09d57db4779af40391ccbb4ab6678fc8a975ef1772e553fd7edbccdd0235ed6d",
+            "bytes": 26348
+          },
+          "D05_RELATIVE_RESULTS.mat": {
+            "sha256": "2076e2b1074f7481746b55b08c925165ad131d3cf439cfeda23a37843d1e2742",
+            "bytes": 2160060
+          },
+          "INPUT_MANIFEST.json": {
+            "sha256": "7905beab1831fd988201b4e101f774a588c3694013e830bdd92a37f74d90ed87",
+            "bytes": 238
+          },
+          "MATLAB_LOG.txt": {
+            "sha256": "0841de7bbb6452ca2568ac65cf2783394367a622d9c5eece2eff70827485f15d",
+            "bytes": 48299
+          },
+          "RUN_MANIFEST.json": {
+            "sha256": "a2e1d916de4b1599aa0477ac64ac53d09243caafe35e496c7ab406c3d0ece6e3",
+            "bytes": 696
+          },
+          "code/D05_RELATIVE_SUPPLEMENT.md": {
+            "sha256": "82400c0720b13ab36836d250dacc03716becaacd27a1249e6d96b46de653884d",
+            "bytes": 1834
+          },
+          "code/d05_error_enclosure.m": {
+            "sha256": "ad03269769ed716421bf8439fef21cace7c7109835b5d8539e36479d3a59afd2",
+            "bytes": 1808
+          },
+          "code/qualify_relative_response.m": {
+            "sha256": "255e417784777ae761694386ff0b799a5cf03d8ace2081f3ba4859bfcd2b4ea5",
+            "bytes": 2906
+          },
+          "code/run_d05_relative_gate.m": {
+            "sha256": "0865b1b388a81f9c1ff033d9f5bd5e6a303c6ff3cf2359384aa58d519f0af6b1",
+            "bytes": 5632
+          }
+        }
+      }
+    ],
+    "note": "Two raw ZIP hashes checked, MATLAB MAT/CSV/JSON read back. D04 sources are reused, not copied as new evidence."
+  },
+  "files": {
+    "run_34601330893/ASYMMETRY_ORDER.csv": {
+      "sha256": "be0a519528f164121989a0d5a0db7ff46a961e8c07d65082f5ef2e7367f4ecb8",
+      "bytes": 267,
+      "run_id": 34601330893,
+      "artifact_id": 10264532634,
+      "source_commit": "309d01dfebc928911328e2f28d95fe76c150e5cf",
+      "original_path": "ASYMMETRY_ORDER.csv"
+    },
+    "run_34601330893/BAND_SELECTION.csv": {
+      "sha256": "b94012011da6ce7c95277e6ad4b3db81425718dcc05518a22efc0f1a947da6ba",
+      "bytes": 17248,
+      "run_id": 34601330893,
+      "artifact_id": 10264532634,
+      "source_commit": "309d01dfebc928911328e2f28d95fe76c150e5cf",
+      "original_path": "BAND_SELECTION.csv"
+    },
+    "run_34601330893/CHECKS.csv": {
+      "sha256": "5c6a1934a4d890c48c99c524bb75e0327f242f7a745ac6c579615f852f8a2648",
+      "bytes": 23324,
+      "run_id": 34601330893,
+      "artifact_id": 10264532634,
+      "source_commit": "309d01dfebc928911328e2f28d95fe76c150e5cf",
+      "original_path": "CHECKS.csv"
+    },
+    "run_34601330893/CODE_SNAPSHOT.zip": {
+      "sha256": "967e9c646ac93c753cf6463eb76449499bd37aec5e8d27c499bde3691947a81b",
+      "bytes": 30341,
+      "run_id": 34601330893,
+      "artifact_id": 10264532634,
+      "source_commit": "309d01dfebc928911328e2f28d95fe76c150e5cf",
+      "original_path": "CODE_SNAPSHOT.zip"
+    },
+    "run_34601330893/D05_RESULTS.mat": {
+      "sha256": "99e78ab92dab057309a7ccda892133ded3d4859d32e50186858f7c328e9930f1",
+      "bytes": 1870231,
+      "run_id": 34601330893,
+      "artifact_id": 10264532634,
+      "source_commit": "309d01dfebc928911328e2f28d95fe76c150e5cf",
+      "original_path": "D05_RESULTS.mat"
+    },
+    "run_34601330893/INPUT_MANIFEST.json": {
+      "sha256": "d3e16f38e4cfc2faa81a2850ea151cf8742f18a983495f2a730974cd49347582",
+      "bytes": 2320,
+      "run_id": 34601330893,
+      "artifact_id": 10264532634,
+      "source_commit": "309d01dfebc928911328e2f28d95fe76c150e5cf",
+      "original_path": "INPUT_MANIFEST.json"
+    },
+    "run_34601330893/MATLAB_LOG.txt": {
+      "sha256": "7a1bb2b07bcb778eca8c7a53023bb47716e096941606d156372ca1605e58d7a9",
+      "bytes": 48384,
+      "run_id": 34601330893,
+      "artifact_id": 10264532634,
+      "source_commit": "309d01dfebc928911328e2f28d95fe76c150e5cf",
+      "original_path": "MATLAB_LOG.txt"
+    },
+    "run_34601330893/NONLINEAR_CHECKS.csv": {
+      "sha256": "9df1596eee17277ce4fb5e9d2977bbd3cdf1eb5187e45c0e18bb5bbd8240d9a7",
+      "bytes": 3215,
+      "run_id": 34601330893,
+      "artifact_id": 10264532634,
+      "source_commit": "309d01dfebc928911328e2f28d95fe76c150e5cf",
+      "original_path": "NONLINEAR_CHECKS.csv"
+    },
+    "run_34601330893/PAIRED_NONLINEAR.csv": {
+      "sha256": "cc66bf996a4d0462b355a8e8be24ee21b02b052dd4d3ccf54c005f0afae14585",
+      "bytes": 939,
+      "run_id": 34601330893,
+      "artifact_id": 10264532634,
+      "source_commit": "309d01dfebc928911328e2f28d95fe76c150e5cf",
+      "original_path": "PAIRED_NONLINEAR.csv"
+    },
+    "run_34601330893/RUN_MANIFEST.json": {
+      "sha256": "d3f135305e2bed72e07407d1a3abe5c5184e386d0dc939b28359f6930790fa99",
+      "bytes": 771,
+      "run_id": 34601330893,
+      "artifact_id": 10264532634,
+      "source_commit": "309d01dfebc928911328e2f28d95fe76c150e5cf",
+      "original_path": "RUN_MANIFEST.json"
+    },
+    "run_34601330893/SCENARIO_1_MODE_1.csv": {
+      "sha256": "476a1929ca4d12df1c03562ec545e1d3352b086ea628ad76e53980c067087caa",
+      "bytes": 61260,
+      "run_id": 34601330893,
+      "artifact_id": 10264532634,
+      "source_commit": "309d01dfebc928911328e2f28d95fe76c150e5cf",
+      "original_path": "SCENARIO_1_MODE_1.csv"
+    },
+    "run_34601330893/SCENARIO_1_MODE_2.csv": {
+      "sha256": "7bf6ca1300bc748c4220bac50c0f445c19a21b17d2b8fa7d4244d672d1047a1e",
+      "bytes": 61280,
+      "run_id": 34601330893,
+      "artifact_id": 10264532634,
+      "source_commit": "309d01dfebc928911328e2f28d95fe76c150e5cf",
+      "original_path": "SCENARIO_1_MODE_2.csv"
+    },
+    "run_34601330893/SCENARIO_2_MODE_1.csv": {
+      "sha256": "f117cfbd32d29b2593447385b832dd2efdd00934ee2737d70a538306c9c58a7a",
+      "bytes": 59888,
+      "run_id": 34601330893,
+      "artifact_id": 10264532634,
+      "source_commit": "309d01dfebc928911328e2f28d95fe76c150e5cf",
+      "original_path": "SCENARIO_2_MODE_1.csv"
+    },
+    "run_34601330893/SCENARIO_2_MODE_2.csv": {
+      "sha256": "3f790e4d1443f6ddabc2f4dbc237ac378e46be51f9067e4c72e26624c0d4f89e",
+      "bytes": 60086,
+      "run_id": 34601330893,
+      "artifact_id": 10264532634,
+      "source_commit": "309d01dfebc928911328e2f28d95fe76c150e5cf",
+      "original_path": "SCENARIO_2_MODE_2.csv"
+    },
+    "run_34601330893/SCENARIO_3_MODE_1.csv": {
+      "sha256": "937dd13fce94216521c817c3c048df92e2f5523fa9e5068281e8c573a7458bbc",
+      "bytes": 59734,
+      "run_id": 34601330893,
+      "artifact_id": 10264532634,
+      "source_commit": "309d01dfebc928911328e2f28d95fe76c150e5cf",
+      "original_path": "SCENARIO_3_MODE_1.csv"
+    },
+    "run_34601330893/SCENARIO_3_MODE_2.csv": {
+      "sha256": "21202a5845f473e0cedb5059e78d5dc04f494c531e9695555747db5c83a701bd",
+      "bytes": 58433,
+      "run_id": 34601330893,
+      "artifact_id": 10264532634,
+      "source_commit": "309d01dfebc928911328e2f28d95fe76c150e5cf",
+      "original_path": "SCENARIO_3_MODE_2.csv"
+    },
+    "run_34601330893/SCENARIO_4_MODE_1.csv": {
+      "sha256": "c8dbcb4e4519e991217b10965973e46c87a370a1f39addd59cddb5489d759cdc",
+      "bytes": 60864,
+      "run_id": 34601330893,
+      "artifact_id": 10264532634,
+      "source_commit": "309d01dfebc928911328e2f28d95fe76c150e5cf",
+      "original_path": "SCENARIO_4_MODE_1.csv"
+    },
+    "run_34601330893/SCENARIO_4_MODE_2.csv": {
+      "sha256": "655d4a47f7bc634a27282a6ffa50f1dee2341c8d7f3b0ecd465284c527de2bc3",
+      "bytes": 59651,
+      "run_id": 34601330893,
+      "artifact_id": 10264532634,
+      "source_commit": "309d01dfebc928911328e2f28d95fe76c150e5cf",
+      "original_path": "SCENARIO_4_MODE_2.csv"
+    },
+    "run_34602132465/ABSOLUTE_AND_RELATIVE_QUALIFICATION.csv": {
+      "sha256": "5ea232760ee7a227fbe9a083444aaa1ee4e03b3a8d8cb67b3ca41ad150954c20",
+      "bytes": 16171,
+      "run_id": 34602132465,
+      "artifact_id": 10264659060,
+      "source_commit": "245e9571ad557f7baf9f87b256d3ca5e14a4a90e",
+      "original_path": "ABSOLUTE_AND_RELATIVE_QUALIFICATION.csv"
+    },
+    "run_34602132465/CHECKS.csv": {
+      "sha256": "09d57db4779af40391ccbb4ab6678fc8a975ef1772e553fd7edbccdd0235ed6d",
+      "bytes": 26348,
+      "run_id": 34602132465,
+      "artifact_id": 10264659060,
+      "source_commit": "245e9571ad557f7baf9f87b256d3ca5e14a4a90e",
+      "original_path": "CHECKS.csv"
+    },
+    "run_34602132465/D05_RELATIVE_RESULTS.mat": {
+      "sha256": "2076e2b1074f7481746b55b08c925165ad131d3cf439cfeda23a37843d1e2742",
+      "bytes": 2160060,
+      "run_id": 34602132465,
+      "artifact_id": 10264659060,
+      "source_commit": "245e9571ad557f7baf9f87b256d3ca5e14a4a90e",
+      "original_path": "D05_RELATIVE_RESULTS.mat"
+    },
+    "run_34602132465/INPUT_MANIFEST.json": {
+      "sha256": "7905beab1831fd988201b4e101f774a588c3694013e830bdd92a37f74d90ed87",
+      "bytes": 238,
+      "run_id": 34602132465,
+      "artifact_id": 10264659060,
+      "source_commit": "245e9571ad557f7baf9f87b256d3ca5e14a4a90e",
+      "original_path": "INPUT_MANIFEST.json"
+    },
+    "run_34602132465/MATLAB_LOG.txt": {
+      "sha256": "0841de7bbb6452ca2568ac65cf2783394367a622d9c5eece2eff70827485f15d",
+      "bytes": 48299,
+      "run_id": 34602132465,
+      "artifact_id": 10264659060,
+      "source_commit": "245e9571ad557f7baf9f87b256d3ca5e14a4a90e",
+      "original_path": "MATLAB_LOG.txt"
+    },
+    "run_34602132465/RUN_MANIFEST.json": {
+      "sha256": "a2e1d916de4b1599aa0477ac64ac53d09243caafe35e496c7ab406c3d0ece6e3",
+      "bytes": 696,
+      "run_id": 34602132465,
+      "artifact_id": 10264659060,
+      "source_commit": "245e9571ad557f7baf9f87b256d3ca5e14a4a90e",
+      "original_path": "RUN_MANIFEST.json"
+    },
+    "run_34602132465/code/D05_RELATIVE_SUPPLEMENT.md": {
+      "sha256": "82400c0720b13ab36836d250dacc03716becaacd27a1249e6d96b46de653884d",
+      "bytes": 1834,
+      "run_id": 34602132465,
+      "artifact_id": 10264659060,
+      "source_commit": "245e9571ad557f7baf9f87b256d3ca5e14a4a90e",
+      "original_path": "code/D05_RELATIVE_SUPPLEMENT.md"
+    },
+    "run_34602132465/code/d05_error_enclosure.m": {
+      "sha256": "ad03269769ed716421bf8439fef21cace7c7109835b5d8539e36479d3a59afd2",
+      "bytes": 1808,
+      "run_id": 34602132465,
+      "artifact_id": 10264659060,
+      "source_commit": "245e9571ad557f7baf9f87b256d3ca5e14a4a90e",
+      "original_path": "code/d05_error_enclosure.m"
+    },
+    "run_34602132465/code/qualify_relative_response.m": {
+      "sha256": "255e417784777ae761694386ff0b799a5cf03d8ace2081f3ba4859bfcd2b4ea5",
+      "bytes": 2906,
+      "run_id": 34602132465,
+      "artifact_id": 10264659060,
+      "source_commit": "245e9571ad557f7baf9f87b256d3ca5e14a4a90e",
+      "original_path": "code/qualify_relative_response.m"
+    },
+    "run_34602132465/code/run_d05_relative_gate.m": {
+      "sha256": "0865b1b388a81f9c1ff033d9f5bd5e6a303c6ff3cf2359384aa58d519f0af6b1",
+      "bytes": 5632,
+      "run_id": 34602132465,
+      "artifact_id": 10264659060,
+      "source_commit": "245e9571ad557f7baf9f87b256d3ca5e14a4a90e",
+      "original_path": "code/run_d05_relative_gate.m"
+    }
+  },
+  "note": "Raw ZIP hashes separately checked on retrieval; all retained original members checked here. No new model run."
+}

@@ -1,0 +1,389 @@
+name,passed,value
+D04 unchanged equations at equal slopes,1,0
+D04 unchanged equations at equal slopes,1,0
+D04 unchanged equations at equal slopes,1,0
+D04 unchanged equations at equal slopes,1,0
+D04 unchanged equations at equal slopes,1,0
+D04 unchanged equations at equal slopes,1,0
+full workpoint equilibrium,1,3.17120691610353e-14
+same physical reduced workpoint,1,0
+same workpoint output,1,3.94430452610506e-31
+analytical full Jacobian,1,2.9019909325674e-11
+nonlinear reduction Jacobian equals Schur complement,1,6.69429478015741e-12
+full and reduced local stability,1,-0.193043624045798
+algebraic differential residual at off-trim state,1,4.78236863851169e-14
+direct four-state RHS equals lifted common RHS,1,1.87522551831482e-14
+transmitted-force balance,1,7.27595761418343e-12
+DC gain matching,1,6.50781439372163e-11
+independent full FRF is inside interval enclosure,1,5.52860387275765e-16
+qualified interval satisfies fixed gain budget,1,5.52860387275765e-16
+independent full FRF is inside interval enclosure,1,1.33659587158544e-16
+qualified interval satisfies fixed gain budget,1,1.58862325797951e-16
+independent full FRF is inside interval enclosure,1,6.13648331896075e-16
+qualified interval satisfies fixed gain budget,1,6.13648331896075e-16
+independent full FRF is inside interval enclosure,1,1.42989381684563e-16
+qualified interval satisfies fixed gain budget,1,1.56998735183554e-16
+independent full FRF is inside interval enclosure,1,7.74791098663579e-16
+qualified interval satisfies fixed gain budget,1,7.74791098663579e-16
+independent full FRF is inside interval enclosure,1,4.94675163165492e-16
+qualified interval satisfies fixed gain budget,1,5.25629457363015e-16
+independent full FRF is inside interval enclosure,1,5.34347762052593e-16
+qualified interval satisfies fixed gain budget,1,5.3771986592933e-16
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00157596199478202
+independent full FRF is inside interval enclosure,1,6.10974385218158e-16
+qualified interval satisfies fixed gain budget,1,6.13274497970489e-16
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00619125704882668
+independent full FRF is inside interval enclosure,1,6.19394848592518e-16
+qualified interval satisfies fixed gain budget,1,6.23657149755836e-16
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0405496913774224
+independent full FRF is inside interval enclosure,1,1.31241219851443e-16
+qualified interval satisfies fixed gain budget,1,1.63664467946302e-16
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0173355819426023
+independent full FRF is inside interval enclosure,1,1.32182425996376e-16
+qualified interval satisfies fixed gain budget,1,1.53915778162804e-16
+independent full FRF is inside interval enclosure,1,0
+independent full FRF is inside interval enclosure,1,3.19297812354716e-16
+qualified interval satisfies fixed gain budget,1,3.86090983850626e-16
+independent full FRF is inside interval enclosure,1,0
+full workpoint equilibrium,1,6.34241383220705e-14
+same physical reduced workpoint,1,0
+same workpoint output,1,9.86076131526265e-32
+analytical full Jacobian,1,1.74178300551827e-11
+nonlinear reduction Jacobian equals Schur complement,1,9.30365913168093e-09
+full and reduced local stability,1,-0.19302690499209
+algebraic differential residual at off-trim state,1,4.82608725849941e-14
+direct four-state RHS equals lifted common RHS,1,1.95149923891117e-14
+transmitted-force balance,1,7.27595761418343e-12
+DC gain matching,1,6.50781433553723e-11
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,3.035061638176e-06
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.000229667587624525
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,1.08363864496708e-05
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.000938549380476071
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,5.30522873105709e-05
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00734385304707835
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,2.35645933744201e-05
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00178383728662617
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,8.19626064838017e-05
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00704161368598352
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.000348948340281854
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0472135430342284
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.000228971406190894
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0173324336780205
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.000793635408037594
+independent full FRF is inside interval enclosure,1,0
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00330912248250651
+independent full FRF is inside interval enclosure,1,0
+full workpoint equilibrium,1,6.34241383220705e-14
+same physical reduced workpoint,1,0
+same workpoint output,1,7.27595765213034e-12
+analytical full Jacobian,1,8.9218263057072e-11
+nonlinear reduction Jacobian equals Schur complement,1,1.1205355940536e-09
+full and reduced local stability,1,-0.192625219232533
+algebraic differential residual at off-trim state,1,7.94919685631612e-14
+direct four-state RHS equals lifted common RHS,1,1.6875481275291e-14
+transmitted-force balance,1,0
+DC gain matching,1,6.50781448584691e-11
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,7.60344255262751e-05
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00114709266030962
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.000271420625138257
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0046890636823161
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00132756342095807
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0367112635193088
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.000172903983424264
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00260951525651546
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.000606429484162847
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0104231787446565
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00270776730127532
+independent full FRF is inside interval enclosure,1,0
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0011434757944942
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0172568841633682
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00396336695878758
+independent full FRF is inside interval enclosure,1,0
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0165290539700268
+independent full FRF is inside interval enclosure,1,0
+full workpoint equilibrium,1,1.26848276644141e-13
+same physical reduced workpoint,1,6.93889390390723e-18
+same workpoint output,1,3.63797949013615e-12
+analytical full Jacobian,1,7.85432713306202e-11
+nonlinear reduction Jacobian equals Schur complement,1,1.55335255206168e-09
+full and reduced local stability,1,-0.191364626356138
+algebraic differential residual at off-trim state,1,4.81852141148272e-14
+direct four-state RHS equals lifted common RHS,1,1.87522551831482e-14
+transmitted-force balance,1,7.27595761418343e-12
+DC gain matching,1,2.91038336280249e-11
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.000306123631883387
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00228630194067138
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00109210495958688
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00935480608149067
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00532599509326818
+independent full FRF is inside interval enclosure,1,0
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.000484936958507065
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00362295507338415
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00170897626605659
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.01458878043091
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0078330457408878
+independent full FRF is inside interval enclosure,1,0
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00227821907775386
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0170209065486157
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00789636678439964
+independent full FRF is inside interval enclosure,1,0
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0329542220533558
+independent full FRF is inside interval enclosure,1,0
+full workpoint equilibrium,1,2.02915733967587e-14
+same physical reduced workpoint,1,0
+same workpoint output,1,3.94430452610506e-31
+analytical full Jacobian,1,2.9019909325674e-11
+nonlinear reduction Jacobian equals Schur complement,1,4.39352913650636e-12
+full and reduced local stability,1,-0.19215778057604
+algebraic differential residual at off-trim state,1,3.13547110197445e-14
+direct four-state RHS equals lifted common RHS,1,1.32265729380064e-14
+transmitted-force balance,1,7.27595761418343e-12
+DC gain matching,1,4.11590317680861e-11
+independent full FRF is inside interval enclosure,1,5.3942313236139e-16
+qualified interval satisfies fixed gain budget,1,5.3942313236139e-16
+independent full FRF is inside interval enclosure,1,1.09941236970811e-16
+qualified interval satisfies fixed gain budget,1,1.61557228989616e-16
+independent full FRF is inside interval enclosure,1,6.13274497970489e-16
+qualified interval satisfies fixed gain budget,1,6.13274497970489e-16
+independent full FRF is inside interval enclosure,1,7.74741880472573e-17
+qualified interval satisfies fixed gain budget,1,1.07440315174712e-16
+independent full FRF is inside interval enclosure,1,9.19662414589871e-16
+qualified interval satisfies fixed gain budget,1,9.19662414589871e-16
+independent full FRF is inside interval enclosure,1,4.92429421771574e-16
+qualified interval satisfies fixed gain budget,1,5.33767072911128e-16
+independent full FRF is inside interval enclosure,1,4.8503292600435e-16
+qualified interval satisfies fixed gain budget,1,4.90993403838906e-16
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00263679515748647
+independent full FRF is inside interval enclosure,1,5.37229772370305e-16
+qualified interval satisfies fixed gain budget,1,5.40527377390877e-16
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00962593823846518
+independent full FRF is inside interval enclosure,1,9.1571596565627e-16
+qualified interval satisfies fixed gain budget,1,9.20260698778439e-16
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0492476411095694
+independent full FRF is inside interval enclosure,1,9.50192201118685e-17
+qualified interval satisfies fixed gain budget,1,1.57960110650218e-16
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0290047467323512
+independent full FRF is inside interval enclosure,1,1.17529680255548e-16
+qualified interval satisfies fixed gain budget,1,1.53542829278972e-16
+independent full FRF is inside interval enclosure,1,0
+independent full FRF is inside interval enclosure,1,3.09413200242349e-16
+qualified interval satisfies fixed gain budget,1,3.9268728021543e-16
+independent full FRF is inside interval enclosure,1,0
+full workpoint equilibrium,1,4.05831467935174e-14
+same physical reduced workpoint,1,0
+same workpoint output,1,9.86076131526265e-32
+analytical full Jacobian,1,1.74178300551827e-11
+nonlinear reduction Jacobian equals Schur complement,1,9.30366016201867e-09
+full and reduced local stability,1,-0.192141233915646
+algebraic differential residual at off-trim state,1,3.17826428909791e-14
+direct four-state RHS equals lifted common RHS,1,1.44793684777385e-14
+transmitted-force balance,1,7.27595761418343e-12
+DC gain matching,1,6.50781434826507e-11
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,5.1334593168979e-06
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.000386138360261748
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,1.90549858477149e-05
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00150318032937166
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,9.15803187240251e-05
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00966657179431608
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,3.96738034971437e-05
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00298571726176026
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0001395637454959
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0109821041064055
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.000556066155954481
+independent full FRF is inside interval enclosure,1,0
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.000385338846026301
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0289994508245088
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00134616394740534
+independent full FRF is inside interval enclosure,1,0
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00520223789897785
+independent full FRF is inside interval enclosure,1,0
+full workpoint equilibrium,1,4.05831467935174e-14
+same physical reduced workpoint,1,0
+same workpoint output,1,7.27595765213034e-12
+analytical full Jacobian,1,8.9218263057072e-11
+nonlinear reduction Jacobian equals Schur complement,1,1.12053612702888e-09
+full and reduced local stability,1,-0.19174368405723
+algebraic differential residual at off-trim state,1,5.06261699229071e-14
+direct four-state RHS equals lifted common RHS,1,1.06582855957108e-14
+transmitted-force balance,1,0
+DC gain matching,1,1.19998167112764e-10
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.000128600331644466
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00192850272777655
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.000477162974049196
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00750846298701297
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00229058573798231
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.048319394638325
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.000291452926800841
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00437247952767695
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00104265613491242
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0163843260625983
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00444350551591373
+independent full FRF is inside interval enclosure,1,0
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00192437520271804
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0288723692138492
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00672254960329298
+independent full FRF is inside interval enclosure,1,0
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0259928951845901
+independent full FRF is inside interval enclosure,1,0
+full workpoint equilibrium,1,8.11662935870347e-14
+same physical reduced workpoint,1,6.93889390390723e-18
+same workpoint output,1,3.63797949013615e-12
+analytical full Jacobian,1,7.85432713306202e-11
+nonlinear reduction Jacobian equals Schur complement,1,1.55335262130844e-09
+full and reduced local stability,1,-0.190495996538252
+algebraic differential residual at off-trim state,1,3.16676400409347e-14
+direct four-state RHS equals lifted common RHS,1,1.51450861385683e-14
+transmitted-force balance,1,7.27595761418343e-12
+DC gain matching,1,2.91038314460682e-11
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.000517719798677117
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00384315683227355
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00191855164960173
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0149699784419547
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0091758305165033
+independent full FRF is inside interval enclosure,1,0
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.000818112388596582
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00607504449880319
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00295554414861559
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0230423439186627
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0130525057844421
+independent full FRF is inside interval enclosure,1,0
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.00383409176147805
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0284754984730467
+independent full FRF is inside interval enclosure,1,0
+qualified interval satisfies fixed gain budget,1,0.0133929953703389
+independent full FRF is inside interval enclosure,1,0
+independent full FRF is inside interval enclosure,1,0
+independent full FRF is inside interval enclosure,1,0
+selection includes accepted and refused reductions,1,120
+common heave error is second order near symmetry,1,6.41800507890089e-05
+differential pathways leak at first order,1,5.33934623331289e-05
+nonlinear versus own linear model scaled check,1,0.000515908886237097
+no hidden force imbalance,1,1.45519152283669e-11
+nonlinear versus own linear model scaled check,1,0.000569863666205149
+no hidden force imbalance,1,1.45519152283669e-11
+nonlinear versus own linear model scaled check,1,0.000257945141484052
+no hidden force imbalance,1,1.45519152283669e-11
+nonlinear versus own linear model scaled check,1,0.000284918893512516
+no hidden force imbalance,1,1.45519152283669e-11
+nonlinear versus own linear model scaled check,1,0.00055031829113593
+no hidden force imbalance,1,1.45519152283669e-11
+nonlinear versus own linear model scaled check,1,0.000550301520126345
+no hidden force imbalance,1,1.45519152283669e-11
+nonlinear versus own linear model scaled check,1,0.000274731025581488
+no hidden force imbalance,1,1.45519152283669e-11
+nonlinear versus own linear model scaled check,1,0.000274722676553438
+no hidden force imbalance,1,1.45519152283669e-11
+nonlinear versus own linear model scaled check,1,0.000486463862970931
+no hidden force imbalance,1,1.45519152283669e-11
+nonlinear versus own linear model scaled check,1,0.000486549256770911
+no hidden force imbalance,1,1.45519152283669e-11
+nonlinear versus own linear model scaled check,1,0.000242878978500646
+no hidden force imbalance,1,1.45519152283669e-11
+nonlinear versus own linear model scaled check,1,0.000242923518771103
+no hidden force imbalance,1,2.18278728425503e-11
+nonlinear versus own linear model scaled check,1,0.00052669908731413
+no hidden force imbalance,1,1.45519152283669e-11
+nonlinear versus own linear model scaled check,1,0.000579145561194755
+no hidden force imbalance,1,1.45519152283669e-11
+nonlinear versus own linear model scaled check,1,0.000263354265877923
+no hidden force imbalance,1,1.45519152283669e-11
+nonlinear versus own linear model scaled check,1,0.000289573655895484
+no hidden force imbalance,1,1.45519152283669e-11
+reject d05:InvalidAsymmetry,1,1
+reject d05:OutsideNormalFlow,1,1
+reject d05:InvalidCertificateInput,1,1
