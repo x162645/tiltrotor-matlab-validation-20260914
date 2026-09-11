@@ -1,9 +1,9 @@
 function result=run_d03_source_inflow(outputRoot)
-%RUN_D03_SOURCE_INFLOW Source scalar physics + paired near-hover experiment.
-% No target fitting, new trim search or replay of old 27+24 validations.
-% Reuses accepted D02.1 MAT workpoint and old positive-input trajectories.
-% Source coefficients are fixed before first run; external accuracy is NOT
-% assigned by mathematical/internal tests.
+%RUN_D03_SOURCE_INFLOW Source scalar physics + paired near-hover comparison.
+% No target fitting, new trim search or replay of old27+24 validations.
+% Accepted D02.1 workpoint/trajectories are reused. Derivative identity uses
+% same-process baseline; cross-run derivative differences remain recorded.
+% Equation/analytic tests are verification, not experimental validation.
 if nargin<1,outputRoot=fullfile(pwd,'ci_artifacts','d03');end
 if ~exist(outputRoot,'dir'),mkdir(outputRoot);end
 root=fileparts(fileparts(fileparts(mfilename('fullpath'))));startup;
@@ -17,7 +17,7 @@ wp=old.records.workpoint;P=wp.P;z=wp.dynamicState;cmd=wp.command;
 checks={};records=struct('workpoint',wp);tableRows={};frequencyRows={};costRows={};domainRows={};clock=tic;
 [~,h]=system('git rev-parse HEAD');
 meta=struct('identity','D03_SOURCE_MEAN_AXIAL_DYNAMIC_BASELINES','commit',strtrim(h),'version',version, ...
- 'release',version('-release'),'status','RUNNING','newTrimSearches',0,'newPhysicalCases',10, ...
+ 'release',version('-release'),'status','RUNNING','newTrimSearches',0,'newAircraftTrajectories',10,'newExperimentalSamples',0, ...
  'source','NASA_TM88327_EQ2_EQ4_EQ5_PDF9_10','sourceModels',{{'pp_mean','cf_mean'}}, ...
  'externalAccuracyPassed',false,'fullPittPetersImplemented',false,'dynamicFlappingImplemented',false, ...
  'coningPumpingOmittedInAircraft',true,'defaultPhysicsChanged',false,'assumedActuatorTimeConstant',P.d02.actuatorTimeConstant, ...
@@ -60,11 +60,22 @@ try
  [fo,~,yo]=d02_rhs(z,cmd,0,P,'dynamic');lOld=old.records.linearizations{1,1};
  check('legacy RHS exact archive identity',isequal(fo,lOld.f0),norm(fo-lOld.f0));
  check('legacy observation exact archive identity',isequal(yo,lOld.y0),norm(yo-lOld.y0));
+ archiveLin=lOld;
+ fresh=cell(1,2);for sf=1:2,fresh{sf}=d02_linearize(wp,'dynamic',2^(1-sf));end
+ lOld=fresh{1};records.archiveLegacyLinearizations=old.records.linearizations(1,:);
+ records.currentLegacyLinearizations=fresh;
+ differences=struct();
+ for field={'A','B','C','D'}
+  key=field{1};now=lOld.(key);archived=archiveLin.(key);differences.(key)=max(abs(now(:)-archived(:)));
+ end
+ records.crossRunDerivativeDifferences=differences;
+ fprintf('CROSS_RUN_DIFFERENCES A %.9g B %.9g C %.9g D %.9g; retained, not relaxed into PASS\n', ...
+  differences.A,differences.B,differences.C,differences.D);
  [~,eo]=d02_rhs(z,cmd,0,P,'dynamic');
  geom={eo.components.rotorLeft.rHub,eo.components.rotorRight.rHub};
  omegaGrid=logspace(-1,1,81).';
  allModels={'dynamic','quasisteady','pp_mean','cf_mean'};
- lins=cell(4,2);lins(1:2,:)=old.records.linearizations;
+ lins=cell(4,2);lins(1:2,:)=old.records.linearizations;lins(1,:)=fresh;
  simulations=cell(4,5);simulations(1:2,1:3)=old.records.simulations(:,1:3);
  amps=[.2,.1,-.2,-.1];
  for mi=1:2
@@ -80,8 +91,10 @@ try
   zx=z;zx(1)=5;expect(@()d02_rhs(zx,cmd,0,P,mode),'d03:OutsideNearAxialTestScope');
   for sf=1:2,lins{index,sf}=d02_linearize(wp,mode,2^(1-sf));end
   lin=lins{index,1};half=lins{index,2};
-  check([mode ' unchanged non-inflow A rows'],max(abs(reshape(lin.A(keep,:)-lOld.A(keep,:),[],1)))<1e-12,0);
-  check([mode ' same BCD except inflow B'],max(abs([reshape(lin.B(keep,:)-lOld.B(keep,:),[],1);lin.C(:)-lOld.C(:);lin.D(:)-lOld.D(:)]))<1e-12,0);
+  aDiff=max(abs(reshape(lin.A(keep,:)-lOld.A(keep,:),[],1)));
+  check([mode ' same-process non-inflow A identity'],aDiff<1e-12,aDiff);
+  bcdDiff=max(abs([reshape(lin.B(keep,:)-lOld.B(keep,:),[],1);lin.C(:)-lOld.C(:);lin.D(:)-lOld.D(:)]));
+  check([mode ' same-process BCD identity'],bcdDiff<1e-12,bcdDiff);
   expected=lOld.A(10,10)*2*z(10)*P.d02.inflowTimeConstant/(mbar*P.rotor.R);
   check([mode ' derived local mass scaling'],abs(lin.A(10,10)-expected)<1e-5,lin.A(10,10)-expected);
   cfg=struct('channel',1,'amplitudeRad',0,'startTime',.5,'totalTime',3,'sampleTime',.05,'maxStep',.05,'storeComponents',true);
