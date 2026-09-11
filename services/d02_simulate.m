@@ -2,7 +2,7 @@ function sim=d02_simulate(wp,mode,cfg)
 %D02_SIMULATE Constant-input segments split exactly at the step event.
 % Output sampling does not discretize the command event. Timing distinguishes
 % ODE RHS work from optional replay/diagnostics. Never subtract f0 physically.
-m=d02_layout(mode);if strcmp(mode,'dynamic'),z0=wp.dynamicState;else,z0=wp.quasisteadyState;end
+m=d02_layout(mode);if ~isempty(m.vi),z0=wp.dynamicState;else,z0=wp.quasisteadyState;end
 fields={'channel','amplitudeRad','startTime','totalTime','sampleTime'};
 for j=1:numel(fields),if ~isfield(cfg,fields{j}),error('d02:InvalidSimulationConfig','Missing %s',fields{j});end,end
 v=[cfg.channel,cfg.amplitudeRad,cfg.startTime,cfg.totalTime,cfg.sampleTime];

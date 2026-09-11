@@ -1,0 +1,55 @@
+name: D03 source-based axial mean inflow
+on:
+  push:
+    branches: [research/dynamic-fidelity-benchmark-20260910]
+    paths: ['.github/workflows/dynamic-benchmark-d03.yml','model/mean_inflow_88327.m','tests/dynamic_fidelity/run_d03_source_inflow.m']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-and-comparison:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - name: Pin original input and NASA equation source
+        shell: bash
+        run: |
+          mkdir -p ci_artifacts/d03/source_pages ci_artifacts/d03/code_snapshot
+          python -m pip install --quiet pymupdf
+          python - <<'PY'
+          import pathlib,hashlib,json,urllib.request,fitz,subprocess
+          out=pathlib.Path('ci_artifacts/d03')
+          old=pathlib.Path('docs/research/dynamic_fidelity/evidence_d02_1/run_34581649374/D02_CONSISTENCY_RESULTS.mat')
+          oldhash=hashlib.sha256(old.read_bytes()).hexdigest()
+          assert oldhash=='d26ec7d66cc31089c51311db6f28b29fdd289ab6cb35c631387ad3c304025c14'
+          url='https://ntrs.nasa.gov/api/citations/19870015049/downloads/19870015049.pdf'
+          req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'})
+          raw=urllib.request.urlopen(req,timeout=90).read();assert raw.startswith(b'%PDF')
+          (out/'NASA_TM_88327.pdf').write_bytes(raw);doc=fitz.open(stream=raw,filetype='pdf');assert len(doc)==51
+          for p in [4,5,8,9,10]:
+              page=doc[p];page.get_pixmap(matrix=fitz.Matrix(1.5,1.5)).save(out/'source_pages'/f'pdf_{p+1:03d}.png')
+              (out/'source_pages'/f'pdf_{p+1:03d}.txt').write_text(page.get_text(),encoding='utf-8')
+          manifest={'source_url':url,'source_pdf_sha256':hashlib.sha256(raw).hexdigest(),'pages':len(doc),'rendered_pages_1based':[5,6,9,10,11],'baseline_mat_path':str(old),'baseline_mat_sha256':oldhash,'baseline_source_commit':'d35cb829c04242a44800ff16071bec93e4315e56','current_commit':subprocess.check_output(['git','rev-parse','HEAD']).decode().strip(),'source_role':'EQUATION_SOURCE_NOT_INDEPENDENT_EXPERIMENT_FOR_GENERIC_AIRCRAFT'}
+          (out/'SOURCE_AND_INPUT_MANIFEST.json').write_text(json.dumps(manifest,indent=2))
+          PY
+          cp -R model services tests/dynamic_fidelity analysis/dynamic_fidelity ci_artifacts/d03/code_snapshot/
+          cp params_nominal.m startup.m docs/research/dynamic_fidelity/D03_CONTRACT.md ci_artifacts/d03/code_snapshot/
+      - uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2021a
+      - name: Source-law tests and ten new paired collective trajectories
+        uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            startup;addpath(fullfile(pwd,'tests','dynamic_fidelity'));
+            run_d03_source_inflow(fullfile(pwd,'ci_artifacts','d03'));
+      - name: Verify no tracked runtime changes
+        if: always()
+        run: git diff --exit-code
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: d03-source-inflow-${{ github.sha }}
+          path: ci_artifacts/d03
+          if-no-files-found: error

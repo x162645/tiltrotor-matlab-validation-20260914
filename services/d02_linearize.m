@@ -3,7 +3,7 @@ function lin=d02_linearize(wp,mode,stepFactor)
 if nargin<3,stepFactor=1;end
 if ~isnumeric(stepFactor)||~isscalar(stepFactor)||~isreal(stepFactor)||~isfinite(stepFactor)||stepFactor<=0
  error('d02:InvalidStep','Positive finite scale required.');end
-m=d02_layout(mode);if strcmp(mode,'dynamic'),z=wp.dynamicState;else,z=wp.quasisteadyState;end
+m=d02_layout(mode);if ~isempty(m.vi),z=wp.dynamicState;else,z=wp.quasisteadyState;end
 u=wp.command;P=wp.P;beta=wp.trim.betaM;t=tic;
 hx=m.stateStep*stepFactor;hu=m.inputStep*stepFactor;
 [f0,~,y0]=d02_rhs(z,u,beta,P,mode);ny=numel(y0);A=zeros(m.n);B=zeros(m.n,3);C=zeros(ny,m.n);D=zeros(ny,3);

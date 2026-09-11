@@ -1,7 +1,7 @@
 function result=run_d02_longitudinal_heave(config,P)
 %RUN_D02_LONGITUDINAL_HEAVE Reviewed facade; explicit reusable workpoint.
-% Inherited 15-state mode is preserved. Quasisteady mode algebraically removes
-% the two inflow states; actuator dynamics and body/observation equations match.
+% All dynamic variants have15 states. Quasisteady removes two inflow states.
+% Source mean-flow options add no new actuator or rigid-body assumptions.
 if nargin<1||isempty(config),config=struct();end
 if ~isstruct(config)||~isscalar(config),error('d02:InvalidConfig','Scalar config required.');end
 if nargin<2||isempty(P)
@@ -27,13 +27,23 @@ else
  if ~isfield(config,'trim'),config.trim=struct('V',0,'betaMDeg',0);end
  wp=d02_prepare_workpoint(config.trim,P);
 end
-if strcmp(m.mode,'dynamic'),z=wp.dynamicState;else,z=wp.quasisteadyState;end
+if ~isempty(m.vi),z=wp.dynamicState;else,z=wp.quasisteadyState;end
 [f0,snapshot]=d02_rhs(z,wp.command,wp.trim.betaM,P,m.mode);
+selectedReport=wp.report;
+if any(strcmp(m.mode,{'pp_mean','cf_mean'}))
+ selectedReport.inflowDerivativeInf=norm(f0(m.vi),inf);
+ selectedReport.inflowResidual=selectedReport.inflowDerivativeInf;
+ selectedReport.pass=wp.report.pass&&selectedReport.inflowDerivativeInf<wp.report.inflowLimit;
+ selectedReport.inflowLaw=m.mode;
+ if ~selectedReport.pass&&~strcmp(config.action,'trim')
+  error('d03:SourceWorkpointRejected','Selected source law not in equilibrium; refine explicitly, never subtract f0.');
+ end
+end
 result=struct('kind','d02-longitudinal-heave-reviewed','modelIdentity',m.identity, ...
- 'success',false,'executionSucceeded',false,'workpointAccepted',wp.report.pass, ...
+ 'success',false,'executionSucceeded',false,'workpointAccepted',selectedReport.pass, ...
  'externalAccuracyPassed',false,'config',config,'workpoint',wp,'trim',wp.trim, ...
  'betaM',wp.trim.betaM,'zTrim',z,'uTrimCommand',wp.command,'trimDerivative',f0, ...
- 'trimReport',wp.report,'trimSnapshot',snapshot,'stateNames',{m.stateNames.'}, ...
+ 'trimReport',selectedReport,'trimSnapshot',snapshot,'stateNames',{m.stateNames.'}, ...
  'stateUnits',{m.stateUnits.'},'inputNames',{m.inputNames.'},'inputUnits',{m.inputUnits.'}, ...
  'outputNames',{m.outputNames.'},'outputUnits',{m.outputUnits.'});
 if strcmp(config.action,'linearize')

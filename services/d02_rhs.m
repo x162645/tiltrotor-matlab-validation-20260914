@@ -1,7 +1,8 @@
 function [dz,out,y]=d02_rhs(z,command,betaM,P,mode)
 %D02_RHS Explicit induced-state / algebraically eliminated inflow pair.
-% The target-minus-state law and actuator taus are INHERITED ASSUMPTIONS
-% from commit21a699a, not a Pitt-Peters model or identified time constants.
+% dynamic retains the assumed target-minus-state law from21a699a.
+% pp_mean/cf_mean select the source axial reductions in NASA TM88327.
+% Actuator taus remain assumptions in every mode. No fit to external curves.
 % Quasisteady has no dummy inflow states and uses the same load functions.
 if nargin<5,mode='dynamic';end
 m=d02_layout(mode);z=z(:);command=command(:);
@@ -38,10 +39,34 @@ actDot=(command-act)./ta;
 down=[-sin(x(8)),sin(x(7))*cos(x(8)),cos(x(7))*cos(x(8))];
 vUp=-down*x(1:3);aDown=down*(e.Ftotal/e.massProperties.mass);
 specific=e.FaeroProp/e.massProperties.mass;
-if isempty(m.vi),dz=[xdot;actDot;vUp];else,dz=[xdot;(target-actual)/ti;actDot;vUp];end
+sourceMeta={};
+if isempty(m.vi)
+ dz=[xdot;actDot;vUp];
+elseif strcmp(mode,'dynamic')
+ dz=[xdot;(target-actual)/ti;actDot;vUp];
+else
+ % Source Eq5 axial subset. State/loads/actuators unchanged. No target fit.
+ % Neglect coning pumping because blade flap states are still quasisteady;
+ % do not label this the complete coupled-inflow/flapping model of the paper.
+ rr={L,R};dvi=zeros(2,1);
+ for k=1:2
+  rotor=rr{k};through=actual(k)+rotor.Vaxial;
+  crossflow=hypot(rotor.Vlong,rotor.Vlat);
+  % Predeclared LOCAL TEST bound: neglecting crossflow in momentum flux
+  % differs by <=sqrt(1+.02^2)-1. Not a source validation envelope.
+  if through<=0||crossflow/through>.02||norm(x(4:6))/P.rotor.Omega>1e-3
+   error('d03:OutsideNearAxialTestScope','Only near-hover axial normal-flow subset; no silent extension.');
+  end
+  [dvi(k),sourceMeta{k}]=mean_inflow_88327(actual(k),rotor.thrust,rotor.Vaxial,0,P,mode);
+  sourceMeta{k}.coningPumpingOmitted=true;
+  sourceMeta{k}.crossflowRatio=crossflow/through;
+  sourceMeta{k}.normalMomentumOmissionBound=sqrt(1+(crossflow/through)^2)-1;
+ end
+ dz=[xdot;dvi;actDot;vUp];
+end
 if ~isreal(dz)||any(~isfinite(dz)),error('d02:NonfiniteDerivative','Invalid dynamic derivative.');end
 if nargout<2,return;end
-out=e;out.actualInducedVelocity=actual;out.targetInducedVelocity=target;
+out=e;out.inflowLaw=mode;out.sourceInflow=sourceMeta;out.actualInducedVelocity=actual;out.targetInducedVelocity=target;
 out.dynamicDerivativeValid=true;out.steadyEquilibriumSatisfied=e.steadyEquilibriumSatisfied;
 out.actuatorState=act;out.command=command;out.heightRateUp=vUp;
 out.inertialAccelerationDown=aDown;out.inertialAccelerationBody=e.Ftotal/e.massProperties.mass;

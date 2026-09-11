@@ -1,12 +1,7 @@
 name: D02 dynamic consistency and quasisteady comparison
+# Historical complete suite remains manually reproducible. D03 applies
+# targeted identity and channel regressions rather than rerunning ten old paths.
 on:
-  push:
-    branches: [research/dynamic-fidelity-benchmark-20260910]
-    paths:
-      - '.github/workflows/dynamic-benchmark-d02-hardening.yml'
-      - 'services/d02_*.m'
-      - 'services/run_d02_longitudinal_heave.m'
-      - 'tests/dynamic_fidelity/run_d02_consistency_suite.m'
   workflow_dispatch:
 permissions:
   contents: read
@@ -67,8 +62,7 @@ jobs:
         uses: matlab-actions/run-command@v3
         with:
           command: >-
-            startup;
-            addpath(fullfile(pwd,'tests','dynamic_fidelity'));
+            startup;addpath(fullfile(pwd,'tests','dynamic_fidelity'));
             run_d02_consistency_suite(fullfile(pwd,'ci_artifacts','d02_consistency'));
       - name: Verify no tracked files changed at runtime
         if: always()
