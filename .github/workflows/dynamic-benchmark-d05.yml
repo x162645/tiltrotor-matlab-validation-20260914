@@ -1,0 +1,52 @@
+name: D05 output-aware near-symmetry state selection
+on:
+  push:
+    branches: [research/dynamic-fidelity-benchmark-20260910]
+    paths:
+      - 'model/axial/build_axial_nearsymmetric.m'
+      - 'model/axial/axial_nearsymmetric_rhs.m'
+      - 'model/axial/axial_residualized_rhs.m'
+      - 'analysis/dynamic_fidelity/d05_*.m'
+      - 'tests/dynamic_fidelity/run_d05_state_selection.m'
+      - '.github/workflows/dynamic-benchmark-d05.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  method-test:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v6
+      - name: Preserve exact inputs and code
+        run: |
+          mkdir -p ci_artifacts/d05
+          python - <<'PY'
+          import pathlib,subprocess,zipfile,json,hashlib
+          out=pathlib.Path('ci_artifacts/d05')
+          tracked=subprocess.check_output(['git','ls-files','-z']).decode().split('\0')
+          paths=[p for p in tracked if p and (p.startswith('model/axial/') or p.startswith('analysis/dynamic_fidelity/d04_') or p.startswith('analysis/dynamic_fidelity/d05_') or p in ['params_nominal.m','model/mean_inflow_88327.m','tests/dynamic_fidelity/run_d05_state_selection.m','docs/research/dynamic_fidelity/D05_METHOD.md'])]
+          with zipfile.ZipFile(out/'CODE_SNAPSHOT.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for p in paths:z.write(p,p)
+          meta={'head':subprocess.check_output(['git','rev-parse','HEAD']).decode().strip(),'base':'e7525a5a6f524b5a8932c91815633caebfaca770','files':{p:hashlib.sha256(pathlib.Path(p).read_bytes()).hexdigest() for p in paths},'new_experimental_samples':0}
+          (out/'INPUT_MANIFEST.json').write_text(json.dumps(meta,indent=2))
+          PY
+      - uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2021a
+      - name: Run same-equation nonlinear reduction and finite-band bounds
+        uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            startup;addpath(fullfile(pwd,'tests','dynamic_fidelity'));
+            diary(fullfile(pwd,'ci_artifacts','d05','MATLAB_LOG.txt'));
+            run_d05_state_selection(fullfile(pwd,'ci_artifacts','d05'));diary off;
+      - name: No tracked runtime writes
+        if: always()
+        run: git diff --exit-code
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: d05-method-${{ github.sha }}
+          path: ci_artifacts/d05
+          if-no-files-found: error
