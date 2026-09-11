@@ -1,0 +1,48 @@
+name: Archive reviewed D05 method and relative qualification
+on:
+  push:
+    branches: [research/dynamic-fidelity-benchmark-20260910]
+    paths: ['.github/workflows/archive-d05-evidence.yml','docs/research/dynamic_fidelity/D05_ARCHIVE_REQUEST.json']
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+jobs:
+  archive:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 34601330893
+          name: d05-method-309d01dfebc928911328e2f28d95fe76c150e5cf
+          path: ci_incoming/main
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 34602132465
+          name: d05-relative-245e9571ad557f7baf9f87b256d3ca5e14a4a90e
+          path: ci_incoming/relative
+      - name: Validate and preserve read-back results, no model execution
+        run: |
+          python tools/archive_d05_evidence.py --request docs/research/dynamic_fidelity/D05_ARCHIVE_REQUEST.json --incoming ci_incoming
+          python tools/archive_d05_evidence.py --request docs/research/dynamic_fidelity/D05_ARCHIVE_REQUEST.json --verify-only
+      - name: Commit evidence without overwriting another update
+        env:
+          TASK_BRANCH: research/dynamic-fidelity-benchmark-20260910
+        run: |
+          remote_head=$(git ls-remote origin "refs/heads/$TASK_BRANCH" | cut -f1)
+          test "$remote_head" = "$GITHUB_SHA" || { echo 'Branch advanced: no overwrite'; exit 1; }
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/research/dynamic_fidelity/evidence_d05
+          git diff --cached --quiet && exit 0
+          git commit -m 'evidence: persist D05 raw MATLAB runs and qualification scopes [skip ci]'
+          git push origin "HEAD:refs/heads/$TASK_BRANCH"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: d05-reviewed-archive-${{ github.sha }}
+          path: docs/research/dynamic_fidelity/evidence_d05
