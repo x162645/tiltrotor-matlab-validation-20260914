@@ -1,0 +1,57 @@
+name: D13 guarded public API readback only
+on:
+  push:
+    branches: [research/dynamic-fidelity-benchmark-20260910]
+    paths: ['model/dynamic_fidelity/d13_*.m', 'tests/dynamic_fidelity/run_d13_api_readback.m', '.github/workflows/dynamic-benchmark-d13-api.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  new-api-only:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v6
+      - name: Preserve exact API sources
+        run: |
+          mkdir -p ci_artifacts/d13_api
+          python - <<'PY'
+          import pathlib,zipfile
+          paths=['model/dynamic_fidelity/d13_load_table_model.m','model/dynamic_fidelity/d13_hover_load_table_rhs.m','tests/dynamic_fidelity/run_d13_api_readback.m','.github/workflows/dynamic-benchmark-d13-api.yml']
+          with zipfile.ZipFile('ci_artifacts/d13_api/API_CODE_SNAPSHOT.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for p in paths:z.write(p,p)
+          PY
+      - uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2021a
+      - uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            addpath(fullfile(pwd,'tests','dynamic_fidelity'));
+            diary(fullfile(pwd,'ci_artifacts','d13_api','MATLAB_LOG.txt'));
+            run_d13_api_readback(fullfile(pwd,'ci_artifacts','d13_api','native'));diary off;
+      - name: Index original outputs and unchanged source check
+        run: |
+          git diff --exit-code
+          python - <<'PY'
+          import pathlib,json,hashlib
+          r=pathlib.Path('ci_artifacts/d13_api'); m=json.loads((r/'native/API_MANIFEST.json').read_text());assert m['passed'] and m['new_ODE_trajectories']==0
+          idx={str(p.relative_to(r)):{'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in r.rglob('*') if p.is_file()}
+          (r/'OUTPUT_INDEX.json').write_text(json.dumps({'commit':m['execution_commit'],'run_id':m['run_id'],'files':idx},indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: d13-api-${{ github.sha }}
+          path: ci_artifacts/d13_api
+      - name: Preserve without overwriting another update
+        run: |
+          b=research/dynamic-fidelity-benchmark-20260910
+          remote=$(git ls-remote origin "refs/heads/$b" | cut -f1)
+          test "$remote" = "$GITHUB_SHA" || { echo 'Branch advanced; artifact retained'; exit 1; }
+          dest="docs/research/dynamic_fidelity/evidence_d13/api_runs/$GITHUB_RUN_ID"
+          mkdir -p "$dest";cp -a ci_artifacts/d13_api/. "$dest/"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$dest";git commit -m 'evidence: D13 guarded API checked against original native outputs [skip ci]'
+          git push origin "HEAD:refs/heads/$b"
