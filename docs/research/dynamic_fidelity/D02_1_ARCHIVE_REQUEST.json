@@ -1,0 +1,6 @@
+{
+  "artifacts": [
+    {"run_id":34580750797,"artifact_id":10191624893,"source_commit":"13ca086703a56d4556a9b7bcdac53e8ee740a0ba","zip_sha256":"839e3f223abb442af4aae6515bc6bad5583305e79d041a6491113c23d67a9c4b","expected_checks_passed":false,"role":"FIRST_EXECUTION_ONE_STRICT_WORKPOINT_CHECK_FAILED_RETAINED"},
+    {"run_id":34581649374,"artifact_id":10191965719,"source_commit":"d35cb829c04242a44800ff16071bec93e4315e56","zip_sha256":"f5d1f31af0de97a782875bc500a57991358f457e245aaec0f316f7896f6325fb","expected_checks_passed":true,"role":"REFINED_WORKPOINT_65_CHECKS_PASSED_WITH_DIRECTIONAL_LIMITS"}
+  ]
+}

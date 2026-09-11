@@ -1,0 +1,63 @@
+name: D02 preserve completed evidence and verify facade
+on:
+  push:
+    branches: [research/dynamic-fidelity-benchmark-20260910]
+    paths: ['.github/workflows/dynamic-benchmark-d02-archive.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+jobs:
+  archive-and-api:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v6
+      - name: Copy two immutable completed artifacts with ZIP hash checks
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python tools/archive_d02_evidence.py --request docs/research/dynamic_fidelity/D02_1_ARCHIVE_REQUEST.json
+          python tools/archive_d02_evidence.py --request docs/research/dynamic_fidelity/D02_1_ARCHIVE_REQUEST.json --verify-only
+      - uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2021a
+      - name: Check default smoke and public facade without repeating benchmark
+        uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            startup; addpath(fullfile(pwd,'tests','dynamic_fidelity'));
+            run_d02_api_checks(fullfile(pwd,'ci_artifacts','d02_api'));
+      - name: Preserve exact results without overwriting concurrent work
+        if: always()
+        env:
+          TASK_BRANCH: research/dynamic-fidelity-benchmark-20260910
+        run: |
+          python - <<'PY'
+          import pathlib,shutil,json,hashlib,os
+          src=pathlib.Path('ci_artifacts/d02_api')
+          dest=pathlib.Path('docs/research/dynamic_fidelity/evidence_d02_1/api_'+os.environ['GITHUB_SHA'])
+          dest.mkdir(parents=True,exist_ok=True)
+          if src.exists():
+              for p in src.iterdir():
+                  if p.is_file():shutil.copyfile(p,dest/p.name)
+          index={'run_id':os.environ['GITHUB_RUN_ID'],'source_commit':os.environ['GITHUB_SHA'],'role':'ADDITIONAL_SMALL_API_TEST_NOT_TEN_CASE_RERUN','files':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in dest.iterdir() if p.is_file() and p.name!='INDEX.json'}}
+          (dest/'INDEX.json').write_text(json.dumps(index,indent=2)+'\n')
+          PY
+          git diff --exit-code -- model services analysis params_nominal.m
+          remote_head=$(git ls-remote origin "refs/heads/$TASK_BRANCH" | cut -f1)
+          test "$remote_head" = "$GITHUB_SHA" || { echo 'Branch advanced; refusing overwrite'; exit 1; }
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/research/dynamic_fidelity/evidence_d02_1
+          git diff --cached --quiet && exit 0
+          git commit -m 'evidence: preserve D02 first failure, accepted refinement and API checks [skip ci]'
+          git push origin "HEAD:refs/heads/$TASK_BRANCH"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: d02-api-and-archive-${{ github.sha }}
+          path: |
+            ci_artifacts/d02_api
+            docs/research/dynamic_fidelity/evidence_d02_1/ARCHIVE_INDEX.json
+          if-no-files-found: error
