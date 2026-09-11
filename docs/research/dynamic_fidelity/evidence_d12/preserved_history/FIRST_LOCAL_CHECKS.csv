@@ -1,0 +1,6 @@
+check,passed,value
+reject_source_extrapolation,True,
+reject_zero_anchor,True,
+reject_absolute_mismatched_input,True,
+PP_mean/central/required_map_stable_proper,True,
+PP_mean/central/129/analytic_ss,False,0.9999796638675577

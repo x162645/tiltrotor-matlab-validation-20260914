@@ -1,0 +1,23 @@
+{
+  "id": "HOVER_AZ_POWER",
+  "role": "PUBLISHED_FLIGHT_IDENTIFIED_DESCRIPTOR_NOT_RAW_FLIGHT_DATA",
+  "numerator": [-0.0098, 0.0],
+  "denominator": [1.0, 0.105],
+  "delay_s": 0.0074,
+  "frequency_band_rad_s": [0.1, 3.0],
+  "input": "power_lever_percent_increase",
+  "input_unit": "percentage_point",
+  "output": "vertical_acceleration_down",
+  "output_unit": "g",
+  "source_report": "NASA_TM_89428",
+  "pdf_pages_1based": [110, 124],
+  "printed_pages": [87, 101],
+  "equation": "4.8",
+  "source_pdf_sha256": "252f7df0c0e05bd8dece0a923d337df2231c0148f897f0376f930f6102b90ba2",
+  "source_git_commit": "b5a9c20833d65b21a192417ffc54433047d7fdb8",
+  "source_git_path": "docs/research/dynamic_fidelity/evidence/INPUT_CASES_SNAPSHOT.json",
+  "source_git_blob": "f606c6cab74793af0126de7ad72b53ebc3c87bb3",
+  "source_action_artifact_id": 10175006778,
+  "data_use": "previously seen development/reference source; not new holdout",
+  "absolute_matched_comparison_ready": false
+}

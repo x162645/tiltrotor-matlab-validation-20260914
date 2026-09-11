@@ -1,0 +1,102 @@
+name: D12 source-shape and native MATLAB crosscheck
+on:
+  push:
+    branches: [research/dynamic-fidelity-benchmark-20260910]
+    paths:
+      - '.github/workflows/dynamic-benchmark-d12.yml'
+      - 'docs/research/dynamic_fidelity/evidence_d12/code/**'
+      - 'docs/research/dynamic_fidelity/evidence_d12/data/**'
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+jobs:
+  source-shape:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      D12_ROOT: docs/research/dynamic_fidelity/evidence_d12
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install explicitly recorded numerical environment
+        run: python -m pip install numpy==2.3.5 scipy==1.17.0 pandas==2.2.3
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 34534917058
+          name: dynamic-sources-8f6fa8576cb3e416335ad19670a3360e40581f83
+          path: ci_artifacts/d12/original_d01_sources
+      - name: Verify frozen dependencies and preserve exact source snapshot
+        run: |
+          python - <<'PY'
+          import pathlib,hashlib,json,zipfile,os
+          root=pathlib.Path(os.environ['D12_ROOT']); out=pathlib.Path('ci_artifacts/d12')
+          expected={'code/d11_tilt_channel.py':'e64492a5ae717614d72cf273b0c788833a621575d52db820ddc6b2a1f02b7367','data/OARF_RUN15_EXISTING_STATIC_POINTS.csv':'8bfd600433b0658a413602b5250e899e38394d951911eeb328eb19eeae121e5d','data/C81_EXISTING_SMALL_ANGLE_EXCERPT.csv':'799a64f5613ccc183f55314c924f9d6c8c97438532fe9424fe0fb6c2746b71f5'}
+          for p,h in expected.items(): assert hashlib.sha256((root/p).read_bytes()).hexdigest()==h,p
+          pdf=out/'original_d01_sources/NASA_TM_89428.pdf'
+          assert hashlib.sha256(pdf.read_bytes()).hexdigest()=='252f7df0c0e05bd8dece0a923d337df2231c0148f897f0376f930f6102b90ba2'
+          with zipfile.ZipFile(out/'D12_CODE_INPUT_SNAPSHOT.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for directory in ['code','data','preserved_history']:
+                  for p in sorted((root/directory).rglob('*')):
+                      if p.is_file(): z.write(p,p.relative_to(root))
+              for p in [pathlib.Path('.github/workflows/dynamic-benchmark-d12.yml'),pathlib.Path('docs/research/dynamic_fidelity/D12_PLAN_BEFORE_RUN.md')]:z.write(p,str(p))
+          (out/'SOURCE_PROVENANCE.json').write_text(json.dumps({'execution_commit':os.environ['GITHUB_SHA'],'run_id':os.environ['GITHUB_RUN_ID'],'original_source_run':34534917058,'original_source_artifact':10175006778,'pdf_sha256':hashlib.sha256(pdf.read_bytes()).hexdigest(),'D11_fixed_dependencies':expected,'new_experimental_observations':0,'source_role':'existing flight-identified descriptor, not raw matched data or new holdout'},indent=2))
+          PY
+      - name: Execute only the new D12 Python package
+        run: python "$D12_ROOT/code/run_d12.py" --out ci_artifacts/d12/python
+      - uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2021a
+      - name: Execute targeted native MATLAB calculation
+        uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            addpath(fullfile(pwd,'docs','research','dynamic_fidelity','evidence_d12','code'));
+            diary(fullfile(pwd,'ci_artifacts','d12','MATLAB_LOG.txt'));
+            run_d12_source_shape(fullfile(pwd,'docs','research','dynamic_fidelity','evidence_d12','data'),fullfile(pwd,'ci_artifacts','d12','matlab'));
+            diary off;
+      - name: Read MAT CSV and JSON and compare native results
+        run: python "$D12_ROOT/code/compare_native.py" --python ci_artifacts/d12/python --matlab ci_artifacts/d12/matlab --out ci_artifacts/d12/crosscheck
+      - name: Verify tracked inputs unchanged and index all actual outputs
+        if: always()
+        run: |
+          git diff --exit-code
+          python - <<'PY'
+          import pathlib,hashlib,json,os
+          out=pathlib.Path('ci_artifacts/d12'); out.mkdir(parents=True,exist_ok=True)
+          files={str(p.relative_to(out)):{'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(out.rglob('*')) if p.is_file() and p.name!='OUTPUT_INDEX.json'}
+          (out/'OUTPUT_INDEX.json').write_text(json.dumps({'commit':os.environ['GITHUB_SHA'],'run_id':os.environ['GITHUB_RUN_ID'],'files':files},indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        id: evidence
+        if: always()
+        with:
+          name: d12-source-shape-${{ github.sha }}
+          path: ci_artifacts/d12
+          if-no-files-found: error
+      - name: Persist successful read-back evidence without overwriting another update
+        if: success()
+        env:
+          TASK_BRANCH: research/dynamic-fidelity-benchmark-20260910
+          EVIDENCE_ARTIFACT: ${{ steps.evidence.outputs.artifact-id }}
+        run: |
+          remote_head=$(git ls-remote origin "refs/heads/$TASK_BRANCH" | cut -f1)
+          if [ "$remote_head" != "$GITHUB_SHA" ]; then
+            echo 'Branch advanced: keep artifact, do not overwrite or push.'
+            exit 0
+          fi
+          dst="$D12_ROOT/runs/$GITHUB_RUN_ID"
+          test ! -e "$dst"
+          mkdir -p "$dst"
+          cp -a ci_artifacts/d12/. "$dst/"
+          printf '{"run_id":"%s","execution_commit":"%s","artifact_id":"%s","scope":"D12 only; not historical-suite execution"}\n' "$GITHUB_RUN_ID" "$GITHUB_SHA" "$EVIDENCE_ARTIFACT" > "$dst/REMOTE_EXECUTION_INDEX.json"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$dst"
+          git commit -m 'evidence: persist D12 Python and native MATLAB source-shape run with MAT readback [skip ci]'
+          git push origin "HEAD:refs/heads/$TASK_BRANCH"
