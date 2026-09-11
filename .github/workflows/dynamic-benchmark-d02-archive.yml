@@ -1,4 +1,5 @@
 name: D02 preserve completed evidence and verify facade
+# Retry archival transport only; original two model runs are not repeated.
 on:
   push:
     branches: [research/dynamic-fidelity-benchmark-20260910]
@@ -41,7 +42,9 @@ jobs:
           if src.exists():
               for p in src.iterdir():
                   if p.is_file():shutil.copyfile(p,dest/p.name)
-          index={'run_id':os.environ['GITHUB_RUN_ID'],'source_commit':os.environ['GITHUB_SHA'],'role':'ADDITIONAL_SMALL_API_TEST_NOT_TEN_CASE_RERUN','files':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in dest.iterdir() if p.is_file() and p.name!='INDEX.json'}}
+          api_manifest=dest/'API_MANIFEST.json'
+          execution_status=json.loads(api_manifest.read_text()).get('status') if api_manifest.exists() else 'NOT_EXECUTED'
+          index={'run_id':os.environ['GITHUB_RUN_ID'],'source_commit':os.environ['GITHUB_SHA'],'status':execution_status,'role':'ADDITIONAL_SMALL_API_TEST_NOT_TEN_CASE_RERUN','files':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in dest.iterdir() if p.is_file() and p.name!='INDEX.json'}}
           (dest/'INDEX.json').write_text(json.dumps(index,indent=2)+'\n')
           PY
           git diff --exit-code -- model services analysis params_nominal.m
@@ -60,4 +63,5 @@ jobs:
           path: |
             ci_artifacts/d02_api
             docs/research/dynamic_fidelity/evidence_d02_1/ARCHIVE_INDEX.json
+            docs/research/dynamic_fidelity/evidence_d02_1/api_${{ github.sha }}/INDEX.json
           if-no-files-found: error

@@ -23,7 +23,10 @@ def main() -> None:
     entries=[]
     for source in spec['artifacts']:
         url=f"https://api.github.com/repos/{REPO}/actions/artifacts/{source['artifact_id']}/zip"
-        req=urllib.request.Request(url,headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','User-Agent':'d02-fixed-evidence-archive'})
+        req=urllib.request.Request(url,headers={'Accept':'application/vnd.github+json','User-Agent':'d02-fixed-evidence-archive'})
+        # GitHub redirects to signed blob storage. Authenticate ONLY the API
+        # request; never forward the GitHub bearer to the storage endpoint.
+        req.add_unredirected_header('Authorization','Bearer '+token)
         raw=urllib.request.urlopen(req,timeout=120).read()
         if hashlib.sha256(raw).hexdigest()!=source['zip_sha256']:
             raise RuntimeError('Artifact ZIP hash mismatch')
