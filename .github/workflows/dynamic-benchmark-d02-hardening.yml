@@ -1,0 +1,64 @@
+name: D02 dynamic consistency and quasisteady comparison
+on:
+  push:
+    branches: [research/dynamic-fidelity-benchmark-20260910]
+    paths:
+      - '.github/workflows/dynamic-benchmark-d02-hardening.yml'
+      - 'services/d02_*.m'
+      - 'services/run_d02_longitudinal_heave.m'
+      - 'tests/dynamic_fidelity/run_d02_consistency_suite.m'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  consistency:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v6
+      - name: Preserve exact code snapshot and detect new test entry
+        id: ready
+        shell: bash
+        run: |
+          mkdir -p ci_artifacts/d02_consistency
+          python - <<'PY'
+          import pathlib,subprocess,zipfile,json,hashlib
+          root=pathlib.Path('ci_artifacts/d02_consistency')
+          paths=subprocess.check_output(['git','ls-files','-z']).decode().split('\0')
+          selected=[]
+          for name in paths:
+              p=pathlib.Path(name)
+              if not p.is_file() or '/evidence/' in name or '/handoff_evidence/' in name or name.startswith('results/'):continue
+              if p.suffix.lower() in {'.m','.csv','.json','.md','.yml','.yaml','.txt','.dat','.c81'}:selected.append(name)
+          with zipfile.ZipFile(root/'SOURCE_CODE.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for name in selected:z.write(name,name)
+          meta={'head':subprocess.check_output(['git','rev-parse','HEAD']).decode().strip(),'parent_d02':'21a699a7f7372769f58e4b8b0f2e227f66f95254','files':selected,'snapshot_sha256':hashlib.sha256((root/'SOURCE_CODE.zip').read_bytes()).hexdigest()}
+          (root/'SOURCE_INDEX.json').write_text(json.dumps(meta,indent=2))
+          PY
+          if test -f tests/dynamic_fidelity/run_d02_consistency_suite.m; then
+            echo 'run=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'run=false' >> "$GITHUB_OUTPUT"
+            echo 'SOURCE_SNAPSHOT_ONLY_NO_MODEL_EXECUTION' > ci_artifacts/d02_consistency/STATUS.txt
+          fi
+      - uses: matlab-actions/setup-matlab@v3
+        if: steps.ready.outputs.run == 'true'
+        with:
+          release: R2021a
+      - name: Execute dynamic consistency and paired quasisteady cases
+        if: steps.ready.outputs.run == 'true'
+        uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            startup;
+            addpath(fullfile(pwd,'tests','dynamic_fidelity'));
+            run_d02_consistency_suite(fullfile(pwd,'ci_artifacts','d02_consistency'));
+      - name: Verify no tracked files changed at runtime
+        if: always()
+        run: git diff --exit-code
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: d02-consistency-${{ github.sha }}
+          path: ci_artifacts/d02_consistency
+          if-no-files-found: error
