@@ -1,0 +1,48 @@
+name: D04 original transient source
+on:
+  push:
+    branches: [research/dynamic-fidelity-benchmark-20260910]
+    paths: ['.github/workflows/dynamic-benchmark-d04-source.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v6
+      - name: Retrieve only the specifically referenced rotor-tower report
+        shell: bash
+        run: |
+          python -m pip install --quiet pymupdf
+          python - <<'PY'
+          import urllib.request,pathlib,hashlib,json,fitz,subprocess,zipfile
+          root=pathlib.Path('ci_artifacts/d04_source');root.mkdir(parents=True,exist_ok=True)
+          url='https://ntrs.nasa.gov/api/citations/19930083686/downloads/19930083686.pdf'
+          meta={'url':url,'role':'DIRECT_EXPERIMENT_CANDIDATE_NOT_AUTOMATIC_VALIDATION','success':False}
+          try:
+              req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'})
+              raw=urllib.request.urlopen(req,timeout=90).read()
+              assert raw.startswith(b'%PDF')
+              (root/'NACA_TN_3044.pdf').write_bytes(raw);doc=fitz.open(stream=raw,filetype='pdf')
+              text='\n'.join('PDF_PAGE_'+str(i+1)+'\n'+p.get_text() for i,p in enumerate(doc))
+              (root/'NACA_TN_3044_TEXT.txt').write_text(text)
+              meta.update(success=True,sha256=hashlib.sha256(raw).hexdigest(),page_count=len(doc))
+          except Exception as e:meta['error']=repr(e)
+          files=subprocess.check_output(['git','ls-files','-z']).decode().split('\0')
+          with zipfile.ZipFile(root/'CODE_INPUTS.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for f in files:
+                  p=pathlib.Path(f)
+                  if not p.is_file() or '/evidence' in f or '/handoff_evidence/' in f or f.startswith('results/'):continue
+                  if p.suffix.lower() in {'.m','.md','.json','.csv','.txt','.yml','.dat','.c81'}:z.write(p,f)
+          meta['source_commit']=subprocess.check_output(['git','rev-parse','HEAD']).decode().strip()
+          (root/'MANIFEST.json').write_text(json.dumps(meta,indent=2));print(json.dumps(meta))
+          if not meta['success']:raise RuntimeError('Source acquisition failed, no hidden substitute')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: d04-source-${{ github.sha }}
+          path: ci_artifacts/d04_source
+          if-no-files-found: error
