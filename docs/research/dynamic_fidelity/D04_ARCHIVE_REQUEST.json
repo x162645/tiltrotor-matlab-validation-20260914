@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "artifacts": [
+    {
+      "run_id": 34591743296,
+      "artifact_id": 10195939132,
+      "source_commit": "08a69fa8f58a07f6b15d9fde572e4e0be48a1007",
+      "zip_sha256": "36fd31be5b65d015f876b5c9c1bf6a4de1ca97352ddb3cd496823cf166d697f5",
+      "folder": "coupling",
+      "manifest": "RUN_MANIFEST.json",
+      "checks_csv": "CHECKS.csv",
+      "expected_checks": 132,
+      "expected_all_passed": true,
+      "member_index_sha256": "b38aaea215fe0ac57b8995872a699f069362db925d91256a4ef19dae3ea92303",
+      "file_count": 68,
+      "byte_count": 11159791
+    },
+    {
+      "run_id": 34592335399,
+      "artifact_id": 10196153995,
+      "source_commit": "4b21de8c0b50938629329cf4cb4fa38846d79df5",
+      "zip_sha256": "75f64706b72f8622cd28a2e3caef84abc6b1acb8513932801a43d6c568af5b68",
+      "folder": "symmetry",
+      "manifest": "SYMMETRY_MANIFEST.json",
+      "checks_csv": "SYMMETRY_CHECKS.csv",
+      "expected_checks": 46,
+      "expected_all_passed": true,
+      "member_index_sha256": "5720d00ec3bb6a3d9135e85d940cddbeb22ce6ac38fb07ba0966decc8064f07c",
+      "file_count": 20,
+      "byte_count": 368305
+    }
+  ],
+  "source_acquisition": {
+    "run_id": 34590185156,
+    "artifact_id": 10195289892,
+    "zip_sha256": "26f43140e50b65f8c30f5fa8eca216e8119e08c722339b2ee043ea1aa2647356"
+  },
+  "note": "All original ZIP hashes and contained MAT/CSV/JSON read back locally before archival; no rerunning models."
+}

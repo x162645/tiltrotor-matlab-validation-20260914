@@ -1,0 +1,51 @@
+name: Archive read-back D04 coupling and reduction evidence
+on:
+  push:
+    branches: [research/dynamic-fidelity-benchmark-20260910]
+    paths: ['.github/workflows/archive-d04-evidence.yml','docs/research/dynamic_fidelity/D04_ARCHIVE_REQUEST.json','tools/archive_d04_evidence.py']
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+jobs:
+  archive:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 34591743296
+          name: d04-coupled-08a69fa8f58a07f6b15d9fde572e4e0be48a1007
+          path: ci_artifacts/d04_archive/incoming/coupling
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 34592335399
+          name: d04-symmetry-4b21de8c0b50938629329cf4cb4fa38846d79df5
+          path: ci_artifacts/d04_archive/incoming/symmetry
+      - name: Match every original member and preserve immutable evidence
+        run: |
+          python tools/archive_d04_evidence.py --request docs/research/dynamic_fidelity/D04_ARCHIVE_REQUEST.json --incoming ci_artifacts/d04_archive/incoming
+          python tools/archive_d04_evidence.py --request docs/research/dynamic_fidelity/D04_ARCHIVE_REQUEST.json --verify-only
+          cp docs/research/dynamic_fidelity/evidence_d04/ARCHIVE_INDEX.json ci_artifacts/d04_archive/
+      - name: Commit evidence only, no force or model execution
+        env:
+          TASK_BRANCH: research/dynamic-fidelity-benchmark-20260910
+        run: |
+          git diff --exit-code -- model services analysis params_nominal.m
+          remote_head=$(git ls-remote origin "refs/heads/$TASK_BRANCH" | cut -f1)
+          test "$remote_head" = "$GITHUB_SHA" || { echo 'Branch advanced, refusing overwrite; artifact preserved'; exit 1; }
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/research/dynamic_fidelity/evidence_d04
+          git diff --cached --quiet && exit 0
+          git commit -m 'evidence: preserve D04 source-derived coupling and exact restricted reduction, no external accuracy claim [skip ci]'
+          git push origin "HEAD:refs/heads/$TASK_BRANCH"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: d04-archive-index-${{ github.sha }}
+          path: ci_artifacts/d04_archive/ARCHIVE_INDEX.json
+          if-no-files-found: error
