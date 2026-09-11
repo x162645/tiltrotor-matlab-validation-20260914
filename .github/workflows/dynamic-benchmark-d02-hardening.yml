@@ -41,6 +41,23 @@ jobs:
             echo 'run=false' >> "$GITHUB_OUTPUT"
             echo 'SOURCE_SNAPSHOT_ONLY_NO_MODEL_EXECUTION' > ci_artifacts/d02_consistency/STATUS.txt
           fi
+      - name: Prepare exact pre-change production functions for regression
+        if: steps.ready.outputs.run == 'true'
+        shell: bash
+        run: |
+          git fetch --depth=1 origin 21a699a7f7372769f58e4b8b0f2e227f66f95254
+          python - <<'PYCODE'
+          import pathlib,subprocess,hashlib,json
+          root=pathlib.Path('ci_artifacts/d02_consistency/baseline_code');root.mkdir(parents=True,exist_ok=True)
+          names=['rotor_model_bemt','total_forces_moments','tiltrotor_eom']
+          hashes={}
+          for name in names:
+              raw=subprocess.check_output(['git','show','21a699a7f7372769f58e4b8b0f2e227f66f95254:model/'+name+'.m'])
+              hashes[name]=hashlib.sha256(raw).hexdigest();text=raw.decode('utf-8')
+              for old in names:text=text.replace(old,'legacy_d02_'+old)
+              (root/('legacy_d02_'+name+'.m')).write_text(text)
+          (root/'ORIGINAL_SHA256.json').write_text(json.dumps(hashes,indent=2))
+          PYCODE
       - uses: matlab-actions/setup-matlab@v3
         if: steps.ready.outputs.run == 'true'
         with:

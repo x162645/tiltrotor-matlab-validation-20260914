@@ -59,5 +59,7 @@ out.components = componentInfo;
 out.physicalConverged = componentInfo.physicalConverged;
 out.physicalBranchSupported = componentInfo.physicalBranchSupported;
 out.physicalStatus = componentInfo.physicalStatus;
+out.evaluationValid=componentInfo.evaluationValid && all(isfinite(xdot));
+out.steadyEquilibriumSatisfied=componentInfo.steadyEquilibriumSatisfied;
 out.xdot = xdot;
 end

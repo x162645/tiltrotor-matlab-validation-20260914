@@ -74,6 +74,8 @@ info.components = {
     struct('name','verticalTail','F',Fvt,'M',Mvt,'data',vtail)
 };
 
+info.evaluationValid = rotL.evaluationValid && rotR.evaluationValid;
+info.steadyEquilibriumSatisfied=rotL.steadyEquilibriumSatisfied && rotR.steadyEquilibriumSatisfied;
 info.massProperties = mp;
 info.commandedControls = uCtrl;
 info.appliedControls = uApplied;

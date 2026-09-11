@@ -23,6 +23,7 @@ if useDynamicInflow && ~(isscalar(viOverride) && isreal(viOverride) && ...
         'viOverride must be a finite nonnegative real scalar.');
 end
 
+rotorClock=tic; bladeLoadCalls=0; flapSolveCalls=0; flapSeconds=0;
 x = x(:);
 Vbody = x(1:3);
 omegaBody = x(4:6);
@@ -77,7 +78,9 @@ if useDynamicInflow
     % Dynamic mode advances induced velocity outside this function. Keep the
     % same blade/flap/load path and expose the algebraic target for dvi/dt.
     vi = viOverride;
+    flapClock=tic;
     [zFlap, flapInfo] = solve_flap(vi, zFlap);
+    flapSeconds=flapSeconds+toc(flapClock);
     if ~flapInfo.converged
         error('rotor_model_bemt:FlapNotConverged', ...
             'Flapping solve did not converge for side %+d.', side);
@@ -103,7 +106,9 @@ if useDynamicInflow
     iter = 1;
 else
 for iter = 1:P.rotor.inducedMaxIter
+    flapClock=tic;
     [zFlap, flapInfo] = solve_flap(vi, zFlap);
+    flapSeconds=flapSeconds+toc(flapClock);
     if ~flapInfo.converged
         error('rotor_model_bemt:FlapNotConverged', ...
             'Flapping solve did not converge for side %+d.', side);
@@ -156,7 +161,8 @@ if ~coupledConverged
 end
 end
 
-loads = blade_loads(vi, zFlap);
+% Reuse only an identical within-call result; no persistent/warm-start cache.
+if ~useDynamicInflow, loads = blade_loads(vi, zFlap); end
 lambda0Final = -Vaxial/max(tipSpeed, eps);
 lambda1Final = lambda0Final-vi/max(tipSpeed, eps);
 denomFinal = sqrt(lambda1Final^2+mu^2);
@@ -232,7 +238,7 @@ out.eTeff = nDisk;
 out.thrust = loads.T;
 out.torque = loads.Q;
 out.Hlong = loads.Hlong;
-out.Hlat = loads.Hlat;
+out.Hlat  = loads.Hlat;
 out.Marm = Marm;
 out.Mreaction = Mreaction;
 out.Hrot = Hrot;
@@ -286,8 +292,23 @@ out.numericalConverged = coupledConverged;
 out.flap = flapInfo;
 out.F = Fbody;
 out.M = Mbody;
+% D02.1: transient evaluation and equilibrium are different predicates.
+% Legacy physicalConverged remains a STEADY predicate for existing callers.
+out.steadyEquilibriumSatisfied = physicalConverged;
+out.evaluationValid = flapConverged && physicalBranchSupported && ...
+    all(isfinite([Fbody;Mbody;vi;eq13.target])) && ~eq13.denominatorFloorActive;
+if ~useDynamicInflow, out.evaluationValid=out.evaluationValid && physicalConverged; end
+out.dynamicStateValid = useDynamicInflow && out.evaluationValid;
+if useDynamicInflow && out.evaluationValid
+    out.evaluationStatus='DYNAMIC_INFLOW_STATE_VALID';
+else
+    out.evaluationStatus=physicalStatus;
+end
+out.work=struct('bladeLoadCalls',bladeLoadCalls,'flapSolveCalls',flapSolveCalls, ...
+    'flapSeconds',flapSeconds,'rotorSeconds',toc(rotorClock));
 
     function [z, info] = solve_flap(viMean, z0)
+        flapSolveCalls=flapSolveCalls+1;
         z = z0(:);
         info = struct();
         info.converged = false;
@@ -415,6 +436,7 @@ out.M = Mbody;
     end
 
     function loads = blade_loads(viMean, zFlapLocal)
+        bladeLoadCalls=bladeLoadCalls+1;
         r0 = P.rotor.rootCut*P.rotor.R;
         rEdges = linspace(r0, P.rotor.R, P.rotor.nRadial + 1);
         rMid = 0.5*(rEdges(1:end-1) + rEdges(2:end));
