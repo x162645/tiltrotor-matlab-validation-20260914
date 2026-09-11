@@ -1,0 +1,98 @@
+{
+  "commit": "872c566382cce21153e31e7e42561916bd31cb37",
+  "run_id": "34642707267",
+  "files": {
+    "D12_CODE_INPUT_SNAPSHOT.zip": {
+      "bytes": 20435,
+      "sha256": "5f2396080726d59a6aaf7406c45b25330967525e63e3860dcefb1c0a45a04254"
+    },
+    "MATLAB_LOG.txt": {
+      "bytes": 2806,
+      "sha256": "ae08abd1b3d1f287ed65468a818513eb6efa19f5e0843c4a8d8f6e5f5a818e51"
+    },
+    "SOURCE_PROVENANCE.json": {
+      "bytes": 762,
+      "sha256": "d3c91376c253b4bc20a56aafa9193466e4230be6fffa6a73a556d61aa2725be0"
+    },
+    "crosscheck/PYTHON_MATLAB_CROSSCHECK.csv": {
+      "bytes": 464,
+      "sha256": "aaad185d02a2658453070293688892e4a8e1ea4cd298b5f48c77ee6a1c34c309"
+    },
+    "crosscheck/READBACK_MANIFEST.json": {
+      "bytes": 3061,
+      "sha256": "8a62876ed7a9b912ace7f7a8bb8e8ce16c04249eee1bb6bbb6feedc8d1089fc1"
+    },
+    "matlab/D12_NATIVE_RESULTS.mat": {
+      "bytes": 12336,
+      "sha256": "d0fde48fd56ed5f8507ba474ae4d034f2aeb66f28cc83a2b6381470de8418530"
+    },
+    "matlab/NATIVE_CHECKS.csv": {
+      "bytes": 4759,
+      "sha256": "025e57f1e9a672730b8727298ef26ebf590848f5cce030e1b41a5be56c1b1c77"
+    },
+    "matlab/NATIVE_MANIFEST.json": {
+      "bytes": 483,
+      "sha256": "94467e4ed0067783206e7d0573e07e5eb86164fe3306d2e95d355c12847a34f2"
+    },
+    "matlab/NATIVE_REFERENCE_B.csv": {
+      "bytes": 139,
+      "sha256": "fd2d86ee43c7dc5ec33be244d0608a0acd6b380a747fbc713d7b9a5142f79472"
+    },
+    "matlab/NATIVE_SOURCE_SHAPE_METRICS.csv": {
+      "bytes": 7863,
+      "sha256": "97666c69a49f70dedf3942871a9b065bae5c9e96cff1bfb3a80818f600cc6de4"
+    },
+    "original_d01_sources/NASA_TM_86009.pdf": {
+      "bytes": 1776234,
+      "sha256": "726ea5e84b21f00e0609ce6ca3c13fd40e28615699a7c9b9bf327af76d16dc42"
+    },
+    "original_d01_sources/NASA_TM_86009_TEXT.txt": {
+      "bytes": 63317,
+      "sha256": "a9a12a8a6c745070ae25d29b814a89a87acbb242373c475ea966a5d0885434a8"
+    },
+    "original_d01_sources/NASA_TM_89428.pdf": {
+      "bytes": 7709296,
+      "sha256": "252f7df0c0e05bd8dece0a923d337df2231c0148f897f0376f930f6102b90ba2"
+    },
+    "original_d01_sources/NASA_TM_89428_TEXT.txt": {
+      "bytes": 224826,
+      "sha256": "d7be30ddf753655a74c1985487e10130b83ff5e030d7193d2f522532085204bd"
+    },
+    "original_d01_sources/SOURCE_MANIFEST.json": {
+      "bytes": 1871,
+      "sha256": "d0f0aac4b6d150edbcc9909090199687565f754159b29ceac6f12cf25565964a"
+    },
+    "python/CHECKS.csv": {
+      "bytes": 29776,
+      "sha256": "4d8381ea6a3e5b3f5a60215d0576a95890ffea93dfb57b690d924316cd7743a0"
+    },
+    "python/EXECUTION_MANIFEST.json": {
+      "bytes": 2175,
+      "sha256": "35032beedb07e7aeb4c93585fc89f0681a97580e8e68eb3ba0bb817b29eee460"
+    },
+    "python/GRID_CONSISTENCY.csv": {
+      "bytes": 7446,
+      "sha256": "0ebf9dfbb5ef2270ce8df6e4d7d5705299ecfca61f5d77bfabb7a903d7f9f247"
+    },
+    "python/MODEL_AND_MAP_WITNESSES.json": {
+      "bytes": 10742,
+      "sha256": "252daf36289179adf9279cce839b20dceea1b4e571402b368f434db85e46c279"
+    },
+    "python/REFERENCE_B.csv": {
+      "bytes": 742,
+      "sha256": "baab6d62268ef66d62ce58a00a7005278c3b99579078e1e63673a537043926c0"
+    },
+    "python/SOURCE_SHAPE_FREQUENCY_POINTS.csv": {
+      "bytes": 4883256,
+      "sha256": "e48880adbcac0880dacac2f729228f4393772a6e6f9a287e816f104867f6f4b8"
+    },
+    "python/SOURCE_SHAPE_METRICS.csv": {
+      "bytes": 8713,
+      "sha256": "7565d6b062fd79126410af01565f6e8d12695d703ad881622d463c5c4922c1e5"
+    },
+    "python/SOURCE_SHAPE_METRICS_ALL_GRIDS.csv": {
+      "bytes": 25592,
+      "sha256": "7bfaddd59f4eaf64fbacb788ac52043c415b7bc374480635680661e3d9b8760b"
+    }
+  }
+}

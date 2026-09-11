@@ -1,0 +1,8 @@
+metric,max_scaled_difference,tolerance,passed
+normalized_complex_max,2.7755575615628914e-15,2e-09,True
+normalized_complex_log_rms,1.8041124150158794e-15,2e-09,True
+normalized_gain_max_abs_db,7.359764604142329e-15,2e-09,True
+normalized_phase_max_abs_deg,9.729426508508965e-15,2e-09,True
+any_constant_gain_amplitude_lower_bound,2.4980018054066022e-15,2e-09,True
+magnitude_ratio_span,7.527256109082074e-15,2e-09,True
+source_derived_b,4.996003610813204e-16,1e-12,True

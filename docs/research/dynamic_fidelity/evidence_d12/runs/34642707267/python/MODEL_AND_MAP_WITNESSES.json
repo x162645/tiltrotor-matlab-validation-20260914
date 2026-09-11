@@ -1,0 +1,430 @@
+{
+  "models": [
+    {
+      "law": "PP_mean",
+      "b_variant": "central",
+      "b": 0.15160528305026616,
+      "k": 0.5432488724203361,
+      "theta0_deg": 6.457999458409009,
+      "ct0": 0.009610669711084234,
+      "lambda0": 0.06932052261446185,
+      "static_slope_per_rad": 0.051202985840989826,
+      "alpha": 0.07919845842497236,
+      "model_poles": [
+        -48.955206960462284,
+        -0.21166569785835382
+      ],
+      "downward_accel_num": [
+        -8.240680494266776,
+        -258.42663292380917,
+        -0.0
+      ],
+      "den": [
+        1.0,
+        49.16687265832064,
+        10.362138045086388
+      ],
+      "input": "theta75_report_index_rad",
+      "source_input": "power_lever_percent_increase"
+    },
+    {
+      "law": "PP_mean",
+      "b_variant": "left_secant",
+      "b": 0.1461399747099108,
+      "k": 0.5432488724203361,
+      "theta0_deg": 6.457999458409009,
+      "ct0": 0.009610669711084234,
+      "lambda0": 0.06932052261446185,
+      "static_slope_per_rad": 0.051202985840989826,
+      "alpha": 0.07818923310823521,
+      "model_poles": [
+        -48.31821225119642,
+        -0.20672509905919967
+      ],
+      "downward_accel_num": [
+        -8.135669569214052,
+        -255.13350442544424,
+        -0.0
+      ],
+      "den": [
+        1.0,
+        48.52493735025562,
+        9.988587213992018
+      ],
+      "input": "theta75_report_index_rad",
+      "source_input": "power_lever_percent_increase"
+    },
+    {
+      "law": "PP_mean",
+      "b_variant": "right_secant",
+      "b": 0.1570705913906215,
+      "k": 0.5432488724203361,
+      "theta0_deg": 6.457999458409009,
+      "ct0": 0.009610669711084234,
+      "lambda0": 0.06932052261446185,
+      "static_slope_per_rad": 0.051202985840989826,
+      "alpha": 0.0802076837417095,
+      "model_poles": [
+        -49.59232914675993,
+        -0.21647881962571947
+      ],
+      "downward_accel_num": [
+        -8.345691419319499,
+        -261.7197614221741,
+        -0.0
+      ],
+      "den": [
+        1.0,
+        49.80880796638565,
+        10.735688876180756
+      ],
+      "input": "theta75_report_index_rad",
+      "source_input": "power_lever_percent_increase"
+    },
+    {
+      "law": "PP_mean",
+      "b_variant": "central_no_unknown_root",
+      "b": 0.14642463511397066,
+      "k": 0.5432488724203361,
+      "theta0_deg": 6.457999458409009,
+      "ct0": 0.009610669711084234,
+      "lambda0": 0.06932052261446185,
+      "static_slope_per_rad": 0.051202985840989826,
+      "alpha": 0.07824179857546211,
+      "model_poles": [
+        -48.35138687216071,
+        -0.20698565737379238
+      ],
+      "downward_accel_num": [
+        -8.141139059770602,
+        -255.30502691431164,
+        -0.0
+      ],
+      "den": [
+        1.0,
+        48.5583725295345,
+        10.008043596668736
+      ],
+      "input": "theta75_report_index_rad",
+      "source_input": "power_lever_percent_increase"
+    },
+    {
+      "law": "CF_TN3044",
+      "b_variant": "central",
+      "b": 0.15160528305026616,
+      "k": 0.8493333333333334,
+      "theta0_deg": 6.457999458409009,
+      "ct0": 0.009610669711084234,
+      "lambda0": 0.06932052261446185,
+      "static_slope_per_rad": 0.051202985840989826,
+      "alpha": 0.07919845842497236,
+      "model_poles": [
+        -31.47560583229151,
+        -0.21056973001121954
+      ],
+      "downward_accel_num": [
+        -8.240680494266776,
+        -165.29432135703706,
+        -0.0
+      ],
+      "den": [
+        1.0,
+        31.68617556230273,
+        6.627809822045189
+      ],
+      "input": "theta75_report_index_rad",
+      "source_input": "power_lever_percent_increase"
+    },
+    {
+      "law": "CF_TN3044",
+      "b_variant": "left_secant",
+      "b": 0.1461399747099108,
+      "k": 0.8493333333333334,
+      "theta0_deg": 6.457999458409009,
+      "ct0": 0.009610669711084234,
+      "lambda0": 0.06932052261446185,
+      "static_slope_per_rad": 0.051202985840989826,
+      "alpha": 0.07818923310823521,
+      "model_poles": [
+        -31.0613105308433,
+        -0.20568610545490096
+      ],
+      "downward_accel_num": [
+        -8.135669569214052,
+        -163.18797715357707,
+        -0.0
+      ],
+      "den": [
+        1.0,
+        31.266996636298202,
+        6.388879993414465
+      ],
+      "input": "theta75_report_index_rad",
+      "source_input": "power_lever_percent_increase"
+    },
+    {
+      "law": "CF_TN3044",
+      "b_variant": "right_secant",
+      "b": 0.1570705913906215,
+      "k": 0.8493333333333334,
+      "theta0_deg": 6.457999458409009,
+      "ct0": 0.009610669711084234,
+      "lambda0": 0.06932052261446185,
+      "static_slope_per_rad": 0.051202985840989826,
+      "alpha": 0.0802076837417095,
+      "model_poles": [
+        -31.890028886846032,
+        -0.21532560146122343
+      ],
+      "downward_accel_num": [
+        -8.345691419319499,
+        -167.40066556049703,
+        -0.0
+      ],
+      "den": [
+        1.0,
+        32.105354488307256,
+        6.866739650675914
+      ],
+      "input": "theta75_report_index_rad",
+      "source_input": "power_lever_percent_increase"
+    },
+    {
+      "law": "CF_TN3044",
+      "b_variant": "central_no_unknown_root",
+      "b": 0.14642463511397066,
+      "k": 0.8493333333333334,
+      "theta0_deg": 6.457999458409009,
+      "ct0": 0.009610669711084234,
+      "lambda0": 0.06932052261446185,
+      "static_slope_per_rad": 0.051202985840989826,
+      "alpha": 0.07824179857546211,
+      "model_poles": [
+        -31.082885852720466,
+        -0.20594370406801277
+      ],
+      "downward_accel_num": [
+        -8.141139059770602,
+        -163.29768602171515,
+        -0.0
+      ],
+      "den": [
+        1.0,
+        31.288829556788478,
+        6.401324645632485
+      ],
+      "input": "theta75_report_index_rad",
+      "source_input": "power_lever_percent_increase"
+    }
+  ],
+  "required_maps": [
+    {
+      "law": "PP_mean",
+      "b_variant": "central",
+      "numerator_descending": [
+        0.0011892221773211662,
+        0.05847033535480059,
+        0.012322884367680127
+      ],
+      "denominator_descending": [
+        1.0,
+        31.46486562075818,
+        3.2927858901796085
+      ],
+      "delay_s": 0.0074,
+      "poles": [
+        -31.35986562075818,
+        -0.105
+      ],
+      "zeros": [
+        -48.95520696046229,
+        -0.21166569785835376
+      ],
+      "stable": true,
+      "proper": true,
+      "use": "ALGEBRAIC_NONIDENTIFIABILITY_WITNESS_ONLY_NOT_AN_ACTUATOR_MODEL"
+    },
+    {
+      "law": "PP_mean",
+      "b_variant": "left_secant",
+      "numerator_descending": [
+        0.0012045720289678295,
+        0.058451782239534227,
+        0.012031972766880485
+      ],
+      "denominator_descending": [
+        1.0,
+        31.46486562075818,
+        3.2927858901796085
+      ],
+      "delay_s": 0.0074,
+      "poles": [
+        -31.35986562075818,
+        -0.105
+      ],
+      "zeros": [
+        -48.318212251196414,
+        -0.20672509905919975
+      ],
+      "stable": true,
+      "proper": true,
+      "use": "ALGEBRAIC_NONIDENTIFIABILITY_WITNESS_ONLY_NOT_AN_ACTUATOR_MODEL"
+    },
+    {
+      "law": "PP_mean",
+      "b_variant": "right_secant",
+      "numerator_descending": [
+        0.0011742586093362992,
+        0.058488421575306794,
+        0.01260647509001119
+      ],
+      "denominator_descending": [
+        1.0,
+        31.46486562075818,
+        3.2927858901796085
+      ],
+      "delay_s": 0.0074,
+      "poles": [
+        -31.35986562075818,
+        -0.105
+      ],
+      "zeros": [
+        -49.59232914675994,
+        -0.2164788196257195
+      ],
+      "stable": true,
+      "proper": true,
+      "use": "ALGEBRAIC_NONIDENTIFIABILITY_WITNESS_ONLY_NOT_AN_ACTUATOR_MODEL"
+    },
+    {
+      "law": "PP_mean",
+      "b_variant": "central_no_unknown_root",
+      "numerator_descending": [
+        0.0012037627570356403,
+        0.05845276039331615,
+        0.012047310152458843
+      ],
+      "denominator_descending": [
+        1.0,
+        31.46486562075818,
+        3.2927858901796085
+      ],
+      "delay_s": 0.0074,
+      "poles": [
+        -31.35986562075818,
+        -0.105
+      ],
+      "zeros": [
+        -48.35138687216072,
+        -0.2069856573737923
+      ],
+      "stable": true,
+      "proper": true,
+      "use": "ALGEBRAIC_NONIDENTIFIABILITY_WITNESS_ONLY_NOT_AN_ACTUATOR_MODEL"
+    },
+    {
+      "law": "CF_TN3044",
+      "b_variant": "central",
+      "numerator_descending": [
+        0.0011892221773211662,
+        0.037681902693182376,
+        0.007881938427443192
+      ],
+      "denominator_descending": [
+        1.0,
+        20.163333953371446,
+        2.1061250651040018
+      ],
+      "delay_s": 0.0074,
+      "poles": [
+        -20.058333953371445,
+        -0.105
+      ],
+      "zeros": [
+        -31.475605832291507,
+        -0.21056973001121956
+      ],
+      "stable": true,
+      "proper": true,
+      "use": "ALGEBRAIC_NONIDENTIFIABILITY_WITNESS_ONLY_NOT_AN_ACTUATOR_MODEL"
+    },
+    {
+      "law": "CF_TN3044",
+      "b_variant": "left_secant",
+      "numerator_descending": [
+        0.0012045720289678295,
+        0.037663349577916026,
+        0.0076958661364992355
+      ],
+      "denominator_descending": [
+        1.0,
+        20.163333953371446,
+        2.1061250651040018
+      ],
+      "delay_s": 0.0074,
+      "poles": [
+        -20.058333953371445,
+        -0.105
+      ],
+      "zeros": [
+        -31.0613105308433,
+        -0.20568610545490107
+      ],
+      "stable": true,
+      "proper": true,
+      "use": "ALGEBRAIC_NONIDENTIFIABILITY_WITNESS_ONLY_NOT_AN_ACTUATOR_MODEL"
+    },
+    {
+      "law": "CF_TN3044",
+      "b_variant": "right_secant",
+      "numerator_descending": [
+        0.0011742586093362992,
+        0.03769998891368859,
+        0.008063328152877124
+      ],
+      "denominator_descending": [
+        1.0,
+        20.163333953371446,
+        2.1061250651040018
+      ],
+      "delay_s": 0.0074,
+      "poles": [
+        -20.058333953371445,
+        -0.105
+      ],
+      "zeros": [
+        -31.890028886846032,
+        -0.21532560146122354
+      ],
+      "stable": true,
+      "proper": true,
+      "use": "ALGEBRAIC_NONIDENTIFIABILITY_WITNESS_ONLY_NOT_AN_ACTUATOR_MODEL"
+    },
+    {
+      "law": "CF_TN3044",
+      "b_variant": "central_no_unknown_root",
+      "numerator_descending": [
+        0.0012037627570356403,
+        0.03766432773169793,
+        0.007705676204106753
+      ],
+      "denominator_descending": [
+        1.0,
+        20.163333953371446,
+        2.1061250651040018
+      ],
+      "delay_s": 0.0074,
+      "poles": [
+        -20.058333953371445,
+        -0.105
+      ],
+      "zeros": [
+        -31.082885852720466,
+        -0.2059437040680128
+      ],
+      "stable": true,
+      "proper": true,
+      "use": "ALGEBRAIC_NONIDENTIFIABILITY_WITNESS_ONLY_NOT_AN_ACTUATOR_MODEL"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "execution_commit": "872c566382cce21153e31e7e42561916bd31cb37",
+  "run_id": "34642707267",
+  "original_source_run": 34534917058,
+  "original_source_artifact": 10175006778,
+  "pdf_sha256": "252f7df0c0e05bd8dece0a923d337df2231c0148f897f0376f930f6102b90ba2",
+  "D11_fixed_dependencies": {
+    "code/d11_tilt_channel.py": "e64492a5ae717614d72cf273b0c788833a621575d52db820ddc6b2a1f02b7367",
+    "data/OARF_RUN15_EXISTING_STATIC_POINTS.csv": "8bfd600433b0658a413602b5250e899e38394d951911eeb328eb19eeae121e5d",
+    "data/C81_EXISTING_SMALL_ANGLE_EXCERPT.csv": "799a64f5613ccc183f55314c924f9d6c8c97438532fe9424fe0fb6c2746b71f5"
+  },
+  "new_experimental_observations": 0,
+  "source_role": "existing flight-identified descriptor, not raw matched data or new holdout"
+}

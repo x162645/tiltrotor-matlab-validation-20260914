@@ -1,0 +1,1931 @@
+
+
+PDF_PAGE_1
+NASA Technical Memorandum 86009 
+Identification and Verification of 
+uency-Domain odels for 
+W-I5 Tilt-Rotor Aircraft Dynamics 
+Mark B. Tischler, Joseph G.M. Leung 
+and Daniel C. Dugan 
+August 1984 
+National Aeronautics and 
+Space Administration 
+United States Army 
+Aviation Systems 
+Command 
+
+
+PDF_PAGE_2
+NASA Technical Memorandum 86009 
+TM-84-A-6 
+Identification and Verification of 
+Frequency-Domain 
+odels for 
+XV-15 Tilt-Rotor Aircraft Dynamics 
+Mark B Tischler Aeromechanics Laboratory U S Army Research 
+Joseph G M Leung, 
+Daniel C Dugan Ames Research Center Moffett Field, Californla 
+& Technology Laboratory AVSCOM, Moffett Field California 
+National Aeronautics and 
+Space Administration 
+Ames Research Center 
+Moffett Field California 94035 
+d 
+United States Army 
+Aviation Systems 
+Command 
+St Louis. Missouri 6312 
+
+
+PDF_PAGE_3
+IDENTIFICATION AND'VERIFICATION O F FREQUENCY.rDONAIN MODELS 
+FOR XV-15 TILT-ROTOR AIRCRAFT DYNAMICS 
+Mark B 
+Tischler 
+Aeromechanics Laboratory, U . S Army Research and Technology Laboratories (AVSCOM) 
+Ames Research Center, Moffett Field, California 94035 U S A. 
+Joseph G. M. Leung and Daniel C 
+Dugan 
+NASA Ames Research Center, Moffett Field, California 94035 U S . A . 
+Abstract 
+Frequency-domain methods are used t o extract the open-loop dynamics of the XV-15 tilt- 
+The frequency 
+rotor a i r c r a f t from f l i g h t test data f o r the cruise condition (V = 170 knots) 
+responses are numerically f i t t e d with transfer-function forms t o identify equivalent modal 
+characteristics 
+The associated handling quality parameters m e e t o r exceed Level 11, C a t e - 
+gory A, requirements f o r fixed-wing military a i r c r a f t 
+Step response matching is used t o 
+verify the time-domain f i d e l i t y of the transfer-function models f o r the cruise and hover f l i g h t 
+conditions. 
+cases, except f o r the normal acceleration response t o elevator deflection i n cruise 
+This dis- 
+crepancy is probably due t o the unmodeled rotor rpm dynamics 
+domain approach f o r dynamics identification and analysis is clearly demonstrated 
+The transient responses of the model and a i r c r a f t are i n close agreement i n a l l 
+The u t i l i t y of the frequency- 
+1. Introduction 
+The identification of XV-15 t i l t - r o t o r dynamics (Fig 1) from f l i g h t test data is an 
+extensive ongoing e f f o r t t o support the development of the next generation of tilt r o t o r s - t h e 
+j o i n t services V/STOL a i r c r a f t (fix). 
+The key concerns of the e f f o r t are the 
+documentation of open-loop XV-15 
+dynamics, and the validation of 
+generic t i l t - r o t o r models (Refs [l] 
+and [2]) 
+A frequency domain-based 
+identification approach was developed 
+and successfully applied f o r the hover 
+f l i g h t condition (Ref 
+[3]) 
+Transfer 
+function models describing t h e open- 
+loop response characteristics of the 
+XV-15 a i r c r a f t were extracted and com- 
+pared with the simulation characteris- 
+tics. 
+Reference [3] presents a 
+detailed description of the frequency- 
+domain methodology and the r e s u l t s for 
+the hover f l i g h t condition. 
+A s i n a l l identification 
+research, a key concern of t h i s e f f o r t 
+is the f i d e l i t y of the extracted 
+models f o r input forms other than 
+those used i n the identification pro- 
+cess 
+The f l i g h t t e s t i n g technique of 
+Ref 
+[3] uses a pilot-generated swept 
+sine wave input t o excite the vehicle 
+dynamics. 
+This yields an excellent 
+identification of frequency responses 
+and transfer functions for sinusoidal- 
+l i k e inputs. 
+Such information is 
+useful for frequency domain-based 
+handling q u a l i t y specifications such 
+as the M i l Handbook f o r military air- 
+c r a f t (Ref. [4]) 
+However, f o r t i m e - 
+domain specifications such as 
+Mil-H-8501 
+(Ref 
+[5]) and Mil-F-83300 
+(Ref. [6]), criteria are largely based 
+on responses t o step inputs, so 
+extracted models must accurately 
+r e f l e c t these characteristics as w e l l 
+Figure 1 The Xv-15 Tilt-Rotor Aircraft 
+(a) Cruise 
+configuration 
+(b) Hover configuration, 
+75-1 
+J 
+
+
+PDF_PAGE_4
+This paper reviews the frequency-domain based methodology and discusses the identifica- 
+tion of transfer function models f o r t h e cruise f l i g h t condition (170 knots). 
+limiting case f o r comparison with the Previous hover r e s u l t s (Ref. [3]). Time-domain matching 
+is presented t o verify the step response characteristics of the extracted models for the hover 
+and cruise f l i g h t conditions. 
+function models for handling q u a l i t i e s and control system applications. 
+This is a good 
+$ 
+These r e s u l t s show the u t i l i t y of relatively simple transfer 
+2. 
+Review of Identification Methodology 
+This section reviews t h e frequency-domain identification and time-domain verification 
+techniques. 
+and are mnly outlined i n t h i s paper. 
+The d e t a i l s of the identification approach are extensively discussed i n Ref 
+[3] 
+Frequency-domain identification is based on the spectral analysis of input and output 
+time h i s t o r i e s using Fast Fourier Transform techniques 
+functions which are (complex-valued) l i n e a r descriptions of the input-to-output 
+processes 
+The 
+identification r e s u l t s are presented i n Bode plot format: 
+magnitude and phase versus frequency 
+System bandwidth and effective t i m e delay, important metrics i n current handling q u a l i t i e s 
+specifications, can be read d i r e c t l y from these p l o t s 
+are f i t t e d with analytical transfer function forms t o extract modal characteristics f o r handling 
+q u a l i t i e s specifications given i n terms of lower order (equivalent) system models 
+Also, the 
+transfer-function models can be driven with step inputs t o extract familiar t i m e domain metrics 
+such as rise t i m e , overshoot, and s e t t l i n g t i m e 
+This analysis produces describing 
+Tabulated frequency response r e s u l t s 
+The swept sine wave (frequency-sweep) input is a good excitation f o r the frequency-domain 
+identification approach 
+This excitation r e s u l t s i n bounded and reasonable excursions of the 
+a i r c r a f t , suitably exciting the important rigid body modes over the e n t i r e frequency range of 
+interest (0.2-6.0 rad/sec) 
+The input is generated by the p i l o t i n one axis a t a t i m e , with 
+minimal regulation of the remaining axes 
+Starting from a t r i m condition, the p i l o t f i r s t exe- 
+cutes two 20 sec period inputs t o ensure good low-frequency identification 
+Then the frequency 
+of the inputs is slowly increased up t o a maximum of about 6 rad/sec, yielding a t o t a l run 
+length of about 90 sec 
+i n the analysis; t h i s technique minimizes the e f f e c t s of random noise 
+Repeat runs a r e executed t o allow concatenation of the 90 sec records 
+When the bare airframe characteristics of the vehicle are highly unstable, a s i n the 
+XV-15 i n hover, execution of a 90 sec frequency sweep on the open-loop vehicle is clearly not 
+practical. 
+Subject t o some important qualifications, the bare airframe transfer functions can 
+be extracted from the closed-loop f l i g h t data 
+Referring t o Fig 
+2, identification of the open- 
+(BARE. 
+(PILOT) 
+A I R F R AM E 1 
+(INPUT) 1
+-
+1
+ 
+(OUTPUT) 
+I (FEEDBACK' - 
+(SCAS) 
+Figure 2 . 
+model. 
+Single degree-of-freedom 
+pitch response 
+loop transfer function (q/&,) requires 
+the measurement of the output (9) and 
+surface deflection (6,) 
+signals 
+This 
+t o t a l surface deflection is made up of 
+components from the p i l o t (6Lo~! and the 
+s t a b i l i t y and control augmentation sys- 
+t e m (SCAS) feedback (6fe) 
+requirement is that the t o t a l surface 
+deflection must contain a significant 
+component from the p i l o t which is uncor- 
+related with the output 
+The use of the 
+"programed" swept s i n e wave input 
+avoids the otherwise troublesome result 
+of identifying the inverse feedback 
+transfer function (-l/G ) from passive 
+tracking tasks 
+A key 
+Fq 
+When the vehicle dynamics are 
+highly coupled, multiple control deflec- 
+tions w i l l occur i n a l l degrees of free- 
+dom. 
+If the surface deflections are not 
+fully correlated with each other, the desired single-input transfer function can be isolated 
+using the multi-input multi-output methodology described i n Ref 
+[3] 
+This r e s t r i c t i o n was 
+s a t i s f i e d for the hover f l i g h t condition since the cross-control inputs supplied by the p i l o t 
+were largely uncorrelated with the primary frequency sweep inputs 
+t o i s o l a t e the yaw response t o ailerons- an important source of coupling for the hover f l i g h t 
+condition. 
+Therefore, it was possible 
+For the cruise f l i g h t condition, open-loop longitudinal transfer functions were also 
+I n the lateral axis, the large 
+However, the s t a b i l i t y augmentation system supplies 
+identified from the closed-loop tests since the elevator inputs supplied by the p i l o t were uncor- 
+related with the outputs and the other surface deflections 
+degree of inherent closed-loop s t a b i l i t y allowed the p i l o t t o execute frequency sweeps of the 
+aileron without applying rudder corrections. 
+75-2 
+
+
+PDF_PAGE_5
+rudder inputs which are highly correlated t o the aileron inputs and r o l l rate outputs 
+fore, extraction of t h e single-input, single-output open-loop transfer functions from closed- 
+loop f l i g h t data was not possible f o r t h i s f l i g h t condition; t h e lateral-directional tests were 
+repeated with the SCAS disengaged 
+When the bare airframe dynamics are too highly coupled 6r 
+unstable t o make t h i s practical, the open-loop dynamics can usually be extracted from the 
+closed-loop test data, as was successfully accomplished f o r the XV-15 i n hover (Ref 
+[3]) 
+There- 
+Once the f l i g h t data have been digitized and preprocessed, the input, output, and cross 
+spectra (G,(f), 
+Gyy(f) , and Gxy(f), respectively) are calculated using modern Chirp 
+2-transform methods (Ref 
+[3]) 
+Specific transfer functions G(f) are obtained from the r a t i o 
+of the appropriate cross and input auto spectra: 
+and a r e presented in Bode format 
+The coherence function (y2 ) defined as: 
+XY 
+is a good indication of the input-to-output 
+l i n e a r i t y 
+This frequency-dependent parameter may 
+be interpreted as that fraction of the output spectrum which can be accounted f o r by linear 
+relation with the input spectrum, 
+When the process under investigation is perfectly linear and 
+the spectral estimates are noise f r e e , the coherence function w i l l be unity for a l l frequencies 
+i n the excited input spectrum range 
+A value of the coherence function less than unity w i l l 
+result from nonlinearities i n the system, inputloutput noise, or cross-coupled control inputs 
+The magnitude and phase responses are then f i t t e d with analytical transfer function models t o 
+obtain closed form descriptions of the input-to-output 
+processes 
+I n order t o obtain a unique 
+f i t of the frequency responses, certain physical r e s t r a i n t s on commonality of the transfer 
+function denominator factors are imposed 
+Current m i l i t a r y handling quality specifications (Ref 
+[41) l i m i t the allowable mismatch 
+between the transfer function f i t s and the frequency response data 
+However, even s m a l l decibel 
+deviations in the frequency-domain can produce surprisingly large discrepancies i n time-domain 
+correlations 
+Time-domain verification first requires converting the transfer functions t o 
+canonical form: 
+where 
+F = 
+J 
+-ao 
+-al 
+-a 2 
+-an- 
+G = 
+and a O , a,, 
+. , an-l 
+are the denominator (ascending) coefficients and bo, b,, 
+. , bm 
+are the numerator (ascending) coefficients of the transfer function model being evaluated 
+7 5-3 
+
+
+PDF_PAGE_6
+This model is driven w i t h step-input data from t h e f l i g h t tapes, and the resulting 
+This approach 
+responses are then compared t o the aircraft data f o r time-domain f i d e l i t y . 
+allows the verification of transfer functions associated with the stable degrees of freedom, 
+since spurious model inputs (due t o inexact i n i t i a l condition matching and turbulence regula- 
+tion) do not cause a divergence of the transients w i t h time 
+of freedom, these spurious inputs cause a rapid divergence of the f l i g h t and model responses 
+For such cases, conclusive quantitative statements on the step response f i d e l i t y of the trans- 
+f e r function models cannot be made, even though the qualitative form of the response is correct 
+and small differences i n the predicted level of i n s t a b i l i t y are probably not important 
+However, for the unstable degrees 
+3 
+Dynamics Identification f o r the Cruise Flight Condition 
+I n t h i s section, the characteristics for the cruise f l i g h t condition are considered: 
+V = 170 knots (indicated), nacelle incidence = oo, a l t i t u d e = 8000 f t 
+lateral f l i g h t dynamics are f u l l y decoupled i n t h i s condition 
+airframe transfer functions of i n t e r e s t are pitch rate and normal acceleration responses t o 
+elevator deflection, q/6, 
+and az/6e, respectively 
+functions are r o l l rate response t o aileron, p/6,, 
+and s i d e s l i p ( a t the c.g ) response t o 
+rudder, BCg/6,. 
+The longitudinal and 
+The primary longitudinal bare- 
+The important lateral-directional transfer 
+The following discussion of longitudinal dynamics identification and analysis is pre- 
+sented i n d e t a i l t o i l l u s t r a t e the frequency-domain methodology and t o compafe the longitudinal 
+r e s u l t s f o r the hover f l i g h t condition presented i n Ref 
+[3] 
+Longitudinal Dynamics 
+Since the longitudinal and lateral dynamics are f u l l y decoupled and elevator surface 
+deflections are measured directly, the f l i g h t t e s t i n g f o r the longitudinal axis was conducted 
+with the SCAS engaged 
+This was not considered essential, however, since the dynamics for t h i s 
+f l i g h t condition are very stable 
+The longitudinal s t i c k displacements for two concatenated frequency sweeps a r e shown i n 
+Fig, 3 
+As previously discussed, each run lasts roughly 90 sec and is i n i t i a t e d with two 20-sec 
+lo]+ 
+SWEEP1 
+, 
+SWEEP2 
+. ' 1 
+-10 -I 
+I 
+I 
+I 
+0 
+50 
+100 
+150 
+200 
+TIME, sec 
+Figure 3 
+Two longitudinal s t i c k frequency sweeps 
+in cruise 
+301 
+-30 
+1 
+1 
+10 
+FREQUENCY rad/sec 
+Figure 4 
+Elevator surface input autospectrum 
+(G6,6,) 
+- 
+cycles t o ensure good low-frequency iden- 
+t i f i c a t i o n 
+The sinusoidal s t i c k deflec- 
+t i o n is very regular with a nearly con- 
+stant amplitude of roughly +5% 
+The 
+elevator signal is also very regular with 
+a nearly constant amplitude of 2 deg 
+These data are very typical of the 
+transition-flight and forward-flight 
+condition results. 
+The relative stabil- 
+i t y of the longitudinal and l a t e r a l axes 
+made execution of the frequency sweeps a 
+very rapid and acceptable flight-test 
+procedure 
+The input autospectrum for 
+the concatenated elevator t i m e h i s t o r i e s 
+is shown i n Fig 4 
+This spectrum is 
+f a i r l y f l a t at low frequencies, dropping 
+off s l i g h t l y for the higher frequency 
+inputs 
+For frequencies outside the 
+plotted range, the magnitude drop-off is 
+much more pronounced 
+The pitch-rate signal (conditioned 
+with a 2 5 Hz low-pass f i l t e r f o r output 
+presentation only) is shown i n Fig 5. 
+The pitch-rate excursions are very regu- 
+lar with a roughly constant peak-to-peak 
+amplitude of 5 deg/sec 
+These oscilla- 
+tions are considered very acceptable t o 
+the research p i l o t s , and are comparable 
+with those encountered during the hover 
+f l i g h t test 
+The associated output auto- 
+spectrum for the concatenated pitch-rate 
+t i m e h i s t o r i e s are shown i n Fig. 6 . The 
+output spectrum follows the input spectrum 
+at l o w input frequencies and exhibit the 
+familiar 20 dB/decade roll-off at higher 
+75-4 
+
+
+PDF_PAGE_7
+frequencies (which is typical of r i g i d 
+body motion). 
+The cross-spectrum 
+between elevator surface and pitch 
+rate is shown i n Fig. 7 and demon- 
+strates a similar characteristic, 
+The elevator surface-to-pitch 
+rate transfer function, q/6,, 
+is shown 
+i n Figs. 8(a) and 8(b) 
+The smooth 
+spectral data over the majority of t h e 
+frequency range are typical of the 
+excellent r e s u l t s obtained from the 
+Chirp z-transform algorithm< Due t o 
+the short period-mode excitation, 
+there is a peak i n the pitch-rate 
+response at abouf 2.0 radlsec, with 
+an associated phase lag of 45 deg 
+A t 
+higher frequencies, the magnitude 
+response r o l l s off a t 20 dB/decade and 
+the phase s h i f t approaches -90 deg 
+owing t o the K/s pitch-rate charac- 
+teristic and negligible f l e x i b i l i t y / 
+servo-lag e f f e c t s 
+The drop i n the 
+magnitude response and associated 
+positive phase response for frequen- 
+cies below 0 . 3 radlsec are due t o the 
+phugoid dynamics 
+The coherence function shown i n 
+Fig 9 is strong over the frequency 
+range of interest (0 -2-6 ,O rad/sec) , 
+as shown. 
+For input frequencies above 
+7 0 radlsec, the coherence function 
+becomes erratic and the transfer- 
+function identification is l e s s accu- 
+r a t e 
+For low-frequency inputs ( l e s s 
+than 0 3 radlsec), the pitch-rate 
+response decreases, even f o r the 
+nearly constant input amplitude owing 
+t o the effect of the phugoid dynamics 
+This r e s u l t s i n a decrease of informa- 
+tion transfer and an associated drop 
+i n the coherence function 
+This 
+coherence-function roll-off is also 
+attributable t o atmosphere turbulence 
+effects, which become more important 
+at low frequency where the turbulence 
+spectrum peaks (Ref 
+[ 71) 
+-5 4 
+I 
+I 
+I 
+I 
+I 
+I 
+I 
+'
+I
+ 
+1 
+0 
+50 
+100 
+150 
+200 
+TIME, sec 
+Figure 5 
+Pitch-rate response (4) during longitudinal 
+frequency sweeps 
+301 
+-30 I 
+I 
+I 
+I 
+I 
+,
+1
+1
+1
+,
+ 
+1 
+1 
+10 
+FREQUENCY rad/sec 
+Figure 6 
+Pitch-rate output autospectrum (G ) 
+49 
+301 
+-30 
+1 
+1 
+10 
+FREQUENCY radlsec 
+Figure 7 
+Magnitude of cross-spectrum between ele- 
+vator surface inputs and pitch-rate response ( I G g eq 1 ) 
+The Bode plot of Figs 8(a) and 8(b) is the basic format f o r presenting classical 
+frequency-domain r e s u l t s 
+It provides useful information on dynamic characteristics and on 
+handling q u a l i t i e s implications 
+To the extent that the linear-describing function is an accu- 
+r a t e representation of the input-to-output 
+process, the Bode plot is an exact description of the 
+vehicle dynamics and contains no implicit assumptions on model order o r structure 
+This is the 
+key advantage of frequency-domain identification over the more conventional time-domain 
+approaches 
+Recent military specifications for piloted-handling q u a l i t i e s (Ref 
+[ 4 ] ) are based on 
+two key frequency-domain parameters: 
+t i c u l a r transfer funct?on, the bandwidth is defined as that frequency where the pgase margin is 
+45 deg, o r the gain margin is 6 dB, whichever is lowest 
+As discussed i n Ref 
+[ 4 ] , the band- 
+width is a measure of the speed of response; a high bandwidth r e f l e c t s quick response and accu- 
+rate tracking capability; a low bandwidth suggests sluggish response and pilot-induced oscilla- 
+tion tendencies. 
+frequencies near the bandwidth value 
+A large effective t i m e delay (e.g , greater than 
+bandwidth (wBw) and effective t i m e delay (T ) 
+For a par- 
+The effective time delay is a measure of the slope of the phase curve f o r 
+100 msec) r e s u l t s i n a significant 
+For longitudinal control, a 
+8/6,, 
+which is e a s i l y derived from 
+degradation of piloted handling- q u a l i t i e s 
+key transfer function is pitch a t t i t u d e response t o elevator, 
+the pitch-rate transfer function as: 
+75-5 
+d 
+
+
+PDF_PAGE_8
+1501 
+FREQUENCY radfsec 
+Figure 8 
+i n cruise 
+(a) Transfer function magnitude 
+(b) Transfer function phase 
+Pitch-rate response t o elevator (q/-6,) 
+f 
+I 
+I 
+I I I
+I
+I
+I
+ 
+1 
+1 
+10 
+FREQUENCY rad/sec 
+Figure 9 
+Coherence function f o r pitch-rate 
+response identification (yieq) 
+- 
+FLIGHT DATA 
+TRANSFER FUNCTION MODEL 
+--- 
+01 
+---__ 
+-100 "- 
+IO 
+-200 
+1 
+1 
+where 
+s is the Laplace operator 
+The Bode plot for pitch-attitude 
+response may be obtained from the 
+pitch-rate response by rotating the 
+magnitude curve about the 
+w = 1 rad/sec 
+point by slope of 20 dlldecade. 
+The 
+phase curve is shifted by a constant 
+value of -90 deg. 
+the critical bandwidth criterion is 
+phase margin which is 45 deg at a fre- 
+quency of 
+W B W ~ = 2 5 radlsec 
+The 
+effective time delay is negligible since 
+the phase curve is nearly f l a t where it 
+is near 180 deg. 
+These bandwidth and 
+t i m e delay values are w e l l within the 
+Ref 
+[ 4 ] Level 11, Category A, specifi- 
+cations (adequate handling q u a l i t i e s f o r 
+high-precision tracking tasks), and cer- 
+t a i n l y r e f l e c t satisfacfory character- 
+istics f o r SCAS f a i l u r e conditions. 
+Referring t o Fig. 8, 
+The transfer function f o r noma2 
+acceleration response to elevator, 
+aZ/6,, is shown i n Figs. 10(a) and 10(b) 
+The response is dominated by t h e classi- 
+c a l second-order short-period mode over 
+the majority of the frequency range. 
+The magnitude curve is f l a t at mid- 
+frequency indicating a constant normal 
+acceleration response t o a step elevator 
+input, with a roll-off i n response for 
+frequencies beyond the short period mode 
+The fall-off i n normal acceleration 
+response f o r frequencies below 
+0 3 radlsec is probably due t o the 
+dominance of the phugoid dynamics 
+The 
+phase curve exhibits the classical second 
+order response; i.e , zero phase lag at 
+low frequency, 180 deg of phase lag at 
+high frequency, and 90 deg of phase 
+l a g at the second order mode 
+(w 2 2 0 radlsec) 
+with the previous pitch-rate r e s u l t s L 
+The coherence function for the normal 
+acceleration response shown i n Fig 11 
+is strong over the frequency range of 
+0 3 t o 10.0 rad/sec, with the fall-off 
+a t low frequency, again owing t o the 
+dominance of phugoid dynamics and tur- 
+bulence e f f e c t s 
+A s before, t h i s sug- 
+gests excellent identification over the 
+e n t i r e frequency range of interest. 
+Longitudinal Transfer Function F i t t i n g 
+This is consistent 
+Analytical transfer function 
+forms a r e selected f o r each degree of 
+freedom based on configuration and f l i g h t 
+condition factors 
+In the hover f l i g h t 
+condition, vehicle dynamics are dominated 
+by the hovering cubic, and decoupled 
+heave and yaw modes. 
+I n wing-borne 
+f l i g h t , the conventional longitudinal 
+and lateral quartic equations dominate. 
+Thus, transfer-function models which are 
+appropriate f o r the hover f l i g h t condi- 
+tion are not necessarily applicable to 
+forward f l i g h t conditions. 
+Obviously, i f 
+FREQUENCY radlsec 
+a model of high enough order is selected, 
+the parameters can be adjusted t o accom- 
+modate each f l i g h t condition. 
+However, 
+such transfer function models no longer 
+Figure 10. Vertical-acceleration response t o 
+elevator (a,/&,) 
+i n cruise 
+magnitude. 
+(b) Transfer-function phase 
+(a) Transfer-function 
+75-6 
+J 
+
+
+PDF_PAGE_9
+r e t a i n the physical significance of the 
+1.0- 
+classical lower-order parameters. 
+Also, higher-order transfer-function 
+models tend t o be strongly tuned t o the 
+identification procedure (e .g , a fre- 
+N 
+6- 
+quency sweep) and are often very poor 
+predictors of other test inputs (e g , 
+step inputs) 
+Therefore, higher-order 
+models are not desirable. I n the 
+approach taken in Ref 
+[3], the 
+I
+,
+ 
+minimum-order transfer-function models 
+1 
+1 
+10 
+which can s a t i s f a c t o r i l y f i t the fre- 
+Figure 11. Coherence function for vertical- 
+quency responses are used with t h e 
+of the system. 
+6eaz) 
+N 
+specific inputs which are used i n the 
+m 
+* 
+.2 
+FREQUENCY rad/sec 
+upper limit 
+taken as the physical 
+Order 
+acceleration response identification (v2 
+Examination of the longitudinal frequency responses of Figs. 8(a) and 8(b) shows that the 
+longitudinal dynamics of t h i s f l i g h t condition are dominated by the short period mode 
+(osp = 2 radfsec) 
+responses t o elevator*: 
+Therefore, we adopt the classical pitch rate and normal acceleration 
+where 
+q(s)/6,(s) 
+is the Laplace-transformed pitch rate response t o elevator surface deflection, 
+deglsecldeg-elevator; Mge 
+is the elevator pitch sensitivity, 1/Te2 
+t o r inverse t i m e constant; 5 , 
+are the equivalent short-period mode damping and natural 
+frequency, respectively; andsP-rews!s 
+the effective t i m e delay; and 
+is the f irst-order numera- 
+where 
+a,(s)/6,(s) 
+is the Laplace-transformed v e r t i c a l acceleration response (positive downward) 
+t o elevator surface deflection, g/deg-elevator, 26, 
+the denominator parameters a r e identical t o those of Eq 
+v e r t i c a l acceleration response is 
+T 
+is the elevator v e r t i c a l sensitivity; and 
+(5) 
+The effective t i m e delay for the 
+a2 
+W e ignore the low-frequency phugoid dynamics since, as seen from Figs 8 and 10, these 
+are important only for the very lowest frequency inputs 
+The longitudinal transfer functions of Eqs 
+(5) and (6) have the same denominator factors, 
+so simultaneous f i t t i n g of these responses, while imposing the r e s t r i c t i o n of commonality of 
+denominator parameters, makes good physical sense 
+Also, the analyses of Refs, [3] and [ 8 ] , 
+suggest t h a t such simultaneous f i t t i n g techniques are needed t o ensure unique and physically 
+meaningful values for the numerator factors 
+For the longitudinal transfer functions, t h i s 
+avoids the otherwise so-called "fixed or free" La problem (Ref 
+[4]) 
+The transfer-function parameters of Eqs 
+(5) and ( 6 ) a r e i t e r a t i v e l y varied i n order t o 
+This procedure is completed using the computer pro- 
+obtain a best least-squares f i t between the equations and the frequency responses of Figs 
+and 10 over the selected frequency range 
+gram LONFIT developed by Hodgkinson et a l (Ref 
+[SI) 
+For the present case, the selected range 
+f o r simultaneous f i t t i n g of the pitch r a t e and normal acceleration responses is 0 . 3 t o 7 radlsec 
+I n t h i s frequency range, the dynamics are clearly dominated by the short-period mode and the 
+coherence is strong for both transfer functions 
+Once the short-period damping and natural fre- 
+quency (CSp, wsp) are obtained for the simultaneous f i t , the high-frequency gain f o r the normal 
+acceleration response (Z6e) is varied holding the damping and frequency constant. 
+mizes the 
+t h i s measurement remains strong out t o higher frequencies 
+the pitch rate and normal acceleration responses are f i n a l l y obtained as: 
+8 
+This opti- 
+a, 
+f i t over t h e frequency range 0 3 t o 10.0 radfsec since the coherence function f o r 
+The transfer function parameters f o r 
+*Shorthand notation: 
+15. w] implies 
+s2 + 2 5 ~ s + w2, 5 = damping r a t i o , o = undamped 
+natural frequency (radlsec) ; and (1/T) implies s + (l/T), radlsec 
+75-7 
+4 
+
+
+PDF_PAGE_10
+7 
+Mge = -7 727 deglsec'ldeg-elevator 
+I 
+= -32 144 deglsec'lin .-gLON 
+1/Te, = 1.035 radlsec 
+csp = 0 554 
+w 
+= 2 179 radlsec 
+SP 
+T~ = 0.016 sec 
+Zge = 1 5 9 7 g/deg-elevator 
+= 6 644 g/in -gLON 
+csp = 0 554 
+wsp 
+= 2 179 radlsec 
+T 
+= 0.018 sec 
+az 
+A comparison of these lower-order models with the f l i g h t test r e s u l t s is presented i n Figs 
+and 10 
+(0.3-10 0 radlsec for 
+sents the high- and mid-frequency dynamics 
+For low-input frequencies (w < 0 3 radlsec), the 
+phugoid mode causes a drop i n the pitch response, a characteristic which is not "captured" by 
+the short period model 
+f l i g h t data is not nearly as good i n the f i t t i n g range, and shows a noticeable discrepancy i n 
+the magnitude response for frequencies of greater than 2 radlsec 
+Possible sources of the mid- 
+and high-frequency discrepancy a r e the rotor rpm dynamics, which are known t o be important f o r 
+the forward f l i g h t conditions (Ref 
+[lo]) and rotor inflow dynamics 
+Neither of these sources 
+of added dynamics is d i r e c t l y accounted for by the classical short-period approximation, except 
+t o the extent t h a t the short period parameters are adjusted i n order t o best f i t the f l i g h t 
+d a t a 
+goid mode from the transfer-function model 
+8 
+The pitch-response model matches the data very w e l l over the selected f i t t i n g range 
+q16,), 
+which shows that the short period approximation adequately repre- 
+The match between the normal acceleration transfer function and the 
+A s i n the pitch response, the low frequency mismatch is due t o the omission of the phu- 
+Guidelines are given i n the M i l Handbook (Ref 
+[41) for the maximum allowable mismatch i n 
+lower-order system modeling 
+(Figs 
+10(a) and 10(b)) are w e l l within these allowable guidelines, so the identified parameters 
+should be useful indicators of piloted-handling q u a l i t i e s 
+The capability t o directly evaluate 
+the effect of model order on response f i t t i n g is clearly seen i n t h i s example, again represent- 
+ing a unique advantage of the frequency domain approach 
+Further analyses could include the 
+rotor rpm and phugoid degrees-of-freedom i n the transfer-function models, and could evaluate 
+t h e i r importance with respect t o vehicle dynamics and handling q u a l i t i e s 
+The discrepancies shown i n the normal acceleration responses 
+Lower order system parameters are useful i n characterizing the vehicle dynamics for com- 
+parison with the dynamics of other a i r c r a f t 
+The identified short period damping and frequency 
+(esp = 0,554 
+based on the r a w Bode plot information 
+The relatively high degree of damping is a reflection 
+of the s m a l l response peak of the pitch-rate transfer function 
+The small effective t i m e delays 
+( i n the pitch a t t i t u d e and normal acceleration transfer f i t s ) indicate that the high frequency 
+f l e x i b i l i t y and servo-lag e f f e c t s are not important f o r t h i s f l i g h t condition, as noted earlier. 
+The M i l Handbook requirements for lower-order equivalent system pitch response are given i n 
+terms of the parameters 
+and (8) are w e l l within the Level I, Category A, handling q u a l i t i e s requirements, confirming 
+that the longitudinal characteristics for SCAS off conditions are adequate. 
+and 
+wsp 
+= 2 18 radlsec) are consistent with preliminary observations which are 
+wspTe2, 
+cSp, and 
+The values of these parameters given i n Eqs. (7) 
+Time-domain verification of the longitudinal transfer function models w i l l be addressed 
+a f t e r lateral response models are presented 
+Lateral Dynamics 
+The open-loop transfer function f o r roll-rate response to aikrons p/ba, is shown i n 
+Figs. 12(a) and 12(b) 
+This is a c l a s s i c a l first-order system i n which aileron inputs produce 
+a constant r o l l acceleration at high frequency, and a constant r o l l rate a t l o w frequency. 
+The 
+corner frequency is about 1 radlsec, with an associated phase lag of roughly -45 deg, as 
+expected 
+The dominant t i m e constant is thus roughly 1 sec, implying about 2 t o 3 sec t o reach 
+a steady-state r o l l rate 
+13 is very strong over t h e fre- 
+quency range of 0 1 t o 9 0 rad/sec, indicating an excellent identification of the roll-rate 
+dynamics. 
+The coherence function shown i n Fig 
+75-8 
+
+
+PDF_PAGE_11
+Specifications f o r the lateral 
+handling q u a l i t i e s of military air- 
+c r a f t are given i n the M i l Handbook 
+(Ref 
+equivalent-system model f o r the roll- 
+a t t i t u d e dynamics ($/Sa) 
+When r o l l / 
+yaw coupling is minor, t h e specifica- 
+t i o n on the equivalent system r o l l 
+mode t i m e constant (T,) 
+can be inter- 
+preted as the reciprocal of the r o l l 
+response bandwidth (wBw+) I 
+Referring 
+again t o Fig. 12(b), the bandwidth f o r 
+r o l l attitude response t o ailerons is 
+oBW+ 
+= 0 9 rad/sec, yielding a domi- 
+nant t i m e constant of about 1 . 1 sec 
+This s a t i s f i e s the Ref 
+[41 specifica- 
+t i o n (Tr < 1.4 sec) for Level I, Cate- 
+gory A, handling q u a l i t i e s 
+[4]), based on a lower-order 
+Aerodynamic sideslip measure- 
+ments are obtained from a sideslip 
+indicator located roughly 18 f t ahead 
+of the a i r c r a f t c g 
+The sideslip at 
+the c . g , Beg, is calculated by cor- 
+recting the measured signal for posi- 
+tion error based on yaw r a t e and air- 
+speed 
+No corrections a r e made for 
+sensor dynamics because these a r e not 
+f k l t t o be significant within the 
+identification bandwidth 
+The transfer function for side- 
+slip response ( a t the c ,g ) t o rudder 
+inputs 
+BCg/6,, 
+is shown in Figs 
+14(a) 
+and 14(b) 
+The response is character- 
+ized by a l i g h t l y damped second-order 
+mode with a frequency of about 
+1 6 rad/sec 
+High-frequency rudder 
+inputs yield a constant sideslip accel- 
+eration, while low-frequency rudder 
+inputs yield a constant sideslip angle 
+corresponding t > a steady-state yaw 
+rate 
+The coherence function for t h i s 
+case, shown i n Fig 
+15 is strong over 
+the frequency range 0 , l t o 5 0 rad/sec, 
+f a l l i n g off sharply i n the high fre- 
+quency range 
+The rapid and relatively low- 
+frequency decline of the coherence 
+function of Fig 15 is unlike the pre- 
+vious transfer functions considered 
+for the cruise f l i g h t condition 
+The 
+reason f o r t h i s difference is that 
+aerodynamic sideslip is a state vari- 
+able which is one derivative lower 
+than the other rate variables consid- 
+ered previously 
+The response of 
+parameters such as r o l l rate and 
+pitch rate f a l l s off at high fre- 
+quency with a slope of 20 dB/decade 
+However, the aerodynamic s i d e s l i p 
+response as seen i n Fig. 14(a) f a l l s 
+off at the much f a s t e r rate of 
+40 dB/decade 
+Although the input 
+autospectrum is roughly constant 
+over the e n t i r e plotted frequency 
+range, t h i s rapidly f a l l i n g response 
+causes a marked reduction of the 
+output autospectrum and cross- 
+spectrum and an associated decline 
+FLIGHT DATA 
+30] 
+TRANSFER FUNCTION MODEL 
+1 5 ~ 1 
+1 
+1 
+10 
+FREQUENCY rad/sec 
+Figure 1 2 
+Roll-rate response t o aileron (p/6,) 
+i n 
+cruise 
+(a) Transfer-function magnitude 
+(b) Transfer-function phase 
+.6 
+I 
+I 
+I I I 
+I 1 1 1 
+I 
+I 
+I 
+1 
+4 
+I 1 1 1 
+1 
+1 
+10 
+FREQUENCY rad/sec 
+Figure 13 
+Coherence function for roll-rate response 
+identification (y$ ) 
+a P 
+FLIGHT DATA 
+TRANSFER FUNCTION MODEL 
+1 
+1 
+10 
+FREQUENCY radlsec 
+Figure 14 
+cruise 
+(a) Transfer-function magnitude 
+(b) Transfer-function phase 
+Sideslip response t o rudder (BCg/Sr) i n 
+75-9 
+3 
+
+
+PDF_PAGE_12
+FREQUENCY, rad/sec 
+Figure 15. 
+identification ( y i r ~ c g ) 
+Coherence function for sideslip response 
+i n the coherence function 
+s i z e s the advantages of using the 
+higher state derivatives i n identify- 
+ing the high-frequency dynamics and 
+suggests the possible advantages of 
+using a t t i t u d e signals t o identify t h e 
+low-frequency dynamics 
+However, since 
+the yaw mode of i n t e r e s t has a natural 
+frequency of roughly 1 . 6 radlsec, the 
+f a l l i n g coherence f o r frequencies 
+greater than 5 rad/sec is not a severe 
+limitation. 
+This empha- 
+As i n the r o l l axis, handling 
+q u a l i t i e s specifications for the yaw 
+a x i s response are given i n terms of 
+equivalent system m o d e l s 
+These are 
+derived i n the following section. 
+LateraL Transfer Function F i t t i n g 
+Equivalent system f i t t i n g using decoupled and coupled lateral/directional models has 
+been considered i n d e t a i l by Bischoff (Ref 
+[81) 
+With the decoupled model, the responses are 
+f i t independently, using a first-order r o l l rate and a second-order sideslip transfer function. 
+The coupled model approach is based on simultaneous f i t t i n g of the r o l l and sideslip responses 
+t o obtain the following fourth-order transfer functions 
+where p(s)/b,(s) 
+is the Laplace-transformed r o l l r a t e response t o aileron surface deflection, 
+deg/sec/deg-aileron; Lg, 
+t o r damping and natural frequency, respectively; l / T s , l/Tr 
+subsidence modes; <d, Wd 
+respectively; and 
+T$ is the effective t i m e delay 
+is the aileron r o l l s e n s i t i v i t y ; Cg, ug 
+a r e the equivalent Dutch r o l l mode damping and natural frequency, 
+are the second-order numera- 
+a r e the equivalent s p i r a l and r o l l 
+where 
+6, 
+(s)/br(s) is the Laplace-transformed sideslip response t o rudder surface deflection, 
+deg/deg-efevator ; Ygr 
+is t h e rudder sideslip sensitivity; l/TBl, 
+~ / T B ~ , 
+~ / T B ~ 
+a r e the f i r s t - 
+order numerator inverse time-constants; and the denominator parameters are identical t o those 
+of Eq. (9) 
+The effective t i m e delay for the s i d e s l i p response is '6 
+The simultaneous f i t - 
+ting approach is consistent with that used i n the longitudinal axis and allows the identifica- 
+t i o n of the 
+hand1 ing q u a l i t i e s assessment 
+w /ud "coupling effect" in the r o l l response (Eq 
+( 9 ) , which is important i n the 
+The coherence function r e s u l t s of Figs 13 and 15 show a satisfactory identification of 
+both r o l l and s i d e s l i p responses i n the frequency range of 0 1 t o 5 0 rad/sec 
+Based on t h i s 
+f i t t i n g range, the computer program LATFIT (Ref 
+[Ill) was used t o obtain the parameters of 
+Eqs 
+(9) and (lo), simultaneously 
+Since the coherence f o r the roll response is satisfactory 
+over the e n t i r e range of 0 1 t o 10 0 radlsec, t h i s degree of freedom was r e f i t alone, holding 
+the denominator factors constant at the values obtained from the simultaneous solution 
+This 
+procedure is analogous t o that used i n the longitudinal case and optimizes the values of the 
+high-frequency gain and numerator parameters i n the r o l l transfer function. 
+f o r the parameters of Eqs. (9) and (10) are: 
+The f i n a l results 
+Lba = 4 486 degfsec'/deg-aileron 
+= 1 7 630 deg/sec2/in -GUT 
+cg = 0 313 
+u$ = 1 887 radlsec 
+l / T s = 0 063 radfsec 
+l / T r = 1.090 rad/sec 
+Cd = 0.248 
+75-10 
+
+
+PDF_PAGE_13
+wd = 1,581 radlsec 
+T$ = 0.045 sec 
+Ygr = -0 051 
+= -0.408 deg/sec/in.-gped 
+l/Tg, = 0.086 radlsec 
+= 0,818 radlsec 
+1/TB2 
+l/Tg, = 47 946 radlsec 
+l / T s = 0,063 radlsec 
+l/Tr = 1,090 radlsec 
+Cd = 0,248 
+J 
+wd = 1,581 radlsec 
+T~ = 0 026 sec 
+The lateralldirectional transfer function f i t s are plotted as dotted l i n e s for compari- 
+son with the f l i g h t data of Figs 
+1 2 and 14 
+(Fig 
+12) is excellent over the e n t i r e frequency range 
+matching is apparent f o r low frequency inputs 
+f l i g h t data is also excellent (Fig 14) 
+The matching of the roll-response magnitude 
+Only a s l i g h t anomaly i n the phase 
+The agreement between the sideslip f i t and the 
+A s a r e s u l t of the simultaneous f i t t i n g of the r o l l and yaw responses, the transfer 
+function parameters of Eqs, (9) and (10) have clearly retained t h e i r physical significance. 
+The inverse r o l l mode t i m e constant, l / T r = 1 090 radlsec is roughly equal t o the r o l l response 
+bandwidth as expected; both are w e l l within the Level I r o l l response requirements, a s mentioned 
+e a r l i e r . 
+corresponding t o the peak i n the s i d e s l i p Bode magnitude plot (Fig 14(a)) 
+The s m a l l effective 
+time delays f o r the r o l l and s i d e s l i p responses r e f l e c t negligible high-frequency f l e x i b i l i t y 
+and servo-lag effects, and are consistent with the previous longitudinal r e s u l t s 
+The s m a l l 
+t i m e delay i n the sideslip response a l s o supports the omission of corrections for sideslip 
+sensor dynamics 
+The equivalent Dutch r o l l mode is l i g h t l y damped with a natural frequency roughly 
+The r a t i o of the natural frequency of the numerator complex zero (w$) t o the denominator 
+complex pole (wd) is one measure of roll/yaw coupling i n response t o aileron inputs 
+When 
+wg = 
+the numerator and denominator quadratic factors roughly cancel, and the resulting 
+decoupled r o l l response is characterized e n t i r e l y by the roll-mode t i m e constant 
+This case 
+leads t o the best handling q u a l i t i e s f o r a nominal value of the roll-mode t i m e constant. 
+A s 
+the rolllyaw coupling increases, the numerator and denominator quadratic factors of Eq 
+(9) no 
+longer cancel and an undesirable oscillatory component of r o l l rate is generated. 
+Eq 
+( l l ) , the near unity value w$/wd = 1 19 
+Referring t o 
+suggests no such concern for rolllyaw coupling 
+A more direct measure of the roll/yaw coupling is obtained from evaluating the r a t i o of 
+r o l l a t t i t u d e t o sideslip evaluated at the Dutch r o l l frequency 
+(Ref. [4]) that there is a d i r e c t correlation between the 
+latory r o l l rate t o steady r o l l rate for step aileron inputs 
+less than 1.4) suggests a small oscillatory roll-rate componenr and desirable handling quali- 
+ties. 
+A large value causes r o l l response overshoot and related poor tracking characteristics 
+A cross correlation of roll rate and sideslip responses yields 
+such tracking deficiencies, 
+decoupled and f i r s t order i n nature. 
+Therefore, the simple, first-order r o l l rate model could 
+be adopted for future studies 
+1$/81d 
+Analyses show 
+I$/@ld r a t i o and the r a t i o of oscil- 
+A s m a l l value of 
+/+/$Id ( e , g , , 
+\$/$id = 1 21, which implies no 
+The preceding analyses have shown that the r o l l response is largely 
+4. 
+Time Domain Verification of Transfer Function Models 
+The transfer function is the minimum realization description of a linear input-output 
+process. 
+The transfer-function models developed above can be used to generate a l l other fre- 
+quency and t i m e domain information. 
+useful output format f o r t h e linear identification procedure. 
+However, the adequacy of these 
+linearized transfer-function models f o r predicting the time-domain dynamics of nonlinear systems 
+is at question. 
+function which is s t r i c t l y valid only f o r the input amplitudes which w e r e used i n the f l i g h t 
+test experiment. 
+Also, since identification procedures tend t o be tuned t o t h e type of test 
+inputs used (e.g , a sine-sweep), t h e i r accuracy i n predicting responses t o other classes of 
+Therefore, a set of verified transfer function models is a 
+For such nonlinear systems, the transfer function is actually a describing 
+75-11 
+d 
+
+
+PDF_PAGE_14
+inputs (e,g., steps, doublets) is often uncertain. 
+the previous section between the transfer-function fits and the frequency-response f l i g h t data 
+never exceeded t h e allowable handling q u a l i t y specifications, the importance of these discrep- 
+ancies i n predicting t i m e response behavior is still at issue. 
+i n t h e following section. 
+Lastly, although the mismatches observed i n 
+These questions are addressed 
+The basic verification approach is t o compare the s t e p response of the a i r c r a f t with the 
+response of t h e transfer-function model driven by the same recorded control inputs. 
+responses were completed f o r a l l f l i g h t conditions with the s t a b i l i z a t i o n system disengaged i n 
+order t o show that the extracted transfer-function models are valid f o r the bare-airframe con- 
+figuration 
+The transfer functions for t h e hover f l i g h t condition and those extracted i n t h e 
+present analysis f o r the cruise f l i g h t condition are summarized i n Table 1. For i l l u s t r a t i v e 
+consistency, a l l t r a n s f e r functions are referenced t o the three surface deflections: 
+aileron, and rudder 
+f i r s t 
+The step 
+elevator, 
+The v e r i f i c a t i o n r e s u l t s f o r t h e hover f l i g h t condition are presented 
+TABLE 1.- SUMMARY OF IDENTIFIED 
+TRANSFER-FUNCTION MODELS~ FOR THE 
+HOVER AND CRUISE FLIGHT CONDITIONS 
+Hover (V = 0) 
+Cruise (V = 170 knots, indicated) 
+Longitudinal dynamics 
+a~ 
+1,597 e-' 
+'e 
+554, 
+1791 ; gldeg- elevator 
+; g/in.- 
+power lever 
+_ - 
+a~ 
+-0.108 e-' 
+O o 5 ' 
+& C 
+(0 115) 
+- = 
+9 = -2.607s(-0.075) 
+(0.686)e-' 
+044s 
+6e 
+(0 115)(1 597)[-0 978, 0 3931 ' 
+q - -7.727(1.035)e-' 
+. 
+[0 554, 2 1791 
+' 
+6 e 
+- _ 
+degjsecldeg . elevator 
+deglsecjdeg- elevator 
+Lateral dynamics 
+-~ 
+- - 
+p - 3,959s(-O,092)(0.570)e-' 
+OZ2' 
+. 
+6a 
+(0 108) (1 429)f-0 581, 0.4271 ' 
+p - 4.486s[O 313, 1.887le-0 
+0 4 5 s . 
+6a 
+(0.063)(1 090)[0 248, 1.5811 ' 
+- _ 
+deglsecldeg- aileron 
+deglsecldeg - a i l e r o n 
+- = 
+r 
+0,708 
+(o e-' 
+108) *19s ; deg/sec/deg - rudder 
+', 
+= -0.051(0.086)(0.818)(47,946)e-0~026s 
+~ 
+(0 063) (1.090) 10 248, 1 5811 
+6r 
+6r 
+I 
+r 
+0,398(-0,310)[0.762, 
+0.524]e-' 
+046s 
+6a 
+- = 
+(0 108)(1.429)[-0 581, 0 4271 
+' 
+degldeg - rudder 
+deglsecldeg - aileron 
+aShorthand notation: 
+[5. w] implies 
+s2 + 25ws + u2, 5 = damping r a t i o , w = undamped natural 
+frequency (radlsec); and (1/T) implies 
+s + (l/T), radlsec 
+Hover Flight Condition 
+A co-plot of the transfer-function model f o r yaw rate response t o rudder r/6, 
+(Table 1) 
+with the frequency response data of Ref 
+131 is presented i n Fig 
+16 
+The transfer-function 
+model matches the f l i g h t data very w e l l at high frequency i n both magnitude and phase but not as 
+w e l l at low frequency 
+Even so, the f i t m e e t s the mismatch criteria of Ref 
+[4] f o r handling 
+q u a l i t i e s assessment 
+which the f i t is excellent f o r t h i s case 
+These c r i t e r i a emphasize the p i l o t i n g crossover range of 1-3 radlsec, i n 
+When the transfer-function model is driven with one of the swept sine-wave inputs used i n 
+The transfer-function model and flight-data responses f o r a typical frequency sweep 
+the identification procedure, the time-domain ramifications of model mismatch are c l e a r l y 
+exposed. 
+a r e compared i n Fig 17 
+The input amplitude shown i n Fig. 17(a) is roughly 220% of the maximum 
+pedal t r a v e l producing a yaw response amplitude of roughly +20 deglsec, as seen i n Fig. 17(b). 
+The f l a t spot i n the yaw rate signal a t 50 sec is due t o yaw-rate sensor limiting. 
+the match between the transfer-function response and the f l i g h t data is excellent. 
+and form of the model response matches t h e f l i g h t data very w e l l , with the only noticeable 
+anomaly being an underestimation of the peak amplitudes f o r low-frequency inputs. 
+r e s u l t of the fit mismatch at low frequency (Fig 
+r a t e l y captures the essence of the yaw-rate response over t h e frequency range of i n t e r e s t , and 
+can be considered adequate f o r sine-wave type inputs 
+I n general, 
+The phasing 
+This is a 
+16) 
+Thus, the t r a n s f e r function model accu- 
+75-12 
+
+
+PDF_PAGE_15
+The f l i g h t data for yaw rate 
+response t o a step pedal input is shown 
+i n Figs. 18(a) and 18(b) 
+The control 
+deflection represents roughly 40% of 
+the maximum control power, a f a i r l y 
+large amplitude input. 
+The maximum 
+yaw-rate response is about 35 deglsec, 
+which is 75% greater than the peak 
+values obtained i n the frequency 
+sweeps 
+The transfer-function model 
+response co-plotted i n the dashed 
+curve of Fig 18(b) compares extremely 
+w e l l with t h e f l i g h t data over the 
+e n t i r e run- even f o r this f a i r l y large 
+input amplitude case 
+Analyses on t h e 
+vertical response t o collective 
+(aZ/6,) 
+showed the same excellent 
+response correlation. This is 
+expected since the response dynamics 
+for the heave and yaw axes are nearly 
+the same (Table 1) 
+The step-response run lengths of 
+roughly 10 sec emphasize the high- and 
+mid-frequency ranges, allowing only 
+enough t i m e for about one t i m e constant 
+(TY = 9 - 3 sec) 
+frequency mismatches never r e a l l y have 
+enough t i m e t o build up 
+This is 
+typical of step-response data and 
+i l l u s t r a t e s the advantages of a sym- 
+metrical sine-sweep input 
+Clearly, 
+however, the response i n the f i r s t few 
+seconds is the key concern of the 
+p i l o t 
+match c r i t e r i a being most stringent i n 
+the mid-frequency range 
+Thus, the low- 
+This is reflected i n the m i s - 
+So f a r , the t i m e response 
+results show that the simple transfer- 
+function models match the step-response 
+characteristics very well 
+Also, the 
+use of a very low-order description has 
+avoided any problems i n over-tuned 
+modeling 
+I n general, however, good 
+t i m e history matching is highly depen- 
+dent on the level of spurious inputs 
+t o the model due to: 
+(1) improper 
+setting of i n i t i a l conditions, 
+(2) control inputs required t o sup- 
+press turbulence, and (3) unmodeled 
+control coupling 
+When the model 
+dynamics are stable, the e f f e c t s of 
+these spurious inputs d i e out with 
+time, and response matching presents 
+no particular prDblems 
+Such cases 
+are the easiest for time-domain iden- 
+t l f i c a t i o n as w e l l 
+en 
+- 
+0 
+U 
+-100- 
+Lo . 
+501 
+L 
+- --___ 
+- - - 
+(b) 
+-250 
+t 
+* 
+8 
+I 
+I I I I 
+i 
+1 
+1 
+10 
+FREQUENCY rad/sec 
+Figure 16 
+Yaw-rate response t o rudder (r/6r) i n 
+hover 
+(a) Transfer-function magnitude 
+(b) Transfer-function phase 
+- 
+FLIGHT DATA 
+--- TRANSFER FUNCTION MODEL 
+10- 
+en 
+0 - 
+-10- 
+d 
+( b) 
+-50 ! 
+I 
+I 
+I 
+0 
+20 
+40 
+60 
+80 
+100 
+TIME, sec 
+Figure 1 7 
+function model responses t o a pedal frequency-sweep 
+i n hover 
+(a) Rudder surface deflection 
+(b) Yaw- 
+rate response 
+Comparison of a i r c r a f t and transfer- 
+When the dynamics of the transfer-function response are unstable, the transients due t o 
+these spurious inputs grow with t i m e 
+Therefore, s m a l l errors i n the choice of i n i t i a l condi- 
+tions, o r small inputs required t o suppress the response t o turbulence, can create gross differ- 
+ences between the transfer-function response and the f l i g h t data. 
+acquisition and maintenance of a steady t r i m condition is often not possible, further complicat- 
+ing the proper i n i t i a l i z a t i o n of the transfer function calculations 
+i t y of t h e transfer-function dynamics increases, so do the problems of time-history matching. 
+Not surprisingly, these are a l s o the worst cases for time-domain identification, 
+A l s o , f o r unstable vehicles, 
+A s the level of instabil- 
+The roll-rate-to-aileron 
+transfer function (Table 1) is dominated 
+oscillation having a time-to-double 
+of about 2.8 sec 
+This r e f l e c t s t h e 
+errors and inexact control inputs and i n i t i a l conditions w i l l propagate. 
+i n the r o l l axis was achieved s t a r t i n g from a f a i r l y steady i n i t i a l trim 
+Figs. 19(a) and 19(b) 
+The assumed i n i t i a l condition is determined from 
+by a n unstable r o l l 
+speed at which the 
+A good step response 
+condition as shown i n 
+the average of the 
+75-13 
+
+
+PDF_PAGE_16
+FLIGHT DATA 
+TRANSFER FUNCTION MODEL 
+8 10 
+0 
+I 
+201 
+. 
+U P 
+P -20 o
+.
+/
+=
+-
+-
+-
+-
+r
+ 
+---_ 
+i 
+-40 
+-401 
+Ib) 
+0 
+5 
+10 
+15 
+20 
+TIME, sec 
+-60 , 
+, 
+I 
+Figure 18 
+Comparison of a i r c r a f t and transfer- 
+function model responses t o a step rudder input i n 
+hover 
+(a) Rudder surface deflection 
+(b) Yaw- 
+rate response 
+- 
+FLIGHT DATA 
+--- TRANSFER FUNCTION MODEL 
+I-- 
+( a) 
+-10 ! 
+401. 
+( b) 
+-40 ! 
+0 
+5 
+10 
+15 
+TIME, sec 
+Figure 19 
+function model responses t o a step aileron input i n 
+hover 
+(a) Aileron surface deflection 
+(b) Roll- 
+rate response. 
+Comparison of a i r c r a f t and transfer- 
+trim data as shown i n the figures. 
+responses of the transfer function and 
+f l i g h t data match very w e l l f o r the 
+first f u l l cycle ( 4 sec) and begin t o 
+diverge after about 7 sec from the 
+beginning of the step input 
+Even so, 
+the form of the response as character- 
+ized by the relative damping, natural 
+frequency, and amplitude is w e l l modeled 
+by the transfer function 
+The t i m e 
+h i s t o r i e s diverge a f t e r about 7 sec, 
+but t h i s w i l l not be important f o r such 
+highly unstable systems (cd = -0.581) 
+since p i l o t regulation would obviously 
+be applied within t h e f i r s t few seconds 
+of the response; this again r e f l e c t s 
+the need t o match properly mid- and 
+high-frequency characteristics. 
+The 
+In the pitch axis, the e f f e c t s 
+of the unstable dynamics become far 
+worse 
+The dominant pitch o s c i l l a t i o n 
+is very unstable (csp = -0,978, 
+Table 1) , having a time-to-double 
+amplitude of 1 8 see 
+This is almost 
+half of the value f o r the r o l l axis 
+Acquisition and maintenance of a 
+(mathematically) steady pitch t r i m i n 
+the hover f l i g h t condition is nearly 
+impossible, even with the SCAS engaged. 
+Also, the s m a l l pitch inputs needed t o 
+suppress turbulence responses cause a 
+rapid divergence between the model and 
+f l i g h t data t i m e h i s t o r i e s . Therefore, 
+verification of the pitch response model 
+is not feasible 
+This is a typical 
+problem f o r identification schemes based 
+on step inputs and further i l l u s t r a t e s 
+the advantages of using the symmetric 
+swept sine-wave forms 
+Cruise Flight Condition 
+A s seen from the transfer- 
+function models of Table 1, the dynam- 
+i c s of the cruise f l i g h t condition are 
+very s t a b l e i n comparison t o those of 
+the hover f l i g h t condition 
+None of the 
+problems associated with i n i t i a l condi- 
+tion matching o r diverging transients 
+was encountered i n correlating the t i m e 
+h i s t o r i e s for t h i s f l i g h t condition. 
+Unlike the hover f l i g h t condition, 
+open-loop step responses were easily 
+obtained and repeatable for a l l axes. 
+The pitch-rate response t o step 
+elevator deflection is shown i n 
+Figs 20(a) and 20 (b) 
+The elevator 
+input corresponds t o about 40% of the 
+maximum control deflection. The com- 
+parison between the model response and 
+the f l i g h t data is seen t o be excellent 
+over t h e majority of t i m e history 
+are due t o the inadequacy of the short period approximation i n modeling the low-frequency 
+(phugoid) dynamics (Fig 8 ) 
+Even so, the short period approximation clearly gives an excellent 
+characterization of the important i n i t i a l response dynamics 
+The s l i g h t deviations occurring toward the end of the run 
+The comparison of the transfer-function model and f l i g h t data f o r the normal acceleration 
+This is mostly due t o the mismatch between the assumed second-order model and the f l i g h t 
+response t o the step elevator input of Fig 
+axis. 
+data at mid frequency (Fig 10(a)) 
+Referring t o Fig. 20(c), the transfer function overpredicts 
+the maximum acceleration response by nearly 40% 
+Despite t h i s discrepancy, the initial response 
+20(a) is not nearly as good as it is i n t h e pitch 
+75-14 
+
+
+PDF_PAGE_17
+slope, rise t i m e , and percent overshoot 
+3- 
+are a l l well predicted; therefore, the 
+2 - 
+transfer-function model is a useful 
+characterization of the acceleration 
+response 
+This comparison further indi- 
+4 
+cates the need t o investigate sources 
+1- 
+5 
+of unmodeled dynamics (e .g, , engine 
+rg 
+response) i n the vertical axis. 
+0 - 
+The a i r c r a f t r o l l rate response 
+t o a step aileron input is shown i n 
+Figs. 21(a) and 21(b) 
+The transfer- 
+function model shown i n t h e dashed 
+l i n e accurately predicts t h a t the 
+response w i l l be predominantly first 
+order, with no overshoot o r oscilla- 
+tory tendency 
+This corroborates the 
+same conclusion made earlier on the 
+basis of the s m a l l 
+r a t i o s 
+The sideslip response t o a 
+step rudder input is shown i n 
+Figs. 22(a) and 22(b) with the appro- 
+p r i a t e corrections f o r the nose-boom 
+position 
+The transfer-function model 
+shown i n the dashed curve matches the 
+f l i g h t data f a i r l y w e l l for the f i r s t 
+10 secq Thereafter, the responses 
+diverge, probably due t o a gust 
+encounter o r some other aerodynamic 
+interference effect a t the sideslip 
+vane during the recovery phase 
+Once 
+again, the character of the step 
+response is w e l l predicted, with an 
+accurate modeling of the rise t i m e , 
+overshoot, and steady s t a t e sideslip 
+This verification study shows 
+w,$/wd and I,$/Bld 
+the u t i l i t y of f a i r l y simple transfer- 
+function models i n predicting the 
+transient responses t o relatively 
+large and varied inputs 
+High- 
+frequency and mid-frequency spectral 
+response matching is clearly e s s e n t i a l 
+for accurate step response prediction, 
+as it is for handling q u a l i t i e s 
+assessments 
+T i m e response matching 
+f o r unstable transfer functions i s 
+very d i f f i c u l t because of the inabil- 
+i t y t o acquire and maintain a steady 
+i n i t i a l t r i m , and t h e tendency toward 
+rapidly growing transients due t o 
+s m a l l unmodeled excitations 
+- 
+FLIGHT DATA 
+--- TRANSFER FUNCTION MODEL 
+-1 I(a) 
+, 
+I 
+I 
+I 
+I 
+I 
+1 
+2.51 
+( b) 
+-7.5 ! 
+I 
+I 
+I 
+I 
+751 
+I (c) 
+-.25 I 
+I 
+I 
+I 
+I 
+I 
+0
+1
+ 
+3 
+5 
+7 
+9 
+TIME, sec 
+Figure 20, 
+Comparison of a i r c r a f t and transfer- 
+function model responses t o a step elevator input i n 
+cruise 
+(a) Elevator surface deflection. 
+(b) Pitch- 
+rate response 
+(c) Normal (positive downward) accel- 
+eration response 
+FLIGHT DATA 
+- 
+--- TRANSFER FUNCTION MODEL 
+I 
+0 
+2.5 
+5.0 
+7.5 
+10.0 
+12.5 
+TIME, sec 
+Figure 21 
+Comparison of a i r c r a f t and transfer- 
+function model responses to a step aileron input i n 
+cruise 
+(a) Aileron surface deflection. 
+(b) Roll- 
+rate response I 
+75-15 
+
+
+PDF_PAGE_18
+FLIGHT DATA 
+TRANSFER FUNCTION MODEL - 
+0 t----- 
+( b) 
+-5 i----T------r 
+- 
+I 
+7 
+0 
+5 
+10 
+15 
+TIME, sec 
+Figure 22. 
+Comparison of a i r c r a f t and transfer-function model responses t o a step rudder input 
+i n cruise. 
+(a) Rudder surface deflection 
+(b) Sideslip response ( a t the c.g.). 
+5. 
+Conclusions 
+Some s p e c i f i c conclusions from t h i s study of the open-loop dynamics of the XV-15 tilt- 
+rotor a i r c r a f t are. 
+1) The response c h a r a c t e r i s t i c s for the cruise f l i g h t condition are very s t a b l e and 
+decoupled, 
+The handling quality parameters meet or exceed Level 11, Category A, requirements 
+f o r fixed-wing military a i r c r a f t 
+2) 
+The mismatch f o r t h i s response is probably due t o the unmodeled rotor rpm dynamics. 
+3) The step responses of the identified transfer functions and the a i r c r a f t generally 
+Time-domain v e r i f i c a t i o n of 
+Standard lower-order equivalent models adequately match the identified cruise dynam- 
+ics i n a l l degrees-of-freedom except f o r the normal acceleration responses t o elevator deflec- 
+tion 
+match very w e l l f o r both the hover and cruise f l i g h t conditions 
+the unstable a t t i t u d e dynamics i n hover is very d i f f i c u l t because s m a l l e r r o r s at the beginning 
+of the run cause the responses of the model and the a i r c r a f t t o diverge rapidly. 
+The frequency-domain approach has proven t o be a r e l a t i v e l y simple and accurate means 
+f o r extracting the bare-airframe dynamics of the XV-15 
+transfer-function models f o r handling q u a l i t i e s and control-system studies has been shown i n 
+the frequency and time domains. 
+The u t i l i t y of the derived lower order 
+References 
+Samuel W. Ferguson, A Mathematical Model f o r Real-Time Flight Simulation of a Generic T i l t 
+Rotor Aircraft, NAS2-11317, 1983 
+N 
+N. Batra, R. L Marr, and M 
+M 
+Joglekar, A Generic Simulation Model f o r T i l t Rotor 
+Aircraft, Bell-Boeing Report 901-985-002, 
+1983 
+Mark B 
+Tischler, Joseph G , M 
+Leung, and Daniel C 
+Dugan, Frequency-Domain Identification 
+of XV-15 Tilt-Rotor Aircraft Dynamics, A I M Paper 83-2695, Las Vegas, Nev., 1983 
+Roger H. Hoh, David G Mitchell, Irving L Ashkenas, Richard H. Klein, Robert K. Heffley, 
+and J. Hodgkinson, Proposed MIL Standard and Handbook-Flying Qualities of A i r Vehicles, 
+Vol. 11: Proposed MIL Handbook, AFWAL-TR-82-3081, 
+1982. 
+Helicopter Flying and Ground Handling Qualities; General Requirements For, MIL-H-8501AY 
+1961. 
+75-16 
+J 
+
+
+PDF_PAGE_19
+6) 
+Charles R. Chalk, David L. Key, John Kroll, Jr., Richard Wasserman, and Robert C , Radford, 
+Background Information and User Guide f o r MIL-F-83300- 
+Military Specification 
+Qualities of Piloted V/STOL Aircraft, AFFDL-TR-70-88, 
+1971. 
+Bernard Etkin, The Turbulent Wind and Its Effect on Flight ( A I M Wright Brothers Lecture, 
+1980), UTIAS Review 44, Aug. 1980. 
+Flying 
+7) 
+8) David E. Bischoff and Robert E Palmer, Investigation of Low Order Lateral Directional 
+Transfer Function Models for Augmented Aircraft, AIAA Paper 82-1610, San Diego, C a l i f , 
+1982. 
+9) M. E 
+Givan, W 
+J = LaManna, and J Hodgkinson, LONFIT User's Guide, McDonnell Aircraft 
+Company, O c t . 1978 
+10) 
+W 
+E a r l H a l l , Jr,, J 
+G 
+Bohn, and R 
+S Hansen, Preliminary Flight T e s t Planning f o r xV-15 
+T i l t Rotor Aircraft, Systems Control, Inc. Report CR-152392, Aug. 1979 
+11) M. E a Givan, W 
+J LaManna, and J Hodgkinson, LATFIT User's Guide, McDonnell Aircraft 
+Company, O c t . 1978. 
+75-17 
+
+
+PDF_PAGE_20
+1 Report No. 
+NASA TM 86009 
+DC, 20546 
+I 
+5. Supplementary Notes 
+2. Government Accession No. 
+3. Recipient's Catalog No. 
+Point of contact: 
+Mark B. Tischler, Ames Research Center, MS 211-2, 
+Moffett Field, CA 94035 (415) 965-5563 o r FTS 448-5563 
+Abstrafkequency-domain methods are used t o extract t h e open-loop dynamics of 
+the XV-15 t i l t - r o t o r a i r c r a f t from f l i g h t test data for the c r u i s e condition 
+(V = 170 knots). 
+function forms t o i d e n t i f y equivalent model c h a r a c t e r i s t i c s . 
+The associated 
+handling q u a l i t y parameters m e e t or exceed Level 11, Category A, requirements 
+f o r fixed-wing m i l i t a r y aircraft. 
+S t e p response matching is used t o v e r i f y 
+the time-domain f i d e l i t y of t h e transfer-function models for t h e c r u i s e 
+and hover f l i g h t conditions. 
+The transient responses of the model and 
+a i r c r a f t are i n c l o s e agreement i n a l l cases, except f o r the normal acceler- 
+a t i o n response t o elevator deflection i n cruise. 
+This discrepancy is 
+probably due t o t h e unmodeled r o t o r rpm dynamics. 
+The u t i l i t y of the 
+frequency-domain approach f o r dynamics i d e n t i f i c a t i o n and analysis is c l e a r l y 
+demonstrated. 
+The frequency responses are numerically f i t t e d with t r a n s f e r 
+4. Title and Subtitle 
+IDENTIFICATION AND VERIFICATION OF FREQUENCY-DOMAIN 
+MODELS FOR XV-15 TILT-ROTOR AIRCRAFT DYNAMICS 
+7 Author(s1 
+Mark B. Tischler,* Joseph G. M. 
+Leung and 
+Daniel C. Dugan 
+9. Performing Organization Name and Address 
+*Aeromechanics Laboratory, U.S. 
+Army Research 
+and Technology Laboratories-AVSCOM,Ames Research 
+Center and Ames Research Center, Moffett Field, CA 
+2 Sponsoring Agency Name and Address 
+U.S.Army Aviation Systems Command, S t . Louis, MO 
+and National Aeronautics and Space Admn, Washington 
+, 
+. 
+5. Report Date 
+August 1984 
+6. Performing Organization Code 
+8. Pwforming Organization Report No. 
+A-9851 
+10. Work Unit No. 
+K-1585 
+11 Contract or Grant No. 
+13. Type of Report and Period Covered 
+Technical Memorandum 
+14 Sponsoring Agency Code 
+18. Distribution Statement 
+Unlimited 
+Subject category: 08 
+9. Security Classif (of this report) 
+Unc 1. 
+20. Security Classif ( 
+Uncl. 
+'For sale by the National Technical Information Service, Springfield, Virginia 221 61 
+1 
+this page) 
+21 
+NO. of pages 
+22. Rice' 
+20 
+A02 

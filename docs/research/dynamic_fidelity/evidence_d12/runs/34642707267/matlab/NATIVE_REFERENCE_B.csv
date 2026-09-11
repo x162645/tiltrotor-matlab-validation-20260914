@@ -1,0 +1,5 @@
+variant,b
+central,0.151605283050266
+left_secant,0.146139974709911
+right_secant,0.157070591390622
+central_no_unknown_root,0.146424635113971

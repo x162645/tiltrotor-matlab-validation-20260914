@@ -1,0 +1,60 @@
+{
+  "status": "EXECUTED_AND_READ_BACK_REQUIRED",
+  "execution": "Python, not MATLAB",
+  "python": "3.12.14 (main, Aug 13 2026, 02:48:23) [GCC 11.4.0]",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "pandas": "2.2.3",
+  "platform": "Linux-6.8.0-1064-azure-x86_64-with-glibc2.35",
+  "elapsed_seconds": 1.1054868030000051,
+  "source": {
+    "id": "HOVER_AZ_POWER",
+    "role": "PUBLISHED_FLIGHT_IDENTIFIED_DESCRIPTOR_NOT_RAW_FLIGHT_DATA",
+    "numerator": [
+      -0.0098,
+      0.0
+    ],
+    "denominator": [
+      1.0,
+      0.105
+    ],
+    "delay_s": 0.0074,
+    "frequency_band_rad_s": [
+      0.1,
+      3.0
+    ],
+    "input": "power_lever_percent_increase",
+    "input_unit": "percentage_point",
+    "output": "vertical_acceleration_down",
+    "output_unit": "g",
+    "source_report": "NASA_TM_89428",
+    "pdf_pages_1based": [
+      110,
+      124
+    ],
+    "printed_pages": [
+      87,
+      101
+    ],
+    "equation": "4.8",
+    "source_pdf_sha256": "252f7df0c0e05bd8dece0a923d337df2231c0148f897f0376f930f6102b90ba2",
+    "source_git_commit": "b5a9c20833d65b21a192417ffc54433047d7fdb8",
+    "source_git_path": "docs/research/dynamic_fidelity/evidence/INPUT_CASES_SNAPSHOT.json",
+    "source_git_blob": "f606c6cab74793af0126de7ad72b53ebc3c87bb3",
+    "source_action_artifact_id": 10175006778,
+    "data_use": "previously seen development/reference source; not new holdout",
+    "absolute_matched_comparison_ready": false
+  },
+  "fixed_dependency_sha256": {
+    "code/d11_tilt_channel.py": "e64492a5ae717614d72cf273b0c788833a621575d52db820ddc6b2a1f02b7367",
+    "data/OARF_RUN15_EXISTING_STATIC_POINTS.csv": "8bfd600433b0658a413602b5250e899e38394d951911eeb328eb19eeae121e5d",
+    "data/C81_EXISTING_SMALL_ANGLE_EXCERPT.csv": "799a64f5613ccc183f55314c924f9d6c8c97438532fe9424fe0fb6c2746b71f5"
+  },
+  "script_sha256": "ce8afffa73e6c3fb8a380391531be050c0f7601b49a2b3db162db1b403d4158e",
+  "checks_passed": 372,
+  "new_observations": 0,
+  "physical_parameters_fitted": 0,
+  "absolute_flight_validation": false,
+  "new_holdout": false,
+  "restriction": "Normalized mismatch is conditional on an unknown constant input map; an unconstrained dynamic map cannot be excluded."
+}
