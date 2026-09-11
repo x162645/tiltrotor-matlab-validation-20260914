@@ -1,0 +1,66 @@
+check,pass,value
+workpoint strict numerical residual,1,6.4117268531542e-08
+actual inflow equals explicit state,1,0
+up velocity sign equation,1,0
+specific force excludes gravity,1,0
+inertial acceleration differs from body derivative by omega cross V,1,0
+fixed-state inflow perturbs actual rotor loads,1,-270.302657249427
+transient is valid without claiming steady closure,1,2.57094264742343
+state and target labelled separately,1,0
+actual collective excitation changes thrust,1,762.025988990405
+actual cyclic excitation changes pitch moment,1,-39.5878930839084
+legacy static exact identity 1,1,0
+within-call reuse exact force identity 1,1,0
+legacy static exact identity 2,1,0
+within-call reuse exact force identity 2,1,0
+legacy static exact identity 3,1,0
+within-call reuse exact force identity 3,1,0
+reject d02:InvalidTimeConstants,1,1
+reject d02:InvalidTimeConstants,1,1
+reject d02:UnsupportedMode,1,1
+reject total_forces_moments:InvalidDynamicInflow,1,1
+reject d02:InvalidState,1,1
+reject d02:WorkpointMismatch,1,1
+reject d02:InvalidOutputState,1,1
+dynamic ABCD finite,1,0
+dynamic ch1 0.2deg effective excitation,1,0.14221936015253
+dynamic ch1 0.2deg primary linear agreement,1,0.0033142127039202
+dynamic ch1 0.2deg derivative-step response,1,1.42690359044474e-06
+dynamic ch1 actual/target trace validity,1,0
+dynamic state-history equality,1,0
+dynamic ch1 0.1deg effective excitation,1,0.07122264667244
+dynamic ch1 0.1deg primary linear agreement,1,0.00165207843420445
+dynamic ch1 0.1deg derivative-step response,1,1.42464037152192e-06
+dynamic ch1 actual/target trace validity,1,0
+dynamic state-history equality,1,0
+dynamic ch2 0.2deg effective excitation,1,0.00371126727749448
+dynamic ch2 0.2deg primary linear agreement,1,0.000478348771284677
+dynamic ch2 0.2deg derivative-step response,1,1.18339653853758e-06
+dynamic ch2 actual/target trace validity,1,0
+dynamic state-history equality,1,0
+dynamic ch2 0.1deg effective excitation,1,0.00185602571853806
+dynamic ch2 0.1deg primary linear agreement,1,0.00023771599677862
+dynamic ch2 0.1deg derivative-step response,1,1.18314654961627e-06
+dynamic ch2 actual/target trace validity,1,0
+dynamic state-history equality,1,0
+quasisteady ABCD finite,1,0
+quasisteady ch1 0.2deg effective excitation,1,0.143248455680534
+quasisteady ch1 0.2deg primary linear agreement,1,0.00332802015745253
+quasisteady ch1 0.2deg derivative-step response,1,1.44128548337218e-06
+quasisteady ch1 actual/target trace validity,1,0
+quasisteady ch1 0.1deg effective excitation,1,0.0717380056564766
+quasisteady ch1 0.1deg primary linear agreement,1,0.00165859538033678
+quasisteady ch1 0.1deg derivative-step response,1,1.43899957768896e-06
+quasisteady ch1 actual/target trace validity,1,0
+quasisteady ch2 0.2deg effective excitation,1,0.00371126825035617
+quasisteady ch2 0.2deg primary linear agreement,1,0.000478036986850344
+quasisteady ch2 0.2deg derivative-step response,1,1.18339670976263e-06
+quasisteady ch2 actual/target trace validity,1,0
+quasisteady ch2 0.1deg effective excitation,1,0.00185602588572993
+quasisteady ch2 0.1deg primary linear agreement,1,0.000237612701828939
+quasisteady ch2 0.1deg derivative-step response,1,1.18314692437352e-06
+quasisteady ch2 actual/target trace validity,1,0
+dynamic ch1 amplitude refinement,1,0.249637412363501
+dynamic ch2 amplitude refinement,1,0.248528101715536
+quasisteady ch1 amplitude refinement,1,0.249582340810552
+quasisteady ch2 amplitude refinement,1,0.248582089923671

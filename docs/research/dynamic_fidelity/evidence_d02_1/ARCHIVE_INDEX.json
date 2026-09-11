@@ -1,0 +1,366 @@
+{
+  "role": "FIXED_EXECUTED_D02_EVIDENCE_NOT_NEW_MODEL_RUN",
+  "archival_workflow_run": "34582649604",
+  "artifacts": [
+    {
+      "run_id": 34580750797,
+      "artifact_id": 10191624893,
+      "source_commit": "13ca086703a56d4556a9b7bcdac53e8ee740a0ba",
+      "zip_sha256": "839e3f223abb442af4aae6515bc6bad5583305e79d041a6491113c23d67a9c4b",
+      "expected_checks_passed": false,
+      "role": "FIRST_EXECUTION_ONE_STRICT_WORKPOINT_CHECK_FAILED_RETAINED"
+    },
+    {
+      "run_id": 34581649374,
+      "artifact_id": 10191965719,
+      "source_commit": "d35cb829c04242a44800ff16071bec93e4315e56",
+      "zip_sha256": "f5d1f31af0de97a782875bc500a57991358f457e245aaec0f316f7896f6325fb",
+      "expected_checks_passed": true,
+      "role": "REFINED_WORKPOINT_65_CHECKS_PASSED_WITH_DIRECTIONAL_LIMITS"
+    }
+  ],
+  "files": [
+    {
+      "path": "run_34580750797/CHECKS.csv",
+      "sha256": "ca084d81147419b152e9c441e51315ba70bfa66121037b549b08c57927890b91",
+      "bytes": 3443,
+      "source_member": "CHECKS.csv",
+      "source_commit": "13ca086703a56d4556a9b7bcdac53e8ee740a0ba",
+      "run_id": 34580750797,
+      "artifact_id": 10191624893
+    },
+    {
+      "path": "run_34580750797/D02_CONSISTENCY_RESULTS.mat",
+      "sha256": "669ee2eedb94e4b05d805178d4612c545dee73649810838ec486d8e2b8be2be1",
+      "bytes": 440185,
+      "source_member": "D02_CONSISTENCY_RESULTS.mat",
+      "source_commit": "13ca086703a56d4556a9b7bcdac53e8ee740a0ba",
+      "run_id": 34580750797,
+      "artifact_id": 10191624893
+    },
+    {
+      "path": "run_34580750797/COST.csv",
+      "sha256": "04383e959f4db1bf3c30104c6948d1d096045efa9f69063c733ccd72c121d08d",
+      "bytes": 1056,
+      "source_member": "COST.csv",
+      "source_commit": "13ca086703a56d4556a9b7bcdac53e8ee740a0ba",
+      "run_id": 34580750797,
+      "artifact_id": 10191624893
+    },
+    {
+      "path": "run_34580750797/DIRECTIONAL_DERIVATIVE_DIAGNOSTIC.csv",
+      "sha256": "d0d1fab0a510352ddcaf337b6e203d2593eb8bf519f310a567c842e5cc3dbd0f",
+      "bytes": 1134,
+      "source_member": "DIRECTIONAL_DERIVATIVE_DIAGNOSTIC.csv",
+      "source_commit": "13ca086703a56d4556a9b7bcdac53e8ee740a0ba",
+      "run_id": 34580750797,
+      "artifact_id": 10191624893
+    },
+    {
+      "path": "run_34580750797/DYNAMIC_QUASISTEADY_COMPARISON.csv",
+      "sha256": "241a59577b5ad5bd9a0a3d545e8c7123fbacb6e092890fbc3cb2861e6a59f4b1",
+      "bytes": 5358,
+      "source_member": "DYNAMIC_QUASISTEADY_COMPARISON.csv",
+      "source_commit": "13ca086703a56d4556a9b7bcdac53e8ee740a0ba",
+      "run_id": 34580750797,
+      "artifact_id": 10191624893
+    },
+    {
+      "path": "run_34580750797/LINEAR_NONLINEAR_COMPARISON.csv",
+      "sha256": "d79b2bc85c5a685de12a0d36be8619f2e9c39e350e8a4be54a4a97acab980811",
+      "bytes": 14486,
+      "source_member": "LINEAR_NONLINEAR_COMPARISON.csv",
+      "source_commit": "13ca086703a56d4556a9b7bcdac53e8ee740a0ba",
+      "run_id": 34580750797,
+      "artifact_id": 10191624893
+    },
+    {
+      "path": "run_34580750797/MATLAB_LOG.txt",
+      "sha256": "5cb554a724191add5204c8bab3500dc3241d19ce7b83e0b2a25de5ca5af7e536",
+      "bytes": 7776,
+      "source_member": "MATLAB_LOG.txt",
+      "source_commit": "13ca086703a56d4556a9b7bcdac53e8ee740a0ba",
+      "run_id": 34580750797,
+      "artifact_id": 10191624893
+    },
+    {
+      "path": "run_34580750797/RUN_MANIFEST.json",
+      "sha256": "36ceb952046786711aef2a6aa3cc96c7e08fdd978253e30a4f779e20d6ac63f5",
+      "bytes": 867,
+      "source_member": "RUN_MANIFEST.json",
+      "source_commit": "13ca086703a56d4556a9b7bcdac53e8ee740a0ba",
+      "run_id": 34580750797,
+      "artifact_id": 10191624893
+    },
+    {
+      "path": "run_34580750797/SOURCE_INDEX.json",
+      "sha256": "f8b6d799f3f47c5cd6f4a5d26659b0fd6096d6eb8fb2ed8f566c417c9e663bb7",
+      "bytes": 66743,
+      "source_member": "SOURCE_INDEX.json",
+      "source_commit": "13ca086703a56d4556a9b7bcdac53e8ee740a0ba",
+      "run_id": 34580750797,
+      "artifact_id": 10191624893
+    },
+    {
+      "path": "run_34580750797/dynamic_case1.csv",
+      "sha256": "c8947aa1a3be812567a3f72dc36e4c079ccbf697585c9bc91a0a207308a850ed",
+      "bytes": 36482,
+      "source_member": "dynamic_case1.csv",
+      "source_commit": "13ca086703a56d4556a9b7bcdac53e8ee740a0ba",
+      "run_id": 34580750797,
+      "artifact_id": 10191624893
+    },
+    {
+      "path": "run_34580750797/dynamic_case2.csv",
+      "sha256": "420254c8efb87294ddafdeff1150ec90c99c2cb41acf01aefcecb4db64966672",
+      "bytes": 35615,
+      "source_member": "dynamic_case2.csv",
+      "source_commit": "13ca086703a56d4556a9b7bcdac53e8ee740a0ba",
+      "run_id": 34580750797,
+      "artifact_id": 10191624893
+    },
+    {
+      "path": "run_34580750797/dynamic_case3.csv",
+      "sha256": "8932410237abe5606185348ee08eebe73756a1e1fc54bf3c0bad0daf20c9eda8",
+      "bytes": 35777,
+      "source_member": "dynamic_case3.csv",
+      "source_commit": "13ca086703a56d4556a9b7bcdac53e8ee740a0ba",
+      "run_id": 34580750797,
+      "artifact_id": 10191624893
+    },
+    {
+      "path": "run_34580750797/dynamic_case4.csv",
+      "sha256": "66b34c04b59bd3ac6c2a272ae37ecab0ba8e44c57bc4042a4b9a9bb69dd03e07",
+      "bytes": 38109,
+      "source_member": "dynamic_case4.csv",
+      "source_commit": "13ca086703a56d4556a9b7bcdac53e8ee740a0ba",
+      "run_id": 34580750797,
+      "artifact_id": 10191624893
+    },
+    {
+      "path": "run_34580750797/dynamic_case5.csv",
+      "sha256": "598536792b6ac7e71e4cef655a4a08e6d6cdd2e4a60806b5d39b2ebe325e33dd",
+      "bytes": 38154,
+      "source_member": "dynamic_case5.csv",
+      "source_commit": "13ca086703a56d4556a9b7bcdac53e8ee740a0ba",
+      "run_id": 34580750797,
+      "artifact_id": 10191624893
+    },
+    {
+      "path": "run_34580750797/quasisteady_case1.csv",
+      "sha256": "edf8bfc67033790d98479a3d42991ccc467187b46e5288b9292fa59045e1cf0f",
+      "bytes": 34605,
+      "source_member": "quasisteady_case1.csv",
+      "source_commit": "13ca086703a56d4556a9b7bcdac53e8ee740a0ba",
+      "run_id": 34580750797,
+      "artifact_id": 10191624893
+    },
+    {
+      "path": "run_34580750797/quasisteady_case2.csv",
+      "sha256": "9ed5ee980409a241a1d4a087c2838c59c673a875f68fd446a38fba0b9bbc2d45",
+      "bytes": 33669,
+      "source_member": "quasisteady_case2.csv",
+      "source_commit": "13ca086703a56d4556a9b7bcdac53e8ee740a0ba",
+      "run_id": 34580750797,
+      "artifact_id": 10191624893
+    },
+    {
+      "path": "run_34580750797/quasisteady_case3.csv",
+      "sha256": "2a477b5ff7e9ee0e893f7cb63980f51a93e184ea4e4fe8c806b2b4eb9b92f75e",
+      "bytes": 33780,
+      "source_member": "quasisteady_case3.csv",
+      "source_commit": "13ca086703a56d4556a9b7bcdac53e8ee740a0ba",
+      "run_id": 34580750797,
+      "artifact_id": 10191624893
+    },
+    {
+      "path": "run_34580750797/quasisteady_case4.csv",
+      "sha256": "940d89478ef398855ea90387d7324a15cada048befb4d625d48417190e9df491",
+      "bytes": 36149,
+      "source_member": "quasisteady_case4.csv",
+      "source_commit": "13ca086703a56d4556a9b7bcdac53e8ee740a0ba",
+      "run_id": 34580750797,
+      "artifact_id": 10191624893
+    },
+    {
+      "path": "run_34580750797/quasisteady_case5.csv",
+      "sha256": "25ef486958d5b216c87db1321e488f2e04be96ae3f36444f21adcdfae91197d8",
+      "bytes": 36160,
+      "source_member": "quasisteady_case5.csv",
+      "source_commit": "13ca086703a56d4556a9b7bcdac53e8ee740a0ba",
+      "run_id": 34580750797,
+      "artifact_id": 10191624893
+    },
+    {
+      "path": "run_34581649374/CHECKS.csv",
+      "sha256": "f203e67afcc70d92d4ccd029718652b9c95823c6ec138c81aefce03a09629ea3",
+      "bytes": 3440,
+      "source_member": "CHECKS.csv",
+      "source_commit": "d35cb829c04242a44800ff16071bec93e4315e56",
+      "run_id": 34581649374,
+      "artifact_id": 10191965719
+    },
+    {
+      "path": "run_34581649374/D02_CONSISTENCY_RESULTS.mat",
+      "sha256": "d26ec7d66cc31089c51311db6f28b29fdd289ab6cb35c631387ad3c304025c14",
+      "bytes": 430264,
+      "source_member": "D02_CONSISTENCY_RESULTS.mat",
+      "source_commit": "d35cb829c04242a44800ff16071bec93e4315e56",
+      "run_id": 34581649374,
+      "artifact_id": 10191965719
+    },
+    {
+      "path": "run_34581649374/COST.csv",
+      "sha256": "6d9b77e4d3b99a7170cf4964f974e00ad31de62940b6ebd22858d5ac6c0a7d04",
+      "bytes": 1053,
+      "source_member": "COST.csv",
+      "source_commit": "d35cb829c04242a44800ff16071bec93e4315e56",
+      "run_id": 34581649374,
+      "artifact_id": 10191965719
+    },
+    {
+      "path": "run_34581649374/DIRECTIONAL_DERIVATIVE_DIAGNOSTIC.csv",
+      "sha256": "fb8dea3259bd072644f9c0203a376b3315c9e9c94c5ec2fcfc60efbd67c74c9d",
+      "bytes": 1136,
+      "source_member": "DIRECTIONAL_DERIVATIVE_DIAGNOSTIC.csv",
+      "source_commit": "d35cb829c04242a44800ff16071bec93e4315e56",
+      "run_id": 34581649374,
+      "artifact_id": 10191965719
+    },
+    {
+      "path": "run_34581649374/DYNAMIC_QUASISTEADY_COMPARISON.csv",
+      "sha256": "6cc794e7d97edcac7b1822f4577fa4d0de63113a3bd86492769134f734f1e03f",
+      "bytes": 5360,
+      "source_member": "DYNAMIC_QUASISTEADY_COMPARISON.csv",
+      "source_commit": "d35cb829c04242a44800ff16071bec93e4315e56",
+      "run_id": 34581649374,
+      "artifact_id": 10191965719
+    },
+    {
+      "path": "run_34581649374/LINEAR_NONLINEAR_COMPARISON.csv",
+      "sha256": "f6f0594b70f0ea6511d82968256f0735118c38d6f3eb56692632d7a58cc7181f",
+      "bytes": 14504,
+      "source_member": "LINEAR_NONLINEAR_COMPARISON.csv",
+      "source_commit": "d35cb829c04242a44800ff16071bec93e4315e56",
+      "run_id": 34581649374,
+      "artifact_id": 10191965719
+    },
+    {
+      "path": "run_34581649374/MATLAB_LOG.txt",
+      "sha256": "15a72e16b09597d187b705e57dfd73055e165c1785e90386764c4510cbc923d4",
+      "bytes": 7776,
+      "source_member": "MATLAB_LOG.txt",
+      "source_commit": "d35cb829c04242a44800ff16071bec93e4315e56",
+      "run_id": 34581649374,
+      "artifact_id": 10191965719
+    },
+    {
+      "path": "run_34581649374/RUN_MANIFEST.json",
+      "sha256": "d27094fd8e1b0ca5eb8d91894bb16e5b5eaaf33a473b6150dc9c3a806551f84f",
+      "bytes": 866,
+      "source_member": "RUN_MANIFEST.json",
+      "source_commit": "d35cb829c04242a44800ff16071bec93e4315e56",
+      "run_id": 34581649374,
+      "artifact_id": 10191965719
+    },
+    {
+      "path": "run_34581649374/SOURCE_INDEX.json",
+      "sha256": "7180b545671618a3dd4ff2ef6f497ba28d89291bcec8000b017076133b9d0c1a",
+      "bytes": 66806,
+      "source_member": "SOURCE_INDEX.json",
+      "source_commit": "d35cb829c04242a44800ff16071bec93e4315e56",
+      "run_id": 34581649374,
+      "artifact_id": 10191965719
+    },
+    {
+      "path": "run_34581649374/dynamic_case2.csv",
+      "sha256": "12b18f1db7d1787bc5795ab0f56e221540bf2b771ba26d990bab21c364eb3e2a",
+      "bytes": 38218,
+      "source_member": "dynamic_case2.csv",
+      "source_commit": "d35cb829c04242a44800ff16071bec93e4315e56",
+      "run_id": 34581649374,
+      "artifact_id": 10191965719
+    },
+    {
+      "path": "run_34581649374/dynamic_case1.csv",
+      "sha256": "a1b610afeefc3665a60235e42dc1f7e7f607444fe1c550b6297a4850a87cc090",
+      "bytes": 39263,
+      "source_member": "dynamic_case1.csv",
+      "source_commit": "d35cb829c04242a44800ff16071bec93e4315e56",
+      "run_id": 34581649374,
+      "artifact_id": 10191965719
+    },
+    {
+      "path": "run_34581649374/dynamic_case3.csv",
+      "sha256": "122b8d165dbb583f2df4dd568654721963abda2d6467717144a8fcc6c1f48395",
+      "bytes": 38415,
+      "source_member": "dynamic_case3.csv",
+      "source_commit": "d35cb829c04242a44800ff16071bec93e4315e56",
+      "run_id": 34581649374,
+      "artifact_id": 10191965719
+    },
+    {
+      "path": "run_34581649374/dynamic_case4.csv",
+      "sha256": "645ef32d3fe6c8444b6c60182d0113fe4c73d45c9c6720dae7fee16483083704",
+      "bytes": 38543,
+      "source_member": "dynamic_case4.csv",
+      "source_commit": "d35cb829c04242a44800ff16071bec93e4315e56",
+      "run_id": 34581649374,
+      "artifact_id": 10191965719
+    },
+    {
+      "path": "run_34581649374/dynamic_case5.csv",
+      "sha256": "8ab3fbb3bfc8f350935008aba610c5992928cb1c653e2c7fdeb1e241b9be1f06",
+      "bytes": 38601,
+      "source_member": "dynamic_case5.csv",
+      "source_commit": "d35cb829c04242a44800ff16071bec93e4315e56",
+      "run_id": 34581649374,
+      "artifact_id": 10191965719
+    },
+    {
+      "path": "run_34581649374/quasisteady_case1.csv",
+      "sha256": "83e387ec173f22396d710d5c8f719c631e6ca15245bb799d867d9aaa5e2cc0c0",
+      "bytes": 37026,
+      "source_member": "quasisteady_case1.csv",
+      "source_commit": "d35cb829c04242a44800ff16071bec93e4315e56",
+      "run_id": 34581649374,
+      "artifact_id": 10191965719
+    },
+    {
+      "path": "run_34581649374/quasisteady_case2.csv",
+      "sha256": "7257e35b904edb57218994fdd9fe0dfe1a209ca4571e79c3632a32a1dac78c20",
+      "bytes": 35997,
+      "source_member": "quasisteady_case2.csv",
+      "source_commit": "d35cb829c04242a44800ff16071bec93e4315e56",
+      "run_id": 34581649374,
+      "artifact_id": 10191965719
+    },
+    {
+      "path": "run_34581649374/quasisteady_case3.csv",
+      "sha256": "e0956d1d78df2133b96e879272227a785a7008e51e2b24f9de59d70071a324ea",
+      "bytes": 36141,
+      "source_member": "quasisteady_case3.csv",
+      "source_commit": "d35cb829c04242a44800ff16071bec93e4315e56",
+      "run_id": 34581649374,
+      "artifact_id": 10191965719
+    },
+    {
+      "path": "run_34581649374/quasisteady_case4.csv",
+      "sha256": "0f67c5fd5c71d051e54a9dc1257e48ab8c544d7d7fbf22cee4b6a0a96a2deb8f",
+      "bytes": 36431,
+      "source_member": "quasisteady_case4.csv",
+      "source_commit": "d35cb829c04242a44800ff16071bec93e4315e56",
+      "run_id": 34581649374,
+      "artifact_id": 10191965719
+    },
+    {
+      "path": "run_34581649374/quasisteady_case5.csv",
+      "sha256": "c4086fa44232be2c11b310cacfa9a72dfbfaa6f73d860d49dbb3ca48a0587fb0",
+      "bytes": 36452,
+      "source_member": "quasisteady_case5.csv",
+      "source_commit": "d35cb829c04242a44800ff16071bec93e4315e56",
+      "run_id": 34581649374,
+      "artifact_id": 10191965719
+    }
+  ]
+}

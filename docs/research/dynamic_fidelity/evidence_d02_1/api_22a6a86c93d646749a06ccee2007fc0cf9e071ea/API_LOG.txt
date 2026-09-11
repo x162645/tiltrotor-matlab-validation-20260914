@@ -1,0 +1,5 @@
+Tiltrotor forward model v2 paths added.
+Project root: /home/runner/work/tiltrotor-matlab/tiltrotor-matlab
+PASSED
+    12
+

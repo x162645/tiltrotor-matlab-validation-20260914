@@ -1,0 +1,106 @@
+WORKPOINT body 9.19235285e-05 inflow 6.41172448e-08; prepare 1.726s
+workpoint strict numerical residual: FAIL (6.4117245e-08)
+actual inflow equals explicit state: PASS (0)
+up velocity sign equation: PASS (0)
+specific force excludes gravity: PASS (0)
+inertial acceleration differs from body derivative by omega cross V: PASS (0)
+fixed-state inflow perturbs actual rotor loads: PASS (-270.30266)
+transient is valid without claiming steady closure: PASS (2.5709426)
+state and target labelled separately: PASS (0)
+actual collective excitation changes thrust: PASS (762.02599)
+actual cyclic excitation changes pitch moment: PASS (-39.587895)
+legacy static exact identity 1: PASS (0)
+within-call reuse exact force identity 1: PASS (0)
+legacy static exact identity 2: PASS (0)
+within-call reuse exact force identity 2: PASS (0)
+legacy static exact identity 3: PASS (0)
+within-call reuse exact force identity 3: PASS (0)
+reject d02:InvalidTimeConstants: PASS (1)
+reject d02:InvalidTimeConstants: PASS (1)
+reject d02:UnsupportedMode: PASS (1)
+reject total_forces_moments:InvalidDynamicInflow: PASS (1)
+reject d02:InvalidState: PASS (1)
+reject d02:WorkpointMismatch: PASS (1)
+reject d02:InvalidOutputState: PASS (1)
+dynamic ABCD finite: PASS (0)
+dynamic ch1 0.2deg effective excitation: PASS (0.14221926)
+dynamic ch1 0.2deg primary linear agreement: PASS (0.0033152324)
+dynamic ch1 0.2deg derivative-step response: PASS (1.4269325e-06)
+dynamic ch1 actual/target trace validity: PASS (0)
+dynamic state-history equality: PASS (0)
+SIM_DONE dynamic ch1 0.2deg primary NRMSE 0.00331523 RHS494 ODE3.727s
+dynamic ch1 0.1deg effective excitation: PASS (0.071222627)
+dynamic ch1 0.1deg primary linear agreement: PASS (0.0016524722)
+dynamic ch1 0.1deg derivative-step response: PASS (1.4246685e-06)
+dynamic ch1 actual/target trace validity: PASS (0)
+dynamic state-history equality: PASS (0)
+SIM_DONE dynamic ch1 0.1deg primary NRMSE 0.00165247 RHS482 ODE3.602s
+dynamic ch2 0.2deg effective excitation: PASS (0.0037112945)
+dynamic ch2 0.2deg primary linear agreement: PASS (0.00047010432)
+dynamic ch2 0.2deg derivative-step response: PASS (1.1833904e-06)
+dynamic ch2 actual/target trace validity: PASS (0)
+dynamic state-history equality: PASS (0)
+SIM_DONE dynamic ch2 0.2deg primary NRMSE 0.000470104 RHS452 ODE3.268s
+dynamic ch2 0.1deg effective excitation: PASS (0.0018560391)
+dynamic ch2 0.1deg primary linear agreement: PASS (0.00022959094)
+dynamic ch2 0.1deg derivative-step response: PASS (1.1831406e-06)
+dynamic ch2 actual/target trace validity: PASS (0)
+dynamic state-history equality: PASS (0)
+SIM_DONE dynamic ch2 0.1deg primary NRMSE 0.000229591 RHS434 ODE3.161s
+quasisteady ABCD finite: PASS (0)
+quasisteady ch1 0.2deg effective excitation: PASS (0.14324835)
+quasisteady ch1 0.2deg primary linear agreement: PASS (0.0033290607)
+quasisteady ch1 0.2deg derivative-step response: PASS (1.4413214e-06)
+quasisteady ch1 actual/target trace validity: PASS (0)
+SIM_DONE quasisteady ch1 0.2deg primary NRMSE 0.00332906 RHS476 ODE26.141s
+quasisteady ch1 0.1deg effective excitation: PASS (0.071737986)
+quasisteady ch1 0.1deg primary linear agreement: PASS (0.0016589988)
+quasisteady ch1 0.1deg derivative-step response: PASS (1.4390348e-06)
+quasisteady ch1 actual/target trace validity: PASS (0)
+SIM_DONE quasisteady ch1 0.1deg primary NRMSE 0.001659 RHS470 ODE25.670s
+quasisteady ch2 0.2deg effective excitation: PASS (0.0037112955)
+quasisteady ch2 0.2deg primary linear agreement: PASS (0.00046979894)
+quasisteady ch2 0.2deg derivative-step response: PASS (1.1833823e-06)
+quasisteady ch2 actual/target trace validity: PASS (0)
+SIM_DONE quasisteady ch2 0.2deg primary NRMSE 0.000469799 RHS452 ODE24.775s
+quasisteady ch2 0.1deg effective excitation: PASS (0.0018560393)
+quasisteady ch2 0.1deg primary linear agreement: PASS (0.00022949158)
+quasisteady ch2 0.1deg derivative-step response: PASS (1.1831327e-06)
+quasisteady ch2 actual/target trace validity: PASS (0)
+SIM_DONE quasisteady ch2 0.1deg primary NRMSE 0.000229492 RHS434 ODE23.759s
+dynamic ch1 amplitude refinement: PASS (0.24962022)
+dynamic ch2 amplitude refinement: PASS (0.24424305)
+quasisteady ch1 amplitude refinement: PASS (0.24956514)
+quasisteady ch2 amplitude refinement: PASS (0.244296)
+         mode          inputChannel    amplitude_deg               output               nonlinearRMS    linearAbsoluteRMSerror    linearRelativeRMSerror    differenceStepAbsoluteChange    differenceStepRelativeChange    primaryChannel
+    _______________    ____________    _____________    ____________________________    ____________    ______________________    ______________________    ____________________________    ____________________________    ______________
+
+    {'dynamic'    }         1               0.2         {'inertialAccelerationDown'}       0.14222            0.00047149                 0.0033152                   2.0294e-07                      1.4269e-06                 true      
+    {'dynamic'    }         1               0.1         {'inertialAccelerationDown'}      0.071223            0.00011769                 0.0016525                   1.0147e-07                      1.4247e-06                 true      
+    {'dynamic'    }         2               0.2         {'q'                       }     0.0037113            1.7447e-06                 0.0004701                   4.3919e-09                      1.1834e-06                 true      
+    {'dynamic'    }         2               0.1         {'q'                       }      0.001856            4.2613e-07                0.00022959                    2.196e-09                      1.1831e-06                 true      
+    {'quasisteady'}         1               0.2         {'inertialAccelerationDown'}       0.14325            0.00047688                 0.0033291                   2.0647e-07                      1.4413e-06                 true      
+    {'quasisteady'}         1               0.1         {'inertialAccelerationDown'}      0.071738            0.00011901                  0.001659                   1.0323e-07                       1.439e-06                 true      
+    {'quasisteady'}         2               0.2         {'q'                       }     0.0037113            1.7436e-06                 0.0004698                   4.3919e-09                      1.1834e-06                 true      
+    {'quasisteady'}         2               0.1         {'q'                       }      0.001856            4.2595e-07                0.00022949                   2.1959e-09                      1.1831e-06                 true      
+
+                                identity: 'D02_1_RELIABLE_DYNAMIC_BASELINE'
+                            sourceCommit: '13ca086703a56d4556a9b7bcdac53e8ee740a0ba'
+                            sourceParent: '21a699a7f7372769f58e4b8b0f2e227f66f95254'
+                                 version: '9.10.0.2198249 (R2021a) Update 8'
+                                 release: '2021a'
+                                computer: 'GLNXA64'
+                                  status: 'COMPLETED'
+                          physicsChanged: 0
+                    timeConstantsAssumed: 1
+                   newExternalValidation: 0
+              defaultCoreNumericsChanged: 0
+                       executionNumerics: [1x1 struct]
+                                  limits: [1x1 struct]
+                                   scope: 'ONE_HOVER_TWO_COMMAND_CHANNELS_TWO_AMPLITUDES_NOT_GLOBAL_OR_FLIGHT_VALIDATION'
+                               elapsed_s: 165.0631
+                              checkCount: 65
+                         allChecksPassed: 0
+    wholeJacobianDifferentiabilityProven: 0
+                     linearQualification: 'PRIMARY_CHANNELS_CHECKED; DIRECTIONAL_AND_CROSS_CHANNEL_LIMITS_RETAINED'
+

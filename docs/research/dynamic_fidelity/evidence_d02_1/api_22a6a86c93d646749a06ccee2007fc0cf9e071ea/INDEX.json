@@ -1,0 +1,11 @@
+{
+  "run_id": "34582649604",
+  "source_commit": "22a6a86c93d646749a06ccee2007fc0cf9e071ea",
+  "status": "PASSED",
+  "role": "ADDITIONAL_SMALL_API_TEST_NOT_TEN_CASE_RERUN",
+  "files": {
+    "API_RESULTS.mat": "6129ff3cc8ff7a0468a1064f271845d2af062c8e2e95eb4b4c002f179aceb763",
+    "API_MANIFEST.json": "6acd94e8f2cacebea2946b227add77267cdda03f8158c410582793de35e9d24a",
+    "API_LOG.txt": "feec158b1c9f6b38dd43931c1caf0a9457b1075bfd0e4fe36441080997893670"
+  }
+}
