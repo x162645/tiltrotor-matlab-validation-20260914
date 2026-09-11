@@ -1,0 +1,63 @@
+name: Close D05 in existing research ledger
+on:
+  push:
+    branches: [research/dynamic-fidelity-benchmark-20260910]
+    paths: ['.github/workflows/close-d05-ledger.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  ledger:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v6
+      - name: Append one sourced step without replacing historical entries
+        run: |
+          python tools/archive_d05_evidence.py --request docs/research/dynamic_fidelity/D05_ARCHIVE_REQUEST.json --verify-only
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('docs/research/dynamic_fidelity/STEP_LEDGER.md');text=p.read_text(encoding='utf-8')
+          marker='## D05 近对称状态保留与输出相关误差资格'
+          if marker not in text:
+              addition='''
+
+          ## D05 近对称状态保留与输出相关误差资格
+
+          2026-09-11，承接D04及面向航空学报具体贡献的用户授权。不是重做历史审计或已完成全机动态化。
+
+          来源：D04 TN3044 Eq2–5/11–20、TM88327 Eq9/Table1；经典静态残差化的原理与官方modred Algorithms核对，输入输出模态贡献已有先例。具体推导D05_METHOD.md，相对预算补充D05_RELATIVE_SUPPLEMENT.md；原始气动数据未新增或反调。
+
+          方法：两侧升力斜率a*(1±epsilon)数值对照、等机械参数，7状态完整与4状态解析非线性残差化。保留共同入流/锥度/锥度率/w，差动状态导数置零解析消元。按输入方向、输出和频段构造局部复数传递差的连续区间充分界，选择不查询完整模型FRF；完整局部矩阵仍有离线成本。
+
+          实现309d01dfebc928911328e2f28d95fe76c150e5cf；run34601330893/artifact10264532634，真实MATLAB R2021aUpdate8，388检查通过、16非线性时历。8个参数/入流实例、144项输入输出频段决定，固定增益5%预算允许120项4状态，不是120个外部验证。
+
+          读回后发现固定尺度可能掩盖弱响应相对误差，补充245e9571ad557f7baf9f87b256d3ca5e14a4a90e；run34602132465/artifact10264659060，440检查通过，原MAT复用且无新ODE。相对界b/(gmin-b)，不修改原物理/预算/结果。73项获相对5%资格；47个原绝对允许项相对拒绝，包含12个零/不可分辨线性响应。充分界拒绝不等于已证明不准确。
+
+          结果：PP epsilon=.1，共同输入10–30rad/s的升沉相对简化差约.120946%，差动桨毂力约39.819727%；差动输入升沉低/中/高频约2.493196/7.908759/18.110326%。近对称共模误差O(epsilon²)，差动泄漏O(epsilon)，仅当前光滑参数族与对应平衡点的局部结论。完全对称差动输入的线性升沉为零但有限幅值二阶运动保留，弱响应非线性简化相对差约42.4%，不以零线性通道保证时域等价。
+
+          证据：原ZIP/MAT/CSV/JSON均取回核对；归档a3d83d52a80a898891b414e95d09b5dea03f7f0f，28文件4,742,228字节。D05_ARCHIVE_REQUEST/evidence_d05索引含run/commit/hash，archive_d05_evidence.py --verify-only可离线核字节。补充相对界12.59644s/118683次求值，3个CF网格误差<5%但充分界未过的案例仍保守拒绝。未宣称稳定速度倍率。
+
+          边界：轴向约束模型，差动载荷不是自由滚转响应，不是原9状态机降至4状态。epsilon不是实测公差；零新增独立实验；未闭合TN3044的实际输入/RPM/Ib/S等，也未完成倾转整机接口、强竞争对照或原创性查新。数学界不是实飞误差/有限幅值峰值界，双精度实现不是外向舍入机器证明。所有模型与归档运行均结束，PR不合并，默认不变。
+
+          下一步：将方法与至少一条相称的物理支持/外部算例及成熟简化方法对照衔接，建立必要的倾转应用载荷接口。不要再把更多epsilon扫描或软件断言替代论文证据。
+
+          重开条件：相关物理系数、RHS、变换、误差界或目标工况/输入输出改变时定向回归；只改报告不重跑16条时历。D01–D04历史原样保留，零目标拟合。
+          '''
+              text=text.rstrip()+'\n'+addition+'\n'
+              if text.startswith('# 动态研发逐步台账'):
+                  text=text.replace('# 动态研发逐步台账','# 动态研发逐步台账\n\n当前最新：D05，见文末及D05_REPORT.md；下文旧阶段保留为历史。',1)
+              p.write_text(text,encoding='utf-8')
+          PY
+      - name: Protect concurrent work and persist ledger
+        env:
+          TASK_BRANCH: research/dynamic-fidelity-benchmark-20260910
+        run: |
+          remote_head=$(git ls-remote origin "refs/heads/$TASK_BRANCH" | cut -f1)
+          test "$remote_head" = "$GITHUB_SHA" || { echo 'Branch advanced; refusing overwrite'; exit 1; }
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/research/dynamic_fidelity/STEP_LEDGER.md
+          git diff --cached --quiet && exit 0
+          git commit -m 'research: close D05 in same ledger with actual results and unresolved external-validation scope [skip ci]'
+          git push origin "HEAD:refs/heads/$TASK_BRANCH"
