@@ -1,0 +1,54 @@
+name: Close D13 canonical ledger only
+on:
+  push:
+    branches: [research/dynamic-fidelity-benchmark-20260910]
+    paths: ['.github/workflows/close-d13-ledger.yml', 'docs/research/dynamic_fidelity/D13_LEDGER_APPEND.md']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  document-closure:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v6
+      - name: Preserve and append canonical source without scientific execution
+        run: |
+          python - <<'PY'
+          import pathlib,subprocess,hashlib,json
+          b=pathlib.Path('docs/research/dynamic_fidelity');p=b/'STEP_LEDGER.md'
+          assert subprocess.check_output(['git','hash-object',str(p)]).decode().strip()=='1f709a5758c3d976daaa4740d763264a0aadef9f','Canonical ledger changed; stop for reconciliation'
+          before=p.read_bytes();old={str(p):before,'RESEARCH_ENTRY.md':pathlib.Path('RESEARCH_ENTRY.md').read_bytes(),'CODEX_TASK.md':pathlib.Path('CODEX_TASK.md').read_bytes()}
+          arc=b/'evidence_d13'/'canonical_before_d13';arc.mkdir(parents=True,exist_ok=False)
+          for f,raw in old.items():(arc/pathlib.Path(f).name).write_bytes(raw)
+          header='# 动态研发统一台账：当前D13\n\n2026-09-11。以下D00-D12全文按连续原字节保留，旧状态仅为当时语义。当前有效为文末D13及D13_REPORT.md。D13原生科学与API均已执行、原始输出永久入Git；旧D06-D11完整包全量上传缺口不变。\n\n'
+          p.write_bytes(header.encode()+before+(b/'D13_LEDGER_APPEND.md').read_bytes())
+          assert before in p.read_bytes()
+          pathlib.Path('RESEARCH_ENTRY.md').write_bytes((b/'D13_ENTRY_NEXT.md').read_bytes())
+          pathlib.Path('CODEX_TASK.md').write_bytes((b/'D13_TASK_NEXT.md').read_bytes())
+          out=b/'evidence_d13'/'CANONICAL_CLOSURE.json'
+          out.write_text(json.dumps({'source_commit':subprocess.check_output(['git','rev-parse','HEAD']).decode().strip(),'old_ledger_preserved_as_contiguous_bytes':True,'new_scientific_executions':0,'before':{f:hashlib.sha256(raw).hexdigest() for f,raw in old.items()},'after':{f:hashlib.sha256(pathlib.Path(f).read_bytes()).hexdigest() for f in old}},indent=2))
+          PY
+      - name: Non-forced publish only if branch unchanged
+        run: |
+          b=research/dynamic-fidelity-benchmark-20260910
+          remote=$(git ls-remote origin "refs/heads/$b" | cut -f1)
+          test "$remote" = "$GITHUB_SHA" || { echo 'Branch advanced; no overwrite'; exit 1; }
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add RESEARCH_ENTRY.md CODEX_TASK.md docs/research/dynamic_fidelity/STEP_LEDGER.md docs/research/dynamic_fidelity/evidence_d13/canonical_before_d13 docs/research/dynamic_fidelity/evidence_d13/CANONICAL_CLOSURE.json
+          git commit -m 'docs: close D13 in same ledger with source scope and classical method decision [skip ci]'
+          git push origin "HEAD:refs/heads/$b"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: d13-ledger-${{ github.sha }}
+          path: |
+            RESEARCH_ENTRY.md
+            CODEX_TASK.md
+            docs/research/dynamic_fidelity/STEP_LEDGER.md
+            docs/research/dynamic_fidelity/D13_REPORT.md
+            docs/research/dynamic_fidelity/D13_PARAMETER_PREDICTION_CONTRACT.json
+            docs/research/dynamic_fidelity/D13_READBACK_SUMMARY.json
+            docs/research/dynamic_fidelity/evidence_d13/CANONICAL_CLOSURE.json
+            docs/research/dynamic_fidelity/evidence_d13/canonical_before_d13
