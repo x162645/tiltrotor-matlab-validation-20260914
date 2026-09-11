@@ -1,0 +1,62 @@
+name: D04 coning inflow and heave state-retention benchmark
+on:
+  push:
+    branches: [research/dynamic-fidelity-benchmark-20260910]
+    paths: ['model/axial/**','analysis/dynamic_fidelity/d04_*.m','tests/dynamic_fidelity/run_d04_coupling.m','.github/workflows/dynamic-benchmark-d04.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  coupled-benchmark:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 34590185156
+          name: d04-source-2d041b77481cf6a7067b215ebde40b67d15ea48c
+          path: ci_artifacts/d04/source_acquisition
+      - name: Pin source bytes and executable code before computation
+        run: |
+          python -m pip install --quiet pymupdf
+          python - <<'PY'
+          import pathlib,hashlib,subprocess,zipfile,shutil,json,fitz
+          r=pathlib.Path('ci_artifacts/d04');s=r/'sources';s.mkdir(parents=True,exist_ok=True)
+          p=r/'source_acquisition/NACA_TN_3044.pdf';assert hashlib.sha256(p.read_bytes()).hexdigest()=='2ed621dab8547cfee618f6bdd79612a0d52d512f40d66e753a5f25647d71cc6a';shutil.copyfile(p,s/p.name)
+          old=list(pathlib.Path('docs/research/dynamic_fidelity/evidence_d03').rglob('NASA_TM_88327.pdf'))
+          assert old;raw=old[0].read_bytes();assert hashlib.sha256(raw).hexdigest()=='d649bf28ea66ccdfbcd5d24c8cf37fbf5b5f0d4a5e0f0ed187f37734800cb6c2';(s/'NASA_TM_88327.pdf').write_bytes(raw)
+          for name,pages in {'NASA_TM_88327.pdf':[11,12,13,18,19,20,21,28,42,45,46],'NACA_TN_3044.pdf':[3,5,7,11,12,13,14,15,16,18,20,21,26,27]}.items():
+              d=fitz.open(s/name);out=s/name.removesuffix('.pdf');out.mkdir(exist_ok=True)
+              for num in pages:
+                  if num>len(d):continue
+                  d[num-1].get_pixmap(matrix=fitz.Matrix(1.4,1.4)).save(out/f'pdf_{num:03}.png')
+                  (out/f'pdf_{num:03}.txt').write_text(d[num-1].get_text())
+          tracked=subprocess.check_output(['git','ls-files','-z']).decode().split('\0')
+          paths=[f for f in tracked if f.startswith(('model/axial/','analysis/dynamic_fidelity/d04_','tests/dynamic_fidelity/run_d04_')) or f in ['model/mean_inflow_88327.m','params_nominal.m','docs/research/dynamic_fidelity/D04_CONTRACT.md','docs/research/dynamic_fidelity/D04_EXTERNAL_DATA_QUALIFICATION.md']]
+          with zipfile.ZipFile(r/'CODE_SNAPSHOT.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for f in paths:z.write(f,f)
+          meta={'commit':subprocess.check_output(['git','rev-parse','HEAD']).decode().strip(),'paths':paths,'source_hashes':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in s.glob('*.pdf')},'production_changed_by_this_work':False}
+          (r/'INPUT_SOURCE_MANIFEST.json').write_text(json.dumps(meta,indent=2))
+          PY
+      - uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2021a
+      - name: Execute source-coupled and reduced models, read actual pitch not fitted commands
+        uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            startup;addpath(fullfile(pwd,'tests','dynamic_fidelity'));
+            diary(fullfile(pwd,'ci_artifacts','d04','MATLAB_LOG.txt'));
+            run_d04_coupling(fullfile(pwd,'ci_artifacts','d04'));diary off;
+      - name: Verify no tracked runtime changes
+        if: always()
+        run: git diff --exit-code
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: d04-coupled-${{ github.sha }}
+          path: ci_artifacts/d04
+          if-no-files-found: error
