@@ -1,0 +1,59 @@
+{
+  "version": "D11_20260911",
+  "execution_identity": "local Python, no native MATLAB; no new remote commit",
+  "TN3044_use": {
+    "all_curves_role": "development; never new holdout",
+    "absolute_collective_to_CT_parameter_release": "NOT_QUALIFIED_UNDER_SEARCHED_FIXED_MEMORY_LOAD_CLASS",
+    "strict_box_threshold": 1.0,
+    "data_intervals_are": "digitization read boxes, not calibrated experimental confidence intervals",
+    "global_infeasibility_proved": false,
+    "memory_evidence": "reuse D09 conditional CT-to-flow result only; not a measured XV-15 dynamic parameter"
+  },
+  "tilt_use": {
+    "model_id": "OARF_STATIC_ANCHORED_CONCEPT_TWIN_HOVER_V1",
+    "input": "theta75_report_index_rad; fixed identity effective-pitch mapping is an explicit assumption",
+    "source_static_support_deg": [
+      6,
+      11
+    ],
+    "qualified_local_center_deg": 6.457999458409009,
+    "qualified_target": "local model/reference-family comparisons, not real-flight fidelity",
+    "nominal_model": "PP_mean full two-state shared inflow and upward heave",
+    "frozen_params": {
+      "mass_kg": 6000.0,
+      "rho_kgm3": 1.225,
+      "g_mps2": 9.80665,
+      "R_m": 3.81,
+      "Vtip_mps": 234.08640000000003,
+      "b": 0.15160528305026616
+    },
+    "sampled_reference_family": "two inherited hover air-mass laws, four source-derived b conventions; no probability or exhaustive uncertainty coverage",
+    "release_band_rad_s": [
+      0.1,
+      3.0
+    ],
+    "budget": 0.05,
+    "budget_role": "finite-family local LTI relative grid difference; not an aircraft accuracy standard",
+    "3_to_10_rad_s": "NO_SINGLE_NOMINAL_5PCT_FAMILY_QUALIFICATION; return all conditional reference members",
+    "nonlinear_samples": "0.1deg and0.05deg raised-cosine report-coordinate pulses only; frequency budget not a nonlinear peak bound",
+    "loads": "aerodynamic total thrust used as hub-load proxy; blade inertial loads and wing download absent",
+    "mature_raw_BT_BSPA": "retain as mathematical approximants, rejected as physical heave interfaces when a != d(v)/dt"
+  },
+  "preserved_branches": [
+    "source_unadjusted",
+    "D09_nu",
+    "D10_effective_load_gain",
+    "all first failures",
+    "D11 inadequate full-slow fits",
+    "raw BT/BSPA mechanical failures"
+  ],
+  "not_claimed": [
+    "independent dynamic flight validation",
+    "actual rotating collective calibration",
+    "original aircraft nine-state model reduction",
+    "domestic leadership",
+    "established journal novelty",
+    "continuous-frequency certified bound",
+    "native MATLAB execution"
+  ]
+}
