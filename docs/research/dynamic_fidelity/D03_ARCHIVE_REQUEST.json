@@ -1,0 +1,15 @@
+{
+  "source_pdf_sha256": "d649bf28ea66ccdfbcd5d24c8cf37fbf5b5f0d4a5e0f0ed187f37734800cb6c2",
+  "artifacts": [
+    {"folder":"first","run_id":34585998506,"artifact_id":10193658400,"source_commit":"ac78a0ca253351a7a9ea011bb80b4667fe9e5c70","zip_sha256":"74d9ef8dc35df525a36e80ead99ce3afd6a749c335c55c0b739efaba6551e1bf","expected_all_checks_passed":false,"expected_failed_checks":4,"expected_file_sha256":{
+      "D03_RESULTS.mat":"8defb08d6e82d187da64a6ccd47a390bb89072a477a83ff37aabb387dd0bc92c",
+      "RUN_MANIFEST.json":"2f671738135074a18d7bb63a120ab06b20d4d2d93278122fd1a3ebef4bfa1eb0",
+      "CHECKS.csv":"b2c6ef6d2ac75edc78b6e8a8f63c642a2d0931d4d7860584801c1a2633182f2a",
+      "SOURCE_MODEL_RESPONSE_METRICS.csv":"f04be437c7d9b5915a12ff63e96d1d3134d88b9467fed3aa69183150cf5e1993"}},
+    {"folder":"verified","run_id":34586850178,"artifact_id":10194003531,"source_commit":"aea793668b7b6c497e066ba54c4eb0f40d711b2a","zip_sha256":"f60447e2b729d6559353297c833e0ac9301c44c55fc02f2f5b17ff0c4b9158fc","expected_all_checks_passed":true,"expected_failed_checks":0,"expected_file_sha256":{
+      "D03_RESULTS.mat":"c4af01093a6059f1e9ab70888e15467fea55bcc48d38f6443d18af519f13ddcb",
+      "RUN_MANIFEST.json":"ebf648adb058d7132603c19cc4bb58149697f074cdd574229cd259ce07ca10be",
+      "CHECKS.csv":"ffc474a0b3fa77919d4bd44824d6503395c6c3015c12e426c75958e9ea41b0e4",
+      "SOURCE_MODEL_RESPONSE_METRICS.csv":"f04be437c7d9b5915a12ff63e96d1d3134d88b9467fed3aa69183150cf5e1993"}}
+  ]
+}

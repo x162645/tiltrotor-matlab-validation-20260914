@@ -1,0 +1,50 @@
+name: Archive D03 equations and MATLAB outcomes
+on:
+  push:
+    branches: [research/dynamic-fidelity-benchmark-20260910]
+    paths: ['.github/workflows/archive-d03-evidence.yml','tools/archive_d03_evidence.py','docs/research/dynamic_fidelity/D03_ARCHIVE_REQUEST.json']
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+jobs:
+  archive:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 34585998506
+          name: d03-source-inflow-ac78a0ca253351a7a9ea011bb80b4667fe9e5c70
+          path: ci_artifacts/d03_archive_inputs/first
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 34586850178
+          name: d03-source-inflow-aea793668b7b6c497e066ba54c4eb0f40d711b2a
+          path: ci_artifacts/d03_archive_inputs/verified
+      - name: Check original members and persist both outcomes unchanged
+        run: |
+          python tools/archive_d03_evidence.py --request docs/research/dynamic_fidelity/D03_ARCHIVE_REQUEST.json --incoming ci_artifacts/d03_archive_inputs
+          python tools/archive_d03_evidence.py --request docs/research/dynamic_fidelity/D03_ARCHIVE_REQUEST.json --verify-only
+      - name: Commit evidence only without overwriting intervening work
+        env:
+          TASK_BRANCH: research/dynamic-fidelity-benchmark-20260910
+        run: |
+          git diff --exit-code -- model services tests params_nominal.m
+          remote_head=$(git ls-remote origin "refs/heads/$TASK_BRANCH" | cut -f1)
+          test "$remote_head" = "$GITHUB_SHA" || { echo 'Branch advanced: artifact retained, no push'; exit 1; }
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/research/dynamic_fidelity/evidence_d03
+          git diff --cached --quiet && exit 0
+          git commit -m 'evidence: persist D03 source PDF and both real MATLAB runs; retain failed cross-run checks [skip ci]'
+          git push origin "HEAD:refs/heads/$TASK_BRANCH"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: d03-permanent-evidence-${{ github.sha }}
+          path: docs/research/dynamic_fidelity/evidence_d03
+          if-no-files-found: error
