@@ -1,0 +1,33 @@
+{
+  "version": "D12_20260911",
+  "source_case": "TM89428_HOVER_AZ_POWER",
+  "execution_commit": "872c566382cce21153e31e7e42561916bd31cb37",
+  "native_run": 34642707267,
+  "native_artifact": 10280418247,
+  "evidence_commit": "b46062426ba85a7b99097bca6dfb4f55f300a39f",
+  "D11_physics_changed": false,
+  "fitted_parameters": [],
+  "new_holdout": false,
+  "uses": {
+    "D11_internal_family_prediction": "retain D11 contract; do not read its 2.18% as aircraft accuracy",
+    "D12_external_shape": "conditional comparison only; source input power-lever percentage point differs from report-collective radians",
+    "absolute_aircraft_validation": "NOT_READY_INPUT_CHAIN_AND_MATCHED_CONDITION_UNCLOSED"
+  },
+  "band_rad_s": [0.1, 3.0],
+  "normalization_anchor_rad_s": 1.0,
+  "source_delay_branches": ["included", "descriptor_delay_factored_not_actuator_identification"],
+  "constant_input_map_conclusion": "cannot reconcile the frozen concept instance and nominal published descriptor; not unconditional aircraft falsification",
+  "family_full2_constant_gain_lower_bound_range_approximately": [0.226211, 0.244076],
+  "exact_range_source": "evidence_d12/runs/34642707267/python/SOURCE_SHAPE_METRICS.csv; method FULL_2 and source_delay_included true",
+  "unknown_dynamic_input_map": "stable proper algebraic witnesses retained only as non-identifiability diagnostics; never installed as actuators",
+  "conditional_mapping_rule": {
+    "Rq": "max(abs(G_model/G_source))/min(abs(G_model/G_source))",
+    "Gamma": "independently evidenced max/min magnitude ratio of input mapping; no default",
+    "necessary_error_lower_bound": "max(0,(Rq-Gamma)/(Rq+Gamma))",
+    "zero_bound_means": "necessary condition does not exclude; not validation pass",
+    "role": "post-readback analytic clarification; no new fitted mapping"
+  },
+  "future_evidence": "same-configuration input-to-actual-collective frequency mapping or separately observed force/heave dynamics with matched mass/rho/RPM",
+  "old_full_zip_remote": false,
+  "native_scope": "D12 channel/source-shape only; old D06-D11 execution labels unchanged"
+}

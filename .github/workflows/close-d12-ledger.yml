@@ -1,0 +1,40 @@
+name: Close D12 canonical ledger only
+on:
+  push:
+    branches: [research/dynamic-fidelity-benchmark-20260910]
+    paths:
+      - '.github/workflows/close-d12-ledger.yml'
+      - 'docs/research/dynamic_fidelity/D12_LEDGER_APPEND.md'
+      - 'tools/close_d12_ledger.py'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  documentation:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+      - name: Append to the same ledger and preserve old entry bytes
+        run: python tools/close_d12_ledger.py
+      - name: Non-forced documentation commit only
+        env:
+          TASK_BRANCH: research/dynamic-fidelity-benchmark-20260910
+        run: |
+          remote_head=$(git ls-remote origin "refs/heads/$TASK_BRANCH" | cut -f1)
+          test "$remote_head" = "$GITHUB_SHA" || { echo 'Branch advanced; no overwrite'; exit 1; }
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add RESEARCH_ENTRY.md CODEX_TASK.md docs/research/dynamic_fidelity/STEP_LEDGER.md docs/research/dynamic_fidelity/D12_DOC_CLOSE_RECORD.json docs/research/dynamic_fidelity/evidence_d12/doc_close_before
+          git commit -m 'docs: close D12 in canonical ledger and entry, preserving all prior execution identities [skip ci]'
+          git push origin "HEAD:refs/heads/$TASK_BRANCH"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: d12-ledger-closure-${{ github.sha }}
+          path: |
+            RESEARCH_ENTRY.md
+            CODEX_TASK.md
+            docs/research/dynamic_fidelity/STEP_LEDGER.md
+            docs/research/dynamic_fidelity/D12_DOC_CLOSE_RECORD.json
+            docs/research/dynamic_fidelity/evidence_d12/doc_close_before
