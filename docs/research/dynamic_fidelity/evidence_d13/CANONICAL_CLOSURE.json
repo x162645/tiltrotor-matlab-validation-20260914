@@ -1,0 +1,15 @@
+{
+  "source_commit": "f331cec813d51edc5cfa96809233a66be6056c6f",
+  "old_ledger_preserved_as_contiguous_bytes": true,
+  "new_scientific_executions": 0,
+  "before": {
+    "docs/research/dynamic_fidelity/STEP_LEDGER.md": "20c660f7d9f3bff9d9e12da110a16fa0c6a914a2fd790471c7c16d282af89fd2",
+    "RESEARCH_ENTRY.md": "7e11e4212058609cbbb61795b3051f9353ef37684f289f96d981b0191e551f38",
+    "CODEX_TASK.md": "307e8de57b2f5e5a2742584b6efadefefac46e756919bd9f6ce9c8b607a70897"
+  },
+  "after": {
+    "docs/research/dynamic_fidelity/STEP_LEDGER.md": "b34a88ce281e536d923039e466dcf473a343c6fe5d365fba44dacb0a17115340",
+    "RESEARCH_ENTRY.md": "4babcad07c4e293aad3f72bb349838af20007a1f0857fb7d6d2924dae01b80e7",
+    "CODEX_TASK.md": "fa5c0da361a84f5f20280d93c6b1338c06e48c30ca5f588ca5881812e307e4ee"
+  }
+}
