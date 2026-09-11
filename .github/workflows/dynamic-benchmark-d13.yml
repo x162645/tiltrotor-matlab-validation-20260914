@@ -1,0 +1,71 @@
+name: D13 operating-load prediction and matched cost
+on:
+  push:
+    branches: [research/dynamic-fidelity-benchmark-20260910]
+    paths: ['tests/dynamic_fidelity/run_d13_operating_loads.m', '.github/workflows/dynamic-benchmark-d13.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  new-package-only:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v6
+      - name: Verify fixed dependencies and preserve source snapshot
+        run: |
+          mkdir -p ci_artifacts/d13
+          python - <<'PY'
+          import pathlib,subprocess,hashlib,json,zipfile
+          root=pathlib.Path('ci_artifacts/d13')
+          expected={'analysis/xv15_c81_section_lookup.m':'7549ee3cea0732a49c3e097e10d8263da4b04abc','analysis/run_m1_stage3_corrigan_stall_delay.m':'8ef7b1897c56e0c54d9475b4069cc0982d7c3b15'}
+          for p,h in expected.items():
+              assert subprocess.check_output(['git','hash-object',p]).decode().strip()==h,p
+          paths=list(expected)+['AGENTS.md','RESEARCH_ENTRY.md','CODEX_TASK.md','docs/research/dynamic_fidelity/D13_PLAN_BEFORE_RUN.md','tests/dynamic_fidelity/run_d13_operating_loads.m','.github/workflows/dynamic-benchmark-d13.yml','docs/research/dynamic_fidelity/evidence_d11/channel/data/OARF_RUN15_EXISTING_STATIC_POINTS.csv','docs/research/dynamic_fidelity/evidence_d11/channel/data/C81_EXISTING_SMALL_ANGLE_EXCERPT.csv','docs/research/dynamic_fidelity/evidence_d11/channel/code/d11_tilt_channel.py','docs/research/dynamic_fidelity/evidence_d12/data/TM89428_HOVER_AZ_POWER.json']
+          paths=[p for p in paths if pathlib.Path(p).is_file()]
+          with zipfile.ZipFile(root/'CODE_INPUT_SNAPSHOT.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for p in paths:z.write(p,p)
+          (root/'INPUT_PROVENANCE.json').write_text(json.dumps({'base':'5979d35cd6b22b1f8304210cf378f1241bbdfadb','head':subprocess.check_output(['git','rev-parse','HEAD']).decode().strip(),'files':{p:hashlib.sha256(pathlib.Path(p).read_bytes()).hexdigest() for p in paths},'new_experimental_observations':0},indent=2))
+          PY
+      - uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2021a
+      - name: Execute D13 only
+        uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            addpath(fullfile(pwd,'tests','dynamic_fidelity'));
+            diary(fullfile(pwd,'ci_artifacts','d13','MATLAB_LOG.txt'));
+            run_d13_operating_loads(fullfile(pwd,'ci_artifacts','d13','native'));diary off;
+      - name: Read results and verify unchanged inputs
+        run: |
+          git diff --exit-code
+          python - <<'PY'
+          import pathlib,json,hashlib,csv
+          root=pathlib.Path('ci_artifacts/d13')
+          manifest=json.loads((root/'native/NATIVE_MANIFEST.json').read_text())
+          assert manifest['new_experimental_samples']==0
+          rows=list(csv.DictReader((root/'native/DYNAMIC_COMPARISON.csv').open()))
+          assert len(rows)==10
+          idx={str(p.relative_to(root)):{'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in root.rglob('*') if p.is_file()}
+          (root/'OUTPUT_INDEX.json').write_text(json.dumps({'execution_commit':manifest['execution_commit'],'run_id':manifest['run_id'],'files':idx},indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: d13-operating-loads-${{ github.sha }}
+          path: ci_artifacts/d13
+          if-no-files-found: error
+      - name: Persist successful original outputs without overwriting other changes
+        run: |
+          branch=research/dynamic-fidelity-benchmark-20260910
+          remote_head=$(git ls-remote origin "refs/heads/$branch" | cut -f1)
+          test "$remote_head" = "$GITHUB_SHA" || { echo 'Branch advanced; original artifact retained, no overwrite'; exit 1; }
+          dest="docs/research/dynamic_fidelity/evidence_d13/runs/$GITHUB_RUN_ID"
+          mkdir -p "$dest"
+          cp -a ci_artifacts/d13/. "$dest/"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$dest"
+          git commit -m 'evidence: persist D13 native operating-load and matched-cost outputs [skip ci]'
+          git push origin "HEAD:refs/heads/$branch"
