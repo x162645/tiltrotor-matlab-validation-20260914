@@ -1,0 +1,52 @@
+name: D05 relative-response qualification supplement
+on:
+  push:
+    branches: [research/dynamic-fidelity-benchmark-20260910]
+    paths: ['analysis/dynamic_fidelity/qualification/qualify_relative_response.m','tests/dynamic_fidelity/run_d05_relative_gate.m','.github/workflows/dynamic-benchmark-d05-relative.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  relative-gate:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 34601330893
+          name: d05-method-309d01dfebc928911328e2f28d95fe76c150e5cf
+          path: ci_artifacts/d05_relative/input
+      - name: Verify immutable prior model results
+        run: |
+          python - <<'PY'
+          import pathlib,hashlib,json,os
+          p=pathlib.Path('ci_artifacts/d05_relative/input/D05_RESULTS.mat')
+          assert hashlib.sha256(p.read_bytes()).hexdigest()=='99e78ab92dab057309a7ccda892133ded3d4859d32e50186858f7c328e9930f1'
+          meta={'prior_mat_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'prior_run':34601330893,'prior_artifact':10264532634,'head':os.environ['GITHUB_SHA'],'new_model_trajectories':0}
+          pathlib.Path('ci_artifacts/d05_relative/INPUT_MANIFEST.json').write_text(json.dumps(meta,indent=2))
+          PY
+      - uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2021a
+      - uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            startup;addpath(fullfile(pwd,'tests','dynamic_fidelity'));
+            outdir=fullfile(pwd,'ci_artifacts','d05_relative');
+            diary(fullfile(outdir,'MATLAB_LOG.txt'));
+            run_d05_relative_gate(outdir,fullfile(outdir,'input','D05_RESULTS.mat'));diary off;
+      - name: Snapshot only supplemental code, preserve original evidence
+        if: always()
+        run: |
+          mkdir -p ci_artifacts/d05_relative/code
+          cp analysis/dynamic_fidelity/qualification/qualify_relative_response.m analysis/dynamic_fidelity/d05_error_enclosure.m tests/dynamic_fidelity/run_d05_relative_gate.m docs/research/dynamic_fidelity/D05_RELATIVE_SUPPLEMENT.md ci_artifacts/d05_relative/code/
+          git diff --exit-code
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: d05-relative-${{ github.sha }}
+          path: ci_artifacts/d05_relative
+          if-no-files-found: error
