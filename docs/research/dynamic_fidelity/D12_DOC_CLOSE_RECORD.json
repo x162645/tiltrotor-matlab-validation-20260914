@@ -1,0 +1,22 @@
+{
+  "documentation_only": true,
+  "scientific_models_executed": 0,
+  "execution_commit": "190f35c4417564892e434d436798b8589038f362",
+  "run_id": "34644058061",
+  "old_git_blobs": {
+    "docs/research/dynamic_fidelity/STEP_LEDGER.md": "57f91c0ea86f198eec5b2ff54cdc7020932bbcc0",
+    "RESEARCH_ENTRY.md": "cd8de12727ada6cde99bf9cceffbfb0806b8c496",
+    "CODEX_TASK.md": "f704e8ffa917469930165bdc7df6d411004c6d15"
+  },
+  "old_ledger_preserved_as_contiguous_bytes": true,
+  "D06_D10_original_ledger_sha256": "a8a634dab2417051c441833f111b5e05452de2d6a559429a8183d3a933d4ee68",
+  "D12_append_sha256": "13f170cac6c7a4e2acfc8aabe27070cfa9ee5f1d28622edb8e30cb0488df58bd",
+  "new_files_sha256": {
+    "docs/research/dynamic_fidelity/STEP_LEDGER.md": "20c660f7d9f3bff9d9e12da110a16fa0c6a914a2fd790471c7c16d282af89fd2",
+    "RESEARCH_ENTRY.md": "7e11e4212058609cbbb61795b3051f9353ef37684f289f96d981b0191e551f38",
+    "CODEX_TASK.md": "307e8de57b2f5e5a2742584b6efadefefac46e756919bd9f6ce9c8b607a70897"
+  },
+  "D12_scientific_run": 34642707267,
+  "D12_scientific_source_commit": "872c566382cce21153e31e7e42561916bd31cb37",
+  "D12_scientific_evidence_commit": "b46062426ba85a7b99097bca6dfb4f55f300a39f"
+}
