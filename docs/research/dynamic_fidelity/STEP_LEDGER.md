@@ -1,6 +1,6 @@
 # 动态研发逐步台账
 
-本台账接续S00–S18，不是重做它们。分支research/dynamic-fidelity-benchmark-20260910，继承4cd7d4c。
+本台账接续S00–S18，不是重做它们。分支research/dynamic-fidelity-benchmark-20260910，继承4cd7d4c。最新实施为文末D02.1，旧D01和D02定义保留为历史。
 
 ## D00 自主接管与资产选择
 
@@ -37,7 +37,7 @@ PDF124/147及因式脚注PDF93和Eq4.8/PDF110已查看渲染原页；其余元�
 执行run34535689673，计算提交962dee6cd288aed7024b9c6499734808e18ef741；真实MATLAB 9.10.0.2198249(R2021a)Update8，GLNXA64。
 91项断言通过，4条参照各129个计算频点；不调用旋翼/飞机模型，不进行新配平。91是实现测试数量，516是参照离散点数量，都不是新增外部试验数量。
 
-测试包含原始因式对多项式重建、同一传递函数的独立状态空间求值、合成2倍增益/反号/延迟响应，以及错误单位、工况、观测位置、超频段、重复频点、NaN和零响应的拒绝。
+测试包含原始因式对多项式重建、同一传递函数的独立状态空间求值、合成2倍增益、反号、延迟，以及错误单位、工况、观测位置、超频段、重复频点、NaN和零响应的拒绝。
 
 |通道|因式/多项式最大复数差|状态空间/多项式最大复数差|
 |---|---:|---:|
@@ -60,14 +60,34 @@ run_dynamic_reference_tests(fullfile(pwd,'results','dynamic_reference_reproducti
 
 这会执行参照与比较器的软件测试，不是飞机动态验证。当前四条参照first_principles_comparison_ready均为false，原试验质量/CG/惯量、环境/RPM及输入链缺口没有消失。不得复制这些已识别传递函数作为新的部件模型，再与自身比较宣布通过。
 
-## 下一步D02（未实施）
+## D02 原始任务定义（历史；实现及D02.1进度见下文）
 
 显式动态部件接口与首个可计算纵向—升沉原型；先稳态极限、局部线性/非线性一致性，再决定有资格的外部通道。继承旧动态同工况限制，不把D01来源响应直接复制成新的飞机模型。不声称国内领先；公平基线与独立数据仍需后续建立。
 
-D02应首先确定一个有明确输入含义、可重复计算的工作点及控制接口，再选择最小必要的动态气动状态。不得把任意一阶滤波器套在静态载荷外就称为有依据的动态模型；不得直接把巡航参照用于现有40–100kt直升机算例。若新增参数需要辨识，单列校准数据和保留检验，不能覆盖原无目标拟合基线。模型改动完成后必须执行对应数值一致性与必要回归，而非再次普查所有历史来源。
+D02首先确定有明确输入含义、可重复计算的工作点及控制接口，再选择最小必要的动态气动状态。不得把任意一阶滤波器套在静态载荷外就称为有依据的动态模型；不得直接把巡航参照用于现有40–100kt直升机算例。若新增参数需要辨识，单列校准数据和保留检验，不能覆盖原无目标拟合基线。
 
-## D02 implemented
+## D02 Codex初版实施（21a699a，保留历史）
 
-The opt-in service `services/run_d02_longitudinal_heave.m` now provides a fixed-nacelle longitudinal/heave prototype. The production nine-state nonlinear EOM is reused; induced velocity is promoted to one state per rotor, actuator commands are explicit collective/cyclic/elevator states, and `hUp` is inertial altitude positive upward. Current inflow is passed into the rotor blade/flap/load calculation, while each rotor momentum relation supplies the target for the inflow derivative.
+services/run_d02_longitudinal_heave.m建立固定短舱纵向/升沉原型。原生产九状态EOM复用，左右诱导速度各增一个状态，三个执行机构状态及向上高度。当前入流进入叶素/挥舞/载荷路径，动量映射供入流导数目标，而非后处理推力滤波。
 
-Verification gates executed in MATLAB: production trim residual closes (rigid-body 9.193e-05, inflow 3.794e-03); local Jacobian is finite with dimensions 15x15 and 15x3; nonlinear 0.2-degree elevator perturbation remains finite; every sample exposes Fx/Fz/My, rotor thrust/inflow, and rotor/wing/fuselage/tail snapshots. These are implementation and consistency checks, not flight-test validation. The new time constants are assumed research parameters and remain subject to qualified external comparison.
+初版台账记录MATLAB结果：机体残差9.193e-05、入流残差3.794e-03；A15x15/B15x3有限；0.2deg升降舵扰动轨迹有限。但初版未持久保存对应D02执行产物，不能复用D01的91测试作为其证据。实际/目标历史标签、动态闭合语义和有效激励检查后由D02.1修正。初版时间常数均明确为假设。
+
+## D02.1 接手、动态一致性与受控准定常比较（2026-09-11）
+
+来源：Codex D02提交21a699a及原生产方程；用户授权直接接手。方法契约D02_1_CONTRACT.md，首轮失败与限定细化D02_1_REFINEMENT_NOTE.md，完整结果D02_1_REPORT.md。参数仍为通用基线，tau0.15/0.08仍是假设，未复制D01传递函数或继承V4/V7型号精度。
+
+实施：实际/目标入流分开；动态合法性与定常闭合分开；共享RHS和观测A/B/C/D；15状态动态与13状态代数入流模型；有效总距/周期命令、两档幅值及零输入基线；ODE事件准确分段，成本独立记录。旧三函数静态/动态六次输出逐值回归。
+
+执行：首轮13ca086/run34580750797/artifact10191624893，十轨迹全完成，唯一失败是严格工作点。原hover总距单变量求解残留X和My；局部theta/collective/cyclic平衡细化后d35cb829/run34581649374/artifact10191965719，65项检查通过。没有放宽门槛或减f0；细化242次调用，周期只调整约0.0010449deg。body最大导数数值3.63e-11、入流导数6.41e-8。
+
+结果：动态总距→向下加速度NRMSE0.3314%/0.1652%，周期→q为0.0478%/0.0238%；幅值减半绝对误差约四分之一。准定常同门限通过。固定两种模式/执行机构的差异已量化，不是外部真实性比较。原始MAT/CSV/JSON/日志按run分目录保留，路径evidence_d02_1。
+
+默认及public API检查：run34582649604/artifact10192283521/执行22a6a86，12项检查通过，原JSON/MAT已取回。包括默认参数、三个服务入口、观察量标签及显式工作点复用；不是重跑十轨迹。
+
+限制：wDot对u/v两档单边导数仍不一致，完整Jacobian/微小交叉通道没有通过结论；新时间常数未验证。仅一个悬停点、正向小扰动、3s窗口，无新外部飞行验证。计算成本不能直接称同精度领先。
+
+证据永久归档提交53f748478f17ac0c0c49eaf5a48b42c823018811；两个主运行38文件、1,805,840字节，逐文件原run/commit/hash见ARCHIVE_INDEX.json；额外API结果独立保存。首轮失败不删除。
+
+重开条件：RHS/观测/输入合同、工作点、动态规律或求值数值精度变化时作相应回归。只改报告不重新运行十轨迹。默认/public API短检查另存，不混入主运行。D01意外重跑与一次归档传输失败不算模型研究成果，详见报告。
+
+下一步：有来源的动态入流物理基线与当前假设模型作同条件比较，保持主通道/交叉通道资格区分；不重做已关闭的D02字段审计，不无边界复查旧S台账。

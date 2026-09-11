@@ -1,42 +1,35 @@
-# 动态可信度研发入口（D01）
+# 动态可信度研发入口（当前D02.1）
 
-2026-09-10。用户明确授权项目负责人自由复用/重构/另建模型，目标为在面向操稳的低成本动态预测上形成可比较优势。领先是待证明的研发目标，不是当前状态。
+更新2026-09-11。用户授权自主复用/重构/另建模型，目标是在面向操稳的低成本动态预测上形成可比较优势。领先是待证明的研发目标，不是现有结论。本分支从旧静态分支4cd7d4c继承，保留S00–S18、PR77及V1–V7。
 
-## 本次决策
+## 当前入口与状态
 
-保留资产，不推倒历史。新分支 `research/dynamic-fidelity-benchmark-20260910` 从旧研究分支的实际最新提交 `4cd7d4c04bc868152a2308dc7331efb731c1ec26` 建立，包含 ChatGPT Work 完成的 S18。PR77、V1–V7、原始参数、失败记录、已归档试验及来源不覆盖；既有物理版本仍是V7。新分支先建立动态基准，再以证据决定必要重构。
+分支research/dynamic-fidelity-benchmark-20260910，Draft PR78。先核查真实HEAD与未提交更改，读AGENTS.md、CODEX_TASK.md和docs/research/dynamic_fidelity/STEP_LEDGER.md，最新报告为D02_1_REPORT.md。
 
-## 现有资产怎么用
+D01四条来源动态参照与比较器已执行91项MATLAB检查。它们仍是外部识别响应，不是当前部件模型；试验匹配条件缺口保留。
 
-- 复用：部件力/矩与坐标约定、V4旋翼实现及已完成27+24点回归、V7静态算例、原始文献及归档工具。
-- 保留为基线：原准定常模型、V1–V7和S00–S18，版本编号不是精度排序。新模型失败不得删除。
-- 需要新建：统一实际输入/观测输出的动态比较接口、候选动态状态及其工况调度、同等条件下的精度/成本比较。
-- 尚未复用为已验证动态：有稳态域守卫的翼尾/桨毂罩。不得删除守卫就作动态验证；需建立真正适用的动态关系。
+Codex21a699a已实现通用生产后端的15状态D02原型。用户要求接手后，D02.1完成状态语义修复、统一RHS/观测A/B/C/D、有效激励、两档幅值/差分、准定常对照与成本记录。首轮工作点检查失败已保留，局部平衡细化后65项实际MATLAB检查通过；默认和服务接口另12项通过。完整雅可比可微性和交叉通道限制保留，无新增外部飞行验证。
 
-## 本轮交付D01，而不是另一份路线承诺
+完整十轨迹计算d35cb829c04242a44800ff16071bec93e4315e56；API计算22a6a86；原始证据永久归档53f7484。所有计算均已结束，逐步方法、run、artifact、hash和结果见台账/报告/evidence_d02_1。
 
-`analysis/dynamic_fidelity/` 已建立四条 NASA TM89428 悬停/巡航纵向响应的机器可读参照，复数频响求值、状态空间频响接口和契约检查的比较器。输入单位、符号、测量位置、工况与频段不能默默转换。比较器输出描述性误差，不自动分配外部验证PASS。
+## 资产使用原则
 
-参考系数来自原报告已经识别的传递函数，不是当前部件模型，不是新测量，不是重新辨识；其重建正确仅证明读表和计算正确。本轮不声称已有四条第一性动态预测通过。程序的增益/符号/延迟扰动均为合成单元测试，不能计为外部样本。
+复用坐标与部件接口、已归档试验、V4/V7静态研究及失败作为约束，但D02当前使用通用production后端，不自动继承另一路径的型号精度。保留准定常、假设松弛及后续物理动态版本，版本编号不是精度排序。
 
-旧动态资料审计 `docs/M1_STAGE6_DYNAMIC_EVIDENCE_REAUDIT.md`、`docs/M1_STAGE8_DYNAMIC_HIGH_HOMOLOGY_HUNT.md` 已读；其试验重量/重心/惯量等未闭合结论保留。由试验识别的输入输出描述可以先编译成数学参照；这不需要编造飞机参数，也不提升第一性动态同工况资格。不要再按旧流程无限搜索同一缺失卷册。
+有稳态域守卫的来源翼尾/桨毂罩未被直接动态化。不得删除守卫或把D01传递函数复制成新飞机模型来宣布动态有效。当前假设tau0.15/0.08未依据响应调参；执行副本加严内求解数值精度已明确记录，默认P未改。
 
-## 首要研发问题与顺序
+## 首要研发问题与下一交付
 
-主攻：用少量物理动态状态保持关键操稳频带中的幅值、相位与耦合；与有代表性的强低阶基线公平比较，不能以增加部件数为创新。
+研究问题不变：用少量有依据的动态状态保留关键操稳频带中的幅值、相位与耦合，最终通过公平比较取得精度—成本优势。
 
-下一D02：在已有状态/输入定义下确定一个可计算且输入明确的纵向—升沉工作点，建立显式动态部件接口及其稳态极限/小扰动一致性测试。优先复用原实现，不直接将巡航参照与40–100kt直升机点相比较，也不把悬停q/升降舵索引当成孤立升降舵气动效能。先闭合控制链，再判定该点能作严格试验比较、带不确定性相关性，还是仅数值原型。
+下一交付是在已可检验的动态接口上建立有来源的低阶动态入流物理基线，与当前假设松弛和准定常作同条件比较。先声明适用工况、输入、状态与稳态极限，再比较有效输出；同时处理已暴露的方向性/交叉通道资格。静态和动态变化分别解释。不要在缺少数据时调时间常数追曲线，不重复已关闭D02接口审计或无关旧旋翼全回归。
 
-研发门：强基线同硬件/同数据/同工况、独立完整机动留出、跨几何或工况测试、误差与在线/离线成本同时记录。此前提出的30%误差改善/5倍成本目标只是候选研发靶标；在强基线量化前不据其宣布领先，也不事后修改门槛追通过。
+已有TM89428与Stage6/8中质量/CG/惯量等缺口保持。可以推进诚实标记的原型和不确定性分析，但不能通过贴相同condition_id宣称完全同工况。强基线、保留完整工况、真实外部数据和同等精度成本比较仍是后续必须完成的证据。
 
-## 权限和运行边界
+## 运行与接手
 
-用户授权自主选择技术和代码路线，不代表自动获得新试验设备、付费资源或无人值守能力。本分支允许有限编码/执行/资料获取；不删除历史、不强推、不改仓库权限、不自动合并/发布、不增加未经约定的付费资源。真实试验需要现实团队和数据。新结果按D编号附来源/方法/运行/限制，继续复用旧S台账，不派回首次60kt或完整旋翼历史审计。
+完整复现入口为dynamic-benchmark-d02-hardening.yml；其baseline_code来自git21a699a三函数的仅重命名副本。本地复现应按该工作流准备，不用不明同名函数替代。快速接口检查可执行startup; check_d02_longitudinal_heave。
 
-测试入口：`tests/dynamic_fidelity/run_dynamic_reference_tests.m`，不启动旋翼或全机配平。实际结果和版本以 `docs/research/dynamic_fidelity/STEP_LEDGER.md` 及原始manifest为准。新文件优先入口是本文件；旧WORK_HANDOFF保持为原阶段来源，不据旧任务范围误删已授权动态研发。
+证据无需重跑：python tools/archive_d02_evidence.py --request docs/research/dynamic_fidelity/D02_1_ARCHIVE_REQUEST.json --verify-only 只作离线字节核验。旧WORK_HANDOFF仍是静态历史入口，动态新进度以本文件和D台账为准。
 
-## D02 delivered: longitudinal-heave dynamic prototype
-
-`services/run_d02_longitudinal_heave.m` adds an opt-in 15-state/3-input prototype while preserving the production nine-state chain. The added states are left/right induced velocity, collective/cyclic/elevator actuator states, and inertial altitude `hUp` (positive upward). Rotor loads are recomputed at the current inflow state and the rotor momentum target drives the inflow ODE; this is not a post-hoc load filter.
-
-The service supports trim-limit inspection, local numerical linearization, and nonlinear ODE45 simulation with `Fx`, `Fz`, `My`, thrust/inflow, and component load histories. `params_nominal.m` marks the D02 time constants as assumed research parameters. MATLAB verification is in `tests/check_d02_longitudinal_heave.m`; it does not claim flight-test validation or XV-15 reproduction.
+当前窗口内自主完成必要编码、运行、读回和修正；相关外部资源/权限不足时准确保存可恢复状态。不得承诺回复后无限自主执行。保护历史、不强推、不自动合并、不隐藏失败、不未经约定增加付费资源。每步注明来源、方法、真实运行与限制；只在依赖变化时做必要回归。
