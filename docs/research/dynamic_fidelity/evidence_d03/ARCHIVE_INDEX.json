@@ -1,0 +1,325 @@
+{
+  "schema_version": 1,
+  "request": {
+    "source_pdf_sha256": "d649bf28ea66ccdfbcd5d24c8cf37fbf5b5f0d4a5e0f0ed187f37734800cb6c2",
+    "artifacts": [
+      {
+        "folder": "first",
+        "run_id": 34585998506,
+        "artifact_id": 10193658400,
+        "source_commit": "ac78a0ca253351a7a9ea011bb80b4667fe9e5c70",
+        "zip_sha256": "74d9ef8dc35df525a36e80ead99ce3afd6a749c335c55c0b739efaba6551e1bf",
+        "expected_all_checks_passed": false,
+        "expected_failed_checks": 4,
+        "expected_file_sha256": {
+          "D03_RESULTS.mat": "8defb08d6e82d187da64a6ccd47a390bb89072a477a83ff37aabb387dd0bc92c",
+          "RUN_MANIFEST.json": "2f671738135074a18d7bb63a120ab06b20d4d2d93278122fd1a3ebef4bfa1eb0",
+          "CHECKS.csv": "b2c6ef6d2ac75edc78b6e8a8f63c642a2d0931d4d7860584801c1a2633182f2a",
+          "SOURCE_MODEL_RESPONSE_METRICS.csv": "f04be437c7d9b5915a12ff63e96d1d3134d88b9467fed3aa69183150cf5e1993"
+        }
+      },
+      {
+        "folder": "verified",
+        "run_id": 34586850178,
+        "artifact_id": 10194003531,
+        "source_commit": "aea793668b7b6c497e066ba54c4eb0f40d711b2a",
+        "zip_sha256": "f60447e2b729d6559353297c833e0ac9301c44c55fc02f2f5b17ff0c4b9158fc",
+        "expected_all_checks_passed": true,
+        "expected_failed_checks": 0,
+        "expected_file_sha256": {
+          "D03_RESULTS.mat": "c4af01093a6059f1e9ab70888e15467fea55bcc48d38f6443d18af519f13ddcb",
+          "RUN_MANIFEST.json": "ebf648adb058d7132603c19cc4bb58149697f074cdd574229cd259ce07ca10be",
+          "CHECKS.csv": "ffc474a0b3fa77919d4bd44824d6503395c6c3015c12e426c75958e9ea41b0e4",
+          "SOURCE_MODEL_RESPONSE_METRICS.csv": "f04be437c7d9b5915a12ff63e96d1d3134d88b9467fed3aa69183150cf5e1993"
+        }
+      }
+    ]
+  },
+  "files": {
+    "run_34585998506/CHECKS.csv": {
+      "sha256": "b2c6ef6d2ac75edc78b6e8a8f63c642a2d0931d4d7860584801c1a2633182f2a",
+      "bytes": 3992,
+      "source_runs": [
+        34585998506
+      ]
+    },
+    "run_34585998506/COST.csv": {
+      "sha256": "9dcda541a1e2c7ba943f35e30a45c29afe1c91bb87c8710ad7de46fb3fdbadd0",
+      "bytes": 457,
+      "source_runs": [
+        34585998506
+      ]
+    },
+    "run_34585998506/D03_RESULTS.mat": {
+      "sha256": "8defb08d6e82d187da64a6ccd47a390bb89072a477a83ff37aabb387dd0bc92c",
+      "bytes": 637318,
+      "source_runs": [
+        34585998506
+      ]
+    },
+    "run_34585998506/DOMAIN_USAGE.csv": {
+      "sha256": "0b1138ff487899593e128faf0817b039d11b21ff008e75ffa023d93383ced322",
+      "bytes": 505,
+      "source_runs": [
+        34585998506
+      ]
+    },
+    "run_34585998506/MATLAB_LOG.txt": {
+      "sha256": "6013a70bc798317a0810fefb5dfb3783fc2c26bfc417de47560f578cac15e8e8",
+      "bytes": 5002,
+      "source_runs": [
+        34585998506
+      ]
+    },
+    "run_34585998506/MODEL_FREQUENCY_RESPONSES.csv": {
+      "sha256": "0840f6f868df81341047f70c3f57c31a3f826a963e7ee5f60cd857838309059f",
+      "bytes": 31070,
+      "source_runs": [
+        34585998506
+      ]
+    },
+    "run_34585998506/PAIRED_MODEL_DIFFERENCES.csv": {
+      "sha256": "1ef2e808cb49c1775a7244372af35ca101a2ad41f482af58c36c004a12b82aec",
+      "bytes": 2417,
+      "source_runs": [
+        34585998506
+      ]
+    },
+    "run_34585998506/RUN_MANIFEST.json": {
+      "sha256": "2f671738135074a18d7bb63a120ab06b20d4d2d93278122fd1a3ebef4bfa1eb0",
+      "bytes": 773,
+      "source_runs": [
+        34585998506
+      ]
+    },
+    "run_34585998506/SOURCE_AND_INPUT_MANIFEST.json": {
+      "sha256": "7cadcaad8d453cd13b633ce04786132a532a5c3688d0b1f3031683d453fe1f84",
+      "bytes": 700,
+      "source_runs": [
+        34585998506
+      ]
+    },
+    "run_34585998506/SOURCE_MODEL_RESPONSE_METRICS.csv": {
+      "sha256": "f04be437c7d9b5915a12ff63e96d1d3134d88b9467fed3aa69183150cf5e1993",
+      "bytes": 1660,
+      "source_runs": [
+        34585998506
+      ]
+    },
+    "run_34585998506/cf_mean_case1.csv": {
+      "sha256": "75815c849f9b43c5c75063d16fa5248fc1462fd83c96c05c7c1452e2c4a441f4",
+      "bytes": 38263,
+      "source_runs": [
+        34585998506
+      ]
+    },
+    "run_34585998506/cf_mean_case2.csv": {
+      "sha256": "d7ecfc968adfcb640cc52a561f49a3bcbd509dd142d1fd070b4370b0e28ae102",
+      "bytes": 38314,
+      "source_runs": [
+        34585998506
+      ]
+    },
+    "run_34585998506/cf_mean_case3.csv": {
+      "sha256": "fad806be108815c6220dcae8630582a563eee439573eb64287832a13f22db6a2",
+      "bytes": 38464,
+      "source_runs": [
+        34585998506
+      ]
+    },
+    "run_34585998506/cf_mean_case4.csv": {
+      "sha256": "3d332e8fcf9efa15fb118e1e5443c615a2a9e2aa9c3644696b550c08adc7e014",
+      "bytes": 38633,
+      "source_runs": [
+        34585998506
+      ]
+    },
+    "run_34585998506/pp_mean_case1.csv": {
+      "sha256": "22ee4367d1159ab116bc6dcda10d7b7d95339efee50d5a304907ca6e44f5c22c",
+      "bytes": 38304,
+      "source_runs": [
+        34585998506
+      ]
+    },
+    "run_34585998506/pp_mean_case2.csv": {
+      "sha256": "93e1488b6f188bb55c40e3f9e21be2b5ee29ef60608366e13f69957902d130bf",
+      "bytes": 38510,
+      "source_runs": [
+        34585998506
+      ]
+    },
+    "run_34585998506/pp_mean_case3.csv": {
+      "sha256": "cbbfef83670f84ba94bfa66e08843e28c0234c85def22007db01a72b8412476a",
+      "bytes": 38506,
+      "source_runs": [
+        34585998506
+      ]
+    },
+    "run_34585998506/pp_mean_case4.csv": {
+      "sha256": "b2ff5f68059863326978aa0702387597f1f3078d55b2db24e4d27475425d226e",
+      "bytes": 38685,
+      "source_runs": [
+        34585998506
+      ]
+    },
+    "sources/NASA_TM_88327.pdf": {
+      "sha256": "d649bf28ea66ccdfbcd5d24c8cf37fbf5b5f0d4a5e0f0ed187f37734800cb6c2",
+      "bytes": 1339743,
+      "source_runs": [
+        34585998506,
+        34586850178
+      ]
+    },
+    "sources/pdf_009.png": {
+      "sha256": "afaa34c34a2bcc7c4f76a85ec2b0fc7cca2f035f565ce5eac43260bcc1c643c9",
+      "bytes": 193386,
+      "source_runs": [
+        34585998506,
+        34586850178
+      ]
+    },
+    "sources/pdf_010.png": {
+      "sha256": "04ea21b9beac57f2750394f884132a2437da3d0f0e5611da45282aa4f38c670c",
+      "bytes": 164640,
+      "source_runs": [
+        34585998506,
+        34586850178
+      ]
+    },
+    "sources/pdf_011.png": {
+      "sha256": "d24182395312625b683b7930d06fe8f5deb08565d66f9119a7726fcebf30ecbe",
+      "bytes": 212346,
+      "source_runs": [
+        34585998506,
+        34586850178
+      ]
+    },
+    "run_34586850178/CHECKS.csv": {
+      "sha256": "ffc474a0b3fa77919d4bd44824d6503395c6c3015c12e426c75958e9ea41b0e4",
+      "bytes": 4008,
+      "source_runs": [
+        34586850178
+      ]
+    },
+    "run_34586850178/COST.csv": {
+      "sha256": "f15d432ab848756076ccc5c12dd8acbf6650832c425b242d088fb62731dc1fd3",
+      "bytes": 454,
+      "source_runs": [
+        34586850178
+      ]
+    },
+    "run_34586850178/D03_RESULTS.mat": {
+      "sha256": "c4af01093a6059f1e9ab70888e15467fea55bcc48d38f6443d18af519f13ddcb",
+      "bytes": 654625,
+      "source_runs": [
+        34586850178
+      ]
+    },
+    "run_34586850178/DOMAIN_USAGE.csv": {
+      "sha256": "0b1138ff487899593e128faf0817b039d11b21ff008e75ffa023d93383ced322",
+      "bytes": 505,
+      "source_runs": [
+        34586850178
+      ]
+    },
+    "run_34586850178/MATLAB_LOG.txt": {
+      "sha256": "164ae35bcef67e02fbd23bfcfa7f6d50ebdad5fad7ac3e0c583f11506c935d34",
+      "bytes": 5153,
+      "source_runs": [
+        34586850178
+      ]
+    },
+    "run_34586850178/MODEL_FREQUENCY_RESPONSES.csv": {
+      "sha256": "aefb21671a1fe2cac2ff14a9acda66b574007be95ea17f86e279ef7d42592526",
+      "bytes": 31071,
+      "source_runs": [
+        34586850178
+      ]
+    },
+    "run_34586850178/PAIRED_MODEL_DIFFERENCES.csv": {
+      "sha256": "1ef2e808cb49c1775a7244372af35ca101a2ad41f482af58c36c004a12b82aec",
+      "bytes": 2417,
+      "source_runs": [
+        34586850178
+      ]
+    },
+    "run_34586850178/RUN_MANIFEST.json": {
+      "sha256": "ebf648adb058d7132603c19cc4bb58149697f074cdd574229cd259ce07ca10be",
+      "bytes": 806,
+      "source_runs": [
+        34586850178
+      ]
+    },
+    "run_34586850178/SOURCE_AND_INPUT_MANIFEST.json": {
+      "sha256": "b2d8ba774a26070876287a86ad46183e8f233d3e4a559271a12d2cd1f36529ee",
+      "bytes": 700,
+      "source_runs": [
+        34586850178
+      ]
+    },
+    "run_34586850178/SOURCE_MODEL_RESPONSE_METRICS.csv": {
+      "sha256": "f04be437c7d9b5915a12ff63e96d1d3134d88b9467fed3aa69183150cf5e1993",
+      "bytes": 1660,
+      "source_runs": [
+        34586850178
+      ]
+    },
+    "run_34586850178/cf_mean_case1.csv": {
+      "sha256": "75815c849f9b43c5c75063d16fa5248fc1462fd83c96c05c7c1452e2c4a441f4",
+      "bytes": 38263,
+      "source_runs": [
+        34586850178
+      ]
+    },
+    "run_34586850178/cf_mean_case2.csv": {
+      "sha256": "d7ecfc968adfcb640cc52a561f49a3bcbd509dd142d1fd070b4370b0e28ae102",
+      "bytes": 38314,
+      "source_runs": [
+        34586850178
+      ]
+    },
+    "run_34586850178/cf_mean_case3.csv": {
+      "sha256": "fad806be108815c6220dcae8630582a563eee439573eb64287832a13f22db6a2",
+      "bytes": 38464,
+      "source_runs": [
+        34586850178
+      ]
+    },
+    "run_34586850178/cf_mean_case4.csv": {
+      "sha256": "3d332e8fcf9efa15fb118e1e5443c615a2a9e2aa9c3644696b550c08adc7e014",
+      "bytes": 38633,
+      "source_runs": [
+        34586850178
+      ]
+    },
+    "run_34586850178/pp_mean_case1.csv": {
+      "sha256": "22ee4367d1159ab116bc6dcda10d7b7d95339efee50d5a304907ca6e44f5c22c",
+      "bytes": 38304,
+      "source_runs": [
+        34586850178
+      ]
+    },
+    "run_34586850178/pp_mean_case2.csv": {
+      "sha256": "93e1488b6f188bb55c40e3f9e21be2b5ee29ef60608366e13f69957902d130bf",
+      "bytes": 38510,
+      "source_runs": [
+        34586850178
+      ]
+    },
+    "run_34586850178/pp_mean_case3.csv": {
+      "sha256": "cbbfef83670f84ba94bfa66e08843e28c0234c85def22007db01a72b8412476a",
+      "bytes": 38506,
+      "source_runs": [
+        34586850178
+      ]
+    },
+    "run_34586850178/pp_mean_case4.csv": {
+      "sha256": "b2ff5f68059863326978aa0702387597f1f3078d55b2db24e4d27475425d226e",
+      "bytes": 38685,
+      "source_runs": [
+        34586850178
+      ]
+    }
+  },
+  "note": "Original ZIP hashes were independently checked before archiving. This utility checks listed original member hashes and retained file hashes; no model runs."
+}

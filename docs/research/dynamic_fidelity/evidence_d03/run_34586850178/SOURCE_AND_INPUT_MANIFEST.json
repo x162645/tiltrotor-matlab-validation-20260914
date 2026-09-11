@@ -1,0 +1,17 @@
+{
+  "source_url": "https://ntrs.nasa.gov/api/citations/19870015049/downloads/19870015049.pdf",
+  "source_pdf_sha256": "d649bf28ea66ccdfbcd5d24c8cf37fbf5b5f0d4a5e0f0ed187f37734800cb6c2",
+  "pages": 51,
+  "rendered_pages_1based": [
+    5,
+    6,
+    9,
+    10,
+    11
+  ],
+  "baseline_mat_path": "docs/research/dynamic_fidelity/evidence_d02_1/run_34581649374/D02_CONSISTENCY_RESULTS.mat",
+  "baseline_mat_sha256": "d26ec7d66cc31089c51311db6f28b29fdd289ab6cb35c631387ad3c304025c14",
+  "baseline_source_commit": "d35cb829c04242a44800ff16071bec93e4315e56",
+  "current_commit": "aea793668b7b6c497e066ba54c4eb0f40d711b2a",
+  "source_role": "EQUATION_SOURCE_NOT_INDEPENDENT_EXPERIMENT_FOR_GENERIC_AIRCRAFT"
+}
