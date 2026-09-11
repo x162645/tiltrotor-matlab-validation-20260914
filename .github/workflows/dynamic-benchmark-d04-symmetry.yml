@@ -1,0 +1,37 @@
+name: D04 exact common-mode reduction
+on:
+  push:
+    branches: [research/dynamic-fidelity-benchmark-20260910]
+    paths: ['model/axial/build_axial_symmetric.m','model/axial/axial_symmetric_rhs.m','tests/dynamic_fidelity/run_d04_symmetry.m','.github/workflows/dynamic-benchmark-d04-symmetry.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-reduction:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v6
+      - uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2021a
+      - uses: matlab-actions/run-command@v3
+        with:
+          command: >-
+            startup;addpath(fullfile(pwd,'tests','dynamic_fidelity'));
+            outdir=fullfile(pwd,'ci_artifacts','d04_symmetry');mkdir(outdir);
+            diary(fullfile(outdir,'MATLAB_LOG.txt'));run_d04_symmetry(outdir);diary off;
+      - name: Preserve code and protect defaults
+        if: always()
+        run: |
+          mkdir -p ci_artifacts/d04_symmetry/code_snapshot
+          cp -R model/axial ci_artifacts/d04_symmetry/code_snapshot/
+          cp model/mean_inflow_88327.m analysis/dynamic_fidelity/d04_*.m tests/dynamic_fidelity/run_d04_symmetry.m params_nominal.m ci_artifacts/d04_symmetry/code_snapshot/
+          git rev-parse HEAD > ci_artifacts/d04_symmetry/COMMIT.txt
+          git diff --exit-code
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: d04-symmetry-${{ github.sha }}
+          path: ci_artifacts/d04_symmetry
+          if-no-files-found: error

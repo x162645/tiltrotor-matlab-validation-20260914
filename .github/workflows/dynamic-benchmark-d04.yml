@@ -2,7 +2,7 @@ name: D04 coning inflow and heave state-retention benchmark
 on:
   push:
     branches: [research/dynamic-fidelity-benchmark-20260910]
-    paths: ['model/axial/**','analysis/dynamic_fidelity/d04_*.m','tests/dynamic_fidelity/run_d04_coupling.m','.github/workflows/dynamic-benchmark-d04.yml']
+    paths: ['model/axial/build_axial_coupled.m','model/axial/axial_coupled_rhs.m','model/axial/axial_workpoint.m','model/mean_inflow_88327.m','analysis/dynamic_fidelity/d04_nominal_case.m','analysis/dynamic_fidelity/d04_paper_case.m','analysis/dynamic_fidelity/d04_linearize.m','analysis/dynamic_fidelity/d04_table1_reference.m','tests/dynamic_fidelity/run_d04_coupling.m']
   workflow_dispatch:
 permissions:
   contents: read

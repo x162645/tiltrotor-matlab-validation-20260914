@@ -2,7 +2,7 @@ name: D01 executable dynamic references
 on:
   push:
     branches: [research/dynamic-fidelity-benchmark-20260910]
-    paths: ['analysis/dynamic_fidelity/**','tests/dynamic_fidelity/run_dynamic_reference_tests.m']
+    paths: ['analysis/dynamic_fidelity/df_*.m','analysis/dynamic_fidelity/data/tm89428_reference_cases.json','tests/dynamic_fidelity/run_dynamic_reference_tests.m']
   workflow_dispatch:
 permissions:
   contents: write
