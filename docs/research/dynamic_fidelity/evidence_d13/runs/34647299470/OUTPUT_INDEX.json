@@ -1,0 +1,70 @@
+{
+  "execution_commit": "cb7a8fedcc1aa061f3d11d48a77a9b9d4579484a",
+  "run_id": "34647299470",
+  "files": {
+    "CODE_INPUT_SNAPSHOT.zip": {
+      "bytes": 37344,
+      "sha256": "567746df328f7acdf4d67599b79cd214d16b027a4b852f17840db33163e3a06f"
+    },
+    "INPUT_PROVENANCE.json": {
+      "bytes": 1678,
+      "sha256": "d4afc3241d3651e17c786c7c8b0c7411a879407596ba3596fab4bf987028b0fd"
+    },
+    "MATLAB_LOG.txt": {
+      "bytes": 4708,
+      "sha256": "556463fdc5fa28934069bdab56c3736171c990caf37e52dfd7d998dea030f75b"
+    },
+    "native/INTEGRATOR_REFINEMENT.csv": {
+      "bytes": 118,
+      "sha256": "df89ebef0495b0513027dfa50d9a57ce7ba8388ca75d7826d74145f40c837d49"
+    },
+    "native/D13_NATIVE_RESULTS.mat": {
+      "bytes": 138887,
+      "sha256": "935da8a4fe0116e3635e36bc4dac546e6c45bb1b80c242c0bc881c193b69682d"
+    },
+    "native/FIELD_APPROXIMATION.csv": {
+      "bytes": 309,
+      "sha256": "3230fb3ab244b5342356b2d46fe35d16cbcd9399618ff9e21605d5c8f424c4cb"
+    },
+    "native/DYNAMIC_TRACES.csv": {
+      "bytes": 910436,
+      "sha256": "15d1557f6b659595fc7c0b0873ef2a32eceee39d0df3f1d878ffcd409c6068ba"
+    },
+    "native/INDEPENDENT_GRID_QUERIES.csv": {
+      "bytes": 14671,
+      "sha256": "d4b32e98a03cb9d24133763e5589e44d7fc49c406e9cd1a3ab61502d531c74f3"
+    },
+    "native/OFFLINE_COST.csv": {
+      "bytes": 64,
+      "sha256": "41475bc70f00b36fd81042ef7e0e3f7b2ef211e2187ab3fa7d6e050017c3d8eb"
+    },
+    "native/SOURCE_SHAPE_DEPENDENCY_REGRESSION.csv": {
+      "bytes": 833,
+      "sha256": "653bbd6873d485ef8b75772ad016febced270f7202bcbadceb0af3e7c872f610"
+    },
+    "native/LOAD_TABLE_41_81.csv": {
+      "bytes": 154479,
+      "sha256": "0a70e29141f9fd07fef2cf54f8bcd69d5e69a36b729bf990946b7e407eba2410"
+    },
+    "native/DYNAMIC_COMPARISON.csv": {
+      "bytes": 1370,
+      "sha256": "2ab90b343651ea9ce19486a6f231c537660418e25ea2d117dbd5365bd0073a33"
+    },
+    "native/MATCHED_KERNEL_COST.csv": {
+      "bytes": 1372,
+      "sha256": "df820f8e41233c989e555cbd5b07ef70b9baa6b107a7fe1751468d30af023e00"
+    },
+    "native/NATIVE_MANIFEST.json": {
+      "bytes": 624,
+      "sha256": "1be4183957e8b454a67d4c68f38890a1d7874a6b6079cd6f5b1e174bdbf76339"
+    },
+    "native/LOAD_TABLE_21_41.csv": {
+      "bytes": 39119,
+      "sha256": "a36f798b516c88a67d8d0e6dfe0d06d2e24c90a3ad398d27e557416f61bf5233"
+    },
+    "native/OPERATING_DERIVATIVES.csv": {
+      "bytes": 8596,
+      "sha256": "6fd26dc839ba208b323c1294400bf9bbeadf706f242d72197aabf55fd21b10b6"
+    }
+  }
+}

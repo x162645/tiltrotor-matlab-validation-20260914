@@ -1,0 +1,19 @@
+{
+  "base": "5979d35cd6b22b1f8304210cf378f1241bbdfadb",
+  "head": "cb7a8fedcc1aa061f3d11d48a77a9b9d4579484a",
+  "files": {
+    "analysis/xv15_c81_section_lookup.m": "ad0e05483c200e3462532a5573c3eed8251e974216ed39afb1a6baff8be3ed41",
+    "analysis/run_m1_stage3_corrigan_stall_delay.m": "f4dbd063386d9209e89b818c678539be3ca88ee6954b62955fa6ee7e61bc2089",
+    "AGENTS.md": "85fbacdde8edc0571225bc2092745f37948691836255110eca3d310ae61aa3e0",
+    "RESEARCH_ENTRY.md": "7e11e4212058609cbbb61795b3051f9353ef37684f289f96d981b0191e551f38",
+    "CODEX_TASK.md": "307e8de57b2f5e5a2742584b6efadefefac46e756919bd9f6ce9c8b607a70897",
+    "docs/research/dynamic_fidelity/D13_PLAN_BEFORE_RUN.md": "eb5d61b8eead44157b664d291312fc800db0d6b9020b849cbd09dd3b05f08258",
+    "tests/dynamic_fidelity/run_d13_operating_loads.m": "a249dde373833849b2412d3473d6107913f905493ee29510ebe5ac2febecfd2f",
+    ".github/workflows/dynamic-benchmark-d13.yml": "469c468212c815c795ba74fe3fe1510c860109ad169a0d5aaba9c4f8a2398fca",
+    "docs/research/dynamic_fidelity/evidence_d11/channel/data/OARF_RUN15_EXISTING_STATIC_POINTS.csv": "8bfd600433b0658a413602b5250e899e38394d951911eeb328eb19eeae121e5d",
+    "docs/research/dynamic_fidelity/evidence_d11/channel/data/C81_EXISTING_SMALL_ANGLE_EXCERPT.csv": "799a64f5613ccc183f55314c924f9d6c8c97438532fe9424fe0fb6c2746b71f5",
+    "docs/research/dynamic_fidelity/evidence_d11/channel/code/d11_tilt_channel.py": "e64492a5ae717614d72cf273b0c788833a621575d52db820ddc6b2a1f02b7367",
+    "docs/research/dynamic_fidelity/evidence_d12/data/TM89428_HOVER_AZ_POWER.json": "7de5360e3b6838ff89d011fbf91feb9d73030f685ef489d918ae8e3b3ecee83c"
+  },
+  "new_experimental_observations": 0
+}

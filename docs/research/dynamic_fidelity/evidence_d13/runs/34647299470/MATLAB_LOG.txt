@@ -1,0 +1,41 @@
+                         status: 'NATIVE_EXECUTED_REQUIRES_EXTERNAL_READBACK'
+                 matlab_version: '9.10.0.2198249 (R2021a) Update 8'
+                       computer: 'GLNXA64'
+               execution_commit: 'cb7a8fedcc1aa061f3d11d48a77a9b9d4579484a'
+                         run_id: '34647299470'
+          total_elapsed_seconds: 26.1282
+                     theta0_deg: 6.4580
+                            CT0: 0.0096
+                          b_old: 0.1516
+                    b_operating: 0.1278
+                      b_no_root: 0.1262
+       new_experimental_samples: 0
+    parameters_fitted_to_flight: 0
+       full_aircraft_validation: 0
+            new_physical_states: 0
+                          scope: 'D13 source-conditioned load increments and computational approximation; two states, hover only'
+
+    amplitude_deg             method             velocity_NRMSE    acceleration_NRMSE    velocity_peak_scaled_error    acceleration_peak_scaled_error    elapsed_seconds    force_balance_error_N    both_NRMSE_within_1pct
+    _____________    ________________________    ______________    __________________    __________________________    ______________________________    _______________    _____________________    ______________________
+
+         0.1         {'DIRECT_C81'          }               0                   0                         0                               0                   4.9107              7.276e-12                  true          
+         0.1         {'OPERATING_TANGENT'   }      5.7129e-05          6.1772e-05                6.5333e-05                      8.6825e-05                 0.057455              7.276e-12                  true          
+         0.1         {'CLASSICAL_LUT_COARSE'}      0.00015709          0.00016104                0.00022214                      0.00015473                 0.047802              7.276e-12                  true          
+         0.1         {'CLASSICAL_LUT_FINE'  }      6.4523e-05          7.3669e-05                9.8796e-05                      8.1266e-05                  0.04728              7.276e-12                  true          
+         0.1         {'D11_SMALL_ANGLE'     }        0.026095            0.026799                  0.036237                        0.020685                 0.029216              7.276e-12                  false         
+         0.3         {'DIRECT_C81'          }               0                   0                         0                               0                   5.1808              7.276e-12                  true          
+         0.3         {'OPERATING_TANGENT'   }      0.00014559          0.00015479                0.00019597                      0.00015197                 0.052137              7.276e-12                  true          
+         0.3         {'CLASSICAL_LUT_COARSE'}      7.0934e-05          6.6583e-05                9.3761e-05                      6.0231e-05                 0.046212              7.276e-12                  true          
+         0.3         {'CLASSICAL_LUT_FINE'  }      2.0298e-05          1.9818e-05                2.6086e-05                      2.7632e-05                  0.04733              7.276e-12                  true          
+         0.3         {'D11_SMALL_ANGLE'     }        0.026331            0.026902                  0.036393                        0.020822                 0.026618              7.276e-12                  false         
+
+            load_convention               memory           b       fast_pole    slow_pole    constant_gain_amplitude_lower_bound    normalized_complex_max
+    _______________________________    _____________    _______    _________    _________    ___________________________________    ______________________
+
+    {'D11_SMALL_ANGLE'            }    {'PP_mean'  }    0.15161     -48.955     -0.21167                   0.23541                         0.40257        
+    {'D11_SMALL_ANGLE'            }    {'CF_TN3044'}    0.15161     -31.476     -0.21057                   0.23524                         0.39849        
+    {'OPERATING_C81_ROOT_EXTENDED'}    {'PP_mean'  }    0.12776     -46.177     -0.18911                   0.19254                         0.34637        
+    {'OPERATING_C81_ROOT_EXTENDED'}    {'CF_TN3044'}    0.12776     -29.669     -0.18826                   0.19255                         0.34242        
+    {'OPERATING_C81_NO_ROOT'      }    {'PP_mean'  }    0.12625     -46.001     -0.18758                    0.1895                         0.34215        
+    {'OPERATING_C81_NO_ROOT'      }    {'CF_TN3044'}    0.12625     -29.554     -0.18675                   0.18952                         0.33821        
+
