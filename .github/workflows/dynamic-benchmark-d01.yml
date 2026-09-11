@@ -2,7 +2,7 @@ name: D01 executable dynamic references
 on:
   push:
     branches: [research/dynamic-fidelity-benchmark-20260910]
-    paths: ['analysis/dynamic_fidelity/**','tests/dynamic_fidelity/**','.github/workflows/dynamic-benchmark-d01.yml']
+    paths: ['analysis/dynamic_fidelity/**','tests/dynamic_fidelity/run_dynamic_reference_tests.m']
   workflow_dispatch:
 permissions:
   contents: write
