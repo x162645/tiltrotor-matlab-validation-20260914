@@ -129,6 +129,8 @@ results = run_berger13_complete_research(outputDir, true);
 
 该接口是公开资料约束下的研究模型，短舱惯量、执行器参数和部分高阶耦合仍有明确占位标记。NASA/XV-15 外部比较入口为 `analysis/run_xv15_v1_baseline_correlation.m` 和 `analysis/run_xv15_v1_run14_external_validation.m`。外部验证结果、失败点和可发表主张边界见 `docs/RESEARCH_COMPLETION_CHECKLIST_20260912.md` 与 `docs/PAPER_CANDIDATE_FULL_SCOPE_20260912.md`。
 
+Betzina 2002 低速前飞单旋翼外部检查的脚本和数据位于 `analysis/validation_betzina2002/`；当前 HEAD 已实测身份闸门，但完整双周期运行状态优化仍需单独运行。OARF、WADC、Betzina 的对象、数据角色和允许声明见 `docs/EXTERNAL_VALIDATION_MATRIX_20260912.md`。
+
 本程序包已进行静态组织和方程一致性检查，但生成环境没有 MATLAB/Octave，首次在你的电脑运行时必须先执行：
 
 ```matlab
