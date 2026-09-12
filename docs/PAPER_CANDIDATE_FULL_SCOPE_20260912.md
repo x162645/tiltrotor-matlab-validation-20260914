@@ -44,6 +44,10 @@ Berger13 接口、独立旋翼/机翼载荷、13 状态配平、三步长线性�
 
 WADC Runs 1–3 共 15 个窗口点全部物理收敛。M0 pooled MAPE 为 59.15/66.10/23.05%，冻结 M1 为 37.90/51.11/9.26%。M1 的相对改善在第二个设施保持，但绝对 CT/CP 仍不满足高精度预测要求。
 
+### 4.4 Betzina 低速前飞部件检查
+
+为避免把悬停结果外推到前飞，本文另外读取 Betzina 2002 XV-15 单旋翼公开图表，检查低速前飞扭矩趋势。Fig.16 的 12 个工况覆盖旋翼轴角 -15°、0° 和 +15°，Fig.18 再绘图的 12 个工况覆盖轴角 -5°、0° 和 +5°、四个推力水平。两组各 12/12 工况均得到物理解算。Fig.16 的 `CQ/σ` 平均绝对误差按轴角分别为 `5.74×10^-5`、`3.14×10^-4` 和 `5.62×10^-4`；模型捕捉了扭矩随前进速度、轴角和推力变化的主要趋势，但正轴角区间存在系统性偏差。由于试验值来自图表数字化，且扭矩没有进入配平残差，本文将其标记为单旋翼低速前飞的初步外部检查，不把数字化点当作机器可读原始 NASA 数据，也不把 24 个点称作 24 个独立试验。
+
 ## 5 失败原因和适用域
 
 外部量级误差不是一个缺失标量参数造成，而是受载桨距与 0.75R 总距的映射、C81 参考弦偏置、翼型 Re/粗糙度、低阶截面关系、非局部尾迹和三维旋转效应共同形成。径向网格误差仅约 0.5%，因此不是主要原因。低总距失败来自尚未建立的负推力分支和诱导—挥舞闭合算法限制。
@@ -60,5 +64,7 @@ WADC Runs 1–3 共 15 个窗口点全部物理收敛。M0 pooled MAPE 为 59.15
 - OARF Run 15：`analysis/run_xv15_v1_baseline_correlation.m`
 - OARF Run 14：`analysis/run_xv15_v1_run14_external_validation.m`
 - WADC：`analysis/run_m1_stage5_wadc_holdout.m`
+- Betzina 低速前飞回归证据：`docs/validation/line_b_implementation_20260910/handoff_evidence/A25_FORWARD_REGRESSION/`
+- 外部验证证据矩阵：`docs/EXTERNAL_VALIDATION_MATRIX_20260912.md`
 - 完成清单：`docs/RESEARCH_COMPLETION_CHECKLIST_20260912.md`
 - 外部验证报告：`outputs/external_validation_real_run_20260912.md`
