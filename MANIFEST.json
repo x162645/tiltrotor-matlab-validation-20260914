@@ -26,6 +26,12 @@
     "docs/MODEL_VALIDATION_OVERVIEW_20260912.md",
     "docs/assets/validation_evidence_overview_20260912.png",
     "docs/SHORT_TERM_WANG_VALIDATION_TARGET_20260912.md",
+    "docs/validation/wang2025_digitization/WANG2025_VALIDATION_SOURCE_AUDIT.md",
+    "docs/validation/wang2025_digitization/FIG1_digitized_points.csv",
+    "docs/validation/wang2025_digitization/FIG1_error_summary.csv",
+    "evidence/external_validation_20260912/wang_level_trim_v1/XV15_HELICOPTER_TRIM_V1_SUMMARY.md",
+    "evidence/external_validation_20260912/wang_level_trim_v1/XV15_HELICOPTER_TRIM_V1_POINTS.csv",
+    "evidence/external_validation_20260912/wang_level_trim_v1/XV15_HELICOPTER_TRIM_V1_SUMMARY.csv",
     "tests/check_pitt_peters_dynamic_inflow.m",
     "tests/check_berger13_transition_envelope.m",
     "tests/check_full_aircraft_sync_schema.m"
