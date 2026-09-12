@@ -1,0 +1,24 @@
+Tiltrotor forward model v2 paths added.
+Project root: C:\Users\86173\Documents\Codex\2026-09-11\yue\work\tiltrotor-matlab
+D16 completed center 7.0: 24 cases
+D16 completed center 8.5: 48 cases
+D16 completed center 10.0: 72 cases
+                                    identity: 'D16_NEW_FIXED_HUB_CONDITIONAL_PREDICTION'
+                                         utc: '2026-09-12 06:42:29'
+                                        head: '2fa64fd27356b92e7f9ef2549f8d2b2b5474a1f9'
+                                      matlab: '9.10.0.1602886 (R2021a)'
+                                    computer: 'PCWIN64'
+                                       scope: 'full'
+                                       cases: 72
+                                     methods: {'DIRECT'  'LUT'  'LTI_EXACT'  'SCHEDULED_EXACT'  'QS'}
+          D13_OFF_identity_max_CT_difference: 9.9747e-18
+    integration_tightening_max_CT_difference: 2.4235e-11
+          radial128_256_anchor_CT_difference: 2.2211e-08
+                         table_build_seconds: 1.5465
+                       tangent_build_seconds: 0.2881
+                               total_seconds: 397.4529
+                               failure_count: 0
+                new_external_dynamic_records: 0
+                    source_dynamic_validated: 0
+                              threshold_role: '1_percent_non_equilibrium_numerical_demo_budget_not_aircraft_standard'
+

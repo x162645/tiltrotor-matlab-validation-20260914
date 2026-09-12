@@ -82,7 +82,7 @@ def main(out):
     options=[(profile[j,1],profile[j,0],profile[j,2]),(fit_at(opt.x)[0],float(opt.x),fit_at(opt.x)[1])];loss,fitp,fitk=min(options)
     fit={'role':'NEW_PREFIX_ONLY_EXACT_PROPAGATOR_EMPIRICAL_FIT','pole':fitp,'kappa':fitk,'delay':DELAY,'prefix_loss':loss,'training_window':'[0.5,18)','physical_parameter_fits':0}
     (out/'FROZEN_PREFIX.json').write_text(json.dumps(fit,indent=2));pd.DataFrame(profile,columns=['pole','loss','kappa']).to_csv(out/'PREFIX_PROFILE.csv',index=False)
-    rows=[];boxes=[];checks=[];origins=np.where((tf>=18)&(tf<=24))[0]
+    rows=[];boxes=[];checks=[];origins=np.where((tf>=18)&(tf<=24)&(tf+5<=tf[-1]))[0]
     for i in origins:
         origin=tf[i];y0=y[i]
         for h in [.5,2.,5.]:

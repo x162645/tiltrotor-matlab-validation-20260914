@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\86173\Documents\Codex\2026-09-11\yue\work\tiltrotor-matlab\docs\research\dynamic_fidelity\evidence_d16\readback_d16.py", line 84, in <module>
+    p=argparse.ArgumentParser();p.add_argument('--run',type=Path,required=True);p.add_argument('--out',type=Path,required=True);a=p.parse_args();main(a.run,a.out)
+                                                                                                                                                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\86173\Documents\Codex\2026-09-11\yue\work\tiltrotor-matlab\docs\research\dynamic_fidelity\evidence_d16\readback_d16.py", line 42, in main
+    checks.append(['MAT_CSV_'+str(int(row.case_id))+'_'+method,float(np.max(abs(np.asarray(o['CT'])-g.CT.to_numpy()))),1e-13])
+                                                                                           ~^^^^^^
+TypeError: 'mat_struct' object is not subscriptable

@@ -1,0 +1,24 @@
+{
+  "identity": "D15_RECOVERY_REIMPLEMENTATION_NEW_CODE_NEW_RUN",
+  "utc": "2026-09-12T06:41:01.568387+00:00",
+  "head": "2fa64fd27356b92e7f9ef2549f8d2b2b5474a1f9",
+  "command": [
+    "docs/research/dynamic_fidelity/evidence_d15_recovery_reimplementation/code/reimplement_d15.py",
+    "--out",
+    "docs/research/dynamic_fidelity/evidence_d15_recovery_reimplementation/run_v2"
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.3.5",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "elapsed_s": 45.55754639999941,
+  "input_sha256": {
+    "docs\\research\\dynamic_fidelity\\evidence_d15_recovery_reimplementation\\code\\reimplement_d15.py": "02a6a518109c3eeea0f49e1ff23074816b9ad4dc34c2228a5c74b8576fbaa609",
+    "docs\\research\\dynamic_fidelity\\evidence_d14_recovery\\recovered_data\\FIG434_POWER_INPUT.csv": "d084a50e7164840728817033f19e08f519a496ae05387a38bcdb27edbcae2b4f",
+    "docs\\research\\dynamic_fidelity\\evidence_d14_recovery\\recovered_data\\FIG434_FLIGHT_AZ.csv": "d89ccb7aaf50ac05982f5e7d7bb340f4d6313e86e8e5d42d08018d6c83b945b1"
+  },
+  "origins": 66,
+  "overlapping_forecasts": 197,
+  "new_independent_records": 0,
+  "readback_metric_max_difference": 1.0581813203458523e-16,
+  "claim": "finite reading boxes, three discrete shifts; not confidence intervals or continuous full uncertainty; not original D15 artifacts"
+}
