@@ -1,0 +1,23 @@
+{
+  "utc": "2026-09-12T06:47:46.052237+00:00",
+  "identity": "INDEPENDENT_PYTHON_D16_NUMERIC_READBACK",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "run": "docs\\research\\dynamic_fidelity\\evidence_d16\\native_full_v1",
+  "checks": 864,
+  "max_error": 1.3858886260820213e-11,
+  "all_passed": true,
+  "input_sha256": {
+    "CASES.csv": "ac1c197f93b65be70014c3430ab23c3cce503b1978a27a6d3a0e49dd6207c668",
+    "CONDITIONAL_FRF.csv": "201650a6a9dd30c38d48d2b27460f39bf302051c0096c8b11703b9a32b3d6d1a",
+    "D16_RESULTS.mat": "78dad05375d954355dfac3e52f2258ca211a72e17d1948d2dcda7be711252688",
+    "FULL_PREDICTION_COST.csv": "03b2fe17a59d9a1585ca283dce0ca019688093f75df0863c48b03d06537708c0",
+    "MATLAB_LOG.txt": "2ab9396537a4872296350e724fecf9b42060b99c0d9ccda666fdb51e618e51bf",
+    "MECHANISM_ABLATION.csv": "8ad13b527d0ce2865777729b8527d09913a299c55765ada0ccc279ab59337e53",
+    "METRICS.csv": "7430571314f2ee6f4542b1fd066c93e9e5ad0363ec95d51cc0e36d1a639dfb9a",
+    "NATIVE_MANIFEST.json": "e82d71e5b21df5aad565cccbba8443bce55eddc0270a796b82ac41c3848bb80a",
+    "SOURCE_HYPOTHESES.csv": "b9a649e95d2bfb3271f4bd67e792bce58848c4f7b9be28cf2c98cf884c71a885",
+    "TRACES.csv": "6a07861ad6e33d47714bfe97eaac1ce8be82dffbb17385040b640e26481b6ba4",
+    "V4_LOAD_TABLE_21_41.csv": "d994aef2ea674000a4d100ed049741b55496adff8ba1c4cbb1324666d917076c"
+  },
+  "new_external_experiments": 0
+}

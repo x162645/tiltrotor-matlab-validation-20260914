@@ -1,0 +1,9 @@
+{
+  "role": "NEW_PREFIX_ONLY_EXACT_PROPAGATOR_EMPIRICAL_FIT",
+  "pole": 0.0936717223989899,
+  "kappa": 0.011884087158238717,
+  "delay": 0.0074,
+  "prefix_loss": 4.6187849864894615e-05,
+  "training_window": "[0.5,18)",
+  "physical_parameter_fits": 0
+}

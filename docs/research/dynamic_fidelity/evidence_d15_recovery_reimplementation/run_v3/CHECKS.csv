@@ -1,0 +1,8 @@
+check,error,tolerance,passed
+query_grid_final,0.0,1e-12,True
+independent_augmented_expm,5.204170427930421e-18,1e-12,True
+initial_value,0.0,1e-12,True
+prefix_target_poison_inputs,0.0,0.0,True
+reject_complex,0.0,0.0,True
+reject_wrong_unit,0.0,0.0,True
+reject_outside,0.0,0.0,True
