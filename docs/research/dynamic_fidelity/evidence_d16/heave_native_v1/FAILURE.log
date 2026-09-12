@@ -1,0 +1,16 @@
+Tiltrotor forward model v2 paths added.
+Project root: C:\Users\86173\Documents\Codex\2026-09-11\yue\work\tiltrotor-matlab
+{逻辑索引包含一个超出数组范围的 true 值。
+
+出错 run_d16_heave_check/rhs (第 26 行)
+  assert(all(isfinite(state))&&state(1)>0&&abs(e)<=.01);
+
+出错 odearguments (第 90 行)
+f0 = feval(ode,t0,y0,args{:});   % ODE15I sets args{1} to yp0.
+
+出错 ode45 (第 115 行)
+  odearguments(FcnHandlesUsed, solver_name, ode, tspan, y0, options, varargin);
+
+出错 run_d16_heave_check (第 11 行)
+  [~,x]=ode45(@rhs,t,[l0;0],opts);a=zeros(size(t));ct=zeros(size(t));th=zeros(size(t));
+} 

@@ -3,7 +3,7 @@ function results=run_d16_heave_check(outDir)
 root=fileparts(fileparts(fileparts(mfilename('fullpath'))));addpath(fullfile(root,'analysis'),fullfile(root,'analysis/dynamic_fidelity'));
 assert(~exist(outDir,'dir'));mkdir(outDir);p=d16_model(root,'V4');rho=1.225;m=6000;g=9.80665;H=2*rho*pi*p.R^2*p.V^2/m;
 ct0=g/H;theta0=fzero(@(th)ppval(p.pp,th)-ct0,[p.theta(1),p.theta(end)]);l0=sqrt(ct0/2);k=128/(75*pi);
-methods={'DIRECT','LUT','SCHEDULED_RHS'};traces=table();metrics=table();all={};t=(0:.005:4)';
+methods={'DIRECT','LUT','SCHEDULED_RHS'};traces=table();metrics=table();rawOutputs={};t=(0:.005:4)';
 for amp=[.1 .3]
  ref=[];
  for j=1:3
@@ -14,12 +14,12 @@ for amp=[.1 .3]
   er=[norm(x(:,2)-ref(:,1))/norm(ref(:,1)),norm(a-ref(:,2))/norm(ref(:,2))];
   metrics=[metrics;table(amp,methods(j),er(1),er(2),seconds,'VariableNames',{'amplitude_deg','method','velocity_relative_RMSE','acceleration_relative_RMSE','single_run_seconds'})]; %#ok<AGROW>
   traces=[traces;table(repmat(amp,numel(t),1),repmat(methods(j),numel(t),1),t,th,x(:,1),x(:,2),a,ct,'VariableNames',{'amplitude_deg','method','time_s','theta_rad','lambda_induced','velocity_up_mps','acceleration_up_mps2','CT'})]; %#ok<AGROW>
-  all{end+1}=struct('t',t,'x',x,'a',a,'CT',ct); %#ok<AGROW>
+  rawOutputs{end+1}=struct('t',t,'x',x,'a',a,'CT',ct); %#ok<AGROW>
  end
 end
 writetable(metrics,fullfile(outDir,'HEAVE_METRICS.csv'));writetable(traces,fullfile(outDir,'HEAVE_TRACES.csv'));
 [~,head]=system('git rev-parse HEAD');manifest=struct('identity','D16_V4_CONDITIONAL_TWO_STATE_HEAVE_EXTENSION','head',strtrim(head),'utc',char(datetime('now','TimeZone','UTC')),'matlab',version,'mass_kg',m,'rho',rho,'theta0_deg',theta0*180/pi,'memory','PP_only','new_external_dynamic_records',0,'fixed_hub_72_case_qualification_inherited',false);
-fid=fopen(fullfile(outDir,'HEAVE_MANIFEST.json'),'w');fprintf(fid,'%s',jsonencode(manifest));fclose(fid);results=struct('manifest',manifest,'metrics',metrics,'traces',traces,'raw',{all});save(fullfile(outDir,'HEAVE_RESULTS.mat'),'results','-v7');disp(metrics);
+fid=fopen(fullfile(outDir,'HEAVE_MANIFEST.json'),'w');fprintf(fid,'%s',jsonencode(manifest));fclose(fid);results=struct('manifest',manifest,'metrics',metrics,'traces',traces,'raw',{rawOutputs});save(fullfile(outDir,'HEAVE_RESULTS.mat'),'results','-v7');disp(metrics);
  function [dx,a,ct,th]=rhs(time,state)
   if time>=1&&time<=3,pulse=.5*(1-cos(pi*(time-1)));else,pulse=0;end
   th=theta0+amp*pi/180*pulse;S=ppval(p.pp,th);ls=sqrt(S/2);nu=state(2)/p.V;e=state(1)+nu-ls;
