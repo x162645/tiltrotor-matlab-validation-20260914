@@ -1,0 +1,17 @@
+{
+  "identity": "INDEPENDENT_D16_HEAVE_NATIVE_V2_READBACK",
+  "run": "C:\\Users\\86173\\Documents\\Codex\\2026-09-11\\yue\\work\\tiltrotor-matlab\\docs\\research\\dynamic_fidelity\\evidence_d16\\heave_native_v2",
+  "mat_csv_checks": 85,
+  "failed_checks": 0,
+  "max_abs_check_value": 4806.0,
+  "scipy_case": "DIRECT_amp_0.3deg",
+  "source": "independent readback_d16.py C81 parser + scipy solve_ivp",
+  "external_dynamic_records": 0,
+  "fixed_hub_qualification_inherited": false,
+  "input_sha256": {
+    "HEAVE_METRICS.csv": "11b4651f5ec252e82734a0a25f4fc10c72f4e332400e6b62e5ae3da94cc2a4ec",
+    "HEAVE_TRACES.csv": "3e83783d659ec571a6666ca5b611ca6eac1b9f092e060c80f0e2a3c76cb5610e",
+    "HEAVE_RESULTS.mat": "cd454e3dc6dee7be937e54debd4159caef47ddbab301c97fc0b5ed10844273a1",
+    "HEAVE_MANIFEST.json": "9e05d1d1cd3da7ac32612ef433dfc7cbb2c8dabdbf43ad3bba8d63003040c878"
+  }
+}

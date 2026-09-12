@@ -317,3 +317,22 @@ CT=S+B(theta,lambda_s+e)-B(theta,lambda_s)，lambda_s=sqrt(S/2)，e=(vi+v_up)/Vt
 D14已有四Python及约定，不存在原运行输出可复验；D15只有报告正文转存。定向本机查找未找到原件，后续明确使用D14_RECOVERY和D15_RECOVERY_REIMPLEMENTATION新身份，未运行前不称已完成。原D11 Python身份及D12/D13指定MATLAB身份不变，原台账正文保留。
 
 D16先做总距—固定桨毂载荷瞬态预测，使用当前V4源修正、原静态S及两种经典记忆约定，直接模型/经典查表/工作点线性/准定常同条件比较。V4既有静态27点回归已读，D13未使用V4，不给V4动态外部验证资格。预声明见D16_PLAN_BEFORE_RUN.md。
+
+## 2026-09-12 D14/D15恢复闭合、D16结果与候选稿
+
+### 身份与运行
+
+- D14 在 `evidence_d14_recovery/` 以 `D14_RECOVERY_REEXECUTION_NOT_ORIGINAL_D14` 身份使用原提取代码和已归档 PDF 重执行；不把新 CSV、图和约定追溯成原 D14 输出。D15 原件仍缺，`evidence_d15_recovery_reimplementation/` 的 v4 是 `D15_RECOVERY_REIMPLEMENTATION_NEW_CODE_NEW_RUN`，代码和数据哈希在其 manifest；v3 数值结果保留，v4 增加公共 API 的训练前缀重拟合污染检查、未来命令污染检查、延迟传播对照、输入顺序/支持域/输入盒防护。v4 195 个重叠窗口不是独立试验。
+- D16 主实现为 `analysis/dynamic_fidelity/d16_model.m`、`d16_source.m`、`d16_predict.m` 及 `tests/dynamic_fidelity/run_d16_prediction_domain.m`。计划先于首次最终运行保存在 `D16_PLAN_BEFORE_RUN.md`。修复初版折点重复采样并缓存直接源后，以同一 MATLAB R2021a 环境完成 `evidence_d16/native_full_v2/` 72 案例；v1/v2 失败和修订均留在 `REVISIONS.md`。新增 `run_d16_heave_check.m` 的 v1 `all` 名称遮蔽失败保留，v2 成功输出和独立读回留在 `heave_native_v2/`、`heave_readback/`。
+
+### 支持的 D16 结果
+
+- 72 条件案例：查表最大/中位非平衡 NRMSE 0.1114%/0.0469%，总距调度解析传播 0.2707%/0.1237%，固定 LTI 168.0167%/8.1041%，准定常 100%/100%。所有误差以直接模型非平衡 RMS 为分母；1% 仅为本次方法演示预算。完整在线预测中位时间为直接 686.039 ms、查表 7.157 ms、LTI 0.273 ms、调度 0.267 ms、准定常 0.182 ms；不把单 kernel 时间当全机实时成本。
+- V4/OFF 消融瞬态差异 6.29%–7.99%；有限源假设频响 spread 在 PP/CF 约 3.53%/3.73%。这些是有限情景，不是连续不确定度界。V4 既有 27 个静态点误差约 33%–38%，因此所有动态结果仍是条件数值结果。
+- 载荷—升沉扩展仅 PP、6000 kg、rho 1.225 kg/m³、0.1°/0.3°半余弦脉冲。查表速度/加速度相对误差分别为 1.4986e-4/1.4958e-4 和 8.6865e-5/9.4879e-5；调度右端项为 8.3583e-5/1.0332e-4 和 1.0372e-4/1.4232e-4。独立 MATLAB MAT/CSV、配平/脉冲检查与 Python `solve_ivp` 共 85 项通过，最大直接重积分差：lambda 6.02e-10、速度 8.05e-9 m/s、CT 8.63e-11、加速度 8.81e-8 m/s²。该扩展不继承 72 案例外部资格。
+- 候选稿 `D16_CANDIDATE_PAPER_CN.md` 已包含方法推导、同条件对手、结果、D15恢复基线、来源对标和逐项局限。`dynamic_record_gap_search.md` 和 `final_source_verification.md` 记录了 TM86833 稳态链、TM89404 Fig.13 power-lever—垂向加速度背景及其不能闭合实际总距—载荷—升沉链的原因；国内三篇公开论文仅作能力背景和不同任务对标，不作伪横向排名。
+
+### 采用、否决和接续
+
+- 采用：在当前预声明固定桨毂域内，查表或总距调度解析传播作为低成本当前源近似。否决为主线：固定单工作点 LTI 和准定常，因长脉冲/静态曲率或机制删除而出现负结果；它们仍作为强/负对照保存。未宣称本文提出新的动态入流理论。
+- M3 候选稿已完成，M4 外部复核未完成。当前没有证据支持实机精度、全包线适用或“国内领先”。唯一关键阻断是取得同步的受载实际总距/执行器、旋翼载荷、升沉响应、转速、质量和时间基准；接续命令应先按记录/工况冻结独立划分，再用同一成本/容差合同检验查表、调度和成熟动态入流基线。不得用旧开发曲线、D15 重叠窗口或 power-lever 图代替该记录。

@@ -1,4 +1,10 @@
-# 当前任务：D13工作点增量与廉价接口已完成，推进外部预测闭环
+# 当前任务：D16窄域动态预测与候选稿已完成，等待外部动态记录
+
+## 2026-09-12 当前状态（以 `docs/research/dynamic_fidelity/STEP_LEDGER.md` 为事实台账）
+
+本轮已在分支 `research/dynamic-fidelity-benchmark-20260910` 完成 D14 新身份恢复、D15 新实现 v4 和 D16 实质预测工作包。D16 固定桨毂 72 条件案例的直接源、21×41 查表、固定切线、总距调度解析传播和准定常负对照均已由 MATLAB R2021a 执行并保存 MAT/CSV/JSON；独立 Python 读回通过。调度解析传播与查表是本窄域的采用候选，固定切线和准定常结果作为保留负证据。载荷—升沉两状态扩展仅为额外条件接口实验，独立复核 85/85 通过，明确不继承固定桨毂的外部资格。
+
+交付候选稿 `docs/research/dynamic_fidelity/D16_CANDIDATE_PAPER_CN.md`、来源核验、运行失败和完整结果均已入库。当前证据支持“在预声明条件域内低成本近似当前数值源”；不支持实机精度、全包线或国内领先。唯一关键阻断是取得同步的受载实际总距/执行器、旋翼载荷、升沉响应、转速和质量记录，以完成外部独立预测检验。PR78 保持 Draft，不合并、不发布。
 
 先核真实HEAD/工作区，保护他人更新；读AGENTS.md、RESEARCH_ENTRY.md、同一STEP_LEDGER和D13报告/参数合同。分支research/dynamic-fidelity-benchmark-20260910，PR78保持Draft，不强推、不合并。
 
