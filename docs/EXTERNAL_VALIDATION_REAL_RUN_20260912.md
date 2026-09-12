@@ -32,6 +32,10 @@
 
 1°、3°耦合解未收敛；负推力点标记为不支持。Run 14 与 Run 15 的 CT/CP 低估方向和量级相近，说明误差不是某一组曲线偶然造成，但只能支持同一试验系列内的重复性证据。
 
+## WADC：冻结 M1 的跨设施部件比较
+
+脚本：`analysis/run_m1_stage5_wadc_holdout.m`。该比较在模型冻结后执行，保留 M0 作为未经修正的基线，并报告冻结 M1 的相对变化。15/15 个点物理收敛；汇总 MAPE 为 M0 的 CT/CP/FM = 59.1465%/66.0974%/23.0497%，M1 为 37.8956%/51.1078%/9.2559%。数据已经进入此前诊断链，因此不能称作盲测；它支持“有外部数据约束的相对改进”，不能单独支持普适精度或整机动态精度。
+
 ## 结论
 
 这次是真正的外部数据比较，不是代码自洽测试。结果显示当前低阶 M0 模型在 XV-15 OARF 条件下系统性低估绝对 CT/CP，FM 误差较小但不能抵消载荷误差。因此当前模型可以支持“已执行、可追溯的 XV-15 部件级外部相关，并定位出模型形式误差”的结论，不能支持“XV-15 精确预测”或“整机动态精度”声明。
@@ -47,3 +51,6 @@
 - [另一路径对照：section-aero wrapper 结果](../evidence/external_validation_20260912/section_aero_wrapper/XV15_FROZEN_LOW_ORDER_METRICS.csv)
 
 
+
+- [WADC M0/M1 指标](../evidence/external_validation_20260912/wadc_m1_holdout/M1_STAGE5_WADC_METRICS.csv)
+- [WADC 来源审计](../evidence/external_validation_20260912/wadc_m1_holdout/M1_STAGE5_WADC_SOURCE_DATA_AUDIT.csv)
