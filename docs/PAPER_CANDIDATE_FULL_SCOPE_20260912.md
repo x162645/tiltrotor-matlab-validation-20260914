@@ -75,3 +75,10 @@ WADC Runs 1–3 共 15 个窗口点全部物理收敛。M0 pooled MAPE 为 59.15
 - 完成清单：`docs/RESEARCH_COMPLETION_CHECKLIST_20260912.md`
 - 外部验证报告：`outputs/external_validation_real_run_20260912.md`
 - 逐项复算命令和预期指标：`docs/REPRODUCE_PAPER_RESULTS_20260912.md`
+
+## 8 参考文献和数据来源（候选稿）
+
+1. Sheng H, Zhang C, Xiang Y. Mathematical Modeling and Stability Analysis of Tiltrotor Aircraft. *Drones*, 2022, 6:92。本文借用其公开的部件划分和公式链，具体一致性见 `docs/NUAA_ROTOR_FORMULA_AUDIT.md`，不将其未公开代码当作参数来源。
+2. Felker F F, Betzina M D, Signor D B. *Performance and Loads Data from a Hover Test of a Full-Scale XV-15 Rotor*. NASA TM-86833, 1985。本文通过 NASA CR-2017-219486 Appendix A Table A-2/A-3 使用 OARF/WADC 汇编数据；数据角色和窗口见 `docs/EXTERNAL_VALIDATION_MATRIX_20260912.md`。
+3. Betzina M D. *Rotor Performance of an Isolated Full-Scale XV-15 Tiltrotor in Helicopter Mode*. AHS Aerodynamics, Acoustics, and Test and Evaluation Technical Specialists Meeting, 2002。本文只使用公开图表数字化的单旋翼低速前飞趋势归档证据。
+4. Woodgate M A, Shi Y, Fitzgibbon T A, Barakos G N, Li P. Simulation of step input in collective pitch for hovering rotor. *Aerospace Science and Technology*, 2021, 110:106425. DOI: [10.1016/j.ast.2020.106425](https://doi.org/10.1016/j.ast.2020.106425)。该来源的图示复现失败诊断保存在 `docs/research/dynamic_fidelity/WOODGATE_NUAA_EXTERNAL_CHECK.md`，不计为本文定量外部验证。
