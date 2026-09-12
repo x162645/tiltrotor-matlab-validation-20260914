@@ -23,6 +23,8 @@
     "analysis/berger13/run_berger13_transition_envelope.m",
     "validation/read_full_aircraft_sync_csv.m",
     "docs/FULL_AIRCRAFT_SYNC_DATA_CONTRACT.md",
+    "docs/MODEL_VALIDATION_OVERVIEW_20260912.md",
+    "docs/assets/validation_evidence_overview_20260912.png",
     "tests/check_pitt_peters_dynamic_inflow.m",
     "tests/check_berger13_transition_envelope.m",
     "tests/check_full_aircraft_sync_schema.m"
