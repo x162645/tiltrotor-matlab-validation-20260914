@@ -4,7 +4,7 @@
 
 |阶段|内容|状态|证据或断点|
 |---|---|---|---|
-|S0|仓库、分支、HEAD、规则和历史成果冻结|DONE|当前分支 `research/dynamic-fidelity-benchmark-20260910`；本地最新审计提交 `c91bd91`，GitHub 网页交付已完成|
+|S0|仓库、分支、HEAD、规则和历史成果冻结|DONE|当前分支 `research/dynamic-fidelity-benchmark-20260910`；本地与 `research-origin/main` 已同步到合并提交 `b3965e8`，GitHub 公开交付已核对|
 |S1|状态、控制量、坐标、单位和左右旋翼符号合同|DONE|`docs/CONTROL_CONVENTIONS.md`，`tests/check_control_architecture.m`|
 |S2|公开 XV-15 参数来源、单位换算和角色台账|PARTIAL|公开 NASA 几何、旋翼和试验表已接入；专用受载桨距、C81 参考弦偏置和部分质量属性仍 UNKNOWN|
 |S3|旋翼 BEMT、挥舞、诱导、短舱角和力矩接口|DONE_WITH_LIMITS|`model/rotor_model_bemt.m`、`model/berger13/rotor_model_bemt_berger13.m`；低总距负推力分支尚未建立|
@@ -13,13 +13,15 @@
 |S6|短舱执行器、角度/力矩命令和限制|DONE_WITH_PLACEHOLDER_PARAMETERS|接口、限幅、延迟和反力矩已实现；数值参数仍为 `RESEARCH_PLACEHOLDER`|
 |S7|多初值配平、邻域延拓和回代|DONE|`analysis/berger13/trim_berger13_symmetric.m`、`tests/check_berger13_formal_trim.m`|
 |S8|数值线性化、模态跟踪、控制导数和时域响应|DONE_FOR_INTERNAL_MODEL|`analysis/berger13/*`、`analysis/control_stability/*`；不是实机飞行品质认证|
+|S8b|成熟动态入流强基线和适用域门禁|DONE_WITH_INTEGRATION_BOUNDARY|`model/inflow/pitt_peters_dynamic_inflow.m` 三状态 Pitt–Peters 方程与 5/5 MATLAB 检查通过；当前 Berger13 仍为标量诱导速度接口，未冒称已集成整机|
+|S8c|速度—短舱角过渡配平包络入口|DONE_FOR_NUMERICAL_SCOPE|`analysis/berger13/run_berger13_transition_envelope.m` 及 6/6 合同检查；保留失败点，不等同飞行走廊或外部验证|
 |S9|NASA OARF Run 15 部件外部比较|DONE_NEGATIVE|当前 M0：CT/CP/FM MAPE = 56.42/62.61/23.02%|
 |S10|NASA OARF Run 14 运行级外部比较|DONE_NEGATIVE|当前 M0：56.19/64.08/19.12%；同一 OARF 系列，非盲测|
 |S10b|Betzina 低速前飞单旋翼证据与运行状态合同|ARCHIVED_PLUS_CURRENT_DIAGNOSTIC|旧提交归档 Fig.16/Fig.18 共 24 个图表数字化工况；当前 HEAD 身份闸门 PASS，但两控制 alpha=0 快速检查固定 CT 合同 0/4，不能把物理解算收敛误称为运行状态匹配|
 |S11|NASA WADC 跨设施冻结比较和强基线|DONE_WITH_CAVEAT|15/15 点收敛；冻结 M1 相对 M0 改善，但绝对 CT/CP 仍偏大|
 |S12|同步全机过渡时历、整机动态误差和实机飞行品质|BLOCKED|缺少匹配的实际总距/执行器、旋翼载荷、质量 CG 惯量、转速和统一时间基准|
 |S13|中文完整候选稿、图表、复算入口和限制|DONE_FOR_SUPPORTED_SCOPE|可支持“低成本方法+部件外部检查+条件性整机分析”；不能写成全机动态精度或国内领先|
-|S14|可复核发布包|DONE_WITH_WEB_UPLOAD|本文件、外部 CSV、MATLAB 日志和论文草稿已生成；完整源码包和关键入口已上传至 `https://github.com/x162645/tiltrotor-general-validation`。Git 传输推送仍受本机网络重置影响|
+|S14|可复核发布包|DONE_WITH_WEB_UPLOAD|完整源码包、关键入口和新增增量已通过普通 Git 合并推送至 `https://github.com/x162645/tiltrotor-general-validation` 的 `main`；远端最新提交为 `b3965e8`|
 
 ## 本轮实际执行
 
