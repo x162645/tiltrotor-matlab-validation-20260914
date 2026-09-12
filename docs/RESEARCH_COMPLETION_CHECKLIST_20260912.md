@@ -4,12 +4,12 @@
 
 |阶段|内容|状态|证据或断点|
 |---|---|---|---|
-|S0|仓库、分支、HEAD、规则和历史成果冻结|DONE|当前分支 `research/dynamic-fidelity-benchmark-20260910`，基线 HEAD `afeec889`；当前证据包提交 `6d1c653`|
+|S0|仓库、分支、HEAD、规则和历史成果冻结|DONE|当前分支 `research/dynamic-fidelity-benchmark-20260910`；本地最新审计提交 `c91bd91`，GitHub 网页交付已完成|
 |S1|状态、控制量、坐标、单位和左右旋翼符号合同|DONE|`docs/CONTROL_CONVENTIONS.md`，`tests/check_control_architecture.m`|
 |S2|公开 XV-15 参数来源、单位换算和角色台账|PARTIAL|公开 NASA 几何、旋翼和试验表已接入；专用受载桨距、C81 参考弦偏置和部分质量属性仍 UNKNOWN|
 |S3|旋翼 BEMT、挥舞、诱导、短舱角和力矩接口|DONE_WITH_LIMITS|`model/rotor_model_bemt.m`、`model/berger13/rotor_model_bemt_berger13.m`；低总距负推力分支尚未建立|
 |S4|机翼、机身、平尾、垂尾和统一 CG 力矩合成|DONE|`model/berger13/total_forces_moments_13x10.m`；旋翼和翼面按实际 CG 重算|
-|S5|六自由度整机状态方程|DONE_WITH_LIMITS|`model/berger13/tiltrotor_eom_13x10.m`；短舱惯性导数、移动质量加速度和高阶传动耦合仍未实现|
+|S5|六自由度整机状态方程|DONE_WITH_LIMITS|`model/berger13/tiltrotor_eom_13x10.m`；变惯量 `dI/dt*omega` 已加入并通过闭合测试，移动质量加速度和高阶传动耦合仍未实现|
 |S6|短舱执行器、角度/力矩命令和限制|DONE_WITH_PLACEHOLDER_PARAMETERS|接口、限幅、延迟和反力矩已实现；数值参数仍为 `RESEARCH_PLACEHOLDER`|
 |S7|多初值配平、邻域延拓和回代|DONE|`analysis/berger13/trim_berger13_symmetric.m`、`tests/check_berger13_formal_trim.m`|
 |S8|数值线性化、模态跟踪、控制导数和时域响应|DONE_FOR_INTERNAL_MODEL|`analysis/berger13/*`、`analysis/control_stability/*`；不是实机飞行品质认证|
@@ -19,7 +19,7 @@
 |S11|NASA WADC 跨设施冻结比较和强基线|DONE_WITH_CAVEAT|15/15 点收敛；冻结 M1 相对 M0 改善，但绝对 CT/CP 仍偏大|
 |S12|同步全机过渡时历、整机动态误差和实机飞行品质|BLOCKED|缺少匹配的实际总距/执行器、旋翼载荷、质量 CG 惯量、转速和统一时间基准|
 |S13|中文完整候选稿、图表、复算入口和限制|DONE_FOR_SUPPORTED_SCOPE|可支持“低成本方法+部件外部检查+条件性整机分析”；不能写成全机动态精度或国内领先|
-|S14|可复核发布包|IN_PROGRESS|本文件、外部 CSV、MATLAB 日志和论文草稿已生成；证据包已提交（`6d1c653`），仍需完成远端仓库创建与推送|
+|S14|可复核发布包|DONE_WITH_WEB_UPLOAD|本文件、外部 CSV、MATLAB 日志和论文草稿已生成；完整源码包和关键入口已上传至 `https://github.com/x162645/tiltrotor-general-validation`。Git 传输推送仍受本机网络重置影响|
 
 ## 本轮实际执行
 
