@@ -70,7 +70,7 @@ def loss_box(A,lo,hi):
     return min(vals),max(vals)
 
 def main(out):
-    out.mkdir(parents=True,exist_ok=False);start=time.perf_counter();repo=Path(__file__).resolve().parents[6]
+    out.mkdir(parents=True,exist_ok=False);start=time.perf_counter();repo=next(p for p in Path(__file__).resolve().parents if (p/'AGENTS.md').is_file())
     root=repo/'docs/research/dynamic_fidelity';data=root/'evidence_d14_recovery/recovered_data'
     inp=pd.read_csv(data/'FIG434_POWER_INPUT.csv');obs=pd.read_csv(data/'FIG434_FLIGHT_AZ.csv');obs=obs[(obs.time_s>=.5)&(obs.time_s<=29)].copy()
     t,u=checked(inp.time_s,inp.value);tf,y=checked(obs.time_s,obs.value)
