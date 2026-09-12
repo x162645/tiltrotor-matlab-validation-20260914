@@ -1,0 +1,14 @@
+Tiltrotor forward model v2 paths added.
+Project root: C:\Users\86173\Documents\Codex\2026-09-11\yue\work\tiltrotor-matlab
+Tiltrotor forward model v2 paths added.
+Project root: C:\Users\86173\Documents\Codex\2026-09-11\yue\work\tiltrotor-matlab
+                  window                   quantity    expectedPointCount    validPointCount    MAPE_pct    meanSignedError_pct
+    ___________________________________    ________    __________________    _______________    ________    ___________________
+
+    {'ALL_REPORTED_POINTS'            }     {'CT'}             9                    6            56.422           -56.422      
+    {'ALL_REPORTED_POINTS'            }     {'CP'}             9                    6            62.613           -62.613      
+    {'ALL_REPORTED_POINTS'            }     {'FM'}             9                    6            23.018           -23.018      
+    {'FIXED_REPORT_WINDOW_6_TO_11_DEG'}     {'CT'}             6                    6            56.422           -56.422      
+    {'FIXED_REPORT_WINDOW_6_TO_11_DEG'}     {'CP'}             6                    6            62.613           -62.613      
+    {'FIXED_REPORT_WINDOW_6_TO_11_DEG'}     {'FM'}             6                    6            23.018           -23.018      
+
