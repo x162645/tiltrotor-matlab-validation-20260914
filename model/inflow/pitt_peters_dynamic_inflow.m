@@ -9,7 +9,9 @@ function [dx,detail] = pitt_peters_dynamic_inflow(x,loads,kinematics,options)
 %   rho*A*(Omega*R)^2*R for the moments.  The forcing convention is
 %   [CT; -CMy; CMx], matching the Pitt--Peters disk axes used here.
 %
-%   KINEMATICS.mu is the nonnegative in-plane free-stream ratio and KINEMATICS.mu_z is\r?\n%   the signed free-stream axial ratio (positive into the disk).  KINEMATICS.Omega
+%   KINEMATICS.mu is the nonnegative in-plane free-stream ratio and
+%   KINEMATICS.mu_z is the signed free-stream axial ratio (positive into the
+%   disk).  KINEMATICS.Omega
 %   is rotor speed in rad/s.  The implementation is intentionally restricted
 %   to the positive-throughflow branch; vortex-ring, windmill and reverse-flow
 %   continuations are rejected rather than silently clipped.
