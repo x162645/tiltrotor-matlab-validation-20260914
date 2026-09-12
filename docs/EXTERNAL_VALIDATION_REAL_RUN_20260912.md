@@ -2,7 +2,7 @@
 
 ## 运行对象
 
-- 仓库 HEAD：`d0b1a47`
+- 证据包提交链最新：`3fa9607`（模型身份基线：`d0b1a47`）
 - MATLAB：R2021a，`F:\matlab\R2021a\bin\matlab.exe`
 - 外部来源：NASA CR-2017-219486，Appendix A Table A-2，XV-15 OARF 原始金属桨 Run 15 / Run 14。
 - 评价窗：总距 6–11°；每个窗口固定，按物理收敛点统计 MAPE。
@@ -54,3 +54,4 @@
 
 - [WADC M0/M1 指标](../evidence/external_validation_20260912/wadc_m1_holdout/M1_STAGE5_WADC_METRICS.csv)
 - [WADC 来源审计](../evidence/external_validation_20260912/wadc_m1_holdout/M1_STAGE5_WADC_SOURCE_DATA_AUDIT.csv)
+
