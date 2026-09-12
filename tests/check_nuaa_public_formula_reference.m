@@ -107,7 +107,27 @@ end
         [Fafter,Mafter,currentAfter] = total_forces_moments( ...
             x,[18*d2r;zeros(6,1)],0,P);
         assert(isequaln(Fafter,F0) && isequaln(Mafter,M0));
-        assert(isequaln(currentAfter,currentBefore));
+        % The production rotor records wall-clock diagnostics in `work`.
+        % Those values legitimately change between calls and are not model
+        % state.  Remove only timing/call accounting before comparing the
+        % physical result contract.
+        beforeComparable = currentBefore;
+        afterComparable = currentAfter;
+        beforeComparable.rotorLeft.work = [];
+        beforeComparable.rotorRight.work = [];
+        afterComparable.rotorLeft.work = [];
+        afterComparable.rotorRight.work = [];
+        % The same rotor diagnostics are also exposed in the component
+        % ledger; remove the duplicated timing fields there as well.
+        for componentIndex = 1:numel(beforeComparable.components)
+            if isstruct(beforeComparable.components{componentIndex}.data) && ...
+                    isfield(beforeComparable.components{componentIndex}.data,'work')
+                beforeComparable.components{componentIndex}.data.work = [];
+                afterComparable.components{componentIndex}.data.work = [];
+            end
+        end
+        assert(isequaln(afterComparable,beforeComparable), ...
+            'Reference calls changed the production physical output contract.');
     end
 
     function whole_aircraft()
