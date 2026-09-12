@@ -119,6 +119,16 @@ tiltrotor_forward_model_v2/
 
 当前参数是自洽的概念参数，不应直接称为精确 XV-15 参数。论文没有完整公开翼型极曲线、全部部件气动数据库、完整挥舞闭合、三维部件位置和实际混控增益，因此这些部分采用可替换的低阶闭合。
 
+## 整机研究入口与证据边界
+
+仓库同时包含 `model/berger13/` 的 13 状态/10 输入整机研究接口，可运行旋翼独立短舱角、机翼/机身/尾翼载荷合成、六自由度方程、配平、线性化、模态和短时域控制分析。完整入口为：
+
+```matlab
+results = run_berger13_complete_research(outputDir, true);
+```
+
+该接口是公开资料约束下的研究模型，短舱惯量、执行器参数和部分高阶耦合仍有明确占位标记。NASA/XV-15 外部比较入口为 `analysis/run_xv15_v1_baseline_correlation.m` 和 `analysis/run_xv15_v1_run14_external_validation.m`。外部验证结果、失败点和可发表主张边界见 `docs/RESEARCH_COMPLETION_CHECKLIST_20260912.md` 与 `docs/PAPER_CANDIDATE_FULL_SCOPE_20260912.md`。
+
 本程序包已进行静态组织和方程一致性检查，但生成环境没有 MATLAB/Octave，首次在你的电脑运行时必须先执行：
 
 ```matlab

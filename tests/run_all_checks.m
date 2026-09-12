@@ -54,6 +54,8 @@ run_test('rotor grid convergence', @test_grid_convergence);
 run_test('linearization finite values', @test_linearization);
 run_test('control-stability generated evidence', ...
     @test_control_stability_assessment);
+run_test('generic/XV-15 model identity separation', ...
+    @test_model_identity_separation);
 run_test('D02 longitudinal-heave dynamic prototype', ...
     @test_d02_longitudinal_heave);
 
@@ -317,6 +319,12 @@ fprintf('All passed: %d\n',summary.allPassed);
         controlStabilityReport = check_control_stability_assessment();
         assert(controlStabilityReport.allPassed, ...
             'Control-stability assessment checks have failed items.');
+    end
+
+    function test_model_identity_separation()
+        identityReport = check_model_identity_separation();
+        assert(identityReport.allPassed, ...
+            'Generic core and XV-15 validation adapter identities are mixed.');
     end
 
     function test_d02_longitudinal_heave()
