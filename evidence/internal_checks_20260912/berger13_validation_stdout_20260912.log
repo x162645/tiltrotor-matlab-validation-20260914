@@ -1,0 +1,115 @@
+Tiltrotor forward model v2 paths added.
+Project root: C:\Users\86173\Documents\Codex\2026-09-11\yue\work\tiltrotor-matlab
+
+Berger13 PR1 interface checks
+=============================
+frozen 13-state names and units                  : PASS
+frozen 10-input names and units                  : PASS
+placeholder provenance is explicit               : PASS
+symmetric degradation to NUAA baseline           : PASS
+independent loads use actual total CG            : PASS
+left/right angle exchange mirror relation        : PASS
+independent torque-channel signs                 : PASS
+legacy 9x7 and wing defaults unchanged           : PASS
+Max |baseline F difference|: 0.000e+00 N
+Max |baseline M difference|: 0.000e+00 N*m
+Max |first-nine derivative difference|: 0.000e+00
+All passed: 1
+RESULT check_berger13_interface allPassed=1\n
+Berger13 PR3 actuator/wing checks
+=================================
+distinct torque and angle-command contracts              : PASS
+nominal command step and reaction torque                 : PASS
+angle rate acceleration and torque limits observable     : PASS
+left/right bandwidth and damping may differ              : PASS
+external delay context is explicit                       : PASS
+command freeze and kinematic lock are distinct           : PASS
+independent wing symmetric degradation                   : PASS
+positive/negative betaDiff mirror loads                  : PASS
+all component moments use actual total CG                : PASS
+actual CG changes fixed-component load evaluation        : PASS
+mass moment and complete inertia reconstruction          : PASS
+fixed inertia residual is invariant at fixed mean angle  : PASS
+actuator action-reaction sign and coupling boundary      : PASS
+component sum has no force or moment double count        : PASS
+parameterized nacelle-rate gyroscopic moment             : PASS
+command trim and three-step A/B                          : PASS
+torque interface remains callable and finite             : PASS
+All passed: 1
+RESULT check_berger13_pr3_actuator_wing allPassed=1\n
+Berger13 PR4 research workflow checks
+=====================================
+biorthogonal eigenvectors and finite modal metrics      : PASS
+participation normalization and nacelle modes           : PASS
+heading zero root has separate classification           : PASS
+heading root is excluded from spiral qualification      : PASS
+explicit derivative units and command labels            : PASS
+Hungarian global assignment optimum                     : PASS
+continuous-path tracking reserves heading mode          : PASS
+cross-gap assignment is prohibited                      : PASS
+short nonlinear command simulation finite               : PASS
+analysis guard reports first violation                  : PASS
+valid-prefix and full metrics are separate              : PASS
+three-step time integration peak convergence            : PASS
+force and moment derivative norms stay separate         : PASS
+linear/nonlinear comparison has ten states              : PASS
+All passed: 1
+RESULT check_berger13_pr4_research allPassed=1\n
+Berger13 PR2 formal trim checks
+================================
+formal 13-state dimensions and finite values         : PASS
+full dynamic-equilibrium substitution                : PASS
+multiple-seed convergence and sensitivity            : PASS
+static torque and symmetric nacelle constraints      : PASS
+continuation to neighboring speed                    : PASS
+symmetric/differential transform invertibility       : PASS
+credible-point three-step linearization              : PASS
+noncredible point rejected                           : PASS
+legacy nine-state point remains identical            : PASS
+Status=CREDIBLE residual=4.326e-10 cond=6.916e+01 margin=0.087
+All passed: 1
+RESULT check_berger13_formal_trim allPassed=1\n
+Berger13 PR1 linearization checks
+==================================
+dimensions, finite values, and interior central stencil : PASS
+h/10, h, 10h key-column stability                : PASS
+boundary-aware nacelle-angle stencils            : PASS
+local nonlinear/linear error decreases           : PASS
+Key-column relative variation [h/10,10h]: 6.559e-09 6.557e-07
+Local approximation errors [1,1/2,1/4]: 3.856e-06 9.642e-07 2.411e-07
+All passed: 1
+RESULT check_berger13_linearization allPassed=1\n
+Control-limit application checks
+================================
+default elevator limit is +/-20 deg        : PASS
+commanded controls preserved               : PASS
+upper conventional-surface limits applied  : PASS
+lower conventional-surface limits applied  : PASS
+total collective rotor limits applied      : PASS
+longitudinal cyclic rotor limits applied   : PASS
+differential collective reconstruction     : PASS
+differential cyclic reconstruction         : PASS
+applied rotor controls within limits       : PASS
+rotor equivalent controls match diagnostics : PASS
+applied controls finite and real           : PASS
+All passed: 1
+RESULT check_control_limits allPassed=1\n
+Control-stability assessment checks
+===================================
+nine-state input order and B-column labels                 : PASS
+thirteen-state torque and command contracts                : PASS
+three representative trims remain credible                 : PASS
+all reported derivatives are finite real values            : PASS
+three-level central differences are present                : PASS
+direct-load and A/B crosschecks are explicit               : PASS
+participation biorthogonality meets tolerance              : PASS
+pathological modes are not force-named                     : PASS
+control steps have time-step refinement                    : PASS
+linear/nonlinear primary directions agree                  : PASS
+unsupported rotor branches are excluded                    : PASS
+trim data do not cross-connect explicit modes              : PASS
+production model and default parameters are unchanged      : FAIL
+  Production model or default parameters differ from PR #61.
+NASA comparison wording is downgraded                      : PASS
+All passed: 0
+RESULT check_control_stability_assessment allPassed=0\n
