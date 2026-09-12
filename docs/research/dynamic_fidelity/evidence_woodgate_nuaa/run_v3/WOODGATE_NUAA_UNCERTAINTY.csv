@@ -1,0 +1,3 @@
+figure,initial_collective_deg,draws,prob_dynamic_lower_rmse,rmse_diff_median_dynamic_minus_qs,rmse_diff_p05,rmse_diff_p95
+8,2.0,10000,1.0,-7.495355045052565e-05,-7.534364106700107e-05,-7.456577719094977e-05
+9,4.0,10000,1.0,-4.0280958750095984e-05,-4.050299546008063e-05,-4.006028513626018e-05

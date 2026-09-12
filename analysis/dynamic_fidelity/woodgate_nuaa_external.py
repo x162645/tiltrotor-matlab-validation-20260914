@@ -40,13 +40,16 @@ def digitize_figure(image: Path, figure: int):
     # Rendered at 2x from the accepted manuscript. Bounds were chosen from the
     # printed axes; only black square experimental markers are retained.
     if figure==8:
-        box=(430,100,760,360); xleft,xright=458.,735.; ytop,ybottom=158.,355.; ymax=0.010; ymin=0.; ycut=240.
+        box=(430,100,760,360); xleft,xright=458.,735.; ytop,ybottom=158.,355.; ymax=0.010; ymin=0.; legend=(570,250,735,320)
     elif figure==9:
-        box=(430,580,760,820); xleft,xright=458.,735.; ytop,ybottom=594.,793.; ymax=0.012; ymin=.002; ycut=670.
+        box=(430,580,760,820); xleft,xright=458.,735.; ytop,ybottom=594.,793.; ymax=0.012; ymin=.002; legend=(550,680,735,770)
     else: raise ValueError(figure)
     comp=_components(image,box)
-    # Markers are separated from legend text by their vertical position.
-    comp=comp[(comp[:,0]>=470)&(comp[:,0]<=733)&(comp[:,1]<=ycut)]
+    # Remove the in-plot legend marker/text region. Do not cut by y: the
+    # pre-step low-thrust markers are part of the external response.
+    comp=comp[(comp[:,0]>=458)&(comp[:,0]<=733)]
+    comp=comp[~((comp[:,0]>=legend[0])&(comp[:,0]<=legend[2])&
+                (comp[:,1]>=legend[1])&(comp[:,1]<=legend[3]))]
     if len(comp)<10: raise RuntimeError(f'only {len(comp)} markers found for figure {figure}')
     # Axis transform; x is time [0,1] s, y is CT. One pixel uncertainty is
     # retained as a conservative digitization scale in the output.
@@ -114,7 +117,23 @@ def main(out: Path, pdf: Path, page14: Path, page15: Path):
                          'RMSE_CT':float(np.sqrt(np.mean(e**2))),'MAE_CT':float(np.mean(abs(e))),
                          'max_abs_CT':float(np.max(abs(e))),'mean_digitization_scale_CT':float(np.mean(pix))})
     metrics=pd.DataFrame(rows);metrics.to_csv(out/'WOODGATE_NUAA_METRICS.csv',index=False)
-    manifest={'identity':'WOODGATE_NUAA_COMPONENT_EXTERNAL_FIGURE_CHECK','source':'Woodgate et al., Aerospace Science and Technology 110 (2021) 106425','source_url':'https://eprints.gla.ac.uk/226967/2/226967.pdf','source_pdf_sha256':sha(pdf),'page14_sha256':sha(page14),'page15_sha256':sha(page15),'figures':[7,8,9],'digitized_figures':[8,9],'figure_role':'black square NUAA experimental CT markers from accepted manuscript plots; no raw arrays','rotor':{'R_m':R,'root_cut_m':R0,'blades':NB,'chord_m':C,'airfoil':'NACA23012','rho_kg_m3':RHO,'Omega_rad_s':OMEGA,'rpm':OMEGA*60/(2*np.pi)},'conditions':{'initial_collective_deg':[2,4],'final_increment_deg':4,'rate_deg_s':40,'start_s':.1,'end_s':.2},'model_identity':'appendix-A-equivalent induced-inflow-only model with beta and beta-dot frozen as Listing 2; no parameter fitted to digitized points','digitization':'2x rendering, axes transform recorded in source; approx one pixel vertical uncertainty; plotted points are approximate, not raw measurements','python':sys.version,'platform':platform.platform(),'points':int(len(data)),'external_component_check':True,'xv15_or_aircraft_validation':False}
+    # The plotted points carry approximately one vertical-pixel uncertainty.
+    # Quantify whether the small dynamic-vs-QS ranking survives that reading
+    # uncertainty; this is not a statistical measurement uncertainty estimate.
+    rng=np.random.default_rng(20260912); urows=[]
+    for (fig,init),g in data.groupby(['figure','initial_collective_deg']):
+        y=g.CT_digitized.to_numpy(); pix=g.pixel_uncertainty_CT.to_numpy()
+        yd=g.CT_model_appendix.to_numpy(); yq=g.CT_model_quasisteady.to_numpy()
+        yp=y+rng.uniform(-pix,pix,size=(10000,len(g)))
+        rd=np.sqrt(np.mean((yd[None,:]-yp)**2,axis=1)); rq=np.sqrt(np.mean((yq[None,:]-yp)**2,axis=1))
+        diff=rd-rq
+        urows.append({'figure':int(fig),'initial_collective_deg':init,'draws':10000,
+                      'prob_dynamic_lower_rmse':float(np.mean(diff<0)),
+                      'rmse_diff_median_dynamic_minus_qs':float(np.median(diff)),
+                      'rmse_diff_p05':float(np.quantile(diff,.05)),
+                      'rmse_diff_p95':float(np.quantile(diff,.95))})
+    pd.DataFrame(urows).to_csv(out/'WOODGATE_NUAA_UNCERTAINTY.csv',index=False)
+    manifest={'identity':'WOODGATE_NUAA_COMPONENT_EXTERNAL_FIGURE_REPRODUCTION_ATTEMPT','source':'Woodgate et al., Aerospace Science and Technology 110 (2021) 106425','source_url':'https://eprints.gla.ac.uk/226967/2/226967.pdf','source_pdf_sha256':sha(pdf),'page14_sha256':sha(page14),'page15_sha256':sha(page15),'figures':[7,8,9],'digitized_figures':[8,9],'figure_role':'black square NUAA experimental CT markers from accepted manuscript plots; no raw arrays','rotor':{'R_m':R,'root_cut_m':R0,'blades':NB,'chord_m':C,'airfoil':'NACA23012','rho_kg_m3':RHO,'Omega_rad_s':OMEGA,'rpm':OMEGA*60/(2*np.pi)},'conditions':{'initial_collective_deg':[2,4],'final_increment_deg':4,'rate_deg_s':40,'start_s':.1,'end_s':.2},'model_identity':'Python reimplementation of Appendix A equations with the plotted physical input timing (0.1 s ramp start); not a literal Listing 1/2 execution, which ramps from t=0 in the accepted PDF','digitization':'2x rendering, axes transform recorded in source; approx one pixel vertical uncertainty; plotted points are approximate, not raw measurements','python':sys.version,'platform':platform.platform(),'points':int(len(data)),'external_component_check':True,'quantitative_qualification':False,'status':'NEGATIVE_REPRODUCTION_MISMATCH','reason':'Appendix code time origin differs from plotted test timing and static CT levels do not close at the plotted pre-step points; do not use RMSE as validated prediction evidence','xv15_or_aircraft_validation':False}
     (out/'MANIFEST.json').write_text(json.dumps(manifest,indent=2,ensure_ascii=False))
     print(metrics.to_string(index=False));print(json.dumps(manifest,ensure_ascii=False,indent=2))
 

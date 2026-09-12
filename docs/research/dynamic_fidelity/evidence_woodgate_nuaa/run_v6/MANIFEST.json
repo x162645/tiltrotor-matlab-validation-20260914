@@ -1,0 +1,48 @@
+{
+  "identity": "WOODGATE_NUAA_COMPONENT_EXTERNAL_FIGURE_REPRODUCTION_ATTEMPT",
+  "source": "Woodgate et al., Aerospace Science and Technology 110 (2021) 106425",
+  "source_url": "https://eprints.gla.ac.uk/226967/2/226967.pdf",
+  "source_pdf_sha256": "7aa10d15e6b4c7fdfd4470adb9d7f87b77a910add7ad657005abdc96c66d53d9",
+  "page14_sha256": "339da90604c17a633452752249d5239e98866e66b3b9e290013aa4defc63ca3a",
+  "page15_sha256": "dd53120faa3a2a93180b0fed07970846eda60dfb094d41ca3170988272757686",
+  "figures": [
+    7,
+    8,
+    9
+  ],
+  "digitized_figures": [
+    8,
+    9
+  ],
+  "figure_role": "black square NUAA experimental CT markers from accepted manuscript plots; no raw arrays",
+  "rotor": {
+    "R_m": 0.54,
+    "root_cut_m": 0.10800000000000001,
+    "blades": 2,
+    "chord_m": 0.054,
+    "airfoil": "NACA23012",
+    "rho_kg_m3": 1.29,
+    "Omega_rad_s": 125.66,
+    "rpm": 1199.964608935654
+  },
+  "conditions": {
+    "initial_collective_deg": [
+      2,
+      4
+    ],
+    "final_increment_deg": 4,
+    "rate_deg_s": 40,
+    "start_s": 0.1,
+    "end_s": 0.2
+  },
+  "model_identity": "Python reimplementation of Appendix A equations with the plotted physical input timing (0.1 s ramp start); not a literal Listing 1/2 execution, which ramps from t=0 in the accepted PDF",
+  "digitization": "2x rendering, axes transform recorded in source; approx one pixel vertical uncertainty; plotted points are approximate, not raw measurements",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "points": 57,
+  "external_component_check": true,
+  "quantitative_qualification": false,
+  "status": "NEGATIVE_REPRODUCTION_MISMATCH",
+  "reason": "Appendix code time origin differs from plotted test timing and static CT levels do not close at the plotted pre-step points; do not use RMSE as validated prediction evidence",
+  "xv15_or_aircraft_validation": false
+}

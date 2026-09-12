@@ -1,6 +1,6 @@
 # 动态研发统一台账：当前D17（2026-09-12）
 
-本轮新增 Woodgate/NUAA 独立部件级外部检查。官方接受稿没有原始数组；从图 8、9 的黑色 NUAA 实验方点数字化 54 个近似 `collective pitch -> C_T` 点，使用未拟合参数的 Appendix-A 等价诱导入流重实现，并与准稳态对照。run_v2 结果：初始总距 2°/4° 的动态 RMSE 分别 0.003532/0.004572，准稳态分别 0.003607/0.004612；动态入流只有小幅改善。该证据将 G1 推进为“通用旋翼部件动态部分闭合”，仍不具备 XV-15/全机实机资格。代码为 `analysis/dynamic_fidelity/woodgate_nuaa_external.py`，产物为 `evidence_woodgate_nuaa/run_v2/`，源核查为 `WOODGATE_SOURCE_REVIEW.md` 和 `WOODGATE_NUAA_EXTERNAL_CHECK.md`。论文已按此更新，仍明确不称国内领先。
+本轮接入 Woodgate/NUAA 独立部件来源并进行复现审计。官方接受稿没有原始数组；图 8、9 的数字化和 Appendix-A Python 重实现发现输入时间原点与静态 `C_T` 量级尚未闭合，因此撤销此前定量 RMSE 的外部资格，将 `run_v1`–`run_v5` 保留为失败/诊断产物。该来源目前只能支持动态峰值/滞后现象作为模型改进目标，不能称定量部件验证。代码为 `analysis/dynamic_fidelity/woodgate_nuaa_external.py`，正式失败报告为 `WOODGATE_NUAA_EXTERNAL_CHECK.md`，源核查为 `WOODGATE_SOURCE_REVIEW.md`。论文已按此收缩主张，仍明确不称国内领先。
 
 # 动态研发统一台账：当前D13
 
