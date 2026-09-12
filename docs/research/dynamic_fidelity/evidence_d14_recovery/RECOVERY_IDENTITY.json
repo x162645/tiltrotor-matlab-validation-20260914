@@ -1,0 +1,39 @@
+{
+  "role": "RECOVERY_REEXECUTION_NOT_ORIGINAL_D14",
+  "new_flight_observations": 0,
+  "D15_semantic_fix_included": false,
+  "started_utc": "2026-09-12T06:33:40.220620+00:00",
+  "input_sha256": {
+    "D14\\repository_snapshot\\docs\\research\\dynamic_fidelity\\evidence_d14\\code\\extract_fig434.py": "7fcd870a9c956ededc5f274f2ac9ba0a287726af3a238e5a97444d549b2da284",
+    "D14\\repository_snapshot\\docs\\research\\dynamic_fidelity\\evidence_d14\\code\\run_d14.py": "aee87a0b49fa01e517454ec4f3d4374a7f3d4b568da2d280d4c04197b83fb184",
+    "D14\\repository_snapshot\\docs\\research\\dynamic_fidelity\\evidence_d14\\code\\command_reference.py": "dafcdce1a74fded7ef81f2876eb9f0f8de868f1b3325283f13e3014990024249",
+    "sources\\NASA_TM_89428.pdf": "252f7df0c0e05bd8dece0a923d337df2231c0148f897f0376f930f6102b90ba2",
+    "D11\\data\\OARF_RUN15_EXISTING_STATIC_POINTS.csv": "8bfd600433b0658a413602b5250e899e38394d951911eeb328eb19eeae121e5d",
+    "D13\\native\\NATIVE_MANIFEST.json": "1be4183957e8b454a67d4c68f38890a1d7874a6b6079cd6f5b1e174bdbf76339"
+  },
+  "commands": [
+    [
+      "C:\\Users\\86173\\Documents\\Codex\\2026-09-11\\yue\\work\\.venv\\Scripts\\python.exe",
+      "C:\\Users\\86173\\Documents\\Codex\\2026-09-11\\yue\\work\\D11_D15\\D11_D15_HANDOFF_20260912\\D14\\repository_snapshot\\docs\\research\\dynamic_fidelity\\evidence_d14\\code\\extract_fig434.py",
+      "--pdf",
+      "C:\\Users\\86173\\Documents\\Codex\\2026-09-11\\yue\\work\\D11_D15\\D11_D15_HANDOFF_20260912\\sources\\NASA_TM_89428.pdf",
+      "--out",
+      "C:\\Users\\86173\\Documents\\Codex\\2026-09-11\\yue\\work\\d14_recovery_run_20260912\\recovered_data"
+    ],
+    [
+      "C:\\Users\\86173\\Documents\\Codex\\2026-09-11\\yue\\work\\.venv\\Scripts\\python.exe",
+      "C:\\Users\\86173\\Documents\\Codex\\2026-09-11\\yue\\work\\D11_D15\\D11_D15_HANDOFF_20260912\\D14\\repository_snapshot\\docs\\research\\dynamic_fidelity\\evidence_d14\\code\\run_d14.py",
+      "--data",
+      "C:\\Users\\86173\\Documents\\Codex\\2026-09-11\\yue\\work\\d14_recovery_run_20260912\\recovered_data",
+      "--static",
+      "C:\\Users\\86173\\Documents\\Codex\\2026-09-11\\yue\\work\\D11_D15\\D11_D15_HANDOFF_20260912\\D11\\data\\OARF_RUN15_EXISTING_STATIC_POINTS.csv",
+      "--plant-manifest",
+      "C:\\Users\\86173\\Documents\\Codex\\2026-09-11\\yue\\work\\D11_D15\\D11_D15_HANDOFF_20260912\\D13\\native\\NATIVE_MANIFEST.json",
+      "--out",
+      "C:\\Users\\86173\\Documents\\Codex\\2026-09-11\\yue\\work\\d14_recovery_run_20260912\\new_python_run"
+    ]
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "status": "EXECUTED_REQUIRES_SCIENTIFIC_READBACK",
+  "finished_utc": "2026-09-12T06:33:51.961188+00:00"
+}

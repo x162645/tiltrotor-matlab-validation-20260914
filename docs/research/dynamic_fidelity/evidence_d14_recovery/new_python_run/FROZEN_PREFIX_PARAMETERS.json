@@ -1,0 +1,13 @@
+{
+  "prefix_pole": 0.09367659120891998,
+  "prefix_kappa": 0.011884137891055257,
+  "diagnostic_gain": 0.02055136290208857,
+  "delay_s": 0.0074,
+  "train_time_s": [
+    0.5,
+    18.0
+  ],
+  "prefix_loss": 4.620368583493531e-05,
+  "role": "empirical command-level parameters and separate non-installable D13 gain diagnostic",
+  "physical_rotor_parameter_fits": 0
+}

@@ -1,0 +1,39 @@
+{
+  "prefix_pole": 0.09367659120891998,
+  "prefix_kappa": 0.011884137891055257,
+  "diagnostic_gain": 0.02055136290208857,
+  "delay_s": 0.0074,
+  "train_time_s": [
+    0.5,
+    18.0
+  ],
+  "prefix_loss": 4.620368583493531e-05,
+  "role": "empirical command-level parameters and separate non-installable D13 gain diagnostic",
+  "physical_rotor_parameter_fits": 0
+}
+   scenario window                            model  original_target_points   RMSE_g    NRMSE  max_abs_error_g
+central_raw prefix             SOURCE_FROZEN_1STATE                     192 0.008670 0.321935         0.018452
+central_raw  later             SOURCE_FROZEN_1STATE                     120 0.006490 0.200037         0.016296
+central_raw   full             SOURCE_FROZEN_1STATE                     312 0.007894 0.271007         0.018452
+central_raw prefix         PREFIX_IDENTIFIED_1STATE                     192 0.006797 0.252387         0.015816
+central_raw  later         PREFIX_IDENTIFIED_1STATE                     120 0.008183 0.252202         0.016742
+central_raw   full         PREFIX_IDENTIFIED_1STATE                     312 0.007349 0.252316         0.016742
+central_raw prefix           STATIC_GAIN_NEGCONTROL                     192 0.018260 0.677986         0.036116
+central_raw  later           STATIC_GAIN_NEGCONTROL                     120 0.016899 0.520830         0.033087
+central_raw   full           STATIC_GAIN_NEGCONTROL                     312 0.017765 0.609894         0.036116
+central_raw prefix D13_SHAPE_PREFIX_GAIN_DIAGNOSTIC                     192 0.011029 0.409512         0.030610
+central_raw  later D13_SHAPE_PREFIX_GAIN_DIAGNOSTIC                     120 0.009267 0.285620         0.020569
+central_raw   full D13_SHAPE_PREFIX_GAIN_DIAGNOSTIC                     312 0.010373 0.356140         0.030610
+{
+  "role": "NON_INSTALLABLE_PREFIX_GAIN_DIAGNOSTIC_NOT_MEASURED_ACTUATOR",
+  "inferred_constant_rad_per_percent": 0.0026406980387709235,
+  "implied_report_coordinate_min_deg": 5.665705276033187,
+  "implied_report_coordinate_max_deg": 7.066787455827647,
+  "D13_report_coordinate_support_deg": [
+    6.0,
+    11.0
+  ],
+  "implied_theta_outside_D13_support": true,
+  "nonlinear_plant_prediction_released": false,
+  "true_collective_chain_and_matched_case_known": false
+}

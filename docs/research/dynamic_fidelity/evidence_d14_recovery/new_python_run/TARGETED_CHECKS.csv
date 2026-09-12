@@ -1,0 +1,12 @@
+check,absolute_difference,tolerance,passed
+later_target_poison_does_not_change_fit,0.0,1e-13,True
+half_dt_SOURCE_FROZEN_1STATE,2.0316189392605155e-07,5e-05,True
+half_dt_PREFIX_IDENTIFIED_1STATE,2.212561667838675e-07,5e-05,True
+half_dt_STATIC_GAIN_NEGCONTROL,0.0,5e-05,True
+half_dt_D13_SHAPE_PREFIX_GAIN_DIAGNOSTIC,1.9355921965169554e-05,5e-05,True
+first_order_against_independent_state_space,4.263256414560601e-14,1e-10,True
+reject_rad_g_down,0.0,0.0,True
+reject_fraction_g_down,0.0,0.0,True
+reject_percentage_point_newtons,0.0,0.0,True
+public_API_replays_source_prediction,0.0,1e-13,True
+constant_initial_control_zero_perturbation,0.0,1e-14,True

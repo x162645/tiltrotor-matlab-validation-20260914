@@ -1,0 +1,30 @@
+{
+  "role": "D15_RECOVERY_REIMPLEMENTATION_NEW_IDENTITY",
+  "status": "EXECUTED_READBACK_REQUIRED",
+  "source_descriptor": {
+    "model": "TM89428_EQ4_8",
+    "kappa": 0.0098,
+    "pole": 0.105,
+    "delay_s": 0.0074,
+    "input_unit": "percentage_point",
+    "output_unit": "g_down"
+  },
+  "origin_policy": "fixed origin_time and initial_acceleration_g; no per-query reset",
+  "delay_breakpoints": "all input knots shifted by delay included in integration",
+  "query_grid_policy": "output queries do not determine integration breakpoints",
+  "input_prehistory": "constant u[0] before first recorded input",
+  "physical_rotor_parameter_fits": 0,
+  "new_flight_experiments": 0,
+  "independent_trials": 0,
+  "forecast_rows": 195,
+  "origins_shared_record": true,
+  "hashes": {
+    "C:\\Users\\86173\\Documents\\Codex\\2026-09-11\\yue\\work\\recovery_stage\\evidence_d15_recovery_reimplementation\\code\\predict_known_command.py": "f8ff4c691b710e5daa00ec4debd2e328fc47296113efde466632f7c5475dc467",
+    "work\\recovery_stage\\D14_RECOVERY_REEXECUTION_20260912\\recovered_data\\FIG434_POWER_INPUT.csv": "d084a50e7164840728817033f19e08f519a496ae05387a38bcdb27edbcae2b4f",
+    "work\\recovery_stage\\D14_RECOVERY_REEXECUTION_20260912\\recovered_data\\FIG434_FLIGHT_AZ.csv": "d89ccb7aaf50ac05982f5e7d7bb340f4d6313e86e8e5d42d08018d6c83b945b1",
+    "work\\recovery_stage\\D14_RECOVERY_REEXECUTION_20260912\\new_python_run\\FROZEN_PREFIX_PARAMETERS.json": "19c5f93a9c967b7681ea906ba2c184ad43099b04384b57e12f9ffbb864db5a19"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.3.5",
+  "platform": "Windows-11-10.0.26100-SP0"
+}

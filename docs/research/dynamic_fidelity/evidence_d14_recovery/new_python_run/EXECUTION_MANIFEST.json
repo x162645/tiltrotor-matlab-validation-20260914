@@ -1,0 +1,29 @@
+{
+  "status": "PYTHON_EXECUTED_READBACK_REQUIRED",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.3.5",
+  "scipy": "1.18.1",
+  "pandas": "3.0.1",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "elapsed_seconds": 3.7782555000158027,
+  "original_target_points": 312,
+  "prefix_points": 192,
+  "later_points": 120,
+  "input_time_origin_s": 0.5,
+  "input_prehistory": "constant; subtract initial delayed control",
+  "initial_state": "equilibrium; not optimized",
+  "physical_rotor_parameter_fits": 0,
+  "empirical_command_parameter_fits": 2,
+  "D13_noninstallable_diagnostic_gain_fits": 1,
+  "new_flight_experiments": 0,
+  "new_blind_holdout": false,
+  "historical_scientific_reruns": 0,
+  "hashes": {
+    "C:\\Users\\86173\\Documents\\Codex\\2026-09-11\\yue\\work\\d14_recovery_run_20260912\\recovered_data\\FIG434_POWER_INPUT.csv": "d084a50e7164840728817033f19e08f519a496ae05387a38bcdb27edbcae2b4f",
+    "C:\\Users\\86173\\Documents\\Codex\\2026-09-11\\yue\\work\\d14_recovery_run_20260912\\recovered_data\\FIG434_FLIGHT_AZ.csv": "d89ccb7aaf50ac05982f5e7d7bb340f4d6313e86e8e5d42d08018d6c83b945b1",
+    "C:\\Users\\86173\\Documents\\Codex\\2026-09-11\\yue\\work\\D11_D15\\D11_D15_HANDOFF_20260912\\D11\\data\\OARF_RUN15_EXISTING_STATIC_POINTS.csv": "8bfd600433b0658a413602b5250e899e38394d951911eeb328eb19eeae121e5d",
+    "C:\\Users\\86173\\Documents\\Codex\\2026-09-11\\yue\\work\\D11_D15\\D11_D15_HANDOFF_20260912\\D13\\native\\NATIVE_MANIFEST.json": "1be4183957e8b454a67d4c68f38890a1d7874a6b6079cd6f5b1e174bdbf76339",
+    "C:\\Users\\86173\\Documents\\Codex\\2026-09-11\\yue\\work\\D11_D15\\D11_D15_HANDOFF_20260912\\D14\\repository_snapshot\\docs\\research\\dynamic_fidelity\\evidence_d14\\code\\run_d14.py": "aee87a0b49fa01e517454ec4f3d4374a7f3d4b568da2d280d4c04197b83fb184",
+    "C:\\Users\\86173\\Documents\\Codex\\2026-09-11\\yue\\work\\D11_D15\\D11_D15_HANDOFF_20260912\\D14\\repository_snapshot\\docs\\research\\dynamic_fidelity\\evidence_d14\\code\\command_reference.py": "dafcdce1a74fded7ef81f2876eb9f0f8de868f1b3325283f13e3014990024249"
+  }
+}

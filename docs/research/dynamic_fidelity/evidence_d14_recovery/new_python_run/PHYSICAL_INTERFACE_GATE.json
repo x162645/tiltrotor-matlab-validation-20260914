@@ -1,0 +1,13 @@
+{
+  "role": "NON_INSTALLABLE_PREFIX_GAIN_DIAGNOSTIC_NOT_MEASURED_ACTUATOR",
+  "inferred_constant_rad_per_percent": 0.0026406980387709235,
+  "implied_report_coordinate_min_deg": 5.665705276033187,
+  "implied_report_coordinate_max_deg": 7.066787455827647,
+  "D13_report_coordinate_support_deg": [
+    6.0,
+    11.0
+  ],
+  "implied_theta_outside_D13_support": true,
+  "nonlinear_plant_prediction_released": false,
+  "true_collective_chain_and_matched_case_known": false
+}

@@ -1,0 +1,13 @@
+requested_horizon_s,model,n_overlapping_forecasts,RMSE_g,dependence_note
+0.5,source_known_g,65,0.006214559116719403,overlapping_origins_same_record
+0.5,hold_current_g,65,0.01321151349954377,overlapping_origins_same_record
+0.5,source_future_command_held_g,65,0.013278226707649938,overlapping_origins_same_record
+0.5,prefix_fit_known_g,65,0.006290942951116363,overlapping_origins_same_record
+2.0,source_known_g,65,0.006465334221218938,overlapping_origins_same_record
+2.0,hold_current_g,65,0.03586174095874356,overlapping_origins_same_record
+2.0,source_future_command_held_g,65,0.03380262429066951,overlapping_origins_same_record
+2.0,prefix_fit_known_g,65,0.008403531890150605,overlapping_origins_same_record
+5.0,source_known_g,65,0.008002260967402183,overlapping_origins_same_record
+5.0,hold_current_g,65,0.05409255006800491,overlapping_origins_same_record
+5.0,source_future_command_held_g,65,0.04000283897297833,overlapping_origins_same_record
+5.0,prefix_fit_known_g,65,0.008025129434993535,overlapping_origins_same_record

@@ -1,0 +1,5 @@
+check,absolute_difference,tolerance,passed
+query_grid_invariance_abs_g,8.829742492721948e-16,1e-10,True
+delayed_breakpoint_exact_vs_refined_abs_g,2.531308496145357e-14,1e-08,True
+origin_initial_condition_abs_g,0.0,1e-12,True
+future_input_tamper_before_24s_abs_g,0.0,1e-12,True
