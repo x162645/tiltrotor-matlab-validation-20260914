@@ -15,6 +15,7 @@
 |S8|数值线性化、模态跟踪、控制导数和时域响应|DONE_FOR_INTERNAL_MODEL|`analysis/berger13/*`、`analysis/control_stability/*`；不是实机飞行品质认证|
 |S9|NASA OARF Run 15 部件外部比较|DONE_NEGATIVE|当前 M0：CT/CP/FM MAPE = 56.42/62.61/23.02%|
 |S10|NASA OARF Run 14 运行级外部比较|DONE_NEGATIVE|当前 M0：56.19/64.08/19.12%；同一 OARF 系列，非盲测|
+|S10b|Betzina 低速前飞单旋翼证据与运行状态合同|ARCHIVED_PLUS_CURRENT_DIAGNOSTIC|旧提交归档 Fig.16/Fig.18 共 24 个图表数字化工况；当前 HEAD 身份闸门 PASS，但两控制 alpha=0 快速检查固定 CT 合同 0/4，不能把物理解算收敛误称为运行状态匹配|
 |S11|NASA WADC 跨设施冻结比较和强基线|DONE_WITH_CAVEAT|15/15 点收敛；冻结 M1 相对 M0 改善，但绝对 CT/CP 仍偏大|
 |S12|同步全机过渡时历、整机动态误差和实机飞行品质|BLOCKED|缺少匹配的实际总距/执行器、旋翼载荷、质量 CG 惯量、转速和统一时间基准|
 |S13|中文完整候选稿、图表、复算入口和限制|DONE_FOR_SUPPORTED_SCOPE|可支持“低成本方法+部件外部检查+条件性整机分析”；不能写成全机动态精度或国内领先|
