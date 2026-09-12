@@ -19,9 +19,16 @@ for k=1:numel(muList)
     opts=optimset('Display','off','MaxIter',50,'MaxFunEvals',160,'TolX',2e-5,'TolFun',1e-8);
     [z,J]=fminsearch(@obj,seed,opts);
     e=evalpt(z,mu,P,targetCT);
-    if e.valid, seed=z; end
-    one=table(mu,targetCT,z(1),z(2),e.CT,e.CQ,e.CQ/sigma,e.beta1c_deg,e.beta1s_deg,e.physicalConverged,e.valid,J,{e.status}, ...
-      'VariableNames',{'advance_ratio','target_CT','theta75_deg','cyclicLong_deg','CT_model','CQ_model','CQ_over_sigma_model','beta1c_deg','beta1s_deg','physicalConverged','solutionValid','objective','status'});
+    % A positive, converged rotor state is not automatically a valid
+    % operating-state solution.  The quick check must also satisfy the
+    % experimental CT and first-harmonic flapping contracts; otherwise a
+    % local fminsearch minimum can be mislabeled as a successful trim.
+    e.solutionValid = e.valid && abs((e.CT-targetCT)/targetCT)<=0.005 && ...
+        abs(e.beta1c_deg)<=0.1;
+    if e.solutionValid, seed=z; end
+    targetRelativeError=abs((e.CT-targetCT)/targetCT);
+    one=table(mu,targetCT,z(1),z(2),e.CT,e.CQ,e.CQ/sigma,e.beta1c_deg,e.beta1s_deg,e.physicalConverged,e.solutionValid,targetRelativeError,J,{e.status}, ...
+      'VariableNames',{'advance_ratio','target_CT','theta75_deg','cyclicLong_deg','CT_model','CQ_model','CQ_over_sigma_model','beta1c_deg','beta1s_deg','physicalConverged','solutionValid','targetRelativeError','objective','status'});
     rows=[rows;one]; %#ok<AGROW>
 end
 writetable(rows,fullfile(outputDir,'BETZINA2002_ALPHA0_QUICKCHECK.csv'));
