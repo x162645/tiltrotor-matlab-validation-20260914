@@ -48,6 +48,8 @@
 
 当前 HEAD 的零横向周期身份闸门结果见 `analysis/validation_betzina2002/evidence/current_head_20260912/`：3 个工况全部收敛，最大绝对差 `2.6112966972666012e-17`，`pass=1`。完整数据角色、限制和允许声明见 [`docs/EXTERNAL_VALIDATION_MATRIX_20260912.md`](EXTERNAL_VALIDATION_MATRIX_20260912.md)。
 
+同目录还保留了当前 HEAD 的 `alpha=0` 两控制 quick check。4/4 状态物理解算，但固定 `CT/σ=0.075` 合同为 0/4，CT 相对误差为 56.6%–82.2%。该诊断暴露出旧脚本把“物理收敛”误当作“实验运行状态满足”，现已修复标签并将结果保留为失败证据。它说明纵向周期变距而没有额外横向/余弦周期变距时，不能把一个正推力解称为 Betzina 运行状态解。
+
 ## 可复核文件
 
 - [Run 15 指标](../evidence/external_validation_20260912/run15_direct_m0/XV15_V1_M0_BASELINE_METRICS.csv)
