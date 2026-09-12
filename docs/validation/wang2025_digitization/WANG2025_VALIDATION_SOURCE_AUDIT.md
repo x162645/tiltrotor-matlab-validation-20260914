@@ -24,7 +24,29 @@
 - 原图保存在 `source_images/F001.jpg`、`F002.jpg`、`F017.jpg`、`F018.jpg`；均由期刊全文页的高分辨率 `FIGURE` 链接下载，并保留原始图像尺寸。
 - `FIG1_digitized_points.csv`：从 F001 的蓝色文献方块、红色试飞点和黑色模型曲线提取的近似点。每行注明 panel、变量行、曲线角色和来源图文件。
 - `FIG1_error_summary.csv`：在同一图中以黑色模型曲线插值到蓝色/红色点的近似 MAE、RMSE 和按坐标范围归一化 MAE。
-- F002 的彩色虚线和黑色曲线存在重叠、线宽和虚线断裂。已保存高清原图，但当前不把自动像素追踪结果当作可靠逐点误差；需要人工标注或矢量源后再评分。
+- F002 已完成保守的可复算像素级提取，脚本为 `analysis/digitize_wang2025_fig2.py`，方法和不确定度见 `FIG2_DIGITIZATION_NOTE.md`。输出在 `FIG2_digitized_points.csv` 和 `FIG2_error_summary.csv`。图像中部分红色试验点被黑色模型线覆盖，因此对应 panel 的 experiment 行为空，不被当作零误差；可分离的 experiment/literature 行才计算 MAE/RMSE。结果是图像级近似，不是作者原始采样数组。
+
+F002 当前可复算的可分离对照（native units）为：
+
+| panel | 对照 | n | MAE | RMSE |
+|---|---|---:|---:|---:|
+| r1c1 | experiment | 47 | 1.08 | 1.09 |
+| r1c1 | literature | 84 | 1.20 | 1.23 |
+| r1c3 | experiment | 99 | 1.20 | 1.21 |
+| r1c3 | literature | 78 | 0.89 | 0.91 |
+| r2c1 | experiment | 88 | 1.20 | 1.22 |
+| r2c1 | literature | 67 | 1.58 | 1.69 |
+| r2c2 | literature | 230 | 1.90 | 2.15 |
+| r2c3 | experiment | 99 | 1.13 | 1.15 |
+| r2c3 | literature | 83 | 1.03 | 1.13 |
+| r3c1 | experiment | 96 | 2.07 | 2.17 |
+| r3c1 | literature | 125 | 2.25 | 2.67 |
+| r3c2 | literature | 216 | 2.42 | 3.03 |
+| r3c3 | experiment | 126 | 1.79 | 1.91 |
+| r3c3 | literature | 102 | 1.08 | 1.13 |
+
+The table is a reproducibility aid for the published figure, not a claim that
+the paper's hidden source data have been recovered.
 
 ### 当前可复算的同类整机配平结果
 
@@ -49,6 +71,6 @@ F001 数字化误差是“从公开图像读取”的近似值，不是作者原
 ## 对当前仓库的判定
 
 - **已具备**：13 状态/10 输入整机框架、配平和线性化入口、旋翼部件外部数据、过渡包络、数据角色和证据边界记录。
-- **尚缺**：一套同构 XV-15-like 参数集；动态入流与生产整机接口的闭合；F001/F002/F017/F018 对应的模型复算输入；F002 的人工可复核逐点提取；逐图误差报告。
-- **短期可声明**：完成上述门槛后，可达到“公开资料重建整机模型 + 文献/试飞曲线对比 + 正反向过渡任务分析”的公开论文验模强度。
+- **尚缺**：一套完全同构 XV-15-like 参数集；动态入流与生产整机接口的闭合；F001/F002/F017/F018 对应的模型复算输入；F017/F018 的逐点模型复算和统一误差表。
+- **短期可声明**：目前已达到“公开资料重建整机模型 + 配平曲线及部分动态操纵图示点的可复算对比”的中间门槛；完成 F017/F018 复算后，才可声称达到王梓旭论文展示的完整公开验模强度。
 - **不能声明**：不能将这一强度等同于同步全机飞行数据验证、实机飞行品质评定或全面国内领先。

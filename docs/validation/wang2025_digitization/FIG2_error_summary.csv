@@ -1,0 +1,16 @@
+panel,reference,n,MAE_native,RMSE_native,pixel_uncertainty,role_note
+r1c1,experiment,47,1.0765112019163012,1.094943948547689,2,figure_digitization_not_source_array
+r1c1,literature,84,1.2015137180700113,1.2279537341736506,2,figure_digitization_not_source_array
+r1c2,literature,237,0.625925615446952,1.2644619086236768,2,figure_digitization_not_source_array
+r1c3,experiment,99,1.1987423907953694,1.2136353514803402,2,figure_digitization_not_source_array
+r1c3,literature,78,0.88979453217864,0.9107542430356441,2,figure_digitization_not_source_array
+r2c1,experiment,88,1.202153110047847,1.2150425427780351,2,figure_digitization_not_source_array
+r2c1,literature,67,1.5789473684210533,1.687790774336947,2,figure_digitization_not_source_array
+r2c2,literature,230,1.901601830663614,2.1515226564127663,2,figure_digitization_not_source_array
+r2c3,experiment,99,1.1270600744284955,1.146773716889796,2,figure_digitization_not_source_array
+r2c3,literature,83,1.030437539632213,1.1280082579087014,2,figure_digitization_not_source_array
+r3c1,experiment,96,2.0722958057395138,2.1657755530818315,2,figure_digitization_not_source_array
+r3c1,literature,125,2.2527152317880788,2.6691683074569754,2,figure_digitization_not_source_array
+r3c2,literature,216,2.4172185430463573,3.026135008952546,2,figure_digitization_not_source_array
+r3c3,experiment,126,1.7933354357195423,1.9054092183379725,2,figure_digitization_not_source_array
+r3c3,literature,102,1.0751850409037782,1.128764778268398,2,figure_digitization_not_source_array
