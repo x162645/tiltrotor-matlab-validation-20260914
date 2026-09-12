@@ -10,16 +10,23 @@ names = {'time_s','collective_actual_rad','nacelle_left_rad','nacelle_right_rad'
 t = (0:0.01:0.05).'; z=zeros(size(t)); one=ones(size(t));
 S = table(t,z,z,z,100*one,100*one,20*one,20*one,z,z,z,z,z,z,z,z,z,100*one, ...
     'VariableNames',names);
-filePath = [tempname,'.csv']; writetable(S,filePath);
-cleanup = onCleanup(@()delete_if_exists(filePath)); %#ok<NASGU>
+filePath = [tempname,'.csv'];
+writetable(S,filePath);
 [~,okReport] = read_full_aircraft_sync_csv(filePath);
 assert(okReport.externalValidationEligible && okReport.rows == height(S));
 S.time_s(3)=S.time_s(2); writetable(S,filePath);
-caught=false;
-try, read_full_aircraft_sync_csv(filePath); catch err
+caught = false;
+try
+    read_full_aircraft_sync_csv(filePath);
+catch err
     caught=strcmp(err.identifier,'fullAircraftSync:InvalidTime');
 end
 assert(caught,'Non-increasing time must be rejected.');
+delete_if_exists(filePath);
 report=struct('allPassed',true,'schema','FULL_AIRCRAFT_SYNC_V1','syntheticOnly',true);
 end
-function delete_if_exists(p), if isfile(p), delete(p); end, end
+function delete_if_exists(p)
+if isfile(p)
+    delete(p);
+end
+end
