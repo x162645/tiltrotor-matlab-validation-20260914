@@ -14,6 +14,7 @@ addpath(fullfile(rootDir,'analysis','berger13'));
 addpath(fullfile(rootDir,'analysis','control_stability'));
 addpath(fullfile(rootDir,'analysis','generic_trim'));
 addpath(fullfile(rootDir,'analysis','rotor_reference'));
+addpath(fullfile(rootDir,'validation'));
 addpath(fullfile(rootDir,'tests'));
 
 P = params_nominal();
@@ -67,6 +68,8 @@ run_test('Pitt-Peters three-state dynamic-inflow baseline', ...
     @test_pitt_peters_dynamic_inflow);
 run_test('berger13 transition-envelope API', ...
     @test_berger13_transition_envelope);
+run_test('full-aircraft synchronized-data schema gate', ...
+    @test_full_aircraft_sync_schema);
 
 summary.names = tests;
 summary.passed = passed;
@@ -364,6 +367,12 @@ fprintf('All passed: %d\n',summary.allPassed);
         transitionReport = check_berger13_transition_envelope();
         assert(transitionReport.passed, ...
             'Berger13 transition-envelope API checks failed.');
+    end
+
+    function test_full_aircraft_sync_schema()
+        syncReport = check_full_aircraft_sync_schema();
+        assert(syncReport.allPassed, ...
+            'Full-aircraft synchronized-data schema checks failed.');
     end
 
     function value = ternary(condition,a,b)
