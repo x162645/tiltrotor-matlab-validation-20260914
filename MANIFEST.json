@@ -25,6 +25,7 @@
     "docs/FULL_AIRCRAFT_SYNC_DATA_CONTRACT.md",
     "docs/MODEL_VALIDATION_OVERVIEW_20260912.md",
     "docs/assets/validation_evidence_overview_20260912.png",
+    "docs/SHORT_TERM_WANG_VALIDATION_TARGET_20260912.md",
     "tests/check_pitt_peters_dynamic_inflow.m",
     "tests/check_berger13_transition_envelope.m",
     "tests/check_full_aircraft_sync_schema.m"

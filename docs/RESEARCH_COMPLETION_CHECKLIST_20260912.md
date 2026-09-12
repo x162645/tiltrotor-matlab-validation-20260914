@@ -15,6 +15,7 @@
 |S8|数值线性化、模态跟踪、控制导数和时域响应|DONE_FOR_INTERNAL_MODEL|`analysis/berger13/*`、`analysis/control_stability/*`；不是实机飞行品质认证|
 |S8b|成熟动态入流强基线和适用域门禁|DONE_WITH_INTEGRATION_BOUNDARY|`model/inflow/pitt_peters_dynamic_inflow.m` 三状态 Pitt–Peters 方程与 5/5 MATLAB 检查通过；当前 Berger13 仍为标量诱导速度接口，未冒称已集成整机|
 |S8c|速度—短舱角过渡配平包络入口|DONE_FOR_NUMERICAL_SCOPE|`analysis/berger13/run_berger13_transition_envelope.m` 及 6/6 合同检查；保留失败点，不等同飞行走廊或外部验证|
+|S8d|达到公开文献级整机验模强度（短期目标）|IN_PROGRESS|`docs/SHORT_TERM_WANG_VALIDATION_TARGET_20260912.md`；需要公开构型参数、配平/操纵/正反向过渡对比和逐点误差表|
 |S9|NASA OARF Run 15 部件外部比较|DONE_NEGATIVE|当前 M0：CT/CP/FM MAPE = 56.42/62.61/23.02%|
 |S10|NASA OARF Run 14 运行级外部比较|DONE_NEGATIVE|当前 M0：56.19/64.08/19.12%；同一 OARF 系列，非盲测|
 |S10b|Betzina 低速前飞单旋翼证据与运行状态合同|ARCHIVED_PLUS_CURRENT_DIAGNOSTIC|旧提交归档 Fig.16/Fig.18 共 24 个图表数字化工况；当前 HEAD 身份闸门 PASS，但两控制 alpha=0 快速检查固定 CT 合同 0/4，不能把物理解算收敛误称为运行状态匹配|
