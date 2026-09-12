@@ -8,6 +8,7 @@ addpath(fullfile(rootDir,'model'));
 addpath(fullfile(rootDir,'model','berger13'));
 addpath(fullfile(rootDir,'model','rotor_reference'));
 addpath(fullfile(rootDir,'model','parameter_sets'));
+addpath(fullfile(rootDir,'model','inflow'));
 addpath(fullfile(rootDir,'analysis'));
 addpath(fullfile(rootDir,'analysis','berger13'));
 addpath(fullfile(rootDir,'analysis','control_stability'));
@@ -62,6 +63,10 @@ run_test('preliminary handling-quality screen', ...
     @test_handling_quality_screen);
 run_test('D02 longitudinal-heave dynamic prototype', ...
     @test_d02_longitudinal_heave);
+run_test('Pitt-Peters three-state dynamic-inflow baseline', ...
+    @test_pitt_peters_dynamic_inflow);
+run_test('berger13 transition-envelope API', ...
+    @test_berger13_transition_envelope);
 
 summary.names = tests;
 summary.passed = passed;
@@ -347,6 +352,18 @@ fprintf('All passed: %d\n',summary.allPassed);
         d02Report = check_d02_longitudinal_heave();
         assert(d02Report.passed, ...
             'D02 longitudinal-heave dynamic prototype checks failed.');
+    end
+
+    function test_pitt_peters_dynamic_inflow()
+        ppReport = check_pitt_peters_dynamic_inflow();
+        assert(ppReport.allPassed, ...
+            'Pitt-Peters three-state dynamic-inflow checks failed.');
+    end
+
+    function test_berger13_transition_envelope()
+        transitionReport = check_berger13_transition_envelope();
+        assert(transitionReport.passed, ...
+            'Berger13 transition-envelope API checks failed.');
     end
 
     function value = ternary(condition,a,b)

@@ -11,8 +11,8 @@ function [dx,detail] = pitt_peters_dynamic_inflow(x,loads,kinematics,options)
 %
 %   KINEMATICS.mu is the nonnegative in-plane free-stream ratio and
 %   KINEMATICS.mu_z is the signed free-stream axial ratio (positive into the
-%   disk).  KINEMATICS.Omega
-%   is rotor speed in rad/s.  The implementation is intentionally restricted
+%   disk).  KINEMATICS.Omega is rotor speed in rad/s.  The implementation is
+%   intentionally restricted
 %   to the positive-throughflow branch; vortex-ring, windmill and reverse-flow
 %   continuations are rejected rather than silently clipped.
 %
