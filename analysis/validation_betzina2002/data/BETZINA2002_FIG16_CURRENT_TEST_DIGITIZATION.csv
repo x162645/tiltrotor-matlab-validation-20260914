@@ -1,0 +1,13 @@
+alpha_exp_deg,advance_ratio,CQ_over_sigma_exp,digitization_halfwidth,source_figure,source_symbol_role,evidence_role
+-15,0.125,0.00570,0.00010,Betzina_2002_Fig16,current_test_open_symbol,FIGURE_DIGITIZATION_DIAGNOSTIC
+-15,0.15,0.00595,0.00010,Betzina_2002_Fig16,current_test_open_symbol,FIGURE_DIGITIZATION_DIAGNOSTIC
+-15,0.17,0.00620,0.00010,Betzina_2002_Fig16,current_test_open_symbol,FIGURE_DIGITIZATION_DIAGNOSTIC
+-15,0.20,0.00665,0.00010,Betzina_2002_Fig16,current_test_open_symbol,FIGURE_DIGITIZATION_DIAGNOSTIC
+0,0.125,0.00355,0.00010,Betzina_2002_Fig16,current_test_open_symbol,FIGURE_DIGITIZATION_DIAGNOSTIC
+0,0.15,0.00330,0.00010,Betzina_2002_Fig16,current_test_open_symbol,FIGURE_DIGITIZATION_DIAGNOSTIC
+0,0.17,0.00310,0.00010,Betzina_2002_Fig16,current_test_open_symbol,FIGURE_DIGITIZATION_DIAGNOSTIC
+0,0.20,0.00295,0.00010,Betzina_2002_Fig16,current_test_open_symbol,FIGURE_DIGITIZATION_DIAGNOSTIC
+15,0.125,0.00130,0.00010,Betzina_2002_Fig16,current_test_open_symbol,FIGURE_DIGITIZATION_DIAGNOSTIC
+15,0.15,0.00075,0.00010,Betzina_2002_Fig16,current_test_open_symbol,FIGURE_DIGITIZATION_DIAGNOSTIC
+15,0.17,0.00035,0.00010,Betzina_2002_Fig16,current_test_open_symbol,FIGURE_DIGITIZATION_DIAGNOSTIC
+15,0.20,0.00000,0.00010,Betzina_2002_Fig16,current_test_open_symbol,FIGURE_DIGITIZATION_DIAGNOSTIC
