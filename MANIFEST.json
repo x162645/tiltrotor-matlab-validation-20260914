@@ -18,7 +18,14 @@
     "analysis/berger13/trim_berger13_symmetric.m",
     "analysis/berger13/linearize_13x10_numeric.m",
     "analysis/control_stability/run_preliminary_handling_quality_screen.m",
-    "tests/check_berger13_variable_inertia.m"
+    "tests/check_berger13_variable_inertia.m",
+    "model/inflow/pitt_peters_dynamic_inflow.m",
+    "analysis/berger13/run_berger13_transition_envelope.m",
+    "validation/read_full_aircraft_sync_csv.m",
+    "docs/FULL_AIRCRAFT_SYNC_DATA_CONTRACT.md",
+    "tests/check_pitt_peters_dynamic_inflow.m",
+    "tests/check_berger13_transition_envelope.m",
+    "tests/check_full_aircraft_sync_schema.m"
   ],
   "legacy_baseline": {
     "path": "model",
