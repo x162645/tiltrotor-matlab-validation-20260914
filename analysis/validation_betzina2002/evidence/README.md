@@ -1,5 +1,7 @@
 # Betzina 2002 forward-flight validation evidence
 
+> **Archive notice (2026-09-12):** The CSV files in this directory were generated on the frozen diagnostic branch/workflow identified below and are retained as inherited evidence. They are not a claim that the current branch has completed a fresh run. The current branch now contains the source scripts under `analysis/validation_betzina2002/`; rerun them before labeling the results current-HEAD evidence.
+
 ## Evidence status
 
 This directory is the frozen **preliminary low-speed forward-flight validation evidence** for the XV-15 isolated-rotor model on branch `diagnostic/betzina-80x120-forward-validation-20260907`.
