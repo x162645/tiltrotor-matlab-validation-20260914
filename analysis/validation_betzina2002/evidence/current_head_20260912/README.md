@@ -1,0 +1,7 @@
+# Current HEAD identity-gate run (2026-09-12)
+
+This directory contains the only Betzina-related run completed on the current branch in this work window: the validation-only two-cyclic adapter with lateral cyclic set to zero was compared with the existing Stage-2 forward rotor at three operating points.
+
+MATLAB: R2021a (`F:\matlab\R2021a\bin\matlab.exe`). Command entry point: `analysis/validation_betzina2002/run_betzina2002_two_cyclic_identity_gate.m`.
+
+Result: `pass=1`, all six physical states converged, and maximum absolute difference over CT, CQ, and flap harmonics was `2.6112966972666012e-17`. This is an interface identity check only; it is not a new external prediction. The full Betzina operating-state optimization was attempted but exceeded the available run window and produced no result files.
