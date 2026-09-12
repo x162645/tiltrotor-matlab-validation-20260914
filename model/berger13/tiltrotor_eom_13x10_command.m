@@ -39,7 +39,9 @@ Fg = mp.mass*P13.base.env.g*[-sin(theta); ...
 eBeta = [0;-1;0];
 Mreaction = -left.internalTorque*eBeta-right.internalTorque*eBeta;
 MtiltRateGyro = tilt_rate_gyro(x13,P13);
-Mtotal = Map+Mreaction+MtiltRateGyro;
+MInertiaRate = inertia_rate_times_omega(x13,P13,left.betaDot, ...
+    right.betaDot,mp);
+Mtotal = Map+Mreaction+MtiltRateGyro-MInertiaRate;
 Vdot = (Fap+Fg)/mp.mass-cross(omega,Vbody);
 omegaDot = mp.I\(Mtotal-cross(omega,mp.I*omega));
 eulerDot = euler_321_dot(phi,theta,omega);
@@ -52,6 +54,7 @@ out.Ftotal = Fap+Fg;
 out.MaeroProp = Map;
 out.MactuatorReaction = Mreaction;
 out.MnacelleRateGyro = MtiltRateGyro;
+out.MinertiaRate = MInertiaRate;
 out.MexternalHinge = zeros(3,1);
 out.Mtotal = Mtotal;
 out.massProperties = mp;
@@ -76,6 +79,27 @@ eDRight = [cos(x13(11));0;sin(x13(11))];
 % the opposite moment. rotDir is -1 left and +1 right.
 M = -((-1)*Jomega*x13(12)*eDLeft + ...
       (+1)*Jomega*x13(13)*eDRight);
+end
+
+function M = inertia_rate_times_omega(x13,P13,betaDotLeft,betaDotRight,mp)
+% dI/dt*omega for the moving point-mass reconstruction.  The finite
+% difference is deliberately tied to mass_properties_berger13 so a future
+% replacement of the moving-mass model changes both terms together.
+h = 1e-6;
+betaML = x13(10);
+betaMR = x13(11);
+mpL = mass_properties_berger13(betaML+h,betaMR,P13);
+mpLm = mass_properties_berger13(betaML-h,betaMR,P13);
+mpR = mass_properties_berger13(betaML,betaMR+h,P13);
+mpRm = mass_properties_berger13(betaML,betaMR-h,P13);
+dIdBetaL = (mpL.I-mpLm.I)/(2*h);
+dIdBetaR = (mpR.I-mpRm.I)/(2*h);
+M = (dIdBetaL*betaDotLeft+dIdBetaR*betaDotRight)*x13(4:6);
+if norm(mp.I-mass_properties_berger13(betaML,betaMR,P13).I,'fro') > ...
+        1e-10*max(1,norm(mp.I,'fro'))
+    error('tiltrotor_eom_13x10_command:InertiaContract', ...
+        'Mass-property derivative was evaluated against a different inertia.');
+end
 end
 
 function contextSide = side_context(context,name)

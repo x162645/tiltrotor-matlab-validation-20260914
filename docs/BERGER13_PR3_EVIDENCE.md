@@ -144,3 +144,16 @@ reconstruction, fixed residual invariance, action-reaction sign, no double
 count, freeze/lock distinction, symmetric degradation, mirror exchange, and
 PR1/PR2/torque-interface preservation. All changed MATLAB files produced zero
 `checkcode` findings.
+
+## 2026-09-12 variable-inertia closure addendum
+
+The 13-state torque and angle-command EOMs now include three rigid-body
+couplings that had previously been absent from the torque path: equal-and-
+opposite nacelle actuator reaction torque, rotor angular-momentum reaction from
+nacelle-rate motion, and the variable-inertia term `dI/dt*omega`. The latter is
+computed from the same moving point-mass reconstruction used for the actual CG
+and inertia, using a central derivative in each nacelle angle. Local nacelle
+inertia tensors, external hinge loads, and higher-order transmission effects
+remain unknown and are not inferred. `tests/check_berger13_variable_inertia.m`
+checks reaction-torque observability, nonzero variable-inertia coupling, and
+the Newton-Euler closure residual (all pass under MATLAB R2021a).

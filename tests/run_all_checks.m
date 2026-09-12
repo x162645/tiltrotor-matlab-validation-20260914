@@ -56,6 +56,10 @@ run_test('control-stability generated evidence', ...
     @test_control_stability_assessment);
 run_test('generic/XV-15 model identity separation', ...
     @test_model_identity_separation);
+run_test('berger13 variable-inertia closure', ...
+    @test_variable_inertia_closure);
+run_test('preliminary handling-quality screen', ...
+    @test_handling_quality_screen);
 run_test('D02 longitudinal-heave dynamic prototype', ...
     @test_d02_longitudinal_heave);
 
@@ -321,10 +325,22 @@ fprintf('All passed: %d\n',summary.allPassed);
             'Control-stability assessment checks have failed items.');
     end
 
+    function test_handling_quality_screen()
+        hqReport = check_handling_quality_screen();
+        assert(hqReport.allPassed, ...
+            'Preliminary handling-quality screen checks failed.');
+    end
+
     function test_model_identity_separation()
         identityReport = check_model_identity_separation();
         assert(identityReport.allPassed, ...
             'Generic core and XV-15 validation adapter identities are mixed.');
+    end
+
+    function test_variable_inertia_closure()
+        variableInertiaReport = check_berger13_variable_inertia();
+        assert(variableInertiaReport.allPassed, ...
+            'Moving-nacelle reaction or dI/dt*omega closure failed.');
     end
 
     function test_d02_longitudinal_heave()

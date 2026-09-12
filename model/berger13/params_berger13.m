@@ -73,7 +73,7 @@ P13.movingComponents.localInertiaCorrectionImplemented = false;
 
 P13.mechanics.actuatorReactionTorqueImplemented = true;
 P13.mechanics.nacelleRateGyroImplemented = true;
-P13.mechanics.iDotOmegaImplemented = false;
+P13.mechanics.iDotOmegaImplemented = true;
 P13.mechanics.movingMassAccelerationImplemented = false;
 P13.mechanics.transmissionHigherOrderImplemented = false;
 P13.mechanics.externalHingeTorqueImplemented = false;
