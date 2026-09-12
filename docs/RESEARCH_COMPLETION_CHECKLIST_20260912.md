@@ -4,7 +4,7 @@
 
 |阶段|内容|状态|证据或断点|
 |---|---|---|---|
-|S0|仓库、分支、HEAD、规则和历史成果冻结|DONE|当前分支 `research/dynamic-fidelity-benchmark-20260910`，HEAD `afeec889`|
+|S0|仓库、分支、HEAD、规则和历史成果冻结|DONE|当前分支 `research/dynamic-fidelity-benchmark-20260910`，基线 HEAD `afeec889`；当前证据包提交 `6d1c653`|
 |S1|状态、控制量、坐标、单位和左右旋翼符号合同|DONE|`docs/CONTROL_CONVENTIONS.md`，`tests/check_control_architecture.m`|
 |S2|公开 XV-15 参数来源、单位换算和角色台账|PARTIAL|公开 NASA 几何、旋翼和试验表已接入；专用受载桨距、C81 参考弦偏置和部分质量属性仍 UNKNOWN|
 |S3|旋翼 BEMT、挥舞、诱导、短舱角和力矩接口|DONE_WITH_LIMITS|`model/rotor_model_bemt.m`、`model/berger13/rotor_model_bemt_berger13.m`；低总距负推力分支尚未建立|
@@ -18,7 +18,7 @@
 |S11|NASA WADC 跨设施冻结比较和强基线|DONE_WITH_CAVEAT|15/15 点收敛；冻结 M1 相对 M0 改善，但绝对 CT/CP 仍偏大|
 |S12|同步全机过渡时历、整机动态误差和实机飞行品质|BLOCKED|缺少匹配的实际总距/执行器、旋翼载荷、质量 CG 惯量、转速和统一时间基准|
 |S13|中文完整候选稿、图表、复算入口和限制|DONE_FOR_SUPPORTED_SCOPE|可支持“低成本方法+部件外部检查+条件性整机分析”；不能写成全机动态精度或国内领先|
-|S14|可复核发布包|IN_PROGRESS|本文件、外部 CSV、MATLAB 日志和论文草稿已生成；需完成 Git 提交和远端仓库创建|
+|S14|可复核发布包|IN_PROGRESS|本文件、外部 CSV、MATLAB 日志和论文草稿已生成；证据包已提交（`6d1c653`），仍需完成远端仓库创建与推送|
 
 ## 本轮实际执行
 
@@ -57,3 +57,4 @@
 |限定通用任务内的国内领先证据|25%–40%|取决于同任务强对手、独立测试集和优势是否跨工况稳定|
 
 目标修改后的主交付是第一、第二项；第三项只在外部记录达到高同构性后启动，第四项只能在比较完成后决定。
+
