@@ -1,0 +1,95 @@
+{
+  "not_a_scientific_rerun": true,
+  "missing": [
+    {
+      "id": "D14_DATA",
+      "stage": "D14",
+      "items": [
+        "FIG434_POWER_INPUT.csv",
+        "FIG434_FLIGHT_AZ.csv",
+        "DIGITIZATION_PROVENANCE.json"
+      ],
+      "status": "ORIGINAL_OUTPUT_BYTES_NOT_RECOVERED",
+      "available_basis": [
+        "D14/repository_snapshot/docs/research/dynamic_fidelity/evidence_d14/code/extract_fig434.py",
+        "sources/NASA_TM_89428.pdf"
+      ],
+      "recovery": "Find original authorized workspace/artifact first; otherwise execute unchanged extraction into a new recovery directory, label new timestamp, preserve original pixel guides."
+    },
+    {
+      "id": "D14_RESULTS",
+      "stage": "D14",
+      "items": [
+        "FROZEN_PREFIX_PARAMETERS.json",
+        "PREDICTION_METRICS.csv",
+        "ORIGINAL_TARGET_PREDICTIONS.csv",
+        "EXECUTION_MANIFEST.json"
+      ],
+      "status": "ORIGINAL_OUTPUT_BYTES_NOT_RECOVERED",
+      "available_basis": [
+        "D14/repository_snapshot/docs/research/dynamic_fidelity/evidence_d14/code/run_d14.py"
+      ],
+      "recovery": "Only a targeted named recovery run if needed for continued evidence; do not replace historical reported runs or make up output arrays."
+    },
+    {
+      "id": "D14_NATIVE",
+      "stage": "D14",
+      "items": [
+        "native MATLAB prediction implementation",
+        "D14 native MAT/CSV/JSON",
+        "D14 CI scientific artifact"
+      ],
+      "status": "NO_EVIDENCE_OF_EXECUTION",
+      "available_basis": [
+        "D14/repository_snapshot/docs/research/dynamic_fidelity/evidence_d14/code/readback_native.py"
+      ],
+      "recovery": "Prepared reader is not execution. Implement and run only relevant new MATLAB checks when a legitimate MATLAB environment exists; report actual environment."
+    },
+    {
+      "id": "D15_SOURCE",
+      "stage": "D15",
+      "items": [
+        "original predict_known_command implementation",
+        "original finite-horizon and interval comparison code",
+        "original type-guard and pre-guard snapshot"
+      ],
+      "status": "SOURCE_NOT_RECOVERED",
+      "available_basis": [
+        "D15/D15_REPORT_RECOVERED_TEXT.md"
+      ],
+      "recovery": "Find originals first; otherwise mark new implementation from published equations/contract, not source restoration. No promise of byte-identical recovery."
+    },
+    {
+      "id": "D15_RESULTS",
+      "stage": "D15",
+      "items": [
+        "ALL_FORECASTS.csv",
+        "full input/initial/target-box interval details",
+        "run_01/EXECUTION_MANIFEST.json",
+        "targeted tests",
+        "cost repeats"
+      ],
+      "status": "ORIGINAL_OUTPUT_BYTES_NOT_RECOVERED",
+      "available_basis": [
+        "D15/D15_REPORT_RECOVERED_TEXT.md"
+      ],
+      "recovery": "Report values remain historical report claims until named targeted reimplementation/reproduction supplies auditable evidence. Do not fit to old report values."
+    },
+    {
+      "id": "REMOTE_FULL_ARCHIVE",
+      "stage": "D11-D15",
+      "items": [
+        "D11 complete original local Python package and preserved histories",
+        "D13 Python detailed supplement not yet fully mirrored",
+        "D14 raw results",
+        "D15 code/results"
+      ],
+      "status": "INCOMPLETE_ON_REMOTE",
+      "available_basis": [
+        "01_STATE_AND_SCOPE.md",
+        "provenance/REMOTE_STATUS_AT_PACKAGING.json"
+      ],
+      "recovery": "Prepare explicit file diff against live HEAD; preserve existing files; publish normal authorized commits. Do not bypass platform restrictions."
+    }
+  ]
+}

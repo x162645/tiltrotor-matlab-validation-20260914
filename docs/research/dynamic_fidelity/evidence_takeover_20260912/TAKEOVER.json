@@ -1,0 +1,40 @@
+{
+  "utc": "2026-09-12T06:28:15.012560+00:00",
+  "head": "1cf2419e36a05d49e24b0eeb317d6d6e18e4a298",
+  "branch": "research/dynamic-fidelity-benchmark-20260910",
+  "status_after_clean_clone": "",
+  "remote": "https://github.com/x162645/tiltrotor-matlab.git",
+  "fetch_divergence": "0 left / 0 right",
+  "original_project_directory_exists": false,
+  "matlab_executable": "F:/matlab/R2021a/bin/matlab.exe",
+  "old_backup_not_modified": "E:/tiltrotor_backup_20260619_104922 (contains untracked work)",
+  "missing_original_search": [
+    "E:/tiltrotor-work-output",
+    "E:/tiltrotor_backup_20260619_104922",
+    "E:/tiltrotor_checkpoint_20260619_082236",
+    "E:/tavernchara filenames"
+  ],
+  "missing_original_search_result": "No D14/D15 original run source/results found in these scoped locations; no claim about other locations.",
+  "transport_failures": "Initial git connection resets and connector transport failure. Normal HTTP/1.1 git retry succeeded; no permission/security rejection or credential workaround.",
+  "clone_checkout_repair": "Fresh agent-owned clone failed on Windows long path, before any edits. Set repo-local core.longpaths=true and restored fresh clone from HEAD; clean status verified. User backup untouched.",
+  "AGENTS": "Current root text compared equal to handoff snapshot after line-ending normalization; current CODEX_TASK and RESEARCH_ENTRY read. No relevant child AGENTS.",
+  "execution_identity": {
+    "D11": "original Python",
+    "D12": "original Python and designated native MATLAB artifacts",
+    "D13": "original designated native MATLAB and separate Python supplement",
+    "D14": "original four Python files retained; new recovery pending, old outputs not found",
+    "D15": "report text transcribed, source/results not found; new implementation pending"
+  },
+  "archives": [
+    {
+      "name": "D06_D10_完整交接包_20260911.zip",
+      "bytes": 44406426,
+      "sha256": "7b83ec9f7c1d7132272fc08c940c887209658c890f5aadc46bef26364f0cf1ae"
+    },
+    {
+      "name": "D11_D15_HANDOFF_20260912.zip",
+      "bytes": 32183267,
+      "sha256": "93f2cb5870a68bd755d1c2f156f21a0f5f7a1a082ba54a96f68b6bfa6766e716"
+    }
+  ]
+}

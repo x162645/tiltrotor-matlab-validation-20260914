@@ -1,0 +1,35 @@
+{
+  "status": "PACKAGE_INTEGRITY_PASSED",
+  "indexed_files_verified": 390,
+  "indexed_bytes": 54528088,
+  "original_stage_indices": [
+    {
+      "stage": "D11",
+      "original_index_files_verified": 203
+    },
+    {
+      "stage": "D12",
+      "original_index_files_verified": 52
+    },
+    {
+      "stage": "D13",
+      "original_index_files_verified": 83
+    }
+  ],
+  "D14_git_objects_verified": 6,
+  "zip_archives_checked_including_nested_when_requested": 7,
+  "zip_members_CRC_checked": 80,
+  "deep_zip_check": false,
+  "old_ledger_contiguous_bytes_preserved": true,
+  "scientific_models_executed": 0,
+  "scientific_evidence_complete": false,
+  "missing_evidence_register_ids": [
+    "D14_DATA",
+    "D14_RESULTS",
+    "D14_NATIVE",
+    "D15_SOURCE",
+    "D15_RESULTS",
+    "REMOTE_FULL_ARCHIVE"
+  ],
+  "warning": "Integrity success does not restore missing D14/D15 originals, establish scientific validity or complete GitHub delivery."
+}
