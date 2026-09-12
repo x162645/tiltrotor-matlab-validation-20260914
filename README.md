@@ -1,6 +1,9 @@
 # 倾转旋翼机 MATLAB 正向机理模型 v2
 
-本项目是一套纯 MATLAB、部件级、九状态六自由度倾转旋翼机正向机理模型。
+本仓库包含两条明确分开的 MATLAB 路径：`model/` 是早期九状态、七输入兼容基线；
+`model/berger13/` 是当前研究主线的十三状态、十输入整机接口。根目录
+`MANIFEST.json` 将两条路径、状态维数和入口分别列出，论文结果使用 Berger13 路径，
+不能根据旧基线的九状态描述来复现当前研究结果。
 
 建模主线参考：
 
@@ -62,7 +65,7 @@ uCtrl = [
 
 更详细的控制约定见 `docs/CONTROL_CONVENTIONS.md`。
 
-## 快速运行
+## 快速运行（旧九状态基线）
 
 在 MATLAB 中进入本项目根目录：
 
@@ -127,11 +130,15 @@ tiltrotor_forward_model_v2/
 results = run_berger13_complete_research(outputDir, true);
 ```
 
+`true` 会强制重建全部缓存，耗时可能明显增加；复核论文已有结果时可使用
+`false`，在输出目录存在完整缓存时只读回并重画结果。逐项命令、预期文件和指标见
+`docs/REPRODUCE_PAPER_RESULTS_20260912.md`。
+
 该接口是公开资料约束下的研究模型，短舱惯量、执行器参数和部分高阶耦合仍有明确占位标记。NASA/XV-15 外部比较入口为 `analysis/run_xv15_v1_baseline_correlation.m` 和 `analysis/run_xv15_v1_run14_external_validation.m`。外部验证结果、失败点和可发表主张边界见 `docs/RESEARCH_COMPLETION_CHECKLIST_20260912.md` 与 `docs/PAPER_CANDIDATE_FULL_SCOPE_20260912.md`。
 
 Betzina 2002 低速前飞单旋翼外部检查的脚本和数据位于 `analysis/validation_betzina2002/`；当前 HEAD 已实测身份闸门，但完整双周期运行状态优化仍需单独运行。OARF、WADC、Betzina 的对象、数据角色和允许声明见 `docs/EXTERNAL_VALIDATION_MATRIX_20260912.md`。
 
-本程序包已进行静态组织和方程一致性检查，但生成环境没有 MATLAB/Octave，首次在你的电脑运行时必须先执行：
+本程序包已进行静态组织和方程一致性检查；在一台新机器上首次运行时，先执行：
 
 ```matlab
 summary = run_all_checks;

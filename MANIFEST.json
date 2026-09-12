@@ -1,10 +1,31 @@
 {
   "project": "tiltrotor_forward_model_v2",
+  "manifest_version": 2,
   "language": "MATLAB",
-  "state_dimension": 9,
-  "control_dimension": 7,
+  "primary_research_path": "model/berger13",
+  "state_dimension": 13,
+  "control_dimension": 10,
   "nacelle_angle_definition": "0 deg helicopter, 90 deg airplane",
-  "files": [
+  "primary_research_files": [
+    "model/berger13/params_berger13.m",
+    "model/berger13/mass_properties_berger13.m",
+    "model/berger13/rotor_model_bemt_berger13.m",
+    "model/berger13/wing_model_berger13_independent.m",
+    "model/berger13/total_forces_moments_13x10.m",
+    "model/berger13/tiltrotor_eom_13x10.m",
+    "model/berger13/tiltrotor_eom_13x10_command.m",
+    "analysis/berger13/run_berger13_complete_research.m",
+    "analysis/berger13/trim_berger13_symmetric.m",
+    "analysis/berger13/linearize_13x10_numeric.m",
+    "analysis/control_stability/run_preliminary_handling_quality_screen.m",
+    "tests/check_berger13_variable_inertia.m"
+  ],
+  "legacy_baseline": {
+    "path": "model",
+    "state_dimension": 9,
+    "control_dimension": 7,
+    "role": "legacy-compatible low-order baseline; not the primary 13-state research path",
+    "files": [
     "README.md",
     "analysis/linearize_numeric.m",
     "analysis/stability_report.m",
@@ -28,6 +49,12 @@
     "run_demo.m",
     "startup.m",
     "tests/check_article_trends.m",
-    "tests/run_all_checks.m"
-  ]
+      "tests/run_all_checks.m"
+    ]
+  },
+  "reproducibility": {
+    "entrypoint": "docs/REPRODUCE_PAPER_RESULTS_20260912.md",
+    "matlab_release": "R2021a",
+    "source_identity": "TILTROTOR_GENERIC_CORE with separate XV15_VALIDATION_ADAPTER"
+  }
 }
