@@ -18,6 +18,7 @@ def main():
     b1 = read_rows("CR166536_DIGITIZED_TABLES_BATCH1.csv")
     b2 = read_rows("CR166536_DIGITIZED_TABLES_BATCH2.csv")
     b3 = read_rows("CR166536_DIGITIZED_TABLES_BATCH3_SIDE_SLIP.csv")
+    b4 = read_rows("CR166536_DIGITIZED_TABLES_BATCH4_WING_T4I.csv")
     c1, c2 = Counter(r["table_id"] for r in b1), Counter(r["table_id"] for r in b2)
     expected1 = {
         "TABLE_023": 12, "TABLE_1_II_ENDURANCE_SUPP": 27,
@@ -41,7 +42,10 @@ def main():
     assert len(b3) == 73
     assert Counter(r["table_id"] for r in b3) == {"TABLE_3_II": 19, "TABLE_3_IV": 19, "TABLE_3_VI": 35}
     assert {r["source_pdf_page"] for r in b3} == {"378", "379"}
-    print(f"batch1={len(b1)} cells, batch2={len(b2)} cells, batch3={len(b3)} cells, checks=PASS")
+    assert len(b4) == 140
+    assert all(r["source_pdf_page"] in {"384", "385"} for r in b4)
+    assert sum(r["read_status"] == "NOT_DEFINED" for r in b4) == 44
+    print(f"batch1={len(b1)} cells, batch2={len(b2)} cells, batch3={len(b3)} cells, batch4={len(b4)} cells, checks=PASS")
 
 if __name__ == "__main__":
     main()
