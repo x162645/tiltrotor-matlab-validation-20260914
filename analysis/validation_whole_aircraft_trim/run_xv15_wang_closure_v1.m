@@ -3,7 +3,7 @@ function results = run_xv15_wang_closure_v1(outputRoot)
 % three longitudinal step diagnostics with explicit unit/angle contracts.
 if nargin<1 || isempty(outputRoot), outputRoot=fullfile(pwd,'results','xv15_wang_closure_v1'); end
 if ~exist(outputRoot,'dir'), mkdir(outputRoot); end
-[P,contract]=xv15_helicopter_trim_parameters_v1(); P.trim.display='off'; P.trim.maxIterations=60; P.trim.maxFunctionEvaluations=720;
+[P,contract]=xv15_helicopter_trim_parameters_v1(); P.trim.display='off'; P.trim.maxIterations=500; P.trim.maxFunctionEvaluations=6000;
 modelIdentity='M1_EVIDENCE_V1_PROPAGATION'; d2r=pi/180; knot2mps=0.514444; mps2knot=1/knot2mps;
 % Wang i_n is measured from airplane axis; repository betaM from helicopter axis.
 inDeg=[90 60 30 0]; betaDeg=90-inDeg; speedMps={ [0.1 10 20], [20 30 40], [30 40 50], [40 50 60] };
