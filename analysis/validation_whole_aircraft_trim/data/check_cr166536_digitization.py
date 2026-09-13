@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parent
 
 def read_rows(name):
     with (ROOT / name).open(encoding="utf-8-sig", newline="") as f:
-    return list(csv.DictReader(f))
+        return list(csv.DictReader(f))
 
 def main():
     b1 = read_rows("CR166536_DIGITIZED_TABLES_BATCH1.csv")
@@ -38,9 +38,9 @@ def main():
     for rows in (b1, b2):
         assert all(r["source_pdf_page"] and r["printed_page"] for r in rows)
         assert all(r["read_status"] for r in rows)
-    assert len(b3) == 42
-    assert Counter(r["table_id"] for r in b3) == {"TABLE_3_II": 10, "TABLE_3_IV": 10, "TABLE_3_VI": 22}
-    assert all(r["source_pdf_page"] == "378" for r in b3)
+    assert len(b3) == 73
+    assert Counter(r["table_id"] for r in b3) == {"TABLE_3_II": 19, "TABLE_3_IV": 19, "TABLE_3_VI": 35}
+    assert {r["source_pdf_page"] for r in b3} == {"378", "379"}
     print(f"batch1={len(b1)} cells, batch2={len(b2)} cells, batch3={len(b3)} cells, checks=PASS")
 
 if __name__ == "__main__":
