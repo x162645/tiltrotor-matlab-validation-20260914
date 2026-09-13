@@ -1,0 +1,125 @@
+{
+  "source_title": "NASA CR-166536, A Mathematical Model for Real Time Flight Simulation of a Generic Tilt-Rotor Aircraft",
+  "source_url": "https://rotorcraft.arc.nasa.gov/Publications/files/CR-166536_882.pdf",
+  "local_pdf": "Ferguson_1988_CR-166536_XV15_generic_model.pdf",
+  "source_pdf_sha256": "a2013a314af5beb0c5e9bc5bbeb26f99be9a8aa63f2ebe07deaaf11d0d44d67d",
+  "pdf_page_indexing": "one-based page number, printed page tracked separately",
+  "data_role": "Report model lookup tables; not raw independent experimental samples.",
+  "transcription_method": "Manual visual transcription from original scanned pages, followed by page-wise and targeted source-cell checks.",
+  "csv_sha256": "916b7c771917e74f77525d07f73a6c535a7185318c10dce39ada15e20b586dff",
+  "tables": [
+    {
+      "table_name": "Table 5-I",
+      "pdf_pages": [
+        406,
+        407,
+        408,
+        409
+      ],
+      "printed_pages": [
+        "B-56",
+        "B-57",
+        "B-58",
+        "B-59"
+      ],
+      "records": 392,
+      "status_counts": {
+        "CONFIRMED_VISUAL": 392
+      },
+      "quantities": [
+        "C_LH"
+      ]
+    },
+    {
+      "table_name": "Table 5-II",
+      "pdf_pages": [
+        410,
+        411
+      ],
+      "printed_pages": [
+        "B-60",
+        "B-61"
+      ],
+      "records": 124,
+      "status_counts": {
+        "REFERENCE_TABLE_5_I": 31,
+        "CONFIRMED_VISUAL": 73,
+        "NOT_DEFINED": 20
+      },
+      "quantities": [
+        "C_LH"
+      ]
+    },
+    {
+      "table_name": "Table 5-III",
+      "pdf_pages": [
+        412,
+        413
+      ],
+      "printed_pages": [
+        "B-62",
+        "B-63"
+      ],
+      "records": 196,
+      "status_counts": {
+        "CONFIRMED_VISUAL": 70,
+        "NOT_DEFINED": 126
+      },
+      "quantities": [
+        "C_DH"
+      ]
+    },
+    {
+      "table_name": "Table 5-IV",
+      "pdf_pages": [
+        414
+      ],
+      "printed_pages": [
+        "B-64"
+      ],
+      "records": 6,
+      "status_counts": {
+        "CONFIRMED_VISUAL": 6
+      },
+      "quantities": [
+        "X_Ke_or_X_Kr"
+      ]
+    }
+  ],
+  "source_rules": [
+    "Table 5-I low Mach is the interval 0 to 0.2, not a collection of separate Mach samples.",
+    "Table 5-I printed columns are elevator 0,-10,-15,-20,+10,+15,+20 deg; CSV carries elevator angle explicitly.",
+    "Table 5-I has consecutive printed alpha knots -12 and +8 deg; no zero-angle or other intervening numeric records have been invented.",
+    "Table 5-II low Mach column directs the reader to Table 5-I for elevator=0 deg and alpha=-180..180 deg. Reference records retain empty values, not interpolated numbers.",
+    "Not Defined merged source regions are expanded only into explicit missing-status cells on the printed alpha/Mach grid; no zero filling or extrapolation.",
+    "Table 5-IV has no alpha or elevator axis and defines a correction shared by elevator and rudder.",
+    "No SI conversion is needed for the dimensionless coefficients; alpha/elevator axes retain degrees.",
+    "Interpolation policy and equations are outside digitization scope; source-referenced or interpolated values must not be relabelled as measurements."
+  ],
+  "source_anomalies_preserved": [
+    {
+      "cell": "Table 5-I alpha=-130 deg, elevator=+20 deg",
+      "value": "1.54",
+      "paired_cell": "alpha=+130 deg, elevator=-20 deg",
+      "paired_value": "-1.45",
+      "action": "Both printed values retained; no imposed odd symmetry."
+    },
+    {
+      "cell": "Table 5-III alpha=-8 deg, Mach=0.6",
+      "value": "0.045",
+      "paired_cell": "alpha=+8 deg, Mach=0.6",
+      "paired_value": "0.065",
+      "action": "Both printed values retained; no imposed even symmetry."
+    }
+  ],
+  "checks": {
+    "source_grid_records": 718,
+    "status_counts": {
+      "CONFIRMED_VISUAL": 541,
+      "REFERENCE_TABLE_5_I": 31,
+      "NOT_DEFINED": 146
+    },
+    "duplicate_axis_keys": 0,
+    "filled_missing_values": 0
+  }
+}

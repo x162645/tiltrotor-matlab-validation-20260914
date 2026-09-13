@@ -1,0 +1,719 @@
+table_name,pdf_page,printed_page,alpha_deg,elevator_deg,mach_label,quantity,value,status,reference,notes,unit,data_role
+Table 5-I,406,B-56,-180,0,0-0.2,C_LH,0,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-180,-10,0-0.2,C_LH,-.40,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-180,-15,0-0.2,C_LH,-.60,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-180,-20,0-0.2,C_LH,-.80,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-180,10,0-0.2,C_LH,.40,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-180,15,0-0.2,C_LH,.60,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-180,20,0-0.2,C_LH,.80,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-170,0,0-0.2,C_LH,.70,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-170,-10,0-0.2,C_LH,.30,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-170,-15,0-0.2,C_LH,.10,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-170,-20,0-0.2,C_LH,-.10,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-170,10,0-0.2,C_LH,1.10,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-170,15,0-0.2,C_LH,1.30,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-170,20,0-0.2,C_LH,1.50,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-160,0,0-0.2,C_LH,.60,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-160,-10,0-0.2,C_LH,.28,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-160,-15,0-0.2,C_LH,.08,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-160,-20,0-0.2,C_LH,-.10,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-160,10,0-0.2,C_LH,.95,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-160,15,0-0.2,C_LH,1.13,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-160,20,0-0.2,C_LH,1.30,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-150,0,0-0.2,C_LH,.84,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-150,-10,0-0.2,C_LH,.39,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-150,-15,0-0.2,C_LH,.16,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-150,-20,0-0.2,C_LH,-.04,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-150,10,0-0.2,C_LH,1.20,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-150,15,0-0.2,C_LH,1.35,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-150,20,0-0.2,C_LH,1.45,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-140,0,0-0.2,C_LH,.98,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-140,-10,0-0.2,C_LH,.48,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-140,-15,0-0.2,C_LH,.20,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-140,-20,0-0.2,C_LH,0,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-140,10,0-0.2,C_LH,1.38,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-140,15,0-0.2,C_LH,1.49,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-140,20,0-0.2,C_LH,1.60,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-130,0,0-0.2,C_LH,.99,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-130,-10,0-0.2,C_LH,.50,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-130,-15,0-0.2,C_LH,.22,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-130,-20,0-0.2,C_LH,.03,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-130,10,0-0.2,C_LH,1.36,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-130,15,0-0.2,C_LH,1.43,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-130,20,0-0.2,C_LH,1.54,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-120,0,0-0.2,C_LH,.86,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-120,-10,0-0.2,C_LH,.46,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-120,-15,0-0.2,C_LH,.20,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-120,-20,0-0.2,C_LH,.04,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-120,10,0-0.2,C_LH,1.15,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-120,15,0-0.2,C_LH,1.23,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,406,B-56,-120,20,0-0.2,C_LH,1.30,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-110,0,0-0.2,C_LH,.66,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-110,-10,0-0.2,C_LH,.38,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-110,-15,0-0.2,C_LH,.16,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-110,-20,0-0.2,C_LH,.04,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-110,10,0-0.2,C_LH,.90,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-110,15,0-0.2,C_LH,.96,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-110,20,0-0.2,C_LH,1.00,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-100,0,0-0.2,C_LH,.40,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-100,-10,0-0.2,C_LH,.24,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-100,-15,0-0.2,C_LH,.10,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-100,-20,0-0.2,C_LH,.04,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-100,10,0-0.2,C_LH,.50,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-100,15,0-0.2,C_LH,.56,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-100,20,0-0.2,C_LH,.60,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-90,0,0-0.2,C_LH,0,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-90,-10,0-0.2,C_LH,0,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-90,-15,0-0.2,C_LH,0,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-90,-20,0-0.2,C_LH,0,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-90,10,0-0.2,C_LH,0,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-90,15,0-0.2,C_LH,0,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-90,20,0-0.2,C_LH,0,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-80,0,0-0.2,C_LH,-.425,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-80,-10,0-0.2,C_LH,-.560,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-80,-15,0-0.2,C_LH,-.580,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-80,-20,0-0.2,C_LH,-.600,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-80,10,0-0.2,C_LH,-.360,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-80,15,0-0.2,C_LH,-.285,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-80,20,0-0.2,C_LH,-.220,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-70,0,0-0.2,C_LH,-.720,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-70,-10,0-0.2,C_LH,-.865,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-70,-15,0-0.2,C_LH,-.890,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-70,-20,0-0.2,C_LH,-.920,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-70,10,0-0.2,C_LH,-.600,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-70,15,0-0.2,C_LH,-.490,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-70,20,0-0.2,C_LH,-.380,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-60,0,0-0.2,C_LH,-.900,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-60,-10,0-0.2,C_LH,-1.060,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-60,-15,0-0.2,C_LH,-1.090,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-60,-20,0-0.2,C_LH,-1.120,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-60,10,0-0.2,C_LH,-.770,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-60,15,0-0.2,C_LH,-.640,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-60,20,0-0.2,C_LH,-.510,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-50,0,0-0.2,C_LH,-1.002,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-50,-10,0-0.2,C_LH,-1.175,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-50,-15,0-0.2,C_LH,-1.205,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-50,-20,0-0.2,C_LH,-1.240,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-50,10,0-0.2,C_LH,-.890,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-50,15,0-0.2,C_LH,-.745,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-50,20,0-0.2,C_LH,-.600,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-40,0,0-0.2,C_LH,-1.050,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-40,-10,0-0.2,C_LH,-1.240,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-40,-15,0-0.2,C_LH,-1.260,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-40,-20,0-0.2,C_LH,-1.300,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-40,10,0-0.2,C_LH,-.960,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-40,15,0-0.2,C_LH,-.800,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-40,20,0-0.2,C_LH,-.640,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-36,0,0-0.2,C_LH,-1.04,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-36,-10,0-0.2,C_LH,-1.24,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-36,-15,0-0.2,C_LH,-1.26,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-36,-20,0-0.2,C_LH,-1.3,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-36,10,0-0.2,C_LH,-.92,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-36,15,0-0.2,C_LH,-.775,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-36,20,0-0.2,C_LH,-.63,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-32,0,0-0.2,C_LH,-1.03,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-32,-10,0-0.2,C_LH,-1.23,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-32,-15,0-0.2,C_LH,-1.255,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-32,-20,0-0.2,C_LH,-1.29,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-32,10,0-0.2,C_LH,-.89,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-32,15,0-0.2,C_LH,-.735,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-32,20,0-0.2,C_LH,-.60,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-28,0,0-0.2,C_LH,-1.010,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-28,-10,0-0.2,C_LH,-1.210,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-28,-15,0-0.2,C_LH,-1.240,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-28,-20,0-0.2,C_LH,-1.280,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-28,10,0-0.2,C_LH,-.840,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-28,15,0-0.2,C_LH,-.680,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-28,20,0-0.2,C_LH,-.560,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-24,0,0-0.2,C_LH,-.980,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-24,-10,0-0.2,C_LH,-1.185,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-24,-15,0-0.2,C_LH,-1.220,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-24,-20,0-0.2,C_LH,-1.260,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-24,10,0-0.2,C_LH,-.780,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-24,15,0-0.2,C_LH,-.615,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-24,20,0-0.2,C_LH,-.500,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-20,0,0-0.2,C_LH,-.930,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-20,-10,0-0.2,C_LH,-1.160,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-20,-15,0-0.2,C_LH,-1.198,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-20,-20,0-0.2,C_LH,-1.235,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-20,10,0-0.2,C_LH,-.690,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-20,15,0-0.2,C_LH,-.500,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-20,20,0-0.2,C_LH,-.420,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-18.4,0,0-0.2,C_LH,-.920,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-18.4,-10,0-0.2,C_LH,-1.200,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-18.4,-15,0-0.2,C_LH,-1.210,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-18.4,-20,0-0.2,C_LH,-1.240,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-18.4,10,0-0.2,C_LH,-.660,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-18.4,15,0-0.2,C_LH,-.540,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-18.4,20,0-0.2,C_LH,-.480,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-17.5,0,0-0.2,C_LH,-.930,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-17.5,-10,0-0.2,C_LH,-1.260,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-17.5,-15,0-0.2,C_LH,-1.250,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-17.5,-20,0-0.2,C_LH,-1.250,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-17.5,10,0-0.2,C_LH,-.710,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-17.5,15,0-0.2,C_LH,-.565,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-17.5,20,0-0.2,C_LH,-.450,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-16.8,0,0-0.2,C_LH,-.990,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-16.8,-10,0-0.2,C_LH,-1.310,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-16.8,-15,0-0.2,C_LH,-1.290,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-16.8,-20,0-0.2,C_LH,-1.310,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-16.8,10,0-0.2,C_LH,-.740,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-16.8,15,0-0.2,C_LH,-.550,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-16.8,20,0-0.2,C_LH,-.420,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-16.0,0,0-0.2,C_LH,-1.12,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-16.0,-10,0-0.2,C_LH,-1.40,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-16.0,-15,0-0.2,C_LH,-1.330,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-16.0,-20,0-0.2,C_LH,-1.330,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-16.0,10,0-0.2,C_LH,-.710,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-16.0,15,0-0.2,C_LH,-.510,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-16.0,20,0-0.2,C_LH,-.380,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-15.6,0,0-0.2,C_LH,-1.10,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-15.6,-10,0-0.2,C_LH,-1.44,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-15.6,-15,0-0.2,C_LH,-1.380,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-15.6,-20,0-0.2,C_LH,-1.350,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-15.6,10,0-0.2,C_LH,-.700,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-15.6,15,0-0.2,C_LH,-.480,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-15.6,20,0-0.2,C_LH,-.350,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-14.2,0,0-0.2,C_LH,-1.0082,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-14.2,-10,0-0.2,C_LH,-1.40,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-14.2,-15,0-0.2,C_LH,-1.55,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-14.2,-20,0-0.2,C_LH,-1.450,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-14.2,10,0-0.2,C_LH,-.610,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-14.2,15,0-0.2,C_LH,-.400,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-14.2,20,0-0.2,C_LH,-.270,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-12.5,0,0-0.2,C_LH,-.8875,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-12.5,-10,0-0.2,C_LH,-1.31,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-12.5,-15,0-0.2,C_LH,-1.49,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-12.5,-20,0-0.2,C_LH,-1.60,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-12.5,10,0-0.2,C_LH,-.480,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-12.5,15,0-0.2,C_LH,-.280,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-12.5,20,0-0.2,C_LH,-.150,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-12,0,0-0.2,C_LH,-.852,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-12,-10,0-0.2,C_LH,-1.26025,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-12,-15,0-0.2,C_LH,-1.464375,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-12,-20,0-0.2,C_LH,-1.60318,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-12,10,0-0.2,C_LH,-.44375,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-12,15,0-0.2,C_LH,-.239625,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,407,B-57,-12,20,0-0.2,C_LH,-.10082,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,8,0,0-0.2,C_LH,.568,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,8,-10,0-0.2,C_LH,.15975,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,8,-15,0-0.2,C_LH,-.044375,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,8,-20,0-0.2,C_LH,-.18318,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,8,10,0-0.2,C_LH,.97625,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,8,15,0-0.2,C_LH,1.180375,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,8,20,0-0.2,C_LH,1.31918,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,12.0,0,0-0.2,C_LH,.852,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,12.0,-10,0-0.2,C_LH,.44375,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,12.0,-15,0-0.2,C_LH,.239625,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,12.0,-20,0-0.2,C_LH,.10082,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,12.0,10,0-0.2,C_LH,1.250,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,12.0,15,0-0.2,C_LH,1.420,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,12.0,20,0-0.2,C_LH,1.500,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,12.2,0,0-0.2,C_LH,.8662,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,12.2,-10,0-0.2,C_LH,.45795,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,12.2,-15,0-0.2,C_LH,.253825,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,12.2,-20,0-0.2,C_LH,.11502,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,12.2,10,0-0.2,C_LH,1.270,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,12.2,15,0-0.2,C_LH,1.430,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,12.2,20,0-0.2,C_LH,1.480,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,13.0,0,0-0.2,C_LH,.923,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,13.0,-10,0-0.2,C_LH,.51475,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,13.0,-15,0-0.2,C_LH,.310625,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,13.0,-20,0-0.2,C_LH,.17182,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,13.0,10,0-0.2,C_LH,1.30,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,13.0,15,0-0.2,C_LH,1.370,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,13.0,20,0-0.2,C_LH,1.450,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,15.0,0,0-0.2,C_LH,1.0,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,15.0,-10,0-0.2,C_LH,.650,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,15.0,-15,0-0.2,C_LH,.450,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,15.0,-20,0-0.2,C_LH,.290,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,15.0,10,0-0.2,C_LH,1.200,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,15.0,15,0-0.2,C_LH,1.270,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,15.0,20,0-0.2,C_LH,1.360,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,16.0,0,0-0.2,C_LH,.98,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,16.0,-10,0-0.2,C_LH,.690,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,16.0,-15,0-0.2,C_LH,.475,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,16.0,-20,0-0.2,C_LH,.320,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,16.0,10,0-0.2,C_LH,1.160,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,16.0,15,0-0.2,C_LH,1.240,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,16.0,20,0-0.2,C_LH,1.320,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,16.8,0,0-0.2,C_LH,.94,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,16.8,-10,0-0.2,C_LH,.700,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,16.8,-15,0-0.2,C_LH,.490,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,16.8,-20,0-0.2,C_LH,.340,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,16.8,10,0-0.2,C_LH,1.150,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,16.8,15,0-0.2,C_LH,1.200,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,16.8,20,0-0.2,C_LH,1.320,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,18.0,0,0-0.2,C_LH,.89,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,18.0,-10,0-0.2,C_LH,.680,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,18.0,-15,0-0.2,C_LH,.500,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,18.0,-20,0-0.2,C_LH,.370,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,18.0,10,0-0.2,C_LH,1.130,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,18.0,15,0-0.2,C_LH,1.220,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,18.0,20,0-0.2,C_LH,1.340,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,20,0,0-0.2,C_LH,.88,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,20,-10,0-0.2,C_LH,.600,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,20,-15,0-0.2,C_LH,.465,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,20,-20,0-0.2,C_LH,.380,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,20,10,0-0.2,C_LH,1.180,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,20,15,0-0.2,C_LH,1.280,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,20,20,0-0.2,C_LH,1.380,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,24,0,0-0.2,C_LH,.935,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,24,-10,0-0.2,C_LH,.660,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,24,-15,0-0.2,C_LH,.455,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,24,-20,0-0.2,C_LH,.330,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,24,10,0-0.2,C_LH,1.300,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,24,15,0-0.2,C_LH,1.380,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,24,20,0-0.2,C_LH,1.440,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,28,0,0-0.2,C_LH,1.00,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,28,-10,0-0.2,C_LH,.730,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,28,-15,0-0.2,C_LH,.500,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,28,-20,0-0.2,C_LH,.380,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,28,10,0-0.2,C_LH,1.370,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,28,15,0-0.2,C_LH,1.440,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,28,20,0-0.2,C_LH,1.500,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,32,0,0-0.2,C_LH,1.05,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,32,-10,0-0.2,C_LH,.780,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,32,-15,0-0.2,C_LH,.540,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,32,-20,0-0.2,C_LH,.400,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,32,10,0-0.2,C_LH,1.430,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,32,15,0-0.2,C_LH,1.490,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,32,20,0-0.2,C_LH,1.540,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,36,0,0-0.2,C_LH,1.08,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,36,-10,0-0.2,C_LH,.820,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,36,-15,0-0.2,C_LH,.560,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,36,-20,0-0.2,C_LH,.410,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,36,10,0-0.2,C_LH,1.470,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,36,15,0-0.2,C_LH,1.535,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,36,20,0-0.2,C_LH,1.570,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,40,0,0-0.2,C_LH,1.10,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,40,-10,0-0.2,C_LH,.840,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,40,-15,0-0.2,C_LH,.570,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,40,-20,0-0.2,C_LH,.410,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,40,10,0-0.2,C_LH,1.510,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,40,15,0-0.2,C_LH,1.560,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,40,20,0-0.2,C_LH,1.590,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,50,0,0-0.2,C_LH,1.09,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,50,-10,0-0.2,C_LH,.83,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,50,-15,0-0.2,C_LH,.56,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,50,-20,0-0.2,C_LH,.36,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,50,10,0-0.2,C_LH,1.50,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,50,15,0-0.2,C_LH,1.56,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,50,20,0-0.2,C_LH,1.59,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,60,0,0-0.2,C_LH,.88,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,60,-10,0-0.2,C_LH,.63,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,60,-15,0-0.2,C_LH,.45,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,60,-20,0-0.2,C_LH,.29,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,60,10,0-0.2,C_LH,1.15,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,60,15,0-0.2,C_LH,1.22,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,60,20,0-0.2,C_LH,1.26,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,70,0,0-0.2,C_LH,.62,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,70,-10,0-0.2,C_LH,.42,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,70,-15,0-0.2,C_LH,.30,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,70,-20,0-0.2,C_LH,.20,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,70,10,0-0.2,C_LH,.78,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,70,15,0-0.2,C_LH,.80,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,70,20,0-0.2,C_LH,.83,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,80,0,0-0.2,C_LH,.34,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,80,-10,0-0.2,C_LH,.21,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,80,-15,0-0.2,C_LH,.16,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,80,-20,0-0.2,C_LH,.10,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,80,10,0-0.2,C_LH,.40,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,80,15,0-0.2,C_LH,.41,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,80,20,0-0.2,C_LH,.42,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,90,0,0-0.2,C_LH,0,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,90,-10,0-0.2,C_LH,0,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,90,-15,0-0.2,C_LH,0,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,90,-20,0-0.2,C_LH,0,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,90,10,0-0.2,C_LH,0,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,90,15,0-0.2,C_LH,0,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,90,20,0-0.2,C_LH,0,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,100,0,0-0.2,C_LH,-.40,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,100,-10,0-0.2,C_LH,-.50,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,100,-15,0-0.2,C_LH,-.56,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,100,-20,0-0.2,C_LH,-.60,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,100,10,0-0.2,C_LH,-.24,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,100,15,0-0.2,C_LH,-.10,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,408,B-58,100,20,0-0.2,C_LH,-.04,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,110,0,0-0.2,C_LH,-.66,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,110,-10,0-0.2,C_LH,-.90,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,110,-15,0-0.2,C_LH,-.96,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,110,-20,0-0.2,C_LH,-1.00,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,110,10,0-0.2,C_LH,-.38,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,110,15,0-0.2,C_LH,-.16,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,110,20,0-0.2,C_LH,-.04,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,120,0,0-0.2,C_LH,-.86,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,120,-10,0-0.2,C_LH,-1.15,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,120,-15,0-0.2,C_LH,-1.23,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,120,-20,0-0.2,C_LH,-1.30,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,120,10,0-0.2,C_LH,-.46,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,120,15,0-0.2,C_LH,-.20,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,120,20,0-0.2,C_LH,-.04,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,130,0,0-0.2,C_LH,-.99,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,130,-10,0-0.2,C_LH,-1.36,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,130,-15,0-0.2,C_LH,-1.43,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,130,-20,0-0.2,C_LH,-1.45,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,130,10,0-0.2,C_LH,-.50,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,130,15,0-0.2,C_LH,-.22,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,130,20,0-0.2,C_LH,-.03,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,140,0,0-0.2,C_LH,-.98,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,140,-10,0-0.2,C_LH,-1.38,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,140,-15,0-0.2,C_LH,-1.49,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,140,-20,0-0.2,C_LH,-1.60,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,140,10,0-0.2,C_LH,-.48,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,140,15,0-0.2,C_LH,-.20,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,140,20,0-0.2,C_LH,0,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,150,0,0-0.2,C_LH,-.84,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,150,-10,0-0.2,C_LH,-1.20,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,150,-15,0-0.2,C_LH,-1.35,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,150,-20,0-0.2,C_LH,-1.45,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,150,10,0-0.2,C_LH,-.39,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,150,15,0-0.2,C_LH,-.16,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,150,20,0-0.2,C_LH,.04,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,160,0,0-0.2,C_LH,-.60,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,160,-10,0-0.2,C_LH,-.95,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,160,-15,0-0.2,C_LH,-1.13,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,160,-20,0-0.2,C_LH,-1.30,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,160,10,0-0.2,C_LH,-.28,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,160,15,0-0.2,C_LH,-.08,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,160,20,0-0.2,C_LH,.10,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,170,0,0-0.2,C_LH,-.70,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,170,-10,0-0.2,C_LH,-1.10,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,170,-15,0-0.2,C_LH,-1.30,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,170,-20,0-0.2,C_LH,-1.50,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,170,10,0-0.2,C_LH,-.30,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,170,15,0-0.2,C_LH,-.10,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,170,20,0-0.2,C_LH,.10,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,180,0,0-0.2,C_LH,0,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,180,-10,0-0.2,C_LH,-.40,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,180,-15,0-0.2,C_LH,-.60,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,180,-20,0-0.2,C_LH,-.80,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,180,10,0-0.2,C_LH,.40,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,180,15,0-0.2,C_LH,.60,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-I,409,B-59,180,20,0-0.2,C_LH,.80,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-40.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-40.0,0,0.4,C_LH,-1.1,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-40.0,0,0.5,C_LH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-40.0,0,0.6,C_LH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-36.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-36.0,0,0.4,C_LH,-1.09,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-36.0,0,0.5,C_LH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-36.0,0,0.6,C_LH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-32.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-32.0,0,0.4,C_LH,-1.04,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-32.0,0,0.5,C_LH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-32.0,0,0.6,C_LH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-28.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-28.0,0,0.4,C_LH,-1.0,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-28.0,0,0.5,C_LH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-28.0,0,0.6,C_LH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-24.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-24.0,0,0.4,C_LH,-.9,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-24.0,0,0.5,C_LH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-24.0,0,0.6,C_LH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-20.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-20.0,0,0.4,C_LH,-.93,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-20.0,0,0.5,C_LH,-.8,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-20.0,0,0.6,C_LH,-.79,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-18.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-18.0,0,0.4,C_LH,-.97,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-18.0,0,0.5,C_LH,-.85,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-18.0,0,0.6,C_LH,-.8,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-16.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-16.0,0,0.4,C_LH,-1.02,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-16.0,0,0.5,C_LH,-.91,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-16.0,0,0.6,C_LH,-.87,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-14.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-14.0,0,0.4,C_LH,-.98,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-14.0,0,0.5,C_LH,-.94,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-14.0,0,0.6,C_LH,-.9,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-12.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-12.0,0,0.4,C_LH,-.93,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-12.0,0,0.5,C_LH,-.88,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-12.0,0,0.6,C_LH,-.86,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-10.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-10.0,0,0.4,C_LH,-.775,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-10.0,0,0.5,C_LH,-.78,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-10.0,0,0.6,C_LH,-.75,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-8.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-8.0,0,0.4,C_LH,-.62,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-8.0,0,0.5,C_LH,-.656,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-8.0,0,0.6,C_LH,-.63,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-6.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-6.0,0,0.4,C_LH,-.465,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-6.0,0,0.5,C_LH,-.492,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-6.0,0,0.6,C_LH,-.528,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-4.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-4.0,0,0.4,C_LH,-.31,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-4.0,0,0.5,C_LH,-.328,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-4.0,0,0.6,C_LH,-.352,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-2.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-2.0,0,0.4,C_LH,-.155,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-2.0,0,0.5,C_LH,-.164,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,-2.0,0,0.6,C_LH,-.176,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,0.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,0.0,0,0.4,C_LH,0.0,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,0.0,0,0.5,C_LH,0.0,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,0.0,0,0.6,C_LH,0.0,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,2.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,2.0,0,0.4,C_LH,.155,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,2.0,0,0.5,C_LH,.164,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,2.0,0,0.6,C_LH,.176,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,4.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,4.0,0,0.4,C_LH,.31,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,4.0,0,0.5,C_LH,.328,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,4.0,0,0.6,C_LH,.352,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,6.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,6.0,0,0.4,C_LH,.465,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,6.0,0,0.5,C_LH,.492,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,6.0,0,0.6,C_LH,.528,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,8.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,8.0,0,0.4,C_LH,.62,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,8.0,0,0.5,C_LH,.656,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,8.0,0,0.6,C_LH,.63,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,10.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,10.0,0,0.4,C_LH,.775,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,10.0,0,0.5,C_LH,.78,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,10.0,0,0.6,C_LH,.75,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,12.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,12.0,0,0.4,C_LH,.93,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,12.0,0,0.5,C_LH,.88,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,410,B-60,12.0,0,0.6,C_LH,.86,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,14.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,14.0,0,0.4,C_LH,.98,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,14.0,0,0.5,C_LH,.94,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,14.0,0,0.6,C_LH,.9,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,16.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,16.0,0,0.4,C_LH,1.02,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,16.0,0,0.5,C_LH,.91,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,16.0,0,0.6,C_LH,.87,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,18.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,18.0,0,0.4,C_LH,.97,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,18.0,0,0.5,C_LH,.85,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,18.0,0,0.6,C_LH,.8,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,20.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,20.0,0,0.4,C_LH,.93,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,20.0,0,0.5,C_LH,.8,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,20.0,0,0.6,C_LH,.79,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,24.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,24.0,0,0.4,C_LH,.9,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,24.0,0,0.5,C_LH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,24.0,0,0.6,C_LH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,28.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,28.0,0,0.4,C_LH,1.0,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,28.0,0,0.5,C_LH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,28.0,0,0.6,C_LH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,32.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,32.0,0,0.4,C_LH,1.04,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,32.0,0,0.5,C_LH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,32.0,0,0.6,C_LH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,36.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,36.0,0,0.4,C_LH,1.09,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,36.0,0,0.5,C_LH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,36.0,0,0.6,C_LH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,40.0,0,0-0.2,C_LH,,REFERENCE_TABLE_5_I,Table 5-I,Use values for elevator=0 deg from alpha=-180 to 180 deg; no reference values duplicated.,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,40.0,0,0.4,C_LH,1.1,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,40.0,0,0.5,C_LH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-II,411,B-61,40.0,0,0.6,C_LH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-180,0,0-0.2,C_DH,.01,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-180,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-180,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-180,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-170,0,0-0.2,C_DH,.02,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-170,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-170,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-170,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-160,0,0-0.2,C_DH,.20,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-160,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-160,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-160,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-150,0,0-0.2,C_DH,.40,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-150,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-150,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-150,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-140,0,0-0.2,C_DH,.55,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-140,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-140,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-140,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-130,0,0-0.2,C_DH,.67,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-130,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-130,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-130,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-120,0,0-0.2,C_DH,.78,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-120,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-120,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-120,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-110,0,0-0.2,C_DH,.85,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-110,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-110,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-110,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-100,0,0-0.2,C_DH,.89,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-100,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-100,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-100,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-90,0,0-0.2,C_DH,.92,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-90,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-90,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-90,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-80,0,0-0.2,C_DH,.91,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-80,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-80,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-80,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-70,0,0-0.2,C_DH,.87,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-70,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-70,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-70,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-60,0,0-0.2,C_DH,.81,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-60,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-60,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-60,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-50,0,0-0.2,C_DH,.72,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-50,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-50,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-50,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-40,0,0-0.2,C_DH,.60,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-40,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-40,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-40,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-36,0,0-0.2,C_DH,.54,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-36,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-36,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-36,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-32,0,0-0.2,C_DH,.47,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-32,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-32,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-32,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-28,0,0-0.2,C_DH,.39,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-28,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-28,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-28,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-24,0,0-0.2,C_DH,.30,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-24,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-24,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-24,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-20,0,0-0.2,C_DH,.20,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-20,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-20,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-20,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-16,0,0-0.2,C_DH,.115,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-16,0,0.4,C_DH,.135,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-16,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-16,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-12,0,0-0.2,C_DH,.068,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-12,0,0.4,C_DH,.068,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-12,0,0.5,C_DH,.088,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-12,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-8,0,0-0.2,C_DH,.035,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-8,0,0.4,C_DH,.035,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-8,0,0.5,C_DH,.035,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-8,0,0.6,C_DH,.045,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-4,0,0-0.2,C_DH,.015,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-4,0,0.4,C_DH,.015,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-4,0,0.5,C_DH,.015,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,412,B-62,-4,0,0.6,C_DH,.015,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,0,0,0-0.2,C_DH,.00875,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,0,0,0.4,C_DH,.00875,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,0,0,0.5,C_DH,.00875,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,0,0,0.6,C_DH,.00875,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,4,0,0-0.2,C_DH,.015,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,4,0,0.4,C_DH,.015,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,4,0,0.5,C_DH,.015,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,4,0,0.6,C_DH,.015,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,8,0,0-0.2,C_DH,.035,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,8,0,0.4,C_DH,.035,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,8,0,0.5,C_DH,.045,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,8,0,0.6,C_DH,.065,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,12,0,0-0.2,C_DH,.068,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,12,0,0.4,C_DH,.075,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,12,0,0.5,C_DH,.105,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,12,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,16,0,0-0.2,C_DH,.115,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,16,0,0.4,C_DH,.145,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,16,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,16,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,20,0,0-0.2,C_DH,.20,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,20,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,20,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,20,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,24,0,0-0.2,C_DH,.34,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,24,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,24,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,24,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,28,0,0-0.2,C_DH,.48,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,28,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,28,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,28,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,32,0,0-0.2,C_DH,.61,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,32,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,32,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,32,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,36,0,0-0.2,C_DH,.72,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,36,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,36,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,36,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,40,0,0-0.2,C_DH,.80,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,40,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,40,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,40,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,50,0,0-0.2,C_DH,.93,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,50,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,50,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,50,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,60,0,0-0.2,C_DH,1.05,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,60,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,60,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,60,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,70,0,0-0.2,C_DH,1.14,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,70,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,70,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,70,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,80,0,0-0.2,C_DH,1.18,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,80,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,80,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,80,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,90,0,0-0.2,C_DH,1.20,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,90,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,90,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,90,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,100,0,0-0.2,C_DH,1.19,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,100,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,100,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,100,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,110,0,0-0.2,C_DH,1.14,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,110,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,110,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,110,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,120,0,0-0.2,C_DH,1.06,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,120,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,120,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,120,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,130,0,0-0.2,C_DH,.96,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,130,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,130,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,130,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,140,0,0-0.2,C_DH,.80,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,140,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,140,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,140,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,150,0,0-0.2,C_DH,.60,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,150,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,150,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,150,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,160,0,0-0.2,C_DH,.36,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,160,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,160,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,160,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,170,0,0-0.2,C_DH,.02,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,170,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,170,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,170,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,180,0,0-0.2,C_DH,.01,CONFIRMED_VISUAL,,,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,180,0,0.4,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,180,0,0.5,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-III,413,B-63,180,0,0.6,C_DH,,NOT_DEFINED,,Original merged Not Defined region; not zero.,dimensionless,report_model_lookup_table
+Table 5-IV,414,B-64,,,0.0,X_Ke_or_X_Kr,1.0,CONFIRMED_VISUAL,,Elevator/rudder effectiveness correction for Mach effects; dimensionless.,dimensionless,report_model_lookup_table
+Table 5-IV,414,B-64,,,0.2,X_Ke_or_X_Kr,1.0,CONFIRMED_VISUAL,,Elevator/rudder effectiveness correction for Mach effects; dimensionless.,dimensionless,report_model_lookup_table
+Table 5-IV,414,B-64,,,0.4,X_Ke_or_X_Kr,.965,CONFIRMED_VISUAL,,Elevator/rudder effectiveness correction for Mach effects; dimensionless.,dimensionless,report_model_lookup_table
+Table 5-IV,414,B-64,,,0.5,X_Ke_or_X_Kr,.95,CONFIRMED_VISUAL,,Elevator/rudder effectiveness correction for Mach effects; dimensionless.,dimensionless,report_model_lookup_table
+Table 5-IV,414,B-64,,,0.6,X_Ke_or_X_Kr,.93,CONFIRMED_VISUAL,,Elevator/rudder effectiveness correction for Mach effects; dimensionless.,dimensionless,report_model_lookup_table
+Table 5-IV,414,B-64,,,0.7,X_Ke_or_X_Kr,.90,CONFIRMED_VISUAL,,Elevator/rudder effectiveness correction for Mach effects; dimensionless.,dimensionless,report_model_lookup_table

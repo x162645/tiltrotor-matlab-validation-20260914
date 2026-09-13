@@ -1,0 +1,613 @@
+{
+  "source": {
+    "report": "NASA CR-166536 / TR-1195-2 (Rev. A)",
+    "title": "A Mathematical Model for Real Time Flight Simulation of a Generic Tilt-Rotor Aircraft",
+    "url": "https://rotorcraft.arc.nasa.gov/Publications/files/CR-166536_882.pdf",
+    "local_pdf": "C:\\Users\\86173\\Documents\\Codex\\2026-09-11\\yue\\outputs\\Ferguson_1988_CR-166536_XV15_generic_model.pdf",
+    "pdf_sha256": "a2013a314af5beb0c5e9bc5bbeb26f99be9a8aa63f2ebe07deaaf11d0d44d67d",
+    "source_pdf_page_numbering": "1-based physical PDF page",
+    "printed_pages": "B-70 through B-81"
+  },
+  "method": "Manual visual transcription from 180 dpi Poppler renders; all 12 source pages inspected individually. Alpha boundary comparators independently rechecked on 360 dpi crops and corrected to <= and >=; sideslip >50 remains strict.",
+  "value_unit": "dimensionless",
+  "data_role": "Published model lookup tables, not experimental validation observations",
+  "no_interpolation": true,
+  "no_missing_value_imputation": true,
+  "no_model_modifications": true,
+  "generated_with": "Python 3 standard csv/json; no model run",
+  "transcription_checks": {
+    "unique_cell_keys": true,
+    "all_eight_source_tables": true,
+    "expected_cell_counts": {
+      "6-I": 250,
+      "6-II": 124,
+      "6-III": 188,
+      "6-IV": 144,
+      "6-V": 144,
+      "6-VI": 144,
+      "6-VII": 144,
+      "6-VIII": 56
+    },
+    "no_nonnumeric_status_coerced_to_zero": true,
+    "symmetry_checks": [
+      {
+        "table": "6-I",
+        "paired_comparisons": 250,
+        "max_abs_difference": 0.0
+      },
+      {
+        "table": "6-II",
+        "paired_comparisons": 73,
+        "max_abs_difference": 0.0
+      },
+      {
+        "table": "6-III",
+        "paired_comparisons": 70,
+        "max_abs_difference": 0.0
+      }
+    ]
+  },
+  "cell_records": 1194,
+  "status_counts": {
+    "VISUAL_TRANSCRIPTION": 1025,
+    "EXPLICIT_TABLE_REFERENCE": 31,
+    "EXPLICIT_NOT_DEFINED": 138
+  },
+  "tables": [
+    {
+      "table_id": "6-I",
+      "source_pdf_pages": [
+        420,
+        421,
+        422
+      ],
+      "printed_pages": [
+        "B-70",
+        "B-71",
+        "B-72"
+      ],
+      "quantity": "C_YV",
+      "cell_records": 250,
+      "status_counts": {
+        "VISUAL_TRANSCRIPTION": 250
+      },
+      "row_axis": "beta_V",
+      "row_unit": "deg",
+      "row_keys": [
+        "-180",
+        "-170",
+        "-160",
+        "-150",
+        "-140",
+        "-130",
+        "-120",
+        "-110",
+        "-100",
+        "-90",
+        "-80",
+        "-70",
+        "-60",
+        "-50",
+        "-40",
+        "-32",
+        "-28",
+        "-26",
+        "-24",
+        "-22",
+        "-20",
+        "-18",
+        "-16",
+        "-12",
+        "-8",
+        "8",
+        "12",
+        "16",
+        "18",
+        "20",
+        "22",
+        "24",
+        "26",
+        "28",
+        "32",
+        "40",
+        "50",
+        "60",
+        "70",
+        "80",
+        "90",
+        "100",
+        "110",
+        "120",
+        "130",
+        "140",
+        "150",
+        "160",
+        "170",
+        "180"
+      ],
+      "col_axis": "delta_r",
+      "col_unit": "deg",
+      "col_keys": [
+        "0",
+        "15",
+        "20",
+        "-15",
+        "-20"
+      ],
+      "mach_keys": [
+        "0-0.2"
+      ],
+      "rudder_degrees": [],
+      "mast_degrees": [],
+      "flap_settings": []
+    },
+    {
+      "table_id": "6-II",
+      "source_pdf_pages": [
+        423,
+        424
+      ],
+      "printed_pages": [
+        "B-73",
+        "B-74"
+      ],
+      "quantity": "C_YV",
+      "cell_records": 124,
+      "status_counts": {
+        "EXPLICIT_TABLE_REFERENCE": 31,
+        "VISUAL_TRANSCRIPTION": 73,
+        "EXPLICIT_NOT_DEFINED": 20
+      },
+      "row_axis": "beta_V",
+      "row_unit": "deg",
+      "row_keys": [
+        "-40.0",
+        "-36.0",
+        "-32.0",
+        "-28.0",
+        "-24.0",
+        "-20.0",
+        "-18.0",
+        "-16.0",
+        "-14.0",
+        "-12.0",
+        "-10.0",
+        "-8.0",
+        "-6.0",
+        "-4.0",
+        "-2.0",
+        "0.0",
+        "2.0",
+        "4.0",
+        "6.0",
+        "8.0",
+        "10.0",
+        "12.0",
+        "14.0",
+        "16.0",
+        "18.0",
+        "20.0",
+        "24.0",
+        "28.0",
+        "32.0",
+        "36.0",
+        "40.0"
+      ],
+      "col_axis": "Mach",
+      "col_unit": "dimensionless",
+      "col_keys": [
+        "0-0.2",
+        "0.4",
+        "0.5",
+        "0.6"
+      ],
+      "mach_keys": [],
+      "rudder_degrees": [
+        "0"
+      ],
+      "mast_degrees": [],
+      "flap_settings": []
+    },
+    {
+      "table_id": "6-III",
+      "source_pdf_pages": [
+        425,
+        426
+      ],
+      "printed_pages": [
+        "B-75",
+        "B-76"
+      ],
+      "quantity": "C_DV",
+      "cell_records": 188,
+      "status_counts": {
+        "VISUAL_TRANSCRIPTION": 70,
+        "EXPLICIT_NOT_DEFINED": 118
+      },
+      "row_axis": "beta_V",
+      "row_unit": "deg",
+      "row_keys": [
+        "-180",
+        "-170",
+        "-160",
+        "-150",
+        "-140",
+        "-130",
+        "-120",
+        "-110",
+        "-100",
+        "-90",
+        "-80",
+        "-70",
+        "-60",
+        "-50",
+        "-40",
+        "-32",
+        "-28",
+        "-24",
+        "-20",
+        "-16",
+        "-12",
+        "-8",
+        "-4",
+        "0",
+        "4",
+        "8",
+        "12",
+        "16",
+        "20",
+        "24",
+        "28",
+        "32",
+        "40",
+        "50",
+        "60",
+        "70",
+        "80",
+        "90",
+        "100",
+        "110",
+        "120",
+        "130",
+        "140",
+        "150",
+        "160",
+        "170",
+        "180"
+      ],
+      "col_axis": "Mach",
+      "col_unit": "dimensionless",
+      "col_keys": [
+        "0-0.2",
+        "0.4",
+        "0.5",
+        "0.6"
+      ],
+      "mach_keys": [],
+      "rudder_degrees": [
+        "0"
+      ],
+      "mast_degrees": [],
+      "flap_settings": []
+    },
+    {
+      "table_id": "6-IV",
+      "source_pdf_pages": [
+        427
+      ],
+      "printed_pages": [
+        "B-77"
+      ],
+      "quantity": "1-dsigma/dbeta_F",
+      "cell_records": 144,
+      "status_counts": {
+        "VISUAL_TRANSCRIPTION": 144
+      },
+      "row_axis": "alpha_F",
+      "row_unit": "deg",
+      "row_keys": [
+        "<=-10.0",
+        "-3.0",
+        "0",
+        "7.0",
+        "13.0",
+        ">=28.0"
+      ],
+      "col_axis": "abs_beta_F",
+      "col_unit": "deg",
+      "col_keys": [
+        "0 & 4",
+        "8",
+        "12",
+        "16",
+        "20 - 50",
+        ">50"
+      ],
+      "mach_keys": [],
+      "rudder_degrees": [],
+      "mast_degrees": [
+        "0",
+        "30",
+        "60",
+        "90"
+      ],
+      "flap_settings": [
+        "0/0"
+      ]
+    },
+    {
+      "table_id": "6-V",
+      "source_pdf_pages": [
+        428
+      ],
+      "printed_pages": [
+        "B-78"
+      ],
+      "quantity": "1-dsigma/dbeta_F",
+      "cell_records": 144,
+      "status_counts": {
+        "VISUAL_TRANSCRIPTION": 144
+      },
+      "row_axis": "alpha_F",
+      "row_unit": "deg",
+      "row_keys": [
+        "<=-10.0",
+        "-3.0",
+        "0",
+        "7.0",
+        "13.0",
+        ">=28.0"
+      ],
+      "col_axis": "abs_beta_F",
+      "col_unit": "deg",
+      "col_keys": [
+        "0 & 4",
+        "8",
+        "12",
+        "16",
+        "20 - 50",
+        ">50"
+      ],
+      "mach_keys": [],
+      "rudder_degrees": [],
+      "mast_degrees": [
+        "0",
+        "30",
+        "60",
+        "90"
+      ],
+      "flap_settings": [
+        "20/12.5"
+      ]
+    },
+    {
+      "table_id": "6-VI",
+      "source_pdf_pages": [
+        429
+      ],
+      "printed_pages": [
+        "B-79"
+      ],
+      "quantity": "1-dsigma/dbeta_F",
+      "cell_records": 144,
+      "status_counts": {
+        "VISUAL_TRANSCRIPTION": 144
+      },
+      "row_axis": "alpha_F",
+      "row_unit": "deg",
+      "row_keys": [
+        "<=-10.0",
+        "-3.0",
+        "0",
+        "7.0",
+        "13.0",
+        ">=28.0"
+      ],
+      "col_axis": "abs_beta_F",
+      "col_unit": "deg",
+      "col_keys": [
+        "0 & 4",
+        "8",
+        "12",
+        "16",
+        "20 - 50",
+        ">50"
+      ],
+      "mach_keys": [],
+      "rudder_degrees": [],
+      "mast_degrees": [
+        "0",
+        "30",
+        "60",
+        "90"
+      ],
+      "flap_settings": [
+        "40/25"
+      ]
+    },
+    {
+      "table_id": "6-VII",
+      "source_pdf_pages": [
+        430
+      ],
+      "printed_pages": [
+        "B-80"
+      ],
+      "quantity": "1-dsigma/dbeta_F",
+      "cell_records": 144,
+      "status_counts": {
+        "VISUAL_TRANSCRIPTION": 144
+      },
+      "row_axis": "alpha_F",
+      "row_unit": "deg",
+      "row_keys": [
+        "<=-10.0",
+        "-3.0",
+        "0",
+        "7.0",
+        "13.0",
+        ">=28.0"
+      ],
+      "col_axis": "abs_beta_F",
+      "col_unit": "deg",
+      "col_keys": [
+        "0 & 4",
+        "8",
+        "12",
+        "16",
+        "20 - 50",
+        ">50"
+      ],
+      "mach_keys": [],
+      "rudder_degrees": [],
+      "mast_degrees": [
+        "0",
+        "30",
+        "60",
+        "90"
+      ],
+      "flap_settings": [
+        "75/47"
+      ]
+    },
+    {
+      "table_id": "6-VIII",
+      "source_pdf_pages": [
+        431
+      ],
+      "printed_pages": [
+        "B-81"
+      ],
+      "quantity": "K_betaR",
+      "cell_records": 56,
+      "status_counts": {
+        "VISUAL_TRANSCRIPTION": 56
+      },
+      "row_axis": "V_T",
+      "row_unit": "kt",
+      "row_keys": [
+        "0",
+        "20",
+        "40",
+        "60",
+        "80",
+        "100",
+        "120",
+        "350"
+      ],
+      "col_axis": "beta_F",
+      "col_unit": "deg",
+      "col_keys": [
+        "0",
+        "+/-5",
+        "+/-10",
+        "+/-15",
+        "+/-20",
+        "+/-25",
+        "+/-30"
+      ],
+      "mach_keys": [],
+      "rudder_degrees": [],
+      "mast_degrees": [],
+      "flap_settings": []
+    }
+  ],
+  "source_label_semantics": {
+    "0-0.2": "Source Mach-number band; not a single Mach sample.",
+    "0 & 4": "Source column label gives the same entry for absolute sideslip 0 and 4 deg. Not expanded or counted twice.",
+    "20 - 50": "Source sideslip-range column preserved literally; not expanded to synthetic samples.",
+    ">50": "Strict source high-sideslip label; no invented upper bound.",
+    "<=-10.0": "Inclusive source low-alpha boundary, <=-10.0 deg (slanted-equality symbol confirmed at 360 dpi by independent reviewer).",
+    ">=28.0": "Inclusive source high-alpha boundary, >=28.0 deg (slanted-equality symbol confirmed at 360 dpi by independent reviewer).",
+    "+/-N": "Source symmetric positive/negative sideslip column; not expanded or counted twice.",
+    "blank fixed configuration fields": "Not specified in the respective table header; not presumed zero."
+  },
+  "source_anomalies": [
+    {
+      "table_id": "6-V",
+      "source_pdf_page": 428,
+      "printed_page": "B-78",
+      "quantity": "1-dsigma/dbeta_F",
+      "mach_key": "",
+      "rudder_deg": "",
+      "mast_deg": "0",
+      "flap_setting": "20/12.5",
+      "row_axis": "alpha_F",
+      "row_key": ">=28.0",
+      "row_unit": "deg",
+      "col_axis": "abs_beta_F",
+      "col_key": "8",
+      "col_unit": "deg",
+      "value": "1.10",
+      "value_unit": "dimensionless",
+      "raw_value": "1.10",
+      "read_status": "VISUAL_TRANSCRIPTION",
+      "reference": "",
+      "notes": "Source clearly reads 1.10; retained despite neighboring boundary cells being 1.0."
+    },
+    {
+      "table_id": "6-VII",
+      "source_pdf_page": 430,
+      "printed_page": "B-80",
+      "quantity": "1-dsigma/dbeta_F",
+      "mach_key": "",
+      "rudder_deg": "",
+      "mast_deg": "0",
+      "flap_setting": "75/47",
+      "row_axis": "alpha_F",
+      "row_key": "-3.0",
+      "row_unit": "deg",
+      "col_axis": "abs_beta_F",
+      "col_key": "0 & 4",
+      "col_unit": "deg",
+      "value": "1.8",
+      "value_unit": "dimensionless",
+      "raw_value": "1.8",
+      "read_status": "VISUAL_TRANSCRIPTION",
+      "reference": "",
+      "notes": "Source clearly reads 1.8; retained without assuming 1.18 or smoothing."
+    },
+    {
+      "table_id": "6-VIII",
+      "source_pdf_page": 431,
+      "printed_page": "B-81",
+      "quantity": "K_betaR",
+      "mach_key": "",
+      "rudder_deg": "",
+      "mast_deg": "",
+      "flap_setting": "",
+      "row_axis": "V_T",
+      "row_key": "40",
+      "row_unit": "kt",
+      "col_axis": "beta_F",
+      "col_key": "0",
+      "col_unit": "deg",
+      "value": "-.5",
+      "value_unit": "dimensionless",
+      "raw_value": "-.5",
+      "read_status": "VISUAL_TRANSCRIPTION",
+      "reference": "",
+      "notes": "Source explicitly negative: -.5. No sign correction applied."
+    }
+  ],
+  "references": [
+    {
+      "table": "6-II",
+      "mach": "0-0.2",
+      "source": "6-I",
+      "rudder_deg": 0,
+      "beta_V_domain_deg": [
+        -180,
+        180
+      ],
+      "note": "31 reference records preserve merged cells at the Table 6-II row labels. The printed reference covers the full beta_V domain, including knots not listed in Table 6-II; no numeric values have been copied or interpolated."
+    }
+  ],
+  "caveats": [
+    "Beta_V is the vertical-fin local sideslip table input; beta_F and alpha_F are fuselage-angle labels in the source. They are not interchangeable.",
+    "beta_m is the source mast-angle coordinate. This data file does not map it to repository betaM or Wang i_n.",
+    "Flap-setting pairs 0/0,20/12.5,40/25,75/47 are retained as source degree pairs; order and physical mapping must be supplied by the source equations.",
+    "Table 6-I skips beta_V between -8 and +8 deg. Missing knots are not added.",
+    "Interpolation, extrapolation, coordinate transformations and model validity are not established by this digitization."
+  ]
+}

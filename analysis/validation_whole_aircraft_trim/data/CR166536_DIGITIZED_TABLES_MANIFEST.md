@@ -1,33 +1,33 @@
 # CR-166536 数字化表总清单
 
-本目录保存从 Ferguson 等的 NASA CR-166536（TR-1195-2 Rev. A）原始扫描页人工逐格抄录的输入表。数字化结果是“可追溯输入层”，不是外部验证结果，也没有把表格值拟合到当前模型。
+当前有效交付说明：`CR166536_CLOSURE_README_CN.md`。逐表、逐数据文件清单由 `cr166536_tables.py` 生成于 `CR166536_TABLE_CATALOG.json`；统一读取表为 `CR166536_ALL_CELLS.csv`。
 
-| 文件 | 覆盖范围 | 单元格 | 说明 |
-|---|---|---:|---|
-| `CR166536_DIGITIZED_TABLES_BATCH1.csv` | Table 1-I/1-II/1-III、2-Ia/b/c/d、补充 2-II | 492 | 旋翼推力上限、侧向/并列修正、旋翼尾迹对平尾的诱导速度与 `K_Hβ` |
-| `CR166536_DIGITIZED_TABLES_BATCH2.csv` | Table 5-V(a-c)、5-VI、5-VII、8a-I 至 8a-VIII | 418 | 平尾动压比、机身侧滑动压损失、操纵传动与襟翼增益 |
-| `CR166536_DIGITIZED_TABLES_BATCH3_SIDE_SLIP.csv` | Table 3-II、3-IV、3-VI（B-28–B-29） | 73 | 机身侧滑导数；原表破折号缺失值不写入 |
-| `CR166536_DIGITIZED_TABLES_BATCH4_WING_T4I.csv` | Table 4-I（B-34–B-35） | 140 | 机翼—短舱升力系数；Not Defined 格子显式保留 |
-| `CR166536_DIGITIZED_TABLES_BATCH4_FUSELAGE_ALPHA.csv` | Table 3-I、3-III、3-V（B-26–B-27） | 93 | 机身纵向攻角量；保留配对攻角列和符号脚注 |
-| `CR166536_DIGITIZED_TABLES_BATCH5_FUSELAGE_SIDESLIP_MOMENTS.csv` | Table 3-VII、3-VIII、3-IX（B-30） | 57 | 机身侧滑滚转/偏航量；按正负侧滑符号规则保存 |
-| `CR166536_DIGITIZED_TABLES_BATCH6_WING_PYLON_CONSTANTS.csv` | Subsystem 4 常数与导数（B-31–B-33） | 35 | 机翼—短舱几何、导数和干扰常数 |
+本次闭合了机身 Table 3-I–IX、机翼 Table 4-I–XVI、平尾 Table 5-I–VII、垂尾 Table 6-I–VIII 的全部数字化续页，并纳入已有旋翼限制、旋翼—平尾干扰和操纵表。四个机体气动模块共 46 张表/子表。
 
-## 页码与身份表冲突
+| 数据文件 | 记录 | 有数值 |
+|---|---:|---:|
+| CR166536_DIGITIZED_TABLES_BATCH1.csv | 492 | 492 |
+| CR166536_DIGITIZED_TABLES_BATCH2.csv | 418 | 418 |
+| CR166536_DIGITIZED_TABLES_BATCH3_SIDE_SLIP.csv | 73 | 73 |
+| CR166536_DIGITIZED_TABLES_BATCH4_WING_T4I.csv | 140 | 96 |
+| CR166536_DIGITIZED_TABLES_BATCH4_FUSELAGE_ALPHA.csv | 93 | 93 |
+| CR166536_DIGITIZED_TABLES_BATCH5_FUSELAGE_SIDESLIP_MOMENTS.csv | 57 | 57 |
+| CR166536_DIGITIZED_TABLES_BATCH6_WING_PYLON_CONSTANTS.csv | 35 | 35 |
+| CR166536_WING_T4II_VIII.csv | 1,021 | 980 |
+| CR166536_WING_T4IX_XVI.csv | 81 | 81 |
+| CR166536_HTAIL_TABLES.csv | 718 | 541 |
+| CR166536_VTAIL_TABLES.csv | 1,194 | 1,025 |
+| CR166536_TAIL_CONSTANTS.csv | 35 | 35 |
+| 合计 | 4,357 | 3,926 |
 
-身份参数表把 `TABLE_023` 的 Table 1-I 登记为 B-16；原始扫描页中该表标题和数值实际位于 PDF 渲染页 368、报告页 B-18，B-16 是旋翼常数页。数字化 CSV 保留原始页码 B-18，并在 provenance 中记录这一差异，避免把常数页误当成数据表页。
+其余 431 条为未定义、空白/破折号和引用。重复源节点、合并列和范围标签保持原意，不能按记录数计算实验数量。旧机身共享行网格另 32 处破折号只保存于语义元数据，不扩充 CSV 数量。
 
-CR-166536 B-26 原图给出 `DLANG=-0.5 ft²`，而身份参数 CSV 的 FUSE_005 记录为 `+0.5 ft²`。该符号冲突已保留为待裁决项，不能在模型中静默覆盖。
+关键差异与决定集中在 `CR166536_RESOLVED_SEMANTICS.json`，包括 l_beta 单位修正、Cm_WP 原表与正文单位冲突、短舱阻力参数量纲、源角度定义、尾翼表跨表引用以及源报告几何差异。这里不认领新整机仿真或外部验证结果。
 
-## 未覆盖的表
-
-CR-166536 的机身（Table 3-I 至 3-IX）、机翼/短舱（Table 4-I 至 4-XVI）、完整平尾/垂尾气动表（Table 5-I 至 5-IV、6-I 至 6-VIII）仍未全部数字化。它们必须逐页抄录并经过第二人抽查后，才可接入整机气动计算；当前模型不得把缺失表格默认为零或由已有表格外推。
-
-## 复核命令
-
-在仓库根目录运行：
+仓库根目录复核命令：
 
 ```text
 python analysis/validation_whole_aircraft_trim/data/check_cr166536_digitization.py
 ```
 
-该检查只验证 CSV 完整性和单元格数量，不验证物理正确性。
+本次检查涵盖全包源页/状态/重复冲突、原图锚点以及读取器的引用、插值和域外行为，替代旧版仅检查数量的脚本。每个批次的原始 provenance 仍保留，其早先的“未全部覆盖”具有历史时间语义；本清单及闭合说明为当前状态。

@@ -1,0 +1,31 @@
+{
+  "scope": "Source-table semantics and guarded reading; not a full GTRS force model",
+  "data_role": "Published model inputs, not independent flight-test samples",
+  "pdf_page_numbering": "one-based; B-n equals PDF page n+350",
+  "resolved": [
+    {"item": "Table 3-VIII l_beta", "previous_transcription_unit": "ft2", "resolved_unit": "ft3", "action": "CSV unit corrected, 19 numerical values unchanged", "basis": "A43/PDF111 explicit input unit; A44/PDF112 l_F=q_F*l_beta"},
+    {"item": "Table 4-VIII Cm_WP", "source_unit": "1/rad", "resolved_unit": "dimensionless", "action": "Raw CSV and raw_row_json retain printed unit; reader returns dimensionless without numerical scaling", "basis": "A70/PDF138 M_WP=q_WFS*S_W*c_W*Cm_WP; A71/PDF139 Cm_WP=f(beta_m,delta_F)", "status": "SOURCE_UNIT_CONFLICT_RESOLVED_BY_EQUATION"},
+    {"item": "Table 4-XV D_PYINT", "source_title": "Pylon interference drag coefficient", "resolved_unit": "ft^2", "basis": "A75/PDF143 D_PYLN=D_PYINT*(q_iwL+q_iwR)/2; no reference area multiplier"},
+    {"item": "Table 4-XVI independent angle", "resolved_axis": "alpha_bar_PYL", "basis": "B55/PDF405 header; A76-A77/PDF144-145 spinner/pylon incidence; not body sideslip beta_F"},
+    {"item": "Tail coefficient symbols and units", "rules": ["C_LH_beta: 1/deg, A82/PDF150", "d_sigma_d_p_hat and d_sigma_d_r_hat: dimensionless (ND), A93/PDF161", "Hat-normalized rates are not physical p,r in rad/s"], "action": "Correct ASCII parameter names; keep original B69 unspecified unit text and return equation-defined dimensionless unit in reader"},
+    {"item": "Mast angle", "source_convention": "beta_m=0 helicopter, 90 airplane", "domestic_nacelle_convention": "i_n=90-beta_m when i_n=90 is hover", "basis": "B34/PDF384 and A80/PDF148"},
+    {"item": "Table 4-XI angle boundaries", "rules": ["abs(alpha_W)<=8: listed factor", "8<alpha_W<=25: linear decay to zero", "alpha_W>25: zero", "linear variation with mast angle"], "basis": "B53/PDF403 high-resolution reread of slanted equality glyphs", "unsupported_region": "alpha_W<-8; no negative high-angle extension is specified in signed-alpha footnote"},
+    {"item": "Tables 6-IV through 6-VII alpha endpoint rows", "rules": ["alpha_F<=-10", "alpha_F>=28"], "unchanged_beta_column": "abs(beta_F)>50", "basis": "B77-B80/PDF427-430 high-resolution reread; <= and >= were previously transcribed as < and >"},
+    {"item": "Table 5-II and 6-II low-Mach reference", "rules": ["5-II references 5-I at elevator=0", "6-II references 6-I at rudder=0", "reference domain -180..180 deg, not merely the displayed -40..40 deg grid"], "implementation": "explicit source reference; 1-D interpolation labelled separately; never count generated values as transcribed nodes"},
+    {"item": "Original blanks and repeated continuation nodes", "rules": ["Do not fill NOT_DEFINED", "Do not fill blank or dash", "Repeated equal numeric knots can be used with both source pages retained", "Numeric/NOT_DEFINED conflicts are errors" ]},
+    {"item": "Legacy fuselage Table 3-II and 3-IV shared-grid dashes", "source_pages": [378,379], "tables": ["3-II","3-IV"], "absolute_beta_deg": [2,4,6,8,82,84,86,88,92,94,96,98,172,174,176,178], "action": "32 printed dashes documented here, not additional CSV records. These columns contain coarser knots than the adjacent Table 3-VI. Existing coarse numerical grid retained; any interpolation is a calculated value, not a new source knot."}
+  ],
+  "retained_source_conflicts": [
+    {"item": "c_W", "source_values": ["B12: 5.255 ft", "Subsystem 4 B31: 5.225 ft"], "action": "B31 value retained in subsystem table; no global parameter overwrite"},
+    {"item": "DLANG", "source_values": ["B26: -0.5 ft^2", "supplied parameter identity CSV: +0.5 ft^2"], "action": "Original report has priority for source transcription; identity CSV conflict recorded; no model mutation in this task"},
+    {"item": "Vertical fin station signs", "source_values": ["B69 WL_V1=-115.69, WL_V2=+115.69 in", "B69 BL_V1=BL_V2=77 in"], "action": "Retain source values and flag coordinate/symmetry inconsistency; do not instantiate aircraft geometry directly from these four values without resolving source mapping"},
+    {"item": "Vertical fin area per panel", "source_values": ["B12/PDF362: 25.25 ft^2", "B69/PDF419: 20.25 ft^2"], "action": "Subsystem-6 input CSV retains B69 20.25 per panel; general-design-table discrepancy is explicit, not silently harmonized"},
+    {"item": "Original asymmetric/anomalous coefficients", "examples": ["5-I: -130deg/e+20=1.54, +130deg/e-20=-1.45", "5-III: -8deg/M.6=.045, +8deg/M.6=.065", "6-VIII: 40kt/beta0=-.5"], "action": "Preserved; no symmetry cleanup or smoothing"}
+  ],
+  "reader_limits": [
+    "All source rows can be selected by literal coordinates.",
+    "curve supports one finite numerical axis with other coordinates fixed; it rejects interval/group axes.",
+    "Mach intervals, grouped flap labels and signed-angle extensions require explicit subsystem policies; no automatic generalization.",
+    "No full multidimensional GTRS interpolation, force transformations, actuator/governor or aircraft integration is claimed."
+  ]
+}

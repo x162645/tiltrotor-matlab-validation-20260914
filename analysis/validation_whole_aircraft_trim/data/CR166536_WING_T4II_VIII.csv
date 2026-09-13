@@ -1,0 +1,1022 @@
+﻿table_name,pdf_page,printed_page,row_axis,row_value,flap_setting,mast_angle_deg,mach_label,coefficient,value,raw_token,status,unit,context
+4-II,386,B-36,alpha_W_deg,-100,20/12.5,90,0..0.2,CL_WP,0.0,0.0,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-100,20/12.5,0,0..0.2,CL_WP,.15,.15,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-100,40/25,90,0..0.2,CL_WP,,BL,SOURCE_BLANK,1,
+4-II,386,B-36,alpha_W_deg,-100,40/25,0,0..0.2,CL_WP,,BL,SOURCE_BLANK,1,
+4-II,386,B-36,alpha_W_deg,-100,75/47,90,0..0.2,CL_WP,,BL,SOURCE_BLANK,1,
+4-II,386,B-36,alpha_W_deg,-100,75/47,0,0..0.2,CL_WP,,BL,SOURCE_BLANK,1,
+4-II,386,B-36,alpha_W_deg,-90,20/12.5,90,0..0.2,CL_WP,0,0,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-90,20/12.5,0,0..0.2,CL_WP,0,0,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-90,40/25,90,0..0.2,CL_WP,0,0,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-90,40/25,0,0..0.2,CL_WP,0,0,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-90,75/47,90,0..0.2,CL_WP,0,0,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-90,75/47,0,0..0.2,CL_WP,0,0,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-80,20/12.5,90,0..0.2,CL_WP,-.45,-.45,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-80,20/12.5,0,0..0.2,CL_WP,-.28,-.28,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-80,40/25,90,0..0.2,CL_WP,-.325,-.325,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-80,40/25,0,0..0.2,CL_WP,-.245,-.245,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-80,75/47,90,0..0.2,CL_WP,-.235,-.235,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-80,75/47,0,0..0.2,CL_WP,-.190,-.190,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-70,20/12.5,90,0..0.2,CL_WP,-.72,-.72,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-70,20/12.5,0,0..0.2,CL_WP,-.48,-.48,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-70,40/25,90,0..0.2,CL_WP,-.520,-.520,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-70,40/25,0,0..0.2,CL_WP,-.400,-.400,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-70,75/47,90,0..0.2,CL_WP,-.385,-.385,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-70,75/47,0,0..0.2,CL_WP,-.305,-.305,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-60,20/12.5,90,0..0.2,CL_WP,-.79,-.79,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-60,20/12.5,0,0..0.2,CL_WP,-.60,-.60,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-60,40/25,90,0..0.2,CL_WP,-.610,-.610,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-60,40/25,0,0..0.2,CL_WP,-.480,-.480,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-60,75/47,90,0..0.2,CL_WP,-.450,-.450,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-60,75/47,0,0..0.2,CL_WP,-.333,-.333,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-50,20/12.5,90,0..0.2,CL_WP,-.80,-.80,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-50,20/12.5,0,0..0.2,CL_WP,-.62,-.62,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-50,40/25,90,0..0.2,CL_WP,-.590,-.590,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-50,40/25,0,0..0.2,CL_WP,-.420,-.420,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-50,75/47,90,0..0.2,CL_WP,-.390,-.390,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-50,75/47,0,0..0.2,CL_WP,-.220,-.220,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-40,20/12.5,90,0..0.2,CL_WP,-.62,-.62,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-40,20/12.5,0,0..0.2,CL_WP,-.47,-.47,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-40,40/25,90,0..0.2,CL_WP,-.410,-.410,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-40,40/25,0,0..0.2,CL_WP,-.265,-.265,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-40,75/47,90,0..0.2,CL_WP,-.240,-.240,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-40,75/47,0,0..0.2,CL_WP,-.105,-.105,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-36,20/12.5,90,0..0.2,CL_WP,-.60,-.60,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-36,20/12.5,0,0..0.2,CL_WP,-.42,-.42,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-36,40/25,90,0..0.2,CL_WP,-.400,-.400,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-36,40/25,0,0..0.2,CL_WP,-.250,-.250,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-36,75/47,90,0..0.2,CL_WP,-.220,-.220,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-36,75/47,0,0..0.2,CL_WP,-.090,-.090,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-32,20/12.5,90,0..0.2,CL_WP,-.60,-.60,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-32,20/12.5,0,0..0.2,CL_WP,-.40,-.40,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-32,40/25,90,0..0.2,CL_WP,-.425,-.425,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-32,40/25,0,0..0.2,CL_WP,-.260,-.260,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-32,75/47,90,0..0.2,CL_WP,-.240,-.240,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-32,75/47,0,0..0.2,CL_WP,-.095,-.095,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-28,20/12.5,90,0..0.2,CL_WP,-.66,-.66,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-28,20/12.5,0,0..0.2,CL_WP,-.47,-.47,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-28,40/25,90,0..0.2,CL_WP,-.515,-.515,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-28,40/25,0,0..0.2,CL_WP,-.300,-.300,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-28,75/47,90,0..0.2,CL_WP,-.275,-.275,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-28,75/47,0,0..0.2,CL_WP,-.120,-.120,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-24,20/12.5,90,0..0.2,CL_WP,-.77,-.77,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-24,20/12.5,0,0..0.2,CL_WP,-.55,-.55,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-24,40/25,90,0..0.2,CL_WP,-.660,-.660,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-24,40/25,0,0..0.2,CL_WP,-.380,-.380,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-24,75/47,90,0..0.2,CL_WP,-.340,-.340,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-24,75/47,0,0..0.2,CL_WP,-.160,-.160,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-21.5,20/12.5,90,0..0.2,CL_WP,-.84,-.84,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-21.5,20/12.5,0,0..0.2,CL_WP,-.60,-.60,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-21.5,40/25,90,0..0.2,CL_WP,-.690,-.690,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-21.5,40/25,0,0..0.2,CL_WP,-.440,-.440,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-21.5,75/47,90,0..0.2,CL_WP,-.400,-.400,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-21.5,75/47,0,0..0.2,CL_WP,-.210,-.210,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-21.0,20/12.5,90,0..0.2,CL_WP,-.85,-.85,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-21.0,20/12.5,0,0..0.2,CL_WP,-.61,-.61,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-21.0,40/25,90,0..0.2,CL_WP,-.680,-.680,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-21.0,40/25,0,0..0.2,CL_WP,-.440,-.440,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-21.0,75/47,90,0..0.2,CL_WP,-.400,-.400,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-21.0,75/47,0,0..0.2,CL_WP,-.210,-.210,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-20,20/12.5,90,0..0.2,CL_WP,-.84,-.84,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-20,20/12.5,0,0..0.2,CL_WP,-.59,-.59,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-20,40/25,90,0..0.2,CL_WP,-.640,-.640,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-20,40/25,0,0..0.2,CL_WP,-.395,-.395,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-20,75/47,90,0..0.2,CL_WP,-.367,-.367,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-20,75/47,0,0..0.2,CL_WP,-.188,-.188,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-19.2,20/12.5,90,0..0.2,CL_WP,-.81,-.81,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-19.2,20/12.5,0,0..0.2,CL_WP,-.54,-.54,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-19.2,40/25,90,0..0.2,CL_WP,-.580,-.580,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-19.2,40/25,0,0..0.2,CL_WP,-.360,-.360,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-19.2,75/47,90,0..0.2,CL_WP,-.310,-.310,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-19.2,75/47,0,0..0.2,CL_WP,-.140,-.140,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-16,20/12.5,90,0..0.2,CL_WP,-.57,-.57,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-16,20/12.5,0,0..0.2,CL_WP,-.37,-.37,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-16,40/25,90,0..0.2,CL_WP,-.320,-.320,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-16,40/25,0,0..0.2,CL_WP,-.165,-.165,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-16,75/47,90,0..0.2,CL_WP,-.048,-.048,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-16,75/47,0,0..0.2,CL_WP,.040,.040,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-12,20/12.5,90,0..0.2,CL_WP,-.26,-.26,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-12,20/12.5,0,0..0.2,CL_WP,-.14,-.14,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-12,40/25,90,0..0.2,CL_WP,0,0,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-12,40/25,0,0..0.2,CL_WP,.0628,.0628,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-12,75/47,90,0..0.2,CL_WP,.272,.272,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-12,75/47,0,0..0.2,CL_WP,.268,.268,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-8,20/12.5,90,0..0.2,CL_WP,.15,.15,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-8,20/12.5,0,0..0.2,CL_WP,.18,.18,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-8,40/25,90,0..0.2,CL_WP,.42,.42,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-8,40/25,0,0..0.2,CL_WP,.291,.291,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-8,75/47,90,0..0.2,CL_WP,.69,.69,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-8,75/47,0,0..0.2,CL_WP,.6,.6,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-4,20/12.5,90,0..0.2,CL_WP,.56,.56,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-4,20/12.5,0,0..0.2,CL_WP,.51,.51,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-4,40/25,90,0..0.2,CL_WP,.84,.84,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-4,40/25,0,0..0.2,CL_WP,.518,.518,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-4,75/47,90,0..0.2,CL_WP,1.11,1.11,TRANSCRIBED,1,
+4-II,386,B-36,alpha_W_deg,-4,75/47,0,0..0.2,CL_WP,.92,.92,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,0,20/12.5,90,0..0.2,CL_WP,.92,.92,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,0,20/12.5,0,0..0.2,CL_WP,.79,.79,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,0,40/25,90,0..0.2,CL_WP,1.18,1.18,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,0,40/25,0,0..0.2,CL_WP,.749,.749,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,0,75/47,90,0..0.2,CL_WP,1.44,1.44,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,0,75/47,0,0..0.2,CL_WP,1.15,1.15,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,4,20/12.5,90,0..0.2,CL_WP,1.28,1.28,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,4,20/12.5,0,0..0.2,CL_WP,1.05,1.05,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,4,40/25,90,0..0.2,CL_WP,1.46,1.46,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,4,40/25,0,0..0.2,CL_WP,.975,.975,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,4,75/47,90,0..0.2,CL_WP,1.66,1.66,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,4,75/47,0,0..0.2,CL_WP,1.37,1.37,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,8,20/12.5,90,0..0.2,CL_WP,1.54,1.54,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,8,20/12.5,0,0..0.2,CL_WP,1.28,1.28,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,8,40/25,90,0..0.2,CL_WP,1.70,1.70,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,8,40/25,0,0..0.2,CL_WP,1.205,1.205,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,8,75/47,90,0..0.2,CL_WP,1.88,1.88,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,8,75/47,0,0..0.2,CL_WP,1.59,1.59,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,11,20/12.5,90,0..0.2,CL_WP,1.75,1.75,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,11,20/12.5,0,0..0.2,CL_WP,1.45,1.45,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,11,40/25,90,0..0.2,CL_WP,1.86,1.86,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,11,40/25,0,0..0.2,CL_WP,1.380,1.380,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,11,75/47,90,0..0.2,CL_WP,2.0,2.0,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,11,75/47,0,0..0.2,CL_WP,1.7,1.7,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,12,20/12.5,90,0..0.2,CL_WP,1.81,1.81,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,12,20/12.5,0,0..0.2,CL_WP,1.51,1.51,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,12,40/25,90,0..0.2,CL_WP,1.92,1.92,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,12,40/25,0,0..0.2,CL_WP,1.433,1.433,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,12,75/47,90,0..0.2,CL_WP,1.99,1.99,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,12,75/47,0,0..0.2,CL_WP,1.67,1.67,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,13.6,20/12.5,90,0..0.2,CL_WP,1.88,1.88,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,13.6,20/12.5,0,0..0.2,CL_WP,1.54,1.54,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,13.6,40/25,90,0..0.2,CL_WP,1.94,1.94,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,13.6,40/25,0,0..0.2,CL_WP,1.500,1.500,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,13.6,75/47,90,0..0.2,CL_WP,1.87,1.87,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,13.6,75/47,0,0..0.2,CL_WP,1.55,1.55,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,16,20/12.5,90,0..0.2,CL_WP,1.75,1.75,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,16,20/12.5,0,0..0.2,CL_WP,1.45,1.45,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,16,40/25,90,0..0.2,CL_WP,1.79,1.79,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,16,40/25,0,0..0.2,CL_WP,1.400,1.400,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,16,75/47,90,0..0.2,CL_WP,1.70,1.70,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,16,75/47,0,0..0.2,CL_WP,1.34,1.34,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,18.4,20/12.5,90,0..0.2,CL_WP,1.57,1.57,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,18.4,20/12.5,0,0..0.2,CL_WP,1.23,1.23,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,18.4,40/25,90,0..0.2,CL_WP,1.62,1.62,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,18.4,40/25,0,0..0.2,CL_WP,1.260,1.260,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,18.4,75/47,90,0..0.2,CL_WP,1.53,1.53,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,18.4,75/47,0,0..0.2,CL_WP,1.2,1.2,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,20,20/12.5,90,0..0.2,CL_WP,1.46,1.46,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,20,20/12.5,0,0..0.2,CL_WP,1.10,1.10,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,20,40/25,90,0..0.2,CL_WP,1.51,1.51,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,20,40/25,0,0..0.2,CL_WP,1.200,1.200,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,20,75/47,90,0..0.2,CL_WP,1.46,1.46,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,20,75/47,0,0..0.2,CL_WP,1.14,1.14,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,24,20/12.5,90,0..0.2,CL_WP,1.38,1.38,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,24,20/12.5,0,0..0.2,CL_WP,1.0,1.0,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,24,40/25,90,0..0.2,CL_WP,1.48,1.48,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,24,40/25,0,0..0.2,CL_WP,1.15,1.15,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,24,75/47,90,0..0.2,CL_WP,1.46,1.46,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,24,75/47,0,0..0.2,CL_WP,1.16,1.16,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,28,20/12.5,90,0..0.2,CL_WP,1.4,1.4,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,28,20/12.5,0,0..0.2,CL_WP,1.0,1.0,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,28,40/25,90,0..0.2,CL_WP,1.54,1.54,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,28,40/25,0,0..0.2,CL_WP,1.20,1.20,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,28,75/47,90,0..0.2,CL_WP,1.54,1.54,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,28,75/47,0,0..0.2,CL_WP,1.29,1.29,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,32,20/12.5,90,0..0.2,CL_WP,1.5,1.5,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,32,20/12.5,0,0..0.2,CL_WP,1.1,1.1,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,32,40/25,90,0..0.2,CL_WP,1.69,1.69,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,32,40/25,0,0..0.2,CL_WP,1.32,1.32,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,32,75/47,90,0..0.2,CL_WP,1.69,1.69,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,32,75/47,0,0..0.2,CL_WP,1.38,1.38,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,36,20/12.5,90,0..0.2,CL_WP,1.6,1.6,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,36,20/12.5,0,0..0.2,CL_WP,1.2,1.2,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,36,40/25,90,0..0.2,CL_WP,1.76,1.76,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,36,40/25,0,0..0.2,CL_WP,1.41,1.41,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,36,75/47,90,0..0.2,CL_WP,1.78,1.78,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,36,75/47,0,0..0.2,CL_WP,1.44,1.44,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,40,20/12.5,90,0..0.2,CL_WP,1.65,1.65,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,40,20/12.5,0,0..0.2,CL_WP,1.31,1.31,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,40,40/25,90,0..0.2,CL_WP,1.80,1.80,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,40,40/25,0,0..0.2,CL_WP,1.47,1.47,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,40,75/47,90,0..0.2,CL_WP,1.80,1.80,TRANSCRIBED,1,
+4-II,387,B-37,alpha_W_deg,40,75/47,0,0..0.2,CL_WP,1.48,1.48,TRANSCRIBED,1,
+4-II,388,B-38,alpha_W_deg,-180,0/0,0,0..0.2,CL_WP,-.1,-.1,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-180,20/12.5,0,0..0.2,CL_WP,-.2,-.2,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-180,40/25,0,0..0.2,CL_WP,-.25,-.25,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-180,75/47,0,0..0.2,CL_WP,-.2,-.2,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-170,0/0,0,0..0.2,CL_WP,0,0,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-170,20/12.5,0,0..0.2,CL_WP,-.1,-.1,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-170,40/25,0,0..0.2,CL_WP,-.15,-.15,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-170,75/47,0,0..0.2,CL_WP,-.05,-.05,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-160,0/0,0,0..0.2,CL_WP,.2,.2,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-160,20/12.5,0,0..0.2,CL_WP,.1,.1,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-160,40/25,0,0..0.2,CL_WP,0,0,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-160,75/47,0,0..0.2,CL_WP,.1,.1,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-150,0/0,0,0..0.2,CL_WP,.35,.35,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-150,20/12.5,0,0..0.2,CL_WP,.18,.18,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-150,40/25,0,0..0.2,CL_WP,.20,.20,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-150,75/47,0,0..0.2,CL_WP,.215,.215,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-140,0/0,0,0..0.2,CL_WP,.4,.4,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-140,20/12.5,0,0..0.2,CL_WP,.29,.29,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-140,40/25,0,0..0.2,CL_WP,.32,.32,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-140,75/47,0,0..0.2,CL_WP,.25,.25,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-130,0/0,0,0..0.2,CL_WP,.45,.45,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-130,20/12.5,0,0..0.2,CL_WP,.31,.31,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-130,40/25,0,0..0.2,CL_WP,.34,.34,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-130,75/47,0,0..0.2,CL_WP,.27,.27,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-120,0/0,0,0..0.2,CL_WP,.4,.4,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-120,20/12.5,0,0..0.2,CL_WP,.28,.28,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-120,40/25,0,0..0.2,CL_WP,.30,.30,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-120,75/47,0,0..0.2,CL_WP,.25,.25,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-110,0/0,0,0..0.2,CL_WP,.35,.35,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-110,20/12.5,0,0..0.2,CL_WP,.2,.2,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-110,40/25,0,0..0.2,CL_WP,.22,.22,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-110,75/47,0,0..0.2,CL_WP,.17,.17,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-100,0/0,0,0..0.2,CL_WP,.2,.2,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-100,20/12.5,0,0..0.2,CL_WP,.15,.15,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-100,40/25,0,0..0.2,CL_WP,.12,.12,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-100,75/47,0,0..0.2,CL_WP,.08,.08,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-90,0/0,0,0..0.2,CL_WP,0,0,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-90,20/12.5,0,0..0.2,CL_WP,0,0,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-90,40/25,0,0..0.2,CL_WP,0,0,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-90,75/47,0,0..0.2,CL_WP,0,0,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-80,0/0,0,0..0.2,CL_WP,-.25,-.25,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-80,20/12.5,0,0..0.2,CL_WP,-.28,-.28,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-80,40/25,0,0..0.2,CL_WP,-.245,-.245,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-80,75/47,0,0..0.2,CL_WP,-.19,-.19,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-70,0/0,0,0..0.2,CL_WP,-.55,-.55,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-70,20/12.5,0,0..0.2,CL_WP,-.48,-.48,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-70,40/25,0,0..0.2,CL_WP,-.40,-.40,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-70,75/47,0,0..0.2,CL_WP,-.305,-.305,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-60,0/0,0,0..0.2,CL_WP,-.65,-.65,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-60,20/12.5,0,0..0.2,CL_WP,-.6,-.6,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-60,40/25,0,0..0.2,CL_WP,-.48,-.48,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-60,75/47,0,0..0.2,CL_WP,-.333,-.333,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-50,0/0,0,0..0.2,CL_WP,-.7,-.7,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-50,20/12.5,0,0..0.2,CL_WP,-.62,-.62,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-50,40/25,0,0..0.2,CL_WP,-.42,-.42,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-50,75/47,0,0..0.2,CL_WP,-.22,-.22,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-40,0/0,0,0..0.2,CL_WP,-.68,-.68,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-40,20/12.5,0,0..0.2,CL_WP,-.47,-.47,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-40,40/25,0,0..0.2,CL_WP,-.265,-.265,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,388,B-38,alpha_W_deg,-40,75/47,0,0..0.2,CL_WP,-.105,-.105,TRANSCRIBED,1,extension; -40..40 uses Tables 4-I/4-II; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,40,0/0,0,0..0.2,CL_WP,1.06,1.06,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,40,20/12.5,0,0..0.2,CL_WP,1.31,1.31,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,40,40/25,0,0..0.2,CL_WP,1.47,1.47,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,40,75/47,0,0..0.2,CL_WP,1.48,1.48,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,50,0/0,0,0..0.2,CL_WP,1.08,1.08,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,50,20/12.5,0,0..0.2,CL_WP,1.31,1.31,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,50,40/25,0,0..0.2,CL_WP,1.47,1.47,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,50,75/47,0,0..0.2,CL_WP,1.47,1.47,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,60,0/0,0,0..0.2,CL_WP,.9,.9,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,60,20/12.5,0,0..0.2,CL_WP,1.2,1.2,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,60,40/25,0,0..0.2,CL_WP,1.36,1.36,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,60,75/47,0,0..0.2,CL_WP,1.36,1.36,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,70,0/0,0,0..0.2,CL_WP,.55,.55,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,70,20/12.5,0,0..0.2,CL_WP,.8,.8,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,70,40/25,0,0..0.2,CL_WP,1.08,1.08,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,70,75/47,0,0..0.2,CL_WP,1.08,1.08,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,80,0/0,0,0..0.2,CL_WP,.3,.3,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,80,20/12.5,0,0..0.2,CL_WP,.3,.3,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,80,40/25,0,0..0.2,CL_WP,.70,.70,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,80,75/47,0,0..0.2,CL_WP,.7,.7,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,90,0/0,0,0..0.2,CL_WP,0,0,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,90,20/12.5,0,0..0.2,CL_WP,0,0,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,90,40/25,0,0..0.2,CL_WP,0,0,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,90,75/47,0,0..0.2,CL_WP,0,0,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,100,0/0,0,0..0.2,CL_WP,-.2,-.2,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,100,20/12.5,0,0..0.2,CL_WP,-.5,-.5,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,100,40/25,0,0..0.2,CL_WP,-.4,-.4,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,100,75/47,0,0..0.2,CL_WP,-.5,-.5,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,110,0/0,0,0..0.2,CL_WP,-.3,-.3,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,110,20/12.5,0,0..0.2,CL_WP,-.78,-.78,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,110,40/25,0,0..0.2,CL_WP,-.55,-.55,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,110,75/47,0,0..0.2,CL_WP,-.65,-.65,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,120,0/0,0,0..0.2,CL_WP,-.35,-.35,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,120,20/12.5,0,0..0.2,CL_WP,-.9,-.9,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,120,40/25,0,0..0.2,CL_WP,-.65,-.65,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,120,75/47,0,0..0.2,CL_WP,-.75,-.75,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,130,0/0,0,0..0.2,CL_WP,-.4,-.4,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,130,20/12.5,0,0..0.2,CL_WP,-1.0,-1.0,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,130,40/25,0,0..0.2,CL_WP,-.7,-.7,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,130,75/47,0,0..0.2,CL_WP,-.829,-.829,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,140,0/0,0,0..0.2,CL_WP,-.45,-.45,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,140,20/12.5,0,0..0.2,CL_WP,-.98,-.98,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,140,40/25,0,0..0.2,CL_WP,-.75,-.75,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,140,75/47,0,0..0.2,CL_WP,-.85,-.85,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,150,0/0,0,0..0.2,CL_WP,-.4,-.4,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,150,20/12.5,0,0..0.2,CL_WP,-.91,-.91,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,150,40/25,0,0..0.2,CL_WP,-.7,-.7,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,150,75/47,0,0..0.2,CL_WP,-.8,-.8,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,160,0/0,0,0..0.2,CL_WP,-.35,-.35,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,160,20/12.5,0,0..0.2,CL_WP,-.8,-.8,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,160,40/25,0,0..0.2,CL_WP,-.65,-.65,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,160,75/47,0,0..0.2,CL_WP,-.7,-.7,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,170,0/0,0,0..0.2,CL_WP,-.25,-.25,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,170,20/12.5,0,0..0.2,CL_WP,-.65,-.65,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,170,40/25,0,0..0.2,CL_WP,-.5,-.5,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,170,75/47,0,0..0.2,CL_WP,-.6,-.6,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,180,0/0,0,0..0.2,CL_WP,-.1,-.1,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,180,20/12.5,0,0..0.2,CL_WP,-.2,-.2,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,180,40/25,0,0..0.2,CL_WP,-.25,-.25,TRANSCRIBED,1,extension; repeated source nodes retained
+4-II,389,B-39,alpha_W_deg,180,75/47,0,0..0.2,CL_WP,-.2,-.2,TRANSCRIBED,1,extension; repeated source nodes retained
+4-III,390,B-40,alpha_W_deg,-40,0/0,90,0..0.2,CD_WP,.575,.575,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-40,0/0,90,0.4,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,-40,0/0,90,0.5,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,-40,0/0,90,0.6,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,-40,0/0,0,0..0.2,CD_WP,.685,.685,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-36,0/0,90,0..0.2,CD_WP,.505,.505,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-36,0/0,90,0.4,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,-36,0/0,90,0.5,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,-36,0/0,90,0.6,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,-36,0/0,0,0..0.2,CD_WP,.635,.635,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-32,0/0,90,0..0.2,CD_WP,.425,.425,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-32,0/0,90,0.4,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,-32,0/0,90,0.5,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,-32,0/0,90,0.6,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,-32,0/0,0,0..0.2,CD_WP,.580,.580,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-28,0/0,90,0..0.2,CD_WP,.327,.327,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-28,0/0,90,0.4,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,-28,0/0,90,0.5,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,-28,0/0,90,0.6,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,-28,0/0,0,0..0.2,CD_WP,.522,.522,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-24,0/0,90,0..0.2,CD_WP,.230,.230,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-24,0/0,90,0.4,CD_WP,.312,.312,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-24,0/0,90,0.5,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,-24,0/0,90,0.6,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,-24,0/0,0,0..0.2,CD_WP,.450,.450,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-20,0/0,90,0..0.2,CD_WP,.150,.150,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-20,0/0,90,0.4,CD_WP,.175,.175,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-20,0/0,90,0.5,CD_WP,.275,.275,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-20,0/0,90,0.6,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,-20,0/0,0,0..0.2,CD_WP,.370,.370,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-16,0/0,90,0..0.2,CD_WP,.089,.089,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-16,0/0,90,0.4,CD_WP,.089,.089,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-16,0/0,90,0.5,CD_WP,.135,.135,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-16,0/0,90,0.6,CD_WP,.240,.240,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-16,0/0,0,0..0.2,CD_WP,.295,.295,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-12,0/0,90,0..0.2,CD_WP,.042,.042,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-12,0/0,90,0.4,CD_WP,.042,.042,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-12,0/0,90,0.5,CD_WP,.050,.050,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-12,0/0,90,0.6,CD_WP,.110,.110,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-12,0/0,0,0..0.2,CD_WP,.246,.246,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-8,0/0,90,0..0.2,CD_WP,.025,.025,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-8,0/0,90,0.4,CD_WP,.0250,.0250,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-8,0/0,90,0.5,CD_WP,.025,.025,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-8,0/0,90,0.6,CD_WP,.052,.052,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-8,0/0,0,0..0.2,CD_WP,.219,.219,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-4,0/0,90,0..0.2,CD_WP,.0170,.0170,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-4,0/0,90,0.4,CD_WP,.0170,.0170,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-4,0/0,90,0.5,CD_WP,.0170,.0170,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-4,0/0,90,0.6,CD_WP,.040,.040,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,-4,0/0,0,0..0.2,CD_WP,.212,.212,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,0,0/0,90,0..0.2,CD_WP,.0204,.0204,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,0,0/0,90,0.4,CD_WP,.0204,.0204,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,0,0/0,90,0.5,CD_WP,.0204,.0204,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,0,0/0,90,0.6,CD_WP,.042,.042,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,0,0/0,0,0..0.2,CD_WP,.215,.215,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,4,0/0,90,0..0.2,CD_WP,.0418,.0418,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,4,0/0,90,0.4,CD_WP,.0418,.0418,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,4,0/0,90,0.5,CD_WP,.0418,.0418,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,4,0/0,90,0.6,CD_WP,.062,.062,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,4,0/0,0,0..0.2,CD_WP,.238,.238,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,8,0/0,90,0..0.2,CD_WP,.072,.072,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,8,0/0,90,0.4,CD_WP,.072,.072,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,8,0/0,90,0.5,CD_WP,.082,.082,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,8,0/0,90,0.6,CD_WP,.127,.127,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,8,0/0,0,0..0.2,CD_WP,.274,.274,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,12,0/0,90,0..0.2,CD_WP,.118,.118,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,12,0/0,90,0.4,CD_WP,.128,.128,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,12,0/0,90,0.5,CD_WP,.168,.168,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,12,0/0,90,0.6,CD_WP,.268,.268,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,12,0/0,0,0..0.2,CD_WP,.318,.318,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,16,0/0,90,0..0.2,CD_WP,.171,.171,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,16,0/0,90,0.4,CD_WP,.194,.194,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,16,0/0,90,0.5,CD_WP,.289,.289,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,16,0/0,90,0.6,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,16,0/0,0,0..0.2,CD_WP,.363,.363,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,20,0/0,90,0..0.2,CD_WP,.247,.247,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,20,0/0,90,0.4,CD_WP,.3050,.3050,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,20,0/0,90,0.5,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,20,0/0,90,0.6,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,20,0/0,0,0..0.2,CD_WP,.436,.436,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,24,0/0,90,0..0.2,CD_WP,.354,.354,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,24,0/0,90,0.4,CD_WP,.500,.500,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,24,0/0,90,0.5,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,24,0/0,90,0.6,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,24,0/0,0,0..0.2,CD_WP,.512,.512,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,28,0/0,90,0..0.2,CD_WP,.493,.493,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,28,0/0,90,0.4,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,28,0/0,90,0.5,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,28,0/0,90,0.6,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,28,0/0,0,0..0.2,CD_WP,.580,.580,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,32,0/0,90,0..0.2,CD_WP,.600,.600,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,32,0/0,90,0.4,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,32,0/0,90,0.5,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,32,0/0,90,0.6,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,32,0/0,0,0..0.2,CD_WP,.642,.642,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,36,0/0,90,0..0.2,CD_WP,.660,.660,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,36,0/0,90,0.4,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,36,0/0,90,0.5,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,36,0/0,90,0.6,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,36,0/0,0,0..0.2,CD_WP,.698,.698,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,40,0/0,90,0..0.2,CD_WP,.705,.705,TRANSCRIBED,1,
+4-III,390,B-40,alpha_W_deg,40,0/0,90,0.4,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,40,0/0,90,0.5,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,40,0/0,90,0.6,CD_WP,,ND,NOT_DEFINED,1,
+4-III,390,B-40,alpha_W_deg,40,0/0,0,0..0.2,CD_WP,.748,.748,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-100,20/12.5,90,0..0.2,CD_WP,,--,SOURCE_DASH,1,
+4-IV,391,B-41,alpha_W_deg,-100,20/12.5,0,0..0.2,CD_WP,1.45,1.45,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-100,40/25,90,0..0.2,CD_WP,,--,SOURCE_DASH,1,
+4-IV,391,B-41,alpha_W_deg,-100,40/25,0,0..0.2,CD_WP,1.33,1.33,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-100,75/47,90,0..0.2,CD_WP,,--,SOURCE_DASH,1,
+4-IV,391,B-41,alpha_W_deg,-100,75/47,0,0..0.2,CD_WP,.88,.88,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-90,20/12.5,90,0..0.2,CD_WP,,--,SOURCE_DASH,1,
+4-IV,391,B-41,alpha_W_deg,-90,20/12.5,0,0..0.2,CD_WP,1.57,1.57,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-90,40/25,90,0..0.2,CD_WP,1.18,1.18,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-90,40/25,0,0..0.2,CD_WP,1.44,1.44,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-90,75/47,90,0..0.2,CD_WP,1.145,1.145,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-90,75/47,0,0..0.2,CD_WP,.90,.90,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-80,20/12.5,90,0..0.2,CD_WP,,--,SOURCE_DASH,1,
+4-IV,391,B-41,alpha_W_deg,-80,20/12.5,0,0..0.2,CD_WP,1.45,1.45,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-80,40/25,90,0..0.2,CD_WP,1.10,1.10,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-80,40/25,0,0..0.2,CD_WP,1.33,1.33,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-80,75/47,90,0..0.2,CD_WP,1.050,1.050,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-80,75/47,0,0..0.2,CD_WP,.878,.878,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-70,20/12.5,90,0..0.2,CD_WP,1.0,1.0,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-70,20/12.5,0,0..0.2,CD_WP,1.15,1.15,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-70,40/25,90,0..0.2,CD_WP,.93,.93,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-70,40/25,0,0..0.2,CD_WP,1.12,1.12,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-70,75/47,90,0..0.2,CD_WP,.89,.89,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-70,75/47,0,0..0.2,CD_WP,.822,.822,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-60,20/12.5,90,0..0.2,CD_WP,.78,.78,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-60,20/12.5,0,0..0.2,CD_WP,.91,.91,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-60,40/25,90,0..0.2,CD_WP,.705,.705,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-60,40/25,0,0..0.2,CD_WP,.91,.91,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-60,75/47,90,0..0.2,CD_WP,.67,.67,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-60,75/47,0,0..0.2,CD_WP,.740,.740,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-50,20/12.5,90,0..0.2,CD_WP,.62,.62,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-50,20/12.5,0,0..0.2,CD_WP,.75,.75,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-50,40/25,90,0..0.2,CD_WP,.565,.565,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-50,40/25,0,0..0.2,CD_WP,.75,.75,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-50,75/47,90,0..0.2,CD_WP,.507,.507,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-50,75/47,0,0..0.2,CD_WP,.640,.640,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-40,20/12.5,90,0..0.2,CD_WP,.50,.50,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-40,20/12.5,0,0..0.2,CD_WP,.59,.59,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-40,40/25,90,0..0.2,CD_WP,.430,.430,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-40,40/25,0,0..0.2,CD_WP,.54,.54,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-40,75/47,90,0..0.2,CD_WP,.450,.450,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-40,75/47,0,0..0.2,CD_WP,.550,.550,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-36,20/12.5,90,0..0.2,CD_WP,.40,.40,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-36,20/12.5,0,0..0.2,CD_WP,.53,.53,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-36,40/25,90,0..0.2,CD_WP,.335,.335,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-36,40/25,0,0..0.2,CD_WP,.468,.468,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-36,75/47,90,0..0.2,CD_WP,.400,.400,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-36,75/47,0,0..0.2,CD_WP,.525,.525,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-32,20/12.5,90,0..0.2,CD_WP,.32,.32,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-32,20/12.5,0,0..0.2,CD_WP,.48,.48,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-32,40/25,90,0..0.2,CD_WP,.245,.245,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-32,40/25,0,0..0.2,CD_WP,.405,.405,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-32,75/47,90,0..0.2,CD_WP,.350,.350,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-32,75/47,0,0..0.2,CD_WP,.500,.500,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-28,20/12.5,90,0..0.2,CD_WP,.23,.23,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-28,20/12.5,0,0..0.2,CD_WP,.42,.42,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-28,40/25,90,0..0.2,CD_WP,.180,.180,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-28,40/25,0,0..0.2,CD_WP,.352,.352,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-28,75/47,90,0..0.2,CD_WP,.309,.309,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-28,75/47,0,0..0.2,CD_WP,.480,.480,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-24,20/12.5,90,0..0.2,CD_WP,.17,.17,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-24,20/12.5,0,0..0.2,CD_WP,.36,.36,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-24,40/25,90,0..0.2,CD_WP,.130,.130,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-24,40/25,0,0..0.2,CD_WP,.310,.310,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-24,75/47,90,0..0.2,CD_WP,.278,.278,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-24,75/47,0,0..0.2,CD_WP,.462,.462,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-20,20/12.5,90,0..0.2,CD_WP,.11,.11,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-20,20/12.5,0,0..0.2,CD_WP,.33,.33,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-20,40/25,90,0..0.2,CD_WP,.090,.090,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-20,40/25,0,0..0.2,CD_WP,.282,.282,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-20,75/47,90,0..0.2,CD_WP,.260,.260,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-20,75/47,0,0..0.2,CD_WP,.450,.450,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-16,20/12.5,90,0..0.2,CD_WP,.07,.07,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-16,20/12.5,0,0..0.2,CD_WP,.28,.28,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-16,40/25,90,0..0.2,CD_WP,.065,.065,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-16,40/25,0,0..0.2,CD_WP,.263,.263,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-16,75/47,90,0..0.2,CD_WP,.243,.243,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-16,75/47,0,0..0.2,CD_WP,.440,.440,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-12,20/12.5,90,0..0.2,CD_WP,.05,.05,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-12,20/12.5,0,0..0.2,CD_WP,.253,.253,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-12,40/25,90,0..0.2,CD_WP,.058,.058,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-12,40/25,0,0..0.2,CD_WP,.253,.253,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-12,75/47,90,0..0.2,CD_WP,.246,.246,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-12,75/47,0,0..0.2,CD_WP,.445,.445,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-8,20/12.5,90,0..0.2,CD_WP,.033,.033,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-8,20/12.5,0,0..0.2,CD_WP,.26,.26,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-8,40/25,90,0..0.2,CD_WP,.076,.076,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-8,40/25,0,0..0.2,CD_WP,.267,.267,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-8,75/47,90,0..0.2,CD_WP,.282,.282,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-8,75/47,0,0..0.2,CD_WP,.485,.485,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-4,20/12.5,90,0..0.2,CD_WP,.044,.044,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-4,20/12.5,0,0..0.2,CD_WP,.26,.26,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-4,40/25,90,0..0.2,CD_WP,.106,.106,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-4,40/25,0,0..0.2,CD_WP,.307,.307,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-4,75/47,90,0..0.2,CD_WP,.330,.330,TRANSCRIBED,1,
+4-IV,391,B-41,alpha_W_deg,-4,75/47,0,0..0.2,CD_WP,.536,.536,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,0,20/12.5,90,0..0.2,CD_WP,.072,.072,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,0,20/12.5,0,0..0.2,CD_WP,.3,.3,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,0,40/25,90,0..0.2,CD_WP,.141,.141,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,0,40/25,0,0..0.2,CD_WP,.345,.345,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,0,75/47,90,0..0.2,CD_WP,.372,.372,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,0,75/47,0,0..0.2,CD_WP,.580,.580,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,4,20/12.5,90,0..0.2,CD_WP,.109,.109,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,4,20/12.5,0,0..0.2,CD_WP,.32,.32,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,4,40/25,90,0..0.2,CD_WP,.186,.186,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,4,40/25,0,0..0.2,CD_WP,.394,.394,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,4,75/47,90,0..0.2,CD_WP,.424,.424,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,4,75/47,0,0..0.2,CD_WP,.636,.636,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,8,20/12.5,90,0..0.2,CD_WP,.157,.157,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,8,20/12.5,0,0..0.2,CD_WP,.37,.37,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,8,40/25,90,0..0.2,CD_WP,.243,.243,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,8,40/25,0,0..0.2,CD_WP,.453,.453,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,8,75/47,90,0..0.2,CD_WP,.492,.492,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,8,75/47,0,0..0.2,CD_WP,.706,.706,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,12,20/12.5,90,0..0.2,CD_WP,.227,.227,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,12,20/12.5,0,0..0.2,CD_WP,.43,.43,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,12,40/25,90,0..0.2,CD_WP,.322,.322,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,12,40/25,0,0..0.2,CD_WP,.537,.537,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,12,75/47,90,0..0.2,CD_WP,.580,.580,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,12,75/47,0,0..0.2,CD_WP,.778,.778,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,16,20/12.5,90,0..0.2,CD_WP,.29,.29,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,16,20/12.5,0,0..0.2,CD_WP,.48,.48,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,16,40/25,90,0..0.2,CD_WP,.404,.404,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,16,40/25,0,0..0.2,CD_WP,.589,.589,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,16,75/47,90,0..0.2,CD_WP,.667,.667,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,16,75/47,0,0..0.2,CD_WP,.814,.814,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,20,20/12.5,90,0..0.2,CD_WP,.38,.38,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,20,20/12.5,0,0..0.2,CD_WP,.53,.53,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,20,40/25,90,0..0.2,CD_WP,.528,.528,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,20,40/25,0,0..0.2,CD_WP,.630,.630,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,20,75/47,90,0..0.2,CD_WP,.730,.730,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,20,75/47,0,0..0.2,CD_WP,.839,.839,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,24,20/12.5,90,0..0.2,CD_WP,.51,.51,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,24,20/12.5,0,0..0.2,CD_WP,.63,.63,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,24,40/25,90,0..0.2,CD_WP,.630,.630,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,24,40/25,0,0..0.2,CD_WP,.690,.690,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,24,75/47,90,0..0.2,CD_WP,.790,.790,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,24,75/47,0,0..0.2,CD_WP,.880,.880,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,28,20/12.5,90,0..0.2,CD_WP,.61,.61,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,28,20/12.5,0,0..0.2,CD_WP,.70,.70,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,28,40/25,90,0..0.2,CD_WP,.710,.710,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,28,40/25,0,0..0.2,CD_WP,.748,.748,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,28,75/47,90,0..0.2,CD_WP,.838,.838,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,28,75/47,0,0..0.2,CD_WP,.920,.920,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,32,20/12.5,90,0..0.2,CD_WP,.70,.70,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,32,20/12.5,0,0..0.2,CD_WP,.75,.75,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,32,40/25,90,0..0.2,CD_WP,.764,.764,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,32,40/25,0,0..0.2,CD_WP,.800,.800,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,32,75/47,90,0..0.2,CD_WP,.883,.883,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,32,75/47,0,0..0.2,CD_WP,.955,.955,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,36,20/12.5,90,0..0.2,CD_WP,.75,.75,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,36,20/12.5,0,0..0.2,CD_WP,.78,.78,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,36,40/25,90,0..0.2,CD_WP,.805,.805,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,36,40/25,0,0..0.2,CD_WP,.845,.845,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,36,75/47,90,0..0.2,CD_WP,.950,.950,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,36,75/47,0,0..0.2,CD_WP,.985,.985,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,40,20/12.5,90,0..0.2,CD_WP,.79,.79,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,40,20/12.5,0,0..0.2,CD_WP,.83,.83,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,40,40/25,90,0..0.2,CD_WP,.865,.865,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,40,40/25,0,0..0.2,CD_WP,.888,.888,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,40,75/47,90,0..0.2,CD_WP,1.025,1.025,TRANSCRIBED,1,
+4-IV,392,B-42,alpha_W_deg,40,75/47,0,0..0.2,CD_WP,1.015,1.015,TRANSCRIBED,1,
+4-IV,393,B-43,alpha_W_deg,-180,0/0,0,0..0.2,CD_WP,.3,.3,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-180,20/12.5,0,0..0.2,CD_WP,.4,.4,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-180,40/25,0,0..0.2,CD_WP,.45,.45,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-180,75/47,0,0..0.2,CD_WP,.5,.5,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-170,0/0,0,0..0.2,CD_WP,.4,.4,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-170,20/12.5,0,0..0.2,CD_WP,.5,.5,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-170,40/25,0,0..0.2,CD_WP,.58,.58,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-170,75/47,0,0..0.2,CD_WP,.6,.6,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-160,0/0,0,0..0.2,CD_WP,.55,.55,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-160,20/12.5,0,0..0.2,CD_WP,.6,.6,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-160,40/25,0,0..0.2,CD_WP,.65,.65,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-160,75/47,0,0..0.2,CD_WP,.67,.67,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-150,0/0,0,0..0.2,CD_WP,.65,.65,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-150,20/12.5,0,0..0.2,CD_WP,.7,.7,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-150,40/25,0,0..0.2,CD_WP,.71,.71,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-150,75/47,0,0..0.2,CD_WP,.72,.72,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-140,0/0,0,0..0.2,CD_WP,.75,.75,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-140,20/12.5,0,0..0.2,CD_WP,.75,.75,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-140,40/25,0,0..0.2,CD_WP,.77,.77,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-140,75/47,0,0..0.2,CD_WP,.77,.77,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-130,0/0,0,0..0.2,CD_WP,.82,.82,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-130,20/12.5,0,0..0.2,CD_WP,.8,.8,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-130,40/25,0,0..0.2,CD_WP,.8,.8,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-130,75/47,0,0..0.2,CD_WP,.8,.8,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-120,0/0,0,0..0.2,CD_WP,.86,.86,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-120,20/12.5,0,0..0.2,CD_WP,.91,.91,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-120,40/25,0,0..0.2,CD_WP,.91,.91,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-120,75/47,0,0..0.2,CD_WP,.83,.83,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-110,0/0,0,0..0.2,CD_WP,.92,.92,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-110,20/12.5,0,0..0.2,CD_WP,1.15,1.15,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-110,40/25,0,0..0.2,CD_WP,1.12,1.12,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-110,75/47,0,0..0.2,CD_WP,.86,.86,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-100,0/0,0,0..0.2,CD_WP,.95,.95,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-100,20/12.5,0,0..0.2,CD_WP,1.45,1.45,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-100,40/25,0,0..0.2,CD_WP,1.33,1.33,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-100,75/47,0,0..0.2,CD_WP,.88,.88,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-90,0/0,0,0..0.2,CD_WP,.96,.96,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-90,20/12.5,0,0..0.2,CD_WP,1.57,1.57,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-90,40/25,0,0..0.2,CD_WP,1.44,1.44,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-90,75/47,0,0..0.2,CD_WP,.9,.9,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-80,0/0,0,0..0.2,CD_WP,.93,.93,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-80,20/12.5,0,0..0.2,CD_WP,1.45,1.45,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-80,40/25,0,0..0.2,CD_WP,1.33,1.33,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-80,75/47,0,0..0.2,CD_WP,.878,.878,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-70,0/0,0,0..0.2,CD_WP,.91,.91,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-70,20/12.5,0,0..0.2,CD_WP,1.15,1.15,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-70,40/25,0,0..0.2,CD_WP,1.12,1.12,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-70,75/47,0,0..0.2,CD_WP,.822,.822,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-60,0/0,0,0..0.2,CD_WP,.86,.86,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-60,20/12.5,0,0..0.2,CD_WP,.91,.91,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-60,40/25,0,0..0.2,CD_WP,.91,.91,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-60,75/47,0,0..0.2,CD_WP,.74,.74,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-50,0/0,0,0..0.2,CD_WP,.78,.78,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-50,20/12.5,0,0..0.2,CD_WP,.75,.75,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-50,40/25,0,0..0.2,CD_WP,.75,.75,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-50,75/47,0,0..0.2,CD_WP,.64,.64,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-40,0/0,0,0..0.2,CD_WP,.685,.685,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-40,20/12.5,0,0..0.2,CD_WP,.59,.59,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-40,40/25,0,0..0.2,CD_WP,.54,.54,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,393,B-43,alpha_W_deg,-40,75/47,0,0..0.2,CD_WP,.55,.55,TRANSCRIBED,1,extension; -40..40 uses Tables 4-III/4-IV; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,40,0/0,0,0..0.2,CD_WP,.748,.748,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,40,20/12.5,0,0..0.2,CD_WP,.83,.83,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,40,40/25,0,0..0.2,CD_WP,.888,.888,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,40,75/47,0,0..0.2,CD_WP,1.015,1.015,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,50,0/0,0,0..0.2,CD_WP,.9,.9,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,50,20/12.5,0,0..0.2,CD_WP,.91,.91,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,50,40/25,0,0..0.2,CD_WP,.97,.97,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,50,75/47,0,0..0.2,CD_WP,1.04,1.04,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,60,0/0,0,0..0.2,CD_WP,1.0,1.0,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,60,20/12.5,0,0..0.2,CD_WP,.98,.98,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,60,40/25,0,0..0.2,CD_WP,1.04,1.04,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,60,75/47,0,0..0.2,CD_WP,1.045,1.045,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,70,0/0,0,0..0.2,CD_WP,1.07,1.07,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,70,20/12.5,0,0..0.2,CD_WP,1.05,1.05,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,70,40/25,0,0..0.2,CD_WP,1.06,1.06,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,70,75/47,0,0..0.2,CD_WP,1.05,1.05,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,80,0/0,0,0..0.2,CD_WP,1.12,1.12,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,80,20/12.5,0,0..0.2,CD_WP,1.09,1.09,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,80,40/25,0,0..0.2,CD_WP,1.08,1.08,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,80,75/47,0,0..0.2,CD_WP,1.055,1.055,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,90,0/0,0,0..0.2,CD_WP,1.15,1.15,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,90,20/12.5,0,0..0.2,CD_WP,1.12,1.12,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,90,40/25,0,0..0.2,CD_WP,1.09,1.09,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,90,75/47,0,0..0.2,CD_WP,1.06,1.06,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,100,0/0,0,0..0.2,CD_WP,1.13,1.13,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,100,20/12.5,0,0..0.2,CD_WP,1.1,1.1,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,100,40/25,0,0..0.2,CD_WP,1.07,1.07,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,100,75/47,0,0..0.2,CD_WP,1.05,1.05,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,110,0/0,0,0..0.2,CD_WP,1.1,1.1,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,110,20/12.5,0,0..0.2,CD_WP,1.08,1.08,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,110,40/25,0,0..0.2,CD_WP,1.05,1.05,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,110,75/47,0,0..0.2,CD_WP,1.02,1.02,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,120,0/0,0,0..0.2,CD_WP,1.05,1.05,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,120,20/12.5,0,0..0.2,CD_WP,1.06,1.06,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,120,40/25,0,0..0.2,CD_WP,1.02,1.02,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,120,75/47,0,0..0.2,CD_WP,.99,.99,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,130,0/0,0,0..0.2,CD_WP,1.0,1.0,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,130,20/12.5,0,0..0.2,CD_WP,1.02,1.02,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,130,40/25,0,0..0.2,CD_WP,1.0,1.0,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,130,75/47,0,0..0.2,CD_WP,.96,.96,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,140,0/0,0,0..0.2,CD_WP,.95,.95,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,140,20/12.5,0,0..0.2,CD_WP,.98,.98,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,140,40/25,0,0..0.2,CD_WP,.96,.96,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,140,75/47,0,0..0.2,CD_WP,.92,.92,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,150,0/0,0,0..0.2,CD_WP,.85,.85,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,150,20/12.5,0,0..0.2,CD_WP,.88,.88,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,150,40/25,0,0..0.2,CD_WP,.87,.87,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,150,75/47,0,0..0.2,CD_WP,.84,.84,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,160,0/0,0,0..0.2,CD_WP,.7,.7,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,160,20/12.5,0,0..0.2,CD_WP,.74,.74,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,160,40/25,0,0..0.2,CD_WP,.78,.78,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,160,75/47,0,0..0.2,CD_WP,.8,.8,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,170,0/0,0,0..0.2,CD_WP,.5,.5,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,170,20/12.5,0,0..0.2,CD_WP,.55,.55,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,170,40/25,0,0..0.2,CD_WP,.62,.62,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,170,75/47,0,0..0.2,CD_WP,.7,.7,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,180,0/0,0,0..0.2,CD_WP,.3,.3,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,180,20/12.5,0,0..0.2,CD_WP,.4,.4,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,180,40/25,0,0..0.2,CD_WP,.45,.45,TRANSCRIBED,1,extension; repeated source nodes retained
+4-IV,394,B-44,alpha_W_deg,180,75/47,0,0..0.2,CD_WP,.5,.5,TRANSCRIBED,1,extension; repeated source nodes retained
+4-V(a),395,B-45,alpha_W_deg,-90,0/0,90,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,-90,20/12.5,90,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,-90,40/25,90,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,-90,75/47,90,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,-16,0/0,90,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,-16,20/12.5,90,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,-16,40/25,90,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,-16,75/47,90,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,-12,0/0,90,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,-12,20/12.5,90,0..0.2,epsilon_W_HOGE,.45,.45,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,-12,40/25,90,0..0.2,epsilon_W_HOGE,.95,.95,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,-12,75/47,90,0..0.2,epsilon_W_HOGE,.95,.95,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,-8,0/0,90,0..0.2,epsilon_W_HOGE,.06,.06,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,-8,20/12.5,90,0..0.2,epsilon_W_HOGE,1.25,1.25,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,-8,40/25,90,0..0.2,epsilon_W_HOGE,2.54,2.54,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,-8,75/47,90,0..0.2,epsilon_W_HOGE,2.54,2.54,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,-4,0/0,90,0..0.2,epsilon_W_HOGE,1.32,1.32,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,-4,20/12.5,90,0..0.2,epsilon_W_HOGE,2.60,2.60,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,-4,40/25,90,0..0.2,epsilon_W_HOGE,3.92,3.92,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,-4,75/47,90,0..0.2,epsilon_W_HOGE,3.92,3.92,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,0,0/0,90,0..0.2,epsilon_W_HOGE,2.58,2.58,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,0,20/12.5,90,0..0.2,epsilon_W_HOGE,4.08,4.08,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,0,40/25,90,0..0.2,epsilon_W_HOGE,5.40,5.40,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,0,75/47,90,0..0.2,epsilon_W_HOGE,5.40,5.40,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,4,0/0,90,0..0.2,epsilon_W_HOGE,3.84,3.84,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,4,20/12.5,90,0..0.2,epsilon_W_HOGE,5.35,5.35,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,4,40/25,90,0..0.2,epsilon_W_HOGE,6.88,6.88,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,4,75/47,90,0..0.2,epsilon_W_HOGE,6.88,6.88,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,8,0/0,90,0..0.2,epsilon_W_HOGE,5.10,5.10,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,8,20/12.5,90,0..0.2,epsilon_W_HOGE,6.60,6.60,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,8,40/25,90,0..0.2,epsilon_W_HOGE,8.26,8.26,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,8,75/47,90,0..0.2,epsilon_W_HOGE,8.26,8.26,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,12,0/0,90,0..0.2,epsilon_W_HOGE,5.90,5.90,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,12,20/12.5,90,0..0.2,epsilon_W_HOGE,7.40,7.40,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,12,40/25,90,0..0.2,epsilon_W_HOGE,8.90,8.90,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,12,75/47,90,0..0.2,epsilon_W_HOGE,8.90,8.90,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,16,0/0,90,0..0.2,epsilon_W_HOGE,6.30,6.30,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,16,20/12.5,90,0..0.2,epsilon_W_HOGE,7.55,7.55,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,16,40/25,90,0..0.2,epsilon_W_HOGE,8.80,8.80,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,16,75/47,90,0..0.2,epsilon_W_HOGE,8.80,8.80,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,20,0/0,90,0..0.2,epsilon_W_HOGE,6.00,6.00,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,20,20/12.5,90,0..0.2,epsilon_W_HOGE,6.70,6.70,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,20,40/25,90,0..0.2,epsilon_W_HOGE,7.30,7.30,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,20,75/47,90,0..0.2,epsilon_W_HOGE,7.30,7.30,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,24,0/0,90,0..0.2,epsilon_W_HOGE,4.00,4.00,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,24,20/12.5,90,0..0.2,epsilon_W_HOGE,4.40,4.40,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,24,40/25,90,0..0.2,epsilon_W_HOGE,4.80,4.80,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,24,75/47,90,0..0.2,epsilon_W_HOGE,4.80,4.80,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,28,0/0,90,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,28,20/12.5,90,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,28,40/25,90,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,28,75/47,90,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,90,0/0,90,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,90,20/12.5,90,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,90,40/25,90,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(a),395,B-45,alpha_W_deg,90,75/47,90,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,-90,0/0,60,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,-90,20/12.5,60,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,-90,40/25,60,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,-90,75/47,60,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,-16,0/0,60,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,-16,20/12.5,60,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,-16,40/25,60,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,-16,75/47,60,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,-12,0/0,60,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,-12,20/12.5,60,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,-12,40/25,60,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,-12,75/47,60,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,-8,0/0,60,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,-8,20/12.5,60,0..0.2,epsilon_W_HOGE,.9,.9,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,-8,40/25,60,0..0.2,epsilon_W_HOGE,1.78,1.78,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,-8,75/47,60,0..0.2,epsilon_W_HOGE,1.78,1.78,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,-4,0/0,60,0..0.2,epsilon_W_HOGE,1.2,1.2,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,-4,20/12.5,60,0..0.2,epsilon_W_HOGE,2.25,2.25,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,-4,40/25,60,0..0.2,epsilon_W_HOGE,3.38,3.38,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,-4,75/47,60,0..0.2,epsilon_W_HOGE,3.38,3.38,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,0,0/0,60,0..0.2,epsilon_W_HOGE,2.6,2.6,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,0,20/12.5,60,0..0.2,epsilon_W_HOGE,3.80,3.80,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,0,40/25,60,0..0.2,epsilon_W_HOGE,4.98,4.98,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,0,75/47,60,0..0.2,epsilon_W_HOGE,4.98,4.98,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,4,0/0,60,0..0.2,epsilon_W_HOGE,4.0,4.0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,4,20/12.5,60,0..0.2,epsilon_W_HOGE,5.30,5.30,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,4,40/25,60,0..0.2,epsilon_W_HOGE,6.58,6.58,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,4,75/47,60,0..0.2,epsilon_W_HOGE,6.58,6.58,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,8,0/0,60,0..0.2,epsilon_W_HOGE,5.2,5.2,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,8,20/12.5,60,0..0.2,epsilon_W_HOGE,6.80,6.80,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,8,40/25,60,0..0.2,epsilon_W_HOGE,8.18,8.18,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,8,75/47,60,0..0.2,epsilon_W_HOGE,8.18,8.18,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,12,0/0,60,0..0.2,epsilon_W_HOGE,6.4,6.4,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,12,20/12.5,60,0..0.2,epsilon_W_HOGE,7.80,7.80,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,12,40/25,60,0..0.2,epsilon_W_HOGE,9.2,9.2,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,12,75/47,60,0..0.2,epsilon_W_HOGE,9.2,9.2,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,16,0/0,60,0..0.2,epsilon_W_HOGE,6.8,6.8,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,16,20/12.5,60,0..0.2,epsilon_W_HOGE,8.20,8.20,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,16,40/25,60,0..0.2,epsilon_W_HOGE,9.5,9.5,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,16,75/47,60,0..0.2,epsilon_W_HOGE,9.5,9.5,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,20,0/0,60,0..0.2,epsilon_W_HOGE,6.3,6.3,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,20,20/12.5,60,0..0.2,epsilon_W_HOGE,7.40,7.40,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,20,40/25,60,0..0.2,epsilon_W_HOGE,8.4,8.4,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,20,75/47,60,0..0.2,epsilon_W_HOGE,8.4,8.4,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,24,0/0,60,0..0.2,epsilon_W_HOGE,4.1,4.1,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,24,20/12.5,60,0..0.2,epsilon_W_HOGE,4.80,4.80,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,24,40/25,60,0..0.2,epsilon_W_HOGE,5.5,5.5,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,24,75/47,60,0..0.2,epsilon_W_HOGE,5.5,5.5,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,28,0/0,60,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,28,20/12.5,60,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,28,40/25,60,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,28,75/47,60,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,90,0/0,60,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,90,20/12.5,60,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,90,40/25,60,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(b),396,B-46,alpha_W_deg,90,75/47,60,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,-90,0/0,30,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,-90,20/12.5,30,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,-90,40/25,30,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,-90,75/47,30,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,-16,0/0,30,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,-16,20/12.5,30,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,-16,40/25,30,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,-16,75/47,30,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,-12,0/0,30,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,-12,20/12.5,30,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,-12,40/25,30,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,-12,75/47,30,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,-8,0/0,30,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,-8,20/12.5,30,0..0.2,epsilon_W_HOGE,.7,.7,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,-8,40/25,30,0..0.2,epsilon_W_HOGE,1.3,1.3,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,-8,75/47,30,0..0.2,epsilon_W_HOGE,1.3,1.3,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,-4,0/0,30,0..0.2,epsilon_W_HOGE,1.18,1.18,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,-4,20/12.5,30,0..0.2,epsilon_W_HOGE,2.1,2.1,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,-4,40/25,30,0..0.2,epsilon_W_HOGE,2.9,2.9,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,-4,75/47,30,0..0.2,epsilon_W_HOGE,2.9,2.9,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,0,0/0,30,0..0.2,epsilon_W_HOGE,2.70,2.70,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,0,20/12.5,30,0..0.2,epsilon_W_HOGE,3.6,3.6,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,0,40/25,30,0..0.2,epsilon_W_HOGE,4.5,4.5,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,0,75/47,30,0..0.2,epsilon_W_HOGE,4.5,4.5,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,4,0/0,30,0..0.2,epsilon_W_HOGE,4.22,4.22,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,4,20/12.5,30,0..0.2,epsilon_W_HOGE,5.2,5.2,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,4,40/25,30,0..0.2,epsilon_W_HOGE,6.1,6.1,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,4,75/47,30,0..0.2,epsilon_W_HOGE,6.1,6.1,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,8,0/0,30,0..0.2,epsilon_W_HOGE,5.74,5.74,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,8,20/12.5,30,0..0.2,epsilon_W_HOGE,6.7,6.7,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,8,40/25,30,0..0.2,epsilon_W_HOGE,7.7,7.7,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,8,75/47,30,0..0.2,epsilon_W_HOGE,7.7,7.7,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,12,0/0,30,0..0.2,epsilon_W_HOGE,7.0,7.0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,12,20/12.5,30,0..0.2,epsilon_W_HOGE,7.9,7.9,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,12,40/25,30,0..0.2,epsilon_W_HOGE,8.9,8.9,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,12,75/47,30,0..0.2,epsilon_W_HOGE,8.9,8.9,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,16,0/0,30,0..0.2,epsilon_W_HOGE,7.3,7.3,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,16,20/12.5,30,0..0.2,epsilon_W_HOGE,8.2,8.2,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,16,40/25,30,0..0.2,epsilon_W_HOGE,9.1,9.1,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,16,75/47,30,0..0.2,epsilon_W_HOGE,9.1,9.1,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,20,0/0,30,0..0.2,epsilon_W_HOGE,6.7,6.7,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,20,20/12.5,30,0..0.2,epsilon_W_HOGE,7.4,7.4,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,20,40/25,30,0..0.2,epsilon_W_HOGE,8.1,8.1,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,20,75/47,30,0..0.2,epsilon_W_HOGE,8.1,8.1,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,24,0/0,30,0..0.2,epsilon_W_HOGE,4.1,4.1,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,24,20/12.5,30,0..0.2,epsilon_W_HOGE,4.8,4.8,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,24,40/25,30,0..0.2,epsilon_W_HOGE,5.5,5.5,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,24,75/47,30,0..0.2,epsilon_W_HOGE,5.5,5.5,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,28,0/0,30,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,28,20/12.5,30,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,28,40/25,30,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,28,75/47,30,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,90,0/0,30,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,90,20/12.5,30,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,90,40/25,30,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(c),397,B-47,alpha_W_deg,90,75/47,30,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,-90,0/0,15,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,-90,20/12.5,15,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,-90,40/25,15,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,-90,75/47,15,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,-16,0/0,15,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,-16,20/12.5,15,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,-16,40/25,15,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,-16,75/47,15,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,-12,0/0,15,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,-12,20/12.5,15,0..0.2,epsilon_W_HOGE,.4,.4,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,-12,40/25,15,0..0.2,epsilon_W_HOGE,.7,.7,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,-12,75/47,15,0..0.2,epsilon_W_HOGE,.7,.7,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,-8,0/0,15,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,-8,20/12.5,15,0..0.2,epsilon_W_HOGE,1.2,1.2,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,-8,40/25,15,0..0.2,epsilon_W_HOGE,2.4,2.4,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,-8,75/47,15,0..0.2,epsilon_W_HOGE,2.4,2.4,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,-4,0/0,15,0..0.2,epsilon_W_HOGE,1.26,1.26,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,-4,20/12.5,15,0..0.2,epsilon_W_HOGE,2.7,2.7,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,-4,40/25,15,0..0.2,epsilon_W_HOGE,4.1,4.1,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,-4,75/47,15,0..0.2,epsilon_W_HOGE,4.1,4.1,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,0,0/0,15,0..0.2,epsilon_W_HOGE,2.80,2.80,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,0,20/12.5,15,0..0.2,epsilon_W_HOGE,4.3,4.3,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,0,40/25,15,0..0.2,epsilon_W_HOGE,5.8,5.8,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,0,75/47,15,0..0.2,epsilon_W_HOGE,5.8,5.8,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,4,0/0,15,0..0.2,epsilon_W_HOGE,4.34,4.34,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,4,20/12.5,15,0..0.2,epsilon_W_HOGE,6.0,6.0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,4,40/25,15,0..0.2,epsilon_W_HOGE,7.5,7.5,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,4,75/47,15,0..0.2,epsilon_W_HOGE,7.5,7.5,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,8,0/0,15,0..0.2,epsilon_W_HOGE,5.88,5.88,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,8,20/12.5,15,0..0.2,epsilon_W_HOGE,7.1,7.1,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,8,40/25,15,0..0.2,epsilon_W_HOGE,9.2,9.2,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,8,75/47,15,0..0.2,epsilon_W_HOGE,9.2,9.2,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,12,0/0,15,0..0.2,epsilon_W_HOGE,7.1,7.1,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,12,20/12.5,15,0..0.2,epsilon_W_HOGE,8.7,8.7,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,12,40/25,15,0..0.2,epsilon_W_HOGE,10.4,10.4,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,12,75/47,15,0..0.2,epsilon_W_HOGE,10.4,10.4,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,16,0/0,15,0..0.2,epsilon_W_HOGE,7.3,7.3,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,16,20/12.5,15,0..0.2,epsilon_W_HOGE,8.9,8.9,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,16,40/25,15,0..0.2,epsilon_W_HOGE,10.8,10.8,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,16,75/47,15,0..0.2,epsilon_W_HOGE,10.8,10.8,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,20,0/0,15,0..0.2,epsilon_W_HOGE,6.7,6.7,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,20,20/12.5,15,0..0.2,epsilon_W_HOGE,8.2,8.2,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,20,40/25,15,0..0.2,epsilon_W_HOGE,9.8,9.8,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,20,75/47,15,0..0.2,epsilon_W_HOGE,9.8,9.8,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,24,0/0,15,0..0.2,epsilon_W_HOGE,4.1,4.1,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,24,20/12.5,15,0..0.2,epsilon_W_HOGE,5.3,5.3,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,24,40/25,15,0..0.2,epsilon_W_HOGE,6.4,6.4,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,24,75/47,15,0..0.2,epsilon_W_HOGE,6.4,6.4,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,28,0/0,15,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,28,20/12.5,15,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,28,40/25,15,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,28,75/47,15,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,90,0/0,15,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,90,20/12.5,15,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,90,40/25,15,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(d),398,B-48,alpha_W_deg,90,75/47,15,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,-90,0/0,0,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,-90,20/12.5,0,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,-90,40/25,0,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,-90,75/47,0,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,-16,0/0,0,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,-16,20/12.5,0,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,-16,40/25,0,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,-16,75/47,0,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,-12,0/0,0,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,-12,20/12.5,0,0..0.2,epsilon_W_HOGE,.8,.8,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,-12,40/25,0,0..0.2,epsilon_W_HOGE,1.47,1.47,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,-12,75/47,0,0..0.2,epsilon_W_HOGE,1.47,1.47,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,-8,0/0,0,0..0.2,epsilon_W_HOGE,.09,.09,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,-8,20/12.5,0,0..0.2,epsilon_W_HOGE,1.6,1.6,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,-8,40/25,0,0..0.2,epsilon_W_HOGE,3.03,3.03,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,-8,75/47,0,0..0.2,epsilon_W_HOGE,3.03,3.03,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,-4,0/0,0,0..0.2,epsilon_W_HOGE,1.62,1.62,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,-4,20/12.5,0,0..0.2,epsilon_W_HOGE,3.1,3.1,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,-4,40/25,0,0..0.2,epsilon_W_HOGE,4.59,4.59,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,-4,75/47,0,0..0.2,epsilon_W_HOGE,4.59,4.59,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,0,0/0,0,0..0.2,epsilon_W_HOGE,3.15,3.15,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,0,20/12.5,0,0..0.2,epsilon_W_HOGE,4.7,4.7,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,0,40/25,0,0..0.2,epsilon_W_HOGE,6.15,6.15,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,0,75/47,0,0..0.2,epsilon_W_HOGE,6.15,6.15,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,4,0/0,0,0..0.2,epsilon_W_HOGE,4.68,4.68,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,4,20/12.5,0,0..0.2,epsilon_W_HOGE,6.2,6.2,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,4,40/25,0,0..0.2,epsilon_W_HOGE,7.71,7.71,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,4,75/47,0,0..0.2,epsilon_W_HOGE,7.71,7.71,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,8,0/0,0,0..0.2,epsilon_W_HOGE,6.21,6.21,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,8,20/12.5,0,0..0.2,epsilon_W_HOGE,7.8,7.8,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,8,40/25,0,0..0.2,epsilon_W_HOGE,9.27,9.27,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,8,75/47,0,0..0.2,epsilon_W_HOGE,9.27,9.27,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,12,0/0,0,0..0.2,epsilon_W_HOGE,7.1,7.1,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,12,20/12.5,0,0..0.2,epsilon_W_HOGE,8.5,8.5,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,12,40/25,0,0..0.2,epsilon_W_HOGE,9.8,9.8,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,12,75/47,0,0..0.2,epsilon_W_HOGE,9.8,9.8,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,16,0/0,0,0..0.2,epsilon_W_HOGE,7.5,7.5,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,16,20/12.5,0,0..0.2,epsilon_W_HOGE,8.6,8.6,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,16,40/25,0,0..0.2,epsilon_W_HOGE,9.7,9.7,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,16,75/47,0,0..0.2,epsilon_W_HOGE,9.7,9.7,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,20,0/0,0,0..0.2,epsilon_W_HOGE,7.0,7.0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,20,20/12.5,0,0..0.2,epsilon_W_HOGE,7.5,7.5,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,20,40/25,0,0..0.2,epsilon_W_HOGE,8.0,8.0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,20,75/47,0,0..0.2,epsilon_W_HOGE,8.0,8.0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,24,0/0,0,0..0.2,epsilon_W_HOGE,4.8,4.8,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,24,20/12.5,0,0..0.2,epsilon_W_HOGE,4.9,4.9,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,24,40/25,0,0..0.2,epsilon_W_HOGE,5.0,5.0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,24,75/47,0,0..0.2,epsilon_W_HOGE,5.0,5.0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,28,0/0,0,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,28,20/12.5,0,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,28,40/25,0,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,28,75/47,0,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,90,0/0,0,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,90,20/12.5,0,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,90,40/25,0,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-V(e),399,B-49,alpha_W_deg,90,75/47,0,0..0.2,epsilon_W_HOGE,0,0,TRANSCRIBED,deg,tabulated wing wake deflection; OGE
+4-VI,400,B-50,beta_m_deg,0,0/0,row,0,Cl_beta_at_CL0_M0,-.012,-.012,TRANSCRIBED,1/rad,
+4-VI,400,B-50,beta_m_deg,0,20/12.5|40/25|75/47,row,0,Cl_beta_at_CL0_M0,-.136,-.136,TRANSCRIBED,1/rad,
+4-VI,400,B-50,beta_m_deg,30,0/0,row,0,Cl_beta_at_CL0_M0,.089,.089,TRANSCRIBED,1/rad,
+4-VI,400,B-50,beta_m_deg,30,20/12.5|40/25|75/47,row,0,Cl_beta_at_CL0_M0,.064,.064,TRANSCRIBED,1/rad,
+4-VI,400,B-50,beta_m_deg,60,0/0,row,0,Cl_beta_at_CL0_M0,.078,.078,TRANSCRIBED,1/rad,
+4-VI,400,B-50,beta_m_deg,60,20/12.5|40/25|75/47,row,0,Cl_beta_at_CL0_M0,.034,.034,TRANSCRIBED,1/rad,
+4-VI,400,B-50,beta_m_deg,90,0/0,row,0,Cl_beta_at_CL0_M0,.039,.039,TRANSCRIBED,1/rad,
+4-VI,400,B-50,beta_m_deg,90,20/12.5|40/25|75/47,row,0,Cl_beta_at_CL0_M0,-.051,-.051,TRANSCRIBED,1/rad,
+4-VII,400,B-50,beta_m_deg,0,0/0,row,0,Cl_beta_over_CL_at_M0,.09,.09,TRANSCRIBED,1/rad,
+4-VII,400,B-50,beta_m_deg,0,20/12.5|40/25|75/47,row,0,Cl_beta_over_CL_at_M0,.09,.09,TRANSCRIBED,1/rad,
+4-VII,400,B-50,beta_m_deg,30,0/0,row,0,Cl_beta_over_CL_at_M0,0,0,TRANSCRIBED,1/rad,
+4-VII,400,B-50,beta_m_deg,30,20/12.5|40/25|75/47,row,0,Cl_beta_over_CL_at_M0,-.01,-.01,TRANSCRIBED,1/rad,
+4-VII,400,B-50,beta_m_deg,60,0/0,row,0,Cl_beta_over_CL_at_M0,-.02,-.02,TRANSCRIBED,1/rad,
+4-VII,400,B-50,beta_m_deg,60,20/12.5|40/25|75/47,row,0,Cl_beta_over_CL_at_M0,0,0,TRANSCRIBED,1/rad,
+4-VII,400,B-50,beta_m_deg,90,0/0,row,0,Cl_beta_over_CL_at_M0,-.05,-.05,TRANSCRIBED,1/rad,
+4-VII,400,B-50,beta_m_deg,90,20/12.5|40/25|75/47,row,0,Cl_beta_over_CL_at_M0,0,0,TRANSCRIBED,1/rad,
+4-VIII,401,B-51,beta_m_deg,0,0/0,row,not_stated,Cm_WP,.025,.025,TRANSCRIBED,1/rad_AS_PRINTED,printed unit 1/rad retained; physical use of Cm requires equation/unit review
+4-VIII,401,B-51,beta_m_deg,0,20/12.5,row,not_stated,Cm_WP,-.05,-.05,TRANSCRIBED,1/rad_AS_PRINTED,printed unit 1/rad retained; physical use of Cm requires equation/unit review
+4-VIII,401,B-51,beta_m_deg,0,40/25,row,not_stated,Cm_WP,-.110,-.110,TRANSCRIBED,1/rad_AS_PRINTED,printed unit 1/rad retained; physical use of Cm requires equation/unit review
+4-VIII,401,B-51,beta_m_deg,0,75/47,row,not_stated,Cm_WP,-.115,-.115,TRANSCRIBED,1/rad_AS_PRINTED,printed unit 1/rad retained; physical use of Cm requires equation/unit review
+4-VIII,401,B-51,beta_m_deg,15,0/0,row,not_stated,Cm_WP,.070,.070,TRANSCRIBED,1/rad_AS_PRINTED,printed unit 1/rad retained; physical use of Cm requires equation/unit review
+4-VIII,401,B-51,beta_m_deg,15,20/12.5,row,not_stated,Cm_WP,-.01,-.01,TRANSCRIBED,1/rad_AS_PRINTED,printed unit 1/rad retained; physical use of Cm requires equation/unit review
+4-VIII,401,B-51,beta_m_deg,15,40/25,row,not_stated,Cm_WP,-.090,-.090,TRANSCRIBED,1/rad_AS_PRINTED,printed unit 1/rad retained; physical use of Cm requires equation/unit review
+4-VIII,401,B-51,beta_m_deg,15,75/47,row,not_stated,Cm_WP,-.110,-.110,TRANSCRIBED,1/rad_AS_PRINTED,printed unit 1/rad retained; physical use of Cm requires equation/unit review
+4-VIII,401,B-51,beta_m_deg,30,0/0,row,not_stated,Cm_WP,.080,.080,TRANSCRIBED,1/rad_AS_PRINTED,printed unit 1/rad retained; physical use of Cm requires equation/unit review
+4-VIII,401,B-51,beta_m_deg,30,20/12.5,row,not_stated,Cm_WP,0,0,TRANSCRIBED,1/rad_AS_PRINTED,printed unit 1/rad retained; physical use of Cm requires equation/unit review
+4-VIII,401,B-51,beta_m_deg,30,40/25,row,not_stated,Cm_WP,-.060,-.060,TRANSCRIBED,1/rad_AS_PRINTED,printed unit 1/rad retained; physical use of Cm requires equation/unit review
+4-VIII,401,B-51,beta_m_deg,30,75/47,row,not_stated,Cm_WP,-.080,-.080,TRANSCRIBED,1/rad_AS_PRINTED,printed unit 1/rad retained; physical use of Cm requires equation/unit review
+4-VIII,401,B-51,beta_m_deg,60,0/0,row,not_stated,Cm_WP,.050,.050,TRANSCRIBED,1/rad_AS_PRINTED,printed unit 1/rad retained; physical use of Cm requires equation/unit review
+4-VIII,401,B-51,beta_m_deg,60,20/12.5,row,not_stated,Cm_WP,-.05,-.05,TRANSCRIBED,1/rad_AS_PRINTED,printed unit 1/rad retained; physical use of Cm requires equation/unit review
+4-VIII,401,B-51,beta_m_deg,60,40/25,row,not_stated,Cm_WP,-.110,-.110,TRANSCRIBED,1/rad_AS_PRINTED,printed unit 1/rad retained; physical use of Cm requires equation/unit review
+4-VIII,401,B-51,beta_m_deg,60,75/47,row,not_stated,Cm_WP,-.130,-.130,TRANSCRIBED,1/rad_AS_PRINTED,printed unit 1/rad retained; physical use of Cm requires equation/unit review
+4-VIII,401,B-51,beta_m_deg,90,0/0,row,not_stated,Cm_WP,-.025,-.025,TRANSCRIBED,1/rad_AS_PRINTED,printed unit 1/rad retained; physical use of Cm requires equation/unit review
+4-VIII,401,B-51,beta_m_deg,90,20/12.5,row,not_stated,Cm_WP,-.11,-.11,TRANSCRIBED,1/rad_AS_PRINTED,printed unit 1/rad retained; physical use of Cm requires equation/unit review
+4-VIII,401,B-51,beta_m_deg,90,40/25,row,not_stated,Cm_WP,-.170,-.170,TRANSCRIBED,1/rad_AS_PRINTED,printed unit 1/rad retained; physical use of Cm requires equation/unit review
+4-VIII,401,B-51,beta_m_deg,90,75/47,row,not_stated,Cm_WP,-.190,-.190,TRANSCRIBED,1/rad_AS_PRINTED,printed unit 1/rad retained; physical use of Cm requires equation/unit review

@@ -1,0 +1,26 @@
+{
+  "pass_all": true,
+  "test_groups": 9,
+  "failures": 0,
+  "errors": 0,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\86173\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "scope": "CSV coverage, selected source anchors and reader behavior; no aircraft simulation",
+  "source_csv_sha256": {
+    "CR166536_DIGITIZED_TABLES_BATCH1.csv": "b8e4357c9c0fdf9e813a4437f01f86815ea8335e0968889ca147dcfe027aeeee",
+    "CR166536_DIGITIZED_TABLES_BATCH2.csv": "f9ba5f7c1be87b0389790dfec31779d6fdc3774f079128d5cfbca1d976d4c1b4",
+    "CR166536_DIGITIZED_TABLES_BATCH3_SIDE_SLIP.csv": "c602bc59bc4ebd2c19f4bedfd7cda8a8400f0470040b9201371d0ccd198583c3",
+    "CR166536_DIGITIZED_TABLES_BATCH4_FUSELAGE_ALPHA.csv": "49caddb3434fca64db6c7cdc4cb652205e7c35523f411666605f9cd6f0fe1837",
+    "CR166536_DIGITIZED_TABLES_BATCH4_WING_T4I.csv": "2be9e153db7b02c10e80b5c20163fbfea4c7546eff31a03a3274bfd95efd2e12",
+    "CR166536_DIGITIZED_TABLES_BATCH5_FUSELAGE_SIDESLIP_MOMENTS.csv": "b7b0609baca2bcc3080ed3f8e8099fd44d2b97ea8a79f9457db4cdb86bbb9e98",
+    "CR166536_DIGITIZED_TABLES_BATCH6_WING_PYLON_CONSTANTS.csv": "8b41e6ba08fef22ecb07aa16fa1a969703087b0595f704c9349d3389aa592cd1",
+    "CR166536_HTAIL_TABLES.csv": "916b7c771917e74f77525d07f73a6c535a7185318c10dce39ada15e20b586dff",
+    "CR166536_TAIL_CONSTANTS.csv": "f5bf2ea6cdb806bbef052f08ea3e16dd47b647828287e255b9b3b97f491d3b4d",
+    "CR166536_VTAIL_TABLES.csv": "3b6d9336caf683fe42292bcee5187c2b003cbf50ea7e0b537295441cf0b41bfd",
+    "CR166536_WING_T4II_VIII.csv": "5a97a40f9e9ccae3fc2de84d94557e50ef4f133ef74f249f90100da1e7477104",
+    "CR166536_WING_T4IX_XVI.csv": "da8d64de9999d47a3a636eabd4fb9c6bbf9a98b8ea132062a537a1aa0049e09d"
+  },
+  "reader_sha256": "2f35115f7fc288f45dc1113782ae7be385ccbad491a616c06c42de079e77873f",
+  "check_script_sha256": "4c49077fd1a9d18aaa1dd1e1955e9162483744e525cce3d338361b137aae6207"
+}

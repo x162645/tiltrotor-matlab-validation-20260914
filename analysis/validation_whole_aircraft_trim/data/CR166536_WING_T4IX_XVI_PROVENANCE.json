@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "dataset": "CR166536_WING_T4IX_XVI.csv",
+  "source_pdf_file": "Ferguson_1988_CR-166536_XV15_generic_model.pdf",
+  "source_pdf_sha256": "a2013a314af5beb0c5e9bc5bbeb26f99be9a8aa63f2ebe07deaaf11d0d44d67d",
+  "source_title": "A Mathematical Model for Real Time Flight Simulation of a Generic Tilt Rotor Aircraft",
+  "source_report": "NASA CR-166536; STI TR-1195-2, September 1988 Rev. A (Final)",
+  "source_identity": "Appendix B: XV-15 Wing-Pylon Aerodynamics; source-model data tables, not new experimental measurements",
+  "digitization_date": "2026-09-13",
+  "table_pages": {
+    "4-IX": [
+      401,
+      402
+    ],
+    "4-X": [
+      402,
+      403
+    ],
+    "4-XI": [
+      403
+    ],
+    "4-XII": [
+      404
+    ],
+    "4-XIII": [
+      404
+    ],
+    "4-XIV": [
+      404
+    ],
+    "4-XV": [
+      405
+    ],
+    "4-XVI": [
+      405
+    ]
+  },
+  "printed_pages": [
+    "B-51",
+    "B-52",
+    "B-53",
+    "B-54",
+    "B-55"
+  ],
+  "read_method": "Each printed numeric cell read visually from Poppler PNG render; PDF has no searchable text layer. No OCR values copied without image inspection.",
+  "verified_numeric_cells": 81,
+  "counts_by_table": {
+    "TABLE_028_T4_IX": 12,
+    "TABLE_029_T4_X": 12,
+    "TABLE_030_T4_XI": 8,
+    "TABLE_031_T4_XII": 4,
+    "TABLE_032_T4_XIII": 12,
+    "TABLE_033_T4_XIV": 12,
+    "TABLE_034_T4_XV": 14,
+    "TABLE_035_T4_XVI": 7
+  },
+  "numeric_conversion": "None. Original decimal values retained; leading zeros normalized. No interpolation, fitting, SI conversion, unit rescaling, or invented grid nodes.",
+  "data_role": "DIGITIZED_SOURCE_MODEL_PARAMETER",
+  "allowed_read_status": [
+    "confirmed_visual",
+    "NOT_DEFINED",
+    "UNREADABLE",
+    "NEEDS_REVIEW"
+  ],
+  "status_counts": {
+    "confirmed_visual": 81
+  },
+  "not_defined_policy": {
+    "printed_not_defined_cell_count": 0,
+    "policy": "No printed numeric cell in these eight tables is blank or labelled Not Defined. Unprovided configurations are NOT_DEFINED conceptually, never zero; no extra CSV cells are synthesized.",
+    "specific_unprovided_regions": [
+      "4-IX/4-X Mach subtable supplies only X_FL1 and beta_m=90. Other flap/mast combinations at those Mach nodes are not supplied.",
+      "4-XI alpha_W < -8 deg extension is not prescribed; the table caption domain is abs(alpha_W) <= 8 deg, while the footnote explicitly covers 8 < alpha_W <= 25 deg and alpha_W > 25 deg.",
+      "4-XI equality endpoints are confirmed from the scan: abs(alpha_W) <= 8 deg table domain; 8 < alpha_W <= 25 deg interpolation; alpha_W > 25 deg K_l_delta_a=0.0. Negative alpha_W < -8 deg remains unspecified."
+    ]
+  },
+  "axes_and_configuration": {
+    "beta_m": {
+      "name": "mast angle",
+      "unit": "deg",
+      "convention": "0 deg Helicopter; 90 deg Airplane",
+      "basis": "B-34/PDF384 explicitly labels both modes. This is opposite to some domestic nacelle-angle conventions; no conversion was applied."
+    },
+    "M_N": {
+      "name": "Mach number",
+      "unit": "dimensionless",
+      "low_mach_header": "M_N < 0.2",
+      "high_mach_nodes": [
+        "0.2",
+        "0.4",
+        "0.5",
+        "0.6"
+      ],
+      "warning": "Low-Mach interval header is not collapsed to one sampled Mach number."
+    },
+    "flap_setting": {
+      "type": "categorical source codes",
+      "labels": [
+        "X_FL1=0/0",
+        "X_FL2=20/12.5",
+        "X_FL3=40/25",
+        "X_FL4=75/47"
+      ],
+      "warning": "Slash separates the source paired setting, not a numerical ratio. The pair order is not restated in Tables 4-IX to 4-XVI; retain literal labels until the control mapping is checked."
+    },
+    "alpha_WFS": {
+      "name": "wing freestream angle of attack",
+      "unit": "deg",
+      "frame": "local wing freestream/wind-axis state",
+      "basis": "A70/PDF138 B.3 uses the 57.3 radians-to-degrees factor. Table 4-IX uses C_LWPFS slope at C_LWP=0."
+    },
+    "alpha_bar_PYL": {
+      "name": "spinner/pylon incidence in mast axes",
+      "unit": "deg",
+      "definition": "alpha_bar_PYL=alpha_bar_SPN=atan(sqrt(U_MSP^2+V^2)/abs(W_MSP))*57.3",
+      "basis": "A76/PDF144 F.3 and A77/PDF145 H.2",
+      "warning": "Not interchangeable with body sideslip beta_F or alpha_PLAT used for body-axis transformation."
+    },
+    "delta_a": {
+      "name": "aileron deflection",
+      "unit": "deg",
+      "basis": "B32/PDF382 gives C_l_delta_a baseline in 1/deg; B54/PDF404 gives C_L_delta_a in 1/deg."
+    },
+    "force_moment_reference": {
+      "lift_drag": "local wind-axis lift/drag; q_WFS*S_WFS normalizes free-stream wing load before aileron decrement (A70)",
+      "aileron_lift": "q_WFS*S_W multiplier (A70)",
+      "aileron_roll_yaw": "S_W*b_W*((q_iwL+q_iwR)/2) multiplier (A71)",
+      "pylon_interference": "D_PYINT multiplies mean left/right immersed-wing dynamic pressure only (A75)",
+      "sideslip_pylon_drag": "2*q_PLAT*S_PLAT*K_PLAT; S_PLAT is one-nacelle projected lateral flat-plate area (A77)"
+    },
+    "reference_constants_context_only": {
+      "S_W": "181.0 ft^2",
+      "c_W": "5.225 ft",
+      "b_W": "32.17 ft",
+      "S_PYL": "24.05 ft^2",
+      "source": "B31/PDF381. Already present in batch6, not duplicated as new table cells."
+    }
+  },
+  "formulas_and_constants_transcribed": [
+    {
+      "table": "4-IX",
+      "pdf_page": 401,
+      "printed_page": "B-51",
+      "formula": "dC_LWPFS/dalpha_WFS at C_LWP=0 = (C_L1-C_L2)/(alpha_1-alpha_2)",
+      "constants": [],
+      "note": "Source does not identify a new pair of interpolation nodes here; do not invent C_L1, C_L2, alpha_1 or alpha_2."
+    },
+    {
+      "table": "4-X",
+      "pdf_page": 402,
+      "printed_page": "B-52",
+      "formula": "C_D0WP at C_L=0 = C_D(alpha_W_at_CL0) = C_D1 - ((C_D1-C_D2)*(alpha_1-alpha_W_at_CL0))/(alpha_1-alpha_2)",
+      "auxiliary_formula": "alpha_W_at_CL0 = alpha_1 - ((alpha_1-alpha_2)*C_L1)/(C_L1-C_L2)",
+      "constants": [],
+      "note": "The alpha_W term in the first printed formula is interpreted using the immediately following alpha_W_at_CL0 definition; no numerical values computed."
+    },
+    {
+      "table": "4-XI",
+      "pdf_page": 403,
+      "printed_page": "B-53",
+      "formula": "For 8 < alpha_W <= 25 deg, interpolate a straight line between tabulated K and zero; for alpha_W > 25 deg, K_l_delta_a=0.0; straight-line variation with mast angle.",
+      "caption": "for abs(alpha_W) <= 8 deg",
+      "constants": [
+        {
+          "symbol": "alpha_low",
+          "value": "8",
+          "unit": "deg",
+          "read_status": "confirmed_visual"
+        },
+        {
+          "symbol": "alpha_high",
+          "value": "25",
+          "unit": "deg",
+          "read_status": "confirmed_visual"
+        },
+        {
+          "symbol": "K_l_delta_a_above_25",
+          "value": "0.0",
+          "unit": "dimensionless",
+          "read_status": "confirmed_visual"
+        }
+      ],
+      "boundary_status": "CONFIRMED_VISUAL",
+      "note": "Equality endpoints are confirmed from the 360 dpi scan. The positive-alpha interpolation/zero rule is explicit; alpha_W < -8 deg extension is not supplied and must be rejected."
+    },
+    {
+      "table": "4-XIII and 4-XIV",
+      "pdf_page": 404,
+      "printed_page": "B-54",
+      "formula": "C_n_delta_a = K_n0_delta_a + K_n_delta_a*C_LWPFS*C_l_delta_a",
+      "constants": [],
+      "note": "Last factor is lowercase-l rolling-moment derivative, not uppercase-L lift derivative."
+    }
+  ],
+  "unit_decisions": {
+    "4-IX": "No table unit printed; 1/deg resolved from B51 slope formula and A70 degree-valued alpha_WFS. Values not multiplied by 57.3.",
+    "4-X": "No table unit printed; dimensionless from D_WP=q_WFS*S_WFS*C_DWPFS in A70.",
+    "4-XI": "No table unit printed; dimensionless multiplicative correction in A73.",
+    "4-XII": "1/deg explicitly printed in B54 table header.",
+    "4-XIII": "No table unit printed; 1/deg resolved from A71/A74 yaw derivative equation and B32 C_l_delta_a=0.006 1/deg.",
+    "4-XIV": "No table unit printed; dimensionless multiplier in B54/A74.",
+    "4-XV": "Title says Drag Coefficient but no table unit printed. A75 defines D_PYLN=D_PYINT*q_mean, so D_PYINT has area units ft^2; no S_W normalization.",
+    "4-XVI": "No table unit printed; dimensionless in A77 D_PLAT=2*q_PLAT*S_PLAT*K_PLAT."
+  },
+  "related_unit_audit_requested_by_parent": [
+    {
+      "table": "3-VIII",
+      "quantity": "l_beta",
+      "resolved_unit": "ft^3",
+      "evidence": "A43/PDF111 explicitly lists l_beta in ft^3; A44/PDF112 C gives l_prime_F=q_F*l_beta. Existing batch5 file was not edited."
+    },
+    {
+      "table": "4-VIII",
+      "quantity": "C_mWP",
+      "source_unit_text": "1/rad",
+      "context_resolved_unit": "dimensionless",
+      "status": "SOURCE_UNIT_CONFLICT",
+      "evidence": "A70/PDF138 B.4: M_prime_WP=q_WFS*S_W*c_W*C_mWP. A71/PDF139 says C_mWP=f(beta_m,delta_F), chosen at C_LWP approximately zero. Existing table values and files were not changed; do not multiply by 57.3."
+    }
+  ],
+  "verification": {
+    "all_81_numeric_cells_visually_read": true,
+    "numeric_rows_parse_as_finite": true,
+    "unique_source_cell_keys": 81,
+    "matlab_executed": false,
+    "scope": "data transcription only; no model, manifest, or check-script changes; no git commit",
+    "independent_second_reader": "Parent root agent independently re-rendered 360 dpi and confirmed <= endpoints on PDF403."
+  }
+}

@@ -1,0 +1,1748 @@
+{
+  "source_pdf_sha256": "a2013a314af5beb0c5e9bc5bbeb26f99be9a8aa63f2ebe07deaaf11d0d44d67d",
+  "data_role": "report_model_input_not_independent_experiment",
+  "records": 4357,
+  "numeric": 3926,
+  "files": [
+    {
+      "file": "CR166536_DIGITIZED_TABLES_BATCH1.csv",
+      "rows": 492,
+      "kind": "tables",
+      "sha256": "b8e4357c9c0fdf9e813a4437f01f86815ea8335e0968889ca147dcfe027aeeee"
+    },
+    {
+      "file": "CR166536_DIGITIZED_TABLES_BATCH2.csv",
+      "rows": 418,
+      "kind": "tables",
+      "sha256": "f9ba5f7c1be87b0389790dfec31779d6fdc3774f079128d5cfbca1d976d4c1b4"
+    },
+    {
+      "file": "CR166536_DIGITIZED_TABLES_BATCH3_SIDE_SLIP.csv",
+      "rows": 73,
+      "kind": "tables",
+      "sha256": "c602bc59bc4ebd2c19f4bedfd7cda8a8400f0470040b9201371d0ccd198583c3"
+    },
+    {
+      "file": "CR166536_DIGITIZED_TABLES_BATCH4_FUSELAGE_ALPHA.csv",
+      "rows": 93,
+      "kind": "tables",
+      "sha256": "49caddb3434fca64db6c7cdc4cb652205e7c35523f411666605f9cd6f0fe1837"
+    },
+    {
+      "file": "CR166536_DIGITIZED_TABLES_BATCH4_WING_T4I.csv",
+      "rows": 140,
+      "kind": "tables",
+      "sha256": "2be9e153db7b02c10e80b5c20163fbfea4c7546eff31a03a3274bfd95efd2e12"
+    },
+    {
+      "file": "CR166536_DIGITIZED_TABLES_BATCH5_FUSELAGE_SIDESLIP_MOMENTS.csv",
+      "rows": 57,
+      "kind": "tables",
+      "sha256": "b7b0609baca2bcc3080ed3f8e8099fd44d2b97ea8a79f9457db4cdb86bbb9e98"
+    },
+    {
+      "file": "CR166536_DIGITIZED_TABLES_BATCH6_WING_PYLON_CONSTANTS.csv",
+      "rows": 35,
+      "kind": "tables",
+      "sha256": "8b41e6ba08fef22ecb07aa16fa1a969703087b0595f704c9349d3389aa592cd1"
+    },
+    {
+      "file": "CR166536_HTAIL_TABLES.csv",
+      "rows": 718,
+      "kind": "tables",
+      "sha256": "916b7c771917e74f77525d07f73a6c535a7185318c10dce39ada15e20b586dff"
+    },
+    {
+      "file": "CR166536_TAIL_CONSTANTS.csv",
+      "rows": 35,
+      "kind": "constants",
+      "sha256": "f5bf2ea6cdb806bbef052f08ea3e16dd47b647828287e255b9b3b97f491d3b4d"
+    },
+    {
+      "file": "CR166536_VTAIL_TABLES.csv",
+      "rows": 1194,
+      "kind": "tables",
+      "sha256": "3b6d9336caf683fe42292bcee5187c2b003cbf50ea7e0b537295441cf0b41bfd"
+    },
+    {
+      "file": "CR166536_WING_T4II_VIII.csv",
+      "rows": 1021,
+      "kind": "tables",
+      "sha256": "5a97a40f9e9ccae3fc2de84d94557e50ef4f133ef74f249f90100da1e7477104"
+    },
+    {
+      "file": "CR166536_WING_T4IX_XVI.csv",
+      "rows": 81,
+      "kind": "tables",
+      "sha256": "da8d64de9999d47a3a636eabd4fb9c6bbf9a98b8ea132062a537a1aa0049e09d"
+    }
+  ],
+  "tables": [
+    {
+      "table": "1-I",
+      "records": 12,
+      "numeric": 12,
+      "status_counts": {
+        "VISUAL_TRANSCRIPTION": 12
+      },
+      "pdf_pages": [
+        368
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH1.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "row_key"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "1-II/endurance",
+      "records": 27,
+      "numeric": 27,
+      "status_counts": {
+        "VISUAL_TRANSCRIPTION": 27
+      },
+      "pdf_pages": [
+        369
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH1.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "row_key"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "1-II/sideward",
+      "records": 8,
+      "numeric": 8,
+      "status_counts": {
+        "VISUAL_TRANSCRIPTION": 8
+      },
+      "pdf_pages": [
+        369
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH1.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "row_key"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "1-III",
+      "records": 10,
+      "numeric": 10,
+      "status_counts": {
+        "VISUAL_TRANSCRIPTION": 10
+      },
+      "pdf_pages": [
+        370
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH1.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "row_key"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "2-I(a)",
+      "records": 128,
+      "numeric": 128,
+      "status_counts": {
+        "VISUAL_TRANSCRIPTION": 128
+      },
+      "pdf_pages": [
+        372
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH1.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "row_key"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "2-I(b)",
+      "records": 128,
+      "numeric": 128,
+      "status_counts": {
+        "VISUAL_TRANSCRIPTION": 128
+      },
+      "pdf_pages": [
+        373
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH1.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "row_key"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "2-I(c)",
+      "records": 128,
+      "numeric": 128,
+      "status_counts": {
+        "VISUAL_TRANSCRIPTION": 128
+      },
+      "pdf_pages": [
+        374
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH1.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "row_key"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "2-I(d)",
+      "records": 1,
+      "numeric": 1,
+      "status_counts": {
+        "VISUAL_TRANSCRIPTION_CONSTANT": 1
+      },
+      "pdf_pages": [
+        374
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH1.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "row_key"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "2-II",
+      "records": 50,
+      "numeric": 50,
+      "status_counts": {
+        "VISUAL_TRANSCRIPTION": 50
+      },
+      "pdf_pages": [
+        375
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH1.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "row_key"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "3-I",
+      "records": 31,
+      "numeric": 31,
+      "status_counts": {
+        "confirmed_visual": 31
+      },
+      "pdf_pages": [
+        376,
+        377
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH4_FUSELAGE_ALPHA.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "col_value",
+        "row_key",
+        "row_value"
+      ],
+      "units": [
+        "ft2"
+      ]
+    },
+    {
+      "table": "3-II",
+      "records": 19,
+      "numeric": 19,
+      "status_counts": {
+        "confirmed_visual": 19
+      },
+      "pdf_pages": [
+        378,
+        379
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH3_SIDE_SLIP.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "col_value",
+        "row_key",
+        "row_value"
+      ],
+      "units": [
+        "ft2"
+      ]
+    },
+    {
+      "table": "3-III",
+      "records": 31,
+      "numeric": 31,
+      "status_counts": {
+        "confirmed_visual": 31
+      },
+      "pdf_pages": [
+        376,
+        377
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH4_FUSELAGE_ALPHA.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "col_value",
+        "row_key",
+        "row_value"
+      ],
+      "units": [
+        "ft2"
+      ]
+    },
+    {
+      "table": "3-IV",
+      "records": 19,
+      "numeric": 19,
+      "status_counts": {
+        "confirmed_visual": 19
+      },
+      "pdf_pages": [
+        378,
+        379
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH3_SIDE_SLIP.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "col_value",
+        "row_key",
+        "row_value"
+      ],
+      "units": [
+        "ft2"
+      ]
+    },
+    {
+      "table": "3-IX",
+      "records": 19,
+      "numeric": 19,
+      "status_counts": {
+        "confirmed_visual": 19
+      },
+      "pdf_pages": [
+        380
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH5_FUSELAGE_SIDESLIP_MOMENTS.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "col_value",
+        "row_key",
+        "row_value"
+      ],
+      "units": [
+        "ft3"
+      ]
+    },
+    {
+      "table": "3-V",
+      "records": 31,
+      "numeric": 31,
+      "status_counts": {
+        "confirmed_visual": 31
+      },
+      "pdf_pages": [
+        376,
+        377
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH4_FUSELAGE_ALPHA.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "col_value",
+        "row_key",
+        "row_value"
+      ],
+      "units": [
+        "ft3"
+      ]
+    },
+    {
+      "table": "3-VI",
+      "records": 35,
+      "numeric": 35,
+      "status_counts": {
+        "confirmed_visual": 35
+      },
+      "pdf_pages": [
+        378,
+        379
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH3_SIDE_SLIP.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "col_value",
+        "row_key",
+        "row_value"
+      ],
+      "units": [
+        "ft3"
+      ]
+    },
+    {
+      "table": "3-VII",
+      "records": 19,
+      "numeric": 19,
+      "status_counts": {
+        "confirmed_visual": 19
+      },
+      "pdf_pages": [
+        380
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH5_FUSELAGE_SIDESLIP_MOMENTS.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "col_value",
+        "row_key",
+        "row_value"
+      ],
+      "units": [
+        "ft2"
+      ]
+    },
+    {
+      "table": "3-VIII",
+      "records": 19,
+      "numeric": 19,
+      "status_counts": {
+        "confirmed_visual": 19
+      },
+      "pdf_pages": [
+        380
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH5_FUSELAGE_SIDESLIP_MOMENTS.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "col_value",
+        "row_key",
+        "row_value"
+      ],
+      "units": [
+        "ft3"
+      ]
+    },
+    {
+      "table": "4-I",
+      "records": 140,
+      "numeric": 96,
+      "status_counts": {
+        "confirmed_visual": 96,
+        "NOT_DEFINED": 44
+      },
+      "pdf_pages": [
+        384,
+        385
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH4_WING_T4I.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "col_value",
+        "row_key",
+        "row_value"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "4-II",
+      "records": 318,
+      "numeric": 314,
+      "status_counts": {
+        "TRANSCRIBED": 314,
+        "SOURCE_BLANK": 4
+      },
+      "pdf_pages": [
+        386,
+        387,
+        388,
+        389
+      ],
+      "files": [
+        "CR166536_WING_T4II_VIII.csv"
+      ],
+      "coordinate_fields": [
+        "coefficient",
+        "flap_setting",
+        "mach_label",
+        "mast_angle_deg",
+        "row_axis",
+        "row_value"
+      ],
+      "units": [
+        "1"
+      ]
+    },
+    {
+      "table": "4-III",
+      "records": 105,
+      "numeric": 73,
+      "status_counts": {
+        "TRANSCRIBED": 73,
+        "NOT_DEFINED": 32
+      },
+      "pdf_pages": [
+        390
+      ],
+      "files": [
+        "CR166536_WING_T4II_VIII.csv"
+      ],
+      "coordinate_fields": [
+        "coefficient",
+        "flap_setting",
+        "mach_label",
+        "mast_angle_deg",
+        "row_axis",
+        "row_value"
+      ],
+      "units": [
+        "1"
+      ]
+    },
+    {
+      "table": "4-IV",
+      "records": 282,
+      "numeric": 277,
+      "status_counts": {
+        "SOURCE_DASH": 5,
+        "TRANSCRIBED": 277
+      },
+      "pdf_pages": [
+        391,
+        392,
+        393,
+        394
+      ],
+      "files": [
+        "CR166536_WING_T4II_VIII.csv"
+      ],
+      "coordinate_fields": [
+        "coefficient",
+        "flap_setting",
+        "mach_label",
+        "mast_angle_deg",
+        "row_axis",
+        "row_value"
+      ],
+      "units": [
+        "1"
+      ]
+    },
+    {
+      "table": "4-IX",
+      "records": 12,
+      "numeric": 12,
+      "status_counts": {
+        "confirmed_visual": 12
+      },
+      "pdf_pages": [
+        401,
+        402
+      ],
+      "files": [
+        "CR166536_WING_T4IX_XVI.csv"
+      ],
+      "coordinate_fields": [
+        "alpha_condition",
+        "col_key",
+        "col_value",
+        "flap_setting_code",
+        "mach_condition",
+        "mach_number",
+        "mast_angle_deg",
+        "quantity",
+        "row_key",
+        "row_value",
+        "subtable_id"
+      ],
+      "units": [
+        "1/deg"
+      ]
+    },
+    {
+      "table": "4-V(a)",
+      "records": 56,
+      "numeric": 56,
+      "status_counts": {
+        "TRANSCRIBED": 56
+      },
+      "pdf_pages": [
+        395
+      ],
+      "files": [
+        "CR166536_WING_T4II_VIII.csv"
+      ],
+      "coordinate_fields": [
+        "coefficient",
+        "flap_setting",
+        "mach_label",
+        "mast_angle_deg",
+        "row_axis",
+        "row_value"
+      ],
+      "units": [
+        "deg"
+      ]
+    },
+    {
+      "table": "4-V(b)",
+      "records": 56,
+      "numeric": 56,
+      "status_counts": {
+        "TRANSCRIBED": 56
+      },
+      "pdf_pages": [
+        396
+      ],
+      "files": [
+        "CR166536_WING_T4II_VIII.csv"
+      ],
+      "coordinate_fields": [
+        "coefficient",
+        "flap_setting",
+        "mach_label",
+        "mast_angle_deg",
+        "row_axis",
+        "row_value"
+      ],
+      "units": [
+        "deg"
+      ]
+    },
+    {
+      "table": "4-V(c)",
+      "records": 56,
+      "numeric": 56,
+      "status_counts": {
+        "TRANSCRIBED": 56
+      },
+      "pdf_pages": [
+        397
+      ],
+      "files": [
+        "CR166536_WING_T4II_VIII.csv"
+      ],
+      "coordinate_fields": [
+        "coefficient",
+        "flap_setting",
+        "mach_label",
+        "mast_angle_deg",
+        "row_axis",
+        "row_value"
+      ],
+      "units": [
+        "deg"
+      ]
+    },
+    {
+      "table": "4-V(d)",
+      "records": 56,
+      "numeric": 56,
+      "status_counts": {
+        "TRANSCRIBED": 56
+      },
+      "pdf_pages": [
+        398
+      ],
+      "files": [
+        "CR166536_WING_T4II_VIII.csv"
+      ],
+      "coordinate_fields": [
+        "coefficient",
+        "flap_setting",
+        "mach_label",
+        "mast_angle_deg",
+        "row_axis",
+        "row_value"
+      ],
+      "units": [
+        "deg"
+      ]
+    },
+    {
+      "table": "4-V(e)",
+      "records": 56,
+      "numeric": 56,
+      "status_counts": {
+        "TRANSCRIBED": 56
+      },
+      "pdf_pages": [
+        399
+      ],
+      "files": [
+        "CR166536_WING_T4II_VIII.csv"
+      ],
+      "coordinate_fields": [
+        "coefficient",
+        "flap_setting",
+        "mach_label",
+        "mast_angle_deg",
+        "row_axis",
+        "row_value"
+      ],
+      "units": [
+        "deg"
+      ]
+    },
+    {
+      "table": "4-VI",
+      "records": 8,
+      "numeric": 8,
+      "status_counts": {
+        "TRANSCRIBED": 8
+      },
+      "pdf_pages": [
+        400
+      ],
+      "files": [
+        "CR166536_WING_T4II_VIII.csv"
+      ],
+      "coordinate_fields": [
+        "coefficient",
+        "flap_setting",
+        "mach_label",
+        "mast_angle_deg",
+        "row_axis",
+        "row_value"
+      ],
+      "units": [
+        "1/rad"
+      ]
+    },
+    {
+      "table": "4-VII",
+      "records": 8,
+      "numeric": 8,
+      "status_counts": {
+        "TRANSCRIBED": 8
+      },
+      "pdf_pages": [
+        400
+      ],
+      "files": [
+        "CR166536_WING_T4II_VIII.csv"
+      ],
+      "coordinate_fields": [
+        "coefficient",
+        "flap_setting",
+        "mach_label",
+        "mast_angle_deg",
+        "row_axis",
+        "row_value"
+      ],
+      "units": [
+        "1/rad"
+      ]
+    },
+    {
+      "table": "4-VIII",
+      "records": 20,
+      "numeric": 20,
+      "status_counts": {
+        "TRANSCRIBED": 20
+      },
+      "pdf_pages": [
+        401
+      ],
+      "files": [
+        "CR166536_WING_T4II_VIII.csv"
+      ],
+      "coordinate_fields": [
+        "coefficient",
+        "flap_setting",
+        "mach_label",
+        "mast_angle_deg",
+        "row_axis",
+        "row_value"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "4-X",
+      "records": 12,
+      "numeric": 12,
+      "status_counts": {
+        "confirmed_visual": 12
+      },
+      "pdf_pages": [
+        402,
+        403
+      ],
+      "files": [
+        "CR166536_WING_T4IX_XVI.csv"
+      ],
+      "coordinate_fields": [
+        "alpha_condition",
+        "col_key",
+        "col_value",
+        "flap_setting_code",
+        "mach_condition",
+        "mach_number",
+        "mast_angle_deg",
+        "quantity",
+        "row_key",
+        "row_value",
+        "subtable_id"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "4-XI",
+      "records": 8,
+      "numeric": 8,
+      "status_counts": {
+        "confirmed_visual": 8
+      },
+      "pdf_pages": [
+        403
+      ],
+      "files": [
+        "CR166536_WING_T4IX_XVI.csv"
+      ],
+      "coordinate_fields": [
+        "alpha_condition",
+        "col_key",
+        "col_value",
+        "flap_setting_code",
+        "mach_condition",
+        "mach_number",
+        "mast_angle_deg",
+        "quantity",
+        "row_key",
+        "row_value",
+        "subtable_id"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "4-XII",
+      "records": 4,
+      "numeric": 4,
+      "status_counts": {
+        "confirmed_visual": 4
+      },
+      "pdf_pages": [
+        404
+      ],
+      "files": [
+        "CR166536_WING_T4IX_XVI.csv"
+      ],
+      "coordinate_fields": [
+        "alpha_condition",
+        "col_key",
+        "col_value",
+        "flap_setting_code",
+        "mach_condition",
+        "mach_number",
+        "mast_angle_deg",
+        "quantity",
+        "row_key",
+        "row_value",
+        "subtable_id"
+      ],
+      "units": [
+        "1/deg"
+      ]
+    },
+    {
+      "table": "4-XIII",
+      "records": 12,
+      "numeric": 12,
+      "status_counts": {
+        "confirmed_visual": 12
+      },
+      "pdf_pages": [
+        404
+      ],
+      "files": [
+        "CR166536_WING_T4IX_XVI.csv"
+      ],
+      "coordinate_fields": [
+        "alpha_condition",
+        "col_key",
+        "col_value",
+        "flap_setting_code",
+        "mach_condition",
+        "mach_number",
+        "mast_angle_deg",
+        "quantity",
+        "row_key",
+        "row_value",
+        "subtable_id"
+      ],
+      "units": [
+        "1/deg"
+      ]
+    },
+    {
+      "table": "4-XIV",
+      "records": 12,
+      "numeric": 12,
+      "status_counts": {
+        "confirmed_visual": 12
+      },
+      "pdf_pages": [
+        404
+      ],
+      "files": [
+        "CR166536_WING_T4IX_XVI.csv"
+      ],
+      "coordinate_fields": [
+        "alpha_condition",
+        "col_key",
+        "col_value",
+        "flap_setting_code",
+        "mach_condition",
+        "mach_number",
+        "mast_angle_deg",
+        "quantity",
+        "row_key",
+        "row_value",
+        "subtable_id"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "4-XV",
+      "records": 14,
+      "numeric": 14,
+      "status_counts": {
+        "confirmed_visual": 14
+      },
+      "pdf_pages": [
+        405
+      ],
+      "files": [
+        "CR166536_WING_T4IX_XVI.csv"
+      ],
+      "coordinate_fields": [
+        "alpha_condition",
+        "col_key",
+        "col_value",
+        "flap_setting_code",
+        "mach_condition",
+        "mach_number",
+        "mast_angle_deg",
+        "quantity",
+        "row_key",
+        "row_value",
+        "subtable_id"
+      ],
+      "units": [
+        "ft^2"
+      ]
+    },
+    {
+      "table": "4-XVI",
+      "records": 7,
+      "numeric": 7,
+      "status_counts": {
+        "confirmed_visual": 7
+      },
+      "pdf_pages": [
+        405
+      ],
+      "files": [
+        "CR166536_WING_T4IX_XVI.csv"
+      ],
+      "coordinate_fields": [
+        "alpha_condition",
+        "col_key",
+        "col_value",
+        "flap_setting_code",
+        "mach_condition",
+        "mach_number",
+        "mast_angle_deg",
+        "quantity",
+        "row_key",
+        "row_value",
+        "subtable_id"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "4/constants",
+      "records": 35,
+      "numeric": 35,
+      "status_counts": {
+        "confirmed_visual": 35
+      },
+      "pdf_pages": [
+        381,
+        382,
+        383
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH6_WING_PYLON_CONSTANTS.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "col_value",
+        "row_key",
+        "row_value"
+      ],
+      "units": [
+        "1/deg",
+        "1/deg2",
+        "1/rad",
+        "deg",
+        "dimensionless",
+        "ft",
+        "ft2",
+        "in"
+      ]
+    },
+    {
+      "table": "5-I",
+      "records": 392,
+      "numeric": 392,
+      "status_counts": {
+        "CONFIRMED_VISUAL": 392
+      },
+      "pdf_pages": [
+        406,
+        407,
+        408,
+        409
+      ],
+      "files": [
+        "CR166536_HTAIL_TABLES.csv"
+      ],
+      "coordinate_fields": [
+        "alpha_deg",
+        "elevator_deg",
+        "mach_label",
+        "quantity"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "5-II",
+      "records": 124,
+      "numeric": 73,
+      "status_counts": {
+        "REFERENCE_TABLE_5_I": 31,
+        "CONFIRMED_VISUAL": 73,
+        "NOT_DEFINED": 20
+      },
+      "pdf_pages": [
+        410,
+        411
+      ],
+      "files": [
+        "CR166536_HTAIL_TABLES.csv"
+      ],
+      "coordinate_fields": [
+        "alpha_deg",
+        "elevator_deg",
+        "mach_label",
+        "quantity"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "5-III",
+      "records": 196,
+      "numeric": 70,
+      "status_counts": {
+        "CONFIRMED_VISUAL": 70,
+        "NOT_DEFINED": 126
+      },
+      "pdf_pages": [
+        412,
+        413
+      ],
+      "files": [
+        "CR166536_HTAIL_TABLES.csv"
+      ],
+      "coordinate_fields": [
+        "alpha_deg",
+        "elevator_deg",
+        "mach_label",
+        "quantity"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "5-IV",
+      "records": 6,
+      "numeric": 6,
+      "status_counts": {
+        "CONFIRMED_VISUAL": 6
+      },
+      "pdf_pages": [
+        414
+      ],
+      "files": [
+        "CR166536_HTAIL_TABLES.csv"
+      ],
+      "coordinate_fields": [
+        "alpha_deg",
+        "elevator_deg",
+        "mach_label",
+        "quantity"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "5-V(a)",
+      "records": 108,
+      "numeric": 108,
+      "status_counts": {
+        "confirmed_visual": 108
+      },
+      "pdf_pages": [
+        415
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH2.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "col_value",
+        "row_key",
+        "row_value"
+      ],
+      "units": [
+        "ratio"
+      ]
+    },
+    {
+      "table": "5-V(b)",
+      "records": 108,
+      "numeric": 108,
+      "status_counts": {
+        "confirmed_visual": 108
+      },
+      "pdf_pages": [
+        416
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH2.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "col_value",
+        "row_key",
+        "row_value"
+      ],
+      "units": [
+        "ratio"
+      ]
+    },
+    {
+      "table": "5-V(c)",
+      "records": 54,
+      "numeric": 54,
+      "status_counts": {
+        "confirmed_visual": 54
+      },
+      "pdf_pages": [
+        417
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH2.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "col_value",
+        "row_key",
+        "row_value"
+      ],
+      "units": [
+        "ratio"
+      ]
+    },
+    {
+      "table": "5-VI",
+      "records": 8,
+      "numeric": 8,
+      "status_counts": {
+        "confirmed_visual": 8
+      },
+      "pdf_pages": [
+        418
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH2.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "col_value",
+        "row_key",
+        "row_value"
+      ],
+      "units": [
+        "ratio"
+      ]
+    },
+    {
+      "table": "5-VII",
+      "records": 5,
+      "numeric": 5,
+      "status_counts": {
+        "confirmed_visual": 5
+      },
+      "pdf_pages": [
+        418
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH2.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "col_value",
+        "row_key",
+        "row_value"
+      ],
+      "units": [
+        "PCPM"
+      ]
+    },
+    {
+      "table": "5/constants",
+      "records": 12,
+      "numeric": 12,
+      "status_counts": {
+        "CONFIRMED_VISUAL": 12
+      },
+      "pdf_pages": [
+        406
+      ],
+      "files": [
+        "CR166536_TAIL_CONSTANTS.csv"
+      ],
+      "coordinate_fields": [
+        "parameter"
+      ],
+      "units": [
+        "1/deg",
+        "deg",
+        "dimensionless",
+        "ft",
+        "ft2",
+        "in"
+      ]
+    },
+    {
+      "table": "6-I",
+      "records": 250,
+      "numeric": 250,
+      "status_counts": {
+        "VISUAL_TRANSCRIPTION": 250
+      },
+      "pdf_pages": [
+        420,
+        421,
+        422
+      ],
+      "files": [
+        "CR166536_VTAIL_TABLES.csv"
+      ],
+      "coordinate_fields": [
+        "col_axis",
+        "col_key",
+        "flap_setting",
+        "mach_key",
+        "mast_deg",
+        "quantity",
+        "row_axis",
+        "row_key",
+        "rudder_deg"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "6-II",
+      "records": 124,
+      "numeric": 73,
+      "status_counts": {
+        "EXPLICIT_TABLE_REFERENCE": 31,
+        "VISUAL_TRANSCRIPTION": 73,
+        "EXPLICIT_NOT_DEFINED": 20
+      },
+      "pdf_pages": [
+        423,
+        424
+      ],
+      "files": [
+        "CR166536_VTAIL_TABLES.csv"
+      ],
+      "coordinate_fields": [
+        "col_axis",
+        "col_key",
+        "flap_setting",
+        "mach_key",
+        "mast_deg",
+        "quantity",
+        "row_axis",
+        "row_key",
+        "rudder_deg"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "6-III",
+      "records": 188,
+      "numeric": 70,
+      "status_counts": {
+        "VISUAL_TRANSCRIPTION": 70,
+        "EXPLICIT_NOT_DEFINED": 118
+      },
+      "pdf_pages": [
+        425,
+        426
+      ],
+      "files": [
+        "CR166536_VTAIL_TABLES.csv"
+      ],
+      "coordinate_fields": [
+        "col_axis",
+        "col_key",
+        "flap_setting",
+        "mach_key",
+        "mast_deg",
+        "quantity",
+        "row_axis",
+        "row_key",
+        "rudder_deg"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "6-IV",
+      "records": 144,
+      "numeric": 144,
+      "status_counts": {
+        "VISUAL_TRANSCRIPTION": 144
+      },
+      "pdf_pages": [
+        427
+      ],
+      "files": [
+        "CR166536_VTAIL_TABLES.csv"
+      ],
+      "coordinate_fields": [
+        "col_axis",
+        "col_key",
+        "flap_setting",
+        "mach_key",
+        "mast_deg",
+        "quantity",
+        "row_axis",
+        "row_key",
+        "rudder_deg"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "6-V",
+      "records": 144,
+      "numeric": 144,
+      "status_counts": {
+        "VISUAL_TRANSCRIPTION": 144
+      },
+      "pdf_pages": [
+        428
+      ],
+      "files": [
+        "CR166536_VTAIL_TABLES.csv"
+      ],
+      "coordinate_fields": [
+        "col_axis",
+        "col_key",
+        "flap_setting",
+        "mach_key",
+        "mast_deg",
+        "quantity",
+        "row_axis",
+        "row_key",
+        "rudder_deg"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "6-VI",
+      "records": 144,
+      "numeric": 144,
+      "status_counts": {
+        "VISUAL_TRANSCRIPTION": 144
+      },
+      "pdf_pages": [
+        429
+      ],
+      "files": [
+        "CR166536_VTAIL_TABLES.csv"
+      ],
+      "coordinate_fields": [
+        "col_axis",
+        "col_key",
+        "flap_setting",
+        "mach_key",
+        "mast_deg",
+        "quantity",
+        "row_axis",
+        "row_key",
+        "rudder_deg"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "6-VII",
+      "records": 144,
+      "numeric": 144,
+      "status_counts": {
+        "VISUAL_TRANSCRIPTION": 144
+      },
+      "pdf_pages": [
+        430
+      ],
+      "files": [
+        "CR166536_VTAIL_TABLES.csv"
+      ],
+      "coordinate_fields": [
+        "col_axis",
+        "col_key",
+        "flap_setting",
+        "mach_key",
+        "mast_deg",
+        "quantity",
+        "row_axis",
+        "row_key",
+        "rudder_deg"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "6-VIII",
+      "records": 56,
+      "numeric": 56,
+      "status_counts": {
+        "VISUAL_TRANSCRIPTION": 56
+      },
+      "pdf_pages": [
+        431
+      ],
+      "files": [
+        "CR166536_VTAIL_TABLES.csv"
+      ],
+      "coordinate_fields": [
+        "col_axis",
+        "col_key",
+        "flap_setting",
+        "mach_key",
+        "mast_deg",
+        "quantity",
+        "row_axis",
+        "row_key",
+        "rudder_deg"
+      ],
+      "units": [
+        "dimensionless"
+      ]
+    },
+    {
+      "table": "6/constants",
+      "records": 23,
+      "numeric": 23,
+      "status_counts": {
+        "CONFIRMED_VISUAL": 23
+      },
+      "pdf_pages": [
+        419
+      ],
+      "files": [
+        "CR166536_TAIL_CONSTANTS.csv"
+      ],
+      "coordinate_fields": [
+        "parameter"
+      ],
+      "units": [
+        "1/rad",
+        "deg",
+        "dimensionless",
+        "ft",
+        "ft2",
+        "in"
+      ]
+    },
+    {
+      "table": "8a-I",
+      "records": 10,
+      "numeric": 10,
+      "status_counts": {
+        "confirmed_visual": 10
+      },
+      "pdf_pages": [
+        439
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH2.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "col_value",
+        "row_key",
+        "row_value"
+      ],
+      "units": [
+        "deg/in"
+      ]
+    },
+    {
+      "table": "8a-II",
+      "records": 30,
+      "numeric": 30,
+      "status_counts": {
+        "confirmed_visual": 30
+      },
+      "pdf_pages": [
+        440
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH2.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "col_value",
+        "row_key",
+        "row_value"
+      ],
+      "units": [
+        "deg/in"
+      ]
+    },
+    {
+      "table": "8a-III",
+      "records": 10,
+      "numeric": 10,
+      "status_counts": {
+        "confirmed_visual": 10
+      },
+      "pdf_pages": [
+        441
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH2.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "col_value",
+        "row_key",
+        "row_value"
+      ],
+      "units": [
+        "deg/in"
+      ]
+    },
+    {
+      "table": "8a-IV",
+      "records": 20,
+      "numeric": 20,
+      "status_counts": {
+        "confirmed_visual": 20
+      },
+      "pdf_pages": [
+        442
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH2.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "col_value",
+        "row_key",
+        "row_value"
+      ],
+      "units": [
+        "deg",
+        "deg/in"
+      ]
+    },
+    {
+      "table": "8a-V",
+      "records": 30,
+      "numeric": 30,
+      "status_counts": {
+        "confirmed_visual": 30
+      },
+      "pdf_pages": [
+        443
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH2.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "col_value",
+        "row_key",
+        "row_value"
+      ],
+      "units": [
+        "deg/s"
+      ]
+    },
+    {
+      "table": "8a-VI",
+      "records": 21,
+      "numeric": 21,
+      "status_counts": {
+        "confirmed_visual": 21
+      },
+      "pdf_pages": [
+        444
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH2.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "col_value",
+        "row_key",
+        "row_value"
+      ],
+      "units": [
+        "deg"
+      ]
+    },
+    {
+      "table": "8a-VII",
+      "records": 7,
+      "numeric": 7,
+      "status_counts": {
+        "confirmed_visual": 7
+      },
+      "pdf_pages": [
+        445
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH2.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "col_value",
+        "row_key",
+        "row_value"
+      ],
+      "units": [
+        "-"
+      ]
+    },
+    {
+      "table": "8a-VIII",
+      "records": 7,
+      "numeric": 7,
+      "status_counts": {
+        "confirmed_visual": 7
+      },
+      "pdf_pages": [
+        445
+      ],
+      "files": [
+        "CR166536_DIGITIZED_TABLES_BATCH2.csv"
+      ],
+      "coordinate_fields": [
+        "col_key",
+        "col_value",
+        "row_key",
+        "row_value"
+      ],
+      "units": [
+        "-"
+      ]
+    }
+  ]
+}

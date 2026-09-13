@@ -1,0 +1,36 @@
+table_name,pdf_page,printed_page,parameter,value,unit,status,notes
+Horizontal stabilizer constants,406,B-56,SL_H,560.0,in,CONFIRMED_VISUAL,as printed
+Horizontal stabilizer constants,406,B-56,WL_H,103.0,in,CONFIRMED_VISUAL,as printed
+Horizontal stabilizer constants,406,B-56,S_H,50.25,ft2,CONFIRMED_VISUAL,as printed
+Horizontal stabilizer constants,406,B-56,c_H,3.92,ft,CONFIRMED_VISUAL,as printed
+Horizontal stabilizer constants,406,B-56,i_H,0.0,deg,CONFIRMED_VISUAL,as printed
+Horizontal stabilizer coefficients,406,B-56,tau_e,0.518,dimensionless,CONFIRMED_VISUAL,symbol tau_e; no unit printed
+Horizontal stabilizer coefficients,406,B-56,C_LH_beta,-0.00422,1/deg,CONFIRMED_VISUAL,A-82/PDF150 symbol description explicitly gives horizontal stabilizer lift coefficient versus sideslip units 1/deg; prior unspecified-unit entry corrected.
+Horizontal stabilizer coefficients,406,B-56,K_HNU,0.8,dimensionless,CONFIRMED_VISUAL,no unit printed
+Horizontal stabilizer coefficients,406,B-56,D_WB,1.0,dimensionless,CONFIRMED_VISUAL,no unit printed
+Horizontal stabilizer coefficients,406,B-56,C_MH0,0.0,dimensionless,CONFIRMED_VISUAL,no unit printed
+Horizontal stabilizer coefficients,406,B-56,C_MHA,0.0,1/deg,CONFIRMED_VISUAL,as printed
+Horizontal stabilizer coefficients,406,B-56,D_Ke,0.24,dimensionless,CONFIRMED_VISUAL,no unit printed
+Vertical fin constants,419,B-69,NVSTAB,2,dimensionless,CONFIRMED_VISUAL,as printed
+Vertical fin constants,419,B-69,SL_V1,570.02,in,CONFIRMED_VISUAL,as printed
+Vertical fin constants,419,B-69,WL_V1,-115.69,in,CONFIRMED_VISUAL,"B-69/PDF419 as printed; sign/side pairing retained. B-12/PDF362 and A-93/PDF161 define WL as water line and BL as butt line; possible WL_V1/V2 sign/print conflict is recorded in provenance, not repaired by symmetry."
+Vertical fin constants,419,B-69,BL_V1,77.0,in,CONFIRMED_VISUAL,"B-69/PDF419 as printed; sign/side pairing retained. B-12/PDF362 and A-93/PDF161 define WL as water line and BL as butt line; possible WL_V1/V2 sign/print conflict is recorded in provenance, not repaired by symmetry."
+Vertical fin constants,419,B-69,SL_V2,570.02,in,CONFIRMED_VISUAL,as printed
+Vertical fin constants,419,B-69,WL_V2,115.69,in,CONFIRMED_VISUAL,"B-69/PDF419 as printed; sign/side pairing retained. B-12/PDF362 and A-93/PDF161 define WL as water line and BL as butt line; possible WL_V1/V2 sign/print conflict is recorded in provenance, not repaired by symmetry."
+Vertical fin constants,419,B-69,BL_V2,77.0,in,CONFIRMED_VISUAL,"B-69/PDF419 as printed; sign/side pairing retained. B-12/PDF362 and A-93/PDF161 define WL as water line and BL as butt line; possible WL_V1/V2 sign/print conflict is recorded in provenance, not repaired by symmetry."
+Vertical fin constants,419,B-69,S_V1,20.25,ft2,CONFIRMED_VISUAL,as printed
+Vertical fin constants,419,B-69,S_V2,20.25,ft2,CONFIRMED_VISUAL,as printed
+Vertical fin constants,419,B-69,i_V1,0.0,deg,CONFIRMED_VISUAL,as printed
+Vertical fin constants,419,B-69,i_V2,0.0,deg,CONFIRMED_VISUAL,as printed
+Vertical fin constants,419,B-69,BL_CG,0.0,in,CONFIRMED_VISUAL,as printed
+Vertical fin constants,419,B-69,SL_SP,300.0,in,CONFIRMED_VISUAL,as printed
+Vertical fin constants,419,B-69,BL_SP,193.0,in,CONFIRMED_VISUAL,as printed
+Vertical fin constants,419,B-69,l_m,4.667,ft,CONFIRMED_VISUAL,as printed
+Vertical fin constants,419,B-69,R,12.5,ft,CONFIRMED_VISUAL,as printed
+Vertical fin constants,419,B-69,b_W,32.17,ft,CONFIRMED_VISUAL,as printed
+Vertical fin constants,419,B-69,tau_r,0.27,dimensionless,CONFIRMED_VISUAL,symbol tau_r; no unit printed
+Vertical fin constants,419,B-69,d_sigma_d_p_hat,-0.1,as_printed_unspecified,CONFIRMED_VISUAL,B-69/PDF419 symbol has a hat over p (p_hat); corrected from prior ASCII d_sigma_d_p. A-93/PDF161 defines it as roll-rate correction coefficient to fin sideslip angle; units ND.
+Vertical fin constants,419,B-69,d_sigma_d_r_hat,0.0,as_printed_unspecified,CONFIRMED_VISUAL,B-69/PDF419 symbol has a hat over r (r_hat); corrected from prior ASCII d_sigma_d_r. A-93/PDF161 defines it as yaw-rate correction coefficient to fin sideslip angle; units ND.
+Vertical fin constants,419,B-69,K_VNU,1.0,dimensionless,CONFIRMED_VISUAL,no unit printed
+Vertical fin constants,419,B-69,a_V,3.02522,1/rad,CONFIRMED_VISUAL,as printed
+Vertical fin constants,419,B-69,D_Kr,0.24,dimensionless,CONFIRMED_VISUAL,no unit printed
