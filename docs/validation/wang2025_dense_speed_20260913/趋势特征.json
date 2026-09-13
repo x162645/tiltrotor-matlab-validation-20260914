@@ -1,0 +1,59 @@
+[
+  {
+    "variable": "power",
+    "model_min_speed_mps": 33.43886,
+    "minimum_identity": "MINIMUM_AMONG_ACCEPTED_SOLVED_GRID_POINTS_NOT_CONTINUOUS_OPTIMUM",
+    "accepted_domain_mps": [
+      0.00514444,
+      54.01662
+    ],
+    "nominal_grid_step_mps": 2.57222,
+    "failed_or_skipped_speeds_kt": [
+      0.0
+    ],
+    "paper_near_min_reading_bound": 21.428571428571427,
+    "model_min_value": 703.148125682324,
+    "paper_curve_min": 799.9999999999998,
+    "value_comparison": "CHART_CORRELATION",
+    "paper_min_speed_low": 26.54867256637168,
+    "paper_min_speed_high": 31.150442477876105
+  },
+  {
+    "variable": "stick",
+    "model_min_speed_mps": 25.7222,
+    "minimum_identity": "MINIMUM_AMONG_ACCEPTED_SOLVED_GRID_POINTS_NOT_CONTINUOUS_OPTIMUM",
+    "accepted_domain_mps": [
+      0.00514444,
+      54.01662
+    ],
+    "nominal_grid_step_mps": 2.57222,
+    "failed_or_skipped_speeds_kt": [
+      0.0
+    ],
+    "paper_near_min_reading_bound": 0.8571428571428571,
+    "model_min_value": 50.3259004724052,
+    "paper_curve_min": 52.85714285714286,
+    "value_comparison": "CHART_CORRELATION",
+    "paper_min_speed_low": 18.053097345132745,
+    "paper_min_speed_high": 26.194690265486724
+  },
+  {
+    "variable": "geometric_root_pitch",
+    "model_min_speed_mps": 33.43886,
+    "minimum_identity": "MINIMUM_AMONG_ACCEPTED_SOLVED_GRID_POINTS_NOT_CONTINUOUS_OPTIMUM",
+    "accepted_domain_mps": [
+      0.00514444,
+      54.01662
+    ],
+    "nominal_grid_step_mps": 2.57222,
+    "failed_or_skipped_speeds_kt": [
+      0.0
+    ],
+    "paper_near_min_reading_bound": 0.2571428571428571,
+    "model_min_value": null,
+    "paper_curve_min": null,
+    "value_comparison": "NOT_COMPARED_PITCH_DATUM_UNRESOLVED",
+    "paper_min_speed_low": 21.94690265486725,
+    "paper_min_speed_high": 34.15929203539823
+  }
+]

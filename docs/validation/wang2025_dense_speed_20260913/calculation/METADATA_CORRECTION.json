@@ -1,0 +1,16 @@
+{
+  "kind": "metadata correction only; no numerical arrays or per-point MAT files modified",
+  "field": "contract.productionPhysicsModified",
+  "recordedValue": false,
+  "correctedValue": true,
+  "appliesTo": [
+    "V7_SWEEP_FROZEN.json",
+    "V7_SWEEP_FROZEN.mat",
+    "V7_SWEEP_FROZEN_V2.json",
+    "V7_SWEEP_FROZEN_V2.mat",
+    "V7_SPEED_SWEEP_RESULTS.mat"
+  ],
+  "reason": "Inherited builder default was not updated. The evaluated source V7 variant explicitly sets P.wing.SslipMaxHalf from 4.0 m2 to 0; the source-based fuselage/wing/tail/spinner identities are also explicitly configured. This is a changed model configuration relative to the original builder.",
+  "codeCorrection": "Both sweep runners now set contract.productionPhysicsModified=true; per-attempt recovery reads immutable saved attempts.",
+  "numericalEffect": "none; existing numeric points and frozen originals are retained"
+}

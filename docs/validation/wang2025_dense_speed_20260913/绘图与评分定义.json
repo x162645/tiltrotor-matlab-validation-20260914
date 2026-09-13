@@ -1,0 +1,52 @@
+{
+  "source_files": {
+    "calculation\\V7_SPEED_SWEEP_POINTS.csv": "03b8524066d2b856355739ec9abf2d0f65e7bc20344cef270df66beb2dc2ba53",
+    "reference\\FIG1a_markers_v2.csv": "0e6d17b9b5ed6ad4bea1c005af3cb3d8fdc78796ae6da8cc06d0278b3fb1e14a",
+    "reference\\FIG1a_model_trace_v2.csv": "bd1cc3ed9773c30061da9f3d919505d08e1f78256c64358cd05920ca1845cfa3"
+  },
+  "source_figure": "Wang et al. 2025 Figure 1(a)",
+  "configuration": "nacelle90_V7_ZERO_IMMERSED",
+  "font": "Microsoft YaHei",
+  "plotting_script_sha256": "43a674c7823438886cf3cf12eb769985af8cf4f7ebf95b446b367d216292fa24",
+  "exact_axis_limits": [
+    [
+      30,
+      60
+    ],
+    [
+      0,
+      100
+    ],
+    [
+      -40,
+      40
+    ],
+    [
+      0,
+      2500
+    ]
+  ],
+  "x_axis_limits_mps": [
+    0,
+    60
+  ],
+  "speed_conversion": "V_mps = V_kt * 0.514444",
+  "stick_conversion": "percent = 100 * stick_in / 9.6",
+  "stick_qualification": "source-based full-stroke convention; exact Wang control implementation not independently recovered",
+  "power_definition": "sum(left shaft torque*Omega + right shaft torque*Omega)/1000; no engine losses",
+  "displayed_pitch": "theta75 + sourceTwist(0.0875) - sourceTwist(0.75)",
+  "displayed_pitch_offset_deg": 30.686126237872315,
+  "pitch_abs_error_scored": false,
+  "pitch_reason": "paper theta0 radial station/datum not explicitly recovered; no fitted offset",
+  "reference_interpolation": "only adjacent accepted actual solves; no extrapolation or failed-gap filling",
+  "secondary_comparison": "both models against same visible markers; Wang curve readout permits marker gaps <=2.5m/s, not raw author arrays",
+  "physical_model_retuned": false,
+  "actual_model_points": 22,
+  "zero_immersion_evidence_speed_range_kt": [
+    40,
+    100
+  ],
+  "outside_that_range": "unchanged configuration extrapolation for diagnosis, not source-verified wake coverage",
+  "accepted_points": 22,
+  "skipped_points": 1
+}

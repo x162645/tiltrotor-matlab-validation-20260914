@@ -1,0 +1,12 @@
+{
+  "baseCommit": "a262f3eab50a86c14a3849e5170a5ae1efa88cf2",
+  "branch": "research/dynamic-fidelity-benchmark-20260910",
+  "publication": "LOCAL_ONLY_NOT_PUSHED",
+  "MATLAB": "R2021a",
+  "Python": "3.8.3",
+  "solvedPoints": 22,
+  "nacelleAngleDeg": 90,
+  "sourceFigureSHA256": "10a57b5e54fb5983759ff0810e2c498b75af66dfd9294fb69e2e58fa8b404db9",
+  "evidence": "Native per-point MAT and frozen configuration hashes are in calculation/",
+  "code": "analysis/digitize_wang2025_fig1a_v2.py and analysis/validation_whole_aircraft_trim/{run_line_b_v7_speed_sweep.m,run_line_b_v7_speed_sweep_v2.m,plot_v7_wang_speed_sweep.py,check_v7_speed_sweep_artifacts.py}"
+}

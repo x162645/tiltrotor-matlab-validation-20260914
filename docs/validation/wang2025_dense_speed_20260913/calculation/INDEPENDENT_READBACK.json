@@ -1,0 +1,130 @@
+{
+  "executionIdentity": "Independent Python readback of MATLAB MAT/CSV; no new model solve",
+  "acceptedPointCount": 22,
+  "allExpectedTrueCalculatedPointsPresent": true,
+  "zeroSpeed": "explicitly skipped because forward-flow source APIs require x(1)>0",
+  "nearHoverSpeed_kt": 0.01,
+  "pointFilesVerified": 22,
+  "maxResidualNorm": 7.46755176387757e-09,
+  "maxAlphaClampCount": 20,
+  "maxMachClampCount": 0,
+  "controlClampedCount": 0,
+  "solverCounts": {
+    "NEWTON_V2": 12,
+    "FMINSEARCH_V1": 10
+  },
+  "newtonTime_s": 37.5825643,
+  "fminsearchTime_s": 891.2786464,
+  "pointRecords": [
+    {
+      "speed_kt": 0.01,
+      "pointFile": "POINT_000p01kt.mat",
+      "sha256": "6b72d834cfad3a23f58e6bfef47555e84c6310edf83f128d615a4f839f11724d"
+    },
+    {
+      "speed_kt": 5.0,
+      "pointFile": "POINT_005p00kt.mat",
+      "sha256": "2bca4cbb286b4d95ef6763ae08b63f7d3e2eb1437930ff15dd22ea2248d04f00"
+    },
+    {
+      "speed_kt": 10.0,
+      "pointFile": "POINT_010p00kt.mat",
+      "sha256": "3aa3af1e3f743e0e7a6074696723387a72e39ac341a581c479a8e940cd6dd8c3"
+    },
+    {
+      "speed_kt": 15.0,
+      "pointFile": "POINT_015p00kt.mat",
+      "sha256": "78246df232889544ff2f3908502ba47c916ac9d30a23f9747b47f0886566aa10"
+    },
+    {
+      "speed_kt": 20.0,
+      "pointFile": "POINT_020p00kt.mat",
+      "sha256": "9594c91c73aafad86981bbc5be1ad74fbf70168cc2b4221afc1d6de727912815"
+    },
+    {
+      "speed_kt": 25.0,
+      "pointFile": "POINT_025p00kt.mat",
+      "sha256": "709b97aa01dc8f75637b5c710b6073bdc7285e08d03f132657abdbefcca036be"
+    },
+    {
+      "speed_kt": 30.0,
+      "pointFile": "POINT_030p00kt.mat",
+      "sha256": "248a5fc567de84b4e7e3ccf589632e8d2ee88b1726d03a61c674b55bedd75849"
+    },
+    {
+      "speed_kt": 35.0,
+      "pointFile": "POINT_035p00kt.mat",
+      "sha256": "1b46dc877dcbf0346a1b1c2de41ab9da9fe1d20a505884c48d39008961fb40e1"
+    },
+    {
+      "speed_kt": 40.0,
+      "pointFile": "POINT_040p00kt.mat",
+      "sha256": "3e3513c71a8e59ed7d547d7bb01171f8c2594c6006a21c9b4872b90b8af97ce5"
+    },
+    {
+      "speed_kt": 45.0,
+      "pointFile": "POINT_045p00kt.mat",
+      "sha256": "2cd8be43019f7c2b59693abe5149569824a77f08a18b8d42c28656f3c8fde206"
+    },
+    {
+      "speed_kt": 50.0,
+      "pointFile": "POINT_050p00kt.mat",
+      "sha256": "2de6f1d5b5504fd44e545c0a1e8fc01f4af7c34ea06bd7cfe6d8b3a0e69e15c6"
+    },
+    {
+      "speed_kt": 55.0,
+      "pointFile": "POINT_055p00kt.mat",
+      "sha256": "3e765d9f60a0e203902c54cdce40b6d47be96d9e89dfd82521395d1c4ade2d3c"
+    },
+    {
+      "speed_kt": 60.0,
+      "pointFile": "POINT_060p00kt.mat",
+      "sha256": "17540e4a696f3ca4a682cf4bd57a94cfa2a2fb1395eef8d5075754d24778bdd2"
+    },
+    {
+      "speed_kt": 65.0,
+      "pointFile": "POINT_065p00kt.mat",
+      "sha256": "ee34b44df22b75137813ab864333b813dcdcdb537bdd4b62c20ccb224133a844"
+    },
+    {
+      "speed_kt": 70.0,
+      "pointFile": "POINT_070p00kt.mat",
+      "sha256": "960b01c6b005fff723c3332ed0a097ba9bc521b5e90c131f2270eeba13348d3a"
+    },
+    {
+      "speed_kt": 75.0,
+      "pointFile": "POINT_075p00kt.mat",
+      "sha256": "faae3b7bc9382b1fb2461eba2106ecd46bf9ebdb0a0369ab764974b8068aa6db"
+    },
+    {
+      "speed_kt": 80.0,
+      "pointFile": "POINT_080p00kt.mat",
+      "sha256": "93944cc9a192098e0dd97c711225579abad6135668bfe513c57fb7e856121421"
+    },
+    {
+      "speed_kt": 85.0,
+      "pointFile": "POINT_085p00kt.mat",
+      "sha256": "83467322cfeddbd7696ec3ad5a9cf0d4a25d72c1bf9808ce3f110572c48ecf61"
+    },
+    {
+      "speed_kt": 90.0,
+      "pointFile": "POINT_090p00kt.mat",
+      "sha256": "1576e7d081a9ed209e2c7983e3d1cd688720b8c1404c190a82bc6eb24922def6"
+    },
+    {
+      "speed_kt": 95.0,
+      "pointFile": "POINT_095p00kt.mat",
+      "sha256": "dfa4addfd09ff4f79704831b10e289c3bff695ef0d5966b1c499bc4b95bf284b"
+    },
+    {
+      "speed_kt": 100.0,
+      "pointFile": "POINT_100p00kt.mat",
+      "sha256": "dbf03123dc668b5d8635e7fd85def6cf3ece1b951a8047494860f7f61436d1de"
+    },
+    {
+      "speed_kt": 105.0,
+      "pointFile": "POINT_105p00kt.mat",
+      "sha256": "9dd6d04051753f6ec774dd12acc84b909c6e31ecd1ed0b5f908ef9d9e14249e2"
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "version": "FIG1A_V2",
+  "source": "docs\\validation\\wang2025_digitization\\source_images\\F001.jpg",
+  "source_sha256": "10a57b5e54fb5983759ff0810e2c498b75af66dfd9294fb69e2e58fa8b404db9",
+  "source_size_px": [
+    1889,
+    1254
+  ],
+  "axes": [
+    {
+      "row": 0,
+      "variable": "theta0",
+      "unit": "deg",
+      "x0": 116,
+      "x1": 455,
+      "y0": 23,
+      "y1": 198,
+      "xmin": 0,
+      "xmax": 60,
+      "ymin": 30,
+      "ymax": 60,
+      "band": [
+        85,
+        145
+      ]
+    },
+    {
+      "row": 1,
+      "variable": "delta_lon",
+      "unit": "percent",
+      "x0": 116,
+      "x1": 455,
+      "y0": 306,
+      "y1": 481,
+      "xmin": 0,
+      "xmax": 60,
+      "ymin": 0,
+      "ymax": 100,
+      "band": [
+        335,
+        419
+      ]
+    },
+    {
+      "row": 2,
+      "variable": "theta",
+      "unit": "deg",
+      "x0": 116,
+      "x1": 455,
+      "y0": 601,
+      "y1": 775,
+      "xmin": 0,
+      "xmax": 60,
+      "ymin": -40,
+      "ymax": 40,
+      "band": [
+        666,
+        735
+      ]
+    },
+    {
+      "row": 3,
+      "variable": "P",
+      "unit": "kW",
+      "x0": 116,
+      "x1": 455,
+      "y0": 895,
+      "y1": 1070,
+      "xmin": 0,
+      "xmax": 60,
+      "ymin": 0,
+      "ymax": 2500,
+      "band": [
+        947,
+        1040
+      ]
+    }
+  ],
+  "counts": {
+    "0": {
+      "blue_literature": 6,
+      "red_flight": 0
+    },
+    "1": {
+      "blue_literature": 5,
+      "red_flight": 3
+    },
+    "2": {
+      "blue_literature": 6,
+      "red_flight": 3
+    },
+    "3": {
+      "blue_literature": 6,
+      "red_flight": 3
+    }
+  },
+  "trace_rows": 1076,
+  "corrected_scope": "Figure 1(a), nacelle 90 deg, four rows",
+  "hidden_markers": [
+    "delta_lon blue marker near 20.9 m/s is obscured; omitted"
+  ],
+  "source_roles": {
+    "blue_literature": "Wang Figure 1 literature[26] (CR166537)",
+    "red_flight": "published flight marker, original raw record not available",
+    "black_model": "Wang model curve pixel trajectory"
+  },
+  "qualifications": [
+    "No model predictions used for extraction or selection",
+    "Pixel traces are correlated visualization samples, not experiments",
+    "x<=132 px excluded from black trace to remove axis ticks; gaps not filled",
+    "Reading bounds are not statistical confidence intervals",
+    "theta0 station and delta_lon percent mapping remain separate definition audits",
+    "No unseen/fully occluded blue or red marker is invented",
+    "Old FIG1 digitization remains unchanged"
+  ]
+}

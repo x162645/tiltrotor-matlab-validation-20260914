@@ -1,0 +1,125 @@
+{
+  "execution": "INDEPENDENT_PYTHON_READBACK_OF_NATIVE_MATLAB_OUTPUT",
+  "requested_rows": 23,
+  "accepted": 22,
+  "MAT_points_checked": 23,
+  "comparison_pairs_with_valid_bracket": 26,
+  "all_checks_passed": true,
+  "points": [
+    {
+      "speed_kt": 0.0,
+      "status": "SKIPPED_SOURCE_DOMAIN_FORWARD_VELOCITY_REQUIRED",
+      "MAT_CSV_agree": true
+    },
+    {
+      "speed_kt": 0.01,
+      "status": "NUMERICALLY_ACCEPTED_SOURCE_SUBSET",
+      "MAT_CSV_agree": true
+    },
+    {
+      "speed_kt": 5.0,
+      "status": "NUMERICALLY_ACCEPTED_SOURCE_SUBSET",
+      "MAT_CSV_agree": true
+    },
+    {
+      "speed_kt": 10.0,
+      "status": "NUMERICALLY_ACCEPTED_SOURCE_SUBSET",
+      "MAT_CSV_agree": true
+    },
+    {
+      "speed_kt": 15.0,
+      "status": "NUMERICALLY_ACCEPTED_SOURCE_SUBSET",
+      "MAT_CSV_agree": true
+    },
+    {
+      "speed_kt": 20.0,
+      "status": "NUMERICALLY_ACCEPTED_SOURCE_SUBSET",
+      "MAT_CSV_agree": true
+    },
+    {
+      "speed_kt": 25.0,
+      "status": "NUMERICALLY_ACCEPTED_SOURCE_SUBSET",
+      "MAT_CSV_agree": true
+    },
+    {
+      "speed_kt": 30.0,
+      "status": "NUMERICALLY_ACCEPTED_SOURCE_SUBSET",
+      "MAT_CSV_agree": true
+    },
+    {
+      "speed_kt": 35.0,
+      "status": "NUMERICALLY_ACCEPTED_SOURCE_SUBSET",
+      "MAT_CSV_agree": true
+    },
+    {
+      "speed_kt": 40.0,
+      "status": "NUMERICALLY_ACCEPTED_SOURCE_SUBSET",
+      "MAT_CSV_agree": true
+    },
+    {
+      "speed_kt": 45.0,
+      "status": "NUMERICALLY_ACCEPTED_SOURCE_SUBSET",
+      "MAT_CSV_agree": true
+    },
+    {
+      "speed_kt": 50.0,
+      "status": "NUMERICALLY_ACCEPTED_SOURCE_SUBSET",
+      "MAT_CSV_agree": true
+    },
+    {
+      "speed_kt": 55.0,
+      "status": "NUMERICALLY_ACCEPTED_SOURCE_SUBSET",
+      "MAT_CSV_agree": true
+    },
+    {
+      "speed_kt": 60.0,
+      "status": "NUMERICALLY_ACCEPTED_SOURCE_SUBSET",
+      "MAT_CSV_agree": true
+    },
+    {
+      "speed_kt": 65.0,
+      "status": "NUMERICALLY_ACCEPTED_SOURCE_SUBSET",
+      "MAT_CSV_agree": true
+    },
+    {
+      "speed_kt": 70.0,
+      "status": "NUMERICALLY_ACCEPTED_SOURCE_SUBSET",
+      "MAT_CSV_agree": true
+    },
+    {
+      "speed_kt": 75.0,
+      "status": "NUMERICALLY_ACCEPTED_SOURCE_SUBSET",
+      "MAT_CSV_agree": true
+    },
+    {
+      "speed_kt": 80.0,
+      "status": "NUMERICALLY_ACCEPTED_SOURCE_SUBSET",
+      "MAT_CSV_agree": true
+    },
+    {
+      "speed_kt": 85.0,
+      "status": "NUMERICALLY_ACCEPTED_SOURCE_SUBSET",
+      "MAT_CSV_agree": true
+    },
+    {
+      "speed_kt": 90.0,
+      "status": "NUMERICALLY_ACCEPTED_SOURCE_SUBSET",
+      "MAT_CSV_agree": true
+    },
+    {
+      "speed_kt": 95.0,
+      "status": "NUMERICALLY_ACCEPTED_SOURCE_SUBSET",
+      "MAT_CSV_agree": true
+    },
+    {
+      "speed_kt": 100.0,
+      "status": "NUMERICALLY_ACCEPTED_SOURCE_SUBSET",
+      "MAT_CSV_agree": true
+    },
+    {
+      "speed_kt": 105.0,
+      "status": "NUMERICALLY_ACCEPTED_SOURCE_SUBSET",
+      "MAT_CSV_agree": true
+    }
+  ]
+}
