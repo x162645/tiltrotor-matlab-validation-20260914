@@ -8,6 +8,7 @@
 | `CR166536_DIGITIZED_TABLES_BATCH2.csv` | Table 5-V(a-c)、5-VI、5-VII、8a-I 至 8a-VIII | 418 | 平尾动压比、机身侧滑动压损失、操纵传动与襟翼增益 |
 | `CR166536_DIGITIZED_TABLES_BATCH3_SIDE_SLIP.csv` | Table 3-II、3-IV、3-VI（B-28–B-29） | 73 | 机身侧滑导数；原表破折号缺失值不写入 |
 | `CR166536_DIGITIZED_TABLES_BATCH4_WING_T4I.csv` | Table 4-I（B-34–B-35） | 140 | 机翼—短舱升力系数；Not Defined 格子显式保留 |
+| `CR166536_DIGITIZED_TABLES_BATCH4_FUSELAGE_ALPHA.csv` | Table 3-I、3-III、3-V（B-26–B-27） | 93 | 机身纵向攻角量；保留配对攻角列和符号脚注 |
 
 ## 页码与身份表冲突
 
