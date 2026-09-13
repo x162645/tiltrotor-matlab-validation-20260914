@@ -43,7 +43,12 @@ if isfield(P.wing,'coefficientModel')
 else
  [Fwing,Mwing,wing]=wing_model(x,uApplied,betaM,mp.cgShift,rotL,rotR,P);
 end
-[Ffus,Mfus,fus]=fuselage_model(x,mp.cgShift,P);
+if isfield(P,'fuselage') && isfield(P.fuselage,'coefficientModel') && ...
+        strcmp(P.fuselage.coefficientModel,'GTRS_LONGITUDINAL_TABLES_V1')
+ [Ffus,Mfus,fus]=gtrs_fuselage_longitudinal_table(x,mp.cgShift,P);
+else
+ [Ffus,Mfus,fus]=fuselage_model(x,mp.cgShift,P);
+end
 if isfield(P,'interference')&&isfield(P.interference,'rotorToTailModel')
  if ~strcmp(P.interference.rotorToTailModel,'FERGUSON_1988_TABLE_2IA_STEADY_HELI')
   error('stage2_total_forces_moments:UnknownTailInteraction','Unknown interaction model.');

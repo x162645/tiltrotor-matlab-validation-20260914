@@ -350,3 +350,10 @@ D16先做总距—固定桨毂载荷瞬态预测，使用当前V4源修正、原
 - 交付 `analysis/validation_whole_aircraft_trim/data/CR166536_CLOSURE_README_CN.md`、各 CSV/provenance、统一 ALL_CELLS、TABLE_CATALOG、RESOLVED_SEMANTICS、标准库读取器。读取器支持全部表的显式坐标筛选及固定构型一维读取/插值，实际执行 5-II→5-I 和 6-II→6-I 的全角域引用，并拒绝未定义、外推和混合构型。
 - Windows bundled Python 3.12 运行全部 9 组检查通过，详细输入/代码哈希在 CHECK_RESULTS。首个绘图调用因 bundled runtime 未安装 matplotlib 失败，后使用现有 Python 3.8.3/matplotlib 3.7.5/Microsoft YaHei 成功生成中文原表预览并实际查看。此图不是验模结果。本轮没有运行 MATLAB 或新的整机计算。
 - 当前精确断点：原表数字和读取接口已闭合；将本表包接入各子系统方程、裁决影响力矩臂的源几何差异、再用固定坐标/输入重算文献对比仍属于后续模型工作。没有把读取检查、源模型参数或表格数量用于认领全机精度或国内领先。
+
+## 2026-09-13 CR-166536 机身表接入后的整机稳态验模
+
+- 将 `model/gtrs_fuselage_longitudinal_table.m` 接入 `stage2_total_forces_moments`，实际使用 CR-166536 表 3-I、3-III、3-V 的纵向机身升力、阻力和俯仰力矩；保留前飞、零侧滑、零角速率、低马赫的源表域门禁。
+- 以 `run_line_b_v7_trim_case.m` 在 40、60、80 kt 重算 XV-15-like 整机稳态配平。3/3 点数值收敛，残差分别为 2.41e-10、1.58e-10、3.36e-10；与 Kleinhesselink 2007 GTRS 参考仿真的俯仰角/杆位/升降舵/单桨推力 MAE 分别为 2.032°、0.533 in、2.549°、3.670%。
+- 结果保存在 `outputs/gtrs_v7_source_trim_{40,60,80}kt/`，汇总报告和中文误差图位于工作区交付目录 `outputs/整机验模_CR166536_V7_20260913/`。该结果是同一 GTRS 数值参考体系的整机相关性，不是独立飞行实测验证；不能据此声明全过渡动态精度或国内领先。
+- 剩余实质门槛：扩大 CR-166536 表在机翼/尾翼/垂尾和旋翼动态中的实际耦合，补充动态入流与短舱过渡状态，并取得同步全机输入—状态记录后再做动态外部评分。

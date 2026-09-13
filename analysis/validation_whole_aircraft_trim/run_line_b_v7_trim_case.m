@@ -6,6 +6,8 @@ function result=run_line_b_v7_trim_case(speedKt,outputRoot)
 % output carrier is not mixed into this physical-change comparison.
 if ~exist(outputRoot,'dir'),mkdir(outputRoot);end
 [P,contract]=xv15_helicopter_trim_parameters_v1();P=line_b_coherent_tail_parameters(P);
+P.fuselage.coefficientModel='GTRS_LONGITUDINAL_TABLES_V1';
+P.validation.gtrsTablePackage='CR166536_DIGITIZED_TABLES_CLOSURE_20260913';
 P.rotor.correctionIdentity='CORRIGAN_POSITIVE_LIFT_WASHOUT_V4';P.wing.coefficientModel='GTRS_FREEFIELD_HELI_V6';
 P.aeroExtras.spinnerModel='GTRS_TWO_SPINNERS_STEADY_HELI_V7';
 S=readtable(fullfile(fileparts(mfilename('fullpath')),'original_baseline_trim_seeds.csv'));S=S(S.speed_kt==speedKt,:);assert(height(S)==1);
@@ -14,6 +16,8 @@ P.stage2Numerics.flapInitialLeft=[S.flapL0;S.flapL1c;S.flapL1s];P.stage2Numerics
 contract.identity='XV15_SHARED_FREEFIELD_AND_SPINNERS_V7';contract.targetFitting=false;contract.productionPhysicsModified=true;
 contract.rotorIdentity='M1_CONTINUOUS_CORRIGAN_V4';contract.rotorCorrectionIdentity=P.rotor.correctionIdentity;
 contract.wingIdentity=P.wing.coefficientModel;contract.spinnerIdentity=P.aeroExtras.spinnerModel;
+contract.fuselageIdentity=P.fuselage.coefficientModel;
+contract.tablePackage=P.validation.gtrsTablePackage;
 contract.claimBoundary='NEW_MODEL_REFERENCE_CORRELATION_NOT_INDEPENDENT_FLIGHT_VALIDATION';
 bounds=[-35*d2r 35*d2r;P.control.collectiveLim(:).';0 9.6];
 opt=optimset('Display','off','MaxIter',P.trim.maxIterations,'MaxFunEvals',12*P.trim.maxIterations,'TolX',1e-8,'TolFun',1e-10);
