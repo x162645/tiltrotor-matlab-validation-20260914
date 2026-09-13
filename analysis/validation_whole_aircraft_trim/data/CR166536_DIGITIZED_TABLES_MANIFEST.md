@@ -9,6 +9,8 @@
 | `CR166536_DIGITIZED_TABLES_BATCH3_SIDE_SLIP.csv` | Table 3-II、3-IV、3-VI（B-28–B-29） | 73 | 机身侧滑导数；原表破折号缺失值不写入 |
 | `CR166536_DIGITIZED_TABLES_BATCH4_WING_T4I.csv` | Table 4-I（B-34–B-35） | 140 | 机翼—短舱升力系数；Not Defined 格子显式保留 |
 | `CR166536_DIGITIZED_TABLES_BATCH4_FUSELAGE_ALPHA.csv` | Table 3-I、3-III、3-V（B-26–B-27） | 93 | 机身纵向攻角量；保留配对攻角列和符号脚注 |
+| `CR166536_DIGITIZED_TABLES_BATCH5_FUSELAGE_SIDESLIP_MOMENTS.csv` | Table 3-VII、3-VIII、3-IX（B-30） | 57 | 机身侧滑滚转/偏航量；按正负侧滑符号规则保存 |
+| `CR166536_DIGITIZED_TABLES_BATCH6_WING_PYLON_CONSTANTS.csv` | Subsystem 4 常数与导数（B-31–B-33） | 35 | 机翼—短舱几何、导数和干扰常数 |
 
 ## 页码与身份表冲突
 

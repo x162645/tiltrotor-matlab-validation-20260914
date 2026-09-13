@@ -20,6 +20,8 @@ def main():
     b3 = read_rows("CR166536_DIGITIZED_TABLES_BATCH3_SIDE_SLIP.csv")
     b4 = read_rows("CR166536_DIGITIZED_TABLES_BATCH4_WING_T4I.csv")
     b4f = read_rows("CR166536_DIGITIZED_TABLES_BATCH4_FUSELAGE_ALPHA.csv")
+    b5 = read_rows("CR166536_DIGITIZED_TABLES_BATCH5_FUSELAGE_SIDESLIP_MOMENTS.csv")
+    b6 = read_rows("CR166536_DIGITIZED_TABLES_BATCH6_WING_PYLON_CONSTANTS.csv")
     c1, c2 = Counter(r["table_id"] for r in b1), Counter(r["table_id"] for r in b2)
     expected1 = {
         "TABLE_023": 12, "TABLE_1_II_ENDURANCE_SUPP": 27,
@@ -48,7 +50,9 @@ def main():
     assert sum(r["read_status"] == "NOT_DEFINED" for r in b4) == 44
     assert len(b4f) == 93
     assert Counter(r["table_id"] for r in b4f) == {"TABLE_3_I": 31, "TABLE_3_III": 31, "TABLE_3_V": 31}
-    print(f"batch1={len(b1)} cells, batch2={len(b2)} cells, batch3={len(b3)} cells, batch4={len(b4)} cells, fuselage={len(b4f)} cells, checks=PASS")
+    assert len(b5) == 57 and len(b6) == 35
+    assert all(r["read_status"] for r in b5 + b6)
+    print(f"batch1={len(b1)} cells, batch2={len(b2)} cells, batch3={len(b3)} cells, batch4={len(b4)} cells, fuselage={len(b4f)} cells, batch5={len(b5)} cells, batch6={len(b6)} cells, checks=PASS")
 
 if __name__ == "__main__":
     main()
