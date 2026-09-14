@@ -27,10 +27,21 @@ P.rotor.correctionIdentity='CORRIGAN_POSITIVE_LIFT_WASHOUT_V4';
 P.wing.coefficientModel='GTRS_FREEFIELD_HELI_V6'; P.wing.SslipMaxHalf=0;
 P.aeroExtras.spinnerModel='GTRS_TWO_SPINNERS_STEADY_HELI_V7';
 modelIdentity='M1_CONTINUOUS_CORRIGAN_V4'; identity='V7_ANGLE_SCREEN_SOURCE_MODES_V1';
+Pbase=P;
 seedTable=readtable(fullfile(here,'original_baseline_trim_seeds.csv')); d2r=pi/180;
 rows=repmat(empty_row(),0,1); records=cell(0,1);
 for ia=1:numel(nacelleDeg)
  betaDeg=90-nacelleDeg(ia); beta=betaDeg*d2r;
+ P=Pbase;
+ % CR-166536 airplane wing source is X_FL1=0/0 at mast angle 90 deg.
+ % The available high-Mach tail source has no nonzero-elevator rows, so
+ % this branch deliberately falls back to the legacy tail law and is an
+ % analysis-only hybrid; it cannot support a full-airplane validation claim.
+ if betaDeg>=89.999
+  P.validation.flapDeg=0;
+  P.wing.coefficientModel='GTRS_AIRPLANE_XFL1_SOURCE_ONLY';
+  if isfield(P.htail,'modelIdentity'), P.htail=rmfield(P.htail,'modelIdentity'); end
+ end
  for iv=1:numel(speedsKt)
   Vkt=speedsKt(iv); mode=mode_for_beta(betaDeg); seed=make_seed(seedTable,Vkt);
   t0=tic; evals=0; invalid=0; ids={};

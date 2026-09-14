@@ -39,6 +39,8 @@ if isfield(P.wing,'coefficientModel')
   [Fwing,Mwing,wing]=wing_model_source_family(x,uApplied,betaM,mp.cgShift,rotL,rotR,P);
  elseif strcmp(P.wing.coefficientModel,'GTRS_FREEFIELD_HELI_V6')
   [Fwing,Mwing,wing]=wing_model_freefield_consistent(x,uApplied,betaM,mp.cgShift,rotL,rotR,P);
+ elseif strcmp(P.wing.coefficientModel,'GTRS_AIRPLANE_XFL1_SOURCE_ONLY')
+  [Fwing,Mwing,wing]=wing_model_airplane_source_only(x,uApplied,betaM,mp.cgShift,rotL,rotR,P);
  else,error('stage2_total_forces_moments:UnknownWingModel','Unknown wing coefficient model.');end
 else
  [Fwing,Mwing,wing]=wing_model(x,uApplied,betaM,mp.cgShift,rotL,rotR,P);
