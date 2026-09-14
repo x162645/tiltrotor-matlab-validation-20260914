@@ -41,6 +41,8 @@
 
 当前状态：**文献对比证据已具备，四角度 MATLAB 原生筛查已实际运行，但整机多角度外部验证仍未闭合**。图1四角度图示目标、图2三个构型图示目标和 GTRS/NASA 参考输出均已归档；当前 12 个角度×速度诊断点中 5 个数值通过、7 个未通过。未通过点暴露出控制分配饱和、攻角夹断和高 Mach 源表域限制，不能把筛查结果误写成原始同步动态验证。详见 `outputs/V7_ANGLE_SCREEN_20260913_CONTRACT` 和 `outputs/四构型角度筛查实际结果.md`。
 
+新增的 CR-166536 源驱动诊断进一步显示：表 8a-I 的周期变距传动比可改变 60°/90° 的配平分支；但当前模型仍把机翼襟翼固定为 X_FL3=40/25，而 CR-166536 飞机构型翼面是 X_FL1=0/0，且高 Mach 尾翼表缺少非零升降舵数据。因此源驱动诊断只能作为误差归因，不能升级为飞机模式的完整 GTRS 验证。详见 `analysis/validation_whole_aircraft_trim/xv15_gtrs_control_allocation_source.m`、`model/gtrs_wing_airplane_source_coefficients.m` 和相应输出审计。
+
 ## 与长期通用整机目标的关系
 
 本目标只增加一个公开资料约束的 validation adapter，不把 XV-15 参数或调参结果写回通用核心。通用核心继续保持可换构型；其他公开对象（ERICA、HVAB、TRAST、OARF/WADC）作为部件或整机气动的补充验证路径。完成本目标后，仍需同步全机动态数据才能声明真实整机动态精度或实机飞行品质。
