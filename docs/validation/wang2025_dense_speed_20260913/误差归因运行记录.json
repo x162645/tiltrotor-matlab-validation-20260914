@@ -1,0 +1,13 @@
+{
+  "identity": "READ_FROZEN_V7_COMPONENT_BREAKDOWN",
+  "speeds_kt": [
+    40,
+    60,
+    80,
+    100
+  ],
+  "source": "calculation/POINT_*p00kt.mat",
+  "new_model_calls": 0,
+  "force_moment_sum_checked": true,
+  "power_definition": "sum rotor torque * 589 rpm Omega / 1000"
+}
