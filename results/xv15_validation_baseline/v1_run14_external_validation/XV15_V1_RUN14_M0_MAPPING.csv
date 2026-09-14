@@ -1,0 +1,12 @@
+mappingName,mappingValue
+R_m,3.81
+rootCut,0.0875
+chordEq_m,0.362385033431787
+twistTipEq_deg,-36.3479129737159
+theta75Source_deg,-0.0012226562500004
+twistRms_deg,2.28076212668953
+twistMaxAbs_deg,4.29654558572244
+generic_liftSlope_1_per_rad,5.7
+generic_CLmax,1.35
+generic_CD0,0.011
+generic_kCD,0.012
