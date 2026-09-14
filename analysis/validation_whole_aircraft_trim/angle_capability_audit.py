@@ -17,7 +17,8 @@ rows = []
 for name, path in FILES.items():
     text = path.read_text(encoding="utf-8", errors="replace")
     guards = re.findall(r"if\s+([^\n]*betaM[^\n]*)", text)
-    supports_range = bool(re.search(r"betaM\s*>=\s*-?1e-12.*betaM\s*<=\s*pi/2", text, re.S))
+    supports_range = bool(("betaM < -1e-12" in text or "betaM>=-1e-12" in text) and
+                          ("betaM > pi/2" in text or "betaM<=pi/2" in text))
     for angle in angles:
         rows.append({
             "component": name,
