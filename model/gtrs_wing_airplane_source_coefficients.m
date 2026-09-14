@@ -6,13 +6,14 @@ function [CL,CD,Cm,meta]=gtrs_wing_airplane_source_coefficients(alphaRad,Mach)
 % from gtrs_wing_heli_coefficients, whose X_FL3=40/25 low-Mach family is
 % not valid for the airplane branch.  No fitting or extrapolation is done.
 % The 0..0.2 column is a source band; 0.4/0.5/0.6 are discrete source
-% columns and are linearly interpolated only over their common alpha range.
+% columns. Interpolation from the band endpoint .2 to .4 is interpolation
+% inside the source-node hull, not extrapolation or a missing-data gap.
 a=alphaRad*180/pi;
 if ~isscalar(Mach)||~isreal(Mach)||~isfinite(Mach)||~isreal(a)||any(~isfinite(a(:)))
     error('gtrs_wing_airplane_source_coefficients:InvalidInput','Finite real alpha and Mach required.');
 end
 if Mach<0 || Mach>0.6
-    error('gtrs_wing_airplane_source_coefficients:OutsideSourceDomain','CR-166536 airplane wing source supports Mach 0..0.2 and 0.4..0.6 only.');
+    error('gtrs_wing_airplane_source_coefficients:OutsideSourceDomain','CR-166536 airplane wing source supports Mach 0..0.6.');
 end
 % Table 4-I, C_LWP, X_FL1=0/0, mast angle 90 deg.
 acl={[-40 -36 -32 -28 -24 -20 -19.5 -16 -15.5 -13 -12 -11 -8 -4 0 4 8 11 12 13 16 17 20 24 28 32 36 40], ...
@@ -34,12 +35,10 @@ vcd={[.575 .505 .425 .327 .230 .150 .089 .042 .025 .017 .0204 .0418 .072 .118 .1
 [.240 .110 .052 .040 .042 .062 .127 .268]};
 if Mach<=.2
     k1=1;k2=1;w=0;
-elseif Mach>=.4 && Mach<=.6
-    grid=[.4 .5 .6]; [~,k2]=min(abs(grid-Mach));
-    if Mach<=.5,k1=2;k2=3;else,k1=3;k2=4;end
-    w=(Mach-grid(k1-1))/(grid(k2-1)-grid(k1-1));
 else
-    error('gtrs_wing_airplane_source_coefficients:MachGap','No CR-166536 source column exists for Mach .2..0.4.');
+    grid=[.2 .4 .5 .6]; exact=find(abs(grid-Mach)<1e-12,1);
+    if ~isempty(exact),k1=exact;k2=exact;w=0;
+    else,k2=find(grid>Mach,1);k1=k2-1;w=(Mach-grid(k1))/(grid(k2)-grid(k1));end
 end
 % Interpolate each coefficient only over the alpha intersection of source rows.
 CL=interpMach(a,acl,vcl,k1,k2,w,'CL'); CD=interpMach(a,adc,vcd,k1,k2,w,'CD');

@@ -1,0 +1,12 @@
+    passed: 1
+    source: 'CR166536 A85/A86 and T5-I..IV'
+     claim: 'COEFFICIENT_IMPLEMENTATION_CHECK_NOT_AIRCRAFT_VALIDATION'
+
+    passed: 1
+     claim: 'EMPTY_AREA_DOMAIN_FIX_NOT_EXTERNAL_VALIDATION'
+
+    trackedFlapSeed    residualNorm    maxXdotChange    physicalConverged    physicalBranchSupported    alphaClampCount    power_kW
+    _______________    ____________    _____________    _________________    _______________________    _______________    ________
+
+         false          7.2728e-10      9.6399e-18            true                    true                    52            1600.8
+         true           7.2728e-10      1.6147e-16            true                    true                    52            1600.8

@@ -1,0 +1,3 @@
+trackedFlapSeed,residualNorm,maxXdotChange,physicalConverged,physicalBranchSupported,alphaClampCount,power_kW
+0,7.2727896223084e-10,9.63986824028945e-18,1,1,52,1600.82392850761
+1,7.2727896223084e-10,1.61467793024848e-16,1,1,52,1600.82392850761

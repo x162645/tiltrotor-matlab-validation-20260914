@@ -36,9 +36,20 @@ for side=[-1,1]
   if ~(isfinite(vi)&&vi>=0),error('wing_model_source_family:BadInflow','Positive-thrust inflow required.');end
   r=[P.wing.xAC;y;P.wing.zAC]-cgShift;Vrigid=x(1:3)+cross(x(4:6),r);
   dv=vi*[sin(betaM);0;-cos(betaM)];Vloc=Vrigid+dv;V=norm(Vloc);a=atan2(Vloc(3),Vloc(1));
-  [CL,CD,Cm,meta]=gtrs_wing_heli_coefficients(a,V/P.env.aSound);
-  q=.5*P.env.rho*V^2;F=aero_force_body(q*S*CD,0,q*S*CL,a,0);
-  Mi=[0;q*S*P.wing.c*Cm;0];Ma=cross(r,F);M=Mi+Ma;
+  q=.5*P.env.rho*V^2;
+  if S==0
+   % An empty patch has exactly zero loads and no coefficient domain.
+   % Keep its kinematics for diagnostics; do not reject the aircraft over
+   % a local-Mach lookup on an area that contributes no force or moment.
+   CL=NaN;CD=NaN;Cm=NaN;
+   meta=struct('identity','EMPTY_PATCH_NO_COEFFICIENT_EVALUATION');
+   F=zeros(3,1);Mi=zeros(3,1);
+  else
+   [CL,CD,Cm,meta]=gtrs_wing_heli_coefficients(a,V/P.env.aSound);
+   F=aero_force_body(q*S*CD,0,q*S*CL,a,0);
+   Mi=[0;q*S*P.wing.c*Cm;0];
+  end
+  Ma=cross(r,F);M=Mi+Ma;
   Fbody=Fbody+F;Mbody=Mbody+M;
   regions{idx}=struct('side',side,'inSlipstream',immersed,'S',S,'rAC',r,'Vlocal',Vloc,'VrigidLocal',Vrigid, ...
    'alpha',a,'qbar',q,'CL',CL,'CD',CD,'Cm',Cm,'Maero',Mi,'Marm',Ma,'F',F,'M',M,'coefficientMeta',meta);

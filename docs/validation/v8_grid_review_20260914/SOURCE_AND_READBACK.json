@@ -1,0 +1,182 @@
+{
+  "source": "docs\\validation\\wang2025_digitization\\source_images\\F001.jpg",
+  "sha256": "10a57b5e54fb5983759ff0810e2c498b75af66dfd9294fb69e2e58fa8b404db9",
+  "axes_pixel": [
+    [
+      1044.5,
+      1384.5,
+      25.5,
+      199.5,
+      20,
+      80
+    ],
+    [
+      1046.5,
+      1384.5,
+      308.5,
+      483.5,
+      0,
+      100
+    ],
+    [
+      1044.5,
+      1384.5,
+      601.5,
+      775.5,
+      -40,
+      40
+    ],
+    [
+      1044.5,
+      1384.5,
+      895.5,
+      1070.5,
+      0,
+      2500
+    ]
+  ],
+  "marker_method": "blue bounding box center, split halves merged",
+  "readout_allowance": "2 pixels; extraction allowance, not a statistical confidence interval",
+  "old_panel_c_csv": "retained; displaced-axis calibration superseded by this extraction",
+  "collective_comparison": "omitted: root/radial convention unresolved",
+  "execution": "MATLAB R2021a model results, Python readback and image extraction",
+  "model_config": "589rpm all angles; XFL3 and helicopter field retained at i_n30; conditional source-family comparison",
+  "carriers": [
+    {
+      "path": "V7_ANGLE_SCREEN_AIRPLANE_SOURCE_20260914_FULL\\IN000_V040.00.mat",
+      "sha256": "bcb064f8f368966ddb4023a7b139ffb3847a7a024d0f3132190cdb268b32f01c"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_AIRPLANE_SOURCE_20260914_FULL\\IN000_V080.00.mat",
+      "sha256": "d304f62c33c356530650f36d1efed700cc645f5ed1df00385fcd2cc74b218915"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_AIRPLANE_SOURCE_20260914_FULL\\IN000_V120.00.mat",
+      "sha256": "28b782b2f9b34d63254022313381184420a97649f699b7166fdc9b75f187d521"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_AIRPLANE_SOURCE_20260914_FULL\\IN030_V040.00.mat",
+      "sha256": "099c7cf3fdc429fd736ef31804b775df1500a5efbddbebf97a0b84c0ef5fd487"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_AIRPLANE_SOURCE_20260914_FULL\\IN030_V080.00.mat",
+      "sha256": "c53652eed4d6d2f2a213cb33eaebd53a4540bd06e18a9bc1ae63037a12402bb8"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_AIRPLANE_SOURCE_20260914_FULL\\IN030_V120.00.mat",
+      "sha256": "ef9d7d3801beb2ceb4e209717202064f469691985d5b451ab41b98d33551541a"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_AIRPLANE_SOURCE_20260914_FULL\\IN060_V040.00.mat",
+      "sha256": "1caad9f128b37cefe7c1080461f4ac5c9aa273b1eec4727556f99c45a4fbb560"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_AIRPLANE_SOURCE_20260914_FULL\\IN060_V080.00.mat",
+      "sha256": "bde76080d3436264a984b4e2a3c2afa08eac2b1f35f57842635fd29e1caadb1d"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_AIRPLANE_SOURCE_20260914_FULL\\IN060_V120.00.mat",
+      "sha256": "84e3e012bbb774f9c8125c8c464de646265f36c3dfb974848141ce89bb981e1b"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_AIRPLANE_SOURCE_20260914_FULL\\IN090_V040.00.mat",
+      "sha256": "f59143bd558687855783a5bca23a8920c8ffbd683e4331b470d52c33245966ac"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_AIRPLANE_SOURCE_20260914_FULL\\IN090_V080.00.mat",
+      "sha256": "15af5dd8461a3e33d17cce8137e6da9dc80445528f24aefdd200222d65fade5e"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_AIRPLANE_SOURCE_20260914_FULL\\IN090_V120.00.mat",
+      "sha256": "1464bacc37fd4003d312e654d12010203ea549fc8bf793effecf06c747747da8"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_ADAPTIVE_20260914\\IN000\\IN000_V130.00.mat",
+      "sha256": "05b83cdc1740d39e2da61764af6bb65eff5246f480c4156443d22b086bed18ea"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_ADAPTIVE_20260914\\IN000\\IN000_V150.00.mat",
+      "sha256": "7e7fb8b3402258b9df761b3a173e67d44f4e849c8a69cadccaa8b468e6ce60bc"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_ADAPTIVE_20260914\\IN000\\IN000_V170.00.mat",
+      "sha256": "54bc04a8d7a759e56b2141cdc900807e4815ff4a2849a58642254df2f5d446b4"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_ADAPTIVE_20260914\\IN000\\IN000_V185.00.mat",
+      "sha256": "ddd8cca0787bef90e5ac16ae7a1298855f9e4cdfbb90c92cf5563b4b63c626f4"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_ADAPTIVE_20260914\\IN030\\IN030_V110.00.mat",
+      "sha256": "bd83dbf18e713f55e4b00a942fc2dc244647767c6452afb0a54392f495dba236"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_ADAPTIVE_20260914\\IN030\\IN030_V130.00.mat",
+      "sha256": "4c7a204c5879753f367ff709cc2f9950788423a69857677db8c1b9fce4e33fa6"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_ADAPTIVE_20260914\\IN030\\IN030_V150.00.mat",
+      "sha256": "e56d01ae2268590755095ab746af0549c938e3df8e37bbf277b589fe284ee60e"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_ADAPTIVE_20260914\\IN030\\IN030_V170.00.mat",
+      "sha256": "9630fe7ac424e9dbdf123c0dfb4b35a74c803d95f6b484df6a490afc61c0c8ad"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_ADAPTIVE_20260914\\IN060\\IN060_V080.00.mat",
+      "sha256": "5d29b7aca9326e92ecea20998819476e049f135edf72435ddde280253144e6a7"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_ADAPTIVE_20260914\\IN060\\IN060_V100.00.mat",
+      "sha256": "176e3aa483215f8894a9d337de2b9db774f5fb5990f8ccba1517e212f108630f"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_ADAPTIVE_20260914\\IN060\\IN060_V120.00.mat",
+      "sha256": "a9a406edc57344916b7419bfca794087aa8dab130d927194793aef0b8b5ac3be"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_ADAPTIVE_20260914\\IN060\\IN060_V140.00.mat",
+      "sha256": "295adfaa4d8b332a45e6f7ae249790bf7448de4ab673d5a6d0a52e24fc5a7d84"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_ADAPTIVE_20260914\\IN090\\IN090_V020.00.mat",
+      "sha256": "aa69cc9702897b69522212711b41896acf167fc70416c06005701418c75c5d0b"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_ADAPTIVE_20260914\\IN090\\IN090_V040.00.mat",
+      "sha256": "9224d4fd4190de3292f2b00fc03daf671966dc26bbdbd553a9b7c243af5110ec"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_ADAPTIVE_20260914\\IN090\\IN090_V060.00.mat",
+      "sha256": "118796ea6a4ff068599b7543d77a6bc9fb17dcf147c5d945ab5444803e809ad2"
+    },
+    {
+      "path": "V7_ANGLE_SCREEN_ADAPTIVE_20260914\\IN090\\IN090_V080.00.mat",
+      "sha256": "5436a39617d78242ac69f893e7d93cf91c8f970b2cdeb9d6e3ff0faa579be4cc"
+    },
+    {
+      "path": "V8_CONTINUATION_IN030_20260914\\IN030_V115.00.mat",
+      "sha256": "632feb696d37499e80dd166a1977523f342c996e3ef48300d1b0830962dd99d9"
+    },
+    {
+      "path": "V8_CONTINUATION_IN030_20260914\\IN030_V120.00.mat",
+      "sha256": "ca213b02728f249c4cbbdbf206512502d2861277eca69c9c679277f34a938dff"
+    },
+    {
+      "path": "V8_CONTINUATION_IN030_20260914\\IN030_V125.00.mat",
+      "sha256": "58aa00e2bd865235937df208d685cea84e4b89353c41b94ee7368941c114e4eb"
+    },
+    {
+      "path": "V8_CONTINUATION_IN030_20260914\\IN030_V130.00.mat",
+      "sha256": "adfc9998db300ef928402b04f9d23ee037b62206107b267ccf060624f349c1a1"
+    },
+    {
+      "path": "V8_EMPTY_AREA_FIX_20260914\\IN030_V130.00.mat",
+      "sha256": "6286f57e8f4906f25f98ed1b07d808f1df9d5f54675636b7c69a0dec8b3b7765"
+    },
+    {
+      "path": "V8_AIRPLANE_MACH_INTERPOLATION_20260914\\IN000_V170.00.mat",
+      "sha256": "4e5d9f05e2d1240ba319fa2590644127d24b66cd9c515c7b39e318822b62e677"
+    }
+  ]
+}

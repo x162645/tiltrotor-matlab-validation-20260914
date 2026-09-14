@@ -1,5 +1,5 @@
-function results = run_line_b_v7_angle_screen_source_modes(outputRoot,nacelleDeg,speedsKt)
-%RUN_LINE_B_V7_ANGLE_SCREEN_SOURCE_MODES Source-backed trim-mode screen.
+function results = run_line_b_v8_continuation(outputRoot,nacelleDeg,speedsKt,numericalSeedFile)
+%RUN_LINE_B_V8_CONTINUATION Same-physics continuation from an accepted point.
 %
 % This is an analysis-only companion to run_line_b_v7_angle_screen.  It
 % keeps the production stage-2 equations fixed while removing one known
@@ -12,7 +12,8 @@ function results = run_line_b_v7_angle_screen_source_modes(outputRoot,nacelleDeg
 % Paper convention: nacelle i_n=90 deg helicopter, i_n=0 deg airplane.
 % Internal betaM=90-i_n (degrees), as required by production equations.
 
-if nargin<1||isempty(outputRoot), outputRoot=fullfile(pwd,'outputs','v7_angle_screen_source_modes'); end
+if nargin<4,numericalSeedFile='';end
+if nargin<1||isempty(outputRoot), outputRoot=fullfile(pwd,'outputs','v8_continuation_source_modes'); end
 if nargin<2||isempty(nacelleDeg), nacelleDeg=[90 60 30 0]; end
 if nargin<3||isempty(speedsKt), speedsKt=[40 80 120]; end
 nacelleDeg=unique(nacelleDeg(:).','stable'); speedsKt=speedsKt(:).';
@@ -26,18 +27,25 @@ P.validation.gtrsTablePackage='CR166536_DIGITIZED_TABLES_CLOSURE_20260913';
 P.rotor.correctionIdentity='CORRIGAN_POSITIVE_LIFT_WASHOUT_V4';
 P.wing.coefficientModel='GTRS_FREEFIELD_HELI_V6'; P.wing.SslipMaxHalf=0;
 P.aeroExtras.spinnerModel='GTRS_TWO_SPINNERS_STEADY_HELI_V7';
-modelIdentity='M1_CONTINUOUS_CORRIGAN_V4'; identity='V7_ANGLE_SCREEN_SOURCE_MODES_V1';
+modelIdentity='M1_CONTINUOUS_CORRIGAN_V4'; identity='V8_CONTINUATION_SOURCE_MODES_ANALYSIS_ONLY';
 Pbase=P;
 seedTable=readtable(fullfile(here,'original_baseline_trim_seeds.csv')); d2r=pi/180;
 rows=repmat(empty_row(),0,1); records=cell(0,1);
 for ia=1:numel(nacelleDeg)
  betaDeg=90-nacelleDeg(ia); beta=betaDeg*d2r;
- P=Pbase;
+ P=Pbase; previousZ=[];
+ if ~isempty(numericalSeedFile)
+  initial=load(numericalSeedFile);
+  assert(initial.rec.row.numericallyAccepted && initial.rec.row.nacelle_deg==nacelleDeg(ia),'Seed must be accepted at same angle.');
+  previousZ=initial.rec.z;
+  P.stage2Numerics.flapInitialLeft=initial.rec.point.eomOut.rotorLeft.zFlap;
+  P.stage2Numerics.flapInitialRight=initial.rec.point.eomOut.rotorRight.zFlap;
+ end
  % CR-166536 airplane wing source is X_FL1=0/0 at mast angle 90 deg.
- % A85/A86 define high-Mach elevator action through equivalent incidence.
- % This diagnostic retains the legacy tail until the angle-dependent flow
- % and source coefficients are integrated together; this is an explicit
- % analysis-only hybrid, not evidence that the source elevator law is absent.
+ % A85/A86 DO define high-Mach elevator action via equivalent incidence.
+ % That new coefficient helper is not yet a complete angle-dependent tail
+ % flow implementation. Retain the explicitly labelled legacy-tail hybrid
+ % here to isolate continuation/wing fixes; do not claim GTRS reproduction.
  if betaDeg>=89.999
   P.validation.flapDeg=0;
   P.wing.coefficientModel='GTRS_AIRPLANE_XFL1_SOURCE_ONLY';
@@ -53,6 +61,7 @@ for ia=1:numel(nacelleDeg)
    z0=[seed.theta; seed.collective; seed.stick]; scale=[2*d2r;10*d2r;1];
    bounds=[-35*d2r 35*d2r; P.control.collectiveLim(:).'; 0 9.6];
   end
+  if ~isempty(previousZ),z0=previousZ;end
   opt=optimset('Display','off','MaxIter',P.trim.maxIterations,'MaxFunEvals',12*P.trim.maxIterations,'TolX',1e-8,'TolFun',1e-10);
   try
    [y,cost,ef,optimizer]=fminsearch(@objective,ones(numel(z0),1),opt); z=z0+scale.*(y-1); p=evaluate(z);
@@ -65,11 +74,16 @@ for ia=1:numel(nacelleDeg)
   catch ME
    row=empty_row(); row.nacelle_deg=nacelleDeg(ia); row.betaM_deg=betaDeg; row.speed_kt=Vkt; row.speed_mps=Vkt*.514444; row.mode=mode; row.status=['ERROR_' ME.identifier]; row.errorMessage=ME.message; row.elapsed_s=toc(t0); rec=struct('identity',identity,'row',row,'errorIdentifier',ME.identifier,'errorMessage',ME.message);
   end
+  if row.numericallyAccepted
+   previousZ=z;
+   P.stage2Numerics.flapInitialLeft=p.eomOut.rotorLeft.zFlap;
+   P.stage2Numerics.flapInitialRight=p.eomOut.rotorRight.zFlap;
+  end
   rows(end+1,1)=row; records{end+1,1}=rec; save(fullfile(outputRoot,sprintf('IN%03.0f_V%06.2f.mat',nacelleDeg(ia),Vkt)),'rec','P');
  end
 end
 points=struct2table(rows,'AsArray',true); writetable(points,fullfile(outputRoot,'ANGLE_SCREEN_SOURCE_MODE_POINTS.csv'));
-summary=struct('identity',identity,'nacelle_deg',nacelleDeg,'betaM_internal_deg',90-nacelleDeg,'speedOrder_kt',speedsKt,'requestedPointCount',height(points),'acceptedCount',sum(points.numericallyAccepted),'rejectedCount',sum(~points.numericallyAccepted),'acceptedFraction',sum(points.numericallyAccepted)/max(height(points),1),'claim','ANGLE_MODE_DIAGNOSTIC_NO_EXTERNAL_FLIGHT_VALIDATION','executionIdentity','MATLAB_NATIVE');
+summary=struct('identity',identity,'nacelle_deg',nacelleDeg,'betaM_internal_deg',90-nacelleDeg,'speedOrder_kt',speedsKt,'numericalSeedFile',numericalSeedFile,'requestedPointCount',height(points),'acceptedCount',sum(points.numericallyAccepted),'rejectedCount',sum(~points.numericallyAccepted),'acceptedFraction',sum(points.numericallyAccepted)/max(height(points),1),'claim','ANGLE_MODE_DIAGNOSTIC_NO_EXTERNAL_FLIGHT_VALIDATION','executionIdentity','MATLAB_NATIVE');
 write_json(fullfile(outputRoot,'ANGLE_SCREEN_SOURCE_MODE_SUMMARY.json'),summary); results=struct('points',points,'summary',summary,'records',{records}); save(fullfile(outputRoot,'ANGLE_SCREEN_SOURCE_MODE_RESULTS.mat'),'results','P','summary'); disp(points); disp(summary);
 
  function p=evaluate(z)
