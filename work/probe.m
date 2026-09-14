@@ -1,0 +1,1 @@
+addpath(genpath(fullfile(pwd,'analysis'))); addpath(genpath(fullfile(pwd,'analysis','validation_whole_aircraft_trim'))); [P,c]=xv15_helicopter_trim_parameters_v1(); disp(P.control.collectiveLim); disp(P.control.cyclicLim); disp(P.control.elevatorLim); disp(P.trim.maxIterations); disp(P.trim.residualTolerance)

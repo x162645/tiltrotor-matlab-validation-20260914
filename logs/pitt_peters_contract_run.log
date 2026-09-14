@@ -1,0 +1,12 @@
+Tiltrotor forward model v2 paths added.
+Project root: C:\Users\86173\Documents\Codex\2026-09-11\yue\work\tiltrotor-matlab
+
+Pitt--Peters three-state baseline checks
+hover steady momentum identity                   : PASS
+three-state distribution contract                : PASS
+step response has finite wake memory             : PASS
+forward-flow skew and moment channels finite     : PASS
+reverse-throughflow continuation rejected        : PASS
+All Pitt--Peters checks passed: 1
+   1
+
