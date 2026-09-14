@@ -42,17 +42,23 @@ def read_point(path: Path, speed: int):
         F, M = vec(c["F"]), vec(c["M"])
         data = c.get("data", {})
         torque = scalar(data["torque"]) if name.startswith("rotor") and "torque" in data else np.nan
+        hlong = scalar(data["Hlong"]) if name.startswith("rotor") and "Hlong" in data else np.nan
+        hlat = scalar(data["Hlat"]) if name.startswith("rotor") and "Hlat" in data else np.nan
+        vi = scalar(data["inducedVelocity"]) if name.startswith("rotor") and "inducedVelocity" in data else np.nan
+        clamp = scalar(data["alphaClampCount"]) if name.startswith("rotor") and "alphaClampCount" in data else np.nan
         power = torque * 589 * 2*np.pi/60 / 1000 if np.isfinite(torque) else 0.0
         rows.append(dict(speed_kt=speed, component=name, component_cn=CN[name],
                          Fx_N=F[0], Fy_N=F[1], Fz_N=F[2],
                          Mx_Nm=M[0], My_Nm=M[1], Mz_Nm=M[2],
-                         torque_Nm=torque, shaft_power_kW=power))
+                         torque_Nm=torque, shaft_power_kW=power, Hlong_N=hlong,
+                         Hlat_N=hlat, inducedVelocity_mps=vi, alphaClampCount=clamp))
     # `Ftotal` includes gravity; component force closure is aerodynamic only.
     Fsum = vec(eom["FaeroProp"]); Msum = vec(eom["Mtotal"])
     total = dict(speed_kt=speed, component="TOTAL", component_cn="合计",
                  Fx_N=Fsum[0], Fy_N=Fsum[1], Fz_N=Fsum[2],
                  Mx_Nm=Msum[0], My_Nm=Msum[1], Mz_Nm=Msum[2],
-                 torque_Nm=np.nan, shaft_power_kW=sum(r["shaft_power_kW"] for r in rows))
+                 torque_Nm=np.nan, shaft_power_kW=sum(r["shaft_power_kW"] for r in rows),
+                 Hlong_N=np.nan, Hlat_N=np.nan, inducedVelocity_mps=np.nan, alphaClampCount=np.nan)
     return rows + [total]
 
 def main():
