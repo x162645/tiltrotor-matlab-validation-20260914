@@ -9,7 +9,7 @@ function results=run_line_b_v7_angle_screen(outputRoot,betaM_deg,speeds_kt)
 %
 % Inputs (optional):
 %   outputRoot : output directory (one run, one immutable configuration)
-%   betaM_deg  : nacelle angles, default [90 60 30 0]
+%   betaM_deg  : conventional XV-15 nacelle angles i_n, default [90 60 30 0]
 %   speeds_kt  : forward speeds, default [40 60 80 100]
 %
 % Outputs: ANGLE_SCREEN_POINTS.csv, ANGLE_SCREEN_SUMMARY.json and MAT
@@ -18,9 +18,14 @@ function results=run_line_b_v7_angle_screen(outputRoot,betaM_deg,speeds_kt)
 if nargin<1||isempty(outputRoot),outputRoot=fullfile(pwd,'outputs','v7_angle_screen');end
 if nargin<2||isempty(betaM_deg),betaM_deg=[90 60 30 0];end
 if nargin<3||isempty(speeds_kt),speeds_kt=[40 60 80 100];end
-betaM_deg=unique(betaM_deg(:).','stable');speeds_kt=unique(speeds_kt(:).','stable');
-assert(all(isfinite(betaM_deg))&&all(betaM_deg>=0)&all(betaM_deg<=90), ...
-    'betaM_deg must lie in [0,90].');
+% The paper convention i_n is 90 deg in helicopter mode and 0 deg in
+% airplane mode.  Production equations use betaM=0 in helicopter mode and
+% betaM=pi/2 in airplane mode.  Keep this conversion explicit at the
+% boundary; never silently pass the paper angle into the model.
+nacelle_deg=unique(betaM_deg(:).','stable');
+assert(all(isfinite(nacelle_deg)) && all(nacelle_deg>=0) && all(nacelle_deg<=90), ...
+    'nacelle angle i_n must lie in [0,90].');
+betaM_internal_deg=90-nacelle_deg;
 assert(all(isfinite(speeds_kt))&&all(speeds_kt>0),'speeds_kt must be positive.');
 if ~exist(outputRoot,'dir'),mkdir(outputRoot);end
 here=fileparts(mfilename('fullpath'));repo=fileparts(fileparts(here));
@@ -31,7 +36,8 @@ P.rotor.correctionIdentity='CORRIGAN_POSITIVE_LIFT_WASHOUT_V4';
 P.wing.coefficientModel='GTRS_FREEFIELD_HELI_V6';P.wing.SslipMaxHalf=0;
 P.aeroExtras.spinnerModel='GTRS_TWO_SPINNERS_STEADY_HELI_V7';
 identity='V7_ANGLE_SCREEN_ZERO_IMMERSED_V1';modelIdentity='M1_CONTINUOUS_CORRIGAN_V4';
-config=struct('identity',identity,'modelIdentity',modelIdentity,'betaM_deg',betaM_deg,...
+config=struct('identity',identity,'modelIdentity',modelIdentity,'nacelle_deg',nacelle_deg,...
+ 'betaM_internal_deg',betaM_internal_deg,'angleConvention','paper_i_n_deg_to_internal_betaM_deg=90-i_n',...
  'speedOrder_kt',speeds_kt,'solver','FMINSEARCH_BOUNDED_OBJECTIVE','targetDataRead',false,...
  'targetFitting',false,'wingImmersedArea_m2',0,'parameterStack','V7_SPEED_SWEEP_V2',...
  'claim','ANGLE_DOMAIN_SCREEN_ONLY_NO_EXTERNAL_FLIGHT_VALIDATION');
@@ -42,10 +48,10 @@ contract.claimBoundary=config.claim;
 seedTable=readtable(fullfile(here,'original_baseline_trim_seeds.csv'));
 d2r=pi/180; bounds=[-35*d2r 35*d2r;P.control.collectiveLim(:).';0 9.6];
 rows=repmat(empty_row(),0,1);records=cell(0,1);
-for ib=1:numel(betaM_deg)
-  beta=betaM_deg(ib)*d2r;
+for ib=1:numel(nacelle_deg)
+  beta=betaM_internal_deg(ib)*d2r;
   for iv=1:numel(speeds_kt)
-    Vkt=speeds_kt(iv); tag=sprintf('B%03.0f_V%06.2f',betaM_deg(ib),Vkt);
+    Vkt=speeds_kt(iv); tag=sprintf('IN%03.0f_V%06.2f',nacelle_deg(ib),Vkt);
     seed=make_seed(seedTable,Vkt,P);P.stage2Numerics.flapInitialLeft=seed.flapL;P.stage2Numerics.flapInitialRight=seed.flapR;
     scale=[2*d2r;10*d2r;1]; t0=tic; invalid=0; ids={};
     opt=optimset('Display','off','MaxIter',P.trim.maxIterations,'MaxFunEvals',12*P.trim.maxIterations,'TolX',1e-8,'TolFun',1e-10); evals=0;
@@ -56,7 +62,7 @@ for ib=1:numel(betaM_deg)
       L=p.eomOut.rotorLeft;R=p.eomOut.rotorRight;alloc=p.allocation;
       accepted=ef>0&&rn<P.trim.residualTolerance&&alloc.withinLimits&&all(margin>1e-7)&&...
         p.eomOut.physicalConverged&&p.eomOut.physicalBranchSupported&&p.finiteReal;
-      row=empty_row();row.betaM_deg=betaM_deg(ib);row.speed_kt=Vkt;row.speed_mps=Vkt*.514444;
+      row=empty_row();row.nacelle_deg=nacelle_deg(ib);row.betaM_deg=betaM_internal_deg(ib);row.speed_kt=Vkt;row.speed_mps=Vkt*.514444;
       row.status=ternary(accepted,'NUMERICALLY_ACCEPTED_SOURCE_SUBSET','NOT_ACCEPTED');row.numericallyAccepted=accepted;
       row.residualNorm=rn;row.theta_deg=z(1)/d2r;row.collectiveControl_deg=z(2)/d2r;row.stick_in=z(3);
       row.stick_pct=100*z(3)/9.6;row.cyclicLong_deg=alloc.cyclicLong/d2r;row.elevator_deg=alloc.elevator/d2r;
@@ -66,17 +72,17 @@ for ib=1:numel(betaM_deg)
       row.alphaClampCount=L.alphaClampCount+R.alphaClampCount;row.machClampCount=field_or(L,'machClampCount',0)+field_or(R,'machClampCount',0);
       row.physicalConverged=p.eomOut.physicalConverged;row.physicalBranchSupported=p.eomOut.physicalBranchSupported;
       row.withinLimits=alloc.withinLimits;row.minimumBoundMargin=min(margin);row.invalidEvaluationCount=invalid;row.evaluationCount=p.evalCount;row.elapsed_s=toc(t0);
-      rec=struct('identity',identity,'betaM_deg',betaM_deg(ib),'speed_kt',Vkt,'z',z,'seed',seed.z,'cost',cost,'exitflag',ef,'optimizer',optimizer,'row',row,'point',p,'invalidIdentifiers',{unique(ids)});
+      rec=struct('identity',identity,'nacelle_deg',nacelle_deg(ib),'betaM_deg',betaM_internal_deg(ib),'speed_kt',Vkt,'z',z,'seed',seed.z,'cost',cost,'exitflag',ef,'optimizer',optimizer,'row',row,'point',p,'invalidIdentifiers',{unique(ids)});
     catch ME
-      row=empty_row();row.betaM_deg=betaM_deg(ib);row.speed_kt=Vkt;row.speed_mps=Vkt*.514444;row.status=['ERROR_' ME.identifier];row.errorMessage=ME.message;row.elapsed_s=toc(t0);
-      rec=struct('identity',identity,'betaM_deg',betaM_deg(ib),'speed_kt',Vkt,'row',row,'errorIdentifier',ME.identifier,'errorMessage',ME.message);
+      row=empty_row();row.nacelle_deg=nacelle_deg(ib);row.betaM_deg=betaM_internal_deg(ib);row.speed_kt=Vkt;row.speed_mps=Vkt*.514444;row.status=['ERROR_' ME.identifier];row.errorMessage=ME.message;row.elapsed_s=toc(t0);
+      rec=struct('identity',identity,'nacelle_deg',nacelle_deg(ib),'betaM_deg',betaM_internal_deg(ib),'speed_kt',Vkt,'row',row,'errorIdentifier',ME.identifier,'errorMessage',ME.message);
     end
     rows(end+1,1)=row;records{end+1,1}=rec; %#ok<AGROW>
     save(fullfile(outputRoot,[tag '.mat']),'rec','P','config');
   end
 end
 points=struct2table(rows,'AsArray',true);writetable(points,fullfile(outputRoot,'ANGLE_SCREEN_POINTS.csv'));
-summary=struct('identity',identity,'betaM_deg',betaM_deg,'speedOrder_kt',speeds_kt,'requestedPointCount',height(points),...
+summary=struct('identity',identity,'nacelle_deg',nacelle_deg,'betaM_internal_deg',betaM_internal_deg,'angleConvention','paper_i_n_deg_to_internal_betaM_deg=90-i_n','speedOrder_kt',speeds_kt,'requestedPointCount',height(points),...
  'acceptedCount',sum(points.numericallyAccepted),'rejectedCount',sum(~points.numericallyAccepted),...
  'acceptedFraction',sum(points.numericallyAccepted)/max(height(points),1),'claim',config.claim,'executionIdentity','MATLAB_NATIVE');
 write_json(fullfile(outputRoot,'ANGLE_SCREEN_SUMMARY.json'),summary);
@@ -96,7 +102,8 @@ save(fullfile(outputRoot,'ANGLE_SCREEN_RESULTS.mat'),'results','P','config');dis
    if ~pp.allocation.withinLimits,J=J+1e3;end
    if ~pp.eomOut.physicalConverged||~pp.eomOut.physicalBranchSupported,invalid=invalid+1;ids{end+1}=pp.eomOut.physicalStatus;J=J+1e3;end
    if ~isfinite(J)||~isreal(J),error('run_line_b_v7_angle_screen:NonfiniteCost','Invalid objective');end
-  catch ME,invalid=invalid+1;ids{end+1}=ME.identifier;J=1e30;end
+  catch ME
+   invalid=invalid+1;ids{end+1}=ME.identifier;J=1e30;
   end
  end
 end
@@ -106,7 +113,7 @@ function s=make_seed(T,V,P)
   'flapL',[r.flapL0;r.flapL1c;r.flapL1s],'flapR',[r.flapR0;r.flapR1c;r.flapR1s]);
 end
 function r=empty_row()
- r=struct('betaM_deg',NaN,'speed_kt',NaN,'speed_mps',NaN,'status','','numericallyAccepted',false,'residualNorm',NaN,'theta_deg',NaN,'collectiveControl_deg',NaN,'stick_in',NaN,'stick_pct',NaN,'cyclicLong_deg',NaN,'elevator_deg',NaN,'thrustLeft_N',NaN,'thrustRight_N',NaN,'thrustPerRotor_lbf',NaN,'totalRotorPower_kW',NaN,'shaftPowerLeft_kW',NaN,'shaftPowerRight_kW',NaN,'alphaClampCount',NaN,'machClampCount',NaN,'physicalConverged',false,'physicalBranchSupported',false,'withinLimits',false,'minimumBoundMargin',NaN,'invalidEvaluationCount',NaN,'evaluationCount',NaN,'elapsed_s',NaN,'errorMessage','');
+ r=struct('nacelle_deg',NaN,'betaM_deg',NaN,'speed_kt',NaN,'speed_mps',NaN,'status','','numericallyAccepted',false,'residualNorm',NaN,'theta_deg',NaN,'collectiveControl_deg',NaN,'stick_in',NaN,'stick_pct',NaN,'cyclicLong_deg',NaN,'elevator_deg',NaN,'thrustLeft_N',NaN,'thrustRight_N',NaN,'thrustPerRotor_lbf',NaN,'totalRotorPower_kW',NaN,'shaftPowerLeft_kW',NaN,'shaftPowerRight_kW',NaN,'alphaClampCount',NaN,'machClampCount',NaN,'physicalConverged',false,'physicalBranchSupported',false,'withinLimits',false,'minimumBoundMargin',NaN,'invalidEvaluationCount',NaN,'evaluationCount',NaN,'elapsed_s',NaN,'errorMessage','');
 end
 function out=ternary(c,a,b),if c,out=a;else,out=b;end,end
 function v=field_or(s,n,d),if isfield(s,n)&&~isempty(s.(n)),v=s.(n);else,v=d;end,end
