@@ -1,0 +1,1 @@
+{"requestedPointCount":23,"actualSolvePointCount":22,"acceptedCount":22,"failedActualSolveCount":0,"skippedCount":1,"acceptedSpeeds_kt":[0.01,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100,105],"failedSpeeds_kt":[],"claim":"SOURCE_CONSTRAINED_MODEL_REFERENCE_CORRELATION_NOT_FLIGHT_VALIDATION","executionIdentity":"MATLAB_NATIVE"}

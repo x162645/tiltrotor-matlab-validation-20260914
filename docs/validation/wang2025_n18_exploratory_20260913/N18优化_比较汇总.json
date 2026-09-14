@@ -1,0 +1,23 @@
+{
+  "P": {
+    "MAE": 185.85463471632016,
+    "signed_mean": -185.85463471632016,
+    "n": 4
+  },
+  "delta_lon": {
+    "MAE": 5.014830782745257,
+    "signed_mean": -5.014830782745257,
+    "n": 3
+  },
+  "theta": {
+    "MAE": 2.7681726294435482,
+    "signed_mean": 2.7681726294435482,
+    "n": 4
+  },
+  "speed_grid": {
+    "n": 22,
+    "power_mean_increase_kW": 16.640218648546988,
+    "power_mean_increase_pct": 1.9006013323306101,
+    "n18_power_min_speed_kt": 65.0
+  }
+}

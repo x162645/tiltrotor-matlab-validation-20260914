@@ -13,7 +13,7 @@ switch upper(char(modelIdentity))
   out.stage2ModelIdentity='M1_EVIDENCE_V1_PROPAGATION';
   out.stage2ComputationPath='ANALYSIS_ONLY_FROZEN_EVIDENCE_FORWARD_EXTENSION';
  case 'M1_CONTINUOUS_CORRIGAN_V4'
-  if ~isfield(P.rotor,'correctionIdentity')||~strcmp(P.rotor.correctionIdentity,'CORRIGAN_POSITIVE_LIFT_WASHOUT_V4')
+  if ~isfield(P.rotor,'correctionIdentity')||~ismember(P.rotor.correctionIdentity,{'CORRIGAN_POSITIVE_LIFT_WASHOUT_V4','CORRIGAN_POSITIVE_LIFT_WASHOUT_V4_N18'})
    error('stage2_rotor_backend:IdentityConflict','V4 requires its explicit section correction.');
   end
   [Fbody,Mbody,out]=m1_evidence_v1_forward_rotor(x,rotorCtrl,betaM,side,cgShift,P);

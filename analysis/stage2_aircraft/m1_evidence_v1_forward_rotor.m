@@ -22,13 +22,15 @@ if ~isfield(P.env,'aSound') || ~(isfinite(P.env.aSound) && P.env.aSound>0)
     error('m1_evidence_v1_forward_rotor:InvalidSoundSpeed','P.env.aSound required.');
 end
 sectionLookup=@xv15_c81_corrigan_stall_delay;
+correctionMode='CORRIGAN_GENERIC_N1';
 continuousCorrection=false;
 if isfield(P.rotor,'correctionIdentity')
-    if ~strcmp(P.rotor.correctionIdentity,'CORRIGAN_POSITIVE_LIFT_WASHOUT_V4')
+    if ~ismember(P.rotor.correctionIdentity,{'CORRIGAN_POSITIVE_LIFT_WASHOUT_V4','CORRIGAN_POSITIVE_LIFT_WASHOUT_V4_N18'})
         error('m1_evidence_v1_forward_rotor:UnknownCorrection','Unknown explicit section correction.');
     end
     sectionLookup=@xv15_c81_corrigan_continuous_v4;
     continuousCorrection=true;
+    if strcmp(P.rotor.correctionIdentity,'CORRIGAN_POSITIVE_LIFT_WASHOUT_V4_N18'), correctionMode='CORRIGAN_XV15_N18'; end
 end
 Vbody = x(1:3);
 omegaBody = x(4:6);
@@ -301,7 +303,7 @@ out.F=Fbody; out.M=Mbody;
         chordField=ones(size(alpha)).*chord;
         rField=ones(size(alpha)).*xSpan;
         [CL,CD,meta]=sectionLookup( ...
-            alpha,Mach,rField,chordField,R,'CORRIGAN_GENERIC_N1');
+            alpha,Mach,rField,chordField,R,correctionMode);
         q=0.5*rho*W.^2;
         dL=q.*chord.*CL.*dr; dD=q.*chord.*CD.*dr;
         dT=dL.*cos(phi)-dD.*sin(phi);
@@ -419,7 +421,7 @@ out.F=Fbody; out.M=Mbody;
             al=thetaBlade-ph; ma=w/P.env.aSound;
             cf=ones(size(al)).*chord; rf=ones(size(al)).*xSpan;
             [cl,cd,meta]=sectionLookup( ...
-                al,ma,rf,cf,R,'CORRIGAN_GENERIC_N1');
+                al,ma,rf,cf,R,correctionMode);
             qq=0.5*rho*w.^2;
             dl=qq.*chord.*cl.*dr; dd=qq.*chord.*cd.*dr;
             dt=dl.*cos(ph)-dd.*sin(ph); dh=dd.*cos(ph)+dl.*sin(ph);

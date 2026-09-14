@@ -11,8 +11,8 @@ function [CL,CD,meta]=xv15_c81_corrigan_continuous_v4(alphaRad,Mach,rOverR,chord
 % The previously omitted linear washout from30 to60deg follows equations19-20.
 % Existing C81 input clamping and all its diagnostics remain visible. This
 % correction does NOT supply missing high-incidence/reverse-flow polar data.
-if nargin<6||~strcmp(mode,'CORRIGAN_GENERIC_N1')
-    error('xv15_c81_corrigan_continuous_v4:InvalidMode','Only fixed n=1 is supported.');
+if nargin<6||~ismember(mode,{'CORRIGAN_GENERIC_N1','CORRIGAN_XV15_N18'})
+    error('xv15_c81_corrigan_continuous_v4:InvalidMode','Only fixed n=1 or documented XV-15 n=1.8 are supported.');
 end
 [base,CD,meta]=xv15_c81_section_lookup(alphaRad,Mach,rOverR);
 a=alphaRad*180/pi;
@@ -21,11 +21,12 @@ if ~isreal([a(:);chord_m(:);rOverR(:);R_m])|| ...
         any(chord_m(:)<=0)||any(rOverR(:)<=0)||~isscalar(R_m)||R_m<=0
     error('xv15_c81_corrigan_continuous_v4:InvalidGeometry','Finite positive section geometry required.');
 end
-KL=1.291*(chord_m./(rOverR*R_m)).^.0775+zeros(size(base));
+if strcmp(mode,'CORRIGAN_XV15_N18'), nExponent=1.8; else, nExponent=1; end
+KL=1.291*(chord_m./(rOverR*R_m)).^(.0775*nExponent)+zeros(size(base));
 wash=ones(size(a));mid=a>30&a<60;wash(mid)=(60-a(mid))/30;wash(a>=60)=0;
 apply=base>0&wash>0;
 CL=base;CL(apply)=(1+wash(apply).*(KL(apply)-1)).*base(apply);
-meta.mode='CORRIGAN_POSITIVE_LIFT_WASHOUT_V4';meta.nExponent=1;
+meta.mode='CORRIGAN_POSITIVE_LIFT_WASHOUT_V4';meta.nExponent=nExponent;
 meta.KL=KL;meta.applyMask=apply;meta.applyCount=nnz(apply);
 meta.washoutWeight=wash;meta.positiveLiftBoundaryUsed=true;
 meta.KLMinApplied=NaN;meta.KLMaxApplied=NaN;
