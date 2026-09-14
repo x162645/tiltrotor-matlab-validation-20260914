@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from pathlib import Path
 import csv, json
 out=Path('external_validation_coverage'); out.mkdir(exist_ok=True)
