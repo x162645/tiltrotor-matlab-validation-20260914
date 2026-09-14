@@ -3,12 +3,17 @@ function flow = rotor_tail_interference_heli(x,betaM,rotorLeft,rotorRight,P)
 % Ferguson NASA CR166536 Sep1988 RevA B22/B25/A39/A40.
 % Signed values retained without target fitting. V3 additionally supplies
 % force coefficients for wing free-stream deflection (A38/A70, B33).
+% The source table is a steady helicopter table, but its induced-velocity
+% direction is defined by betaM.  This interface therefore permits the
+% four-angle screening set (0/30/60/90 deg) while retaining the declared
+% low-Mach, zero-rate and longitudinal limitations.  It is not a transition
+% wake model or an independent full-aircraft validation.
 x=x(:);
 if numel(x)~=9 || ~isreal(x) || any(~isfinite(x))
     error('rotor_tail_interference_heli:InvalidState','Expected finite real 9-state.');
 end
-if ~(isscalar(betaM) && isfinite(betaM) && abs(betaM)<1e-12)
-    error('rotor_tail_interference_heli:UnsupportedMode','Only betaM=0 supported.');
+if ~(isscalar(betaM) && isfinite(betaM) && isreal(betaM) && betaM>=-1e-12 && betaM<=pi/2+1e-12)
+    error('rotor_tail_interference_heli:UnsupportedMode','betaM must be in [0,pi/2].');
 end
 if abs(x(2))>1e-8 || norm(x(4:6))>1e-8
     error('rotor_tail_interference_heli:SteadySymmetricOnly','Only steady symmetric zero-rate use implemented.');
@@ -38,6 +43,7 @@ wiTail=gain*mean(vi);
 flow.additionalRelativeVelocityBody_mps=wiTail*[sin(betaM);0;-cos(betaM)];
 flow.wakeRatio=gain;flow.rotorMeanInduced_mps=mean(vi);flow.tailInducedSigned_mps=wiTail;
 flow.alphaBody_deg=alpha;flow.speed_kt=vkt;
+flow.betaM_rad=betaM;flow.betaM_deg=betaM*180/pi;
 flow.identity='FERGUSON_1988_TABLE_2IA_STEADY_HELI';
 flow.source='NASA_CR_166536_B22_B25_A39_A40';
 flow.claim='SOURCE_CONSTRAINED_MODEL_EXTENSION_NOT_INDEPENDENT_FLIGHT_VALIDATION';

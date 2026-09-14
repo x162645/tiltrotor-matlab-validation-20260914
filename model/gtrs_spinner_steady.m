@@ -5,7 +5,10 @@ function [Fbody,Mbody,out]=gtrs_spinner_steady(x,betaM,cgShift,rotorLeft,rotorRi
 % SD=2*qsp*(1.0+5.5*sin(alphaMast)^3) with source areas in ft^2.
 % A232(PDF300): moment from spinner resultant at the rotor-hub height.
 % alphaMast=atan(hypot(U,V)/abs(W-mean(Wi))). No fitting to trim outputs.
-% Kinematics restricted to betaM=0, zero rates/sideslip, forward velocity.
+% Kinematics are steady, zero rates/sideslip, forward velocity.  The
+% induced velocity is rotated with betaM using the same thrust-axis
+% convention as the rotor backend, which permits angle screening.  The
+% spinner area and hub geometry remain the source-mapped low-order values.
 % The existing low-order mast/CG geometry is retained, not silently upgraded
 % to exact source geometry. No engine-pylon or jet-thrust force is included.
 x=x(:);cgShift=cgShift(:);
@@ -13,8 +16,11 @@ if numel(x)~=9||numel(cgShift)~=3||~isscalar(betaM)|| ...
  ~isreal([x;cgShift;betaM])||any(~isfinite([x;cgShift;betaM]))
  error('gtrs_spinner_steady:InvalidInput','Finite real state/CG/mast angle required.');
 end
-if abs(betaM)>1e-12||abs(x(2))>1e-8||norm(x(4:6))>1e-8||x(1)<=0
- error('gtrs_spinner_steady:SteadyHeliOnly','Only forward symmetric zero-rate helicopter states supported.');
+if betaM < -1e-12 || betaM > pi/2+1e-12
+ error('gtrs_spinner_steady:UnsupportedNacelleAngle','betaM must be in [0,pi/2].');
+end
+if abs(x(2))>1e-8||norm(x(4:6))>1e-8||x(1)<=0
+ error('gtrs_spinner_steady:SteadySymmetricOnly','Only forward symmetric zero-rate states supported.');
 end
 vi=[rotorLeft.inducedVelocity,rotorRight.inducedVelocity];
 if numel(vi)~=2||~isreal(vi)||any(~isfinite(vi))||any(vi<0)
@@ -23,7 +29,8 @@ end
 if ~isfield(P.env,'rho')||~isscalar(P.env.rho)||P.env.rho<=0||~isfinite(P.env.rho)
  error('gtrs_spinner_steady:InvalidDensity','Positive density required.');
 end
-v=x(1:3)+[0;0;-mean(vi)];speed=norm(v);q=.5*P.env.rho*speed^2;
+eT=[sin(betaM);0;-cos(betaM)];
+v=x(1:3)+mean(vi)*eT;speed=norm(v);q=.5*P.env.rho*speed^2;
 alphaMast=atan2(hypot(v(1),v(2)),abs(v(3)));
 baseArea=1.0*.3048^2;crossArea=5.5*.3048^2;
 effectiveArea=2*(baseArea+crossArea*sin(alphaMast)^3);
@@ -31,7 +38,8 @@ drag=q*effectiveArea;Fbody=-drag*v/speed;
 r=[P.rotor.pivotX;0;P.rotor.pivotZ-P.rotor.RH_hub]-cgShift;
 if ~isreal(r)||any(~isfinite(r)),error('gtrs_spinner_steady:InvalidGeometry','Finite existing hub geometry required.');end
 Maero=zeros(3,1);Marm=cross(r,Fbody);Mbody=Marm;
-out=struct('identity','GTRS_TWO_SPINNERS_STEADY_HELI_V7','F',Fbody,'M',Mbody, ...
+out=struct('identity','GTRS_TWO_SPINNERS_STEADY_HELI_V7_ANGLE_SCREEN', ...
+ 'betaM_rad',betaM,'betaM_deg',betaM*180/pi,'thrustAxisBody',eT,'F',Fbody,'M',Mbody, ...
  'rAC',r,'Vlocal',v,'qbar',q,'alphaMast_rad',alphaMast,'effectiveDragArea_m2',effectiveArea, ...
  'drag_N',drag,'meanInduced_mps',mean(vi),'Maero',Maero,'Marm',Marm,'spinnerCount',2, ...
  'source','CR166536_REVA_A75_A76_B33_A232','sourceAreaEach_ft2',[1,5.5], ...

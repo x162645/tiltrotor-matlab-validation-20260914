@@ -3,13 +3,22 @@ function [Fbody,Mbody,out]=wing_model_source_family(x,uCtrl,betaM,cgShift,rotorL
 % Replaces only CL/CD/Cm family with source wing-pylon tables. Retains the
 % existing Eq16 covered area, Eq17 local velocity, geometry and force assembly.
 % This is NOT the complete GTRS wake footprint or wing-pylon implementation.
+% The betaM argument follows the repository convention (0 deg helicopter,
+% 90 deg airplane).  The original V5 implementation was accidentally
+% guarded to betaM=0; the coverage and local-flow equations below are
+% already parameterised by betaM, so the guard is removed here to permit
+% controlled angle screening.  This remains a source-constrained subset,
+% not a claim of validated transition aerodynamics.
 % Deliberately does not infer new coverage parameters from TableC1 loads.
 x=x(:);cgShift=cgShift(:);uCtrl=uCtrl(:);
 if numel(x)~=9||numel(cgShift)~=3||numel(uCtrl)~=7||any(~isfinite([x;cgShift;uCtrl]))||~isreal([x;cgShift;uCtrl])
  error('wing_model_source_family:InvalidInput','Expected finite real inputs.');
 end
-if abs(betaM)>1e-12||abs(x(2))>1e-8||norm(x(4:6))>1e-8||abs(uCtrl(5))>1e-12||x(1)<=0
- error('wing_model_source_family:SteadyHeliOnly','Only forward symmetric helicopter zero-rate/aileron use.');
+if ~isscalar(betaM)||~isfinite(betaM)||~isreal(betaM)||betaM < -1e-12||betaM > pi/2+1e-12
+ error('wing_model_source_family:UnsupportedNacelleAngle','betaM must be in [0,pi/2].');
+end
+if abs(x(2))>1e-8||norm(x(4:6))>1e-8||abs(uCtrl(5))>1e-12||x(1)<=0
+ error('wing_model_source_family:SteadySymmetricOnly','Only forward symmetric zero-rate/aileron use.');
 end
 if ~isfield(P,'validation')||P.validation.flapDeg~=40
  error('wing_model_source_family:WrongFlapCase','Requires declared flap40 case.');
@@ -35,7 +44,8 @@ for side=[-1,1]
    'alpha',a,'qbar',q,'CL',CL,'CD',CD,'Cm',Cm,'Maero',Mi,'Marm',Ma,'F',F,'M',M,'coefficientMeta',meta);
  end
 end
-out=struct('identity','SOURCE_WING_COEFFICIENT_FAMILY_LOW_ORDER_WAKE_V5','SslipHalf',Ss,'SfreeHalf',Sf, ...
+out=struct('identity','SOURCE_WING_COEFFICIENT_FAMILY_LOW_ORDER_WAKE_V5_ANGLE_SCREEN', ...
+ 'betaM_rad',betaM,'betaM_deg',betaM*180/pi,'SslipHalf',Ss,'SfreeHalf',Sf, ...
  'SslipRawHalf',raw,'SslipUpperHalf',upper,'muMean',muMean,'regions',{regions},'F',Fbody,'M',Mbody, ...
  'coverageModel','EXISTING_NUAA_EQ16_UNCHANGED','localVelocityModel','EXISTING_NUAA_EQ17_UNCHANGED', ...
  'legacyTanhOrInducedDragAdded',false,'claim','SOURCE_COEFFICIENTS_NOT_COMPLETE_GTRS_WING_NOT_FLIGHT_VALIDATED');
