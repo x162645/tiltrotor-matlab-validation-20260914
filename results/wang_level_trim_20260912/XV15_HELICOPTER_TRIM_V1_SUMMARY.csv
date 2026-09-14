@@ -1,0 +1,2 @@
+CredibleCount,DeclaredCaseCount,ThetaMAE_deg,ThetaRMSE_deg,StickMAE_in,StickRMSE_in,Theta1sMAE_deg,ElevatorMAE_deg,ThrustMAPE_pct,StickTrendSlope_in_per_kt,ThetaTrendSlope_deg_per_kt,FlightNarrativeTrendCheck
+5,6,4.68909457058491,5.37579661481506,0.526965318063813,0.554766420083042,1.12778555520668,2.1885053763261,6.53937171231454,0.0103545383554562,-0.0563238767146032,1

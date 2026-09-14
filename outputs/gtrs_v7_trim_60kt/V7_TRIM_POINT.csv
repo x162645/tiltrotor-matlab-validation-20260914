@@ -1,0 +1,2 @@
+speed_kt,numericallyAccepted,residualNorm,theta_deg,stick_in,elevator_deg,thrustPerRotor_lbf,thetaDifference_deg,stickDifference_in,elevatorDifference_deg,thrustDifference_pct,alphaClampCount
+60,1,3.55411713775898e-10,-3.68172128773207,4.65026229792451,-0.624406217654809,6250.30911781062,2.00827871226794,-0.639737702075494,-2.96440621765481,5.29691617955554,10

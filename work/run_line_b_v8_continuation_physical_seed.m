@@ -1,4 +1,4 @@
-function results = run_line_b_v8_continuation(outputRoot,nacelleDeg,speedsKt,numericalSeedFile,sourceOverride)
+function results = run_line_b_v8_continuation_physical_seed(outputRoot,nacelleDeg,speedsKt,numericalSeedFile,sourceOverride)
 %RUN_LINE_B_V8_CONTINUATION Same-physics continuation from an accepted point.
 %
 % This is an analysis-only companion to run_line_b_v7_angle_screen.  It
@@ -28,7 +28,7 @@ P.validation.gtrsTablePackage='CR166536_DIGITIZED_TABLES_CLOSURE_20260913';
 P.rotor.correctionIdentity='CORRIGAN_POSITIVE_LIFT_WASHOUT_V4';
 P.wing.coefficientModel='GTRS_FREEFIELD_HELI_V6'; P.wing.SslipMaxHalf=0;
 P.aeroExtras.spinnerModel='GTRS_TWO_SPINNERS_STEADY_HELI_V7';
-modelIdentity='M1_CONTINUOUS_CORRIGAN_V4'; identity='V8_CONTINUATION_SOURCE_MODES_ANALYSIS_ONLY';
+modelIdentity='M1_CONTINUOUS_CORRIGAN_V4'; identity='V8_CONTINUATION_PHYSICAL_SEED_DIAGNOSTIC';
 if strcmp(sourceOverride,'legacy_surfaces')
  % Numerical gate diagnostic only: remove source-domain guards from the
  % wing, fuselage and tail interface without changing rotor parameters.
@@ -47,7 +47,7 @@ for ia=1:numel(nacelleDeg)
  P=Pbase; previousZ=[];
  if ~isempty(numericalSeedFile)
   initial=load(numericalSeedFile);
-  assert(initial.rec.row.numericallyAccepted && initial.rec.row.nacelle_deg==nacelleDeg(ia),'Seed must be accepted at same angle.');
+  assert(initial.rec.row.nacelle_deg==nacelleDeg(ia) && initial.rec.row.physicalConverged,'Seed must be physically converged at same angle.');
   previousZ=initial.rec.z;
   P.stage2Numerics.flapInitialLeft=initial.rec.point.eomOut.rotorLeft.zFlap;
   P.stage2Numerics.flapInitialRight=initial.rec.point.eomOut.rotorRight.zFlap;
@@ -85,7 +85,7 @@ for ia=1:numel(nacelleDeg)
   catch ME
    row=empty_row(); row.nacelle_deg=nacelleDeg(ia); row.betaM_deg=betaDeg; row.speed_kt=Vkt; row.speed_mps=Vkt*.514444; row.mode=mode; row.status=['ERROR_' ME.identifier]; row.errorMessage=ME.message; row.elapsed_s=toc(t0); rec=struct('identity',identity,'row',row,'errorIdentifier',ME.identifier,'errorMessage',ME.message);
   end
-  if row.numericallyAccepted
+  if row.numericallyAccepted || row.physicalConverged
    previousZ=z;
    P.stage2Numerics.flapInitialLeft=p.eomOut.rotorLeft.zFlap;
    P.stage2Numerics.flapInitialRight=p.eomOut.rotorRight.zFlap;

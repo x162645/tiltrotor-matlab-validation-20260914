@@ -1,0 +1,16 @@
+{
+  "identity": "V8_IN000_V170_CONTINUATION_REQUEST",
+  "nacelle_deg": 0,
+  "betaM_deg": 90,
+  "target_speed_kt": 170,
+  "requested_method": "continuous_speed_continuation_from_same_angle_accepted_seed",
+  "executed": false,
+  "reason": "No numerically accepted same-angle seed exists; the continuation runner rejects nonaccepted seeds.",
+  "seed_candidates": [
+    {"speed_kt": 130, "status": "NOT_ACCEPTED", "residualNorm": 0.353313934810462, "physicalConverged": true},
+    {"speed_kt": 150, "status": "ERROR_m1_evidence_v1_forward_rotor:FlapNotConverged"},
+    {"speed_kt": 170, "status": "ERROR_gtrs_fuselage_longitudinal_table:OutsideSourceDomain", "requirement": "Mach<0.2"}
+  ],
+  "cold_start_used": false,
+  "next_prerequisite": "Obtain or create a valid same-angle accepted seed after resolving the source-domain implementation gate."
+}

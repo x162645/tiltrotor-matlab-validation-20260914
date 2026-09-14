@@ -1,0 +1,4 @@
+i_n_deg,betaM_deg,speed_mps,input_contract,delta_theta_final_deg,max_abs_q_deg_s,max_abs_delta_theta_deg,time_of_max_q_s
+90,0,10,NO_CREDIBLE_TRIM,NaN,NaN,NaN,NaN
+60,30,30,NO_CREDIBLE_TRIM,NaN,NaN,NaN,NaN
+0,90,50,NO_CREDIBLE_TRIM,NaN,NaN,NaN,NaN

@@ -1,0 +1,1 @@
+cd('C:\Users\86173\Documents\Codex\2026-09-11\yue\work\tiltrotor-matlab'); addpath(fullfile(pwd,'analysis','validation_whole_aircraft_trim')); disp(pwd); disp(which('xv15_helicopter_trim_parameters_v1')); disp(exist('xv15_helicopter_trim_parameters_v1','file')); exit

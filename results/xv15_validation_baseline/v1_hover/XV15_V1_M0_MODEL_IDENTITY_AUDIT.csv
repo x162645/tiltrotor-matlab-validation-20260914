@@ -1,0 +1,13 @@
+checkName,passed,modelIdentity,evidence
+DIRECT_PRODUCTION_BEMT_CALL,1,M0_PRODUCTION_LOW_ORDER,run_xv15_metal_hover_validation must call rotor_model_bemt directly
+FORBID_ROTOR_MODEL_BEMT_SECTION_AERO,1,M0_PRODUCTION_LOW_ORDER,baseline source must not contain extension token: rotor_model_bemt_section_aero
+FORBID_BUILD_XV15_C81_LOW_ORDER_SECTION_AERO,1,M0_PRODUCTION_LOW_ORDER,baseline source must not contain extension token: build_xv15_c81_low_order_section_aero
+FORBID_ALPHA0L,1,M0_PRODUCTION_LOW_ORDER,baseline source must not contain extension token: alpha0l
+FORBID_ENABLECOMPRESSIBILITYCORRECTION,1,M0_PRODUCTION_LOW_ORDER,baseline source must not contain extension token: enablecompressibilitycorrection
+FORBID_PRANDTL,1,M0_PRODUCTION_LOW_ORDER,baseline source must not contain extension token: prandtl
+FORBID_MANGLER,1,M0_PRODUCTION_LOW_ORDER,baseline source must not contain extension token: mangler
+FORBID_PRESCRIBED_WAKE,1,M0_PRODUCTION_LOW_ORDER,baseline source must not contain extension token: prescribed_wake
+FORBID_PRESCRIBED_WAKE,1,M0_PRODUCTION_LOW_ORDER,baseline source must not contain extension token: prescribed wake
+FORBID_BIOT_SAVART,1,M0_PRODUCTION_LOW_ORDER,baseline source must not contain extension token: biot-savart
+FORBID_BIOT_SAVART,1,M0_PRODUCTION_LOW_ORDER,baseline source must not contain extension token: biot_savart
+NO_XV15_SECTION_AERO_OVERWRITE,1,M0_PRODUCTION_LOW_ORDER,pure M0 baseline retains generic liftSlope/CLmax/CD0/kCD rather than reconstructing XV-15 section aero

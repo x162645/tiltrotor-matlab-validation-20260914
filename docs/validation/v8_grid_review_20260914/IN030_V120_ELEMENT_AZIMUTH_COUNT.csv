@@ -1,0 +1,2 @@
+identity,nacelle_deg,betaM_deg,speed_kt,nRadial,nAzimuth,nRotors,query_cells_per_rotor,total_query_cells,alphaClampCount_left,alphaClampCount_right,alphaClampCount_total,alphaClampFraction
+V8_CONTINUATION_SOURCE_MODES_ANALYSIS_ONLY,30,60,120,12,16,2,192,384,24,24,48,0.125

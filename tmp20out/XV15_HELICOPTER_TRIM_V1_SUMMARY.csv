@@ -1,0 +1,2 @@
+CredibleCount,DeclaredCaseCount,ThetaMAE_deg,ThetaRMSE_deg,StickMAE_in,StickRMSE_in,Theta1sMAE_deg,ElevatorMAE_deg,ThrustMAPE_pct,StickTrendSlope_in_per_kt,ThetaTrendSlope_deg_per_kt,FlightNarrativeTrendCheck
+0,1,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,0
