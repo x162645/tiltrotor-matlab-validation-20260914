@@ -41,7 +41,7 @@ config=struct('identity',identity,'speedOrder_kt',speeds,'solver','DAMPED_NEWTON
  'wingImmersedRole','CR166537 matching-case zero immersion; not universal low-speed physics', ...
  'claim','SOURCE_CONSTRAINED_MODEL_REFERENCE_CORRELATION_NOT_FLIGHT_VALIDATION');
 contract.identity=identity;contract.targetFitting=false;contract.productionPhysicsModified=true;
-contract.rotorIdentity='M1_CONTINUOUS_CORRIGAN_V4';
+contract.rotorIdentity='M1_CONTINUOUS_CORRIGAN_V4_N18_EXPLORATORY';
 contract.wingIdentity=P.wing.coefficientModel;contract.fuselageIdentity=P.fuselage.coefficientModel;
 contract.spinnerIdentity=P.aeroExtras.spinnerModel;contract.claimBoundary=config.claim;
 files={mfilename('fullpath'),'model/gtrs_fuselage_longitudinal_table.m', ...
