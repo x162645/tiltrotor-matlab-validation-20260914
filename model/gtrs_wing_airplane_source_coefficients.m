@@ -39,7 +39,7 @@ elseif Mach>=.4 && Mach<=.6
     if Mach<=.5,k1=2;k2=3;else,k1=3;k2=4;end
     w=(Mach-grid(k1-1))/(grid(k2-1)-grid(k1-1));
 else
-    error('gtrs_wing_airplane_source_coefficients:MachGap','No CR-166536 source column exists for Mach .2..4.');
+    error('gtrs_wing_airplane_source_coefficients:MachGap','No CR-166536 source column exists for Mach .2..0.4.');
 end
 % Interpolate each coefficient only over the alpha intersection of source rows.
 CL=interpMach(a,acl,vcl,k1,k2,w,'CL'); CD=interpMach(a,adc,vcd,k1,k2,w,'CD');
@@ -57,4 +57,5 @@ if any(a(:)<lo-1e-10)||any(a(:)>hi+1e-10)
 end
 y1=interp1(ag{k1},vg{k1},a,'linear'); y2=interp1(ag{k2},vg{k2},a,'linear'); y=(1-w)*y1+w*y2;
 end
+
 
