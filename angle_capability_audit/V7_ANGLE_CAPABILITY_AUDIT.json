@@ -1,0 +1,20 @@
+{
+  "identity": "V7_ANGLE_CAPABILITY_AUDIT_STATIC",
+  "angles_deg": [
+    90,
+    60,
+    30,
+    0
+  ],
+  "components": {
+    "wing_source_family": "model/wing_model_source_family.m",
+    "rotor_tail_interference": "model/rotor_tail_interference_heli.m",
+    "hub_spinner": "model/gtrs_spinner_steady.m"
+  },
+  "matlab_execution": false,
+  "reason": "MATLAB/Octave runtime unavailable in current environment; no dynamic result is claimed.",
+  "fair_screening_ready": true,
+  "scope_limit": "steady symmetric zero-rate source-constrained subset; this is not validated transition wake physics",
+  "blocking_condition": "No MATLAB/Octave runtime is available in this environment, so angle trim results cannot be executed here.",
+  "next_gate": "Run the independent V7 angle-screen runner in MATLAB and compare 90/60/30/0 using one parameter stack and one control/input contract."
+}

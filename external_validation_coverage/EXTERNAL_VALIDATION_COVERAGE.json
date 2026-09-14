@@ -1,0 +1,13 @@
+{
+  "identity": "EXTERNAL_VALIDATION_COVERAGE_MATRIX_V2",
+  "external_full_aircraft_target_angles_deg": [
+    90,
+    60,
+    30,
+    0
+  ],
+  "blocked_angles_deg": [],
+  "independent_component_evidence": "OARF/WADC/Woodgate rotor-level evidence; not full-aircraft angle validation",
+  "no_target_fitting": true,
+  "claim_boundary": "All four angles now have public figure targets from Yan 2023 Fig.8; targets are secondary digitizations with stated reading uncertainty, not raw synchronized arrays."
+}

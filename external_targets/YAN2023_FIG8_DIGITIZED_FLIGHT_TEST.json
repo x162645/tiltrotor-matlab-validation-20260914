@@ -1,0 +1,18 @@
+{
+  "identity": "YAN2023_FIG8_DIGITIZED_FLIGHT_TEST_V1",
+  "paper": "Yan, X.; Yuan, Y.; Chen, R. Aerospace 2023, 10(9), 742",
+  "doi": "10.3390/aerospace10090742",
+  "figure": "Fig. 8",
+  "angles_deg": [
+    90,
+    60,
+    30,
+    0
+  ],
+  "point_count": 21,
+  "digitization": "manual marker-center read from rendered figure",
+  "uncertainty": "speed ±1 m/s; theta0/pitch ±1.5 deg; stick ±3 percentage points; power ±80 kW",
+  "status": "SECONDARY_PUBLIC_FIGURE_TARGET_NOT_RAW_ARRAY",
+  "use": "external trim comparison after model runner execution",
+  "do_not_use": "do not treat calculated lines or interpolated values as measurements"
+}

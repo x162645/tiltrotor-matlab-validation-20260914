@@ -1,0 +1,5 @@
+﻿betaM_deg,evidence,cases,outputs,role,status
+90,Wang 2025 Fig.1(a) digitized blue reference,"0.01,20,40,60,80,100 kt","theta,stick,power",external source-constrained reference,AVAILABLE_FOR_COMPARISON
+60,Yan 2023 Fig.8 digitized flight-test markers,"42,52,62,72 m/s","theta0,pitch,stick,power",secondary public figure target with uncertainty,AVAILABLE_FOR_COMPARISON
+30,Yan 2023 Fig.8 digitized flight-test markers,"52,62,72,82 m/s","theta0,pitch,stick,power",secondary public figure target with uncertainty,AVAILABLE_FOR_COMPARISON
+0,Yan 2023 Fig.8 plus CR166537/CR166536 GTRS tables,75–140 m/s (Yan); 0.01–100 kt (GTRS),"theta0,pitch,stick,power; GTRS theta/stick/cyclic/elevator/thrust",mixed secondary flight-test figure and reference simulation,AVAILABLE_FOR_COMPARISON
