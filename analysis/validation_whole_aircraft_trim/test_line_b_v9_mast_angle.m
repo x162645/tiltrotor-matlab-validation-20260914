@@ -6,7 +6,13 @@ assert(exist(fullfile(baselineRoot,'BASELINE_MANIFEST.json'),'file')==2, ...
  'Run prepare_line_b_v9_baseline.py first.');
 addpath(baselineRoot);cleanup=onCleanup(@()rmpath(baselineRoot));
 here=fileparts(mfilename('fullpath'));n=0;sourceCells=0;d2r=pi/180;
-T=readtable(fullfile(here,'data','CR166536_WING_T4II_VIII.csv'),'TextType','string');
+sourceFile=fullfile(here,'data','CR166536_WING_T4II_VIII.csv');
+% mast_angle_deg contains both numeric labels and the Cm-table label "row".
+% R2021a otherwise infers numeric from the first rows and loses that schema.
+opts=detectImportOptions(sourceFile);
+opts=setvartype(opts,{'table_name','flap_setting','mast_angle_deg','status'},'string');
+opts=setvartype(opts,{'row_value','value'},'double');
+T=readtable(sourceFile,opts);
 for k=1:height(T)
  if T.flap_setting(k)~="40/25"||T.status(k)~="TRANSCRIBED",continue;end
  a=T.row_value(k);v=T.value(k);b=str2double(T.mast_angle_deg(k));
