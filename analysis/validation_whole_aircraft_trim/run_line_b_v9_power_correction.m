@@ -115,7 +115,10 @@ end
 function p=dragpower(F,x),p=-dot(F,x(1:3))/1000;end
 function c=component(eo,name)
 for j=1:numel(eo.components)
- c=eo.components{j};if strcmp(c.name,name),return;end
+ % stage2_tiltrotor_eom archives a struct array; direct component-stack
+ % callers use a cell array. Both are existing repository representations.
+ if iscell(eo.components),c=eo.components{j};else,c=eo.components(j);end
+ if strcmp(c.name,name),return;end
 end
 error('V9:MissingComponent','Missing component %s.',name);
 end
