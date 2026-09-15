@@ -2,7 +2,9 @@ function results = run_line_b_v8_continuation(outputRoot,nacelleDeg,speedsKt,num
 %RUN_LINE_B_V8_CONTINUATION Same-physics continuation from an accepted point.
 %
 % This is an analysis-only companion to run_line_b_v7_angle_screen.  It
-% keeps the production stage-2 equations fixed while removing one known
+% V9 uses the corrected mast-angle source components; the function name is
+% retained for existing callers. The legacy production model is unchanged.
+% This also removes one known
 % confounder: airplane-mode trim is solved with an independent elevator
 % command and zero cyclic, instead of forcing both through a helicopter
 % stick mixer.  Helicopter and intermediate angles use the source-backed
@@ -28,7 +30,8 @@ P.validation.gtrsTablePackage='CR166536_DIGITIZED_TABLES_CLOSURE_20260913';
 P.rotor.correctionIdentity='CORRIGAN_POSITIVE_LIFT_WASHOUT_V4';
 P.wing.coefficientModel='GTRS_FREEFIELD_HELI_V6'; P.wing.SslipMaxHalf=0;
 P.aeroExtras.spinnerModel='GTRS_TWO_SPINNERS_STEADY_HELI_V7';
-modelIdentity='M1_CONTINUOUS_CORRIGAN_V4'; identity='V8_CONTINUATION_SOURCE_MODES_ANALYSIS_ONLY';
+P.validation.aeroImplementationRevision='V9_MAST_AXES_WING_FIELD_DOWNWASH';
+modelIdentity='M1_CONTINUOUS_CORRIGAN_V4'; identity='V9_MAST_ANGLE_SOURCE_MODES_ANALYSIS_ONLY';
 if strcmp(sourceOverride,'legacy_surfaces')
  % Numerical gate diagnostic only: remove source-domain guards from the
  % wing, fuselage and tail interface without changing rotor parameters.

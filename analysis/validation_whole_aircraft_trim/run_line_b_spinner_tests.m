@@ -1,6 +1,7 @@
-function result=run_line_b_spinner_tests(outputRoot)
+function result=run_line_b_spinner_tests(outputRoot,baselineRoot)
 % Source spinner replay and explicit integration guards before V7 trim.
 if ~exist(outputRoot,'dir'),mkdir(outputRoot);end
+if nargin<2,baselineRoot=fullfile(outputRoot,'baseline_sum');end
 here=fileparts(mfilename('fullpath'));D=readtable(fullfile(here,'data','CR166537_HELI_4POINT_INPUTS.csv'));
 C=readtable(fullfile(here,'data','CR166537_HELI_4POINT_LOADS.csv'));
 [P0,~]=xv15_helicopter_trim_parameters_v1();P0=line_b_coherent_tail_parameters(P0);n=0;rows=[];records=cell(4,1);
@@ -30,9 +31,9 @@ for k=1:4
  rows=[rows;s.speed_kt,values,refs,values-refs,100*(values-refs)./abs(refs)]; %#ok<AGROW>
  records{k}=struct('state',x,'P',P,'spinner',o,'reference',ref);
 end
-expect(@()gtrs_spinner_steady(x,.1,mp.cgShift,r,r,P),'gtrs_spinner_steady:SteadyHeliOnly');
-xb=x;xb(5)=.01;expect(@()gtrs_spinner_steady(xb,0,mp.cgShift,r,r,P),'gtrs_spinner_steady:SteadyHeliOnly');
-xb=x;xb(2)=1;expect(@()gtrs_spinner_steady(xb,0,mp.cgShift,r,r,P),'gtrs_spinner_steady:SteadyHeliOnly');
+expect(@()gtrs_spinner_steady(x,pi/2+.1,mp.cgShift,r,r,P),'gtrs_spinner_steady:UnsupportedNacelleAngle');
+xb=x;xb(5)=.01;expect(@()gtrs_spinner_steady(xb,0,mp.cgShift,r,r,P),'gtrs_spinner_steady:SteadySymmetricOnly');
+xb=x;xb(2)=1;expect(@()gtrs_spinner_steady(xb,0,mp.cgShift,r,r,P),'gtrs_spinner_steady:SteadySymmetricOnly');
 nr=struct('inducedVelocity',-1);expect(@()gtrs_spinner_steady(x,0,mp.cgShift,nr,r,P),'gtrs_spinner_steady:InvalidInflow');
 % One existing model seed: default stack versus immutable pre-spinner copy.
 P=P0;P.rotor.correctionIdentity='CORRIGAN_POSITIVE_LIFT_WASHOUT_V4';P.wing.coefficientModel='GTRS_FREEFIELD_HELI_V6';
@@ -40,7 +41,7 @@ S=readtable(fullfile(here,'original_baseline_trim_seeds.csv'));S=S(S.speed_kt==6
 x=zeros(9,1);x(1)=60*.514444*cos(S.theta_rad);x(3)=60*.514444*sin(S.theta_rad);x(8)=S.theta_rad;
 P.stage2Numerics.flapInitialLeft=[S.flapL0;S.flapL1c;S.flapL1s];P.stage2Numerics.flapInitialRight=[S.flapR0;S.flapR1c;S.flapR1s];
 a=xv15_helicopter_control_allocation(S.stick_in,0,P);u=[S.collective_rad;0;a.cyclicLong;0;0;a.elevator;0];
-basedir=fullfile(outputRoot,'baseline_sum');addpath(basedir);cleanup=onCleanup(@()rmpath(basedir));
+addpath(baselineRoot);cleanup=onCleanup(@()rmpath(baselineRoot));
 [F0,M0,i0]=stage2_total_forces_moments('M1_CONTINUOUS_CORRIGAN_V4',x,u,0,P);
 [Fold,Mold,old]=baseline_stage2_total_forces_moments('M1_CONTINUOUS_CORRIGAN_V4',x,u,0,P);
 check(isequal(F0,Fold)&&isequal(M0,Mold));check(i0.physicalConverged&&old.physicalConverged);
