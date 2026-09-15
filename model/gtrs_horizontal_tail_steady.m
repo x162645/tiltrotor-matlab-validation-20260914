@@ -21,7 +21,7 @@ if Mach>=.2||vkt>140||aF< -30||aF>20||abs(de)>20
     error('gtrs_horizontal_tail_steady:OutsideSourceDomain','Outside declared low-Mach source domain.');
 end
 if ~isfield(P,'validation')||P.validation.flapDeg~=40|| ...
-        ~isfield(flow,'rotorForceCoefficientSum')||~isfield(flow,'rotorMuMean')
+        ~isfield(flow,'rotorForceCoefficientSum')||~isfield(flow,'rotorMuMean')||~isfield(flow,'betaM_rad')
     error('gtrs_horizontal_tail_steady:MissingSourceInputs','Flap40/25 and explicit rotor field inputs required.');
 end
 rAC=P.htail.rAC-cgShift;
@@ -29,8 +29,8 @@ vel=x(1:3)+flow.additionalRelativeVelocityBody_mps(:);
 if vel(1)<=0,error('gtrs_horizontal_tail_steady:ReverseLocalFlow','Reverse local flow is not implemented.');end
 % A38: C_RF=norm(rotor force)/(rho*pi*Omega^2*R^4), NOT the repository CT
 % using 0.5*rho*A*(Omega*R)^2. A70 and B33 supply the next relation.
-aWing=gtrs_wing_freefield_angle(aF,flow.rotorForceCoefficientSum,flow.rotorMuMean);
-epsilon=interp1(T.wingAlpha_deg,T.wingDownwash_deg,aWing,'linear')/sqrt(1-Mach^2);
+aWing=gtrs_wing_freefield_angle(aF,flow.rotorForceCoefficientSum,flow.rotorMuMean,flow.betaM_rad);
+[epsilon,downwashMeta]=gtrs_wing_tail_downwash(aWing,Mach,flow.betaM_rad);
 alphaFlow=atan2(vel(3),vel(1))*180/pi;
 alphaLift=alphaFlow-epsilon+T.geometricIncidence_deg;
 % A86 and Table5-IV: XKe=1 for M<.2; reduction above15deg applies to drag angle.
@@ -53,9 +53,11 @@ Fbody=aero_force_body(D,0,L,alphaResolve,0);
 Maero=zeros(3,1);Marm=cross(rAC,Fbody);Mbody=Maero+Marm;
 out=struct('rAC',rAC,'Vlocal',vel,'V',norm(vel),'alphaLocal',alphaFlow*pi/180, ...
  'alphaCG',aF*pi/180,'alphaEff',alphaLift*pi/180,'alphaDrag',alphaDrag*pi/180, ...
- 'alphaResolve',alphaResolve,'wingFreeAlpha_deg',aWing,'wingDownwash_deg',epsilon, ...
+ 'alphaResolve',alphaResolve,'wingFreeAlpha_deg',aWing,'wingDownwash_deg',epsilon,'wingDownwashMeta',downwashMeta, ...
  'beta',0,'qbar',qbar,'qbarFree',.5*P.env.rho*V^2,'eta',eta,'KHNU',T.KHNU, ...
  'CL',CL,'CD',CD,'Cm',0,'Maero',Maero,'Marm',Marm,'F',Fbody,'M',Mbody, ...
  'explicitLocalFlow',flow,'identity','GTRS_COHERENT_STEADY_HELI_TAIL_V3', ...
  'legacyDownwashAndIncidenceApplied',false,'noTargetFit',true);
+out.pressureModelScope='HELICOPTER_TABLE5VA_ETA_RETAINED_AT_CONVERSION_ANGLES';
+if flow.betaM_rad~=0,out.identity='GTRS_STEADY_TAIL_MAST_DOWNWASH_V9_HELI_ETA_RETAINED';end
 end

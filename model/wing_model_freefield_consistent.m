@@ -15,9 +15,9 @@ if numel(v)~=11||~isreal(v)||any(~isfinite(v))||any(v(end-2:end)<=0)||any(v(7:8)
  error('wing_model_freefield_consistent:InvalidRotorFields','Finite force/mu and positive rotor/environment scales required.');
 end
 cf=(norm(rotL.F)+norm(rotR.F))/(P.env.rho*pi*P.rotor.Omega^2*P.rotor.R^4);
-[aDeg,field]=gtrs_wing_freefield_angle(atan2(x(3),x(1))*180/pi,cf,.5*(rotL.mu+rotR.mu));
+[aDeg,field]=gtrs_wing_freefield_angle(atan2(x(3),x(1))*180/pi,cf,.5*(rotL.mu+rotR.mu),betaM);
 a=aDeg*pi/180;qFree=.5*P.env.rho*(x(1)^2+x(3)^2);
-[CL,CD,Cm,coeff]=gtrs_wing_heli_coefficients(a,norm(x(1:3))/P.env.aSound);
+[CL,CD,Cm,coeff]=gtrs_wing_heli_coefficients(a,norm(x(1:3))/P.env.aSound,betaM);
 Fbody=zeros(3,1);Mbody=zeros(3,1);intrinsic=zeros(3,1);
 for j=1:4
  r=out.regions{j};r.alphaKinematic=atan2(r.Vlocal(3),r.Vlocal(1));
@@ -41,4 +41,5 @@ out.intrinsicMomentDefinition='Q_FREE_TIMES_TOTAL_WING_AREA_C_CM_ONCE_A70';
 out.freefieldAngleDefinition='SAME_A70_EFFECTIVE_ALPHA_AS_TAIL_DOWNWASH';
 out.localVelocityModel='V5_IMMERSED_KINEMATICS_RETAINED_FREE_ALPHA_AND_Q_SEPARATE';
 out.claim='SOURCE_FREEFIELD_SUBSET_NOT_FULL_GTRS_WAKE_NOT_FLIGHT_VALIDATED';
+if betaM~=0,out.identity='SOURCE_WING_FREEFIELD_MAST_ANGLE_V9';end
 end

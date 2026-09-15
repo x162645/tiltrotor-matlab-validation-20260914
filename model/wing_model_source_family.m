@@ -7,7 +7,8 @@ function [Fbody,Mbody,out]=wing_model_source_family(x,uCtrl,betaM,cgShift,rotorL
 % 90 deg airplane).  The original V5 implementation was accidentally
 % guarded to betaM=0; the coverage and local-flow equations below are
 % already parameterised by betaM, so the guard is removed here to permit
-% controlled angle screening.  This remains a source-constrained subset,
+% controlled angle screening. V9 also passes betaM to the coefficient
+% family, instead of freezing it at the helicopter column. This remains a source-constrained subset,
 % not a claim of validated transition aerodynamics.
 % Deliberately does not infer new coverage parameters from TableC1 loads.
 x=x(:);cgShift=cgShift(:);uCtrl=uCtrl(:);
@@ -45,7 +46,7 @@ for side=[-1,1]
    meta=struct('identity','EMPTY_PATCH_NO_COEFFICIENT_EVALUATION');
    F=zeros(3,1);Mi=zeros(3,1);
   else
-   [CL,CD,Cm,meta]=gtrs_wing_heli_coefficients(a,V/P.env.aSound);
+   [CL,CD,Cm,meta]=gtrs_wing_heli_coefficients(a,V/P.env.aSound,betaM);
    F=aero_force_body(q*S*CD,0,q*S*CL,a,0);
    Mi=[0;q*S*P.wing.c*Cm;0];
   end
@@ -60,4 +61,5 @@ out=struct('identity','SOURCE_WING_COEFFICIENT_FAMILY_LOW_ORDER_WAKE_V5_ANGLE_SC
  'SslipRawHalf',raw,'SslipUpperHalf',upper,'muMean',muMean,'regions',{regions},'F',Fbody,'M',Mbody, ...
  'coverageModel','EXISTING_NUAA_EQ16_UNCHANGED','localVelocityModel','EXISTING_NUAA_EQ17_UNCHANGED', ...
  'legacyTanhOrInducedDragAdded',false,'claim','SOURCE_COEFFICIENTS_NOT_COMPLETE_GTRS_WING_NOT_FLIGHT_VALIDATED');
+if betaM~=0,out.identity='SOURCE_WING_COEFFICIENT_MAST_ANGLE_V9';end
 end

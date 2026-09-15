@@ -49,6 +49,8 @@ T.dragAlpha_deg=-20:4:20;
 T.CD=[.20 .115 .068 .035 .015 .00875 .015 .035 .068 .115 .20];
 % B56 constants and B33 wing-field correction, A38 force normalization.
 T.KHNU=.8;T.tauElevator=.518;T.DKe=.24;T.KXRW=.26;T.XRW0=.0806;
+% B33/PDF383: source coefficients in 1/deg and 1/deg^2 respectively.
+T.XRW1=.00003341;T.XRW2=.000007386;
 T.area_m2=50.25*.3048^2;T.chord_m=3.92*.3048;
 T.stationBody_m=[-560*.0254;0;-103*.0254];T.geometricIncidence_deg=0;
 saved=T;

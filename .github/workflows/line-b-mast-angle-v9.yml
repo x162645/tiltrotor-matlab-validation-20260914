@@ -1,0 +1,34 @@
+name: Line B V9 mast angle power correction
+on:
+  push:
+    branches: [fix/mast-angle-power-20260915]
+    paths:
+      - 'model/**'
+      - 'analysis/validation_whole_aircraft_trim/**'
+      - '.github/workflows/line-b-mast-angle-v9.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  matlab-r2021a:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Prepare immutable pre-fix functions
+        run: python3 analysis/validation_whole_aircraft_trim/prepare_line_b_v9_baseline.py --output outputs/v9_mast_angle/baseline_sum
+      - uses: matlab-actions/setup-matlab@v3
+        with:
+          release: R2021a
+      - name: Source cells, legacy regression and 120/110/130 kt re-trim
+        uses: matlab-actions/run-command@v3
+        with:
+          command: startup; addpath('analysis/stage2_aircraft'); addpath('analysis/validation_whole_aircraft_trim'); run_line_b_v9_power_correction(fullfile(pwd,'outputs','v9_mast_angle'));
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v9-mast-angle-r2021a
+          path: outputs/v9_mast_angle
+          if-no-files-found: error
