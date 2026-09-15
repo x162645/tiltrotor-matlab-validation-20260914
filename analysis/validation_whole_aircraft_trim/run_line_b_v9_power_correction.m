@@ -114,10 +114,12 @@ u=[rec.z(2);0;rec.point.cyclic;0;0;rec.point.elevator;0];
 end
 function p=dragpower(F,x),p=-dot(F,x(1:3))/1000;end
 function c=component(eo,name)
-for j=1:numel(eo.components)
- % stage2_tiltrotor_eom archives a struct array; direct component-stack
- % callers use a cell array. Both are existing repository representations.
- if iscell(eo.components),c=eo.components{j};else,c=eo.components(j);end
+% The EOM stores the entire stage2 componentInfo under eo.components;
+% its heterogeneous component list is one level further down.
+stack=eo.components;
+if isstruct(stack)&&isscalar(stack)&&isfield(stack,'components'),stack=stack.components;end
+for j=1:numel(stack)
+ if iscell(stack),c=stack{j};else,c=stack(j);end
  if strcmp(c.name,name),return;end
 end
 error('V9:MissingComponent','Missing component %s.',name);
